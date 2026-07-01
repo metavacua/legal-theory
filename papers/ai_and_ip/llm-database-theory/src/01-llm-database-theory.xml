@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="5.2"
+         xml:id="llm-database-theory"
+         xml:lang="en">
+
+  <xi:include href="00-metadata.xml"/>
+  <title>Language Models Are Databases</title>
+  <subtitle>A Technical and Legal Position Paper on LLMs and Intellectual Property</subtitle>
+
+  <!-- ============================================================
+       §1  THE POSITION
+       ============================================================ -->
+  <section xml:id="the-position">
+    <title>The Position</title>
+
+    <para>A trained language model is a database of the works it was built from. Its contents are stored arithmetically and its schema is obscured, but neither of those facts changes what it is or what law applies to it. It is a fixed compilation of protected expression; distributing it distributes copies; operating it reproduces them. That conclusion does not wait on any change in the law — the law of databases and copies is old, and it already reaches this case.</para>
+
+    <blockquote>
+      <attribution>Central thesis</attribution>
+      <para>LARQL does not turn a model into a database. It demonstrates that the model was one all along — and hands us the query language to prove it.</para>
+    </blockquote>
+  </section>
+
+  <!-- ============================================================
+       §2  THE LARQL DEMONSTRATION
+       ============================================================ -->
+  <section xml:id="larql-demonstration">
+    <title>The LARQL Demonstration</title>
+
+    <para>LARQL (Lazarus Query Language), written in Rust and released as open source under the Apache-2.0 licence by Chris Hay of the UK, extracts a transformer into a <emphasis>vindex</emphasis> — a directory in which the weights are reorganised for querying — and then lets a user address it in LQL. Gate vectors become a nearest-neighbour index; embeddings become token lookups; the feed-forward down-projections become edge labels. The tool's own tagline states the finding without hedging: <emphasis role="italic">the model is the database</emphasis>. <citation>hay2024larql</citation></para>
+
+    <para>A <command>DESCRIBE "France"</command> query against a Gemma 3 4B vindex returns labelled, directed edges:</para>
+
+    <programlisting language="lql"><![CDATA[larql> USE "gemma-3-4b.vindex";
+Using: gemma-3-4b.vindex  (34 layers · 348.2K features · 512 relation types)
+
+larql> DESCRIBE "France";
+France
+  capital    → Paris       1436.9   L27
+  borders    → Spain         13.3   L18
+  language   → French        35.2   L24]]></programlisting>
+
+    <para>Each row is a property-graph edge: an entity, a relation type, a target entity, a strength score, and the layer in which it predominantly fires. These entries were not added by the query; they are what the weights already are. Nothing was inserted; the query merely reads out what was always there.</para>
+
+    <section xml:id="larql-mutability">
+      <title>The Entries Are Addressable, Editable, and Exportable</title>
+
+      <para>LARQL further demonstrates that the graph is mutable through structured operations:</para>
+
+      <programlisting language="lql"><![CDATA[larql> INSERT INTO EDGES (entity, relation, target)
+  ...   VALUES ("Atlantis", "capital-of", "Poseidon");
+Inserted 1 edge.  Feature F8821@L26 allocated.
+
+larql> INFER "The capital of Atlantis is";
+  1. Poseidon   (56.91%)
+
+larql> COMPILE CURRENT INTO MODEL "edited/" FORMAT safetensors;
+Wrote standard safetensors.  Loads in Transformers / llama.cpp — no special loader.]]></programlisting>
+
+      <para>An entry is inserted, retrieved by inference, then compiled back into ordinary model files that run in standard frameworks unchanged. The insert-retrieve-compile cycle is the full CRUD cycle of a database. The traversal that answers an inference query is the same computation as the model's forward pass — on Gemma 3 4B it is reported to be marginally faster than the dense matrix multiply it replaces.</para>
+
+      <para>LARQL is one tool, early in its development trajectory. Foreseeable successors will read these entries more completely and more precisely. That trajectory only sharpens the point: the store exists now; the interface is improving; the direction is toward more legibility, not less.</para>
+    </section>
+  </section>
+
+  <!-- ============================================================
+       §3  TECHNICAL FOUNDATION: THE GRAPH DATABASE ISOMORPHISM
+       ============================================================ -->
+  <section xml:id="technical-foundation">
+    <title>Technical Foundation: The Graph Database Isomorphism</title>
+
+    <para>The claim that LLMs <emphasis>are</emphasis> graph databases is not a metaphor. It is a structural isomorphism established at three levels: the architecture of the feed-forward network, the behaviour of the forward pass, and the categorical structure of the transformer as a whole.</para>
+
+    <section xml:id="ffn-as-knowledge-graph">
+      <title>FFN Layers as Knowledge-Graph Nodes and Edges</title>
+
+      <para>Research in mechanistic interpretability has established that the feed-forward network (FFN) layers of transformer models function as key-value stores. The up-projection matrix stores keys (entity features); the down-projection matrix stores values (relation-target associations). A feed-forward layer of dimension <mathphrase>d<subscript>ff</subscript></mathphrase> with a ReLU or GELU activation is, in effect, a lookup table of <mathphrase>d<subscript>ff</subscript></mathphrase> entries, each binding a feature pattern to a value vector.</para>
+
+      <para>When LARQL builds a vindex, it indexes these key-value pairs as graph edges of the form</para>
+
+      <programlisting><![CDATA[(entity_node) --[relation_type]--> (target_node)]]></programlisting>
+
+      <para>The FFN layer is not a <emphasis>model of</emphasis> a knowledge graph; it <emphasis>is</emphasis> a knowledge graph stored in matrix form. The matrices are a serialisation format for the graph, in the same way that an adjacency list or a set of RDF triples is a serialisation format for a graph.</para>
+    </section>
+
+    <section xml:id="forward-pass-as-graph-walk">
+      <title>The Forward Pass as a KNN Graph Walk</title>
+
+      <para>A transformer's forward pass proceeds as follows for a token sequence: embeddings are looked up (node retrieval), attention weights are computed via scaled dot-product over query and key vectors (edge traversal), and the attended value vectors are aggregated (node merge). The FFN layers then perform another key-value lookup over the activated features.</para>
+
+      <para>This is computationally isomorphic to a k-nearest-neighbour (KNN) walk over a property graph: select the k most similar nodes, traverse their outbound edges weighted by attention, aggregate the target-node values. LARQL makes this identity explicit: the vindex is a KNN index over the same embedding space that the model uses for attention, and the LQL <command>INFER</command> command executes against it using the same numeric operations as the model's inference stack. On Gemma 3 4B this is not merely equivalent but measurably faster.</para>
+    </section>
+
+    <section xml:id="categorical-structure">
+      <title>Categorical Structure: Self-Attention as a Parametric Endofunctor</title>
+
+      <para>The graph-database interpretation is further grounded by the categorical formalisation of transformer architectures. Research formalises the linear component of self-attention as a <emphasis>parametric endofunctor</emphasis> in the 2-category Para(Vect): a structure-preserving map from the category of vector representations to itself, parameterised by the learned weight matrices W<subscript>Q</subscript>, W<subscript>K</subscript>, W<subscript>V</subscript>. Stacked attention layers form a free monad on this endofunctor. <citation>self_attention_endofunctor</citation></para>
+
+      <para>The legal significance is this: if an LLM's forward pass is a composition of parametric endofunctors, then the relationship between the model weights and the information encoded in them is not a learned abstraction that has lost connection to its source — it is a deterministic algebraic structure that preserves the relational information present in the training corpus in a recoverable form.</para>
+
+      <para>This connects to the broader corpus within this legal-theory repository on the categorical interpretation of LLMs. <citation>mclean2025categorical</citation> establishes that neural network layers are morphisms transforming objects (representations) within categories such as vector spaces; the entire model is a composition of such morphisms. Under that formalisation, the information encoded in the weights is not lost — it is mapped by a structure-preserving transformation, and a structure-preserving transformation is invertible within the appropriate categorical framework.</para>
+    </section>
+  </section>
+
+  <!-- ============================================================
+       §4  THE BASIS LIMITATION
+       ============================================================ -->
+  <section xml:id="basis-limitation">
+    <title>The Basis Limitation: Outputs Cannot Exceed Inputs</title>
+
+    <para>A language model is a function from an input token sequence to a probability distribution over the vocabulary. The weights of that function were determined entirely by the training corpus. The model has no other source of information. It follows that the model's output, at every point, is a linear combination (or, under non-linearity, a composition of linear combinations) of features whose values were fixed by training. A model cannot generate content whose information content exceeds the information present in its training data, expressed in its weight space.</para>
+
+    <para>This is not a contingent empirical claim subject to exception. It is a mathematical consequence of the architecture. The weights are a finite-dimensional vector; the model's outputs are determined by that vector; therefore the model's outputs are entirely determined by the training corpus.</para>
+
+    <para>The practical implication: when a model generates a recognisable image of Superman, the Superman content of that image derives from Superman images in the training data, however the representation is distributed across the weight tensors. When a model regenerates the text of <emphasis>Harry Potter</emphasis>, that text was present in the training data and is now present, in encoded form, in the weights. The generation is not creation; it is retrieval.</para>
+
+    <section xml:id="memorization-evidence">
+      <title>Empirical Evidence of Memorisation</title>
+
+      <para>The basis-limitation argument is not merely theoretical. Peer-reviewed extraction studies have demonstrated direct retrieval of protected works from model weights:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Text (Cooper et al. 2025):</emphasis> Researchers at Stanford, Cornell, Princeton, and West Virginia demonstrated that Llama 3.1 70B entirely memorises some books, including the first <emphasis>Harry Potter</emphasis> novel and Orwell's <emphasis>Nineteen Eighty-Four</emphasis>. Seeding the model with the first few tokens of chapter one causes it to deterministically regenerate the entire book near-verbatim. The authors state plainly that the memorised content is <quote>copied inside the model parameters.</quote> <citation>cooper2025memorized</citation></para>
+        </listitem>
+        <listitem>
+          <para><emphasis role="bold">Images — Diffusion Models (Carlini et al. 2023):</emphasis> Over a hundred near-identical replicas of training images — including trademarked logos and identifiable photographs of individuals — were extracted directly from Stable Diffusion and Imagen. <citation>carlini2023extracting</citation></para>
+        </listitem>
+        <listitem>
+          <para><emphasis role="bold">Images — Novel Generations as Copies (Somepalli et al. 2023):</emphasis> A measurable share of ostensibly novel diffusion-model outputs are near-exact copies of training images, including images that the model presents as generations from textual prompts it was never given during training. <citation>somepalli2023diffusion</citation></para>
+        </listitem>
+      </itemizedlist>
+
+      <para>These studies are not outlier demonstrations of edge cases. They represent the predictable consequence of training large models on large corpora without exclusion mechanisms. The memorisation scales with model size and training iterations. The question is not whether models memorise — the empirical record establishes that they do — but how much, and for which works.</para>
+    </section>
+  </section>
+
+  <!-- ============================================================
+       §5  FORMAT IS NOT A DEFENCE
+       ============================================================ -->
+  <section xml:id="format-not-a-defence">
+    <title>Format Is Not a Defence</title>
+
+    <para>The industry's principal defence against all of this is that a model holds no copies — only numbers. OpenAI told the U.S. Copyright Office that its models <quote>do not store copies of the information that they learn from,</quote> describing them as large strings of parameters that software executes. Google likewise asserted that <quote>there is no copy of the training data … present in the model itself.</quote> <citation>admissions2025compilation</citation></para>
+
+    <para>This defence fails on its own terms. Every stored file is only numbers. A copyrighted song on disk is a sequence of bytes. A film in a proprietary container is a sequence of bytes. An encrypted or compressed archive is a sequence of bytes that no human can read without machine assistance. The legal status of a copy has never depended on whether a person can read it directly.</para>
+
+    <para>The Copyright Act of 1976 defines a work as <quote>fixed</quote> — and a copy as existing — when the work can be perceived, reproduced, or otherwise communicated <emphasis>with the aid of a machine or device,</emphasis> by any method now known or later developed. 17 U.S.C. § 101. <citation>copyright1976fixation</citation> The inference engine is that machine. The weights are the fixation. That the fixation is expressed as tensors rather than glyphs is a fact about encoding, not about copyright.</para>
+
+    <section xml:id="degenerate-database">
+      <title>A Degenerate Database Is Still a Database</title>
+
+      <para>It does not matter that the store is lossy, that features are polysemantic, that entries are fragmented across layers, or that recovering them requires the right sequence of prompts. A low-bitrate recording is still a copy of the performance it retains. A compressed image is still a copy. A partially corrupted archive is still a copy of what survives in it. Imperfect, obscured, or effortful retrieval speaks to how the copy is stored, never to whether it is stored.</para>
+
+      <para>The internal degradation a model may exhibit does not lift it out of the category of databases. It simply makes it a degraded database — and a degraded database is a database still. A library with water-damaged books does not cease to be a library. A database with corrupted records does not cease to be a database.</para>
+
+      <para>Obscuring the entries changes the packaging. It does not dissolve the rights that attach to them.</para>
+    </section>
+
+    <section xml:id="encryption-analogy">
+      <title>The Encryption Analogy</title>
+
+      <para>The arithmetic encoding of training content in model weights is structurally analogous to encryption. An encrypted database contains all the data of the plaintext database. The data is present; it requires a key to read. The law does not permit an entity to escape data-protection obligations — Right to Erasure under GDPR, production obligations under discovery rules, copyright liability — by encrypting its database before distribution. The same logic applies here: the transformer's weight encoding is the key; the vindex is the decryption; the entries are the data; and the data is subject to the same law it was subject to before encoding.</para>
+    </section>
+  </section>
+
+  <!-- ============================================================
+       §6  LEGAL CLASSIFICATION
+       ============================================================ -->
+  <section xml:id="legal-classification">
+    <title>Legal Classification: Derivative Work, Collective Work, and Database</title>
+
+    <section xml:id="derivative-work">
+      <title>Derivative Work</title>
+
+      <para>Training takes a great many protected works and recasts, transforms, and adapts them into weight form. A work based upon one or more preexisting works, recast or transformed, is a <emphasis>derivative work</emphasis> under 17 U.S.C. § 101. The near-verbatim regeneration demonstrated in Cooper et al. 2025 is substantial copying by any standard the courts apply to the derivative-work analysis. See <emphasis>Litchfield v. Spielberg</emphasis>, 736 F.2d 1352, 1356 (9th Cir. 1984) (setting out the two-step extrinsic/intrinsic test for substantial similarity). <citation>litchfield1984</citation></para>
+
+      <para>The model is therefore not an innocent abstraction sitting at arm's length from its inputs. It is <emphasis>based upon</emphasis> them in the direct, statutory sense. The weights preserve the expressive content of the training corpus in machine-readable form, and they reproduce it on demand.</para>
+    </section>
+
+    <section xml:id="collective-work">
+      <title>Collective Work</title>
+
+      <para>A language model does not draw on one work. It assembles a multitude of separate, independent copyrighted contributions — books, articles, images, code, from a wide variety of rights-holders — into a single whole. That is the definition of a <emphasis>collective work</emphasis> under 17 U.S.C. § 101: a work in which a number of contributions, constituting separate and independent works in themselves, are assembled into a collective whole. The model is an assembled compilation of others' intellectual property, fixed in a single artifact.</para>
+    </section>
+
+    <section xml:id="database-law">
+      <title>Database Law</title>
+
+      <para>Under the European Union Database Directive (Directive 96/9/EC), a database is a collection of independent works, data, or other materials arranged in a systematic or methodical way and individually accessible by electronic or other means. <citation>eu_database_directive1996</citation> A transformer weight file satisfies this definition: the FFN layers contain individually accessible knowledge entries (the edges LARQL returns), arranged in a systematic way (by layer, by feature index), electronically accessible via the vindex interface.</para>
+
+      <para>The Directive's sui generis protection attaches to any database in whose making there has been substantial investment in obtaining, verifying, or presenting the contents — a criterion that the training of any frontier model satisfies by many orders of magnitude (billions of dollars of compute, petabytes of curated training data).</para>
+
+      <para>In U.S. law, compilation copyright under 17 U.S.C. § 103 protects the selection, coordination, and arrangement of pre-existing materials to the extent that the compiler exercised creative judgment in those choices. The selection of training data and the architectural choices that determine how it is encoded both qualify.</para>
+    </section>
+  </section>
+
+  <!-- ============================================================
+       §7  DISTRIBUTION AND OPERATION AS DATABASE ACTS
+       ============================================================ -->
+  <section xml:id="distribution-as-database-acts">
+    <title>Distribution and Operation as Database Acts</title>
+
+    <para>If the works are fixed inside the model, then shipping the model ships the copies. The memorisation scholarship makes the arithmetic explicit: a model that has memorised a book, downloaded a million times, is a million potential distributions of a reproduction of that book. Running the model to emit the work is a further reproduction; serving that output publicly implicates the display and performance rights as well.</para>
+
+    <para>These are ordinary consequences of holding and moving copies — the same consequences that follow for any other database of protected works. They do not require that every inference session reproduce a full copyrighted work. A database need not be searched exhaustively to infringe. Holding a database of copyrighted works without licence, and distributing it, is the infringement.</para>
+
+    <para>No new statute is required. The reproduction, distribution, and derivative-work rights; the compilation and collective-work provisions; the machine-perceptibility test for what counts as a copy — all of it predates modern AI and all of it fits without strain. Fair use is an affirmative defence the defendant must raise and prove, and the memorisation record cuts against it on both sides of the four-factor analysis: it undermines any claim that the use is transformative (the model reproduces the original expression, not a transformation of it) and it evidences market substitution (a model that regenerates <emphasis>Harry Potter</emphasis> on demand substitutes for the book).</para>
+  </section>
+
+  <!-- ============================================================
+       §8  PRIVACY LAW: GDPR AND THE RIGHT TO ERASURE
+       ============================================================ -->
+  <section xml:id="privacy-law-gdpr">
+    <title>Privacy Law: The Right to Erasure and INSERT INTO EDGES</title>
+
+    <para>GDPR Article 17 grants data subjects the right to erasure of personal data without undue delay. AI companies have argued that this right cannot be fulfilled with respect to model weights because there is no identifiable location of personal data within the parameters — no rows to delete, no records to mark. <citation>gdpr2016</citation></para>
+
+    <para>LARQL's <command>INSERT INTO EDGES</command> operation refutes this defence structurally. If a named personal fact can be inserted into the model's weights at a specific feature location (Feature F8821@L26 in the demonstration), retrieved by inference, and compiled back into a standard model file, then named personal facts already present in the weights can, in principle, be located, inspected, and removed by the same mechanism. The technical argument that the data cannot be targeted for removal collapses as the tooling to target it matures.</para>
+
+    <para>The legal conclusion follows: if the model weights contain personal data — which the extraction studies demonstrate they do, for training data subjects who appear in the training corpus — then the weights are a personal data store, and the GDPR's obligations attach: lawful basis for processing, data minimisation, accuracy, storage limitation, and the right of erasure. These obligations applied from the moment the training data was ingested and the personal facts were encoded into the weights. The absence of prior tooling to retrieve those facts did not suspend the obligations; it only made compliance impractical. LARQL, and its foreseeable successors, are making compliance practical.</para>
+  </section>
+
+  <!-- ============================================================
+       §9  HALLUCINATIONS AS PRODUCT DEFECT
+       ============================================================ -->
+  <section xml:id="hallucinations-as-defect">
+    <title>Hallucinations as Architectural Defect</title>
+
+    <para>AI companies defend against defamation and product liability arising from false outputs by characterising errors as unpredictable, inherent features of a probabilistic generative process — forces of nature rather than design decisions.</para>
+
+    <para>The database framing refutes this characterisation. A hallucination, on the graph-database view, is a corrupted entry, a polysemantic feature collision (a single weight feature that maps to multiple unrelated human concepts), or a retrieval error in which the KNN walk returns a neighbouring node rather than the correct target. These are known, characterised failure modes of database systems. A vendor who ships a database that predictably produces corrupted outputs when certain query patterns are executed cannot characterise those corruptions as unforeseeable acts of creative expression.</para>
+
+    <para>The implication for product liability is that the standard of care shifts. A database vendor has a duty to characterise and disclose known failure modes. A database whose polysemantic collisions produce defamatory statements about real people is a product with a known defect, and shipping it without adequate warning or mitigation is negligent — or, where the defect is foreseeable and the harm is of the kind the duty was designed to prevent, may attract strict liability.</para>
+  </section>
+
+  <!-- ============================================================
+       §10  CONCLUSION
+       ============================================================ -->
+  <section xml:id="conclusion">
+    <title>Conclusion</title>
+
+    <para>A transformer is a database. LARQL supplies the query language that reads its entries; foreseeable tools will read them more fully. Those entries include protected works, fixed within the weights and reproducible on demand. Arithmetisation obscures the schema — it does not repeal the law of copies.</para>
+
+    <para>The conclusion follows from first principles, from the architecture, from the categorical mathematics of attention as a parametric endofunctor, and from the empirical record: frontier models memorise and reproduce protected expression at scale. The industry's defence — that models store no copies, only numbers — is a claim about encoding format, not about content. It does not survive contact with the extraction record.</para>
+
+    <para>The correct legal frame is not a novel AI-specific doctrine yet to be invented. It is the law of databases, derivative works, collective works, and copies — law that predates the digital era and that the Congress, in drafting the machine-perceptibility test for fixation, deliberately extended to cover any encoding method now known or later developed. That language reaches transformer weights. The litigation now before the courts will, in time, confirm it.</para>
+  </section>
+
+</article>
