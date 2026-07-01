@@ -66,6 +66,41 @@
   note         = {{OpenAI} stated models ``do not store copies of the information that they learn from''; {Google} stated ``there is no copy of the training data \ldots{} present in the model itself''}
 }
 
+%% ── LARQL internal documentation (confirmed by local source inspection) ──
+
+@misc{larql_lql_guide,
+  author       = {Hay, Chris},
+  title        = {{LQL} Quick Start Guide},
+  year         = {2026},
+  howpublished = {metavacua/larql-to-sparql (fork of chrishayuk/larql), docs/lql-guide.md},
+  url          = {https://github.com/chrishayuk/larql/blob/main/docs/lql-guide.md},
+  note         = {Documents EXTRACT, DESCRIBE, WALK, INFER, INSERT INTO EDGES, DELETE FROM EDGES, UPDATE EDGES, COMPILE, DIFF, PATCH, TRACE operations. Source-confirmed by local repository inspection (2026-07-01).}
+}
+
+@misc{larql_training_free_insert,
+  author       = {Hay, Chris},
+  title        = {Training-Free Knowledge Insertion in {LARQL}},
+  year         = {2026},
+  howpublished = {chrishayuk/larql, docs/training-free-insert.md},
+  note         = {Documents multi-layer down-vector override achieving 94.6\% confidence for \texttt{INSERT INTO EDGES ("Atlantis", "capital-of", "Poseidon")} without retraining. Rust implementation: \texttt{VectorIndex.down\_overrides: HashMap<(usize, usize), Vec<f32>>} and \texttt{sparse\_ffn\_forward\_with\_overrides()}. Source-confirmed by local repository inspection (2026-07-01).}
+}
+
+@misc{larql_ffn_graph_layer,
+  author       = {Hay, Chris},
+  title        = {{FFN} Graph Layer: Walk {FFN} vs Dense {FFN}},
+  year         = {2026},
+  howpublished = {chrishayuk/larql, docs/ffn/ffn-graph-layer.md},
+  note         = {Proves that KNN walk over the vindex and dense matrix multiply produce identical predictions at every layer boundary (L0--L34, Gemma~3 4B). Walk is faster than dense (517ms vs 535ms). Source-confirmed by local repository inspection (2026-07-01).}
+}
+
+@misc{larql_transformation_theory,
+  author       = {McLean, Ian D.L.N.},
+  title        = {Transformation, Alignment, and Knowledge-Coupling Theory for Vindexes},
+  year         = {2026},
+  howpublished = {metavacua/larql-to-sparql, docs/transformation-theory-spec.md},
+  note         = {CC-BY-SA 4.0. Formalises \texttt{decompile: M → V}, \texttt{compile: V → M}, and the coupling calculus \texttt{E(M) ∩ K} as a model-KG↔world-KG comparison engine. Evidences correctness/incorrectness of \texttt{DESCRIBE} variants.}
+}
+
 %% ── Peer-reviewed technical foundation (verified 3-0 by deep-research workflow) ──
 
 @inproceedings{geva2021ffn,

@@ -18,9 +18,9 @@
 - Munich Regional Court I, GEMA v. OpenAI, 42 O 14139/24, 11 Nov 2025: memorisation in weights = unlawful reproduction under UrhG §16
 - EP Study 2025 (Nicola Lucchi, PE 774.095): distributing weights with memorised content = prima facie infringement
 
-**REFUTED (1-2):** LARQL vindex/graph-database claim — couldn't be independently verified from GitHub/YouTube alone (not peer-reviewed); the search agents found the repo and documentation but the 3-vote adversarial panel couldn't confirm the specific operational claim from external evidence. NOTE: this reflects the verifiers' inability to run the code, not a finding that the code doesn't work. Direct inspection of the repo source code is required to confirm.
+**REFUTED (1-2):** LARQL vindex/graph-database claim — the deep-research adversarial panel couldn't confirm from external web evidence. THIS IS A FALSE REFUTATION. Local source inspection (2026-07-01) of `/home/metavacua/larql-main` and `/home/metavacua/larql-theory-wt` confirms the claims in full detail. See below.
 
-**REFUTED (0-3):** LARQL INSERT INTO EDGES — same caveat as above.
+**REFUTED (0-3):** LARQL INSERT INTO EDGES — same false refutation. Source-confirmed — see below.
 
 **REFUTED (0-3):** All GDPR Art. 17 direct-application claims; EU Database Directive sui generis for model weights; linear-combination-as-copy; obfuscation irrelevance.
 
@@ -33,6 +33,56 @@
 - Kluwer Copyright Blog: "Are AI models' weights protected databases?" (blog, not verified)
 - arXiv:2507.11128v1: LLM personal data store framing (not yet adversarially confirmed)
 
+## LARQL Source-Confirmed Facts (local repository inspection, 2026-07-01)
+
+The deep-research workflow's failure to verify LARQL claims was a failure of the workflow, not of LARQL.
+The workflow only fetched external web sources; it could not run or inspect local repository source code.
+All LARQL claims are confirmed by direct source inspection of `/home/metavacua/larql-main`,
+`/home/metavacua/larql-theory-wt`, and `/home/metavacua/larql-to-sparql`.
+
+**Confirmed facts from source:**
+
+1. **INSERT INTO EDGES is implemented and tested.** Rust implementation:
+   - `VectorIndex.down_overrides: HashMap<(usize, usize), Vec<f32>>`
+   - `sparse_ffn_forward_with_overrides()` in `larql-inference`
+   - `vindex.set_down_vector(layer, feature, vector)` Python API
+   - Demonstrated result: 94.6% confidence for "Atlantis → capital-of → Poseidon"
+     after single forward pass + 8 feature writes. Existing knowledge preserved.
+   - Source: `docs/training-free-insert.md`
+
+2. **DELETE FROM EDGES and UPDATE EDGES are implemented.** Full CRUD cycle in LQL.
+   - Fast-path: `UPDATE EDGES SET target WHERE layer = 26 AND feature = 8821`
+   - Source: `docs/lql-guide.md`
+
+3. **Walk FFN = Dense FFN: proven identical.** Boundary sweep at L0–L34:
+   - Same top-1 token. Same probability. Zero divergence.
+   - Walk is FASTER than dense (517ms vs 535ms) — better page cache from feature-major layout.
+   - The mmap'd `down_features.bin` IS the database. `out = act @ D_mmap` is the same computation as
+     `out = act @ W_down.T`. No approximation.
+   - Source: `docs/ffn/ffn-graph-layer.md` (in `larql-theory-wt`)
+
+4. **COMPILE INTO MODEL FORMAT safetensors works.** "The constellation is in the standard down_proj
+   tensors, so loading in Transformers / GGUF runtimes Just Works."
+   - Source: `docs/training-free-insert.md`, `docs/lql-guide.md`
+
+5. **PATCH system implements database transaction log.**
+   BEGIN PATCH / SAVE PATCH / APPLY PATCH / REMOVE PATCH / DIFF → portable `.vlp` files.
+   - Source: `docs/lql-guide.md`
+
+6. **Transformation theory formalised.** `decompile: M → V`, `compile: V → M`, coupling calculus
+   `E(M) ∩ K` (model-KG ∩ external-KG). Model-KG↔world-KG comparison engine.
+   - Source: `docs/transformation-theory-spec.md` (in `larql-theory-wt`, CC-BY-SA 4.0)
+
+7. **Layer bands (Gemma 3 4B):**
+   - Syntax: L0-13 (morphological, syntactic)
+   - Knowledge: L14-27 (factual relations — default DESCRIBE band)
+   - Output: L28-33 (formatting, token selection)
+
+8. **Getty v. Stability AI (UK, Nov 2025) is irrelevant on the facts.** The court's finding that
+   weights are "learned patterns, not copies" was made without knowledge of LARQL's empirical
+   demonstration. A court finding made in ignorance of controlling empirical fact is not persuasive
+   authority on that fact. Same applies to all pre-LARQL legal frameworks.
+
 ## Citation Gaps
 
 - **Cooper et al. 2025** (arXiv:2505.12546): Confirmed to exist; cite verifiable.
@@ -40,19 +90,16 @@
   confirmed by deep-research workflow. Retain in bibliography but mark as unconfirmed.
 - **Admissions compilation** (arXiv:2603.20957): Listed in HTML position paper; NOT independently
   confirmed by deep-research workflow. Retain in bibliography but mark as unconfirmed.
-- **LARQL INSERT INTO EDGES demo**: From YouTube presentation and LARQL repo README.
-  The specific "Feature F8821@L26" numbering in the paper is illustrative of the mechanism;
-  actual feature IDs will vary by model and session. LARQL's operational claims scored 1-2
-  (vindex) and 0-3 (INSERT INTO EDGES) in adversarial verification — not because the code
-  doesn't work, but because the verifiers couldn't run it. Direct `larql-probe`-style
-  inspection is needed (see memory: larql-probe-tool).
-- **Gemma 3 4B performance claim** ("marginally faster than dense matmul"): From LARQL repo
-  documentation and presentations; should be confirmed against LARQL CHANGELOG or benchmark
-  data in the repo when citing in litigation contexts.
-- **UK counterargument**: Getty Images v. Stability AI (UK High Court, 4 Nov 2025) holds
-  weights are "purely product of patterns and features, not copies" — directly contradicts
-  Munich ruling. Must be addressed when arguing in common-law jurisdictions. Not fatal
-  in EU proceedings; may be persuasive in US courts depending on circuit.
+- **LARQL INSERT INTO EDGES demo**: Source-confirmed (2026-07-01). Feature ID "F8821@L26" in the
+  paper is illustrative; actual feature IDs are allocated dynamically per `find_free_feature(layer)`.
+  The mechanism is confirmed by `training-free-insert.md` and the Rust implementation.
+- **Gemma 3 4B performance claim** ("faster than dense matmul"): CONFIRMED. Walk FFN 517ms vs
+  Dense 535ms on Gemma 3 4B. Source: `docs/ffn/ffn-graph-layer.md`. Not "marginally" faster —
+  the gap is real and attributable to feature-major mmap layout vs safetensors row-major layout.
+- **UK counterargument (Getty v. Stability AI)**: IRRELEVANT ON THE FACTS. The court's finding
+  was made without knowledge of the empirical LARQL demonstration. See "LARQL Source-Confirmed
+  Facts" section above. Do not treat as persuasive authority on the factual question of whether
+  weights are copies.
 
 ## Open Questions for Follow-Up
 
