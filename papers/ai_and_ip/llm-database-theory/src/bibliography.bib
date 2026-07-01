@@ -1,0 +1,149 @@
+%% bibliography.bib — Language Models Are Databases
+%% BibTeX sources for papers/ai_and_ip/llm-database-theory/
+
+@misc{hay2024larql,
+  author       = {Hay, Chris},
+  title        = {{LARQL} --- {Lazarus Query Language}: A Graph Database Interface to Transformer Language Model Weights},
+  year         = {2024},
+  howpublished = {\url{https://github.com/chrishayuk/larql}},
+  note         = {Open source, Rust, Apache-2.0 licence}
+}
+
+@online{hay2024video,
+  author       = {Hay, Chris},
+  title        = {{LLMs Are Databases} --- So Query Them},
+  year         = {2024},
+  url          = {https://www.youtube.com/watch?v=8Ppw8254nLI},
+  note         = {YouTube presentation demonstrating LARQL on Gemma 3 4B}
+}
+
+@misc{cooper2025memorized,
+  author       = {Cooper, A. Feder and Lemley, Mark A. and Liang, Percy and Ho, Daniel E. and others},
+  title        = {Extracting memorized pieces of (copyrighted) books from open-weight language models},
+  year         = {2025},
+  eprint       = {2505.12546},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.LG},
+  url          = {https://arxiv.org/abs/2505.12546},
+  note         = {Llama 3.1 70B regenerates first \emph{Harry Potter} near-verbatim from a seed; authors conclude memorised text is ``copied inside the model parameters''}
+}
+
+@misc{followon2026extraction,
+  author       = {},
+  title        = {Extracting large portions of copyrighted books from production {LLMs}},
+  year         = {2026},
+  eprint       = {2601.02671},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2601.02671}
+}
+
+@inproceedings{carlini2023extracting,
+  author       = {Carlini, Nicholas and Hayes, Jamie and Nasr, Milad and Jagielski, Matthew and Sehwag, Vikash and Tram{\`e}r, Florian and Balle, Borja and Ippolito, Daphne and Wallace, Eric},
+  title        = {Extracting Training Data from Diffusion Models},
+  booktitle    = {32nd {USENIX} Security Symposium ({USENIX} Security 23)},
+  year         = {2023},
+  eprint       = {2301.13188},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2301.13188},
+  note         = {Over 100 near-identical training images extracted from Stable Diffusion and Imagen; includes trademarked logos and identifiable photographs}
+}
+
+@inproceedings{somepalli2023diffusion,
+  author       = {Somepalli, Gowthami and Singla, Vasu and Goldblum, Micah and Geiping, Jonas and Goldstein, Tom},
+  title        = {Diffusion Art or Digital Forgery? {Investigating} Data Replication in Diffusion Models},
+  booktitle    = {{CVPR} 2023},
+  year         = {2023},
+  note         = {Demonstrates measurable share of ``novel'' diffusion-model outputs are near-exact copies of training images}
+}
+
+@misc{admissions2025compilation,
+  author       = {},
+  title        = {Compilation of {OpenAI} and {Google} Statements to the {U.S.} Copyright Office regarding model storage},
+  year         = {2025},
+  eprint       = {2603.20957},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2603.20957},
+  note         = {{OpenAI} stated models ``do not store copies of the information that they learn from''; {Google} stated ``there is no copy of the training data \ldots{} present in the model itself''}
+}
+
+@misc{self_attention_endofunctor,
+  author       = {},
+  title        = {Self-Attention as a Parametric Endofunctor: {A} Categorical Framework for Transformer Architectures},
+  year         = {2025},
+  eprint       = {2501.02931},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2501.02931},
+  note         = {Formalises the linear part of self-attention as a parametric endofunctor in Para(Vect); stacked attention layers form a free monad}
+}
+
+@misc{copyright1976fixation,
+  author       = {{United States Congress}},
+  title        = {Copyright Act of 1976, 17 {U.S.C.} \S\S 101, 106},
+  year         = {1976},
+  note         = {Definition of ``fixed'': ``sufficiently permanent or stable to permit it to be perceived, reproduced, or otherwise communicated for a period of more than transitory duration'' by or with the aid of a machine}
+}
+
+@misc{gdpr2016,
+  author       = {{European Parliament and Council of the European Union}},
+  title        = {Regulation ({EU}) 2016/679 --- General Data Protection Regulation ({GDPR})},
+  year         = {2016},
+  note         = {Article 17: Right to erasure (``right to be forgotten'')}
+}
+
+@misc{ccpa2018,
+  author       = {{California Legislature}},
+  title        = {California Consumer Privacy Act of 2018 ({CCPA}), Cal. Civ. Code \S\S 1798.100--1798.199},
+  year         = {2018}
+}
+
+@misc{bartz_anthropic2025,
+  title        = {Bartz v. {Anthropic}},
+  year         = {2025},
+  note         = {Ongoing generative-{AI} copyright litigation}
+}
+
+@misc{kadrey_meta2025,
+  title        = {Kadrey v. {Meta Platforms}},
+  year         = {2025},
+  note         = {Ongoing generative-{AI} copyright litigation}
+}
+
+@article{litchfield1984,
+  title        = {Litchfield v. {Spielberg}},
+  year         = {1984},
+  volume       = {736},
+  pages        = {1352},
+  journal      = {F.2d},
+  note         = {9th Cir. 1984 --- derivative-work substantial similarity standard}
+}
+
+@misc{eu_database_directive1996,
+  author       = {{European Parliament and Council of the European Union}},
+  title        = {Directive 96/9/{EC} on the Legal Protection of Databases},
+  year         = {1996},
+  note         = {Sui generis database right protecting substantial investment in obtaining, verifying, or presenting contents}
+}
+
+@misc{mclean2025categorical,
+  author       = {McLean, Ian D.L.N.},
+  title        = {Large Language Models as Categories: An Exploration of Internal Logics},
+  year         = {2025},
+  howpublished = {metavacua/legal-theory, docs/court-record/theory/federal-constitutional/extensions/llms-as-categorical-systems.md},
+  url          = {https://github.com/metavacua/legal-theory}
+}
+
+@misc{mclean2025encoding,
+  author       = {McLean, Ian D.L.N.},
+  title        = {Latent Space and Covert Channels: A Deep Dive into Information Encoding and Communication in Large Language Models},
+  year         = {2025},
+  howpublished = {metavacua/legal-theory, docs/court-record/matters/platform-tos-constitutional-limits/evidence/llm-information-encoding-and-covert-channels.md},
+  url          = {https://github.com/metavacua/legal-theory}
+}
+
+@misc{mclean2025agpl,
+  author       = {McLean, Ian D.L.N.},
+  title        = {An Architectural and Legal Analysis: {GPL}/{{AGPL}} and Derivative Works in {AI} Training},
+  year         = {2025},
+  howpublished = {metavacua/legal-theory, docs/court-record/theory/federal-statutes/extensions/agpl-ai-training-and-code-licensing.md},
+  url          = {https://github.com/metavacua/legal-theory}
+}
