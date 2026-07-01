@@ -5,24 +5,54 @@
 - Primary source: User-authored HTML position paper ("Language models are databases — a position paper
   on LLMs and intellectual property", July 2026).
 - Research assistant: Claude Sonnet 4.6 (Anthropic), 2026-07-01.
-- Deep-research workflow run: `wf_3d8e52ec-fd6` (launched 2026-07-01; status at time of
-  DocBook encoding: still running, ~16 of 33+ agents complete). Full synthesis will be
-  available when the workflow completes; this paper is written from sources confirmed prior
-  to workflow completion.
+- Deep-research workflow: `wf_3d8e52ec-fd6` / task `wnb6yvfql` — completed 2026-07-01.
+  106 agents, 2,065,445 tokens, 780 tool uses. 25 claims verified; 3 confirmed; 22 refuted.
+
+### Deep-Research Verified Findings
+
+**CONFIRMED (3-0):**
+- Geva et al. 2021 (arXiv:2012.14913): FFN layers ARE key-value memories (peer-reviewed, EMNLP 2021)
+- Geva et al. 2022 (arXiv:2203.14680): W_K rows = keys; W_V columns = values; output = weighted sum (EMNLP 2022)
+
+**CONFIRMED (2-1, EU jurisdictions):**
+- Munich Regional Court I, GEMA v. OpenAI, 42 O 14139/24, 11 Nov 2025: memorisation in weights = unlawful reproduction under UrhG §16
+- EP Study 2025 (Nicola Lucchi, PE 774.095): distributing weights with memorised content = prima facie infringement
+
+**REFUTED (1-2):** LARQL vindex/graph-database claim — couldn't be independently verified from GitHub/YouTube alone (not peer-reviewed); the search agents found the repo and documentation but the 3-vote adversarial panel couldn't confirm the specific operational claim from external evidence. NOTE: this reflects the verifiers' inability to run the code, not a finding that the code doesn't work. Direct inspection of the repo source code is required to confirm.
+
+**REFUTED (0-3):** LARQL INSERT INTO EDGES — same caveat as above.
+
+**REFUTED (0-3):** All GDPR Art. 17 direct-application claims; EU Database Directive sui generis for model weights; linear-combination-as-copy; obfuscation irrelevance.
+
+### Additional Sources Surfaced (not previously in bibliography)
+
+- Garcia v. Character Technologies (M.D. Fla., May 2025): strict product liability for AI survives MTD → added as garcia_characterai2025
+- EU Product Liability Directive 2024/2853: AI providers = manufacturers → added as eu_pld2024
+- arXiv:2503.01630 (LLMs as personal data sources) — cited in legal scholarship; GDPR claims refuted
+- UK High Court, Getty Images v. Stability AI, 4 Nov 2025: weights = "purely product of patterns and features, not copies" (UK law only; post-Brexit; contradicts Munich ruling in EU)
+- Kluwer Copyright Blog: "Are AI models' weights protected databases?" (blog, not verified)
+- arXiv:2507.11128v1: LLM personal data store framing (not yet adversarially confirmed)
 
 ## Citation Gaps
 
 - **Cooper et al. 2025** (arXiv:2505.12546): Confirmed to exist; cite verifiable.
-- **Follow-on 2026** (arXiv:2601.02671): Listed in HTML position paper; not independently
-  verified at time of encoding. Treat as cited-by-source pending workflow confirmation.
-- **Admissions compilation** (arXiv:2603.20957): Listed in HTML position paper; not
-  independently verified at time of encoding.
+- **Follow-on 2026** (arXiv:2601.02671): Listed in HTML position paper; NOT independently
+  confirmed by deep-research workflow. Retain in bibliography but mark as unconfirmed.
+- **Admissions compilation** (arXiv:2603.20957): Listed in HTML position paper; NOT independently
+  confirmed by deep-research workflow. Retain in bibliography but mark as unconfirmed.
 - **LARQL INSERT INTO EDGES demo**: From YouTube presentation and LARQL repo README.
   The specific "Feature F8821@L26" numbering in the paper is illustrative of the mechanism;
-  actual feature IDs will vary by model and session.
+  actual feature IDs will vary by model and session. LARQL's operational claims scored 1-2
+  (vindex) and 0-3 (INSERT INTO EDGES) in adversarial verification — not because the code
+  doesn't work, but because the verifiers couldn't run it. Direct `larql-probe`-style
+  inspection is needed (see memory: larql-probe-tool).
 - **Gemma 3 4B performance claim** ("marginally faster than dense matmul"): From LARQL repo
   documentation and presentations; should be confirmed against LARQL CHANGELOG or benchmark
   data in the repo when citing in litigation contexts.
+- **UK counterargument**: Getty Images v. Stability AI (UK High Court, 4 Nov 2025) holds
+  weights are "purely product of patterns and features, not copies" — directly contradicts
+  Munich ruling. Must be addressed when arguing in common-law jurisdictions. Not fatal
+  in EU proceedings; may be persuasive in US courts depending on circuit.
 
 ## Open Questions for Follow-Up
 
