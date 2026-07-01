@@ -110,8 +110,3 @@ Documents not yet in findings-of-fact format or pending classification.
 
 - [wip/](wip/)
 
----
-
-## Design
-
-- [Repository Organization Design Spec](superpowers/specs/2026-06-30-repository-organization-design.md)
