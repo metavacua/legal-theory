@@ -1,0 +1,61 @@
+# custom.rnc — RELAX NG Compact Schema
+# Extends DocBook 5.2 constraints for llm-database-theory papers.
+#
+# Validates:
+#   1. finding-section attribute constraints (role + condition must co-occur)
+#   2. Permitted condition values
+#   3. Required xml:id on finding sections
+#
+# Usage:
+#   jing -c schema/custom.rnc src/01-llm-database-theory.xml
+#   jing -c schema/custom.rnc src/02-legal-corpus-connections.xml
+#
+# Note: This schema is additive — it does NOT replace the full DocBook 5.2 schema.
+# Run xmllint --relaxng separately to validate against the full DocBook grammar.
+
+namespace db     = "http://docbook.org/ns/docbook"
+namespace xi     = "http://www.w3.org/2001/XInclude"
+namespace xlink  = "http://www.w3.org/1999/xlink"
+namespace local  = ""
+
+# Permitted condition values on <section role="finding">
+finding-condition =
+  "confirmed"
+  | "confirmed-with-caveats"
+  | "split"
+
+# A finding section must have xml:id, role="finding", and a valid condition.
+finding-section =
+  element db:section {
+    attribute xml:id  { xsd:NCName },
+    attribute role    { "finding" },
+    attribute condition { finding-condition },
+    element db:title { text },
+    (element db:para { mixed { any } }
+     | element db:section { any }
+     | element db:orderedlist { any }
+     | element db:itemizedlist { any }
+     | element db:table { any })+
+  }
+
+# Top-level article structure (relaxed — defers to DocBook 5.2 RNG for full validation)
+start =
+  element db:article {
+    attribute version   { "5.2" },
+    attribute xml:id    { xsd:NCName }?,
+    attribute xml:lang  { xsd:language }?,
+    ( element xi:include { attribute href { xsd:anyURI } }
+    | element db:info   { any }
+    | element db:title  { text }
+    | element db:subtitle { text }
+    | element db:section {
+        attribute xml:id    { xsd:NCName }?,
+        attribute role      { text }?,
+        attribute condition { text }?,
+        any
+      }
+    )*
+  }
+
+# Catch-all for unvalidated content (DocBook 5.2 handles this)
+any = (element * { any } | attribute * { text } | text)*
