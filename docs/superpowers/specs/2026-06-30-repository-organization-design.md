@@ -55,81 +55,85 @@ The Constitution is the axiomatic base — the supreme contract of the land. Sta
 
 ## Directory Structure
 
+All content lives under `docs/` — the repository root contains only `README.md`, `docs/`, and git-tooling files.
+
 ```
 legal-theory/
 │
-├── court-record/
-│   ├── theory/
-│   │   ├── federal-constitutional/
-│   │   │   ├── existing-doctrine/
-│   │   │   ├── extensions/
-│   │   │   ├── specializations/
-│   │   │   └── reversal-arguments/
-│   │   │
-│   │   ├── california-constitutional/
-│   │   │   ├── existing-doctrine/
-│   │   │   ├── extensions/
-│   │   │   ├── specializations/
-│   │   │   └── reversal-arguments/
-│   │   │
-│   │   ├── federal-statutes/
-│   │   │   ├── existing-law/
-│   │   │   ├── extensions/
-│   │   │   ├── specializations/
-│   │   │   └── reversal-arguments/
-│   │   │
-│   │   ├── california-statutes/
-│   │   │   ├── existing-law/
-│   │   │   ├── extensions/
-│   │   │   ├── specializations/
-│   │   │   └── reversal-arguments/
-│   │   │
-│   │   └── municipal/
-│   │       ├── existing-law/
-│   │       └── specializations/
-│   │
-│   └── matters/
-│       └── [matter-slug]/
-│           ├── README.md
-│           ├── findings.md
-│           ├── administrative-record/
-│           └── evidence/
-│
-├── proposals/
-│   ├── legislative/
-│   │   ├── federal/
-│   │   │   └── congress/
-│   │   └── california/
-│   │       ├── state-legislature/
-│   │       ├── county/
-│   │       ├── city/
-│   │       └── petitions/
-│   │
-│   └── executive/
-│       ├── orders/
-│       │   ├── federal/
-│       │   │   └── presidential/
-│       │   └── california/
-│       │       ├── governor/
-│       │       ├── county-executive/
-│       │       └── mayor/
-│       │
-│       └── agencies/
-│           ├── federal/
-│           │   ├── ftc/
-│           │   ├── nlrb/
-│           │   └── sec/
-│           └── california/
-│               ├── attorney-general/
-│               ├── labor-commissioner-dlse/
-│               ├── civil-rights-dept-crd/
-│               ├── dfpi/
-│               ├── fppc/
-│               └── secretary-of-state/
-│
-├── cross-cutting/
-├── wip/
-└── index.md
+├── README.md
+└── docs/
+    ├── court-record/
+    │   ├── theory/
+    │   │   ├── federal-constitutional/
+    │   │   │   ├── existing-doctrine/
+    │   │   │   ├── extensions/
+    │   │   │   ├── specializations/
+    │   │   │   └── reversal-arguments/
+    │   │   │
+    │   │   ├── california-constitutional/
+    │   │   │   ├── existing-doctrine/
+    │   │   │   ├── extensions/
+    │   │   │   ├── specializations/
+    │   │   │   └── reversal-arguments/
+    │   │   │
+    │   │   ├── federal-statutes/
+    │   │   │   ├── existing-law/
+    │   │   │   ├── extensions/
+    │   │   │   ├── specializations/
+    │   │   │   └── reversal-arguments/
+    │   │   │
+    │   │   ├── california-statutes/
+    │   │   │   ├── existing-law/
+    │   │   │   ├── extensions/
+    │   │   │   ├── specializations/
+    │   │   │   └── reversal-arguments/
+    │   │   │
+    │   │   └── municipal/
+    │   │       ├── existing-law/
+    │   │       └── specializations/
+    │   │
+    │   └── matters/
+    │       └── [matter-slug]/
+    │           ├── README.md
+    │           ├── findings.md
+    │           ├── administrative-record/
+    │           └── evidence/
+    │
+    ├── proposals/
+    │   ├── legislative/
+    │   │   ├── federal/
+    │   │   │   └── congress/
+    │   │   └── california/
+    │   │       ├── state-legislature/
+    │   │       ├── county/
+    │   │       ├── city/
+    │   │       └── petitions/
+    │   │
+    │   └── executive/
+    │       ├── orders/
+    │       │   ├── federal/
+    │       │   │   └── presidential/
+    │       │   └── california/
+    │       │       ├── governor/
+    │       │       ├── county-executive/
+    │       │       └── mayor/
+    │       │
+    │       └── agencies/
+    │           ├── federal/
+    │           │   ├── ftc/
+    │           │   ├── nlrb/
+    │           │   └── sec/
+    │           └── california/
+    │               ├── attorney-general/
+    │               ├── labor-commissioner-dlse/
+    │               ├── civil-rights-dept-crd/
+    │               ├── dfpi/
+    │               ├── fppc/
+    │               └── secretary-of-state/
+    │
+    ├── cross-cutting/
+    ├── wip/
+    └── index.md
 ```
 
 ---

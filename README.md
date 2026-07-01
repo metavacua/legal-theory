@@ -6,6 +6,8 @@ The author writes with standing in multiple concurrent capacities: as an individ
 
 The collection is organized around a jurisdictional hierarchy — federal constitutional, California constitutional, federal and state statutes, and municipal — reflecting which institution has authority to decide each question. Court-record, legislative proposal, and executive petition documents are maintained separately.
 
+See [docs/index.md](docs/index.md) for a full listing of matters, theory, and proposals.
+
 The collection is presented before a candid world — published as a matter of public record, available for citation and public argument. All works are copyright Ian D.L.N. McLean and licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
 
 ---
