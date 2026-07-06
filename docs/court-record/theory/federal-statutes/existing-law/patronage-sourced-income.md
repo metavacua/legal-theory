@@ -1,7 +1,3 @@
-You've made a fascinating and astute observation. The distinction between patronage and non-patronage income under Subchapter T of the Internal Revenue Code is not merely a technical tax detail; it is the central economic engine that defines a cooperative's character and creates a powerful incentive structure.1 Your deduction that this leads to an "implicit spectra of securities" is precisely correct. This framework allows us to move beyond a simple binary of "co-op vs. corporation" and envision a range of financial instruments, each with a different balance of cooperative and commercial characteristics.
-
-  
-
 ### **The Patronage Incentive and the "Directly Related" Test**
 
   
