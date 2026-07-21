@@ -117,7 +117,7 @@ CA Corporations Code; federal securities law; IRC cooperative treatment.
 ### [Copyright, IP Authorship, and AI-Assisted Creation](court-record/matters/copyright-ip-authorship/README.md)
 
 Copyright Act; CA contract law; AI-assisted authorship.
-[Findings](court-record/matters/copyright-ip-authorship/findings.md) · 13 evidence documents
+[Findings](court-record/matters/copyright-ip-authorship/findings.html) · 13 evidence documents
 
 - [A Constructive Legal Framework for Artistic Commissions](court-record/matters/copyright-ip-authorship/evidence/a-constructive-legal-framework-for-artistic-commissions.md)
 - [A Formalized Legal and Data Framework for AI-Assisted Copyrightable Works](court-record/matters/copyright-ip-authorship/evidence/ai-assisted-copyrightable-work-schema.md)

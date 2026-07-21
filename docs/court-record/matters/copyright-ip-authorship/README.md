@@ -14,7 +14,7 @@ Constitutional scope: Federal statutory (Copyright Act, 17 U.S.C.); California s
 
 ## Statement of Facts
 
-See [`findings.md`](findings.md) FOF section. Supporting evidence in [`evidence/`](evidence/) (13 documents — see the [full index](../../../index.md#copyright-ip-authorship-and-ai-assisted-creation)). Theory authority in [`federal-statutes/existing-law/`](../../theory/federal-statutes/existing-law/) (ip-contract-knowledge-graph.md).
+See [`findings.html`](findings.html) FOF section. Supporting evidence in [`evidence/`](evidence/) (13 documents — see the [full index](../../../index.md#copyright-ip-authorship-and-ai-assisted-creation)). Theory authority in [`federal-statutes/existing-law/`](../../theory/federal-statutes/existing-law/) (ip-contract-knowledge-graph.md).
 
 ## Causes of Action
 
