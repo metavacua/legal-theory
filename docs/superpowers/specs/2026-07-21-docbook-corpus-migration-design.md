@@ -67,7 +67,21 @@ via `docs/scripts/convert_to_docbook.py`, each independently re-validated agains
 `https://metavacua.github.io/legal-theory/court-record/matters/<matter>/findings.html`).
 Content is unchanged from the original `[STUB]` placeholders — this phase converted format
 only, per the Non-Goals section above. Commits: `e17293b`, `8bb8f4f`, `f94809c`, `b4133de`,
-`89887ea`. Phase 2 (70-document evidence corpus, matter-by-matter) not started.
+`89887ea`. Phase 2 (70-document evidence corpus, matter-by-matter) started
+2026-07-21: `google-platform-misclassification` (6 evidence documents, smallest matter)
+complete — matter now fully converted (findings.md + all evidence). Found and fixed a real
+`content_preservation_diff()` bug in the process (commit `3369c2a`): line- and then
+block-level diffing both proved unstable across the DocBook round-trip for real prose
+(long lines re-wrap at a different column width; adjacent list items regroup into a
+different number of blocks) — fixed by comparing at the word level instead
+(`difflib.SequenceMatcher` over whitespace-split tokens), immune to both. Also patched 3
+of the 6 documents' titles (`google-user-contracts-implicit-employment-obligations.md`,
+`google-user-contracts.md`, `google-user-misclassification.md`) to the human-curated
+titles from the earlier accessibility-reorg audit, since `extract_title()`'s mechanical
+first-heading extraction picked up an internal sub-section heading for each — same known
+issue flagged for ~10 files total across the corpus in that audit. All 6 verified: jing
+schema-valid, xsltproc build clean, word-level content-preservation diff empty, live on
+the deployed site. 4 matters remain in Phase 2 (64 evidence documents).
 
 ## Section 4 — Testing, CI, and Safety Net
 
