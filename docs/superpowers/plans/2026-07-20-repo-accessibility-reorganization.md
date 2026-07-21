@@ -219,15 +219,32 @@ git commit -m "ci: build DocBook paper to HTML and publish under docs/ for Pages
 
 ---
 
-## Task 5: Enable GitHub Pages (human-confirmed, not automated by this plan)
+## Task 5: Enable GitHub Pages — DONE, previewing from this branch (2026-07-21)
 
-**This task is deliberately NOT executed automatically** — it flips a public-facing repository setting and typically requires the source branch to be `main`.
+Executed with explicit user confirmation via AskUserQuestion (user wanted to preview from the
+feature branch before merging to `main` — deliberately did not merge).
 
-- [ ] Confirm with the repo owner which branch Pages should build from (this work is currently on `claude/llm-database-theory-codification`; Pages conventionally builds from `main`).
-- [ ] Merge Tasks 1–4 to `main` (separate, explicit approval).
-- [ ] `gh api -X POST repos/metavacua/legal-theory/pages -f source[branch]=main -f source[path]=/docs` (or via Settings UI).
-- [ ] Verify: `gh api repos/metavacua/legal-theory/pages` returns a `html_url`, and that URL 200s within a few minutes.
-- [ ] Add the live URL to `README.md`'s "Start Here" section (small follow-up edit).
+- [x] Confirmed Pages was already enabled repo-side (`build_type: "workflow"` — the newer
+  Actions-based model, not classic branch-source) but nothing had ever deployed: `html_url`
+  set, live URL 404, zero workflow runs.
+- [x] Added `.github/workflows/deploy-pages.yml` (`actions/jekyll-build-pages` →
+  `upload-pages-artifact` → `deploy-pages`), triggered on push to
+  `claude/llm-database-theory-codification` + `workflow_dispatch`. Honors `docs/_config.yml`
+  (cayman theme, `jekyll-relative-links`).
+- [x] First deploy attempt was rejected: the `github-pages` environment's deployment-branch
+  policy only allowed `main`. Confirmed with user, then added this branch to the policy via
+  `gh api -X POST .../environments/github-pages/deployment-branch-policies -f name=claude/llm-database-theory-codification`
+  (additive — `main` stays allowed too).
+- [x] Re-ran the workflow — build + deploy both succeeded.
+- [x] Verified live: `https://metavacua.github.io/legal-theory/` returns 200, title renders,
+  nested pages (e.g. `court-record/matters/cooperative-investment-law/`) return 200, and
+  `jekyll-relative-links` correctly rewrites `.md` links to `.html` in the served HTML.
+
+**Remaining for a future session, on request:** merge to `main` (the workflow trigger would
+need broadening to include `main`, and the `deploy-pages.yml` branch trigger updated —
+`main` is already in the environment's branch policy so no further policy change is needed);
+add the live URL to `README.md`'s "Start Here" section once the canonical (main-branch) URL
+is the one being pointed to.
 
 ---
 
