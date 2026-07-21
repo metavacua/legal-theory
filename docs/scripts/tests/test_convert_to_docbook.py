@@ -55,6 +55,35 @@ class TestPandocAndWrapping(unittest.TestCase):
         self.assertIn("<section", fragment)
         self.assertIn("A Flat Document", fragment)
 
+    def test_trailing_whitespace_hard_break_does_not_produce_literallayout(self):
+        # Root-caused on a real corpus document
+        # (california-worker-misclassification-risk-analysis.md): an
+        # accidental Markdown hard line break (2+ trailing spaces mid-
+        # paragraph, a copy-paste artifact — confirmed present in 223
+        # lines across 35 corpus files) makes pandoc emit <literallayout>
+        # instead of <para> for the containing block. html5.xsl has no
+        # template for <literallayout>, so it fell through to bare
+        # unstyled text with no paragraph wrapping in the built HTML —
+        # a real, live rendering defect, not just a diff-check artifact.
+        # pandoc_to_docbook_fragment must normalize trailing whitespace
+        # before invoking pandoc so this never triggers.
+        from convert_to_docbook import pandoc_to_docbook_fragment
+        fragment = pandoc_to_docbook_fragment(self.fixtures / "hard_break_artifact.md")
+        self.assertNotIn("literallayout", fragment)
+        # Without the hard-break trigger, pandoc renders the two
+        # physical lines as ordinary reflowable <para> content (here,
+        # two sibling paragraphs within the same list item — CommonMark
+        # treats an indented continuation line as starting a new block
+        # once there's no hard break forcing them together) rather than
+        # one frozen <literallayout> block. Both sentences' full text
+        # must still be present, just not literal-preformatted.
+        normalized = " ".join(fragment.split())
+        self.assertIn("trailing whitespace right here.", normalized)
+        self.assertIn(
+            "Which continues on this next physical line as one intended sentence",
+            normalized,
+        )
+
     def test_wrap_single_section_unwraps_and_reports_true(self):
         from convert_to_docbook import pandoc_to_docbook_fragment, wrap_fragment
         fragment = pandoc_to_docbook_fragment(self.fixtures / "flat.md")

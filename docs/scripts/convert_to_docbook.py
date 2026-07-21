@@ -36,10 +36,31 @@ def extract_title(md_path):
     return Path(md_path).stem.replace("-", " ").replace("_", " ").title()
 
 
+def _strip_trailing_whitespace(md_path):
+    # Root cause of a real, live rendering defect (found converting
+    # california-worker-misclassification-risk-analysis.md, confirmed
+    # present in 223 lines across 35 corpus files): CommonMark treats a
+    # line ending in 2+ trailing spaces, immediately followed by
+    # another non-blank line, as a hard line break. These are copy-
+    # paste artifacts in this corpus, not intentional formatting — but
+    # pandoc honors them, and a hard break inside an otherwise-plain
+    # paragraph makes its DocBook5 writer emit <literallayout> (a
+    # preformatted, non-reflowable block) instead of <para>. html5.xsl
+    # has no template for <literallayout>, so it fell through to bare,
+    # unstyled text with no paragraph wrapping in the built HTML.
+    # Stripping trailing whitespace before pandoc ever sees the content
+    # removes the hard-break trigger at its source, rather than trying
+    # to detect or work around <literallayout> after the fact.
+    with open(md_path, encoding="utf-8") as f:
+        lines = f.readlines()
+    return "".join(line.rstrip(" \t") + ("\n" if line.endswith("\n") else "") for line in lines)
+
+
 def pandoc_to_docbook_fragment(md_path):
+    normalized = _strip_trailing_whitespace(md_path)
     result = subprocess.run(
-        ["pandoc", "-f", "gfm", "-t", "docbook5", str(md_path)],
-        capture_output=True, text=True, check=True,
+        ["pandoc", "-f", "gfm", "-t", "docbook5"],
+        input=normalized, capture_output=True, text=True, check=True,
     )
     return result.stdout
 

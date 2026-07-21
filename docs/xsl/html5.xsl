@@ -191,6 +191,16 @@
     <pre><xsl:apply-templates/></pre>
   </xsl:template>
 
+  <!-- Defense-in-depth: the conversion tool strips trailing whitespace
+       before pandoc runs, so pandoc should never emit this for an
+       accidental Markdown hard break anymore — but if a document ever
+       has a genuinely-intentional preformatted block (an address, a
+       line-block/verse), render its line breaks correctly instead of
+       falling through to unstyled bare text with no wrapping element. -->
+  <xsl:template match="db:literallayout">
+    <pre><xsl:apply-templates/></pre>
+  </xsl:template>
+
   <xsl:template match="db:itemizedlist">
     <ul><xsl:apply-templates/></ul>
   </xsl:template>
