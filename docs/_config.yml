@@ -1,0 +1,9 @@
+theme: jekyll-theme-cayman
+title: "legal-theory"
+description: "Findings of fact and legal theory — labor, cooperative investment, and expression law in California and federal jurisdiction."
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
+markdown: kramdown
