@@ -50,18 +50,18 @@ CA Labor Code ABC test; NLRA; worker classification of platform users.
 1st Amendment; CA Art. I §2; automated decision systems; Section 230.
 [Findings](court-record/matters/platform-tos-constitutional-limits/findings.html) · 12 evidence documents
 
-- [The Creator's Stake: AI-Assisted Art Tools and Copyright Ownership for the Modern Graphic Novelist](court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-art-tools-for-comics.md)
-- [The Intelligent Monorepo: Consolidating and Automating a Polyglot Codebase with Google Jules](court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-codebase-organization-strategies.md)
-- [The Scribe: An Architectural Blueprint for a Next-Generation Creative Writing Platform](court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-writing-tool-research.md)
-- [An Introspective Toolchain for the Jules Coding Agent: Technical Framework and Legal Diligence](court-record/matters/platform-tos-constitutional-limits/evidence/ai-toolchain-licensing-and-tos.md)
-- [The Directed Hand: Externally-Guided IP Creation as a Service](court-record/matters/platform-tos-constitutional-limits/evidence/directed-ip-creation.md)
-- [Isolating the Influence of Data in Large Language Models: A Data-Centric Comparative Analysis](court-record/matters/platform-tos-constitutional-limits/evidence/llm-data-vs-program.md)
-- [Latent Space and Covert Channels: Information Encoding and Communication in LLMs](court-record/matters/platform-tos-constitutional-limits/evidence/llm-information-encoding-and-covert-channels.md)
-- [Open Deep Research Implementations and Google AI Services Licensing Compatibility](court-record/matters/platform-tos-constitutional-limits/evidence/open-research-ai-pro-tos-analysis.md)
-- [Semantic System Profiling: An Architectural Blueprint for Knowledge-Driven Network Automation](court-record/matters/platform-tos-constitutional-limits/evidence/semantic-network-profiling-research.md)
-- [The Algorithmic Editor: AI Moderation as Creative Control in the Platform Economy](court-record/matters/platform-tos-constitutional-limits/evidence/the-algorithmic-editor-ai-moderation-as-creative-control.md)
-- [The Unilateral Mandate: Social Media Platforms as Service Contracts for IP Creation](court-record/matters/platform-tos-constitutional-limits/evidence/the-unilateral-mandate-social-media-platforms-as-service-contracts.md)
-- [VRP Legal Vulnerability — The Defined Scope of VRPs](court-record/matters/platform-tos-constitutional-limits/evidence/vrp-legal-vulnerability.md)
+- [The Creator's Stake: AI-Assisted Art Tools and Copyright Ownership for the Modern Graphic Novelist](court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-art-tools-for-comics.html)
+- [The Intelligent Monorepo: Consolidating and Automating a Polyglot Codebase with Google Jules](court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-codebase-organization-strategies.html)
+- [The Scribe: An Architectural Blueprint for a Next-Generation Creative Writing Platform](court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-writing-tool-research.html)
+- [An Introspective Toolchain for the Jules Coding Agent: Technical Framework and Legal Diligence](court-record/matters/platform-tos-constitutional-limits/evidence/ai-toolchain-licensing-and-tos.html)
+- [The Directed Hand: Externally-Guided IP Creation as a Service](court-record/matters/platform-tos-constitutional-limits/evidence/directed-ip-creation.html)
+- [Isolating the Influence of Data in Large Language Models: A Data-Centric Comparative Analysis](court-record/matters/platform-tos-constitutional-limits/evidence/llm-data-vs-program.html)
+- [Latent Space and Covert Channels: Information Encoding and Communication in LLMs](court-record/matters/platform-tos-constitutional-limits/evidence/llm-information-encoding-and-covert-channels.html)
+- [Open Deep Research Implementations and Google AI Services Licensing Compatibility](court-record/matters/platform-tos-constitutional-limits/evidence/open-research-ai-pro-tos-analysis.html)
+- [Semantic System Profiling: An Architectural Blueprint for Knowledge-Driven Network Automation](court-record/matters/platform-tos-constitutional-limits/evidence/semantic-network-profiling-research.html)
+- [The Algorithmic Editor: AI Moderation as Creative Control in the Platform Economy](court-record/matters/platform-tos-constitutional-limits/evidence/the-algorithmic-editor-ai-moderation-as-creative-control.html)
+- [The Unilateral Mandate: Social Media Platforms as Service Contracts for IP Creation](court-record/matters/platform-tos-constitutional-limits/evidence/the-unilateral-mandate-social-media-platforms-as-service-contracts.html)
+- [VRP Legal Vulnerability — The Defined Scope of VRPs](court-record/matters/platform-tos-constitutional-limits/evidence/vrp-legal-vulnerability.html)
 
 ### [Cooperative Investment Law and Patron Securities](court-record/matters/cooperative-investment-law/README.md)
 
