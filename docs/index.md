@@ -66,7 +66,7 @@ CA Labor Code ABC test; NLRA; worker classification of platform users.
 ### [Cooperative Investment Law and Patron Securities](court-record/matters/cooperative-investment-law/README.md)
 
 CA Corporations Code; federal securities law; IRC cooperative treatment.
-[Findings](court-record/matters/cooperative-investment-law/findings.md) · 19 evidence documents
+[Findings](court-record/matters/cooperative-investment-law/findings.html) · 19 evidence documents
 
 - [A Comprehensive Blueprint for an Integrated Community Support Ecosystem](court-record/matters/cooperative-investment-law/evidence/community-care-cooperatives.md)
 - [Reference Guide: Benefit-Compliant Contractual Instruments](court-record/matters/cooperative-investment-law/evidence/community-care-cooperatives-v2.md) *(v2)*
