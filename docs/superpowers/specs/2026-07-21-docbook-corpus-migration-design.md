@@ -60,6 +60,15 @@ For each document `foo.md`:
 2. Evidence documents, matter-by-matter, smallest matter first: `google-platform-misclassification` (6) → `platform-tos-constitutional-limits` (12) → `copyright-ip-authorship` (13) → `cooperative-investment-law` (19) → `sex-work-consent-bodily-autonomy` (20, includes the corpus's largest document at 18.4k words) — shakes out tool edge cases cheaply before the hardest documents.
 3. Theory (22 documents across the branches from Task 1/2's audit) → cross-cutting (8) → wip (8) → proposals (6) — smaller sets, tool well-proven by this point.
 
+**Rollout progress (2026-07-21):** Phase 1 (`findings.md` × 5) complete — all five converted
+via `docs/scripts/convert_to_docbook.py`, each independently re-validated against
+`docs/schema/docbook-corpus.rnc` post-commit, full-corpus link/anchor sweep clean (176 links,
+0 broken), deployed and verified live (200s at
+`https://metavacua.github.io/legal-theory/court-record/matters/<matter>/findings.html`).
+Content is unchanged from the original `[STUB]` placeholders — this phase converted format
+only, per the Non-Goals section above. Commits: `e17293b`, `8bb8f4f`, `f94809c`, `b4133de`,
+`89887ea`. Phase 2 (70-document evidence corpus, matter-by-matter) not started.
+
 ## Section 4 — Testing, CI, and Safety Net
 
 - **Tool testing (TDD):** `docs/scripts/convert-to-docbook.sh` ships with a test fixture and a test asserting well-formed + schema-valid + zero-flagged-diff output, written before the implementation, per `superpowers:test-driven-development`.
