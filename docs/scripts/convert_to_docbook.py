@@ -247,6 +247,9 @@ def main():
         print("usage: convert_to_docbook.py <path/to/doc.md>", file=sys.stderr)
         return 2
     md_path = Path(sys.argv[1])
+    if not md_path.is_file():
+        print(f"error: no such file: {md_path}", file=sys.stderr)
+        return 2
     out_dir = md_path.parent
     result = convert(md_path, out_dir)
     if result.errors:

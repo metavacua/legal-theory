@@ -1,7 +1,9 @@
+import io
 import sys
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -296,6 +298,19 @@ class TestConvertEndToEnd(unittest.TestCase):
         from convert_to_docbook import convert
         result = convert(self.fixtures / "numbered_headings.md", self.out_dir)
         self.assertEqual(result.errors, [])
+
+
+class TestMainCLI(unittest.TestCase):
+    def test_main_reports_clean_error_for_missing_input_file(self):
+        from convert_to_docbook import main
+        missing = Path(__file__).resolve().parent / "fixtures" / "does-not-exist.md"
+        self.assertFalse(missing.exists())
+        with mock.patch.object(sys, "argv", ["convert_to_docbook.py", str(missing)]), \
+                mock.patch.object(sys, "stderr", io.StringIO()) as fake_stderr:
+            rc = main()
+        self.assertEqual(rc, 2)
+        self.assertIn(str(missing), fake_stderr.getvalue())
+        self.assertIn("no such file", fake_stderr.getvalue())
 
 
 if __name__ == "__main__":
