@@ -1,0 +1,57 @@
+{
+  // Scoped to rules that correlate with docs/scripts/convert_to_docbook.py
+  // conversion problems, per the classification in
+  // docs/superpowers/specs/2026-07-21-source-markdown-quality-taxonomy.md.
+  // All other default rules are disabled: this corpus's authoring style
+  // (long unwrapped prose lines, inconsistent list/table pipe spacing,
+  // multiple blank lines as paragraph separators from copy-paste) makes
+  // markdownlint's full default ruleset almost entirely noise for this
+  // repository's purpose — verified by running the default ruleset across
+  // the whole corpus and finding 13k+ line-length and 8.7k multi-blank
+  // hits versus a few dozen hits on the rules that actually predict a
+  // conversion-tool problem.
+  "config": {
+    "default": false,
+
+    // Class A (accidental hard line breaks -> pandoc emits
+    // <literallayout>, fixed at the tool level in
+    // convert_to_docbook.py's _strip_trailing_whitespace — this rule
+    // is a secondary detector, not the enforcement mechanism, and
+    // under-counts real instances since br_spaces:2 treats exactly-two-
+    // trailing-spaces as an intentional CommonMark hard break by
+    // design. Use the taxonomy doc's precise script for an accurate
+    // count of the "genuine mid-paragraph break" subset.
+    "MD009": true,
+
+    // Class D (poor title extraction) — a document with no top-level
+    // heading, or with heading levels that skip, is a strong signal
+    // extract_title()'s mechanical first-heading heuristic will need a
+    // manually-curated override (see taxonomy doc Class D).
+    "MD041": true,
+    "MD001": true,
+
+    // Class D variant — a "**Bold Text**" pseudo-heading with no real
+    // `#` markup means extract_title() and wrap_fragment() never see
+    // it as a section boundary at all.
+    "MD036": true,
+
+    // Class B lead (table cosmetics) — does NOT reliably predict the
+    // table-border content_diff false positive (fixed at the tool
+    // level regardless), but flags tables worth a manual glance during
+    // conversion.
+    "MD060": true,
+
+    // Class C lead (bare URLs directly adjacent to other markup, no
+    // space) — one of the two source patterns behind the emphasis-
+    // boundary spacing false positives (fixed via content_diff's
+    // alphanumeric-content tolerance; this rule flags candidates for
+    // manual review before converting).
+    "MD034": true,
+
+    // Duplicate headings within one document — verified NOT a live bug
+    // (pandoc auto-deduplicates header-derived xml:id, appending -1,
+    // -2...) but still worth a human glance for document-quality
+    // reasons unrelated to conversion.
+    "MD024": true
+  }
+}

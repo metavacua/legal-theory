@@ -83,6 +83,21 @@ issue flagged for ~10 files total across the corpus in that audit. All 6 verifie
 schema-valid, xsltproc build clean, word-level content-preservation diff empty, live on
 the deployed site. 4 matters remain in Phase 2 (64 evidence documents).
 
+**Full corpus-wide classification (2026-07-21):** before continuing to the next matter,
+ran a dry-run `convert()` across all 106 remaining content documents (not just
+`evidence/`) and cross-referenced against `markdownlint` to systematically classify every
+markup-quality pattern that has affected or could affect the conversion pipeline — see
+**[docs/superpowers/specs/2026-07-21-source-markdown-quality-taxonomy.md](2026-07-21-source-markdown-quality-taxonomy.md)**
+for the full writeup (5 classes: A hard-breaks and B table-rendering, both fixed at the
+tool level; C malformed-emphasis-adjacency, deliberately left as manual-per-document
+review; D poor title extraction, handled manually per the reorg audit; E stray HTML tags,
+fixed at the tool level in commit `f67bac7` after crashing on
+`petition-corporate-ai-registry-ca-sos.md`). 97/106 documents scanned clean. A repo-scoped
+`.markdownlint-cli2.jsonc` now exists (7 rules that correlate with real conversion
+problems; every other default rule disabled as pure noise for this corpus's authoring
+style) — **linting via that config is a mandatory step** before investigating any new
+class this taxonomy doesn't already cover.
+
 ## Section 4 — Testing, CI, and Safety Net
 
 - **Tool testing (TDD):** `docs/scripts/convert-to-docbook.sh` ships with a test fixture and a test asserting well-formed + schema-valid + zero-flagged-diff output, written before the implementation, per `superpowers:test-driven-development`.
