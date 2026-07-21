@@ -29,9 +29,9 @@ Transformer language models are **graph databases** in a technically precise, le
 | `src/01-llm-database-theory.xml` | Primary DocBook 5.2 article (10 sections) |
 | `src/02-legal-corpus-connections.xml` | Connections to matters in this repo; proposed FOFs |
 | `src/bibliography.bib` | 14 BibTeX entries |
-| `xsl/html5.xsl` | DocBook → HTML5 (with DC meta tags + Schema.org JSON-LD) |
-| `xsl/latex.xsl` | DocBook → LaTeX (pdflatex-compilable) |
-| `schema/custom.rnc` | RELAX NG compact schema (finding-section constraints) |
+| `../../../xsl/html5.xsl` | DocBook → HTML5 (with DC meta tags + Schema.org JSON-LD) |
+| `../../../xsl/latex.xsl` | DocBook → LaTeX (pdflatex-compilable) |
+| `../../../schema/docbook-corpus.rnc` | RELAX NG compact schema (finding-section constraints) |
 | `scratch/formulas.md` | Math correspondences, LARQL↔SQL table, memorisation rates |
 | `scratch/notes.md` | Session provenance, citation gaps, open questions |
 
