@@ -328,6 +328,24 @@ class TestConvertEndToEnd(unittest.TestCase):
         result = convert(self.fixtures / "numbered_headings.md", self.out_dir)
         self.assertEqual(result.errors, [])
 
+    def test_convert_reports_clean_error_for_malformed_pandoc_output(self):
+        # Root-caused on a real corpus document
+        # (petition-corporate-ai-registry-ca-sos.md): a stray, unmatched
+        # HTML-like closing tag in the source (an artifact from whatever
+        # generated the document, e.g. `</content>` with no opening
+        # tag) survives as raw-HTML passthrough in pandoc's DocBook5
+        # output, producing genuinely malformed XML — wrap_fragment()'s
+        # ET.fromstring() raised an uncaught ParseError, crashing the
+        # whole convert() call instead of reporting a clean error the
+        # way validate() already does for other malformed input.
+        from convert_to_docbook import convert
+        result = convert(self.fixtures / "stray_html_tag.md", self.out_dir)
+        self.assertTrue(result.errors, "expected a reported error, not a crash")
+        self.assertTrue(
+            any("pars" in e.lower() or "malformed" in e.lower() for e in result.errors),
+            f"expected a parse-related error message, got: {result.errors}",
+        )
+
 
 class TestIgnorableWordRun(unittest.TestCase):
     # Regression coverage for two real false positives found converting

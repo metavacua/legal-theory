@@ -284,20 +284,34 @@ def convert(md_path, out_dir):
     xml_id = slugify(md_path.stem)
     title = extract_title(md_path)
     meta_name = f"{md_path.stem}.meta.xml"
+    xml_path = out_dir / f"{md_path.stem}.xml"
+    html_path = out_dir / f"{md_path.stem}.html"
 
     fragment = pandoc_to_docbook_fragment(md_path)
-    article, unwrapped = wrap_fragment(fragment, xml_id, title, meta_name)
+    try:
+        article, unwrapped = wrap_fragment(fragment, xml_id, title, meta_name)
+    except ET.ParseError as e:
+        # Root cause (petition-corporate-ai-registry-ca-sos.md): a
+        # stray, unmatched HTML-like tag in the source (an artifact
+        # from whatever generated the document) survives as raw-HTML
+        # passthrough in pandoc's DocBook5 output, producing genuinely
+        # malformed XML no amount of normalization on our side
+        # controls for. Report it the way validate() reports any other
+        # malformed input, rather than letting an uncaught exception
+        # crash the whole conversion.
+        return ConversionResult(
+            xml_path=xml_path, html_path=html_path,
+            errors=[f"malformed pandoc output, could not parse: {e}"],
+        )
 
     write_metadata(out_dir / meta_name, title)
 
-    xml_path = out_dir / f"{md_path.stem}.xml"
     tree = ET.ElementTree(article)
     ET.indent(tree, space="  ")
     tree.write(xml_path, encoding="unicode", xml_declaration=True)
 
     errors = validate(xml_path)
 
-    html_path = out_dir / f"{md_path.stem}.html"
     content_diff = []
     if not errors:
         build_html(xml_path, html_path)
