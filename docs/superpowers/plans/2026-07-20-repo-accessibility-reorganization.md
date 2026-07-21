@@ -240,6 +240,39 @@ git commit -m "ci: build DocBook paper to HTML and publish under docs/ for Pages
 
 ---
 
+## Task 7: DocBook/XSLT migration for the docs/ corpus (future — needs its own brainstorming pass)
+
+**Deliberately not started.** Direction confirmed 2026-07-21: extend the repository toward
+DocBook 5.2 XML + XSLT-built HTML5 for the `docs/` corpus generally, not just
+`papers/ai_and_ip/llm-database-theory/`. `xsltproc` (already the toolchain for that paper) is
+confirmed as the right tool — no new dependency, no Node/Ruby build.
+
+**Why this is a separate effort, not a Task 1–6 add-on:** 123 documents, most several thousand
+words, currently in free-form Markdown with inconsistent heading structure (see Task 1 Step 2's
+list of files where the first heading is a stray sub-section, not a title). Converting all of
+them is a multi-week effort with real design decisions (schema shape, per-matter vs. per-corpus
+schema, how `evidence/` vs. `findings.md` differ structurally) that should go through
+`superpowers:brainstorming` before any conversion work starts, not be decided inside this
+loop's stop-hook cycle.
+
+**A concrete, promising starting point for that future brainstorming session:**
+`papers/ai_and_ip/llm-database-theory/schema/custom.rnc`'s `finding-section` element
+(`role="finding"`, `condition` ∈ `confirmed | confirmed-with-caveats | split`, required
+`xml:id`) already models exactly the Findings-of-Fact/Conclusions-of-Law structure every
+matter's `findings.md` uses informally today (see e.g.
+`docs/court-record/matters/cooperative-investment-law/findings.md`). Converting `findings.md`
+files first — 5 short, structurally-uniform documents — would be a much smaller first slice
+than the 70-document `evidence/` corpus, and would validate the schema generalizes before
+committing to converting evidence documents too.
+
+**Suggested shape for that future plan** (not committed to — for the brainstorming session to
+evaluate): promote `schema/custom.rnc` and `xsl/{html5,latex}.xsl` out of the single-paper
+directory to a repo-root `schema/` and `xsl/`, so both `papers/` and `docs/` can reference the
+same transforms; keep Markdown as the source format for documents not yet converted (the
+Jekyll deploy in Tasks 3–5 keeps serving those) so the corpus is never in a broken intermediate
+state — HTML5 output from converted DocBook sources and Jekyll-rendered HTML from
+not-yet-converted Markdown sources can co-exist under the same deployed site indefinitely.
+
 ## Iteration log
 
 - **Iter 1:** Tasks 1–3 (index rewrite, README rewrite, Pages config scaffold). Commits `608bfdd`.
