@@ -22,23 +22,23 @@ validate: $(SRCS)
 	@echo "==> Custom RELAX NG validation"
 	@which jing >/dev/null 2>&1 && \
 	  for f in $(ARTICLES); do \
-	    jing -c schema/custom.rnc "$$f" && echo "    OK: $$f" || true; \
+	    jing -c ../../../schema/docbook-corpus.rnc "$$f" && echo "    OK: $$f" || true; \
 	  done || echo "    (jing not installed; skipping RELAX NG step)"
 
 # ── HTML5 ────────────────────────────────────────────────────────────────────
 
 html: $(HTML_OUTS)
 
-generated/%.html: src/%.xml xsl/html5.xsl | generated
-	xsltproc --xinclude xsl/html5.xsl $< > $@
+generated/%.html: src/%.xml ../../../xsl/html5.xsl | generated
+	xsltproc --xinclude ../../../xsl/html5.xsl $< > $@
 	@echo "==> generated/$*.html"
 
 # ── LaTeX ────────────────────────────────────────────────────────────────────
 
 latex: $(TEX_OUTS)
 
-generated/%.tex: src/%.xml xsl/latex.xsl | generated
-	xsltproc --xinclude xsl/latex.xsl $< > $@
+generated/%.tex: src/%.xml ../../../xsl/latex.xsl | generated
+	xsltproc --xinclude ../../../xsl/latex.xsl $< > $@
 	@echo "==> generated/$*.tex"
 
 # ── PDF (requires pdflatex) ──────────────────────────────────────────────────
