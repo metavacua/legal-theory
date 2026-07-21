@@ -132,5 +132,48 @@ class TestWriteMetadata(unittest.TestCase):
         meta_path.unlink()
 
 
+class TestValidateAndBuild(unittest.TestCase):
+    def setUp(self):
+        self.fixtures = Path(__file__).resolve().parent / "fixtures"
+
+    def _convert_fixture(self, name, xml_id, title):
+        from convert_to_docbook import (
+            pandoc_to_docbook_fragment, wrap_fragment, write_metadata,
+        )
+        fragment = pandoc_to_docbook_fragment(self.fixtures / name)
+        article, _ = wrap_fragment(fragment, xml_id, title, f"{xml_id}.meta.xml")
+        xml_path = self.fixtures / f"{xml_id}.xml"
+        meta_path = self.fixtures / f"{xml_id}.meta.xml"
+        write_metadata(meta_path, title)
+        tree = ET.ElementTree(article)
+        ET.indent(tree, space="  ")
+        tree.write(xml_path, encoding="unicode", xml_declaration=True)
+        self.addCleanup(xml_path.unlink)
+        self.addCleanup(meta_path.unlink)
+        return xml_path
+
+    def test_validate_accepts_well_formed_document(self):
+        from convert_to_docbook import validate
+        xml_path = self._convert_fixture("flat.md", "flat", "A Flat Document")
+        self.assertEqual(validate(xml_path), [])
+
+    def test_validate_rejects_malformed_document(self):
+        from convert_to_docbook import validate
+        bad_path = self.fixtures / "bad.xml"
+        bad_path.write_text("<article><unclosed></article>", encoding="utf-8")
+        self.addCleanup(bad_path.unlink)
+        errors = validate(bad_path)
+        self.assertTrue(errors)
+
+    def test_build_html_produces_output_with_title(self):
+        from convert_to_docbook import build_html
+        xml_path = self._convert_fixture("flat.md", "flat", "A Flat Document")
+        html_path = self.fixtures / "flat.html"
+        build_html(xml_path, html_path)
+        self.addCleanup(html_path.unlink)
+        content = html_path.read_text(encoding="utf-8")
+        self.assertIn("A Flat Document", content)
+
+
 if __name__ == "__main__":
     unittest.main()

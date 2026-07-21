@@ -118,3 +118,35 @@ def write_metadata(meta_path, title):
 </info>
 """
     Path(meta_path).write_text(content, encoding="utf-8")
+
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+SCHEMA_PATH = REPO_ROOT / "docs" / "schema" / "docbook-corpus.rnc"
+HTML5_XSL_PATH = REPO_ROOT / "docs" / "xsl" / "html5.xsl"
+
+
+def validate(xml_path):
+    errors = []
+    wf = subprocess.run(
+        ["xmllint", "--noout", "--xinclude", str(xml_path)],
+        capture_output=True, text=True,
+    )
+    if wf.returncode != 0:
+        errors.append(wf.stderr.strip())
+        return errors  # schema validation is meaningless on malformed XML
+
+    rng = subprocess.run(
+        ["jing", "-c", str(SCHEMA_PATH), str(xml_path)],
+        capture_output=True, text=True,
+    )
+    if rng.returncode != 0:
+        errors.append(rng.stdout.strip() or rng.stderr.strip())
+    return errors
+
+
+def build_html(xml_path, out_path):
+    result = subprocess.run(
+        ["xsltproc", "--xinclude", str(HTML5_XSL_PATH), str(xml_path)],
+        capture_output=True, text=True, check=True,
+    )
+    Path(out_path).write_text(result.stdout, encoding="utf-8")
