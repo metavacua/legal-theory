@@ -362,6 +362,15 @@ class TestIgnorableWordRun(unittest.TestCase):
         self.assertTrue(_is_ignorable_word_run([":-:", ":-:", ":-:"]))
         self.assertTrue(_is_ignorable_word_run(["-----", "|", "----:"]))
 
+    def test_any_non_alphanumeric_run_is_ignorable_not_just_known_chars(self):
+        # The ignore rule is a general "no alphanumeric content" predicate,
+        # not an enumerated allowlist of the two witnessed causes (dashes,
+        # then pipes/colons) — a border/rule character neither of those
+        # causes happened to use must be tolerated too, on the same
+        # principle: pure formatting glue with no semantic payload.
+        from convert_to_docbook import _is_ignorable_word_run
+        self.assertTrue(_is_ignorable_word_run(["===", "~~~", "***"]))
+
     def test_empty_run_is_ignorable(self):
         from convert_to_docbook import _is_ignorable_word_run
         self.assertTrue(_is_ignorable_word_run([]))
@@ -376,13 +385,15 @@ class TestIgnorableWordRun(unittest.TestCase):
         self.assertFalse(_is_ignorable_word_run(["|", "Program/User", "Class", "|"]))
 
     def test_word_diff_ignores_rewrapping_and_regrouping(self):
-        # Directly exercises the SequenceMatcher/word-split logic
-        # content_preservation_diff uses, without invoking pandoc:
-        # same words, split into a different number of lines and a
-        # different number of blank-line-separated blocks, must
-        # compare as identical at the word level.
-        import difflib
-        from convert_to_docbook import _is_ignorable_word_run
+        # Directly exercises the real _word_level_diff() production
+        # logic without invoking pandoc: same words, split into a
+        # different number of lines and a different number of blank-
+        # line-separated blocks, must compare as identical at the word
+        # level. Calling the actual helper (rather than re-deriving the
+        # same loop here) means a future change to the ignore rule or
+        # opcode-filtering logic can't silently drift out of sync with
+        # this test.
+        from convert_to_docbook import _word_level_diff
         original = (
             "- Programs: Google Maps Local Guides.\n"
             "- Analysis: This is a long sentence that\n"
@@ -395,17 +406,7 @@ class TestIgnorableWordRun(unittest.TestCase):
             "- Analysis: This is a long sentence that keeps going for a\n"
             "  while about consideration.\n"
         )
-        orig_words = original.split()
-        rt_words = roundtrip.split()
-        matcher = difflib.SequenceMatcher(None, orig_words, rt_words)
-        changed = []
-        for tag, i1, i2, j1, j2 in matcher.get_opcodes():
-            if tag == "equal":
-                continue
-            removed, added = orig_words[i1:i2], rt_words[j1:j2]
-            if _is_ignorable_word_run(removed) and _is_ignorable_word_run(added):
-                continue
-            changed.append((removed, added))
+        changed = _word_level_diff(original.split(), roundtrip.split())
         self.assertEqual(changed, [])
 
 

@@ -52,8 +52,8 @@ def _strip_trailing_whitespace(md_path):
     # removes the hard-break trigger at its source, rather than trying
     # to detect or work around <literallayout> after the fact.
     with open(md_path, encoding="utf-8") as f:
-        lines = f.readlines()
-    return "".join(line.rstrip(" \t") + ("\n" if line.endswith("\n") else "") for line in lines)
+        text = f.read()
+    return re.sub(r"[ \t]+$", "", text, flags=re.MULTILINE)
 
 
 def pandoc_to_docbook_fragment(md_path):
@@ -174,14 +174,12 @@ def build_html(xml_path, out_path):
     Path(out_path).write_text(result.stdout, encoding="utf-8")
 
 
-_BORDER_CHARS = set("-|:")
-
-
 def _is_ignorable_word_run(words):
     # A run of words dropped or added between the two sides is ignorable
-    # only if every word in it consists entirely of table/rule border
-    # characters (-, |, :) with no real letters, digits, or other
-    # punctuation. Two verified, distinct causes produce such runs:
+    # only if every word in it has no alphanumeric content at all — pure
+    # formatting glue (rule/border characters, punctuation) with no
+    # semantic payload. Two verified, distinct causes have produced such
+    # runs so far:
     #   - pandoc's DocBook5 writer drops Markdown horizontal rules
     #     (`---`) entirely; a surviving one in the plain-text writer's
     #     output is a run of dash characters with no internal
@@ -195,14 +193,48 @@ def _is_ignorable_word_run(words):
     #     real 9-column table that every cell's actual word content is
     #     identical and in the same order on both sides; only the
     #     border/rule characters differ.
-    # Any real word or other punctuation in the run means genuine
-    # content changed and must not be swallowed here.
-    return all(w and set(w) <= _BORDER_CHARS for w in words) if words else True
+    # Deliberately a "no alphanumeric content" predicate rather than an
+    # allowlist of the specific characters seen so far (-, |, :): the
+    # next structural-rendering divergence pandoc introduces will use
+    # different glyphs, and the underlying invariant — content-bearing
+    # words never look like this — doesn't change. Tradeoff accepted:
+    # an isolated dropped symbol-only token with real meaning (e.g. a
+    # stray footnote marker or section symbol) would also be tolerated
+    # here: this check's job is catching lost prose, not lost symbols.
+    # Any word containing a letter or digit means genuine content
+    # changed and must not be swallowed here.
+    return all(w and not any(c.isalnum() for c in w) for w in words)
+
+
+def _word_level_diff(orig_words, roundtrip_words):
+    # Shared by content_preservation_diff() and its own test suite, so
+    # a change to the ignore rule or the opcode-filtering logic can't
+    # silently drift out of sync between production and test.
+    matcher = difflib.SequenceMatcher(None, orig_words, roundtrip_words)
+    changed = []
+    for tag, i1, i2, j1, j2 in matcher.get_opcodes():
+        if tag == "equal":
+            continue
+        removed = orig_words[i1:i2]
+        added = roundtrip_words[j1:j2]
+        if _is_ignorable_word_run(removed) and _is_ignorable_word_run(added):
+            continue
+        if removed:
+            changed.append("- " + " ".join(removed))
+        if added:
+            changed.append("+ " + " ".join(added))
+    return changed
 
 
 def content_preservation_diff(md_path, xml_path, title, unwrapped):
+    # Normalize the same way pandoc_to_docbook_fragment() does, rather
+    # than handing pandoc the raw file path — otherwise this "original"
+    # side would still contain the accidental hard-break whitespace
+    # _strip_trailing_whitespace() already removed before conversion,
+    # comparing against content that was never actually converted.
     original = subprocess.run(
-        ["pandoc", "-f", "gfm", "-t", "plain", str(md_path)],
+        ["pandoc", "-f", "gfm", "-t", "plain"],
+        input=_strip_trailing_whitespace(md_path),
         capture_output=True, text=True, check=True,
     ).stdout
 
@@ -231,23 +263,7 @@ def content_preservation_diff(md_path, xml_path, title, unwrapped):
     # context doesn't survive the round-trip) — same words throughout,
     # but neither line boundaries nor paragraph/block boundaries are
     # stable enough to diff on. Word sequences are unaffected by either.
-    orig_words = original.split()
-    roundtrip_words = roundtrip.split()
-
-    matcher = difflib.SequenceMatcher(None, orig_words, roundtrip_words)
-    changed = []
-    for tag, i1, i2, j1, j2 in matcher.get_opcodes():
-        if tag == "equal":
-            continue
-        removed = orig_words[i1:i2]
-        added = roundtrip_words[j1:j2]
-        if _is_ignorable_word_run(removed) and _is_ignorable_word_run(added):
-            continue
-        if removed:
-            changed.append("- " + " ".join(removed))
-        if added:
-            changed.append("+ " + " ".join(added))
-    return changed
+    return _word_level_diff(original.split(), roundtrip.split())
 
 
 import sys

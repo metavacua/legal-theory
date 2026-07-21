@@ -187,17 +187,14 @@
     <pre><code><xsl:apply-templates/></code></pre>
   </xsl:template>
 
-  <xsl:template match="db:screen">
-    <pre><xsl:apply-templates/></pre>
-  </xsl:template>
-
-  <!-- Defense-in-depth: the conversion tool strips trailing whitespace
-       before pandoc runs, so pandoc should never emit this for an
-       accidental Markdown hard break anymore — but if a document ever
-       has a genuinely-intentional preformatted block (an address, a
-       line-block/verse), render its line breaks correctly instead of
-       falling through to unstyled bare text with no wrapping element. -->
-  <xsl:template match="db:literallayout">
+  <!-- db:literallayout: defense-in-depth (see docs/scripts/convert_to_docbook.py's
+       _strip_trailing_whitespace) — the conversion tool strips trailing
+       whitespace before pandoc runs, so pandoc should never emit this for an
+       accidental Markdown hard break anymore, but if a document ever has a
+       genuinely-intentional preformatted block (an address, a line-block/verse),
+       render its line breaks correctly instead of falling through to unstyled
+       bare text with no wrapping element. -->
+  <xsl:template match="db:screen | db:literallayout">
     <pre><xsl:apply-templates/></pre>
   </xsl:template>
 
