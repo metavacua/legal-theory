@@ -2,6 +2,10 @@ SRCS      := $(wildcard src/0*.xml)
 HTML_OUTS := $(patsubst src/%.xml,generated/%.html,$(SRCS))
 TEX_OUTS  := $(patsubst src/%.xml,generated/%.tex,$(SRCS))
 PDF_OUTS  := $(patsubst src/%.xml,generated/%.pdf,$(SRCS))
+# 00-metadata.xml is an XInclude fragment (<db:info>, XIncluded into each
+# article's <db:info> slot) — it has no <db:article> root, so it isn't a
+# standalone document custom.rnc's `start` pattern can validate.
+ARTICLES  := $(filter-out src/00-metadata.xml,$(SRCS))
 
 .PHONY: all html latex pdf validate clean
 
@@ -17,7 +21,7 @@ validate: $(SRCS)
 	done
 	@echo "==> Custom RELAX NG validation"
 	@which jing >/dev/null 2>&1 && \
-	  for f in $(SRCS); do \
+	  for f in $(ARTICLES); do \
 	    jing -c schema/custom.rnc "$$f" && echo "    OK: $$f" || true; \
 	  done || echo "    (jing not installed; skipping RELAX NG step)"
 

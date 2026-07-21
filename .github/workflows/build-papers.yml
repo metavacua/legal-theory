@@ -2,7 +2,7 @@ name: Build DocBook papers
 
 on:
   push:
-    branches: [main]
+    branches: [main, claude/llm-database-theory-codification]
     paths:
       - 'docs/papers/**'
   workflow_dispatch: {}

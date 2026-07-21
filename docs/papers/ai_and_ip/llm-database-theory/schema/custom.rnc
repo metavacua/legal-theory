@@ -48,12 +48,7 @@ start =
     | element db:info   { any }
     | element db:title  { text }
     | element db:subtitle { text }
-    | element db:section {
-        attribute xml:id    { xsd:NCName }?,
-        attribute role      { text }?,
-        attribute condition { text }?,
-        any
-      }
+    | element db:section { any }
     )*
   }
 

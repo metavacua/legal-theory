@@ -14,7 +14,8 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xmlns:dc="http://purl.org/dc/terms/"
     xmlns:xi="http://www.w3.org/2001/XInclude"
-    exclude-result-prefixes="db dc xi">
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    exclude-result-prefixes="db dc xi xlink">
 
   <xsl:output method="html" version="5.0" encoding="UTF-8" indent="yes"
               doctype-system="about:legacy-compat"/>
