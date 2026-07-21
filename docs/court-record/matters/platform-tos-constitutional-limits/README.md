@@ -16,7 +16,7 @@ Lower courts cannot resolve the federal or state constitutional questions — th
 
 ## Statement of Facts
 
-See [`findings.md`](findings.md) FOF section. Supporting evidence in [`evidence/`](evidence/) (12 documents — see the [full index](../../../index.md#platform-tos-and-constitutional-limits-on-llm-expression-controls)).
+See [`findings.html`](findings.html) FOF section. Supporting evidence in [`evidence/`](evidence/) (12 documents — see the [full index](../../../index.md#platform-tos-and-constitutional-limits-on-llm-expression-controls)).
 
 ## Causes of Action
 

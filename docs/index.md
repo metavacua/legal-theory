@@ -48,7 +48,7 @@ CA Labor Code ABC test; NLRA; worker classification of platform users.
 ### [Platform ToS and Constitutional Limits on LLM Expression Controls](court-record/matters/platform-tos-constitutional-limits/README.md)
 
 1st Amendment; CA Art. I §2; automated decision systems; Section 230.
-[Findings](court-record/matters/platform-tos-constitutional-limits/findings.md) · 12 evidence documents
+[Findings](court-record/matters/platform-tos-constitutional-limits/findings.html) · 12 evidence documents
 
 - [The Creator's Stake: AI-Assisted Art Tools and Copyright Ownership for the Modern Graphic Novelist](court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-art-tools-for-comics.md)
 - [The Intelligent Monorepo: Consolidating and Automating a Polyglot Codebase with Google Jules](court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-codebase-organization-strategies.md)
