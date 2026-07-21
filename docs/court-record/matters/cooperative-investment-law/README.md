@@ -14,7 +14,7 @@ Constitutional scope: Federal statutory (federal securities law, IRC); Californi
 
 ## Statement of Facts
 
-See `findings.md` FOF section. Supporting evidence in `evidence/`. Theory authority in `court-record/theory/federal-statutes/existing-law/` (cooperative-investing-us-ca-irc.md, patronage-sourced-income.md) and `court-record/theory/california-statutes/existing-law/` (ca-patron-law-v2.md et al.).
+See [`findings.md`](findings.md) FOF section. Supporting evidence in [`evidence/`](evidence/) (19 documents — see the [full index](../../../index.md#cooperative-investment-law-and-patron-securities)). Theory authority in [`federal-statutes/existing-law/`](../../theory/federal-statutes/existing-law/) (cooperative-investing-us-ca-irc.md, patronage-sourced-income.md) and [`california-statutes/existing-law/`](../../theory/california-statutes/existing-law/) (ca-patron-law-v2.md et al.).
 
 ## Causes of Action
 

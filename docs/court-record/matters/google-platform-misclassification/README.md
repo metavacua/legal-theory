@@ -16,7 +16,7 @@ Administrative exhaustion: Claims under FEHA require CRD complaint and right-to-
 
 ## Statement of Facts
 
-See `findings.md` FOF section. Supporting evidence in `evidence/`.
+See [`findings.md`](findings.md) FOF section. Supporting evidence in [`evidence/`](evidence/) (6 documents — see the [full index](../../../index.md#google-platform-worker-misclassification)).
 
 ## Causes of Action
 
