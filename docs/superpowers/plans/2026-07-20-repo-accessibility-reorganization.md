@@ -201,7 +201,11 @@ jobs:
           git push
 ```
 
-- [ ] **Step 3: Add links from `docs/index.md`'s Papers section to the built HTML** (`docs/papers/ai_and_ip/llm-database-theory/01-llm-database-theory.html`) — deferred until the workflow has actually run once on `main` and `docs/papers/**` exists (this workflow only triggers on push to `main`, which this branch is not).
+- [x] **Step 3: Add links from `docs/index.md`'s Papers section to the built HTML** — done
+  once the workflow was actually exercised (see "Post-deploy bug found and fixed" section:
+  the build was broken twice over; fixed both bugs, then ran it for real, including in CI, and
+  it committed `docs/papers/ai_and_ip/llm-database-theory/html/*.html`, which `docs/index.md`
+  now links to directly).
 
 - [x] **Step 4: Verify the workflow YAML parses**
 
@@ -305,6 +309,18 @@ Followed up with a full sweep — extracted all 124 `docs/index.md` document lin
 programmatically and curl'd every one against the live site (README.md links resolve to the
 directory's index via the bundled `jekyll-readme-index` plugin, not `README.html` — accounted
 for in the check). All 124 return 200.
+
+**Second post-deploy check: `build-papers.yml` had never actually been run, only YAML-linted.**
+Testing it required broadening its push trigger to this branch (workflow_dispatch doesn't work
+for workflows that only exist on a non-default branch — confirmed via a 404 from the Actions
+API). Running `make all` locally surfaced two real, pre-existing bugs in the paper's own build
+(neither introduced by this reorganization): `xsl/html5.xsl`'s `db:link[@xlink:href]` template
+never declared the `xlink` prefix (only article 2 uses `xlink:href`, so article 1 masked it);
+`schema/custom.rnc`'s top-level `db:section` pattern declared explicit attributes that
+collided with its own `any` wildcard (RELAX NG "duplicate attribute"), and the Makefile's
+`validate` target ran that schema against `00-metadata.xml`, an XInclude fragment with no
+`<db:article>` root the schema could ever match. Fixed all three; `make all` and CI both run
+clean now, and the CI-committed HTML is linked from `docs/index.md`'s Papers section.
 
 ## Iteration log
 

@@ -247,7 +247,11 @@ XSLT 1.0 transforms to HTML5 and LaTeX, RELAX NG compact schema validation, BibT
   — `ai_and_ip/llm-database-theory`. 6 findings of fact, 6 conclusions of law connecting to the
   `copyright-ip-authorship`, `platform-tos-constitutional-limits`, and
   `federal-statutes/extensions` (AGPL/AI training) documents above. See its README for the
-  full build (`make html` / `make pdf`) and citation.
+  full build (`make html` / `make pdf`) and citation. CI-built HTML:
+  [primary article](papers/ai_and_ip/llm-database-theory/html/01-llm-database-theory.html) ·
+  [legal corpus connections](papers/ai_and_ip/llm-database-theory/html/02-legal-corpus-connections.html)
+  (rebuilt automatically by `.github/workflows/build-papers.yml` on every push touching
+  `docs/papers/**`).
 
 ---
 
