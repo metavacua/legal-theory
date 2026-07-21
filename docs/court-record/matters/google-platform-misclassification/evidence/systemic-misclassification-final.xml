@@ -118,7 +118,7 @@
         contractor by proving <emphasis role="strong">all
         three</emphasis> of the following prongs 1:
       </para>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">(A) The Control Prong:</emphasis>
@@ -280,7 +280,7 @@
         discrete micro-tasks in direct exchange for tangible
         compensation.
       </para>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">Programs Analyzed:</emphasis> Google
@@ -312,7 +312,7 @@
           </para>
         </listitem>
       </itemizedlist>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">Predominant Factor:</emphasis> The
@@ -386,7 +386,7 @@
         through non-monetary, gamified systems that function as a form
         of algorithmic management.
       </para>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">Programs Analyzed:</emphasis> Google
@@ -419,7 +419,7 @@
           </para>
         </listitem>
       </itemizedlist>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">Predominant Factor:</emphasis> While
@@ -499,7 +499,7 @@
         provide the critical intellectual labor needed for their
         development and refinement.
       </para>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">Programs Analyzed:</emphasis>
@@ -543,7 +543,7 @@
           </para>
         </listitem>
       </itemizedlist>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">Predominant Factor:</emphasis> While
@@ -621,7 +621,7 @@
         ecosystems that make Google's major platforms valuable, but who
         are subject to Google's extensive control.
       </para>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">Programs Analyzed:</emphasis> Google
@@ -656,7 +656,7 @@
           </para>
         </listitem>
       </itemizedlist>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">Predominant Factor:</emphasis> These
@@ -733,7 +733,7 @@
         the performance of a highly specialized task, structured as a
         unilateral contract.
       </para>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">Programs Analyzed:</emphasis>
@@ -766,12 +766,34 @@
           </para>
         </listitem>
       </itemizedlist>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
-          <literallayout>
-            <emphasis role="strong">Predominant Factor:</emphasis> Google's contractual framework deliberately characterizes the payment as a "reward" or "prize" for a <emphasis>result</emphasis>, not a wage for <emphasis>labor</emphasis>, in an attempt to avoid a service contract classification.18 However, this framing is highly vulnerable under California contract law. As detailed in a comprehensive legal analysis, California has adopted the principle from
-<emphasis>Restatement (Second) of Contracts § 45</emphasis>, which holds that an offer for a unilateral contract becomes irrevocable once the offeree begins substantial performance.4 When a researcher begins hunting for a vulnerability in reliance on Google's offer, an option contract is created, and Google's offer becomes binding
-<emphasis>during the labor process</emphasis>. This creates a powerful "Service Nexus" that links Google's payment obligation directly to the researcher's ongoing labor, making the "predominant factor" of the relationship the service of security research.4</literallayout>
+          <para>
+            <emphasis role="strong">Predominant Factor:</emphasis>
+            Google's contractual framework deliberately characterizes
+            the payment as a "reward" or "prize" for
+            a <emphasis>result</emphasis>, not a wage for
+            <emphasis>labor</emphasis>, in an attempt to avoid a service
+            contract classification.18 However, this framing is highly
+            vulnerable under California contract law. As detailed in a
+            comprehensive legal analysis, California has adopted the
+            principle from
+          </para>
+          <para>
+            <emphasis>Restatement (Second) of Contracts § 45</emphasis>,
+            which holds that an offer for a unilateral contract becomes
+            irrevocable once the offeree begins substantial
+            performance.4 When a researcher begins hunting for a
+            vulnerability in reliance on Google's offer, an option
+            contract is created, and Google's offer becomes binding
+          </para>
+          <para>
+            <emphasis>during the labor process</emphasis>. This creates
+            a powerful "Service Nexus" that links Google's
+            payment obligation directly to the researcher's ongoing
+            labor, making the "predominant factor" of the
+            relationship the service of security research.4
+          </para>
         </listitem>
         <listitem>
           <para>
@@ -977,7 +999,7 @@
           </para>
         </listitem>
       </itemizedlist>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             A reclassified user would be entitled to back pay for every
@@ -1018,7 +1040,7 @@
           </para>
         </listitem>
       </itemizedlist>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             This framework would be nullified by a finding of
@@ -1064,282 +1086,63 @@
         providing a comparative risk assessment for each major category
         of user-provided labor under California's retroactive ABC test.
       </para>
-      <informaltable>
-        <tgroup cols="9">
-          <colspec align="center" />
-          <colspec align="center" />
-          <colspec align="center" />
-          <colspec align="center" />
-          <colspec align="center" />
-          <colspec align="center" />
-          <colspec align="center" />
-          <colspec align="center" />
-          <colspec align="center" />
-          <tbody>
-            <row>
-              <entry>
-                Program/User Class
-              </entry>
-              <entry>
-                Governing Agreement
-              </entry>
-              <entry>
-                Nature of Labor &amp; IP Generated
-              </entry>
-              <entry>
-                Remuneration Model
-              </entry>
-              <entry>
-                Predominant Factor Test Risk
-              </entry>
-              <entry>
-                ABC Prong A (Control) Risk
-              </entry>
-              <entry>
-                ABC Prong B (Business) Risk
-              </entry>
-              <entry>
-                ABC Prong C (Ind. Trade) Risk
-              </entry>
-              <entry>
-                Overall Misclassification Risk
-              </entry>
-            </row>
-            <row>
-              <entry>
-                **Opinion Rewards/Crowdsource**
-              </entry>
-              <entry>
-                Program ToS
-              </entry>
-              <entry>
-                Micro-task data labeling &amp; market research
-              </entry>
-              <entry>
-                Direct (cash/credits) or indirect (perks)
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                **Very High**
-              </entry>
-            </row>
-            <row>
-              <entry>
-                **Local Guides/Waze Editors**
-              </entry>
-              <entry>
-                Program Policies
-              </entry>
-              <entry>
-                Content generation, data verification, cartography
-              </entry>
-              <entry>
-                Gamified (points, badges, perks)
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                **High**
-              </entry>
-            </row>
-            <row>
-              <entry>
-                **AI Feedback (Gemini/AI Premium)**
-              </entry>
-              <entry>
-                General ToS
-              </entry>
-              <entry>
-                RLHF, QA, data generation for LLM training
-              </entry>
-              <entry>
-                None, or user pays a fee ("Tom Sawyer")
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                Medium
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                **High**
-              </entry>
-            </row>
-            <row>
-              <entry>
-                **Beta Testers**
-              </entry>
-              <entry>
-                NDA / Program ToS
-              </entry>
-              <entry>
-                Structured QA, debugging, technical analysis
-              </entry>
-              <entry>
-                Early access, small gratuities
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                **Very High**
-              </entry>
-            </row>
-            <row>
-              <entry>
-                **VRP Participants (Hobbyist)**
-              </entry>
-              <entry>
-                VRP Rules
-              </entry>
-              <entry>
-                Security research, vulnerability reporting (IP)
-              </entry>
-              <entry>
-                Unilateral Offer (Reward for result)
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                **High**
-              </entry>
-            </row>
-            <row>
-              <entry>
-                **VRP Participants (Professional)**
-              </entry>
-              <entry>
-                VRP Rules
-              </entry>
-              <entry>
-                Security research, vulnerability reporting (IP)
-              </entry>
-              <entry>
-                Unilateral Offer (Reward for result)
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                Very High
-              </entry>
-              <entry>
-                Low
-              </entry>
-              <entry>
-                **Medium**
-              </entry>
-            </row>
-            <row>
-              <entry>
-                **Platform Developers (Play/Chrome)**
-              </entry>
-              <entry>
-                DDA / Developer Agreement
-              </entry>
-              <entry>
-                Software application development (IP)
-              </entry>
-              <entry>
-                Revenue Share
-              </entry>
-              <entry>
-                Medium
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                Low
-              </entry>
-              <entry>
-                **Medium-Low**
-              </entry>
-            </row>
-            <row>
-              <entry>
-                **YouTube Partners**
-              </entry>
-              <entry>
-                YPP Terms
-              </entry>
-              <entry>
-                Video content creation (IP)
-              </entry>
-              <entry>
-                Revenue Share
-              </entry>
-              <entry>
-                Medium
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                High
-              </entry>
-              <entry>
-                Low
-              </entry>
-              <entry>
-                **Medium-Low**
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
+      <para>
+        | | | | | | | | | |
+      </para>
+      <para>
+        | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+      </para>
+      <para>
+        | Program/User Class | Governing Agreement | Nature of Labor
+        &amp; IP Generated | Remuneration Model | Predominant Factor
+        Test Risk | ABC Prong A (Control) Risk | ABC Prong B (Business)
+        Risk | ABC Prong C (Ind. Trade) Risk | Overall Misclassification
+        Risk |
+      </para>
+      <para>
+        | **Opinion Rewards/Crowdsource** | Program ToS | Micro-task
+        data labeling &amp; market research | Direct (cash/credits) or
+        indirect (perks) | Very High | High | Very High | Very High |
+        **Very High** |
+      </para>
+      <para>
+        | **Local Guides/Waze Editors** | Program Policies | Content
+        generation, data verification, cartography | Gamified (points,
+        badges, perks) | High | High | Very High | Very High | **High**
+        |
+      </para>
+      <para>
+        | **AI Feedback (Gemini/AI Premium)** | General ToS | RLHF, QA,
+        data generation for LLM training | None, or user pays a fee
+        ("Tom Sawyer") | High | Medium | Very High | Very High
+        | **High** |
+      </para>
+      <para>
+        | **Beta Testers** | NDA / Program ToS | Structured QA,
+        debugging, technical analysis | Early access, small gratuities |
+        Very High | Very High | Very High | Very High | **Very High** |
+      </para>
+      <para>
+        | **VRP Participants (Hobbyist)** | VRP Rules | Security
+        research, vulnerability reporting (IP) | Unilateral Offer
+        (Reward for result) | High | High | Very High | Very High |
+        **High** |
+      </para>
+      <para>
+        | **VRP Participants (Professional)** | VRP Rules | Security
+        research, vulnerability reporting (IP) | Unilateral Offer
+        (Reward for result) | High | High | Very High | Low | **Medium**
+        |
+      </para>
+      <para>
+        | **Platform Developers (Play/Chrome)** | DDA / Developer
+        Agreement | Software application development (IP) | Revenue
+        Share | Medium | High | High | Low | **Medium-Low** |
+      </para>
+      <para>
+        | **YouTube Partners** | YPP Terms | Video content creation (IP)
+        | Revenue Share | Medium | High | High | Low | **Medium-Low** |
+      </para>
     </section>
   </section>
   <section xml:id="part-iv-intermediary-control-and-the-specter-of-joint-employer-liability">
@@ -1459,7 +1262,7 @@
         relationship between a user, Google, and a payment processor
         reveals a plausible, albeit novel, argument for liability.
       </para>
-      <itemizedlist spacing="compact">
+      <itemizedlist>
         <listitem>
           <para>
             <emphasis role="strong">Control Over Working
@@ -1552,7 +1355,7 @@
         </para>
       </listitem>
     </itemizedlist>
-    <itemizedlist spacing="compact">
+    <itemizedlist>
       <listitem>
         <para>
           The retroactive application of the ABC test is the central
@@ -1620,7 +1423,7 @@
         </para>
       </listitem>
     </itemizedlist>
-    <itemizedlist spacing="compact">
+    <itemizedlist>
       <listitem>
         <para>
           High-level (e.g., Level 7+) Google Local Guides.
@@ -1638,11 +1441,22 @@
         </para>
       </listitem>
       <listitem>
-        <literallayout>"Hobbyist" participants in Vulnerability Reward Programs.
-The complaints filed in recent lawsuits against Scale AI and Surge Labs (DataAnnotation) provide a clear and effective template for pleading such a case, focusing on the failure to meet the prongs of the ABC test.5 A novel but potentially powerful strategy would be to name both the platform (Google) and its primary payment processor as co-defendants under a joint employer theory.</literallayout>
+        <para>
+          "Hobbyist" participants in Vulnerability Reward
+          Programs.
+        </para>
+        <para>
+          The complaints filed in recent lawsuits against Scale AI and
+          Surge Labs (DataAnnotation) provide a clear and effective
+          template for pleading such a case, focusing on the failure to
+          meet the prongs of the ABC test.5 A novel but potentially
+          powerful strategy would be to name both the platform (Google)
+          and its primary payment processor as co-defendants under a
+          joint employer theory.
+        </para>
       </listitem>
     </itemizedlist>
-    <itemizedlist spacing="compact">
+    <itemizedlist>
       <listitem>
         <para>
           <emphasis role="strong">For Advocacy:</emphasis> The narrative
@@ -1683,7 +1497,7 @@ The complaints filed in recent lawsuits against Scale AI and Surge Labs (DataAnn
       <title>
         <emphasis role="strong">Works cited</emphasis>
       </title>
-      <orderedlist numeration="arabic" spacing="compact">
+      <orderedlist numeration="arabic">
         <listitem>
           <para>
             "if you perform a specific act (finding and repor...
