@@ -300,6 +300,69 @@ class TestConvertEndToEnd(unittest.TestCase):
         self.assertEqual(result.errors, [])
 
 
+class TestIgnorableWordRun(unittest.TestCase):
+    # Regression coverage for two real false positives found converting
+    # real corpus documents (google-platform-misclassification's
+    # california-worker-misclassification-risk-analysis.md): pandoc's
+    # plain-text writer (1) rewraps long lines at a different column
+    # width, and (2) regroups adjacent list items into a different
+    # number of blank-line-separated blocks, after a DocBook round-trip
+    # — same words throughout, but neither line nor paragraph
+    # boundaries survive the round-trip intact. Word-level comparison
+    # (content_preservation_diff, tested below) is immune to both;
+    # these tests cover the token-level ignore rule directly.
+
+    def test_pure_dash_run_is_ignorable(self):
+        from convert_to_docbook import _is_ignorable_word_run
+        self.assertTrue(_is_ignorable_word_run(["----------"]))
+        self.assertTrue(_is_ignorable_word_run(["--", "---"]))
+
+    def test_empty_run_is_ignorable(self):
+        from convert_to_docbook import _is_ignorable_word_run
+        self.assertTrue(_is_ignorable_word_run([]))
+
+    def test_real_word_run_is_not_ignorable(self):
+        from convert_to_docbook import _is_ignorable_word_run
+        self.assertFalse(_is_ignorable_word_run(["Analysis:", "the", "platform"]))
+
+    def test_mixed_run_with_one_real_word_is_not_ignorable(self):
+        from convert_to_docbook import _is_ignorable_word_run
+        self.assertFalse(_is_ignorable_word_run(["----", "word", "----"]))
+
+    def test_word_diff_ignores_rewrapping_and_regrouping(self):
+        # Directly exercises the SequenceMatcher/word-split logic
+        # content_preservation_diff uses, without invoking pandoc:
+        # same words, split into a different number of lines and a
+        # different number of blank-line-separated blocks, must
+        # compare as identical at the word level.
+        import difflib
+        from convert_to_docbook import _is_ignorable_word_run
+        original = (
+            "- Programs: Google Maps Local Guides.\n"
+            "- Analysis: This is a long sentence that\n"
+            "  keeps going for a while about consideration.\n"
+        )
+        roundtrip = (
+            "- Programs: Google Maps Local\n"
+            "  Guides.\n"
+            "\n"
+            "- Analysis: This is a long sentence that keeps going for a\n"
+            "  while about consideration.\n"
+        )
+        orig_words = original.split()
+        rt_words = roundtrip.split()
+        matcher = difflib.SequenceMatcher(None, orig_words, rt_words)
+        changed = []
+        for tag, i1, i2, j1, j2 in matcher.get_opcodes():
+            if tag == "equal":
+                continue
+            removed, added = orig_words[i1:i2], rt_words[j1:j2]
+            if _is_ignorable_word_run(removed) and _is_ignorable_word_run(added):
+                continue
+            changed.append((removed, added))
+        self.assertEqual(changed, [])
+
+
 class TestMainCLI(unittest.TestCase):
     def test_main_reports_clean_error_for_missing_input_file(self):
         from convert_to_docbook import main

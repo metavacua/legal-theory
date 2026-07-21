@@ -153,15 +153,16 @@ def build_html(xml_path, out_path):
     Path(out_path).write_text(result.stdout, encoding="utf-8")
 
 
-def _is_ignorable_diff_line(line):
-    # unified_diff change lines start with '-' or '+'; a line that is,
-    # once that marker is stripped, empty or pure dashes is pandoc's
-    # DocBook5 writer dropping a Markdown horizontal rule (`---`) — a
-    # verified, cosmetic-only, accepted difference. Anything else
-    # (an actual sentence or word) is genuine content loss and must
-    # not be swallowed here.
-    body = line[1:].strip()
-    return body == "" or set(body) <= {"-"}
+def _is_ignorable_word_run(words):
+    # A run of words dropped or added between the two sides is ignorable
+    # only if every word in it is a pure-dash token — pandoc's DocBook5
+    # writer drops Markdown horizontal rules (`---`) entirely, and its
+    # plain-text writer renders a surviving one as a run of dash
+    # characters with no internal whitespace, so it survives word
+    # tokenization as one or more dash-only tokens. Any real word or
+    # punctuation-bearing token in the run means genuine content
+    # changed and must not be swallowed here.
+    return all(set(w) <= {"-"} for w in words)
 
 
 def content_preservation_diff(md_path, xml_path, title, unwrapped):
@@ -187,15 +188,30 @@ def content_preservation_diff(md_path, xml_path, title, unwrapped):
         # the title back for a fair comparison against the original.
         roundtrip = f"{title}\n\n{roundtrip}"
 
-    diff = list(difflib.unified_diff(
-        original.splitlines(), roundtrip.splitlines(), lineterm=""
-    ))
-    changed = [
-        line for line in diff
-        if (line.startswith("-") or line.startswith("+"))
-        and not line.startswith(("--- ", "+++ "))
-        and not _is_ignorable_diff_line(line)
-    ]
+    # Word-level comparison, not line- or paragraph-level: verified on
+    # real corpus documents that pandoc's plain-text writer both
+    # rewraps long lines at a different column width AND regroups
+    # adjacent list items into a different number of blank-line-
+    # separated blocks after a DocBook round-trip (list-item nesting
+    # context doesn't survive the round-trip) — same words throughout,
+    # but neither line boundaries nor paragraph/block boundaries are
+    # stable enough to diff on. Word sequences are unaffected by either.
+    orig_words = original.split()
+    roundtrip_words = roundtrip.split()
+
+    matcher = difflib.SequenceMatcher(None, orig_words, roundtrip_words)
+    changed = []
+    for tag, i1, i2, j1, j2 in matcher.get_opcodes():
+        if tag == "equal":
+            continue
+        removed = orig_words[i1:i2]
+        added = roundtrip_words[j1:j2]
+        if _is_ignorable_word_run(removed) and _is_ignorable_word_run(added):
+            continue
+        if removed:
+            changed.append("- " + " ".join(removed))
+        if added:
+            changed.append("+ " + " ".join(added))
     return changed
 
 
