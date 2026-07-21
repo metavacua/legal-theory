@@ -290,6 +290,22 @@ Jekyll deploy in Tasks 3–5 keeps serving those) so the corpus is never in a br
 state — HTML5 output from converted DocBook sources and Jekyll-rendered HTML from
 not-yet-converted Markdown sources can co-exist under the same deployed site indefinitely.
 
+## Post-deploy bug found and fixed (2026-07-21)
+
+QA sweep of the live site (not just spot-checks) caught a real defect: `papers/` sat at the
+repo root, outside the Jekyll Pages source root (`docs/`), so the flagship paper — the very
+first "Start Here" link in both README.md and docs/index.md — 404'd live, despite rendering
+fine when browsing GitHub directly (GitHub's own renderer isn't scoped to the Pages source
+root; Jekyll's build is). Fixed by `git mv papers docs/papers` and updating every internal
+reference (README.md, docs/index.md, docs/papers/README.md, docs/papers/ai_and_ip/README.md,
+the paper's own BibTeX citation URL, build-papers.yml's trigger path and generated-HTML target).
+Re-deployed and verified: `/papers/ai_and_ip/llm-database-theory/` now returns 200.
+
+Followed up with a full sweep — extracted all 124 `docs/index.md` document links
+programmatically and curl'd every one against the live site (README.md links resolve to the
+directory's index via the bundled `jekyll-readme-index` plugin, not `README.html` — accounted
+for in the check). All 124 return 200.
+
 ## Iteration log
 
 - **Iter 1:** Tasks 1–3 (index rewrite, README rewrite, Pages config scaffold). Commits `608bfdd`.
