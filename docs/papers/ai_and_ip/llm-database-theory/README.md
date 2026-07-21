@@ -154,7 +154,7 @@ See `scratch/notes.md` for a detailed list. Key gaps:
   title     = {Language Models Are Databases: A Technical and Legal Position Paper},
   year      = {2026},
   month     = {July},
-  url       = {https://github.com/metavacua/legal-theory/tree/main/papers/ai_and_ip/llm-database-theory},
+  url       = {https://github.com/metavacua/legal-theory/tree/main/docs/papers/ai_and_ip/llm-database-theory},
   license   = {CC BY-SA 4.0}
 }
 ```

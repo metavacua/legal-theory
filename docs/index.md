@@ -16,7 +16,7 @@ pass).
 
 ## Start Here
 
-- **[Language Models Are Databases](../papers/ai_and_ip/llm-database-theory/README.md)** —
+- **[Language Models Are Databases](papers/ai_and_ip/llm-database-theory/README.md)** —
   flagship scholarly position paper. Transformer LLMs are legally-operative graph databases;
   6 findings of fact, 6 conclusions of law, connects to 3 matters below. DocBook 5.2 source,
   builds to HTML5/LaTeX/PDF.
@@ -243,7 +243,7 @@ Documents not yet in findings-of-fact format or pending classification.
 Formal scholarly output, distinct from the court-record evidence corpus: DocBook 5.2 XML source,
 XSLT 1.0 transforms to HTML5 and LaTeX, RELAX NG compact schema validation, BibTeX bibliography.
 
-- **[Language Models Are Databases: A Technical and Legal Position Paper](../papers/ai_and_ip/llm-database-theory/README.md)**
+- **[Language Models Are Databases: A Technical and Legal Position Paper](papers/ai_and_ip/llm-database-theory/README.md)**
   — `ai_and_ip/llm-database-theory`. 6 findings of fact, 6 conclusions of law connecting to the
   `copyright-ip-authorship`, `platform-tos-constitutional-limits`, and
   `federal-statutes/extensions` (AGPL/AI training) documents above. See its README for the

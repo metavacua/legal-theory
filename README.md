@@ -6,7 +6,7 @@ This repository is a semi-formal collection of findings of fact supporting argum
 
 ## Start Here
 
-- **[Language Models Are Databases](papers/ai_and_ip/llm-database-theory/README.md)** — flagship scholarly position paper: transformer LLMs are legally-operative graph databases. DocBook 5.2 source, builds to HTML5/LaTeX/PDF, 6 findings of fact and 6 conclusions of law.
+- **[Language Models Are Databases](docs/papers/ai_and_ip/llm-database-theory/README.md)** — flagship scholarly position paper: transformer LLMs are legally-operative graph databases. DocBook 5.2 source, builds to HTML5/LaTeX/PDF, 6 findings of fact and 6 conclusions of law.
 - **[docs/index.md](docs/index.md)** — full file-level index of every matter, theory branch, cross-cutting analysis, proposal, and paper in this repository.
 - **The five active matters:**
   [Google Platform Worker Misclassification](docs/court-record/matters/google-platform-misclassification/README.md) ·

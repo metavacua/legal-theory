@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'papers/**'
+      - 'docs/papers/**'
   workflow_dispatch: {}
 
 permissions:
@@ -20,18 +20,18 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils xsltproc
 
       - name: Build HTML
-        working-directory: papers/ai_and_ip/llm-database-theory
+        working-directory: docs/papers/ai_and_ip/llm-database-theory
         run: make html
 
-      - name: Copy into docs/ for GitHub Pages
+      - name: Copy into a tracked path for GitHub Pages (generated/ is gitignored)
         run: |
-          mkdir -p docs/papers/ai_and_ip/llm-database-theory
-          cp papers/ai_and_ip/llm-database-theory/generated/*.html docs/papers/ai_and_ip/llm-database-theory/
+          mkdir -p docs/papers/ai_and_ip/llm-database-theory/html
+          cp docs/papers/ai_and_ip/llm-database-theory/generated/*.html docs/papers/ai_and_ip/llm-database-theory/html/
 
       - name: Commit generated HTML
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/papers/
+          git add docs/papers/ai_and_ip/llm-database-theory/html/
           git diff --cached --quiet || git commit -m "chore: rebuild papers HTML [skip ci]"
           git push
