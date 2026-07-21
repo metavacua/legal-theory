@@ -63,6 +63,7 @@ class TestPandocAndWrapping(unittest.TestCase):
         child_tags = [c.tag for c in article]
         self.assertEqual(child_tags.count(f"{DB_NS}section"), 0)
         self.assertIn(f"{DB_NS}para", child_tags)
+        self.assertEqual(child_tags.count(f"{DB_NS}title"), 1)
 
     def test_wrap_multi_section_keeps_all_and_reports_false(self):
         from convert_to_docbook import pandoc_to_docbook_fragment, wrap_fragment
