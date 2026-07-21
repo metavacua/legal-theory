@@ -160,13 +160,14 @@ git commit -m "chore: add GitHub Pages Jekyll config (cayman theme, relative-lin
 - Consumes: the existing `make html` target (already produces `generated/01-llm-database-theory.html`, `generated/02-legal-corpus-connections.html`).
 - Produces: `docs/papers/ai_and_ip/llm-database-theory/*.html`, committed by CI so GitHub Pages serves it as static HTML alongside the Jekyll-rendered markdown.
 
-- [ ] **Step 1: Read the existing Makefile to confirm the `html` target and output path**
+- [x] **Step 1: Read the existing Makefile to confirm the `html` target and output path**
 
 ```bash
 grep -A3 '^html:' papers/ai_and_ip/llm-database-theory/Makefile
 ```
+Confirmed: `html: $(HTML_OUTS)` with pattern rule `generated/%.html: src/%.xml xsl/html5.xsl` running `xsltproc --xinclude xsl/html5.xsl $< > $@`. Output lands in `generated/*.html` as assumed.
 
-- [ ] **Step 2: Write `.github/workflows/build-papers.yml`**
+- [x] **Step 2: Write `.github/workflows/build-papers.yml`**
 
 ```yaml
 name: Build DocBook papers
@@ -200,13 +201,14 @@ jobs:
           git push
 ```
 
-- [ ] **Step 3: Add links from `docs/index.md`'s Papers section to the built HTML** (`docs/papers/ai_and_ip/llm-database-theory/01-llm-database-theory.html`) — update Task 1's Papers section once this exists.
+- [ ] **Step 3: Add links from `docs/index.md`'s Papers section to the built HTML** (`docs/papers/ai_and_ip/llm-database-theory/01-llm-database-theory.html`) — deferred until the workflow has actually run once on `main` and `docs/papers/**` exists (this workflow only triggers on push to `main`, which this branch is not).
 
-- [ ] **Step 4: Verify the workflow YAML parses**
+- [x] **Step 4: Verify the workflow YAML parses**
 
 ```bash
 python3 -c "import yaml; yaml.safe_load(open('.github/workflows/build-papers.yml'))" && echo OK
 ```
+Ran — got `OK`.
 
 - [ ] **Step 5: Commit**
 
