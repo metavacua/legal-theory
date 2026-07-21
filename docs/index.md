@@ -35,7 +35,7 @@ Each matter contains a complaint-structure `README.md`, a `findings.md`
 ### [Google Platform Worker Misclassification](court-record/matters/google-platform-misclassification/README.md)
 
 CA Labor Code ABC test; NLRA; worker classification of platform users.
-[Findings](court-record/matters/google-platform-misclassification/findings.md) · 6 evidence documents
+[Findings](court-record/matters/google-platform-misclassification/findings.html) · 6 evidence documents
 
 - [Analysis of Potential Service Contracts within the Google Ecosystem](court-record/matters/google-platform-misclassification/evidence/potential-service-contracts-in-google.md)
 - [Google User Contracts — Implicit Employment Obligations](court-record/matters/google-platform-misclassification/evidence/google-user-contracts-implicit-employment-obligations.md)
