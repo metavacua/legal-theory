@@ -174,16 +174,30 @@ def build_html(xml_path, out_path):
     Path(out_path).write_text(result.stdout, encoding="utf-8")
 
 
+_BORDER_CHARS = set("-|:")
+
+
 def _is_ignorable_word_run(words):
     # A run of words dropped or added between the two sides is ignorable
-    # only if every word in it is a pure-dash token — pandoc's DocBook5
-    # writer drops Markdown horizontal rules (`---`) entirely, and its
-    # plain-text writer renders a surviving one as a run of dash
-    # characters with no internal whitespace, so it survives word
-    # tokenization as one or more dash-only tokens. Any real word or
-    # punctuation-bearing token in the run means genuine content
-    # changed and must not be swallowed here.
-    return all(set(w) <= {"-"} for w in words)
+    # only if every word in it consists entirely of table/rule border
+    # characters (-, |, :) with no real letters, digits, or other
+    # punctuation. Two verified, distinct causes produce such runs:
+    #   - pandoc's DocBook5 writer drops Markdown horizontal rules
+    #     (`---`) entirely; a surviving one in the plain-text writer's
+    #     output is a run of dash characters with no internal
+    #     whitespace, so it survives word tokenization as dash-only
+    #     tokens.
+    #   - a Markdown table's plain-text rendering differs completely
+    #     depending on path: a column-aligned ASCII grid (dashes) direct
+    #     from Markdown, vs. a pipe-delimited rendering (pipes/colons,
+    #     from the `:-:` alignment row) after the DocBook round-trip
+    #     through informaltable/entry — verified independently on a
+    #     real 9-column table that every cell's actual word content is
+    #     identical and in the same order on both sides; only the
+    #     border/rule characters differ.
+    # Any real word or other punctuation in the run means genuine
+    # content changed and must not be swallowed here.
+    return all(w and set(w) <= _BORDER_CHARS for w in words) if words else True
 
 
 def content_preservation_diff(md_path, xml_path, title, unwrapped):

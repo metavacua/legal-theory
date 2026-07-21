@@ -346,6 +346,22 @@ class TestIgnorableWordRun(unittest.TestCase):
         self.assertTrue(_is_ignorable_word_run(["----------"]))
         self.assertTrue(_is_ignorable_word_run(["--", "---"]))
 
+    def test_pure_table_border_run_is_ignorable(self):
+        # Root-caused on a real corpus document
+        # (california-worker-misclassification-risk-analysis.md, a
+        # 9-column table): pandoc's plain-text writer renders the same
+        # table two different ways depending on path — a column-aligned
+        # ASCII grid (dashes) direct from Markdown, vs. a pipe-delimited
+        # rendering (pipes/colons) after the DocBook round-trip through
+        # informaltable/entry. Verified independently: every cell's
+        # actual word content is identical and in the same order on
+        # both sides — only the border/rule characters differ, exactly
+        # analogous to the already-tolerated horizontal-rule case.
+        from convert_to_docbook import _is_ignorable_word_run
+        self.assertTrue(_is_ignorable_word_run(["|", "|", "|"]))
+        self.assertTrue(_is_ignorable_word_run([":-:", ":-:", ":-:"]))
+        self.assertTrue(_is_ignorable_word_run(["-----", "|", "----:"]))
+
     def test_empty_run_is_ignorable(self):
         from convert_to_docbook import _is_ignorable_word_run
         self.assertTrue(_is_ignorable_word_run([]))
@@ -357,6 +373,7 @@ class TestIgnorableWordRun(unittest.TestCase):
     def test_mixed_run_with_one_real_word_is_not_ignorable(self):
         from convert_to_docbook import _is_ignorable_word_run
         self.assertFalse(_is_ignorable_word_run(["----", "word", "----"]))
+        self.assertFalse(_is_ignorable_word_run(["|", "Program/User", "Class", "|"]))
 
     def test_word_diff_ignores_rewrapping_and_regrouping(self):
         # Directly exercises the SequenceMatcher/word-split logic
