@@ -14,7 +14,7 @@ Constitutional scope: Federal constitutional (1st Amendment, bodily autonomy doc
 
 ## Statement of Facts
 
-See [`findings.md`](findings.md) FOF section. Supporting evidence in [`evidence/`](evidence/) (20 documents — see the [full index](../../../index.md#sex-work-consent-and-bodily-autonomy)). Theory authority in [`federal-constitutional/`](../../theory/federal-constitutional/) (first-amendment-landmark-cases-research.md, legal-status-of-bodily-autonomy-post-dobbs.md, first-amendment-and-prostitution-law.md) and [`california-statutes/existing-law/`](../../theory/california-statutes/existing-law/) (california-sex-contract-consent-standards.md et al.).
+See [`findings.html`](findings.html) FOF section. Supporting evidence in [`evidence/`](evidence/) (20 documents — see the [full index](../../../index.md#sex-work-consent-and-bodily-autonomy)). Theory authority in [`federal-constitutional/`](../../theory/federal-constitutional/) (first-amendment-landmark-cases-research.md, legal-status-of-bodily-autonomy-post-dobbs.md, first-amendment-and-prostitution-law.md) and [`california-statutes/existing-law/`](../../theory/california-statutes/existing-law/) (california-sex-contract-consent-standards.md et al.).
 
 ## Causes of Action
 

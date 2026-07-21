@@ -90,7 +90,7 @@ CA Corporations Code; federal securities law; IRC cooperative treatment.
 ### [Sex Work, Consent, and Bodily Autonomy](court-record/matters/sex-work-consent-bodily-autonomy/README.md)
 
 1st Amendment; CA Art. I §1 privacy; CA consent and criminal law.
-[Findings](court-record/matters/sex-work-consent-bodily-autonomy/findings.md) · 20 evidence documents
+[Findings](court-record/matters/sex-work-consent-bodily-autonomy/findings.html) · 20 evidence documents
 
 - [The Contingent Privilege: Deconstructing Autonomy in American Liberal Democracy](court-record/matters/sex-work-consent-bodily-autonomy/evidence/autonomy-a-myth-in-american-law.md)
 - [The Legal Status of Bodily Autonomy in the United States: A Post-Dobbs Jurisdictional Analysis](court-record/matters/sex-work-consent-bodily-autonomy/evidence/bodily-autonomy-legal-research.md)
