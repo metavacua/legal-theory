@@ -24,6 +24,18 @@ finding-condition =
   | "confirmed-with-caveats"
   | "split"
 
+# Block-level content permitted inside a section, or directly under an
+# article that has no sub-sections (a single-heading document whose
+# outer wrapping <section> gets unwrapped during Markdown conversion,
+# leaving flat block content as the article's direct children).
+block-content =
+  element db:para { any }
+  | element db:section { any }
+  | element db:orderedlist { any }
+  | element db:itemizedlist { any }
+  | element db:table { any }
+  | element db:blockquote { any }
+
 # A finding section must have xml:id, role="finding", and a valid condition.
 finding-section =
   element db:section {
@@ -31,11 +43,7 @@ finding-section =
     attribute role    { "finding" },
     attribute condition { finding-condition },
     element db:title { text },
-    (element db:para { mixed { any } }
-     | element db:section { any }
-     | element db:orderedlist { any }
-     | element db:itemizedlist { any }
-     | element db:table { any })+
+    block-content+
   }
 
 # Top-level article structure (relaxed — defers to DocBook 5.2 RNG for full validation)
@@ -48,7 +56,7 @@ start =
     | element db:info   { any }
     | element db:title  { text }
     | element db:subtitle { text }
-    | element db:section { any }
+    | block-content
     )*
   }
 
