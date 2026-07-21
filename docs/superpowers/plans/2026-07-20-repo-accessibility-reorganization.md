@@ -322,6 +322,16 @@ collided with its own `any` wildcard (RELAX NG "duplicate attribute"), and the M
 `<db:article>` root the schema could ever match. Fixed all three; `make all` and CI both run
 clean now, and the CI-committed HTML is linked from `docs/index.md`'s Papers section.
 
+## Full-corpus link/anchor sweep (2026-07-21) — clean, no changes needed
+
+Prior checks only covered links *from* README.md/docs/index.md *to* documents. Never checked
+whether the 123 documents link to each other with broken paths, or whether fragment anchors
+(`#section-name`) actually match a real heading rather than just an existing file. Ran both
+checks programmatically across all of `docs/**/*.md` (180 internal links; GitHub-slug
+algorithm reimplemented, including the `-1`/`-2` suffixing GitHub applies to duplicate
+headings): 0 broken file targets (one false positive — the plan's own prose describing the
+link-format convention, not a real link) and 0 mismatched anchors. No fixes needed.
+
 ## Iteration log
 
 - **Iter 1:** Tasks 1–3 (index rewrite, README rewrite, Pages config scaffold). Commits `608bfdd`.
