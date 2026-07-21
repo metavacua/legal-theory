@@ -1,5 +1,6 @@
 import sys
 import unittest
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -101,6 +102,23 @@ class TestPandocAndWrapping(unittest.TestCase):
         self.assertTrue(ids, "expected at least one xml:id in the converted tree")
         for id_value in ids:
             self.assertRegex(id_value, r"^[A-Za-z_]")
+
+
+class TestWriteMetadata(unittest.TestCase):
+    def test_write_metadata_produces_well_formed_xincludable_info(self):
+        from convert_to_docbook import write_metadata
+        fixtures = Path(__file__).resolve().parent / "fixtures"
+        meta_path = fixtures / "tmp.meta.xml"
+        write_metadata(meta_path, "A Flat Document")
+        tree = ET.parse(meta_path)
+        root = tree.getroot()
+        self.assertEqual(root.tag, f"{DB_NS}info")
+        dc_ns = "{http://purl.org/dc/terms/}"
+        title_el = root.find(f"{dc_ns}title")
+        self.assertEqual(title_el.text, "A Flat Document")
+        rights_el = root.find(f"{dc_ns}rights")
+        self.assertEqual(rights_el.text, "CC BY-SA 4.0")
+        meta_path.unlink()
 
 
 if __name__ == "__main__":

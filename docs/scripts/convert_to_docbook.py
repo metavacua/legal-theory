@@ -89,3 +89,30 @@ def sanitize_xml_ids(article):
         value = el.get(xml_id_attr)
         if value and re.match(r"^[0-9]", value):
             el.set(xml_id_attr, f"s-{value}")
+
+
+def write_metadata(meta_path, title):
+    content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/">
+  <dc:title>{title}</dc:title>
+  <dc:creator>Ian D.L.N. McLean</dc:creator>
+  <dc:publisher>metavacua/legal-theory (GitHub)</dc:publisher>
+  <dc:type>Article</dc:type>
+  <dc:language>en</dc:language>
+  <dc:rights>CC BY-SA 4.0</dc:rights>
+  <authorgroup>
+    <author>
+      <personname>
+        <firstname>Ian</firstname>
+        <othername role="middle">D.L.N.</othername>
+        <surname>McLean</surname>
+      </personname>
+      <email>metavacua@gmail.com</email>
+    </author>
+  </authorgroup>
+  <legalnotice>
+    <para>Copyright &#169; 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This document publishes general legal analysis and does not constitute legal advice.</para>
+  </legalnotice>
+</info>
+"""
+    Path(meta_path).write_text(content, encoding="utf-8")
