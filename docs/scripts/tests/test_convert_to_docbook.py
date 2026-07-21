@@ -120,6 +120,17 @@ class TestWriteMetadata(unittest.TestCase):
         self.assertEqual(rights_el.text, "CC BY-SA 4.0")
         meta_path.unlink()
 
+    def test_write_metadata_escapes_special_characters_in_title(self):
+        from convert_to_docbook import write_metadata
+        fixtures = Path(__file__).resolve().parent / "fixtures"
+        meta_path = fixtures / "tmp2.meta.xml"
+        write_metadata(meta_path, "Torts & Contracts: A < B Comparison")
+        tree = ET.parse(meta_path)  # must not raise
+        dc_ns = "{http://purl.org/dc/terms/}"
+        title_el = tree.getroot().find(f"{dc_ns}title")
+        self.assertEqual(title_el.text, "Torts & Contracts: A < B Comparison")
+        meta_path.unlink()
+
 
 if __name__ == "__main__":
     unittest.main()

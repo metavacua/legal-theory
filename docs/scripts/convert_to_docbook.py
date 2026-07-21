@@ -4,6 +4,7 @@ import re
 import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from xml.sax.saxutils import escape as xml_escape
 
 DB_NS = "http://docbook.org/ns/docbook"
 XI_NS = "http://www.w3.org/2001/XInclude"
@@ -92,9 +93,10 @@ def sanitize_xml_ids(article):
 
 
 def write_metadata(meta_path, title):
+    escaped_title = xml_escape(title)
     content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/">
-  <dc:title>{title}</dc:title>
+  <dc:title>{escaped_title}</dc:title>
   <dc:creator>Ian D.L.N. McLean</dc:creator>
   <dc:publisher>metavacua/legal-theory (GitHub)</dc:publisher>
   <dc:type>Article</dc:type>
