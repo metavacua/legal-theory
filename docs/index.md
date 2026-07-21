@@ -41,7 +41,7 @@ CA Labor Code ABC test; NLRA; worker classification of platform users.
 - [Google User Contracts — Implicit Employment Obligations](court-record/matters/google-platform-misclassification/evidence/google-user-contracts-implicit-employment-obligations.md)
 - [Google User Contracts — Legal Framework of the Argument](court-record/matters/google-platform-misclassification/evidence/google-user-contracts.md)
 - [Google User Misclassification — The Predominant Factor Test](court-record/matters/google-platform-misclassification/evidence/google-user-misclassification.md)
-- [The Implicit Workforce: Systemic Misclassification and Fiduciary Risk in the Platform Economy Under California Law](court-record/matters/google-platform-misclassification/evidence/california-worker-misclassification-risk-analysis.md)
+- [The Implicit Workforce: Systemic Misclassification and Fiduciary Risk in the Platform Economy Under California Law](court-record/matters/google-platform-misclassification/evidence/california-worker-misclassification-risk-analysis.html)
 - [Systemic Misclassification Risk within the Google Ecosystem Under California's Retroactive ABC Test](court-record/matters/google-platform-misclassification/evidence/systemic-misclassification-final.md)
   *(final — supersedes the draft in [wip/](wip/systemic-misclassification-draft.md))*
 
