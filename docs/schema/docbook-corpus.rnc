@@ -34,6 +34,8 @@ block-content =
   | element db:orderedlist { any }
   | element db:itemizedlist { any }
   | element db:table { any }
+  | element db:informaltable { any }
+  | element db:programlisting { attribute language { text }?, text }
   | element db:blockquote { any }
 
 # A finding section must have xml:id, role="finding", and a valid condition.

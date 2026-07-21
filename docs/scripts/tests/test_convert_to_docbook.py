@@ -165,6 +165,32 @@ class TestValidateAndBuild(unittest.TestCase):
         errors = validate(bad_path)
         self.assertTrue(errors)
 
+    def test_validate_rejects_well_formed_but_schema_invalid_document(self):
+        # Well-formed XML (passes xmllint) that is not DocBook and thus
+        # not schema-valid (fails jing) — exercises the jing-only
+        # rejection path distinct from the malformed-XML path above.
+        from convert_to_docbook import validate
+        invalid_path = self.fixtures / "wellformed_invalid.xml"
+        invalid_path.write_text(
+            '<article version="5.2" xml:id="x"><bogus/></article>',
+            encoding="utf-8",
+        )
+        self.addCleanup(invalid_path.unlink)
+        errors = validate(invalid_path)
+        self.assertTrue(errors)
+
+    def test_rich_single_heading_fixture_validates(self):
+        # Regression test: pandoc's GFM-to-DocBook5 converter emits
+        # <informaltable> (not <table>) for GFM tables and
+        # <programlisting> for fenced code blocks. A single-heading
+        # document gets unwrapped so these become direct children of
+        # <article>; block-content must permit them there.
+        xml_path = self._convert_fixture(
+            "rich_single_heading.md", "rich-single-heading", "Feature Rich Single Heading"
+        )
+        from convert_to_docbook import validate
+        self.assertEqual(validate(xml_path), [])
+
     def test_build_html_produces_output_with_title(self):
         from convert_to_docbook import build_html
         xml_path = self._convert_fixture("flat.md", "flat", "A Flat Document")
