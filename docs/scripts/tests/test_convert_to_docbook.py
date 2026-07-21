@@ -175,5 +175,68 @@ class TestValidateAndBuild(unittest.TestCase):
         self.assertIn("A Flat Document", content)
 
 
+class TestContentPreservationDiff(unittest.TestCase):
+    def setUp(self):
+        self.fixtures = Path(__file__).resolve().parent / "fixtures"
+
+    def _convert_fixture(self, name, xml_id, title):
+        from convert_to_docbook import (
+            pandoc_to_docbook_fragment, wrap_fragment, write_metadata,
+        )
+        fragment = pandoc_to_docbook_fragment(self.fixtures / name)
+        article, unwrapped = wrap_fragment(fragment, xml_id, title, f"{xml_id}.meta.xml")
+        xml_path = self.fixtures / f"{xml_id}.xml"
+        meta_path = self.fixtures / f"{xml_id}.meta.xml"
+        write_metadata(meta_path, title)
+        tree = ET.ElementTree(article)
+        ET.indent(tree, space="  ")
+        tree.write(xml_path, encoding="unicode", xml_declaration=True)
+        self.addCleanup(xml_path.unlink)
+        self.addCleanup(meta_path.unlink)
+        return xml_path, unwrapped
+
+    def test_clean_conversion_flags_nothing(self):
+        from convert_to_docbook import content_preservation_diff
+        xml_path, unwrapped = self._convert_fixture("flat.md", "flat", "A Flat Document")
+        diff = content_preservation_diff(
+            self.fixtures / "flat.md", xml_path, "A Flat Document", unwrapped
+        )
+        self.assertEqual(diff, [])
+
+    def test_multi_section_conversion_flags_nothing(self):
+        # No title-compensation needed here (unwrapped=False) — the first
+        # section's own heading already carries the text verbatim.
+        from convert_to_docbook import content_preservation_diff
+        xml_path, unwrapped = self._convert_fixture(
+            "multi_section.md", "multi", "Multi Section"
+        )
+        diff = content_preservation_diff(
+            self.fixtures / "multi_section.md", xml_path, "Multi Section", unwrapped
+        )
+        self.assertEqual(diff, [])
+
+    def test_dropped_horizontal_rule_is_a_known_accepted_difference(self):
+        from convert_to_docbook import content_preservation_diff
+        xml_path, unwrapped = self._convert_fixture(
+            "with_hr.md", "with-hr", "A Document With Dividers"
+        )
+        diff = content_preservation_diff(
+            self.fixtures / "with_hr.md", xml_path, "A Document With Dividers", unwrapped
+        )
+        self.assertEqual(diff, [])
+
+    def test_genuinely_dropped_paragraph_is_flagged(self):
+        from convert_to_docbook import content_preservation_diff
+        xml_path, unwrapped = self._convert_fixture("flat.md", "flat", "A Flat Document")
+        # Simulate real content loss: overwrite the built XML's body text.
+        text = xml_path.read_text(encoding="utf-8")
+        text = text.replace("This document has one heading", "Something else entirely")
+        xml_path.write_text(text, encoding="utf-8")
+        diff = content_preservation_diff(
+            self.fixtures / "flat.md", xml_path, "A Flat Document", unwrapped
+        )
+        self.assertTrue(diff, "expected genuine content loss to be flagged")
+
+
 if __name__ == "__main__":
     unittest.main()

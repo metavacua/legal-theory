@@ -1,5 +1,6 @@
 """Convert a Markdown document to validated, XSLT-buildable DocBook 5.2 XML."""
 
+import difflib
 import re
 import subprocess
 import xml.etree.ElementTree as ET
@@ -150,3 +151,49 @@ def build_html(xml_path, out_path):
         capture_output=True, text=True, check=True,
     )
     Path(out_path).write_text(result.stdout, encoding="utf-8")
+
+
+def _is_ignorable_diff_line(line):
+    # unified_diff change lines start with '-' or '+'; a line that is,
+    # once that marker is stripped, empty or pure dashes is pandoc's
+    # DocBook5 writer dropping a Markdown horizontal rule (`---`) — a
+    # verified, cosmetic-only, accepted difference. Anything else
+    # (an actual sentence or word) is genuine content loss and must
+    # not be swallowed here.
+    body = line[1:].strip()
+    return body == "" or set(body) <= {"-"}
+
+
+def content_preservation_diff(md_path, xml_path, title, unwrapped):
+    original = subprocess.run(
+        ["pandoc", "-f", "gfm", "-t", "plain", str(md_path)],
+        capture_output=True, text=True, check=True,
+    ).stdout
+
+    resolved = subprocess.run(
+        ["xmllint", "--xinclude", str(xml_path)],
+        capture_output=True, text=True, check=True,
+    ).stdout
+
+    roundtrip = subprocess.run(
+        ["pandoc", "-f", "docbook", "-t", "plain", "-"],
+        input=resolved, capture_output=True, text=True, check=True,
+    ).stdout
+
+    if unwrapped:
+        # The wrapping <section>'s title was discarded when its
+        # children were promoted to the article; pandoc's docbook
+        # reader never renders <article><title> as body text, so add
+        # the title back for a fair comparison against the original.
+        roundtrip = f"{title}\n\n{roundtrip}"
+
+    diff = list(difflib.unified_diff(
+        original.splitlines(), roundtrip.splitlines(), lineterm=""
+    ))
+    changed = [
+        line for line in diff
+        if (line.startswith("-") or line.startswith("+"))
+        and not line.startswith(("--- ", "+++ "))
+        and not _is_ignorable_diff_line(line)
+    ]
+    return changed
