@@ -43,10 +43,13 @@ Transformer language models are **graph databases** in a technically precise, le
 
 ```bash
 # Debian/Ubuntu
-sudo apt-get install libxml2-utils libxslt1-dev
+sudo apt-get install libxml2-utils libxslt1-dev pandoc
 
 # macOS
-brew install libxml2 libxslt
+brew install libxml2 libxslt pandoc
+
+# Note: pandoc is required by docs/scripts/convert_to_docbook.py (the
+# Markdown-to-DocBook conversion tool), not by this paper's own build.
 
 # Optional: RELAX NG validation
 # Download jing from https://relaxng.org/jclark/jing.html

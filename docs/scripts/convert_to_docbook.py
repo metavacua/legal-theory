@@ -197,3 +197,71 @@ def content_preservation_diff(md_path, xml_path, title, unwrapped):
         and not _is_ignorable_diff_line(line)
     ]
     return changed
+
+
+import sys
+from dataclasses import dataclass, field
+
+
+@dataclass
+class ConversionResult:
+    xml_path: Path
+    html_path: Path
+    errors: list = field(default_factory=list)
+    content_diff: list = field(default_factory=list)
+
+
+def convert(md_path, out_dir):
+    md_path = Path(md_path)
+    out_dir = Path(out_dir)
+    xml_id = slugify(md_path.stem)
+    title = extract_title(md_path)
+    meta_name = f"{md_path.stem}.meta.xml"
+
+    fragment = pandoc_to_docbook_fragment(md_path)
+    article, unwrapped = wrap_fragment(fragment, xml_id, title, meta_name)
+
+    write_metadata(out_dir / meta_name, title)
+
+    xml_path = out_dir / f"{md_path.stem}.xml"
+    tree = ET.ElementTree(article)
+    ET.indent(tree, space="  ")
+    tree.write(xml_path, encoding="unicode", xml_declaration=True)
+
+    errors = validate(xml_path)
+
+    html_path = out_dir / f"{md_path.stem}.html"
+    content_diff = []
+    if not errors:
+        build_html(xml_path, html_path)
+        content_diff = content_preservation_diff(md_path, xml_path, title, unwrapped)
+
+    return ConversionResult(
+        xml_path=xml_path, html_path=html_path,
+        errors=errors, content_diff=content_diff,
+    )
+
+
+def main():
+    if len(sys.argv) != 2:
+        print("usage: convert_to_docbook.py <path/to/doc.md>", file=sys.stderr)
+        return 2
+    md_path = Path(sys.argv[1])
+    out_dir = md_path.parent
+    result = convert(md_path, out_dir)
+    if result.errors:
+        print(f"VALIDATION FAILED: {md_path}")
+        for e in result.errors:
+            print(f"  {e}")
+        return 1
+    if result.content_diff:
+        print(f"CONTENT PRESERVATION CHECK FAILED: {md_path}")
+        for line in result.content_diff:
+            print(f"  {line}")
+        return 1
+    print(f"OK: {md_path} -> {result.xml_path}, {result.html_path}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

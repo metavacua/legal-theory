@@ -238,5 +238,39 @@ class TestContentPreservationDiff(unittest.TestCase):
         self.assertTrue(diff, "expected genuine content loss to be flagged")
 
 
+class TestConvertEndToEnd(unittest.TestCase):
+    def setUp(self):
+        self.fixtures = Path(__file__).resolve().parent / "fixtures"
+        self.out_dir = self.fixtures / "out"
+        self.out_dir.mkdir(exist_ok=True)
+
+    def tearDown(self):
+        for f in self.out_dir.iterdir():
+            f.unlink()
+        self.out_dir.rmdir()
+
+    def test_convert_flat_document_end_to_end(self):
+        from convert_to_docbook import convert
+        result = convert(self.fixtures / "flat.md", self.out_dir)
+        self.assertEqual(result.errors, [])
+        self.assertEqual(result.content_diff, [])
+        self.assertTrue(result.xml_path.exists())
+        self.assertTrue(result.html_path.exists())
+        self.assertIn("A Flat Document", result.html_path.read_text(encoding="utf-8"))
+
+    def test_convert_multi_section_document_end_to_end(self):
+        from convert_to_docbook import convert
+        result = convert(self.fixtures / "multi_section.md", self.out_dir)
+        self.assertEqual(result.errors, [])
+        self.assertEqual(result.content_diff, [])
+
+    def test_convert_numbered_headings_document_end_to_end(self):
+        # Regression coverage for Task 4's xml:id sanitization, exercised
+        # through the full pipeline including RNG validation.
+        from convert_to_docbook import convert
+        result = convert(self.fixtures / "numbered_headings.md", self.out_dir)
+        self.assertEqual(result.errors, [])
+
+
 if __name__ == "__main__":
     unittest.main()
