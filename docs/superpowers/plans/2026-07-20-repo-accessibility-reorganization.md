@@ -240,6 +240,25 @@ git commit -m "ci: build DocBook paper to HTML and publish under docs/ for Pages
 
 ---
 
+## Iteration log
+
+- **Iter 1:** Tasks 1–3 (index rewrite, README rewrite, Pages config scaffold). Commits `608bfdd`.
+- **Iter 2:** Task 4 (CI workflow to build the DocBook paper, inert until Task 5). Commit `b52c606`.
+- **Iter 3:** Found and fixed a gap Task 1 didn't cover — GitHub's native file-tree browsing
+  (as opposed to following `docs/index.md`) dead-ended at bare directories. Added landing
+  READMEs to `docs/court-record/`, `docs/court-record/theory/`, `docs/proposals/`; wired real
+  links into the 5 matter READMEs' `findings.md`/`evidence/` references. Commit `1c12243`.
+- **Iter 4:** Swept the rest of the tree for the same gap — added landing READMEs to
+  `docs/cross-cutting/`, `docs/wip/`, `docs/court-record/matters/`, `papers/`,
+  `papers/ai_and_ip/` (commit `e7a59ba`). Also set GitHub repo topics
+  (`legal-theory`, `legal-research`, `california-law`, `constitutional-law`, `labor-law`,
+  `copyright-law`, `docbook`, `pro-se`, `public-record`, `ai-and-law`) via
+  `gh api -X PUT repos/metavacua/legal-theory/topics` — reversible metadata, done without
+  further confirmation since it doesn't touch content or flip Pages. Every directory reachable
+  from README.md or docs/index.md now has a landing page; Tasks 1–4 are complete. Only Task 5
+  (Pages + merge, needs a branch/settings decision) and Task 6 (evidence dedup, needs a
+  content decision) remain, both explicitly gated on user confirmation.
+
 ## Self-review
 
 - **Spec coverage:** "accessibility and visibility... in the deployed web page index" → Tasks 1, 3, 4, 5. "...and in the github readme" → Task 2. Both explicitly requested surfaces are covered.
