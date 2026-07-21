@@ -42,7 +42,7 @@ CA Labor Code ABC test; NLRA; worker classification of platform users.
 - [Google User Contracts — Legal Framework of the Argument](court-record/matters/google-platform-misclassification/evidence/google-user-contracts.html)
 - [Google User Misclassification — The Predominant Factor Test](court-record/matters/google-platform-misclassification/evidence/google-user-misclassification.html)
 - [The Implicit Workforce: Systemic Misclassification and Fiduciary Risk in the Platform Economy Under California Law](court-record/matters/google-platform-misclassification/evidence/california-worker-misclassification-risk-analysis.html)
-- [Systemic Misclassification Risk within the Google Ecosystem Under California's Retroactive ABC Test](court-record/matters/google-platform-misclassification/evidence/systemic-misclassification-final.md)
+- [Systemic Misclassification Risk within the Google Ecosystem Under California's Retroactive ABC Test](court-record/matters/google-platform-misclassification/evidence/systemic-misclassification-final.html)
   *(final — supersedes the draft in [wip/](wip/systemic-misclassification-draft.md))*
 
 ### [Platform ToS and Constitutional Limits on LLM Expression Controls](court-record/matters/platform-tos-constitutional-limits/README.md)
@@ -234,7 +234,7 @@ Documents not yet in findings-of-fact format or pending classification.
 - [Report on the Legal Framework and Rule Set for the "Really Tender Contract" System](wip/really-tender-contract-california-validity.md)
 - [Regulatory Analysis of Intra-Spousal Investment Management Under the Investment Advisers Act of 1940](wip/spousal-investment-adviser-registration-analysis.md)
 - [Systemic Misclassification Risk within the Google Ecosystem — draft](wip/systemic-misclassification-draft.md)
-  *(superseded by [the final version](court-record/matters/google-platform-misclassification/evidence/systemic-misclassification-final.md))*
+  *(superseded by [the final version](court-record/matters/google-platform-misclassification/evidence/systemic-misclassification-final.html))*
 
 ---
 
