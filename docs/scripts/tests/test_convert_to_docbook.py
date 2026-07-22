@@ -586,6 +586,33 @@ class TestIgnorableWordRun(unittest.TestCase):
         self.assertEqual(changed, [])
 
 
+class TestRenderDocbookPlain(unittest.TestCase):
+    def setUp(self):
+        self.fixtures = Path(__file__).resolve().parent / "fixtures"
+
+    def _convert_fixture(self, name, xml_id, title):
+        from convert_to_docbook import (
+            pandoc_to_docbook_fragment, wrap_fragment, write_metadata,
+        )
+        fragment = pandoc_to_docbook_fragment(self.fixtures / name)
+        article, _ = wrap_fragment(fragment, xml_id, title, f"{xml_id}.meta.xml")
+        xml_path = self.fixtures / f"{xml_id}.xml"
+        meta_path = self.fixtures / f"{xml_id}.meta.xml"
+        write_metadata(meta_path, title)
+        tree = ET.ElementTree(article)
+        ET.indent(tree, space="  ")
+        tree.write(xml_path, encoding="unicode", xml_declaration=True)
+        self.addCleanup(xml_path.unlink)
+        self.addCleanup(meta_path.unlink)
+        return xml_path
+
+    def test_renders_resolved_content_as_plain_text(self):
+        from convert_to_docbook import render_docbook_plain
+        xml_path = self._convert_fixture("flat.md", "flat", "A Flat Document")
+        text = render_docbook_plain(xml_path)
+        self.assertIn("This document has one heading", text)
+
+
 class TestMainCLI(unittest.TestCase):
     def test_main_reports_clean_error_for_missing_input_file(self):
         from convert_to_docbook import main

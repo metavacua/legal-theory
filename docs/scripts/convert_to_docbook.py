@@ -248,6 +248,17 @@ def _word_level_diff(orig_words, roundtrip_words):
     return changed
 
 
+def render_docbook_plain(xml_path):
+    resolved = subprocess.run(
+        ["xmllint", "--xinclude", str(xml_path)],
+        capture_output=True, text=True, check=True,
+    ).stdout
+    return subprocess.run(
+        ["pandoc", "-f", "docbook", "-t", "plain", "-"],
+        input=resolved, capture_output=True, text=True, check=True,
+    ).stdout
+
+
 def content_preservation_diff(md_path, xml_path, title, unwrapped):
     # Normalize the same way pandoc_to_docbook_fragment() does, rather
     # than handing pandoc the raw file path — otherwise this "original"
@@ -260,15 +271,7 @@ def content_preservation_diff(md_path, xml_path, title, unwrapped):
         capture_output=True, text=True, check=True,
     ).stdout
 
-    resolved = subprocess.run(
-        ["xmllint", "--xinclude", str(xml_path)],
-        capture_output=True, text=True, check=True,
-    ).stdout
-
-    roundtrip = subprocess.run(
-        ["pandoc", "-f", "docbook", "-t", "plain", "-"],
-        input=resolved, capture_output=True, text=True, check=True,
-    ).stdout
+    roundtrip = render_docbook_plain(xml_path)
 
     if unwrapped:
         # The wrapping <section>'s title was discarded when its
