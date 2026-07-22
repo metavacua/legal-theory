@@ -228,6 +228,38 @@ class TestSplitIntoFragments(unittest.TestCase):
             self.assertFalse((out_dir / "flat").exists())
             self.assertEqual(list(article), children_before)
 
+    def test_nested_section_stays_inline_one_level_only(self):
+        from convert_to_docbook import (
+            pandoc_to_docbook_fragment, wrap_fragment, split_into_fragments,
+        )
+        fragment = pandoc_to_docbook_fragment(self.fixtures / "nested_sections.md")
+        article, unwrapped = wrap_fragment(
+            fragment, "nested", "Nested Test", "nested.meta.xml"
+        )
+        self.assertFalse(unwrapped)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            out_dir = Path(tmp)
+            split_into_fragments(article, out_dir, "nested")
+
+            frag_dir = out_dir / "nested"
+            self.assertTrue((frag_dir / "01-top-section.xml").exists())
+            self.assertTrue((frag_dir / "02-second-top-section.xml").exists())
+            # Only 2 fragments — the nested subsection did NOT get its own file.
+            self.assertEqual(len(list(frag_dir.iterdir())), 2)
+
+            frag1_text = (frag_dir / "01-top-section.xml").read_text(encoding="utf-8")
+            self.assertIn("Nested Subsection", frag1_text)
+            self.assertIn("Content inside the nested subsection.", frag1_text)
+
+            frag1_root = ET.parse(frag_dir / "01-top-section.xml").getroot()
+            nested = frag1_root.findall(f"{DB_NS}section")
+            self.assertEqual(len(nested), 1)
+            self.assertEqual(
+                nested[0].get("{http://www.w3.org/XML/1998/namespace}id"),
+                "nested-subsection",
+            )
+
 
 class TestWriteMetadata(unittest.TestCase):
     def test_write_metadata_produces_well_formed_xincludable_info(self):
