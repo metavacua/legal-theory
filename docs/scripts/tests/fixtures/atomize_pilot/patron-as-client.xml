@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='utf-8'?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="patron-as-client" xml:lang="en">
+  <xi:include href="patron-as-client.meta.xml" />
+  <title>The Patron as Client: Analyzing Crowdfunded Commissions Under California Labor Law</title>
+  <section xml:id="introduction-the-blurring-line-between-support-and-service">
+    <title>
+      <emphasis role="strong">Introduction: The Blurring Line
+    Between Support and Service</emphasis>
+    </title>
+    <para>
+      Crowdfunding and patronage platforms like Patreon and Kickstarter
+      have created powerful new models for sustainable artistic
+      creation, built on a foundation of mutual aid between creators and
+      their communities. However, a significant legal question arises
+      when this relationship shifts from general support to specific
+      performance. When a creator invites patrons to specify the
+      creation of intellectual property (IP) in exchange for their
+      financial contribution, the arrangement begins to resemble a
+      traditional commission.
+    </para>
+    <para>
+      Under California's stringent and retroactive worker classification
+      laws, this distinction is paramount. This report examines the
+      specific scenario where a patron's financial support is directly
+      tied to the creation of a requested piece of IP. It analyzes how
+      this "patronage-commission" hybrid is viewed through the
+      lens of California's "ABC test," the legal standard for
+      determining employment status. The analysis concludes that once a
+      patron's payment is exchanged for the right to direct creative
+      work, the relationship is highly likely to be legally defined as a
+      contract for services, exposing the facilitating platform to
+      systemic misclassification risk.
+    </para>
+  </section>
+  <section xml:id="the-legal-framework-californias-retroactive-abc-test">
+    <title>
+      <emphasis role="strong">The Legal Framework: California's
+    Retroactive ABC Test</emphasis>
+    </title>
+    <para>
+      The analysis of any labor relationship in California begins with
+      the "ABC test," a rigid, three-pronged standard
+      established in the landmark <emphasis>Dynamex</emphasis> decision
+      and applied retroactively.1 This test presumes a worker is an
+      employee unless the hiring entity can prove
+    </para>
+    <para>
+      <emphasis role="strong">all three</emphasis> of the following
+      conditions:
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">(A)</emphasis> The worker is free from
+          the control and direction of the hiring entity.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">(B)</emphasis> The worker performs
+          work that is outside the usual course of the hiring entity's
+          business.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">(C)</emphasis> The worker is
+          customarily engaged in an independently established trade,
+          occupation, or business.1
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+      Before the ABC test is applied, a court must first determine that
+      the relationship involves "labor or services for
+      remuneration".2 In the case of a patron paying for a specific
+      creative work, this threshold is easily met. The creator provides
+      skilled labor, and the patronage is the remuneration. Under
+      California's "Predominant Factor Test," the essence of
+      this specific agreement is the service of creating IP, not merely
+      the sale of a finished good.1
+    </para>
+  </section>
+  <section xml:id="the-patron-as-client-scenario-applying-the-abc-test">
+    <title>
+      <emphasis role="strong">The Patron-as-Client Scenario:
+    Applying the ABC Test</emphasis>
+    </title>
+    <para>
+      When a creator on a platform like Patreon offers a tier where
+      patrons can request and receive a specific piece of art, or
+      promises to fulfill all such requests from a pool of patrons, the
+      legal nature of the relationship is fundamentally altered. It
+      shifts from a model of general support for an independent vision
+      to a specific, transactional exchange.
+    </para>
+    <para>
+      <emphasis role="strong">1. Identifying the "Hiring
+      Entity"</emphasis>
+    </para>
+    <para>
+      In a legal challenge, the platform itself (Patreon, Kickstarter,
+      etc.) is the most likely target to be designated the "hiring
+      entity." The platform is not a passive intermediary; it
+      controls the entire ecosystem, processes payments, sets the terms
+      of service, and provides the tools that define the relationship.1
+      The platform's business model is predicated on facilitating this
+      exact type of transaction between creators and their audiences.
+    </para>
+    <para>
+      <emphasis role="strong">2. Analyzing the Three Prongs of the
+      Test</emphasis>
+    </para>
+    <para>
+      When the platform is viewed as the hiring entity, its ability to
+      satisfy the ABC test in a patronage-commission scenario becomes
+      exceptionally difficult.
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Prong A (Control): Failure.</emphasis>
+          The creator is subject to two layers of control. First, the
+          platform exercises significant control through its terms of
+          service, payment processing requirements, and
+          "algorithmic management," which guides creator and
+          patron behavior.1 Second, and more directly in this scenario,
+          the <emphasis>patron</emphasis> exerts control over the
+          "manner and means" of the work by specifying the IP
+          to be created. The creator is no longer fully autonomous; they
+          are fulfilling a client's (the patron's) directive. This dual
+          control makes it highly unlikely that the creator would be
+          considered "free from control and direction".1
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Prong B (Course of Business):
+          Failure.</emphasis> This prong requires the creator's work to
+          be outside the platform's usual course of business. This is a
+          clear failure. The core business of platforms like Patreon and
+          Kickstarter is to facilitate the creation and funding of
+          content. The intellectual labor provided by creators is not
+          ancillary to the platform's business; it
+          <emphasis>is</emphasis> the business. The platform's value is
+          derived entirely from the creative work it hosts and
+          monetizes.1
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Prong C (Independent Business): The
+          "Hobbyist Dilemma."</emphasis> This is the most
+          critical and systemic failure point for platforms. To satisfy
+          Prong C, the platform must prove the creator is
+          "customarily engaged in an independently established
+          trade, occupation, or business." While many full-time,
+          professional creators on these platforms would meet this
+          standard (often operating as LLCs or sole proprietors), the
+          platforms' business models are built on a massive scale that
+          relies on millions of casual, non-professional
+          "hobbyist" creators.1 A hobbyist, by legal and tax
+          definitions, is not engaged in an independent business with an
+          intent to profit.3 Therefore, for this substantial segment of
+          their user base, platforms cannot satisfy Prong C. This
+          structural conflict between the business model and the legal
+          requirement is what is termed the "Hobbyist
+          Dilemma".1
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="distinctions-between-crowdfunding-models">
+    <title>
+      <emphasis role="strong">Distinctions Between Crowdfunding
+    Models</emphasis>
+    </title>
+    <para>
+      While the legal risk applies broadly, the structure of different
+      platforms can heighten the vulnerability.
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Patreon and Subscription
+          Models:</emphasis> In its purest form, Patreon is a
+          subscription for ongoing support, which offers a stronger
+          argument for a non-service relationship. However, the moment a
+          creator introduces a "commission" tier—"pay
+          this amount and I will create X for you"—that specific
+          transaction becomes a contract for services. The IRS already
+          treats Patreon income as self-employment income, not as a
+          gift, because there is an expectation of receiving something
+          in return (content, benefits, etc.).7 Adding a specific,
+          patron-directed deliverable solidifies this transactional
+          nature.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Kickstarter and Project-Based
+          Models:</emphasis> Kickstarter's model is even more closely
+          aligned with a service contract. Its Terms of Use explicitly
+          state that a contract is formed between the creator and the
+          backer, obligating the creator to fulfill promised rewards.10
+          While Kickstarter frames this as "helping to create
+          something new" rather than buying from a store, the legal
+          reality is an exchange of money for a future good or
+          service.14 If a backer's reward is a custom piece of IP based
+          on their pledge, the service relationship is unambiguous.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="conclusion-remuneration-for-directed-labor-is-a-service">
+    <title>
+      <emphasis role="strong">Conclusion: Remuneration for Directed
+    Labor is a Service</emphasis>
+    </title>
+    <para>
+      When a creator uses a crowdfunding platform to solicit and accept
+      payment in exchange for producing IP specified by the paying
+      patron, the "against" arguments (personal passion,
+      independent vision) are legally superseded by the economic reality
+      of the transaction. Under California's retroactive ABC test, this
+      arrangement constitutes "labor or services for
+      remuneration."
+    </para>
+    <para>
+      The facilitating platform, as the likely hiring entity, would
+      almost certainly fail Prongs B and C of the test for the vast
+      majority of its casual creators. The work is central to the
+      platform's business, and the creators are often hobbyists, not
+      independent businesses. This creates a systemic risk of worker
+      misclassification, where these creators could be legally deemed
+      employees of the platform. Consequently, while the
+      patronage-commission model can provide vital material support,
+      under California law it transforms the relationship into a service
+      contract, moving it squarely into the category of employment and
+      undermining the argument that the creation is not an act of
+      service.
+    </para>
+  </section>
+  <section xml:id="works-cited">
+    <title>
+      <emphasis role="strong">Works cited</emphasis>
+    </title>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          California Worker Misclassification Risk Analysis
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Systemic_Misclassification
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Use this to refine everything above and perfect i...
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Patreon Privacy Center, accessed September 2, 2025,
+          <link xlink:href="https://privacy.patreon.com/">https://privacy.patreon.com/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          How to use your Relationship manager – Patreon Help Center,
+          accessed September 2, 2025,
+          <link xlink:href="https://support.patreon.com/hc/en-us/articles/360045516212-How-to-use-your-Relationship-manager">https://support.patreon.com/hc/en-us/articles/360045516212-How-to-use-your-Relationship-manager</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          How to File Taxes for Content Creators and Influencers -
+          TaxAct Blog, accessed September 2, 2025,
+          <link xlink:href="https://blog.taxact.com/taxes-for-content-creators-and-influencers/">https://blog.taxact.com/taxes-for-content-creators-and-influencers/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Patreon Taxes 2024: What You Owe and How to Save - Keeper Tax,
+          accessed September 2, 2025,
+          <link xlink:href="https://www.keepertax.com/posts/patreon-taxes">https://www.keepertax.com/posts/patreon-taxes</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Patreon creators' top tax questions answered, accessed
+          September 2, 2025,
+          <link xlink:href="https://creatorhub.patreon.com/articles/top-tax-questions-answered">https://creatorhub.patreon.com/articles/top-tax-questions-answered</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          How Can A 1099 Tax Calculator Help Patreon Creators? - FlyFin,
+          accessed September 2, 2025,
+          <link xlink:href="https://flyfin.tax/tax-filing/how-to-file-patreon-1099-taxes">https://flyfin.tax/tax-filing/how-to-file-patreon-1099-taxes</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Right on the Kickstarter FAQ page- "Is a creator legally
+          obligated to fulfill th... - Hacker News, accessed September
+          2, 2025,
+          <link xlink:href="https://news.ycombinator.com/item?id=7687955">https://news.ycombinator.com/item?id=7687955</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Kickstarter Terms of Use, accessed September 2, 2025,
+          <link xlink:href="https://legal.kickstarter.com/">https://legal.kickstarter.com/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Terms of Use - Kickstarter, accessed September 2, 2025,
+          <link xlink:href="https://www.kickstarter.com/terms-of-use/aug2020">https://www.kickstarter.com/terms-of-use/aug2020</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Terms of Use - Kickstarter, accessed September 2, 2025,
+          <link xlink:href="https://www.kickstarter.com/terms-of-use/oct2012">https://www.kickstarter.com/terms-of-use/oct2012</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          A project I backed isn't able to fulfill, what does this mean
+          for the backers?, accessed September 2, 2025,
+          <link xlink:href="https://help.kickstarter.com/hc/en-us/articles/1260805506289-A-project-I-backed-isn-t-able-to-fulfill-what-does-this-mean-for-the-backers">https://help.kickstarter.com/hc/en-us/articles/1260805506289-A-project-I-backed-isn-t-able-to-fulfill-what-does-this-mean-for-the-backers</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Trust and accountability - Kickstarter, accessed September 2,
+          2025,
+          <link xlink:href="https://www.kickstarter.com/trust?ref=global-footer">https://www.kickstarter.com/trust?ref=global-footer</link>
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+</article>
