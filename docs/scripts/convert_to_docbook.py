@@ -327,6 +327,7 @@ def convert(md_path, out_dir):
         )
 
     write_metadata(out_dir / meta_name, title)
+    split_into_fragments(article, out_dir, md_path.stem)
 
     tree = ET.ElementTree(article)
     ET.indent(tree, space="  ")

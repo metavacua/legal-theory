@@ -442,8 +442,12 @@ class TestConvertEndToEnd(unittest.TestCase):
         self.out_dir.mkdir(exist_ok=True)
 
     def tearDown(self):
+        import shutil
         for f in self.out_dir.iterdir():
-            f.unlink()
+            if f.is_dir():
+                shutil.rmtree(f)
+            else:
+                f.unlink()
         self.out_dir.rmdir()
 
     def test_convert_flat_document_end_to_end(self):
@@ -460,6 +464,20 @@ class TestConvertEndToEnd(unittest.TestCase):
         result = convert(self.fixtures / "multi_section.md", self.out_dir)
         self.assertEqual(result.errors, [])
         self.assertEqual(result.content_diff, [])
+
+    def test_convert_multi_section_document_creates_fragments(self):
+        from convert_to_docbook import convert
+        result = convert(self.fixtures / "multi_section.md", self.out_dir)
+        self.assertEqual(result.errors, [])
+        self.assertEqual(result.content_diff, [])
+        frag_dir = self.out_dir / "multi_section"
+        self.assertTrue(frag_dir.is_dir())
+        self.assertTrue((frag_dir / "01-first-topic.xml").exists())
+        self.assertTrue((frag_dir / "02-second-topic.xml").exists())
+        # The shell itself no longer inlines section content directly.
+        shell_text = result.xml_path.read_text(encoding="utf-8")
+        self.assertNotIn("Content for the first topic.", shell_text)
+        self.assertIn("xi:include", shell_text)
 
     def test_convert_numbered_headings_document_end_to_end(self):
         # Regression coverage for Task 4's xml:id sanitization, exercised
