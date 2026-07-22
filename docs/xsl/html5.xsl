@@ -8,6 +8,7 @@
     confirmed-with-caveats → blue border
     split                → amber border
 -->
+<!-- CI verification no-op: confirms build-corpus.yml triggers on docs/xsl/** changes -->
 <xsl:stylesheet
     version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
