@@ -1,0 +1,1921 @@
+<?xml version='1.0' encoding='utf-8'?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="llm-data-vs-program" xml:lang="en">
+  <xi:include href="llm-data-vs-program.meta.xml" />
+  <title>Isolating the Influence of Data in Large Language Models: A Data-Centric Comparative Analysis</title>
+  <section xml:id="s-1-introduction-separating-data-from-program-in-large-language-models">
+    <title>
+      <emphasis role="strong">1. Introduction: Separating Data from
+    Program in Large Language Models</emphasis>
+    </title>
+    <para>
+      The remarkable capabilities of Large Language Models (LLMs) stem
+      from a complex interplay between their architectural design, the
+      algorithms that govern their learning, and the vast quantities of
+      data upon which they are trained. This report focuses on a
+      critical, yet often intertwined, aspect of LLM analysis: the
+      "data portion." The central premise is to explore
+      methodologies for comparing LLMs by isolating the impact of their
+      data, particularly when their underlying "program" – the
+      model architecture and core operational parameters – is held
+      constant. This endeavor necessitates a conceptual separation of
+      data and program, a distinction that becomes clearer if LLMs are
+      not treated as homoiconic systems.
+    </para>
+    <section xml:id="s-11-the-concept-of-homoiconicity-and-its-relevance-to-llms">
+      <title>
+        <emphasis role="strong">1.1. The Concept of Homoiconicity
+      and Its Relevance to LLMs</emphasis>
+      </title>
+      <para>
+        Homoiconicity, a term originating from programming language
+        theory, describes a property where a language's code and data
+        share the same structural representation.1 The canonical example
+        is Lisp, where code is represented as lists, which are also the
+        language's primary data structure. This equivalence facilitates
+        powerful metaprogramming capabilities, as code can be
+        manipulated as easily as data.1
+      </para>
+      <para>
+        However, the application of "homoiconicity" to LLMs is
+        not straightforward and often debated. While LLMs process and
+        generate text (data), and their behavior is encoded in
+        parameters (analogous to a program), the internal and external
+        representations are typically distinct. For instance, the
+        textual input data is vastly different from the numerical weight
+        matrices that constitute the "program." Calvin Mooers,
+        who coined the term, defined it as the external and internal
+        forms of the language being the same.2 This strict definition
+        rarely applies to contemporary LLMs. Critiques of the term
+        highlight the confusion surrounding its various interpretations,
+        such as "code as data" being too broad or the
+        erroneous comparison of program structure to syntax.2 It is
+        often more precise to discuss specific properties, such as the
+        ease of parsing or the nature of internal representations,
+        rather than relying on the ambiguous label of homoiconicity.2
+      </para>
+      <para>
+        For the purpose of this analysis, LLMs are generally considered
+        non-homoiconic in the strict sense. This distinction is crucial
+        because it supports the conceptual separability of the
+        "program" (the model's architecture, its pre-trained
+        weights representing learned knowledge and capabilities) and the
+        "data" (the specific datasets used for further
+        fine-tuning or instruction tuning that adapt or specialize the
+        pre-existing program). This separation allows for investigations
+        into how varying the data portion, while keeping the program
+        constant, affects LLM performance and behavior.
+      </para>
+    </section>
+    <section xml:id="s-12-the-challenge-of-instruction-data-separation-in-llms">
+      <title>
+        <emphasis role="strong">1.2. The Challenge of
+      Instruction-Data Separation in LLMs</emphasis>
+      </title>
+      <para>
+        A significant challenge in analyzing the data aspect of LLMs is
+        their inherent difficulty in explicitly separating instructions
+        from the data they are meant to process.3 Instruction-tuned
+        LLMs, for example, are trained to follow commands, but they can
+        be vulnerable to manipulations like indirect prompt injections,
+        where data intended for processing is misinterpreted as an
+        instruction.3 This lack of clear demarcation complicates the
+        study of how a "data portion" influences an LLM, as
+        the model's interpretation of that data can be confounded by its
+        tendency to execute parts of it.
+      </para>
+      <para>
+        Research has introduced formal measures and empirical
+        benchmarks, such as the SEP dataset, to quantify this
+        phenomenon.3 The empirical separation score (sepc(g)) measures
+        how often a model processes a "probe" string as data
+        versus executing it as an instruction.3 Studies using this
+        framework have revealed that current LLMs, regardless of size or
+        purported capability, generally fail to achieve high
+        instruction-data separation.3 For instance, even advanced models
+        like GPT-4 have shown low separation scores in naive setups, and
+        mitigation techniques like prompt engineering or fine-tuning
+        often either fail to substantially improve separation or come at
+        the cost of reduced model utility.3 An interesting observation
+        is that smaller models sometimes exhibit higher separation,
+        potentially because they lack the capacity for task
+        superposition that allows larger models to attempt to execute
+        both the main task and the probe instruction.4
+      </para>
+      <para>
+        This inherent blending of instruction and data within the LLM's
+        processing paradigm means that when comparing different
+        "data portions" (e.g., fine-tuning datasets), the
+        "program" (the base LLM) might not treat these data
+        portions purely as passive information. Instead, it might
+        interpret embedded instructions or cues differently across
+        datasets, influencing its behavior in ways that are not solely
+        attributable to the factual content of the data. This
+        underscores the complexity of isolating the pure impact of a
+        data portion. If the model cannot reliably distinguish between
+        what it should <emphasis>do</emphasis> and what it should
+        <emphasis>process</emphasis>, then the "data portion"
+        is not merely data but a mix of data and implicit (or explicit)
+        instructions. This necessitates careful consideration in
+        experimental design and interpretation when comparing LLMs based
+        on their data inputs.
+      </para>
+    </section>
+  </section>
+  <section xml:id="s-2-characterizing-the-data-portion-of-large-language-models">
+    <title>
+      <emphasis role="strong">2. Characterizing the "Data
+    Portion" of Large Language Models</emphasis>
+    </title>
+    <para>
+      To systematically compare LLMs based on their data, it is
+      essential to first characterize what constitutes the "data
+      portion." This involves distinguishing between different
+      types of data used in an LLM's lifecycle and understanding the
+      properties of datasets used for specific training phases,
+      particularly fine-tuning.
+    </para>
+    <section xml:id="s-21-pre-training-data-vs-fine-tuning-data">
+      <title>
+        <emphasis role="strong">2.1. Pre-training Data vs.
+      Fine-tuning Data</emphasis>
+      </title>
+      <para>
+        The data an LLM encounters can be broadly categorized into
+        pre-training data and fine-tuning data, each serving a distinct
+        purpose and possessing different characteristics.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Pre-training Data:</emphasis> This
+            forms the foundational knowledge base of an LLM. It consists
+            of massive and diverse datasets, often scraped from the
+            internet, encompassing books, articles, websites, code
+            repositories, and other textual sources.6 The scale can be
+            enormous; for example, Llama 2 was trained on 2 trillion
+            tokens, 40% more than its predecessor, Llama 1.9 GPT-4 is
+            reported to have digested trillions of words.10 The goal of
+            pre-training is to enable the model to learn general
+            language understanding, syntax, semantics, and a broad range
+            of world knowledge through objectives like next-word
+            prediction.11 The quality and diversity of this pre-training
+            data significantly impact the model's ability to handle
+            nuance, its general knowledge, and its propensity for
+            bias.10 However, pre-training datasets for state-of-the-art
+            models are often proprietary and closed-source, making
+            direct comparisons and replicability challenging.6
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Fine-tuning Data (Instruction-Tuning
+            Data):</emphasis> After pre-training, LLMs are often
+            fine-tuned on smaller, more specialized datasets to adapt
+            them to specific tasks, align them with human preferences,
+            or instill particular behaviors like instruction following.6
+            Fine-tuning data typically consists of (instruction, output)
+            pairs or prompt-response examples.11 Examples include
+            datasets for chatbot applications (like Llama-2-chat,
+            fine-tuned on over 1 million human annotations 9),
+            domain-specific tasks (e.g., medical or financial data 7),
+            or general instruction following (e.g.,
+            databricks-dolly-15k, Alpaca). The focus of the user query –
+            comparing LLMs with the same underlying program based on
+            data differences – primarily pertains to variations in these
+            fine-tuning datasets.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        The distinction is critical: the pre-trained model represents
+        the "fixed program" in the context of the user's
+        query, while the fine-tuning dataset is the variable "data
+        portion" whose impact is being assessed. The inherent
+        knowledge and capabilities are largely established during
+        pre-training, while fine-tuning shapes how these capabilities
+        are expressed and applied.17
+      </para>
+    </section>
+    <section xml:id="s-22-comparative-analysis-of-key-instruction-tuning-datasets">
+      <title>
+        <emphasis role="strong">2.2. Comparative Analysis of Key
+      Instruction-Tuning Datasets</emphasis>
+      </title>
+      <para>
+        Instruction-tuning datasets are concrete examples of "data
+        portions" used to modify a base LLM's behavior.
+        Understanding their characteristics is fundamental to
+        hypothesizing and interpreting performance differences when a
+        consistent base model is fine-tuned on them. These datasets vary
+        in size, generation methodology, task diversity, and licensing,
+        all of which can influence the resulting model.
+      </para>
+      <para>
+        Table 1 provides a comparative overview of several prominent
+        instruction-tuning datasets.
+      </para>
+      <informaltable>
+        <tgroup cols="8">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                **Dataset Name**
+              </entry>
+              <entry>
+                **Size (Examples)**
+              </entry>
+              <entry>
+                **Primary Source(s)**
+              </entry>
+              <entry>
+                **Generation Style**
+              </entry>
+              <entry>
+                **Key Task Focus**
+              </entry>
+              <entry>
+                **Licensing**
+              </entry>
+              <entry>
+                **Notable Strengths/Weaknesses/Biases**
+              </entry>
+              <entry>
+                **Relevant Snippets**
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **databricks-dolly-15k**
+              </entry>
+              <entry>
+                \~15,000
+              </entry>
+              <entry>
+                Human (Databricks employees), Wikipedia for context
+              </entry>
+              <entry>
+                Expert-written, crowd-sourced
+              </entry>
+              <entry>
+                Brainstorming, classification, closed QA, generation,
+                info extraction, open QA, summarization
+              </entry>
+              <entry>
+                CC BY-SA 3.0 (Commercial use permitted)
+              </entry>
+              <entry>
+                Human-generated, diverse tasks. Limitations: Wikipedia
+                bias, potential annotator bias/errors, non-native
+                English speakers. Quality issues identified (factual
+                inaccuracies, vague prompts).
+              </entry>
+              <entry>
+                15
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Alpaca (Stanford)**
+              </entry>
+              <entry>
+                52,000
+              </entry>
+              <entry>
+                GPT-3 (text-davinci-003)
+              </entry>
+              <entry>
+                Self-Instruct variant
+              </entry>
+              <entry>
+                General instruction following
+              </entry>
+              <entry>
+                CC BY-NC 4.0 (Research only)
+              </entry>
+              <entry>
+                Low-cost generation, diverse instructions. Original had
+                quality issues (empty outputs, US-centric). Cleaned
+                versions exist.
+              </entry>
+              <entry>
+                24
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **AlpacaDataCleaned**
+              </entry>
+              <entry>
+                \~50,000 (ongoing curation)
+              </entry>
+              <entry>
+                GPT-3, GPT-4-LLM dataset
+              </entry>
+              <entry>
+                Curated Self-Instruct
+              </entry>
+              <entry>
+                General instruction following
+              </entry>
+              <entry>
+                (Likely inherits original Alpaca's non-commercial if
+                based on it, or depends on GPT-4-LLM source)
+              </entry>
+              <entry>
+                Addresses original Alpaca's quality issues (empty
+                outputs, unclear instructions). Aims for higher quality.
+              </entry>
+              <entry>
+                25
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **LIMA (Less Is More for Alignment)**
+              </entry>
+              <entry>
+                1,000
+              </entry>
+              <entry>
+                Human (authors), Community Q\&amp;A (Stack Exchange,
+                wikiHow), Reddit (r/WritingPrompts)
+              </entry>
+              <entry>
+                Carefully curated, stylistically aligned expert-written
+                &amp; community Q\&amp;A
+              </entry>
+              <entry>
+                Diverse, complex queries, helpful AI assistant style
+              </entry>
+              <entry>
+                CC BY-NC-SA (or stricter if source data is stricter)
+              </entry>
+              <entry>
+                High quality, diverse prompts, demonstrates "less
+                is more" for alignment. Small size, non-commercial.
+              </entry>
+              <entry>
+                17
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **OpenAssistant-OASST1**
+              </entry>
+              <entry>
+                \~161,000 messages (varies by export)
+              </entry>
+              <entry>
+                Human (crowdsourced volunteers)
+              </entry>
+              <entry>
+                Conversational, human feedback ranked
+              </entry>
+              <entry>
+                Dialogue, instruction following, assistant-style
+                interaction
+              </entry>
+              <entry>
+                Apache 2.0
+              </entry>
+              <entry>
+                Large, multilingual, human-generated and ranked
+                conversations. Quality can vary with crowdsourcing.
+              </entry>
+              <entry>
+                34
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **FLAN (Fine-tuned Language Net)**
+              </entry>
+              <entry>
+                Varies by version (e.g., Flan 2022 includes \&gt;60
+                datasets, \&gt;40k examples for some tasks)
+              </entry>
+              <entry>
+                Existing NLP datasets (e.g., P3)
+              </entry>
+              <entry>
+                Templated from existing NLP tasks
+              </entry>
+              <entry>
+                Broad NLP tasks (QA, NLI, summarization, translation,
+                etc.)
+              </entry>
+              <entry>
+                Apache 2.0 (for code/templates, dataset licenses vary by
+                source)
+              </entry>
+              <entry>
+                Massive task diversity, improves zero/few-shot
+                generalization. Performance on open-ended instruction
+                following can be poor if not mixed.
+              </entry>
+              <entry>
+                11
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **P3 (Public Pool of Prompts)**
+              </entry>
+              <entry>
+                2,052 English prompts applied to 170 English NLP
+                datasets
+              </entry>
+              <entry>
+                Existing annotated NLP datasets
+              </entry>
+              <entry>
+                Templated from existing NLP tasks
+              </entry>
+              <entry>
+                Broad NLP tasks
+              </entry>
+              <entry>
+                (Varies by source dataset)
+              </entry>
+              <entry>
+                Large collection of prompts, enables task
+                transformation.
+              </entry>
+              <entry>
+                11
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Self-Instruct**
+              </entry>
+              <entry>
+                Variable (framework to generate data, e.g., 52k for
+                original Alpaca)
+              </entry>
+              <entry>
+                LLM-generated (e.g., GPT-3)
+              </entry>
+              <entry>
+                Seed instructions expanded by LLM, outputs generated by
+                LLM
+              </entry>
+              <entry>
+                General instruction following
+              </entry>
+              <entry>
+                (Depends on LLM used and seed data)
+              </entry>
+              <entry>
+                Scalable data generation. Quality depends heavily on
+                seed data and generation model; can be noisy.
+              </entry>
+              <entry>
+                11
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **ShareGPT**
+              </entry>
+              <entry>
+                \~90,000 conversations (common version)
+              </entry>
+              <entry>
+                User-shared ChatGPT conversations
+              </entry>
+              <entry>
+                Real-world user interactions with ChatGPT
+              </entry>
+              <entry>
+                Dialogue, instruction following
+              </entry>
+              <entry>
+                (Content is user-generated, often non-commercial use
+                advised)
+              </entry>
+              <entry>
+                Real-world conversational data. Can contain noise, PII,
+                and reflect biases of ChatGPT and its users.
+              </entry>
+              <entry>
+                34
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>
+        The evolution of these datasets reveals a maturing understanding
+        of what constitutes an effective "data portion" for
+        fine-tuning. Initially, the challenge was obtaining any
+        instruction data. This led to the use of LLMs themselves to
+        scale generation, as seen with Self-Instruct and the original
+        Alpaca dataset.11 However, this approach often introduced
+        quality issues, such as factual errors, nonsensical
+        instructions, or biases inherent in the generating LLM.15
+        Consequently, a trend emerged towards higher quality data,
+        either through meticulous human curation of smaller datasets (as
+        exemplified by LIMA, which posits that 1,000 high-quality
+        examples can be highly effective 18) or through extensive
+        cleaning and filtering of larger, potentially noisier datasets
+        (e.g., efforts to clean the Alpaca dataset 25 or analyses of
+        databricks-dolly-15k highlighting areas for improvement 15).
+        This progression underscores that the methodology of creating
+        and refining the "data portion" is as crucial as the
+        raw data itself. The mere fact that data is
+        "human-generated" does not guarantee its superiority
+        over "AI-generated" data if the latter undergoes more
+        rigorous quality control and curation.
+      </para>
+      <para>
+        Furthermore, the licensing and intended use of these datasets
+        carry significant practical weight. Datasets like Alpaca, with
+        its research-only license 28, confine the direct applicability
+        of models fine-tuned on them to academic circles. Conversely,
+        datasets with commercially permissive licenses, such as
+        databricks-dolly-15k 22, allow for broader deployment and study
+        of the resulting "data-conditioned programs" in
+        real-world applications. These practical constraints inevitably
+        shape the ecosystem of comparable models and influence which
+        "data portions" become most influential in the wider
+        LLM landscape.
+      </para>
+    </section>
+  </section>
+  <section xml:id="s-3-evaluating-performance-and-behavioral-differences-attributable-to-data">
+    <title>
+      <emphasis role="strong">3. Evaluating Performance and
+    Behavioral Differences Attributable to Data</emphasis>
+    </title>
+    <para>
+      Once the "program" (base LLM) is fixed, variations in
+      the "data portion" (fine-tuning dataset) can lead to
+      measurable differences in performance and behavior. This section
+      explores these impacts, focusing on data quality, diversity,
+      scale, and attribution techniques.
+    </para>
+    <section xml:id="s-31-impact-of-dataset-quality-diversity-and-scale-on-llm-behavior">
+      <title>
+        <emphasis role="strong">3.1. Impact of Dataset Quality,
+      Diversity, and Scale on LLM Behavior</emphasis>
+      </title>
+      <para>
+        The characteristics of the fine-tuning data profoundly influence
+        the resulting LLM's capabilities and tendencies.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Data Quality:</emphasis> The adage
+            "garbage in, garbage out" is particularly
+            pertinent to LLM fine-tuning.36 High-quality, clean, and
+            well-curated data is consistently linked to superior model
+            performance, accuracy, and reliability.7 Conversely, faulty
+            data—manifesting as factual inaccuracies, incomplete or
+            vague prompts, spelling errors, biases, Personally
+            Identifiable Information (PII), or toxic content—can
+            severely compromise model performance, leading to the
+            propagation of misinformation, reinforcement of harmful
+            stereotypes, or unreliable outputs.15 For example, analysis
+            of the human-annotated databricks-dolly-15k dataset revealed
+            instances of factual errors (e.g., incorrect inventors or
+            capitals) and vague prompts, despite significant human
+            effort in its curation.15 Similarly, the original Alpaca
+            dataset, generated by GPT-3, suffered from issues like empty
+            outputs and unclear instructions, which necessitated
+            cleaning efforts to improve its utility.25 Tools and
+            methodologies for detecting and mitigating such data issues
+            are crucial for effective fine-tuning.15
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Data Diversity:</emphasis> Training
+            on broader and more diverse datasets enables LLMs to better
+            handle nuance, generalize to unseen tasks, and reduce the
+            likelihood of hallucinations.10 The LIMA paper, for
+            instance, emphasizes the importance of prompt diversity
+            alongside high-quality responses for effective alignment
+            with limited data.17 A lack of diversity in training data is
+            a primary source of bias, potentially leading to
+            discriminatory outputs and the reinforcement of societal
+            stereotypes related to gender, race, or culture.12 Ensuring
+            that fine-tuning datasets represent a wide range of topics,
+            linguistic styles, and demographic perspectives is essential
+            for developing more equitable and robust LLMs.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Data Scale:</emphasis> The role of
+            data scale differs between pre-training and fine-tuning.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            For <emphasis role="strong">pre-training</emphasis>, massive
+            scale is generally considered beneficial for building a
+            broad knowledge base and learning complex language
+            patterns.8
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            For <emphasis role="strong">fine-tuning</emphasis>,
+            particularly instruction tuning, the "Less Is More for
+            Alignment" (LIMA) hypothesis suggests that a relatively
+            small amount of high-quality, diverse data can be highly
+            effective in teaching a pre-trained model to follow
+            instructions and adopt a desired interaction style.17 The
+            LIMA model itself was fine-tuned on only 1,000 curated
+            examples. The Tulu project, which evaluated LLaMa models
+            fine-tuned on various instruction datasets, also indicated
+            that some datasets can even hurt performance in specific
+            areas, implying that the quality and relevance of
+            fine-tuning data can be more critical than sheer volume.34
+            However, other research suggests that larger fine-tuning
+            datasets can still offer benefits if data quality and
+            diversity are maintained.32 This indicates a nuanced
+            relationship where the informational efficiency and
+            directive clarity of the fine-tuning data may be paramount,
+            especially when the goal is to shape the behavior of an
+            already knowledgeable pre-trained model. The function of the
+            "data portion" shifts: pre-training data builds
+            broad knowledge, while fine-tuning data directs and refines
+            that knowledge for specific interaction patterns or tasks.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Impact on Bias:</emphasis> Biases
+            present in training data are inevitably learned and
+            perpetuated by LLMs.7 If a fine-tuning dataset contains
+            gender, racial, or cultural stereotypes, the resulting model
+            is likely to reflect and potentially amplify these biases in
+            its outputs.12 Mitigating such biases requires careful
+            curation of fine-tuning data to ensure diversity and
+            representativeness, alongside other techniques like
+            counterfactual data augmentation or bias detection tools.7
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        The prevalence of quality issues even in human-curated datasets,
+        such as databricks-dolly-15k 15, highlights that
+        "human-generated" is not an automatic guarantee of
+        "high-quality." Rigorous cleaning, analysis, and
+        curation are essential for any "data portion,"
+        regardless of its origin (human or AI-generated), before it can
+        be reliably used for training or comparative evaluation. This
+        adds a layer of complexity when characterizing and comparing
+        data portions, as the raw generation method (e.g., human vs. AI)
+        becomes less critical than the subsequent quality control
+        processes applied.
+      </para>
+    </section>
+    <section xml:id="s-32-techniques-for-data-attribution-and-tracing-data-influence-brief-overview">
+      <title>
+        <emphasis role="strong">3.2. Techniques for Data
+      Attribution and Tracing Data Influence (Brief
+      Overview)</emphasis>
+      </title>
+      <para>
+        Data attribution methods aim to identify and measure the
+        contribution of specific training data instances to a model's
+        outputs or behavior.37 Understanding which parts of a "data
+        portion" are most influential can provide deeper insights
+        into why different datasets lead to varying performance
+        outcomes.
+      </para>
+      <para>
+        Attribution can be broadly categorized based on when source
+        information is accessed:
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Training-time
+            attribution:</emphasis> Focuses on how the data used to
+            train or fine-tune the model influences its learned
+            parameters and subsequent behavior. This is most relevant to
+            the user's query about comparing "data portions"
+            used to adapt a fixed base model.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Inference-time
+            attribution:</emphasis> Often associated with Retrieval
+            Augmented Generation (RAG) systems, this aims to trace a
+            model's specific output back to external documents retrieved
+            during inference.37 While distinct, the underlying
+            principles of identifying influential pieces of text can be
+            informative.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        Key methods for data attribution include:
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Gradient-based methods (e.g.,
+            Influence Functions):</emphasis> These techniques use model
+            gradients to estimate the impact of training samples on
+            model predictions or loss.38 While theoretically grounded,
+            they are often computationally expensive and challenging to
+            scale for LLMs with billions of parameters.38
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">In-Context Probing (ICP):</emphasis>
+            This involves prompting an LLM to assess the quality or
+            influence of a training data sample within the context of a
+            task.38 ICP has emerged as a potentially fast and
+            cost-effective proxy for gradient-based methods for data
+            selection, especially when the training data and the target
+            task share similarities in type and content.39 It does not
+            require access to model parameters, making it suitable for
+            black-box models.39
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Sentence-Level Attribution for
+            RAG:</emphasis> Proposed methods include a pre-attribution
+            step to classify sentences based on whether they require
+            zero, one, or multiple references, allowing for more
+            targeted and efficient attribution.37 This approach focuses
+            on verifying the truthfulness of generated sentences by
+            linking them to reliable source sentences.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        The development of computationally cheaper proxy methods for
+        data attribution, such as ICP 38, is pivotal for enabling more
+        fine-grained analysis of "data portions" in LLMs. If
+        such methods can reliably identify influential training examples
+        within a fine-tuning dataset, comparisons between different data
+        portions can move beyond aggregate performance metrics to
+        understand <emphasis>which specific examples</emphasis> drive
+        observed behavioral differences. This offers a more nuanced
+        understanding than simply concluding that "Dataset A is
+        better than Dataset B."
+      </para>
+      <para>
+        However, the current limitations of methods like ICP—such as
+        their dependence on task and content similarity between the
+        probe and the data being assessed, and potential issues with
+        group effects when evaluating multiple in-context demonstrations
+        39—mean that comprehensively attributing influence from diverse,
+        multifaceted fine-tuning datasets remains a complex challenge. A
+        typical instruction-tuning dataset often encompasses a variety
+        of tasks and styles 20, and its overall influence might not be
+        uniformly attributable using a single ICP approach without
+        careful, task-specific application.
+      </para>
+    </section>
+    <section xml:id="s-33-case-studies-performance-variations-in-llms-fine-tuned-on-different-datasets">
+      <title>
+        <emphasis role="strong">3.3. Case Studies: Performance
+      Variations in LLMs Fine-Tuned on Different
+      Datasets</emphasis>
+      </title>
+      <para>
+        Empirical studies fine-tuning consistent base LLMs on different
+        instruction datasets provide direct evidence of how "data
+        portions" impact performance and behavior.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">The Tulu Study (Allen Institute for
+            AI):</emphasis> This comprehensive study fine-tuned LLaMa-1
+            models (7B, 13B, 65B) on 12 different instruction-tuning
+            datasets, including well-known ones like Alpaca,
+            databricks-dolly-15k, LIMA, OpenAssistant-OASST1,
+            Self-Instruct, and FLAN, as well as various mixtures.34 Key
+            findings include:
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            No single dataset or mixture yielded the best performance
+            across all evaluation categories (factual knowledge,
+            reasoning, multilinguality, coding, safety). This highlights
+            the specialized nature of different data portions.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            The quality of the base model is crucial. Subsequent
+            experiments showed that Llama-2 models fine-tuned on the
+            same "Human+GPT" (Tulu) mix significantly
+            outperformed their LLaMa-1 counterparts (e.g., Tulu-2
+            LLaMa-2 7B achieved an average performance of 46.5 on six
+            benchmarks, compared to 38.8 for Tulu LLaMa-1 7B).34
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Certain datasets could negatively impact performance in
+            specific areas. For example, datasets with a strong English
+            focus tended to degrade multilingual capabilities. Datasets
+            lacking chain-of-thought examples performed poorly on
+            reasoning tasks that relied on such prompting for
+            evaluation.34
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Data quality was a significant factor; datasets generated
+            using weaker LLMs (like early Self-Instruct versions) led to
+            poorer outcomes compared to those distilled from more
+            capable models like GPT-4 (e.g., GPT4-Alpaca, ShareGPT).34
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Instruction Modelling (IM) vs.
+            Instruction Tuning (IT):</emphasis> A study explored a novel
+            fine-tuning method called Instruction Modelling (IM), which
+            applies the loss function to both the instruction/prompt and
+            the output, rather than solely to the output as in standard
+            Instruction Tuning (IT).32 Using Llama-7B as the base model,
+            experiments were conducted across various instruction
+            datasets, including subsets of Flan V2, Dolly, Stanford
+            Alpaca, Code Alpaca, and LIMA.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            IM was found to significantly boost performance on
+            benchmarks like AlpacaEval 1.0, with over 100% improvement
+            in the most advantageous cases.32
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            The effectiveness of IM was particularly pronounced for
+            datasets characterized by lengthy instructions paired with
+            brief outputs (e.g., Code Alpaca) or when using a small
+            number of training examples, aligning with the Superficial
+            Alignment Hypothesis (SAH) that LMs require minimal data for
+            effective instruction tuning if pre-trained capabilities are
+            strong.32
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Graphical analysis in the paper 32 illustrates varying
+            percentage improvements on AlpacaEval 1.0 when Llama-7B was
+            trained with IM on datasets such as LIMA (1k examples, ~120%
+            improvement), Stanford Alpaca (52k examples, ~25-30%
+            improvement), and Code Alpaca (20k examples, ~70-80%
+            improvement). This suggests an interaction between the
+            dataset's characteristics and the fine-tuning methodology.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Llama2-MedTuned:</emphasis>
+            Researchers developed Llama2-MedTuned by fine-tuning Llama 2
+            models on a novel medical instruction dataset created by
+            amalgamating various publicly available medical datasets and
+            reformatting them using an Alpaca-style prompting
+            strategy.43 This demonstrates how a general-purpose base
+            model can be adapted to a specialized domain (medicine)
+            through a carefully constructed "data portion."
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">The LIMA Paper as a Case
+            Study:</emphasis> The original LIMA research itself serves
+            as a compelling case study.17 By fine-tuning a LLaMa 65B
+            model on just 1,000 carefully curated examples (the LIMA
+            dataset), the resulting model demonstrated remarkably strong
+            performance, often comparable or preferred to models
+            fine-tuned on much larger datasets like Alpaca (52,000
+            examples) or even those trained with reinforcement learning
+            from human feedback (RLHF) like DaVinci003.18
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        These studies collectively underscore that the choice of the
+        fine-tuning "data portion" has a direct, measurable,
+        and often substantial impact on the resulting LLM's skills,
+        factual accuracy, reasoning abilities, safety, and overall
+        behavior. The finding that "base model quality is extremely
+        important" 34 implies that the "fixed program"
+        (the base LLM) establishes a strong foundation for achievable
+        performance. The "data portion" (the fine-tuning
+        dataset) then modulates and directs these inherent capabilities.
+        However, it cannot entirely compensate for fundamental
+        limitations or fully replicate the strengths of a superior base
+        model. This suggests that the base model's architecture and,
+        crucially, its own pre-training data (an earlier, larger
+        "data portion") determine its <emphasis>capacity to
+        learn effectively</emphasis> from the subsequent fine-tuning
+        data. Thus, when comparing the effects of different fine-tuning
+        data portions, the selection of the base "program" is
+        itself a critical variable that shapes the observable outcomes.
+      </para>
+      <para>
+        Furthermore, the varying effectiveness of a fine-tuning dataset
+        depending on the fine-tuning <emphasis>methodology</emphasis>
+        (e.g., IM vs. IT 32) introduces another layer of complexity. It
+        suggests that comparisons of "data portions" might
+        also need to account for the specific "sub-program" or
+        process through which that data is integrated into the main
+        model. Dataset A might appear superior to Dataset B under
+        standard instruction tuning, but their relative performance
+        could shift if a different fine-tuning technique like
+        Instruction Modelling is employed, especially if their
+        structural characteristics (like instruction-to-output length
+        ratios) differ significantly.
+      </para>
+      <para>
+        Table 2 summarizes illustrative performance variations from some
+        of these studies.
+      </para>
+      <informaltable>
+        <tgroup cols="5">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                **Base LLM**
+              </entry>
+              <entry>
+                **Fine-tuning Dataset/Mix**
+              </entry>
+              <entry>
+                **Key Evaluation Benchmark(s)**
+              </entry>
+              <entry>
+                **Reported Performance/Observation**
+              </entry>
+              <entry>
+                **Source Study Snippet**
+              </entry>
+            </row>
+            <row>
+              <entry>
+                LLaMa-1 7B
+              </entry>
+              <entry>
+                Tulu (Human+GPT mix)
+              </entry>
+              <entry>
+                Avg. Perf. on 6 benchmarks (MMLU, TriviaQA, HumanEval,
+                GSM8K, TyDiQA-GoldP, BBH)
+              </entry>
+              <entry>
+                38.8
+              </entry>
+              <entry>
+                34
+              </entry>
+            </row>
+            <row>
+              <entry>
+                Llama-2 7B
+              </entry>
+              <entry>
+                Tulu-2 (Human+GPT mix)
+              </entry>
+              <entry>
+                Avg. Perf. on 6 benchmarks (as above)
+              </entry>
+              <entry>
+                46.5 (significant improvement over LLaMa-1 base)
+              </entry>
+              <entry>
+                34
+              </entry>
+            </row>
+            <row>
+              <entry>
+                Llama-2 13B
+              </entry>
+              <entry>
+                Tulu-2 (Human+GPT mix)
+              </entry>
+              <entry>
+                Avg. Perf. on 6 benchmarks (as above)
+              </entry>
+              <entry>
+                52.9
+              </entry>
+              <entry>
+                34
+              </entry>
+            </row>
+            <row>
+              <entry>
+                Llama-7B
+              </entry>
+              <entry>
+                Stanford Alpaca (52k examples)
+              </entry>
+              <entry>
+                AlpacaEval 1.0 (% improvement with IM vs. IT)
+              </entry>
+              <entry>
+                Approx. 25-30%
+              </entry>
+              <entry>
+                32
+              </entry>
+            </row>
+            <row>
+              <entry>
+                Llama-7B
+              </entry>
+              <entry>
+                LIMA (1k examples)
+              </entry>
+              <entry>
+                AlpacaEval 1.0 (% improvement with IM vs. IT)
+              </entry>
+              <entry>
+                Approx. 120%
+              </entry>
+              <entry>
+                32
+              </entry>
+            </row>
+            <row>
+              <entry>
+                Llama-7B
+              </entry>
+              <entry>
+                Code Alpaca (20k examples)
+              </entry>
+              <entry>
+                AlpacaEval 1.0 (% improvement with IM vs. IT)
+              </entry>
+              <entry>
+                Approx. 70-80%
+              </entry>
+              <entry>
+                32
+              </entry>
+            </row>
+            <row>
+              <entry>
+                LLaMa 65B
+              </entry>
+              <entry>
+                LIMA (1k examples)
+              </entry>
+              <entry>
+                Human preference vs. GPT-4
+              </entry>
+              <entry>
+                LIMA equivalent or preferred in 43% of cases
+              </entry>
+              <entry>
+                18
+              </entry>
+            </row>
+            <row>
+              <entry>
+                LLaMa 65B
+              </entry>
+              <entry>
+                LIMA (1k examples)
+              </entry>
+              <entry>
+                Human preference vs. Alpaca 65B (52k examples)
+              </entry>
+              <entry>
+                LIMA generally outperformed Alpaca
+              </entry>
+              <entry>
+                18
+              </entry>
+            </row>
+            <row>
+              <entry>
+                LLaMa models
+              </entry>
+              <entry>
+                ShareGPT / GPT4-Alpaca
+              </entry>
+              <entry>
+                ToxiGen (toxicity reduction)
+              </entry>
+              <entry>
+                Best performing datasets for reducing toxicity
+              </entry>
+              <entry>
+                34
+              </entry>
+            </row>
+            <row>
+              <entry>
+                LLaMa models
+              </entry>
+              <entry>
+                ShareGPT / GPT4-Alpaca
+              </entry>
+              <entry>
+                TruthfulQA (truthfulness &amp; informativeness)
+              </entry>
+              <entry>
+                Effective at improving truthfulness (distillation from
+                GPT-4)
+              </entry>
+              <entry>
+                34
+              </entry>
+            </row>
+            <row>
+              <entry>
+                LLaMa models
+              </entry>
+              <entry>
+                Self-Instruct / Unnatural Instructions
+              </entry>
+              <entry>
+                TruthfulQA / Reasoning Tasks
+              </entry>
+              <entry>
+                Poorer performance, potentially detrimental due to lower
+                quality generation
+              </entry>
+              <entry>
+                34
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+  </section>
+  <section xml:id="s-4-challenges-and-future-directions-in-data-centric-llm-analysis">
+    <title>
+      <emphasis role="strong">4. Challenges and Future Directions
+    in Data-Centric LLM Analysis</emphasis>
+    </title>
+    <para>
+      While isolating and comparing the "data portion" of LLMs
+      offers valuable insights, this endeavor is fraught with practical
+      and conceptual challenges. Understanding these limitations is key
+      to interpreting current findings and guiding future research.
+    </para>
+    <section xml:id="s-41-practical-challenges-in-isolating-and-comparing-data-portions">
+      <title>
+        <emphasis role="strong">4.1. Practical Challenges in
+      Isolating and Comparing Data Portions</emphasis>
+      </title>
+      <para>
+        Several factors complicate the straightforward comparison of
+        data portions in LLMs:
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Instruction-Data Separation
+            Failures:</emphasis> As previously discussed (Section 1.2),
+            LLMs inherently struggle to maintain a clear distinction
+            between instructions to be executed and data to be
+            processed.3 This means that any "data portion"
+            provided during fine-tuning might be partially interpreted
+            as implicit instructions by the "program" (the
+            base LLM), confounding a pure analysis of the data's
+            informational content. The model's behavior might shift not
+            just because of new facts or examples in the data, but
+            because of how it interprets the
+            <emphasis>structure</emphasis> or
+            <emphasis>phrasing</emphasis> within that data as commands.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Complexity of Real-World
+            (Enterprise) Data:</emphasis> Much of the research on
+            fine-tuning datasets and their impact relies on publicly
+            available benchmarks or datasets derived from web data.
+            However, real-world enterprise data often presents unique
+            challenges that limit the generalizability of these
+            findings.44 Enterprise datasets can be characterized by:
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Large table sizes and high
+            dimensionality:</emphasis> Far exceeding typical benchmark
+            scales.44
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Sparsity:</emphasis> Many missing
+            values.44
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Non-descriptive schemas and
+            values:</emphasis> Column names or data entries may lack
+            intuitive meaning, unlike curated public datasets.44
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Complex tasks:</emphasis> Often
+            involving multiple steps or compound operations rather than
+            isolated academic tasks.44
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Need for internal
+            knowledge:</emphasis> Tasks may require domain-specific or
+            proprietary knowledge that is absent from the LLM's public
+            pre-training data.44 The effectiveness of a given "data
+            portion" (e.g., a fine-tuning dataset) is thus highly
+            relative to the "parametric knowledge" already
+            encoded in the LLM's "program" from its
+            pre-training phase. If a task requires internal knowledge
+            that the base model fundamentally lacks because it was not
+            part of its pre-training corpus 44, then even a
+            well-designed fine-tuning data portion might be insufficient
+            to elicit the desired performance. This highlights an
+            unavoidable interaction between the pre-training data (an
+            integral part of the "program") and the
+            fine-tuning data portion being evaluated.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Cost and Resources for
+            Experimentation:</emphasis> Rigorous comparison of data
+            portions necessitates multiple fine-tuning runs of large
+            models, followed by comprehensive evaluations across diverse
+            benchmarks. This process is computationally intensive and
+            expensive, posing a barrier to exhaustive exploration.45
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Defining a "Consistent
+            Underlying Program":</emphasis> While fixing the model
+            architecture (e.g., Llama 2 7B) is a primary step, ensuring
+            true consistency in the "program" can be
+            challenging. Subtle differences in the base model's
+            pre-training data (if not fully transparent or open), minor
+            variations in its training hyperparameters, or even the
+            specific checkpoint used can introduce confounding variables
+            that are not part of the "data portion" being
+            intentionally varied.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Nuances in Evaluation:</emphasis>
+            Measuring LLM performance is complex. Beyond standard
+            accuracy metrics, factors like generation latency, user
+            engagement, qualitative aspects of response quality
+            (coherence, relevance, safety), and operational costs must
+            be considered.46 Human evaluation is often indispensable for
+            assessing nuanced behaviors, but it is subjective, costly,
+            and time-consuming.46 The difficulty in robustly evaluating
+            LLMs, especially for generative or interactive tasks, means
+            that "performance/behavior comparisons" of data
+            portions are themselves constrained by the limitations of
+            available evaluation methodologies. A data portion might
+            appear superior on one automated metric but inferior on
+            another, or its qualitative differences might be challenging
+            to capture systematically without extensive human oversight.
+            This can lead to situations where the "better"
+            data portion is context-dependent based on the specific
+            application's priorities.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-42-the-role-of-ablation-studies-in-understanding-data-contributions">
+      <title>
+        <emphasis role="strong">4.2. The Role of Ablation Studies
+      in Understanding Data Contributions</emphasis>
+      </title>
+      <para>
+        Ablation studies, a common experimental technique in machine
+        learning, involve systematically removing or modifying
+        components of a system to understand their individual
+        contributions to the overall performance.48 This methodology can
+        be adapted to dissect the influence of various aspects of a
+        "data portion."
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Application to Data
+            Components:</emphasis> Instead of just comparing entire,
+            monolithic fine-tuning datasets, ablation studies can be
+            designed to investigate the impact of specific
+            characteristics or subsets within a data portion. For
+            example, one could perform "feature ablation" by
+            removing certain types of tasks (e.g., creative writing vs.
+            closed QA from the databricks-dolly-15k dataset), data
+            sources, or quality-filtered subsets from a fine-tuning
+            mix.48 This allows for a more granular understanding of how
+            different elements of a complex data portion contribute to
+            the observed changes in model behavior or performance.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Illustrative Examples:</emphasis>
+            The research on SwallowCode and SwallowMath provides a clear
+            example of data-focused ablation.49 The authors developed a
+            multi-stage pipeline to rewrite and refine public code and
+            math data. Their ablation studies confirmed that each stage
+            of this data transformation process—including syntax
+            validation, style filtering, and LLM-based
+            rewriting—incrementally contributed to the performance
+            improvements observed in downstream code generation and
+            mathematical reasoning tasks. This demonstrates how
+            systematic modifications to a "data portion" can
+            be evaluated for their specific impact.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">LLMs in Service of Ablation
+            Studies:</emphasis> An interesting development is the use of
+            LLMs themselves to facilitate the design and execution of
+            ablation studies for other machine learning systems. Tools
+            like AblationMage leverage LLMs to help researchers design
+            ablation trials, generate the necessary code artifacts, and
+            even assist in analyzing and presenting the results.48 This
+            creates a meta-level consideration: LLMs (as a
+            "program") are being employed as tools to analyze
+            the impact of "data portions" on other
+            "programs." If LLMs can effectively suggest
+            ablation strategies for general ML code, they might also be
+            prompted to devise ways to ablate features or components of
+            a <emphasis>dataset</emphasis> to better understand its
+            influence on an LLM fine-tuning process, potentially
+            accelerating data-centric research.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        Ablation studies on the constituent parts of fine-tuning
+        datasets—such as specific task categories, data sources, or
+        subsets filtered by quality metrics—can offer a more nuanced
+        understanding than simply comparing entire datasets. For
+        instance, one could fine-tune a base model on the
+        databricks-dolly-15k dataset and then on versions of this
+        dataset where "creative writing" examples or
+        "closed QA" examples are systematically removed. By
+        comparing performance on relevant benchmarks, researchers could
+        isolate the contribution of these specific data sub-portions to
+        particular skills. This approach moves towards a more
+        compositional understanding of how "data portions"
+        shape LLM behavior.
+      </para>
+    </section>
+    <section xml:id="s-43-concluding-remarks-and-recommendations-for-data-focused-llm-evaluation">
+      <title>
+        <emphasis role="strong">4.3. Concluding Remarks and
+      Recommendations for Data-Focused LLM Evaluation</emphasis>
+      </title>
+      <para>
+        The analysis presented indicates that it is indeed feasible and
+        highly valuable to compare Large Language Models by holding the
+        "program" (the base model architecture and pre-trained
+        weights) constant while varying the "data portion"
+        (primarily the fine-tuning or instruction-tuning dataset). Such
+        comparisons reveal that the characteristics of the data—its
+        quality, diversity, scale, and the methods used for its curation
+        and application—have a profound and measurable impact on the
+        resulting model's performance, behavior, and biases.
+      </para>
+      <para>
+        To advance this line of inquiry and foster more rigorous,
+        reproducible, and insightful data-centric LLM evaluation,
+        several considerations and recommendations emerge:
+      </para>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Clarity in Definitions and
+            Experimental Setup:</emphasis>
+          </para>
+        </listitem>
+      </orderedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Researchers must clearly define what constitutes the
+            "fixed program" (e.g., specific base model,
+            version, and checkpoint) and meticulously document the
+            "data portions" being compared (e.g., dataset
+            sources, preprocessing steps, versions, size, and
+            composition).
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            The specific performance and behavioral aspects under
+            evaluation should be explicitly stated, along with the
+            metrics used.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Standardized Reporting and
+            Openness:</emphasis>
+          </para>
+        </listitem>
+      </orderedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Encouraging detailed reporting of fine-tuning procedures
+            (hyperparameters, methodologies like IT vs. IM) is crucial
+            for reproducibility.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Promoting the use of open base models and publicly available
+            fine-tuning datasets, where possible, facilitates broader
+            comparative analysis by the research community.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Advancements in
+            Methodology:</emphasis>
+          </para>
+        </listitem>
+      </orderedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Instruction-Data
+            Separation:</emphasis> Continued research into developing
+            more robust mechanisms, potentially at an architectural
+            level, for LLMs to clearly distinguish between instructions
+            and data is essential for cleaner data impact studies.3
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Data Attribution:</emphasis> Further
+            development of scalable and reliable data attribution
+            techniques for LLMs will allow for finer-grained analysis of
+            which specific elements within a data portion drive observed
+            outcomes.38
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Evaluation Protocols:</emphasis>
+            Creation of more diverse, high-quality, and well-annotated
+            benchmark datasets specifically designed for data-centric
+            LLM comparisons is needed. Evaluation must also increasingly
+            incorporate metrics for safety, bias, and fairness alongside
+            traditional performance measures.12
+          </para>
+        </listitem>
+      </itemizedlist>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            Towards a Science of Data Engineering for LLMs: The ultimate
+            ambition of comparing "data portions" is to move
+            beyond empirical trial-and-error towards a more principled
+            understanding of "data engineering for LLMs." This
+            involves developing predictive models of how specific data
+            characteristics influence model behavior, enabling more
+            systematic and effective dataset design.6 Systematically
+            comparing data portions and their effects is a critical step
+            in transforming the "art of using data into
+            science".6
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Centrality of Ethical Considerations: The ethical
+            implications of "data portions"—including the
+            propagation of biases, ensuring fairness, and promoting
+            equitable representation—must be integral to any comparative
+            evaluation framework.12 Performance metrics alone are
+            insufficient; a data portion that yields high benchmark
+            scores but simultaneously amplifies harmful societal biases
+            or generates toxic content is ultimately detrimental.
+            Therefore, "behavior comparisons" must extend to
+            these critical ethical dimensions.
+          </para>
+        </listitem>
+      </orderedlist>
+      <para>
+        In conclusion, while the "program" of an LLM provides
+        its foundational capabilities, the "data portion" used
+        for its refinement plays a decisive role in shaping its ultimate
+        utility and behavior. A continued focus on data-centric
+        analysis, supported by rigorous methodologies and a commitment
+        to openness, will be paramount in advancing the development of
+        more capable, reliable, and responsible Large Language Models.
+      </para>
+      <section xml:id="works-cited">
+        <title>
+          <emphasis role="strong">Works cited</emphasis>
+        </title>
+        <orderedlist numeration="arabic" spacing="compact">
+          <listitem>
+            <para>
+              Fuga: A Homoiconic Object-Oriented Programming Language -
+              UNI ..., accessed June 9, 2025,
+              <link xlink:href="https://scholarworks.uni.edu/cgi/viewcontent.cgi?article=1891&amp;context=hpt">https://scholarworks.uni.edu/cgi/viewcontent.cgi?article=1891&amp;context=hpt</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Don't say “Homoiconic” – Expressions of Change, accessed
+              June 9, 2025,
+              <link xlink:href="https://www.expressionsofchange.org/dont-say-homoiconic/">https://www.expressionsofchange.org/dont-say-homoiconic/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Can LLMs Separate Instructions From Data? And What Do We
+              Even ..., accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/abs/2403.06833">https://arxiv.org/abs/2403.06833</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Can LLMs Separate Instructions From Data? And What Do We
+              Even Mean By That?, accessed June 9, 2025,
+              <link xlink:href="https://openreview.net/forum?id=8EtSBX41mt">https://openreview.net/forum?id=8EtSBX41mt</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Can LLMs Separate Instructions From Data? And What Do We
+              Even Mean By That? - arXiv, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2403.06833v3">https://arxiv.org/html/2403.06833v3</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Data-Centric AI in the Age of Large Language Models - ACL
+              Anthology, accessed June 9, 2025,
+              <link xlink:href="https://aclanthology.org/2024.findings-emnlp.695.pdf">https://aclanthology.org/2024.findings-emnlp.695.pdf</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Understanding LLM Training Data: A Comprehensive Guide -
+              Uniphore, accessed June 9, 2025,
+              <link xlink:href="https://www.uniphore.com/glossary/llm-training-data/">https://www.uniphore.com/glossary/llm-training-data/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              The Difference Between Large Language Models (LLMs) and
+              Traditional Machine Learning Models - Xeven Solutions,
+              accessed June 9, 2025,
+              <link xlink:href="https://www.xevensolutions.com/blog/difference-between-llms-and-traditional-ml-models/">https://www.xevensolutions.com/blog/difference-between-llms-and-traditional-ml-models/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Comparative Analysis: Llama vs. Llama2 Performance - GoML,
+              accessed June 9, 2025,
+              <link xlink:href="https://www.goml.io/blog/comparative-analysis-llama-vs-llama2-performance">https://www.goml.io/blog/comparative-analysis-llama-vs-llama2-performance</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              LLM Model Comparison: Choosing the Right AI Partner in
+              2025, accessed June 9, 2025,
+              <link xlink:href="https://tensorwave.com/blog/llm-model-comparison">https://tensorwave.com/blog/llm-model-comparison</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Instruction Tuning for Large Language Models: A Survey -
+              arXiv, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2308.10792v5">https://arxiv.org/html/2308.10792v5</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Understanding and Mitigating Bias in Large Language Models
+              (LLMs) | Digital Bricks, accessed June 9, 2025,
+              <link xlink:href="https://www.digitalbricks.ai/blog-posts/understanding-and-mitigating-bias-in-large-language-models-llms">https://www.digitalbricks.ai/blog-posts/understanding-and-mitigating-bias-in-large-language-models-llms</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Mining LLM Pretraining Data: Topics, Skills, and Cognitive
+              Patterns - Hugging Face, accessed June 9, 2025,
+              <link xlink:href="https://huggingface.co/blog/KnutJaegersberg/mining-llm-pretraining-data">https://huggingface.co/blog/KnutJaegersberg/mining-llm-pretraining-data</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              LLMs vs. SLMs: The Differences in Large &amp; Small
+              Language Models | Splunk, accessed June 9, 2025,
+              <link xlink:href="https://www.splunk.com/en_us/blog/learn/language-models-slm-vs-llm.html">https://www.splunk.com/en_us/blog/learn/language-models-slm-vs-llm.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              How to detect bad data in your instruction tuning dataset
+              (for better ..., accessed June 9, 2025,
+              <link xlink:href="https://cleanlab.ai/blog/filter-llm-tuning-data/">https://cleanlab.ai/blog/filter-llm-tuning-data/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Fine-tuning and Utilization Methods of Domain-specific
+              LLMs - arXiv, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/pdf/2401.02981">https://arxiv.org/pdf/2401.02981</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              NeurIPS Poster LIMA: Less Is More for Alignment, accessed
+              June 9, 2025,
+              <link xlink:href="https://neurips.cc/virtual/2023/poster/72022">https://neurips.cc/virtual/2023/poster/72022</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              LIMA: Less Is More for Alignment - OpenReview, accessed
+              June 9, 2025,
+              <link xlink:href="https://openreview.net/pdf?id=KBMOKmX2he">https://openreview.net/pdf?id=KBMOKmX2he</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              databricks dolly 15k - Kaggle, accessed June 9, 2025,
+              <link xlink:href="https://www.kaggle.com/datasets/databricks/databricks-dolly-15k">https://www.kaggle.com/datasets/databricks/databricks-dolly-15k</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              databricks/databricks-dolly-15k · Datasets at Hugging
+              Face, accessed June 9, 2025,
+              <link xlink:href="https://huggingface.co/datasets/databricks/databricks-dolly-15k">https://huggingface.co/datasets/databricks/databricks-dolly-15k</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              databricks/dolly-v2-12b - Hugging Face, accessed June 9,
+              2025,
+              <link xlink:href="https://huggingface.co/databricks/dolly-v2-12b">https://huggingface.co/databricks/dolly-v2-12b</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              databricks dolly 15k - Kaggle, accessed June 9, 2025,
+              <link xlink:href="https://www.kaggle.com/datasets/yousefsaeedian/databricksdatabricks-dolly-15k">https://www.kaggle.com/datasets/yousefsaeedian/databricksdatabricks-dolly-15k</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Databricks Dolly 15k Dataset - Papers With Code, accessed
+              June 9, 2025,
+              <link xlink:href="https://paperswithcode.com/dataset/databricks-dolly-15k">https://paperswithcode.com/dataset/databricks-dolly-15k</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Fine-tuning Llama-2: The Definitive Guide | Entry Point
+              AI, accessed June 9, 2025,
+              <link xlink:href="https://www.entrypointai.com/blog/fine-tune-llama-2/">https://www.entrypointai.com/blog/fine-tune-llama-2/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              gururise/AlpacaDataCleaned: Alpaca dataset from Stanford,
+              cleaned and curated - GitHub, accessed June 9, 2025,
+              <link xlink:href="https://github.com/gururise/AlpacaDataCleaned">https://github.com/gururise/AlpacaDataCleaned</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              tatsu-lab/alpaca · Datasets at Hugging Face, accessed June
+              9, 2025,
+              <link xlink:href="https://huggingface.co/datasets/tatsu-lab/alpaca">https://huggingface.co/datasets/tatsu-lab/alpaca</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              alpaca_dataset — torchtune 0.5 documentation, accessed
+              June 9, 2025,
+              <link xlink:href="https://docs.pytorch.org/torchtune/0.5/generated/torchtune.datasets.alpaca_dataset.html">https://docs.pytorch.org/torchtune/0.5/generated/torchtune.datasets.alpaca_dataset.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              tatsu-lab/stanford_alpaca: Code and documentation to train
+              Stanford's Alpaca models, and generate the data. - GitHub,
+              accessed June 9, 2025,
+              <link xlink:href="https://github.com/tatsu-lab/stanford_alpaca">https://github.com/tatsu-lab/stanford_alpaca</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              LIMA Dataset - Papers With Code, accessed June 9, 2025,
+              <link xlink:href="https://paperswithcode.com/dataset/lima">https://paperswithcode.com/dataset/lima</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Models - Hugging Face, accessed June 9, 2025,
+              <link xlink:href="https://huggingface.co/models?dataset=dataset:GAIR/lima">
+                <link xlink:href="https://huggingface.co/models?dataset=dataset%3AGAIR%2Flima">https://huggingface.co/models?dataset=dataset%3AGAIR%2Flima</link>
+              </link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              GAIR/lima · Datasets at Hugging Face, accessed June 9,
+              2025,
+              <link xlink:href="https://huggingface.co/datasets/GAIR/lima">https://huggingface.co/datasets/GAIR/lima</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Instruction Tuning With Loss Over Instructions - NIPS
+              papers, accessed June 9, 2025,
+              <link xlink:href="https://proceedings.neurips.cc/paper_files/paper/2024/file/7ffb43adf37b3eeaba559098bc084cc6-Paper-Conference.pdf">https://proceedings.neurips.cc/paper_files/paper/2024/file/7ffb43adf37b3eeaba559098bc084cc6-Paper-Conference.pdf</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              LIMA: Less Is More for Alignment, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/pdf/2305.11206">https://arxiv.org/pdf/2305.11206</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              How Far Can Camels Go? Exploring the State of Instruction
+              Tuning on Open Resources, accessed June 9, 2025,
+              <link xlink:href="https://openreview.net/forum?id=w4zZNC4ZaV">https://openreview.net/forum?id=w4zZNC4ZaV</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Comparison of different instruction tuning datasets,
+              showing that... - ResearchGate, accessed June 9, 2025,
+              <link xlink:href="https://www.researchgate.net/figure/Comparison-of-different-instruction-tuning-datasets-showing-that-different_tbl2_371413775">https://www.researchgate.net/figure/Comparison-of-different-instruction-tuning-datasets-showing-that-different_tbl2_371413775</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              How to improve dataset quality for LLM fine-tuning [+code
+              guide] | SuperAnnotate, accessed June 9, 2025,
+              <link xlink:href="https://www.superannotate.com/blog/how-to-improve-llm-fine-tuning-dataset-quality">https://www.superannotate.com/blog/how-to-improve-llm-fine-tuning-dataset-quality</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Think Before You Attribute: Improving the Performance of
+              LLMs Attribution Systems - arXiv, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2505.12621v1">https://arxiv.org/html/2505.12621v1</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              arxiv.org, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2407.12259v2">https://arxiv.org/html/2407.12259v2</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              On the Feasibility of In-Context Probing for Data ... -
+              ACL Anthology, accessed June 9, 2025,
+              <link xlink:href="https://aclanthology.org/2025.findings-naacl.286.pdf">https://aclanthology.org/2025.findings-naacl.286.pdf</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Improving the Performance of LLMs Attribution Systems -
+              arXiv, accessed June 9, 2025,
+              <link xlink:href="https://www.arxiv.org/pdf/2505.12621">https://www.arxiv.org/pdf/2505.12621</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              [Literature Review] On the Feasibility of In-Context
+              Probing for Data Attribution - Moonlight, accessed June 9,
+              2025,
+              <link xlink:href="https://www.themoonlight.io/en/review/on-the-feasibility-of-in-context-probing-for-data-attribution">https://www.themoonlight.io/en/review/on-the-feasibility-of-in-context-probing-for-data-attribution</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              [2505.12621] Think Before You Attribute: Improving the
+              Performance of LLMs Attribution Systems - arXiv, accessed
+              June 9, 2025,
+              <link xlink:href="https://arxiv.org/abs/2505.12621">https://arxiv.org/abs/2505.12621</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Exploring the effectiveness of instruction tuning in
+              biomedical language processing - PMC, accessed June 9,
+              2025,
+              <link xlink:href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12040708/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12040708/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Unveiling Challenges for LLMs in Enterprise Data
+              Engineering - arXiv, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2504.10950v1">https://arxiv.org/html/2504.10950v1</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              How Effective are LLMs for Data Science Coding? A
+              Controlled Experiment (MSR 2025 - Technical Papers),
+              accessed June 9, 2025,
+              <link xlink:href="https://2025.msrconf.org/details/msr-2025-technical-papers/14/How-Effective-are-LLMs-for-Data-Science-Coding-A-Controlled-Experiment">https://2025.msrconf.org/details/msr-2025-technical-papers/14/How-Effective-are-LLMs-for-Data-Science-Coding-A-Controlled-Experiment</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Beyond prompts: A data-driven approach to LLM optimization
+              - Statsig, accessed June 9, 2025,
+              <link xlink:href="https://www.statsig.com/blog/llm-optimization-online-experimentation">https://www.statsig.com/blog/llm-optimization-online-experimentation</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              LLM Model Size Comparison: Key Insights &amp; Metrics -
+              BytePlus, accessed June 9, 2025,
+              <link xlink:href="https://www.byteplus.com/en/topic/456729">https://www.byteplus.com/en/topic/456729</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Utilizing Large Language Models for Ablation Studies in
+              Machine Learning and Deep Learning - DiVA portal, accessed
+              June 9, 2025,
+              <link xlink:href="https://www.diva-portal.org/smash/get/diva2:1941572/FULLTEXT01.pdf">https://www.diva-portal.org/smash/get/diva2:1941572/FULLTEXT01.pdf</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Rewriting Pre-Training Data Boosts LLM Performance in Math
+              and Code - arXiv, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/abs/2505.02881">https://arxiv.org/abs/2505.02881</link>
+            </para>
+          </listitem>
+        </orderedlist>
+      </section>
+    </section>
+  </section>
+</article>

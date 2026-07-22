@@ -1,0 +1,37 @@
+name: Build DocBook papers
+
+on:
+  push:
+    branches: [main, claude/llm-database-theory-codification]
+    paths:
+      - 'docs/papers/**'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install DocBook toolchain
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils xsltproc
+
+      - name: Build HTML
+        working-directory: docs/papers/ai_and_ip/llm-database-theory
+        run: make html
+
+      - name: Copy into a tracked path for GitHub Pages (generated/ is gitignored)
+        run: |
+          mkdir -p docs/papers/ai_and_ip/llm-database-theory/html
+          cp docs/papers/ai_and_ip/llm-database-theory/generated/*.html docs/papers/ai_and_ip/llm-database-theory/html/
+
+      - name: Commit generated HTML
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/papers/ai_and_ip/llm-database-theory/html/
+          git diff --cached --quiet || git commit -m "chore: rebuild papers HTML [skip ci]"
+          git push

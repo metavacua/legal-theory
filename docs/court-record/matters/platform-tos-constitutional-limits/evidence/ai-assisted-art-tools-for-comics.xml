@@ -1,0 +1,1902 @@
+<?xml version='1.0' encoding='utf-8'?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="ai-assisted-art-tools-for-comics" xml:lang="en">
+  <xi:include href="ai-assisted-art-tools-for-comics.meta.xml" />
+  <title>The Creator's Stake: A Report on AI-Assisted Art Tools and Copyright Ownership for the Modern Graphic Novelist</title>
+  <section xml:id="part-i-the-legal-framework-for-creative-ownership-in-the-age-of-ai">
+    <title>
+      <emphasis role="strong">Part I: The Legal Framework for
+    Creative Ownership in the Age of AI</emphasis>
+    </title>
+    <para>
+      The rapid integration of artificial intelligence into creative
+      software presents a paradigm shift for artists, particularly in
+      fields like graphic novel creation where intellectual property is
+      the fundamental asset. Navigating this new landscape requires a
+      clear understanding of the legal principles that define authorship
+      and ownership. This section establishes the foundational legal
+      framework that governs the analysis of all creative tools,
+      empowering the creator to make informed decisions that protect
+      their work and their livelihood. The distinction between a tool
+      that assists a human creator and a system that generates content
+      independently is not merely technical; it is the central question
+      upon which copyright protection hinges.
+    </para>
+    <section xml:id="s-11-human-authorship-the-cornerstone-of-us-copyright-protection">
+      <title>
+        <emphasis role="strong">1.1 Human Authorship: The
+      Cornerstone of U.S. Copyright Protection</emphasis>
+      </title>
+      <para>
+        Under United States law, the eligibility for copyright
+        protection is fundamentally tied to the concept of "human
+        authorship." This principle is rooted in the U.S.
+        Constitution, which grants Congress the power to protect the
+        "Writings" of "Authors," and is codified in
+        the Copyright Act, which protects "original works of
+        authorship".1 While these founding documents do not
+        explicitly define an "author" as human, a consistent
+        and robust history of legal interpretation by both the U.S.
+        Copyright Office (USCO) and federal courts has established this
+        as a core requirement.1
+      </para>
+      <para>
+        The USCO has long maintained that for a work to be
+        copyrightable, it must be "created by a human being".1
+        Consequently, it has a history of refusing to register works
+        "produced by a machine or mere mechanical process that
+        operates randomly or automatically without any creative input or
+        intervention from a human author".1 This stance has been
+        rigorously tested with the advent of generative AI. In several
+        high-profile decisions, the USCO has clarified that works
+        generated autonomously by AI cannot be copyrighted because they
+        lack an identifiable human author who exercised the necessary
+        creative judgment.2
+      </para>
+      <para>
+        This legal standard is not satisfied by the mere act of
+        providing input to an AI system. The USCO has specifically
+        determined that AI-generated material created solely in response
+        to a text prompt from a human is ineligible for copyright.3 The
+        act of writing a prompt is viewed as giving instructions to a
+        third party, not as the direct act of creation itself. The legal
+        focus is on the degree of creative control exercised by the
+        human throughout the process. For a work to qualify for
+        protection, a human must be the "master mind" who
+        conceives of and executes the expressive elements of the work.3
+      </para>
+      <para>
+        The federal courts have decisively reinforced this position. In
+        the landmark case <emphasis>Thaler v. Perlmutter</emphasis>, the
+        U.S. District Court upheld the USCO's rejection of a copyright
+        application for an artwork that listed an AI system as the
+        author.3 The court's ruling was unequivocal, stating that
+        "human authorship is an essential part of a valid copyright
+        claim" and that the Copyright Act does not extend to works
+        produced "absent any guiding human hand".1 The court
+        reasoned that copyright law was designed as an incentive to
+        encourage human creativity, a purpose not served by granting
+        protection to non-human entities.1 This precedent solidifies the
+        principle that the creative force behind a copyrightable work
+        must be human.
+      </para>
+    </section>
+    <section xml:id="s-12-the-critical-distinction-a-spectrum-of-ai-in-the-creative-process">
+      <title>
+        <emphasis role="strong">1.2 The Critical Distinction: A
+      Spectrum of AI in the Creative Process</emphasis>
+      </title>
+      <para>
+        To apply the legal standard of human authorship to modern
+        digital art tools, it is essential to categorize AI
+        functionalities based on their level of creative autonomy. The
+        term "AI" is not monolithic; it encompasses a wide
+        spectrum of technologies that interact with the artist's
+        workflow in fundamentally different ways. This spectrum serves
+        as the primary analytical lens for evaluating the suitability
+        and legal safety of any given tool for a professional graphic
+        novelist.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Level 1: Pure Human Creation (No
+            AI):</emphasis> This is the baseline for traditional and
+            digital art. Every line, color, and texture is the direct
+            result of the artist's manual input. Tools in this category
+            include basic digital painting software without machine
+            learning features, representing the clearest case of human
+            authorship.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Level 2: Intelligent Assistance
+            (Non-Generative):</emphasis> Here, AI acts as a
+            sophisticated tool that enhances the artist's direct actions
+            without generating novel creative content. Examples include:
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <emphasis role="strong">Brush Stabilizers:</emphasis> Smooth
+            out hand-drawn lines to reduce shakiness.4
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Smart Smoothing:</emphasis> An
+            advanced filter that improves image quality by reducing
+            noise and artifacts.5
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">AI Posing:</emphasis> Applying a
+            pose from a photograph to a 3D reference model, which the
+            artist then uses as a guide for their own drawing.6
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Guided Colorization:</emphasis> AI
+            algorithms that apply flat colors to an artist's own line
+            art, often guided by a "hint" layer created by the
+            artist.5
+          </para>
+          <para>
+            These functions fall squarely within the definition of a
+            "tool," as they augment the artist's control
+            rather than supplanting it.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Level 3: Transformative AI (Style
+            Transfer):</emphasis> This category involves AI that applies
+            the stylistic elements (e.g., texture, color palette,
+            brushwork) of one image to the content and composition of
+            another. A prime example is Corel Painter's "AI
+            Styles" feature, which can make a user's photograph
+            look like an Impressionist painting.7 This is a legal gray
+            area, but because the underlying composition and subject
+            matter are provided by the human user, the claim to
+            authorship is significantly stronger than with purely
+            generative systems.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Level 4: Contained Generative AI
+            (Inpainting/Outpainting):</emphasis> This is where AI begins
+            to generate new, original content, but within a tightly
+            controlled context defined by the artist. Adobe Photoshop's
+            "Generative Fill" is the archetypal example, where
+            a user selects an area of an image and prompts the AI to
+            fill it with new content that matches the surrounding
+            pixels.9 While the human provides the prompt and defines the
+            boundaries, the AI is creating the actual pixels. This is
+            where the question of authorship becomes heavily contested
+            and legally ambiguous.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Level 5: Full Generation
+            (Text-to-Image):</emphasis> At this end of the spectrum, AI
+            creates entire, complex images from a text prompt. Platforms
+            like Dashtoon, ComicsMaker.ai, and Adobe Firefly's
+            standalone generator operate at this level.11 The human's
+            contribution is limited to the initial prompt, with the AI
+            making all subsequent creative decisions regarding
+            composition, color, lighting, and form. Under current legal
+            standards, the output of these systems, when used in
+            isolation, is considered to lack human authorship and is
+            therefore not copyrightable.2
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-13-the-zarya-of-the-dawn-precedent-copyrighting-arrangement-not-automation">
+      <title>
+        <emphasis role="strong">1.3 The Zarya of the Dawn
+      Precedent: Copyrighting Arrangement, Not
+      Automation</emphasis>
+      </title>
+      <para>
+        The case of Kris Kashtanova's graphic novel, <emphasis>Zarya of
+        the Dawn</emphasis>, provides a crucial real-world application
+        of these legal principles and serves as a powerful precedent for
+        graphic novelists using AI.3 Kashtanova created the images for
+        the novel using the text-to-image generator Midjourney and then
+        arranged them into a narrative with her own original text.
+      </para>
+      <para>
+        In its February 2023 decision, the U.S. Copyright Office made a
+        nuanced but critical distinction. It granted Kashtanova a
+        copyright registration for the work as a whole, but not for the
+        individual images.14 The registration explicitly protects the
+        human-authored elements: the text, and the creative
+        "selection, coordination, and arrangement" of the text
+        and images.14 However, the USCO specifically excluded the
+        Midjourney-generated images from the copyright, stating that
+        they "are not the product of human authorship" and
+        therefore cannot be protected.3
+      </para>
+      <para>
+        This case establishes a vital principle: while the raw,
+        unaltered output of a generative AI model is likely to be
+        considered public domain material, the creative compilation and
+        modification of that material by a human can result in a new,
+        copyrightable work. This directly confirms the user's initial
+        insight that purely AI-generated art is primarily suitable for
+        "creative arrangement works." The copyright does not
+        protect the generated asset itself, but rather what the human
+        creator <emphasis>does</emphasis> with that asset.
+      </para>
+      <para>
+        The implication for a professional workflow is profound. It
+        suggests that to secure copyright in a project that incorporates
+        AI-generated elements, the artist's creative contribution must
+        be significant and demonstrable. The focus of authorship shifts
+        from the act of creating a single image to the holistic process
+        of curation, composition, modification, and narrative
+        construction. The defensibility of a copyright claim will likely
+        depend on the extent to which the human artist has transformed
+        the AI's output, integrating it into a larger work that reflects
+        their own unique creative expression and judgment. The workflow
+        itself, and the documented human decisions within it, becomes
+        the locus of authorship.
+      </para>
+    </section>
+    <section xml:id="s-14-decoding-the-fine-print-analyzing-terms-of-service-for-ownership-clauses">
+      <title>
+        <emphasis role="strong">1.4 Decoding the Fine Print:
+      Analyzing Terms of Service for Ownership
+      Clauses</emphasis>
+      </title>
+      <para>
+        Beyond the overarching legal framework of copyright law, the
+        specific software an artist chooses imposes its own set of rules
+        through its End User License Agreement (EULA) and Terms of
+        Service (ToS). These legal documents are contracts that define
+        the relationship between the user and the software company, and
+        they can have significant implications for ownership and
+        commercial rights. A professional creator must analyze these
+        documents with a critical eye, looking for specific clauses that
+        address the following:
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Ownership of User-Generated
+            Content:</emphasis> The most crucial clause is the one that
+            defines who owns the work created using the software. Look
+            for clear, unambiguous statements. For example, Procreate's
+            guidelines explicitly state, "All the original work you
+            create in our apps belongs to you".16 This is the
+            ideal. Conversely, be wary of terms that grant the software
+            company a broad, perpetual, royalty-free license to use,
+            reproduce, and distribute your content, as this can encumber
+            your ownership.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Commercial Use Rights:</emphasis>
+            The ToS must explicitly permit the use of the software and
+            its provided assets (such as brushes, fonts, or 3D models)
+            for commercial projects.17 Most professional-grade software
+            allows this, but it is essential to verify. Some licenses
+            may differentiate between individual and business use,
+            requiring a more expensive license for commercial work.18
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">AI-Specific Terms:</emphasis> As
+            companies integrate generative AI, they are adding specific
+            addendums to their ToS. These are critical to review.
+            Adobe's Generative AI terms, for instance, contain several
+            key provisions: they prohibit using the output to train
+            other AI models, and they include a significant disclaimer
+            that the "Output may not be protectable by Intellectual
+            Property Rights".19 This is a direct acknowledgment
+            from the company that their generative tools may produce
+            non-copyrightable work.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Indemnification and
+            Liability:</emphasis> These clauses determine who is legally
+            responsible if the AI output infringes on a third party's
+            copyright. Adobe's marketing of Firefly as
+            "commercially safe" is, in part, an assurance that
+            they have taken steps to minimize the risk of their AI
+            generating content that infringes on the copyrights of
+            artists whose work was in the training data.13 However, the
+            ultimate responsibility for the final published work often
+            remains with the user.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        A thorough analysis of these terms is not optional; it is a
+        fundamental part of due diligence for any professional creator.
+        The ToS can either affirm and support your ownership rights or
+        severely limit them, regardless of the underlying copyright law.
+      </para>
+    </section>
+  </section>
+  <section xml:id="part-ii-in-depth-analysis-of-professional-graphic-novel-creation-suites">
+    <title>
+      <emphasis role="strong">Part II: In-Depth Analysis of
+    Professional Graphic Novel Creation Suites</emphasis>
+    </title>
+    <para>
+      Applying the established legal and technical framework, this
+      section provides a rigorous evaluation of the leading digital art
+      applications for graphic novel creation. Each analysis assesses
+      the software's core comic-centric features, the nature of its AI
+      integration according to the defined spectrum, and a detailed
+      examination of its licensing terms to determine its suitability
+      for a creator focused on securing full copyright ownership.
+    </para>
+    <section xml:id="s-21-clip-studio-paint-ex-the-specialists-choice-for-unambiguous-ownership">
+      <title>
+        <emphasis role="strong">2.1 Clip Studio Paint (EX): The
+      Specialist's Choice for Unambiguous Ownership</emphasis>
+      </title>
+      <para>
+        Clip Studio Paint (CSP) has established itself as the global
+        industry standard for comic, manga, and webtoon creation,
+        offering a feature set specifically tailored to the needs of
+        sequential artists.22
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Comic Creation Features:</emphasis>
+            CSP's strength lies in its comprehensive, specialized
+            toolset that streamlines the entire graphic novel production
+            pipeline. The EX version, in particular, is designed for
+            long-form projects, offering multi-page project management
+            that allows an artist to view and organize an entire chapter
+            or book in a single file.22 Key features include:
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Panel and Frame Tools:</emphasis>
+            Intuitive tools to quickly create and divide comic panels
+            with customizable gutter widths.25
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Vector Layers:</emphasis> The
+            ability to draw with a natural, hand-drawn feel on vector
+            layers is a significant advantage. This allows for resizing
+            and editing line thickness and shape without any loss in
+            quality, which is crucial for high-resolution printing.25
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Speech Balloons and Text:</emphasis>
+            Advanced tools for creating and customizing speech balloons,
+            along with a Story Editor (in EX) to manage and edit all the
+            dialogue for a multi-page project at once.25
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Rulers and 3D Models:</emphasis> A
+            powerful suite of perspective rulers, symmetry tools, and a
+            library of posable 3D models for characters, props, and
+            backgrounds. These models can be used as direct reference or
+            converted into line art and tones, dramatically accelerating
+            the creation of complex scenes.24
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Tones and Effects:</emphasis> An
+            extensive library of screentones, patterns, and effect lines
+            essential for traditional manga and comic aesthetics.25
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Nature of AI Integration (Level 2:
+            Intelligent Assistance):</emphasis> Clip Studio Paint's
+            integration of AI is conservative and strictly assistive,
+            functioning as an intelligent enhancement to the artist's
+            workflow rather than a generative replacement.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">AI Posing:</emphasis> The software
+            uses deep learning to analyze a photograph and automatically
+            apply the depicted pose to a 3D drawing figure.6 This
+            feature does not create the final artwork; it provides a
+            customizable 3D reference model for the artist to draw from,
+            saving significant time in setting up complex poses.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Colorization (Technology
+            Preview):</emphasis> CSP offers AI-powered tools that can
+            automatically apply flat colors to an artist's own line
+            art.5 The artist can guide this process by creating a
+            "hint layer" with rough color blobs, giving them a
+            high degree of control over the final output, which can then
+            be manually refined.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Smart Smoothing and Tone
+            Removal:</emphasis> These are advanced filters that use
+            machine learning for image processing tasks, such as
+            upscaling images while minimizing noise or converting
+            screentone layers to grayscale.5 They function as
+            sophisticated image editing tools, not content creators.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Copyright &amp; Ownership
+            Analysis:</emphasis> The legal terms governing Clip Studio
+            Paint are clear and favorable to the creator.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            The Celsys "Posting Guidelines" for its
+            asset-sharing service state that "Copyright owners
+            retain the copyrights to content that they post,"
+            establishing the principle that the user owns their
+            creations.28
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            The End User License Agreement (EULA) is a contract for the
+            use of the software itself and makes no claim on the
+            intellectual property created by the user.29
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Materials downloaded from the Clip Studio ASSETS store are
+            explicitly permitted for commercial use, allowing artists to
+            incorporate them into their own commercially sold,
+            copyrighted works.17
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Conclusion:</emphasis> Clip Studio
+            Paint's AI features fall squarely into the "intelligent
+            assistance" category. They function as tools that
+            augment the artist's skill and speed without usurping
+            creative control. This, combined with a clear and
+            creator-friendly ToS, makes Clip Studio Paint EX a premier
+            and legally sound choice for professional graphic novelists
+            who require unambiguous ownership of their work.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-22-adobe-photoshop-the-industry-standards-foray-into-generative-assistance">
+      <title>
+        <emphasis role="strong">2.2 Adobe Photoshop: The Industry
+      Standard's Foray into Generative Assistance</emphasis>
+      </title>
+      <para>
+        Adobe Photoshop remains the gold standard for digital image
+        manipulation and painting, valued for its powerful and versatile
+        raster engine.23 While not as specialized for comics as Clip
+        Studio Paint, its deep feature set and seamless integration with
+        the Adobe Creative Cloud suite make it a cornerstone of many
+        professional graphic novel workflows, particularly for coloring,
+        rendering, and final production.31
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Comic Creation Features:</emphasis>
+            Photoshop offers a vast library of customizable brushes that
+            can emulate traditional media, non-destructive editing via
+            smart objects and adjustment layers, and robust color
+            management tools, including support for the CMYK color space
+            required for professional printing.22 Its text and shape
+            tools can be used to create panels and lettering, though
+            this process is more manual than in CSP.33 The ability to
+            move assets effortlessly between Photoshop, Illustrator (for
+            vector work), and InDesign (for layout) is a major workflow
+            advantage.31
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Nature of AI Integration (Levels 2,
+            4, &amp; 5):</emphasis> Photoshop's AI capabilities span the
+            spectrum, from helpful assistive tools to fully generative
+            features powered by the Adobe Firefly model.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Level 2 (Assistive):</emphasis> Many
+            long-standing features now use machine learning to improve
+            performance. These include the Object Selection tool, Sky
+            Replacement, and the library of Neural Filters, which
+            automate complex but mechanical editing tasks like
+            colorization or style smoothing.36 These features accelerate
+            the artist's workflow without generating novel content from
+            a prompt.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Levels 4 &amp; 5
+            (Generative):</emphasis> The introduction of Firefly-powered
+            features marks a significant shift. "Generative
+            Fill" allows users to select an area and generate
+            content within it from a text prompt (Level 4).9
+            "Generative Expand" extends the canvas and fills
+            the new space with AI-generated content (Level 4).10 The
+            "Text to Image" feature can generate entirely new
+            images from scratch (Level 5).10 These tools place Photoshop
+            squarely in the legally contentious generative category.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Copyright &amp; Ownership
+            Analysis:</emphasis> Adobe's legal terms surrounding its
+            generative AI are complex and require careful
+            interpretation.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Adobe's Generative AI Product Specific Terms state that the
+            user's "Input" and the resulting
+            "Output" are considered the user's
+            "Content".20 This sounds promising, but it is
+            immediately followed by two critical disclaimers: the Output
+            "may not be unique," and it "may not be
+            protectable by Intellectual Property Rights".20 This is
+            Adobe's legal department acknowledging that the output may
+            not meet the human authorship standard for copyright.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Adobe heavily promotes Firefly as being "designed to be
+            safe for commercial use" because it is trained on
+            licensed Adobe Stock content and public domain works.13 This
+            is a crucial point of potential misunderstanding.
+            "Commercially safe" refers to indemnification; it
+            means Adobe has minimized the risk that a user will be sued
+            for copyright infringement by an artist whose work was used
+            to train the model. It is a statement about Adobe's legal
+            liability, <emphasis>not</emphasis> a guarantee that the
+            user will be granted copyright ownership of the output. An
+            image generated with a simple prompt is still likely
+            non-copyrightable under USCO guidelines, regardless of the
+            training data's legal status.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Conclusion:</emphasis> Using
+            Photoshop for its traditional drawing, painting, and editing
+            capabilities is legally secure. However, incorporating its
+            generative AI features into final artwork introduces
+            significant risk to copyright claims. To build a defensible
+            case for authorship, any element created with Generative
+            Fill or Expand must be treated as raw material. It must be
+            substantially and demonstrably transformed through manual
+            painting, editing, and integration by the artist to the
+            point where the human's creative expression is the dominant
+            feature of that section of the work. Relying on unaltered or
+            lightly edited generative output for key parts of a graphic
+            novel is a legally perilous strategy.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-23-procreate-the-purists-studioa-principled-stance-against-generative-ai">
+      <title>
+        <emphasis role="strong">2.3 Procreate: The Purist's
+      Studio—A Principled Stance Against Generative
+      AI</emphasis>
+      </title>
+      <para>
+        Procreate, an application exclusive to Apple's iPad, has become
+        a dominant force in the digital art world, celebrated for its
+        fluid performance, intuitive user interface, and powerful raster
+        painting engine.31 For many graphic novelists, its portability
+        and responsiveness make it an ideal tool for sketching, inking,
+        and coloring on the go.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Comic Creation Features:</emphasis>
+            While not a dedicated comic production suite like CSP,
+            Procreate offers a robust set of features that are highly
+            applicable to graphic novel creation. Its brush engine is
+            world-class, with over 200 default presets and a vast
+            community of third-party brush creators.31 Key features for
+            comic artists include:
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Page Assist:</emphasis> This feature
+            transforms a Procreate file into a sketchbook-like
+            interface, allowing artists to create and navigate multiple
+            pages within a single document, which is ideal for
+            storyboarding or laying out a comic chapter.40
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Drawing and Shape
+            Assists:</emphasis> Tools like StreamLine for smoothing
+            strokes, Drawing Assist for snapping to guides (including
+            perspective and symmetry), and QuickShape for creating
+            perfect geometric shapes are invaluable for clean line art
+            and panel construction.40
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Clipping Masks and Layer
+            Management:</emphasis> A straightforward and powerful layer
+            system, including easy-to-use clipping masks, simplifies the
+            coloring and shading process.41
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            While its text tools are less advanced than those in
+            dedicated layout programs, they are sufficient for basic
+            lettering.42 Many artists use Procreate for all visual
+            creation and then move the files to another program for
+            final lettering and layout.42
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Nature of AI Integration (Level 1:
+            Pure Human Creation):</emphasis> Procreate's most defining
+            feature in the current landscape is its complete and
+            principled rejection of generative AI.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            The company has issued a public statement on its website
+            titled "Creativity is made, not generated," in
+            which it declares that generative AI is "built on a
+            foundation of theft" and is a "moral threat to our
+            greatest jewel: human creativity".43
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Procreate's CEO, James Cuda, has been even more direct,
+            stating, "I really fucking hate generative AI,"
+            and confirming that the company will "never go
+            there".44
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            This is not a temporary lack of features but a core tenet of
+            the company's philosophy, positioning Procreate as a
+            sanctuary for artists who demand absolute certainty about
+            the human origin of their work.44
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Copyright &amp; Ownership
+            Analysis:</emphasis> Procreate's legal position is the most
+            straightforward and creator-friendly in the market.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            The Brand Use Guidelines answer the critical question
+            directly: "Do I own the copyright in things I make in
+            Procreate? Yes! All the original work you create in our apps
+            belongs to you".16
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            This is reinforced by their strict privacy policy, which
+            states that Savage (the parent company) does not collect,
+            share, or have access to any user artwork or data. All work
+            is stored locally on the user's device, ensuring complete
+            user control.47
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            The Terms and Conditions for their online community,
+            Procreate Folio, further clarify that uploading artwork for
+            sharing does not transfer ownership; the work remains the
+            property of the creator.48
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Conclusion:</emphasis> Procreate
+            offers the highest possible degree of legal certainty.
+            Because the software contains no generative AI features,
+            every mark made is a direct result of the artist's hand.
+            There is no ambiguity regarding human authorship. For a
+            graphic novelist whose primary concern is securing
+            unimpeachable copyright and ownership, Procreate is an
+            exemplary choice.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-24-corel-painter-traditional-media-simulation-meets-ai-style-transfer">
+      <title>
+        <emphasis role="strong">2.4 Corel Painter: Traditional
+      Media Simulation Meets AI Style Transfer</emphasis>
+      </title>
+      <para>
+        Corel Painter has long held a unique position in the digital art
+        software market, distinguished by its unparalleled ability to
+        simulate traditional, real-world media.31 For artists who want
+        to bring the textures of oil paint, the bleed of watercolor, or
+        the grain of charcoal into a digital workflow, Painter is often
+        the top choice.23
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Comic Creation Features:</emphasis>
+            Painter is a powerful tool for illustrators and can be
+            adapted for graphic novel work, especially for artists with
+            a painterly style. It offers a dedicated "Manga"
+            workspace layout that organizes tools for comic creation.49
+            Its vast library of brushes, including pens, inks, and
+            markers, is excellent for line art, while its Natural-Media™
+            brushes provide rich textures for coloring.49 Compositional
+            tools like perspective guides and the mirror tool are also
+            beneficial for comic layout.49
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Nature of AI Integration (Level 3
+            &amp; 5):</emphasis> Corel Painter integrates AI in two
+            distinct ways, one transformative and one fully generative.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Level 3 (Transformative):</emphasis>
+            The built-in "AI Styles" feature uses neural style
+            transfer, a form of deep learning, to analyze an existing
+            image (like a photograph or a 3D render) and re-render it in
+            the style of a famous art movement or medium (e.g.,
+            Post-Impressionist, Charcoal, Acrylic).7 Artists can use
+            this feature to create an "underpainting" which
+            they can then paint over manually.7 Because this process
+            transforms a user-provided image rather than creating
+            something new from a text prompt, the user's authorship of
+            the underlying content and composition remains intact,
+            strengthening their copyright claim over the final, modified
+            work.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Level 5 (Generative):</emphasis>
+            Corel also offers an optional, separate "Vision
+            FX" plugin.53 This is a full text-to-image generator
+            that allows users to transform photos or create new images
+            from prompts. The use of this plugin introduces the same
+            significant copyright risks as other Level 5 generative
+            tools, as the output lacks direct human authorship.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Copyright &amp; Ownership
+            Analysis:</emphasis> Corel's licensing agreements are
+            standard for professional software and are generally
+            favorable to creators regarding ownership of their original
+            work.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            The Corel EULA is a license to use the software and does not
+            assert any ownership rights over the content created by the
+            user.54
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Corel's guidelines for the use of its included clipart and
+            stock photos specify that users can incorporate these assets
+            into their own original works, which they can then publish
+            and distribute, implying that work created from a blank
+            canvas is fully owned by the user.56
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            The terms for the Vision FX plugin state that "you are
+            allowed to sell the artwork you create".53 It is
+            critical to understand that this is a grant of a commercial
+            use license, not a guarantee that the work is copyrightable.
+            As with other generative tools, the output is likely not
+            protected by copyright law.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Conclusion:</emphasis> Using Corel
+            Painter's core drawing and painting tools provides a secure
+            path to copyright ownership. The transformative "AI
+            Styles" feature, when used on an artist's own base
+            images to create underpaintings, presents a relatively low
+            risk to copyright as the artist's compositional work is
+            preserved. However, the use of the generative Vision FX
+            plugin for creating final artwork is highly inadvisable for
+            any creator seeking to secure and defend a copyright
+            registration.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-25-krita--the-open-source-path-unparalleled-freedom-and-third-party-caveats">
+      <title>
+        <emphasis role="strong">2.5 Krita &amp; The Open-Source
+      Path: Unparalleled Freedom and Third-Party
+      Caveats</emphasis>
+      </title>
+      <para>
+        Krita is a professional-grade digital painting program that
+        stands out for being completely free and open-source.23
+        Developed by a global community of artists and volunteers, it
+        offers a powerful and feature-rich alternative to paid software,
+        making it an accessible option for creators at all levels.38
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Comic Creation Features:</emphasis>
+            Krita is a versatile application fully capable of producing
+            professional graphic novels. Its features include:
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Brush Engine:</emphasis> A robust
+            and highly customizable brush engine with over 100 preloaded
+            professional brushes and nine unique engine types.4
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Vector &amp; Text Tools:</emphasis>
+            Built-in vector tools allow for the creation of comic panels
+            and word bubbles, which can be saved to and reused from a
+            library. The text tool supports the addition of dialogue.4
+            While the workflow for panel creation can be more manual
+            than in CSP, it is fully functional.59
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Drawing Assistants:</emphasis> A
+            comprehensive set of drawing assistants helps with creating
+            straight lines, ellipses, and complex perspective grids.4
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Layer Management:</emphasis> Krita
+            supports a wide variety of layer types, including vector,
+            filter, and group layers, to keep complex comic page files
+            organized.4
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Nature of AI Integration (Level 1,
+            with optional Level 5):</emphasis> The base installation of
+            Krita is free from generative AI, placing it firmly in the
+            "Pure Human Creation" category. However, its
+            open-source nature allows for the development of third-party
+            plugins that can fundamentally change its function.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            The most prominent example is the "Krita AI
+            Diffusion" plugin, which integrates the Stable
+            Diffusion text-to-image model directly into the Krita
+            interface.61 This powerful plugin adds Level 5 generative
+            capabilities, including inpainting, outpainting, and
+            generating new images from scratch via text prompts.61
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            This creates a critical distinction between Krita the
+            application and Krita with the plugin installed. The Krita
+            development team explicitly states that they are not
+            responsible for third-party plugins and that users install
+            them at their own risk.63 The legal implications of using
+            the AI Diffusion plugin are therefore not governed by
+            Krita's license, but by the far more complex and legally
+            contested status of the underlying Stable Diffusion models,
+            which have faced lawsuits over their training data.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Copyright &amp; Ownership
+            Analysis:</emphasis> The legal standing of work created in
+            Krita is bifurcated.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Without Generative
+            Plugins:</emphasis> As Krita is distributed under the GNU
+            General Public License (GPL), the software itself is free,
+            but this license makes absolutely no claim on the artwork
+            you create with it.57 The creator retains 100% ownership and
+            full copyright of any original work produced in the base
+            application. This makes Krita, by itself, one of the most
+            legally secure options available.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">With the AI Diffusion
+            Plugin:</emphasis> Any image or portion of an image
+            generated using this plugin is subject to the same legal
+            uncertainty as all other purely AI-generated content. It
+            almost certainly lacks the human authorship required for
+            copyright protection in the U.S.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Conclusion:</emphasis> Krita is an
+            outstanding and legally safe choice for graphic novelists,
+            offering professional-level tools at no cost with guaranteed
+            user ownership. However, this recommendation comes with a
+            crucial and non-negotiable caveat: the AI Diffusion plugin
+            (and any similar generative plugins) must be strictly
+            avoided for the creation of any final, copyrightable
+            artwork. Using such plugins transforms Krita from a secure
+            creative tool into a legally high-risk generative platform.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </section>
+  <section xml:id="part-iii-strategic-recommendations-and-best-practices">
+    <title>
+      <emphasis role="strong">Part III: Strategic Recommendations
+    and Best Practices</emphasis>
+    </title>
+    <para>
+      The preceding analysis provides the foundation for a clear,
+      strategic approach to selecting and utilizing digital art tools.
+      This final section synthesizes these findings into direct,
+      actionable recommendations, a comparative overview, and a protocol
+      of best practices designed to safeguard the creator's intellectual
+      property in an evolving technological landscape.
+    </para>
+    <section xml:id="s-31-table-comparative-analysis-of-ai-assisted-art-tools-for-graphic-novelists">
+      <title>
+        <emphasis role="strong">3.1 Table: Comparative Analysis of
+      AI-Assisted Art Tools for Graphic Novelists</emphasis>
+      </title>
+      <para>
+        The following table distills the detailed analysis into a
+        comparative format, allowing for an at-a-glance assessment of
+        each tool based on the core criteria of comic creation utility,
+        the nature of its AI, and the resulting implications for
+        copyright and ownership. The suitability score is specifically
+        calibrated to the user's stated priorities: prioritizing
+        AI-assisted tools over AI-generated ones to ensure the creation
+        of fully owned, copyrightable work.
+      </para>
+      <informaltable>
+        <tgroup cols="6">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                **Tool**
+              </entry>
+              <entry>
+                **Key Comic Creation Features**
+              </entry>
+              <entry>
+                **Nature of AI Integration**
+              </entry>
+              <entry>
+                **Copyright &amp; Ownership Analysis**
+              </entry>
+              <entry>
+                **Pricing Model**
+              </entry>
+              <entry>
+                **Suitability Score for Copyright-Conscious Creators**
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Procreate**
+              </entry>
+              <entry>
+                Page Assist, powerful brush engine, intuitive gestures,
+                Drawing Assist.40
+              </entry>
+              <entry>
+                **Level 1 (No AI):** Explicitly rejects generative AI as
+                a core company principle.43
+              </entry>
+              <entry>
+                **Perfect:** Unambiguous user ownership is stated in
+                ToS.16 The complete absence of AI eliminates any
+                question of human authorship.
+              </entry>
+              <entry>
+                One-time purchase.65
+              </entry>
+              <entry>
+                **10/10**
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Clip Studio Paint EX**
+              </entry>
+              <entry>
+                Multi-page management, dedicated panel tools, superior
+                vector layers, story editor, screentones.24
+              </entry>
+              <entry>
+                **Level 2 (Assistive):** AI posing from photos, guided
+                colorization of user line art. Strictly non-generative.5
+              </entry>
+              <entry>
+                **Excellent:** Clear ToS affirm user ownership of
+                created works.28 AI functions as a sophisticated tool,
+                enhancing artist control and preserving human
+                authorship.
+              </entry>
+              <entry>
+                One-time purchase or Subscription.66
+              </entry>
+              <entry>
+                **9.5/10**
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Krita**
+              </entry>
+              <entry>
+                Professional brush engine, vector/text tools for panels
+                and lettering, drawing assistants.4
+              </entry>
+              <entry>
+                **Level 1 (No AI):** Base application is free of
+                generative AI. **Level 5 (Generative):** Optional,
+                third-party AI Diffusion plugin introduces high-risk
+                generation.61
+              </entry>
+              <entry>
+                **Excellent (without plugin):** Open-source GPL license
+                guarantees absolute user ownership of creations.57 Use
+                of the AI Diffusion plugin negates this safety.
+              </entry>
+              <entry>
+                Free (Open Source).58
+              </entry>
+              <entry>
+                **9/10 (without plugin), 3/10 (with plugin)**
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Corel Painter**
+              </entry>
+              <entry>
+                Realistic traditional media brushes, Manga workspace
+                layout, perspective guides.49
+              </entry>
+              <entry>
+                **Level 3 (Transformative):** Built-in AI Styles.
+                **Level 5 (Generative):** Optional, third-party Vision
+                FX plugin.7
+              </entry>
+              <entry>
+                **Good (without plugin):** Standard EULA ensures user
+                owns their work.54 AI Styles are transformative, posing
+                low risk. The Vision FX plugin introduces high copyright
+                risk.
+              </entry>
+              <entry>
+                One-time purchase or Subscription.51
+              </entry>
+              <entry>
+                **8/10 (without plugin), 4/10 (with plugin)**
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Adobe Photoshop**
+              </entry>
+              <entry>
+                Industry-standard brush engine, advanced
+                coloring/editing, full Creative Cloud ecosystem
+                integration.31
+              </entry>
+              <entry>
+                **Levels 2, 4, 5:** Ranges from assistive Neural Filters
+                to fully generative Fill, Expand, and Text to Image
+                features.9
+              </entry>
+              <entry>
+                **Conditional/High-Risk:** ToS explicitly disclaim the
+                copyrightability of generative Output.20
+                "Commercially safe" is not a guarantee of
+                ownership. Requires significant human modification.
+              </entry>
+              <entry>
+                Subscription.31
+              </entry>
+              <entry>
+                **5/10 (with Generative AI), 8/10 (without)**
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+    <section xml:id="s-32-tier-1-recommendations-tools-for-unambiguous-ownership-and-creative-control">
+      <title>
+        <emphasis role="strong">3.2 Tier 1 Recommendations: Tools
+      for Unambiguous Ownership and Creative Control</emphasis>
+      </title>
+      <para>
+        These tools represent the safest and most legally sound choices
+        for a professional graphic novelist whose business model depends
+        on the creation and ownership of a strong intellectual property
+        portfolio.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Procreate:</emphasis> This is the
+            top recommendation for creators who prioritize absolute
+            legal clarity and creative purity. Its public, philosophical
+            stance against generative AI, combined with its explicit ToS
+            guaranteeing user ownership, removes all ambiguity.16 When
+            using Procreate, the artist can be fully confident that they
+            are the sole author and copyright holder of their work, as
+            every element is the product of direct human action.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Clip Studio Paint (EX):</emphasis>
+            This is the premier recommendation for creators seeking a
+            specialized, end-to-end comic production workflow without
+            compromising legal safety. Its AI features are genuinely
+            assistive, designed to accelerate laborious tasks like
+            posing reference models and flatting colors, thereby
+            enhancing productivity without infringing on the artist's
+            creative authority.5 Its creator-friendly terms of service
+            solidify its position as a tool that respects and protects
+            the user's ownership.28
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-33-tier-2-recommendations-powerful-tools-requiring-a-legally-informed-workflow">
+      <title>
+        <emphasis role="strong">3.3 Tier 2 Recommendations:
+      Powerful Tools Requiring a Legally-Informed
+      Workflow</emphasis>
+      </title>
+      <para>
+        The tools in this tier are powerful and widely used in
+        professional environments. However, they contain features or
+        optional add-ons that require the user to be vigilant and
+        legally informed to avoid jeopardizing their copyright.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Adobe Photoshop (Used
+            Strategically):</emphasis> Photoshop is an indispensable
+            tool for many artists, but its generative features must be
+            handled with extreme caution. The recommendation is to use
+            Photoshop for its unparalleled painting, coloring, and
+            editing capabilities while treating its generative AI
+            features (Generative Fill/Expand) strictly as ideation tools
+            or as sources of raw material. Any generated element
+            intended for inclusion in a final piece must undergo
+            significant, transformative manual alteration to meet the
+            human authorship standard. Relying on unaltered generative
+            output is a direct threat to the copyrightability of that
+            portion of the work.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Corel Painter &amp; Krita (Base
+            Applications):</emphasis> Both applications, in their
+            standard forms, are excellent and legally secure choices
+            that guarantee user ownership of original work.54 They are
+            placed in this tier solely because of the availability of
+            optional generative plugins ( <emphasis role="strong">Vision
+            FX</emphasis> for Painter, <emphasis role="strong">AI
+            Diffusion</emphasis> for Krita).53 The recommendation is to
+            use these core applications with full confidence but to
+            strictly avoid installing or using these specific generative
+            plugins for any part of the final, commercial artwork.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-34-tools-to-avoid-for-final-artwork-generation">
+      <title>
+        <emphasis role="strong">3.4 Tools to Avoid for Final
+      Artwork Generation</emphasis>
+      </title>
+      <para>
+        A number of platforms have emerged that are designed for
+        end-to-end AI comic generation. These include
+        <emphasis role="strong">Dashtoon, ComicsMaker.ai, LlamaGen.AI,
+        AI Comic Factory, and the standalone Adobe Firefly web
+        application</emphasis>.11
+      </para>
+      <para>
+        These platforms operate at Level 5 on the AI spectrum, where the
+        user's input is typically limited to text prompts, character
+        descriptions, and style selections. The AI system then makes the
+        vast majority of creative decisions regarding composition,
+        lighting, character rendering, and panel-to-panel consistency.
+        As established by the U.S. Copyright Office and federal court
+        precedent, the output from these systems lacks the requisite
+        human authorship to be eligible for copyright protection.2
+      </para>
+      <para>
+        Therefore, these tools should be strictly avoided for the
+        creation of final artwork intended for commercial publication
+        and copyright registration. They are legally suitable only for
+        brainstorming, creating temporary storyboards, or generating
+        individual elements that will be used as minor components within
+        a much larger, human-created "creative arrangement"
+        work, as per the <emphasis>Zarya of the Dawn</emphasis>
+        precedent.14
+      </para>
+    </section>
+    <section xml:id="s-35-protecting-your-copyright-a-creators-protocol-for-an-ai-assisted-workflow">
+      <title>
+        <emphasis role="strong">3.5 Protecting Your Copyright: A
+      Creator's Protocol for an AI-Assisted Workflow</emphasis>
+      </title>
+      <para>
+        For any creator choosing to incorporate AI assistance into their
+        workflow—particularly when using Tier 2 tools—adopting a
+        rigorous protocol is essential to building the strongest
+        possible case for human authorship and protecting your
+        intellectual property.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Document Everything:</emphasis>
+            Maintain a meticulous record of your entire creative
+            process. This includes initial concept sketches, written
+            storyboards, notes on character design, and records of
+            prompt iterations if used for ideation. Crucially, document
+            the stages of manual editing and modification applied to any
+            AI-assisted element.2 This documentation serves as evidence
+            of your creative control and contribution.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">The "Significant
+            Transformation" Rule:</emphasis> If an AI-generated
+            element is used as a starting point, your subsequent manual
+            work must be substantial and transformative. This goes far
+            beyond minor adjustments. It means actively redrawing,
+            repainting, re-compositing, and integrating the element so
+            thoroughly that your personal artistic style and creative
+            decisions become the dominant, expressive features of the
+            final piece. The goal is to be able to argue convincingly
+            that the AI output was merely a single tool, like a
+            reference photo or a texture swatch, in your much larger
+            creative process.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Layer and Version
+            Control:</emphasis> Use a disciplined file management
+            strategy. Keep any AI-assisted elements on separate layers
+            from your manual work. Save incremental versions of your
+            files (e.g., Page01_v1_Base, Page01_v2_Inks,
+            Page01_v3_Flats, Page01_v4_FinalPaint). This creates a
+            digital paper trail that can visually demonstrate the
+            evolution of the work from a machine-generated component to
+            a human-authored final image.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Assert Your Authorship with
+            Honesty:</emphasis> When filing for copyright registration
+            with the U.S. Copyright Office, you are now required to
+            disclose the inclusion of any AI-generated material and to
+            provide a brief explanation of your creative
+            contributions.14 Do not attempt to hide the use of AI.
+            Instead, use your detailed documentation to clearly and
+            confidently articulate the scope and significance of your
+            human authorship in the selection, arrangement, and
+            modification of all elements, positioning yourself as the
+            undisputed "master mind" of the final,
+            copyrightable work.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <section xml:id="works-cited">
+        <title>
+          <emphasis role="strong">Works cited</emphasis>
+        </title>
+        <orderedlist numeration="arabic" spacing="compact">
+          <listitem>
+            <para>
+              Generative Artificial Intelligence and Copyright Law -
+              Congress.gov, accessed October 3, 2025,
+              <link xlink:href="https://www.congress.gov/crs-product/LSB10922">https://www.congress.gov/crs-product/LSB10922</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Can You Copyright AI-Generated Art? - Artsmart.ai,
+              accessed October 3, 2025,
+              <link xlink:href="https://artsmart.ai/blog/can-you-copyright-ai-generated-art/">https://artsmart.ai/blog/can-you-copyright-ai-generated-art/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Copyright Ownership of AI-Generated Art - Cartee LC,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.ac-legal.com/copyright-ownership-of-ai-generated-art/">https://www.ac-legal.com/copyright-ownership-of-ai-generated-art/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Features | Krita, accessed October 3, 2025,
+              <link xlink:href="https://krita.org/en/features/">https://krita.org/en/features/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              AI Tools - Clip Studio Paint User Guide, accessed October
+              3, 2025,
+              <link xlink:href="https://help.clip-studio.com/en-us/manual_en/390_filters/AI_Tools.htm">https://help.clip-studio.com/en-us/manual_en/390_filters/AI_Tools.htm</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Animation - Clip Studio Paint, accessed October 3, 2025,
+              <link xlink:href="https://www.clipstudio.net/en/animation/">https://www.clipstudio.net/en/animation/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Style Transfer: The Complete Guide to AI Painting | Corel
+              Painter, accessed October 3, 2025,
+              <link xlink:href="https://www.painterartist.com/en/tips/style-transfer/">https://www.painterartist.com/en/tips/style-transfer/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Applying AI styles - Corel Painter Help, accessed October
+              3, 2025,
+              <link xlink:href="https://product.corel.com/help/Painter/540111155/Corel-Painter-en/Corel-Painter-Applying-AI-styles.html">https://product.corel.com/help/Painter/540111155/Corel-Painter-en/Corel-Painter-Applying-AI-styles.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Using AI in Adobe Photoshop: What You Need to Know About
+              Generative Features, accessed October 3, 2025,
+              <link xlink:href="https://learningcurveglobal.com/using-ai-adobe-photoshop-generative-features/">https://learningcurveglobal.com/using-ai-adobe-photoshop-generative-features/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Free AI Photo Editor: Use AI to Edit Photos Online -
+              Photoshop - Adobe, accessed October 3, 2025,
+              <link xlink:href="https://www.adobe.com/products/photoshop/ai-photo-editor.html">https://www.adobe.com/products/photoshop/ai-photo-editor.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              AI Comic Generator: Create AI-Driven Comics and Manga
+              within Minutes - Dashtoon, accessed October 3, 2025,
+              <link xlink:href="https://dashtoon.com/ai-comic-generator">https://dashtoon.com/ai-comic-generator</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              ComicsMaker.ai: Create Comics Using AI, accessed October
+              3, 2025,
+              <link xlink:href="https://www.comicsmaker.ai/">https://www.comicsmaker.ai/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              AI comic generator: Create AI comics free - Adobe Firefly,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.adobe.com/products/firefly/features/ai-comic-generator.html">https://www.adobe.com/products/firefly/features/ai-comic-generator.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              New US copyright rules protect only AI art with 'human
+              authorship' - The Art Newspaper, accessed October 3, 2025,
+              <link xlink:href="https://www.theartnewspaper.com/2023/05/04/us-copyright-office-artificial-intelligence-art-regulation">https://www.theartnewspaper.com/2023/05/04/us-copyright-office-artificial-intelligence-art-regulation</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Copyright and Artificial Intelligence | U.S. Copyright
+              Office, accessed October 3, 2025,
+              <link xlink:href="https://www.copyright.gov/ai/">https://www.copyright.gov/ai/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Procreate® — Brand Use Guidelines, accessed October 3,
+              2025,
+              <link xlink:href="https://procreate.com/brand-use">https://procreate.com/brand-use</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              What are the rules for using materials from ASSETS? - Clip
+              Studio Official Support, accessed October 3, 2025,
+              <link xlink:href="https://support.clip-studio.com/en-us/faq/articles/20190003">https://support.clip-studio.com/en-us/faq/articles/20190003</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Corel Painter Licensing FAQs, accessed October 3, 2025,
+              <link xlink:href="https://www.painterartist.com/en/licensing/faqs/">https://www.painterartist.com/en/licensing/faqs/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Adobe Experience Cloud Generative AI User Guidelines,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html">https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Adobe Generative AI Product Specific Terms (en_US),
+              accessed October 3, 2025,
+              <link xlink:href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/adobe-generative-ai-product-specific-terms-en-us-20250617.pdf">https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/adobe-generative-ai-product-specific-terms-en-us-20250617.pdf</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Free AI Art Generator: Create AI Art Online - Adobe
+              Firefly, accessed October 3, 2025,
+              <link xlink:href="https://www.adobe.com/products/firefly/features/ai-art-generator.html">https://www.adobe.com/products/firefly/features/ai-art-generator.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Best Drawing Apps 2025: Top Apps for PC, Tablet &amp;
+              Smartphone | Art Rocket, accessed October 3, 2025,
+              <link xlink:href="https://www.clipstudio.net/how-to-draw/archives/155465">https://www.clipstudio.net/how-to-draw/archives/155465</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              15 Best Digital Art Software for Graphic Designers in 2025
+              - ManyPixels, accessed October 3, 2025,
+              <link xlink:href="https://www.manypixels.co/blog/illustrations/digital-art-software">https://www.manypixels.co/blog/illustrations/digital-art-software</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              CLIP STUDIO PAINT EX - Graphixly, accessed October 3,
+              2025,
+              <link xlink:href="https://graphixly.com/products/clip-studio-paint-ex">https://graphixly.com/products/clip-studio-paint-ex</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Comics, Manga &amp; Webtoons - Clip Studio Paint, accessed
+              October 3, 2025,
+              <link xlink:href="https://www.clipstudio.net/en/comics-manga/">https://www.clipstudio.net/en/comics-manga/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              CLIP STUDIO PAINT - More powerful drawing., accessed
+              October 3, 2025,
+              <link xlink:href="https://www.clipstudio.net/en/">https://www.clipstudio.net/en/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Comic Making features in EX vs Pro : r/ClipStudio -
+              Reddit, accessed October 3, 2025,
+              <link xlink:href="https://www.reddit.com/r/ClipStudio/comments/zaz6k9/comic_making_features_in_ex_vs_pro/">https://www.reddit.com/r/ClipStudio/comments/zaz6k9/comic_making_features_in_ex_vs_pro/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Guidelines About Posting and Behavior | CELSYS, accessed
+              October 3, 2025,
+              <link xlink:href="https://www.celsys.com/en/information/post/">https://www.celsys.com/en/information/post/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Clip Studio Paint End User License Agreement | CELSYS,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.celsys.com/en/information/csp/">https://www.celsys.com/en/information/csp/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Terms of Use - Clip Studio Paint, accessed October 3,
+              2025,
+              <link xlink:href="https://www.clipstudio.net/en/terms/">https://www.clipstudio.net/en/terms/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              15 Must-Have Digital Art Programs and Drawing Apps for
+              2025 - Wallpics, accessed October 3, 2025,
+              <link xlink:href="https://www.wallpics.com/blogs/news/15-must-have-digital-art-programs-and-drawing-apps-for-2025">https://www.wallpics.com/blogs/news/15-must-have-digital-art-programs-and-drawing-apps-for-2025</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              How to Make a Comic in Photoshop: One trick I wish I'd
+              known from the start, accessed October 3, 2025,
+              <link xlink:href="https://www.thingsinsquares.com/blog/advice-how-to-make-a-comic-in-photoshop/">https://www.thingsinsquares.com/blog/advice-how-to-make-a-comic-in-photoshop/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              I am making a comic in photoshop shop and I need printing
+              help! - Reddit, accessed October 3, 2025,
+              <link xlink:href="https://www.reddit.com/r/photoshop/comments/1bsiq4a/i_am_making_a_comic_in_photoshop_shop_and_i_need/">https://www.reddit.com/r/photoshop/comments/1bsiq4a/i_am_making_a_comic_in_photoshop_shop_and_i_need/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Comic Book Creation with Photoshop and Illustrator -
+              YouTube, accessed October 3, 2025,
+              <link xlink:href="https://www.youtube.com/watch?v=OM4eQ0Slmaw">https://www.youtube.com/watch?v=OM4eQ0Slmaw</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              8 Best Software For Digital Painting In 2025 -
+              GinAngieLa.com, accessed October 3, 2025,
+              <link xlink:href="https://ginangiela.com/best-software-for-digital-painting/">https://ginangiela.com/best-software-for-digital-painting/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Use AI in Photoshop to Streamline Your Workflow. - Adobe,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.adobe.com/products/photoshop/ai.html">https://www.adobe.com/products/photoshop/ai.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Adobe Generative AI User Guidelines | Adobe Legal,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html">https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Best Digital Art Software 2025, accessed October 3, 2025,
+              <link xlink:href="https://bigredillustration.com/articles/best-digital-art-software-2025/">https://bigredillustration.com/articles/best-digital-art-software-2025/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              What's new in Procreate., accessed October 3, 2025,
+              <link xlink:href="https://procreate.com/procreate/whats-new">https://procreate.com/procreate/whats-new</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Procreate for iPad — Sketch. Paint. Create., accessed
+              October 3, 2025,
+              <link xlink:href="https://procreate.com/procreate">https://procreate.com/procreate</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              5 Procreate Techniques for Creating Stunning Comic Book
+              Art - Daisie Blog, accessed October 3, 2025,
+              <link xlink:href="https://blog.daisie.com/5-procreate-techniques-for-creating-stunning-comic-book-art/">https://blog.daisie.com/5-procreate-techniques-for-creating-stunning-comic-book-art/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Is Procreate a good app to make comics? - Questions -
+              Tapas Forum, accessed October 3, 2025,
+              <link xlink:href="https://forums.tapas.io/t/is-procreate-a-good-app-to-make-comics/70375">https://forums.tapas.io/t/is-procreate-a-good-app-to-make-comics/70375</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Creativity is made, not generated — Procreate®, accessed
+              October 3, 2025,
+              <link xlink:href="https://procreate.com/ai">https://procreate.com/ai</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Procreate Pledges To Avoid Generative AI Features In Its
+              Apps - Cartoon Brew, accessed October 3, 2025,
+              <link xlink:href="https://www.cartoonbrew.com/tech/procreate-pledges-to-avoid-generative-ai-features-in-its-apps-242672.html">https://www.cartoonbrew.com/tech/procreate-pledges-to-avoid-generative-ai-features-in-its-apps-242672.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              iPad Illustration App Procreate Condemns Generative AI -
+              Literature &amp; Latte Forums, accessed October 3, 2025,
+              <link xlink:href="https://forum.literatureandlatte.com/t/ipad-illustration-app-procreate-condemns-generative-ai/142278">https://forum.literatureandlatte.com/t/ipad-illustration-app-procreate-condemns-generative-ai/142278</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Guidelines for using Procreate Trademarks &amp; Copyright,
+              accessed October 3, 2025,
+              <link xlink:href="https://procreate.com/legal/trademark-guidelines">https://procreate.com/legal/trademark-guidelines</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              App Privacy Policy - Procreate, accessed October 3, 2025,
+              <link xlink:href="https://procreate.com/app/privacy-policy">https://procreate.com/app/privacy-policy</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Terms &amp; Conditions - Procreate, accessed October 3,
+              2025,
+              <link xlink:href="https://procreate.com/terms-conditions">https://procreate.com/terms-conditions</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Manga Software - Corel Painter 2022, accessed October 3,
+              2025,
+              <link xlink:href="https://www.painterartist.com/en/product/painter/manga/">https://www.painterartist.com/en/product/painter/manga/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              How to use the Manga II brushes - Corel Discovery Center,
+              accessed October 3, 2025,
+              <link xlink:href="https://learn.corel.com/tutorials/how-to-use-the-manga-2-brush-pack/">https://learn.corel.com/tutorials/how-to-use-the-manga-2-brush-pack/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Digital Art &amp; Painting Software - Corel Painter 2023,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.painterartist.com/en/product/painter/">https://www.painterartist.com/en/product/painter/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Getting started with AI styles - Corel Discovery Center,
+              accessed October 3, 2025,
+              <link xlink:href="https://learn.corel.com/tutorials/painter-introduction-to-ai-styles/">https://learn.corel.com/tutorials/painter-introduction-to-ai-styles/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              How to use Vision FX - Corel Discovery Center, accessed
+              October 3, 2025,
+              <link xlink:href="https://learn.corel.com/tutorials/how-to-use-ai-vision-fx/">https://learn.corel.com/tutorials/how-to-use-ai-vision-fx/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              End User License Agreement - Corel, accessed October 3,
+              2025,
+              <link xlink:href="https://www.corel.com/en/eula/">https://www.corel.com/en/eula/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Corel BULA, accessed October 3, 2025,
+              <link xlink:href="https://www.corel.com/en/bula/">https://www.corel.com/en/bula/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Use of Corel Clipart and Photos, accessed October 3, 2025,
+              <link xlink:href="https://www.corel.com/en/clipart-and-photos/">https://www.corel.com/en/clipart-and-photos/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Krita - Wikipedia, accessed October 3, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Krita">https://en.wikipedia.org/wiki/Krita</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Krita, accessed October 3, 2025,
+              <link xlink:href="https://krita.org/en/">https://krita.org/en/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Tutorial: You don't NEED comic panel tool in Krita - it
+              already HAS one! - Reddit, accessed October 3, 2025,
+              <link xlink:href="https://www.reddit.com/r/krita/comments/1ji74q7/tutorial_you_dont_need_comic_panel_tool_in_krita/">https://www.reddit.com/r/krita/comments/1ji74q7/tutorial_you_dont_need_comic_panel_tool_in_krita/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Using Krita for ARC comics, accessed October 3, 2025,
+              <link xlink:href="https://krita.org/en/posts/2015/using-krita-for-arc-comics/">https://krita.org/en/posts/2015/using-krita-for-arc-comics/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Krita AI Diffusion - Generative AI For Krita, accessed
+              October 3, 2025,
+              <link xlink:href="https://kritaaidiffusion.com/">https://kritaaidiffusion.com/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Stable diffusion plugin for Krita works great for object
+              removal! : r/StableDiffusion - Reddit, accessed October 3,
+              2025,
+              <link xlink:href="https://www.reddit.com/r/StableDiffusion/comments/1hufyv2/stable_diffusion_plugin_for_krita_works_great_for/">https://www.reddit.com/r/StableDiffusion/comments/1hufyv2/stable_diffusion_plugin_for_krita_works_great_for/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Resources — Krita Manual 5.2.0 documentation, accessed
+              October 3, 2025,
+              <link xlink:href="https://docs.krita.org/en/resources_page.html">https://docs.krita.org/en/resources_page.html</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Welcome to the Krita 5.2 Manual! — Krita Manual 5.2.0
+              documentation, accessed October 3, 2025,
+              <link xlink:href="https://docs.krita.org/en/">https://docs.krita.org/en/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Procreate — Creative apps designed for iPad, accessed
+              October 3, 2025,
+              <link xlink:href="https://procreate.com/">https://procreate.com/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              PRO vs EX: What is the difference? - Clip Studio Official
+              Support, accessed October 3, 2025,
+              <link xlink:href="https://support.clip-studio.com/en-us/faq/articles/20200186">https://support.clip-studio.com/en-us/faq/articles/20200186</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              AI Comic Generator: A new medium for storytelling |
+              LlamaGen, accessed October 3, 2025,
+              <link xlink:href="https://llamagen.ai/">https://llamagen.ai/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              AI Comic Factory - Generate Comics with Hugging Face
+              (Free), accessed October 3, 2025,
+              <link xlink:href="https://aicomicfactory.com/">https://aicomicfactory.com/</link>
+            </para>
+          </listitem>
+        </orderedlist>
+      </section>
+    </section>
+  </section>
+</article>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info xmlns="http://docbook.org/ns/docbook"
+      xmlns:dc="http://purl.org/dc/terms/"
+      xmlns:schema="https://schema.org/">
+
+  <dc:title>Language Models Are Databases: A Technical and Legal Position Paper on LLMs and Intellectual Property</dc:title>
+  <dc:creator>Ian D.L.N. McLean (authored); Claude Sonnet 4.6 (research assistant, 2026-07-01)</dc:creator>
+  <dc:subject>large language models; graph databases; intellectual property; copyright; LARQL; mechanistic interpretability; derivative works; collective works; database law; GDPR; transformer architecture; knowledge graphs</dc:subject>
+  <dc:description>A transformer's weights constitute a queryable graph database of the works it was built from. Chris Hay's LARQL (Lazarus Query Language) supplies the query interface that reads those entries back—entities, relations, directed edges—and writes them into ordinary model files unchanged. Arithmetic storage is still storage; the machine-perceptibility test for fixation predates modern AI and fits without strain. A model that regenerates Harry Potter near-verbatim or renders Superman on demand contains those works, and the settled law of copies, compilations, and distribution is the law that governs it. This paper establishes the technical isomorphism, assembles the empirical memorisation record, and draws the legal conclusions that follow directly from both.</dc:description>
+  <dc:publisher>metavacua/legal-theory (GitHub)</dc:publisher>
+  <dc:date>2026-07-01</dc:date>
+  <dc:type>ScholarlyArticle</dc:type>
+  <dc:language>en</dc:language>
+  <dc:rights>CC BY-SA 4.0</dc:rights>
+
+  <bibliomisc role="schema-org-jsonld"><![CDATA[
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Language Models Are Databases",
+  "headline": "Language Models Are Databases: A Technical and Legal Position Paper on LLMs and Intellectual Property",
+  "datePublished": "2026-07-01",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "name": "Ian D.L.N. McLean",
+    "email": "metavacua@gmail.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "metavacua/legal-theory",
+    "url": "https://github.com/metavacua/legal-theory"
+  },
+  "keywords": ["large language models","graph databases","intellectual property","copyright","LARQL","derivative works","database law","GDPR"],
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "isPartOf": {
+    "@type": "Collection",
+    "name": "legal-theory: AI and Intellectual Property"
+  }
+}
+  ]]></bibliomisc>
+
+  <authorgroup>
+    <author>
+      <personname>
+        <firstname>Ian</firstname>
+        <othername role="middle">D.L.N.</othername>
+        <surname>McLean</surname>
+      </personname>
+      <email>metavacua@gmail.com</email>
+      <uri>https://github.com/metavacua</uri>
+    </author>
+  </authorgroup>
+
+  <legalnotice>
+    <para>Copyright © 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). Research assistance by Claude Sonnet 4.6 (Anthropic). This document publishes general legal analysis and does not constitute legal advice.</para>
+  </legalnotice>
+
+  <abstract>
+    <para>A trained language model is a database of the works it was built from. Chris Hay's LARQL (Lazarus Query Language) is an open-source Rust tool that extracts a transformer's weights into a <emphasis>vindex</emphasis>—a vector index—and exposes a query language, LQL, that returns labelled directed edges directly out of the weight tensors. The model's feed-forward network (FFN) layers map isomorphically to knowledge-graph nodes and edges; a forward pass is computationally equivalent to a k-nearest-neighbour graph walk. LARQL further demonstrates that individual edges can be inserted, retrieved, and compiled back into standard model formats without retraining. The storage is arithmetic, but arithmetic storage is still storage: the machine-perceptibility test for copyright fixation covers any form in which a work can be reproduced with the aid of a machine. Peer-reviewed extraction studies confirm that frontier LLMs deterministically regenerate copyrighted books (Cooper et al. 2025) and near-identical training images (Carlini et al. 2023) from their weights. The conclusion that follows is not novel: a model trained on protected works is a derivative work and a collective work; distributing it distributes copies; operating it reproduces them. No new statute is required. Database law and the law of copies, both old and well-settled, reach this case directly.</para>
+  </abstract>
+
+</info>
