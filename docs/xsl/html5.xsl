@@ -94,6 +94,15 @@
             padding-left: 1.2rem;
             margin-left: -1.2rem;
           }
+          .finding-badge {
+            display: inline-block; font-family: system-ui, sans-serif; font-size: 0.7rem;
+            font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;
+            padding: 0.15rem 0.6rem; border-radius: 3px; margin-bottom: 0.6rem;
+            color: #fff;
+          }
+          section[data-condition="confirmed"] .finding-badge { background: var(--green); }
+          section[data-condition="confirmed-with-caveats"] .finding-badge { background: var(--blue); }
+          section[data-condition="split"] .finding-badge { background: var(--amber); }
 
           nav.site-nav { font-family: system-ui, sans-serif; font-size: 0.85rem;
                          margin-bottom: 1.5rem; }
@@ -162,6 +171,14 @@
       </xsl:if>
       <xsl:if test="@condition">
         <xsl:attribute name="data-condition"><xsl:value-of select="@condition"/></xsl:attribute>
+        <span class="finding-badge">
+          <xsl:choose>
+            <xsl:when test="@condition = 'confirmed'">Confirmed</xsl:when>
+            <xsl:when test="@condition = 'confirmed-with-caveats'">Confirmed, with caveats</xsl:when>
+            <xsl:when test="@condition = 'split'">Split</xsl:when>
+            <xsl:otherwise><xsl:value-of select="@condition"/></xsl:otherwise>
+          </xsl:choose>
+        </span>
       </xsl:if>
       <xsl:apply-templates/>
     </section>

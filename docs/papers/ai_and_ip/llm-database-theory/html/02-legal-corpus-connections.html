@@ -85,6 +85,15 @@
             padding-left: 1.2rem;
             margin-left: -1.2rem;
           }
+          .finding-badge {
+            display: inline-block; font-family: system-ui, sans-serif; font-size: 0.7rem;
+            font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;
+            padding: 0.15rem 0.6rem; border-radius: 3px; margin-bottom: 0.6rem;
+            color: #fff;
+          }
+          section[data-condition="confirmed"] .finding-badge { background: var(--green); }
+          section[data-condition="confirmed-with-caveats"] .finding-badge { background: var(--blue); }
+          section[data-condition="split"] .finding-badge { background: var(--amber); }
 
           nav.site-nav { font-family: system-ui, sans-serif; font-size: 0.85rem;
                          margin-bottom: 1.5rem; }
@@ -119,7 +128,7 @@
   </section>
 
   
-  <section id="copyright-ip-authorship" data-condition="confirmed">
+  <section id="copyright-ip-authorship" data-condition="confirmed"><span class="finding-badge">Confirmed</span>
     <h2>Copyright, IP Authorship, and AI-Assisted Creation</h2>
 
     <p>The copyright-IP-authorship matter in this repository addresses, among other questions, who holds rights in works produced with AI assistance, and whether the use of AI in creation affects the underlying IP analysis. The LLM-database theory supplies findings of fact that bear directly on both questions.</p>
@@ -171,7 +180,7 @@
   </section>
 
   
-  <section id="platform-tos-constitutional-limits" data-condition="confirmed-with-caveats">
+  <section id="platform-tos-constitutional-limits" data-condition="confirmed-with-caveats"><span class="finding-badge">Confirmed, with caveats</span>
     <h2>Platform ToS and Constitutional Limits</h2>
 
     <p>The platform-ToS-constitutional-limits matter addresses, in part, whether and how platform policies that restrict AI use interact with First Amendment protections. The LLM-database theory directly informs the characterisation of AI model outputs as a form of speech or expression.</p>
@@ -197,7 +206,7 @@
   </section>
 
   
-  <section id="agpl-derivative-works" data-condition="confirmed">
+  <section id="agpl-derivative-works" data-condition="confirmed"><span class="finding-badge">Confirmed</span>
     <h2>GPL/AGPL and Derivative Works: Application to Model Weights</h2>
 
     <p>The existing evidence document <em>agpl-ai-training-and-code-licensing.md</em> analyses the legal argument that training an AI model on GPL-licensed code makes the model a derivative work, triggering the GPL's copyleft obligation to release the model's source (including weights) under the GPL. <cite>[mclean2025agpl]</cite></p>
@@ -223,7 +232,7 @@
   </section>
 
   
-  <section id="knowledge-graph-contracts" data-condition="confirmed-with-caveats">
+  <section id="knowledge-graph-contracts" data-condition="confirmed-with-caveats"><span class="finding-badge">Confirmed, with caveats</span>
     <h2>Knowledge Graph, IP Contracts, and the LLM-Database Theory</h2>
 
     <p>The cross-cutting document <em>knowledge-graph-ca-service-contracts.md</em> and the evidence document <em>ip-contract-knowledge-graph.md</em> develop an ontology of IP actors, assets, legal instruments, and doctrines structured as a knowledge graph. <cite>[mclean2025categorical]</cite></p>
