@@ -119,19 +119,19 @@ CA Corporations Code; federal securities law; IRC cooperative treatment.
 Copyright Act; CA contract law; AI-assisted authorship.
 [Findings](court-record/matters/copyright-ip-authorship/findings.html) · 13 evidence documents
 
-- [A Constructive Legal Framework for Artistic Commissions](court-record/matters/copyright-ip-authorship/evidence/a-constructive-legal-framework-for-artistic-commissions.md)
-- [A Formalized Legal and Data Framework for AI-Assisted Copyrightable Works](court-record/matters/copyright-ip-authorship/evidence/ai-assisted-copyrightable-work-schema.md)
-- [Operationalizing Human Authorship: Copyright in the Age of AI](court-record/matters/copyright-ip-authorship/evidence/ai-assisted-copyright-tool-blueprint.md)
-- [The Tiered Architecture of Personhood: Natural, Corporate, and Artificial Persons in American Law](court-record/matters/copyright-ip-authorship/evidence/ai-corporate-personhood-and-legal-rights.md)
-- [The Human Engine: Commissioning Transgressive Art](court-record/matters/copyright-ip-authorship/evidence/freelancing-transgressive-art-projects.md)
-- [A Minimalist, Legally Defensible Model for the Patron-Artist Relationship in California](court-record/matters/copyright-ip-authorship/evidence/independent-artist-business-model.md)
-- [The Creator's Compact: IP Creation as an Act of Service](court-record/matters/copyright-ip-authorship/evidence/ip-creation-service-or-self-expression.md)
-- [A Fortified Legal Framework for Artistic Commissions in California](court-record/matters/copyright-ip-authorship/evidence/legal-framework-for-artistic-commissions.md)
-- [The Producer-Patron's Playbook: Cultivating Artistic Collectives in California](court-record/matters/copyright-ip-authorship/evidence/patron-artist-collective-work-structure.md)
-- [The Prompt as Expression: The U.S. Copyright Office's Stance on AI Authorship](court-record/matters/copyright-ip-authorship/evidence/prompts-as-expression.md)
-- [Strategic Compliant IP — The Integrated Strategic Vision](court-record/matters/copyright-ip-authorship/evidence/strategic-compliant-ip.md)
-- [Sustainable Creation: Material Support for IP Beyond the Service Model](court-record/matters/copyright-ip-authorship/evidence/sustainable-ip-creation.md)
-- [The Contractual Ecosystem for a Modern Artistic Venture](court-record/matters/copyright-ip-authorship/evidence/the-contractual-ecosystem-for-a-modern-artistic-venture.md)
+- [A Constructive Legal Framework for Artistic Commissions](court-record/matters/copyright-ip-authorship/evidence/a-constructive-legal-framework-for-artistic-commissions.html)
+- [A Formalized Legal and Data Framework for AI-Assisted Copyrightable Works](court-record/matters/copyright-ip-authorship/evidence/ai-assisted-copyrightable-work-schema.html)
+- [Operationalizing Human Authorship: Copyright in the Age of AI](court-record/matters/copyright-ip-authorship/evidence/ai-assisted-copyright-tool-blueprint.html)
+- [The Tiered Architecture of Personhood: Natural, Corporate, and Artificial Persons in American Law](court-record/matters/copyright-ip-authorship/evidence/ai-corporate-personhood-and-legal-rights.html)
+- [The Human Engine: Commissioning Transgressive Art](court-record/matters/copyright-ip-authorship/evidence/freelancing-transgressive-art-projects.html)
+- [A Minimalist, Legally Defensible Model for the Patron-Artist Relationship in California](court-record/matters/copyright-ip-authorship/evidence/independent-artist-business-model.html)
+- [The Creator's Compact: IP Creation as an Act of Service](court-record/matters/copyright-ip-authorship/evidence/ip-creation-service-or-self-expression.html)
+- [A Fortified Legal Framework for Artistic Commissions in California](court-record/matters/copyright-ip-authorship/evidence/legal-framework-for-artistic-commissions.html)
+- [The Producer-Patron's Playbook: Cultivating Artistic Collectives in California](court-record/matters/copyright-ip-authorship/evidence/patron-artist-collective-work-structure.html)
+- [The Prompt as Expression: The U.S. Copyright Office's Stance on AI Authorship](court-record/matters/copyright-ip-authorship/evidence/prompts-as-expression.html)
+- [Strategic Compliant IP — The Integrated Strategic Vision](court-record/matters/copyright-ip-authorship/evidence/strategic-compliant-ip.html)
+- [Sustainable Creation: Material Support for IP Beyond the Service Model](court-record/matters/copyright-ip-authorship/evidence/sustainable-ip-creation.html)
+- [The Contractual Ecosystem for a Modern Artistic Venture](court-record/matters/copyright-ip-authorship/evidence/the-contractual-ecosystem-for-a-modern-artistic-venture.html)
 
 ---
 

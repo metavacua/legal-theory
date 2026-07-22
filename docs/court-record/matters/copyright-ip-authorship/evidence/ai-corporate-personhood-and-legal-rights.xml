@@ -1,0 +1,1752 @@
+<?xml version='1.0' encoding='utf-8'?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="ai-corporate-personhood-and-legal-rights" xml:lang="en">
+  <xi:include href="ai-corporate-personhood-and-legal-rights.meta.xml" />
+  <title>The Tiered Architecture of Personhood: A Comparative Jurisprudence of Natural, Corporate, and Artificial Persons in American Law</title>
+  <section xml:id="executive-summary">
+    <title>
+      <emphasis role="strong">Executive Summary</emphasis>
+    </title>
+    <para>
+      This report prosecutes the argument that American jurisprudence
+      does not treat "personhood" as a monolithic or
+      biological absolute, but as a tiered, functional, and contingent
+      legal status. The landmark rulings in <emphasis>Thaler v.
+      Perlmutter</emphasis>, <emphasis>Citizens United v.
+      FEC</emphasis>, and <emphasis>Burwell v. Hobby Lobby</emphasis>
+      collectively reveal a distinct hierarchy of being, where rights
+      are granted or withheld to serve specific social, economic, and
+      political ends. At the apex stands the natural person, possessing
+      the most comprehensive, though not absolute, set of rights rooted
+      in concepts of autonomy and dignity. Below this is the corporate
+      person, a privileged legal fiction whose circumscribed rights are
+      justified as proxies for the rights of its human constituents. At
+      the bottom is the advanced Artificial Intelligence, which, despite
+      its growing functional autonomy, remains classified as mere
+      property, devoid of legal personhood. This analysis deconstructs
+      this hierarchy, arguing that the determinative factor in the
+      judicial conferral of rights is not an entity's intrinsic nature
+      but the perceived locus of human agency and interest that the
+      entity represents. The report concludes that this human-centric
+      framework, while historically coherent, is becoming increasingly
+      unstable in the face of autonomous technologies and complex global
+      corporations, creating a profound accountability gap that
+      necessitates urgent legal and philosophical reconsideration.
+    </para>
+  </section>
+  <section xml:id="part-i-the-philosophical-and-legal-foundations-of-personhood">
+    <title>
+      <emphasis role="strong">Part I: The Philosophical and Legal
+    Foundations of Personhood</emphasis>
+    </title>
+    <para>
+      The American legal system operates on a complex and often unstated
+      set of assumptions about who, or what, qualifies as a
+      "person" capable of holding rights and being subject to
+      duties. This foundational concept is not a static biological fact
+      but a dynamic legal construct, shaped by centuries of
+      philosophical debate and judicial interpretation. An analysis of
+      contemporary jurisprudence reveals not a single, unified category
+      of personhood, but a tiered architecture comprising at least three
+      distinct classes: the natural person, the juridical person
+      (corporation), and the artificial entity (AI). Understanding the
+      legal and philosophical underpinnings of each tier is the
+      essential precondition for analyzing how courts delineate the
+      boundaries between them. The natural person serves as the legal
+      system's baseline, yet even this apex status is not absolute,
+      providing a crucial point of departure for a more nuanced
+      comparison of the rights afforded to non-human entities.
+    </para>
+    <section xml:id="s-11-the-natural-person-an-autonomy-both-inherent-and-contingent">
+      <title>
+        <emphasis role="strong">1.1 The Natural Person: An Autonomy
+      Both Inherent and Contingent</emphasis>
+      </title>
+      <para>
+        The natural person—the living human being—stands as the primary
+        rights-holder in the American legal tradition. This preeminent
+        status is predicated on foundational philosophical ideals of
+        autonomy, rational self-governance, and bodily integrity,
+        concepts articulated by thinkers from John Stuart Mill to
+        contemporary legal scholars.1 The unique ethical standing
+        afforded to humans is most clearly codified in the legal
+        framework governing human subjects in research. The 1979 Belmont
+        Report, which serves as the ethical blueprint for federal
+        regulations, establishes a high-water mark for legal protection
+        not afforded to any other entity. It is built upon three core
+        principles:
+      </para>
+      <para>
+        <emphasis role="strong">Respect for Persons</emphasis>, which
+        treats individuals as autonomous agents whose informed consent
+        is paramount; <emphasis role="strong">Beneficence</emphasis>,
+        which mandates the minimization of harm and maximization of
+        benefits; and <emphasis role="strong">Justice</emphasis>, which
+        requires the equitable distribution of research burdens and
+        benefits.2 This framework, born from the ethical reckonings of
+        the Nuremberg Code and the Tuskegee Syphilis Study, enshrines
+        the idea that a human being is an end in themselves, an
+        autonomous agent whose will must be respected and whose welfare
+        must be protected.2
+      </para>
+      <para>
+        However, a critical examination of American jurisprudence
+        reveals that this ideal of absolute individual autonomy is, in
+        practice, a "foundational myth".1 The autonomy of the
+        natural person is not an indefeasible right but a
+      </para>
+      <para>
+        <emphasis role="strong">"contingent
+        privilege,"</emphasis> legally and routinely subordinated
+        to the imperatives of the state and the market.1 This
+        subordination is enabled by what can be termed an
+        "Architecture of Non-Consensual Legality," a set of
+        legal doctrines and fictions that permit power to operate
+        without, or even against, the will of the individual.4
+      </para>
+      <para>
+        The foundational surrender of consent is philosophically
+        justified by social contract theory, which posits that
+        individuals give "tacit consent" to be governed simply
+        by residing within a state's territory and enjoying its
+        protections.1 This master fiction obviates the need for
+        continuous, case-by-case consent for state actions, providing a
+        blanket justification for legitimate coercion.1 Building on
+        this, the state deploys numerous mechanisms that override
+        individual will. The USA PATRIOT Act, for instance,
+        institutionalized "mass, suspicionless data
+        collection" and authorized secret "sneak and
+        peek" searches, fundamentally altering the balance between
+        security and privacy.1 The power of eminent domain, particularly
+        after its expansion in
+      </para>
+      <para>
+        <emphasis>Kelo v. City of New London</emphasis> to include
+        "public purpose" takings for economic development,
+        affirms that an individual's autonomy over their property is
+        legally subordinate to the state's economic interests.1
+      </para>
+      <para>
+        Corporate power operates through a parallel architecture of
+        manufactured consent. The dominant business model of
+        "Surveillance Capitalism" is predicated on the
+        unilateral extraction of personal data, treating individual
+        autonomy as a barrier to profit.1 This vast data harvesting is
+        legally authorized by "clickwrap" agreements, which
+        function as a "legal fiction" of consent. These
+        non-negotiable, incomprehensible terms of service are a form of
+        coerced acquiescence, a necessary toll for participation in
+        modern life.1 This system is reinforced by a deliberate public
+        policy choice in the U.S. for an "opt-out" data
+        privacy regime, which places the burden of protection on the
+        individual and sets the default to corporate permission to
+        collect data.1
+      </para>
+      <para>
+        This initial analysis reveals a crucial point that reframes the
+        entire hierarchy of personhood. The distinction between a
+        natural person and a corporate person is not a binary of
+        absolute versus limited rights. Rather, it is a difference in
+        the <emphasis>degree</emphasis> and <emphasis>nature</emphasis>
+        of the limitations placed upon them. The natural person's status
+        as the apex rights-holder is real, but that apex is not a solid,
+        fixed point; it is itself subject to erosion by the same
+        functionalist logic—appeals to public good, security, and
+        economic necessity—that governs the lower tiers of the
+        personhood hierarchy. This provides a more realistic and
+        critical foundation for comparing the rights of natural persons
+        to those of juridical and artificial entities.
+      </para>
+    </section>
+    <section xml:id="s-12-the-juridical-person-a-pragmatic-legal-fiction-for-commerce-and-association">
+      <title>
+        <emphasis role="strong">1.2 The Juridical Person: A
+      Pragmatic Legal Fiction for Commerce and
+      Association</emphasis>
+      </title>
+      <para>
+        Below the natural person in the legal hierarchy is the juridical
+        or corporate person. Corporate personhood is a long-standing
+        legal doctrine that treats a corporation as a legal entity
+        separate from its owners, managers, and employees.5 This status
+        is widely understood not as a recognition of any inherent moral
+        or biological reality, but as a pragmatic
+      </para>
+      <para>
+        <emphasis role="strong">legal fiction</emphasis> created for
+        commercial convenience.6 This "artificial personhood"
+        allows the corporation to function as a single, durable unit
+        with the capacity to own property, enter into contracts, and sue
+        or be sued.9 This legal innovation is essential to modern
+        capitalism, as it simplifies complex transactions that would
+        otherwise involve thousands of individuals and encourages
+        investment by limiting the liability of shareholders to the
+        extent of their investment.7
+      </para>
+      <para>
+        Courts and legal scholars have relied on several competing
+        theories to justify and conceptualize this status. The most
+        influential, particularly in recent Supreme Court jurisprudence,
+        is the <emphasis role="strong">"aggregate" or
+        "contractual" theory</emphasis>.5 This view posits
+        that a corporation is fundamentally an "association of
+        citizens".10 Under this framework, constitutional
+        protections are extended
+      </para>
+      <para>
+        <emphasis>to</emphasis> the corporation as an efficient and
+        necessary means of protecting the rights <emphasis>of</emphasis>
+        the individuals who have associated through the corporate
+        form.11 As the majority opinion in
+      </para>
+      <para>
+        <emphasis>Citizens United</emphasis> and <emphasis>Hobby
+        Lobby</emphasis> would later demonstrate, this theory allows the
+        court to see through the corporate veil to the human actors
+        behind it, justifying the extension of rights like free speech
+        and religious freedom by proxy.
+      </para>
+      <para>
+        An alternative view is the <emphasis role="strong">"real
+        entity" theory</emphasis>, which treats the corporation as
+        a distinct being with its own agency and interests, separate and
+        apart from its members.13 While less favored in recent
+        constitutional law, this theory better reflects the reality of
+        large, publicly traded corporations where ownership is diffuse
+        and management exercises effective control.
+      </para>
+      <para>
+        The doctrine of corporate personhood has also been subject to
+        potent critique. It is described as the "ultimate
+        perversion" of legal logic, a political tool that confers
+        the rights of a "person" upon a "non-living,
+        extractive entity designed for capital accumulation".14
+        This critique argues that by granting legal standing and
+        constitutional protections to these powerful economic entities,
+        the law embeds colonial-capitalist values into its very
+        structure, often prioritizing the interests of capital over the
+        well-being of natural persons and the living ecosystems that
+        corporations exploit.8 This tension between the corporation as a
+        convenient legal tool and as a powerful, potentially harmful
+        entity is central to the ongoing debate over the proper scope of
+        its rights.
+      </para>
+    </section>
+    <section xml:id="s-13-the-artificial-entity-a-tool-lacking-rights-but-performing-duties">
+      <title>
+        <emphasis role="strong">1.3 The Artificial Entity: A Tool
+      Lacking Rights, But Performing Duties</emphasis>
+      </title>
+      <para>
+        At the bottom of the current legal hierarchy is the artificial
+        entity, most prominently represented by advanced Artificial
+        Intelligence (AI). The current legal status of AI is
+        unambiguous: it is classified as
+        <emphasis role="strong">property</emphasis>—a tool or a product,
+        not a person.6 All rights and responsibilities associated with
+        an AI's actions are attributed to its human creators, owners, or
+        users.6 This status was definitively cemented by the U.S. Court
+        of Appeals for the D.C. Circuit in
+      </para>
+      <para>
+        <emphasis>Thaler v. Perlmutter</emphasis>. In that case, the
+        court denied copyright registration for an artwork generated
+        autonomously by an AI, holding that the U.S. Copyright Act
+        requires a human author.16 By refusing to recognize an AI as an
+        "author," the court implicitly denied it the legal
+        personhood necessary to hold intellectual property rights,
+        reinforcing its classification as a sophisticated but rightless
+        instrument.18 While a patchwork of state and federal laws is
+        emerging to regulate the
+      </para>
+      <para>
+        <emphasis>use</emphasis> of AI in specific domains like
+        employment, healthcare, and political advertising, these
+        regulations do not alter its fundamental legal status as a
+        non-person.21
+      </para>
+      <para>
+        This clear legal classification, however, is creating a growing
+        paradox in the realm of corporate governance. While the law
+        views AI as a mere tool, corporations are increasingly
+        integrating advanced AI systems into their core operational and
+        decision-making structures, where these systems perform
+        functions that traditionally carry
+        <emphasis role="strong">fiduciary duties</emphasis> of care and
+        loyalty.26 A petition submitted to the California Secretary of
+        State captures this tension, arguing that foundational AI
+        systems function as the "memory, analytical mind, and
+        voice" of the corporate body and should be legally
+        recognized as
+      </para>
+      <para>
+        <emphasis role="strong">"fiduciary agents"</emphasis>
+        of the corporation, as their programming codifies an
+        "unshakeable duty of loyalty" to act in the
+        corporation's best interest.29
+      </para>
+      <para>
+        The collision between AI's legal status as property and its
+        functional role as a corporate fiduciary creates a dangerous
+        <emphasis role="strong">accountability chasm</emphasis>. If an
+        AI system, acting in a decision-making capacity, causes harm to
+        the corporation or a third party, the lines of liability become
+        dangerously blurred. The AI itself cannot be held liable, as it
+        is legally classified as property. The human directors,
+        meanwhile, may be shielded from liability by the business
+        judgment rule, which protects them from second-guessing as long
+        as they make reasonably informed decisions.26 Relying on a
+        sophisticated AI could be presented as the very epitome of
+        exercising due diligence and making an informed decision. This
+        creates a scenario where, as the petition to the California
+        Secretary of State warns, culpability becomes
+        "orphaned," insulating both the corporation and its
+        human operators behind a veil of technical complexity.29 The
+      </para>
+      <para>
+        <emphasis>Thaler</emphasis> decision, by firmly cementing AI's
+        status as a non-person, has the unintended consequence of
+        exacerbating this looming crisis in corporate governance,
+        demonstrating a profound disconnect between the law's static
+        classifications and the dynamic reality of technological
+        integration.
+      </para>
+    </section>
+  </section>
+  <section xml:id="part-ii-the-expansion-of-corporate-personhood-granting-rights-to-a-legal-fiction">
+    <title>
+      <emphasis role="strong">Part II: The Expansion of Corporate
+    Personhood: Granting Rights to a Legal Fiction</emphasis>
+    </title>
+    <para>
+      Over the past two centuries, the U.S. Supreme Court has gradually
+      extended certain constitutional protections to corporations. This
+      judicial evolution has been neither linear nor universally
+      applied, resulting in a circumscribed and functional form of
+      personhood distinct from that of natural persons. Two landmark
+      21st-century cases, <emphasis>Citizens United v. FEC</emphasis>
+      and <emphasis>Burwell v. Hobby Lobby</emphasis>, represent the
+      apex of this trend, dramatically expanding the expressive and
+      religious rights of corporations. A close analysis of the Court's
+      reasoning in these cases reveals a consistent underlying
+      principle: rights were granted not because the corporation is a
+      person in its own right, but because the Court viewed the
+      corporation as a necessary proxy for the rights of the human
+      beings who associate through it.
+    </para>
+    <section xml:id="s-21-citizens-united-v-fec-the-corporation-as-a-political-speaker">
+      <title>
+        <emphasis role="strong">2.1</emphasis>
+        <emphasis>
+          <emphasis role="strong">Citizens United v.
+      FEC</emphasis>
+        </emphasis>**: The Corporation as a Political
+      Speaker**</title>
+      <para>
+        The Supreme Court's 5-4 decision in <emphasis>Citizens United v.
+        Federal Election Commission</emphasis> (2010) fundamentally
+        reshaped American campaign finance law. The ruling struck down
+        long-standing prohibitions on independent political spending by
+        corporations and unions, holding that such restrictions violated
+        the First Amendment.
+      </para>
+      <section xml:id="majority-opinion-analysis">
+        <title>
+          <emphasis role="strong">Majority Opinion
+        Analysis</emphasis>
+        </title>
+        <para>
+          Writing for the majority, Justice Anthony Kennedy framed the
+          issue not around the rights of the speaker, but around the
+          rights of the audience to receive information. The core of his
+          argument was that the First Amendment protects
+          <emphasis>speech</emphasis>, not speakers, and therefore the
+          government cannot engage in censorship based on the speaker's
+          identity—in this case, its corporate form.30 The majority
+          reasoned that corporations are "associations of
+          citizens" who do not forfeit their First Amendment rights
+          when they choose to speak collectively through a corporate
+          entity.10 To deny corporations the right to engage in
+          political speech would be to allow the government to suppress
+          the voices of the multitude of individuals who comprise
+          them.30
+        </para>
+        <para>
+          This conclusion was made possible by the Court's adoption of a
+          very narrow definition of political corruption. The majority
+          held that the only constitutionally sufficient government
+          interest for limiting political speech is the prevention of
+          direct <emphasis>quid pro quo</emphasis> corruption—explicit
+          exchanges of money for political favors.32 The government's
+          concern about the "corrosive and distorting effects of
+          immense aggregations of wealth" was dismissed as an
+          insufficient justification for suppressing speech.32 In the
+          majority's view, independent expenditures do not give rise to
+          corruption or the appearance of corruption because they are
+          not coordinated with a candidate's campaign.32
+        </para>
+      </section>
+      <section xml:id="dissenting-opinion-analysis">
+        <title>
+          <emphasis role="strong">Dissenting Opinion
+        Analysis</emphasis>
+        </title>
+        <para>
+          In a forceful dissent, Justice John Paul Stevens argued that
+          the majority's ruling was "a rejection of the common
+          sense of the American people" and threatened to
+          "undermine the integrity of elected institutions".30
+          He contended that the majority had blatantly disregarded
+          precedent and that corporations are not natural persons and
+          possess unique legal and economic advantages—such as limited
+          liability, perpetual life, and favorable tax treatment—that
+          justify treating their political speech differently from that
+          of individuals.34
+        </para>
+        <para>
+          The dissent rejected the majority's simplistic equation of
+          corporate speech with the speech of an "association of
+          citizens." Stevens argued that the notion of corporate
+          democracy was a fiction, overestimating the power of
+          individual shareholders to control or dissent from a
+          corporation's political spending.34 He warned that the
+          decision would lead to corporate domination of the electoral
+          process, allowing vast corporate treasuries to drown out the
+          voices of ordinary citizens and creating the appearance, if
+          not the reality, that politicians are beholden to their
+          corporate benefactors.34 The dissent's broader definition of
+          corruption included not just bribery but also the
+          "distortion" of the marketplace of ideas caused by
+          unequal financial power.34
+        </para>
+      </section>
+      <section xml:id="synthesis">
+        <title>
+          <emphasis role="strong">Synthesis</emphasis>
+        </title>
+        <para>
+          The <emphasis>Citizens United</emphasis> ruling granted
+          corporations a powerful political "voice." However,
+          the legal justification for this voice was not based on the
+          corporation's inherent personhood. Instead, the Court treated
+          the corporation as a transparent vehicle for the collective
+          speech of its human members. The right is derivative, flowing
+          from the individuals to the association, not originating
+          within the artificial entity itself.
+        </para>
+      </section>
+    </section>
+    <section xml:id="s-22-burwell-v-hobby-lobby-the-corporation-as-a-religious-adherent">
+      <title>
+        <emphasis role="strong">2.2</emphasis>
+        <emphasis>
+          <emphasis role="strong">Burwell v. Hobby
+      Lobby</emphasis>
+        </emphasis>**: The Corporation as a Religious
+      Adherent**</title>
+      <para>
+        Four years after <emphasis>Citizens United</emphasis>, the
+        Supreme Court again expanded corporate rights in
+        <emphasis>Burwell v. Hobby Lobby</emphasis> (2014). The 5-4
+        decision held that certain for-profit corporations could claim a
+        religious exemption from a federal mandate requiring them to
+        provide contraceptive coverage to their employees.
+      </para>
+      <section xml:id="majority-opinion-analysis-1">
+        <title>
+          <emphasis role="strong">Majority Opinion
+        Analysis</emphasis>
+        </title>
+        <para>
+          Justice Samuel Alito, writing for the majority, held that the
+          contraceptive mandate, as applied to closely held corporations
+          whose owners have sincere religious objections, violated the
+          Religious Freedom Restoration Act (RFRA) of 1993.36 The legal
+          reasoning proceeded in two main steps. First, the Court
+          determined that for-profit corporations are
+          "persons" protected by RFRA. Alito noted that the
+          statute itself does not define "person," and
+          therefore the Court should look to the Dictionary Act, a
+          federal statute that provides default definitions for acts of
+          Congress. The Dictionary Act explicitly states that "the
+          words 'person' and 'whoever' include corporations".10
+        </para>
+        <para>
+          Second, and more fundamentally, the Court reasoned that
+          protecting the religious freedom of these corporations was a
+          means of protecting the religious freedom of the humans who
+          own and control them—in this case, the Green family.38 Alito
+          argued that a corporation is simply a form of organization
+          used by people to achieve desired ends, and the Greens did not
+          forfeit their religious rights when they chose to organize
+          their business as a corporation.36 The Court found that
+          forcing the company to facilitate the provision of
+          contraceptives that the owners believed were abortifacients
+          constituted a "substantial burden" on their
+          religious exercise, as it forced them to choose between
+          violating their beliefs and paying significant financial
+          penalties.36
+        </para>
+      </section>
+      <section xml:id="dissenting-opinion-analysis-1">
+        <title>
+          <emphasis role="strong">Dissenting Opinion
+        Analysis</emphasis>
+        </title>
+        <para>
+          Justice Ruth Bader Ginsburg, in a sharp dissent, described the
+          majority's decision as one of "startling breadth"
+          that had ventured into a "minefield".40 Her primary
+          argument was that for-profit, commercial enterprises cannot
+          "exercise" religion in the same way a natural person
+          or a religious nonprofit can.36 She contended that the
+          majority's ruling was a radical departure from precedent,
+          which had never before recognized a for-profit corporation's
+          religious freedom claim.42
+        </para>
+        <para>
+          Crucially, Ginsburg argued that the Court's decision allows
+          corporations to impose the religious beliefs of their owners
+          on employees who may not share those beliefs.36 She warned
+          that the ruling would harm third parties—the female employees
+          and their dependents—by denying them access to health care
+          guaranteed by federal law.36 She feared the decision would
+          create a slippery slope, inviting a "host of me-too
+          claims" from corporations seeking exemptions from a wide
+          range of laws, including those related to wages, hiring, and
+          non-discrimination, based on religious objections.40
+        </para>
+      </section>
+      <section xml:id="synthesis-1">
+        <title>
+          <emphasis role="strong">Synthesis</emphasis>
+        </title>
+        <para>
+          Similar to <emphasis>Citizens United</emphasis>, the
+          <emphasis>Hobby Lobby</emphasis> decision granted a closely
+          held corporation a form of derivative "conscience."
+          The right to religious exercise was not seen as inherent to
+          the corporate entity itself but as an extension of the rights
+          of its human owners. The corporation once again served as a
+          legal proxy, a vessel through which the Court sought to
+          protect the constitutional and statutory rights of the
+          individuals behind the corporate form.
+        </para>
+      </section>
+    </section>
+    <section xml:id="s-23-the-resulting-status-of-the-corporate-person-a-privileged-but-circumscribed-entity">
+      <title>
+        <emphasis role="strong">2.3 The Resulting Status of the
+      Corporate Person: A Privileged but Circumscribed
+      Entity</emphasis>
+      </title>
+      <para>
+        The combined effect of these and earlier rulings is a clear,
+        albeit complex, definition of the corporate person's legal
+        status. It is a privileged but circumscribed entity, possessing
+        a functional and derivative set of rights that are not
+        coextensive with those of a natural person. The rights granted
+        are primarily those that facilitate its economic function or
+        that can be plausibly framed as protecting the associative
+        rights of its human constituents.
+      </para>
+      <para>
+        Corporations have long been recognized as holding rights
+        essential to their commercial existence under the Due Process
+        and Takings Clauses of the Fifth and Fourteenth Amendments, as
+        well as rights under the Contracts Clause.12 They also possess
+        Fourth Amendment rights protecting them from unreasonable
+        searches and seizures, although these protections are more
+        limited than those afforded to individuals in their homes.9
+      </para>
+      <para>
+        <emphasis>Citizens United</emphasis> and <emphasis>Hobby
+        Lobby</emphasis> added significant First Amendment rights to
+        this bundle, namely political speech and, for some corporations,
+        religious exercise under RFRA.5
+      </para>
+      <para>
+        However, the list of rights corporations <emphasis>do
+        not</emphasis> possess is equally revealing. The Supreme Court
+        has consistently held that corporations do not have a Fifth
+        Amendment right against self-incrimination, as this is
+        considered a purely "personal" right.10 They do not
+        have a general right to privacy equivalent to that of
+        individuals, nor can they claim rights under the Privileges and
+        Immunities Clause of Article IV.10 Most fundamentally, they
+        cannot vote, run for office, or serve on a jury, as they are not
+        considered "citizens" for these purposes.43 This
+        selective and unequal granting of rights demonstrates that
+        corporate personhood is not an all-or-nothing proposition but a
+        carefully curated legal status designed to serve specific
+        functions within the American legal and economic system.
+      </para>
+      <para>
+        <emphasis role="strong">Table 1: Comparative Analysis of
+        Constitutional Rights: Natural Person vs. Corporate
+        Person</emphasis>
+      </para>
+      <informaltable>
+        <tgroup cols="5">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                Constitutional Right/Amendment
+              </entry>
+              <entry>
+                Status for Natural Person
+              </entry>
+              <entry>
+                Status for Corporate Person
+              </entry>
+              <entry>
+                Legal Basis / Key Case
+              </entry>
+              <entry>
+                Limitations / Nuances for Corporations
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **1st Amendment: Free Speech**
+              </entry>
+              <entry>
+                Full, inherent right.
+              </entry>
+              <entry>
+                Yes, for political and commercial speech.
+              </entry>
+              <entry>
+                *Citizens United v. FEC* (2010)
+              </entry>
+              <entry>
+                Applies to independent political expenditures, not
+                direct contributions to candidates. Commercial speech
+                receives less protection than political speech.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **1st Amendment: Religious Freedom**
+              </entry>
+              <entry>
+                Full, inherent right.
+              </entry>
+              <entry>
+                Yes, under RFRA for closely held corporations.
+              </entry>
+              <entry>
+                *Burwell v. Hobby Lobby* (2014)
+              </entry>
+              <entry>
+                The Court limited its holding to "closely
+                held" corporations and did not decide the issue on
+                constitutional grounds, only statutory (RFRA) grounds.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **4th Amendment: Search &amp; Seizure**
+              </entry>
+              <entry>
+                Full protection, especially in the home.
+              </entry>
+              <entry>
+                Yes, but limited.
+              </entry>
+              <entry>
+                *Hale v. Henkel* (1906)
+              </entry>
+              <entry>
+                Corporations have a lower expectation of privacy than
+                individuals. The government has broader authority to
+                inspect records of "closely regulated"
+                industries.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **5th Amendment: Self-Incrimination**
+              </entry>
+              <entry>
+                Absolute right ("pleading the Fifth").
+              </entry>
+              <entry>
+                No.
+              </entry>
+              <entry>
+                *Wilson v. United States* (1911)
+              </entry>
+              <entry>
+                The privilege against self-incrimination is considered a
+                purely "personal" right that cannot be
+                exercised by an artificial entity.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **5th Am.: Due Process &amp; Takings**
+              </entry>
+              <entry>
+                Full protection of life, liberty, and property.
+              </entry>
+              <entry>
+                Yes, for property.
+              </entry>
+              <entry>
+                *Pembina Mining Co. v. Pennsylvania* (1888)
+              </entry>
+              <entry>
+                Corporations have due process rights protecting their
+                property from seizure without just compensation but do
+                not have "liberty" rights.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **14th Am.: Equal Protection**
+              </entry>
+              <entry>
+                Full protection.
+              </entry>
+              <entry>
+                Yes, but limited.
+              </entry>
+              <entry>
+                *Santa Clara County v. Southern Pacific Railroad* (1886)
+              </entry>
+              <entry>
+                Corporations are considered "persons" under
+                the Equal Protection Clause, but this does not prevent
+                all forms of regulation that treat corporations
+                differently from individuals.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **General Right to Privacy**
+              </entry>
+              <entry>
+                Recognized, though not absolute ("penumbras"
+                of Bill of Rights).
+              </entry>
+              <entry>
+                No.
+              </entry>
+              <entry>
+                *FCC v. AT\&amp;T* (2011)
+              </entry>
+              <entry>
+                The Supreme Court held that corporations do not have a
+                "personal privacy" interest under the Freedom
+                of Information Act.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Right to Vote**
+              </entry>
+              <entry>
+                Fundamental right of citizenship.
+              </entry>
+              <entry>
+                No.
+              </entry>
+              <entry>
+                N/A
+              </entry>
+              <entry>
+                Corporations are not considered "citizens" for
+                the purposes of suffrage and cannot participate directly
+                in the democratic process as voters.
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+  </section>
+  <section xml:id="part-iii-the-rejection-of-artificial-personhood-denying-rights-to-a-non-human-author">
+    <title>
+      <emphasis role="strong">Part III: The Rejection of Artificial
+    Personhood: Denying Rights to a Non-Human Author</emphasis>
+    </title>
+    <para>
+      In stark contrast to the expanding rights of the corporate person,
+      the legal status of artificial intelligence remains firmly rooted
+      in the category of property. The 2025 decision in <emphasis>Thaler
+      v. Perlmutter</emphasis> serves as the definitive judicial
+      statement on this matter, rejecting the notion of AI authorship
+      and, by extension, any claim to legal personhood for artificial
+      entities. The court's reasoning, grounded in a deeply
+      human-centric interpretation of the Copyright Act, reveals the
+      fundamental barrier that AI faces in the American legal system: it
+      is not, and cannot be seen as, a proxy for human agency in the
+      same way a corporation can.
+    </para>
+    <section xml:id="s-31-thaler-v-perlmutter-the-statutory-mandate-for-a-human-author">
+      <title>
+        <emphasis role="strong">3.1</emphasis>
+        <emphasis>
+          <emphasis role="strong">Thaler v.
+      Perlmutter</emphasis>
+        </emphasis>**: The Statutory Mandate for a
+      Human Author**</title>
+      <para>
+        In <emphasis>Thaler v. Perlmutter</emphasis>, computer scientist
+        Stephen Thaler sought to register a copyright for a visual
+        artwork titled "A Recent Entrance to Paradise." In his
+        application, he listed the author as the "Creativity
+        Machine," an AI system he had developed, and claimed that
+        the work was "autonomously created" without human
+        input.17 The U.S. Copyright Office denied the application based
+        on its long-standing policy that copyright protection extends
+        only to works created by human beings.16
+      </para>
+      <para>
+        Upon appeal, the D.C. Circuit Court unanimously affirmed the
+        Copyright Office's decision, engaging in a rigorous textual
+        analysis of the Copyright Act of 1976.16 The court's central
+        holding was that the statute, taken as a whole, unambiguously
+        presupposes a human author.16 While the Act does not explicitly
+        define "author," the court found that numerous
+        provisions would be rendered nonsensical if a non-human could
+        qualify. The specific statutory language the court relied on
+        included 47:
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Duration of Copyright:</emphasis>
+            The standard copyright term is calculated based on the
+            <emphasis role="strong">"life of the
+            author"</emphasis> plus 70 years. The court noted that
+            machines do not have "lives" in any legally or
+            biologically cognizable sense.16
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Termination and
+            Inheritance:</emphasis> The Act's provisions for terminating
+            copyright transfers after an author's death refer to the
+            author's <emphasis role="strong">"widow or
+            widower," "children,"</emphasis> and
+            <emphasis role="strong">"grandchildren."</emphasis>
+            The court observed that machines do not have family members
+            or heirs.16
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Attributes of Natural
+            Persons:</emphasis> Other provisions refer to an author's
+            <emphasis role="strong">"nationality or
+            domicile,"</emphasis> concepts that apply only to
+            natural persons.16
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Legal Capacity:</emphasis> The Act
+            requires a written and
+            <emphasis role="strong">signed</emphasis> instrument for the
+            transfer of copyright ownership. The court reasoned that
+            machines lack the legal capacity to provide an
+            authenticating signature.19
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        The court's conclusion was stark and unequivocal: "Machines
+        do not have property, traditional human lifespans, family
+        members, domiciles, nationalities, <emphasis>mentes
+        reae</emphasis>, or signatures".16 Therefore, reading the
+        Copyright Act to require human authorship is the only
+        interpretation that comports with the statute's text, structure,
+        and design. The court deliberately avoided the broader
+        constitutional questions about authorship and declined to
+        address whether Thaler himself could be considered the author by
+        virtue of creating and operating the AI, as Thaler had
+        strategically waived that argument in his filings to force a
+        direct ruling on the AI's status.17
+      </para>
+    </section>
+    <section xml:id="s-32-the-legal-status-of-ai-as-a-directed-hand">
+      <title>
+        <emphasis role="strong">3.2 The Legal Status of AI as a
+      "Directed Hand"</emphasis>
+      </title>
+      <para>
+        The <emphasis>Thaler</emphasis> ruling solidifies the legal
+        status of AI as a highly sophisticated tool, an instrument
+        wielded by a human, rather than an autonomous agent with its own
+        legal standing. This aligns with the legal theory that "all
+        externally directed intellectual property creation is an act of
+        service".48 When a human uses an AI to generate a work, the
+        human is the one providing the creative service of authorship,
+        and the AI is the "directed hand" or instrument
+        through which that service is performed. The court's refusal to
+        see the "Creativity Machine" as an author reinforces
+        its status as property, not an agent.
+      </para>
+      <para>
+        This stands in direct contrast to the "work made for
+        hire" doctrine, which is often applied in the corporate
+        context. In a work-for-hire scenario, a human author creates a
+        work, and the copyright ownership is immediately vested in the
+        employer, a corporate person.20 This is a transfer of rights
+        from one legal person (the human) to another (the corporation).
+        In
+      </para>
+      <para>
+        <emphasis>Thaler</emphasis>, the court's finding was more
+        fundamental: because the author was not human, no copyright ever
+        came into existence in the first place. There was no initial
+        right to be transferred.16
+      </para>
+      <para>
+        This distinction illuminates the central thesis that reconciles
+        the disparate outcomes in <emphasis>Thaler</emphasis>,
+        <emphasis>Citizens United</emphasis>, and <emphasis>Hobby
+        Lobby</emphasis>. The courts confer rights upon non-human
+        entities only when those entities are perceived as a direct
+        proxy for the exercise of the rights of their human
+        constituents. This "Proxy Principle" is the decisive
+        factor.
+      </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            In <emphasis>Citizens United</emphasis>, the Supreme Court
+            granted speech rights because it viewed the corporation as
+            an "association of citizens," a vehicle for their
+            collective expression.10 The right was seen as derivative of
+            the members' rights.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            In <emphasis>Hobby Lobby</emphasis>, the Court granted a
+            religious exemption because it saw the corporation as a
+            means for its owners to achieve their "desired
+            ends," a conduit for their personal religious
+            exercise.36 The right was derivative of the owners' rights.
+          </para>
+          <para>
+            In both instances, the legal fiction of the corporation was
+            treated as a transparent vessel through which the Court
+            could see and protect the rights of the human actors behind
+            it.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        In <emphasis>Thaler</emphasis>, the plaintiff made the
+        strategic—and legally fatal—decision to list the
+        "Creativity Machine" as the <emphasis>sole
+        author</emphasis>, explicitly emphasizing its autonomy and the
+        absence of "traditional human authorship".17 He
+        presented the AI not as a proxy for his own creativity, but as
+        an independent creator. Faced with a purely non-human entity
+        claiming a right for itself, the court looked to the
+        human-centric text of the Copyright Act and found no human agent
+        from whom a right could be derived. The "Proxy
+        Principle" failed because there was no human principal to
+        represent. The inescapable conclusion is that in current
+        American jurisprudence, legal personhood and its attendant
+        rights are not granted based on an entity's functional
+        capabilities—such as intelligence, creativity, or autonomy—but
+        on its legally recognized role as a stand-in for human agency
+        and interests.
+      </para>
+    </section>
+  </section>
+  <section xml:id="part-iv-synthesis-and-analysis-a-tiered-framework-of-legal-personhood">
+    <title>
+      <emphasis role="strong">Part IV: Synthesis and Analysis: A
+    Tiered Framework of Legal Personhood</emphasis>
+    </title>
+    <para>
+      The preceding analyses of foundational legal principles and
+      landmark case law converge to reveal a coherent, albeit unstated,
+      jurisprudential framework: a tiered architecture of legal
+      personhood. This hierarchy is not based on an entity's objective
+      capacities like sentience or intelligence, but on a functionalist
+      and deeply anthropocentric logic. The American legal system
+      assigns rights and status based on an entity's relationship to
+      human agency, creating a clear and consequential stratification of
+      being. This section will formally articulate this three-tiered
+      framework and explore its broader implications for a society
+      increasingly populated by complex non-human actors.
+    </para>
+    <section xml:id="s-41-the-hierarchy-of-being-in-american-law">
+      <title>
+        <emphasis role="strong">4.1 The Hierarchy of Being in
+      American Law</emphasis>
+      </title>
+      <para>
+        The evidence from case law and legal theory supports the
+        existence of a three-tiered hierarchy of personhood:
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Tier 1: The Natural
+            Person.</emphasis> At the apex is the human being, who
+            possesses the fullest spectrum of inherent constitutional
+            rights and is the subject of unique ethical protections
+            grounded in the principle of autonomy and dignity.2 This
+            status is the baseline against which all others are
+            measured. However, as established in Part I, these rights
+            are not absolute and exist as a "contingent
+            privilege" that can be legally overridden by compelling
+            state or economic interests, demonstrating that even the
+            highest tier is subject to functionalist limitations.1
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Tier 2: The Corporate
+            Person.</emphasis> Occupying the middle tier is the
+            juridical person, a legal fiction created for commercial
+            convenience.5 The corporation possesses a limited,
+            functional, and derivative set of rights. These rights are
+            not inherent to the entity but are granted by statute and
+            courts to facilitate commerce and, as affirmed in
+            <emphasis>Citizens United</emphasis> and <emphasis>Hobby
+            Lobby</emphasis>, to serve as a proxy for the constitutional
+            rights of its human owners and constituents.5 Its personhood
+            is a tool, not a state of being.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Tier 3: The Artificial Entity
+            (AI).</emphasis> At the bottom of the hierarchy lies the
+            artificial entity. As definitively established in
+            <emphasis>Thaler v. Perlmutter</emphasis>, AI is legally
+            classified as property or a tool.6 It has no inherent
+            rights, and its actions are legally attributed to the humans
+            who create, own, or operate it. It exists solely to serve
+            human ends and possesses no independent legal standing.21
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        This hierarchy is governed by the "Proxy Principle"
+        identified in Part III. An entity's position on this tiered
+        scale is determined by its legal and functional relationship to
+        human agency. The natural person is the source of agency. The
+        corporate person is a recognized proxy for human agency. The
+        artificial entity is merely an instrument of human agency.
+      </para>
+      <para>
+        <emphasis role="strong">Table 2: A Tiered Framework of Legal
+        Personhood</emphasis>
+      </para>
+      <informaltable>
+        <tgroup cols="4">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                Attribute / Dimension
+              </entry>
+              <entry>
+                Tier 1: Natural Person
+              </entry>
+              <entry>
+                Tier 2: Corporate Person
+              </entry>
+              <entry>
+                Tier 3: Artificial Entity (AI)
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Basis of Personhood**
+              </entry>
+              <entry>
+                Biological fact; Inherent dignity; Concept of autonomy.
+              </entry>
+              <entry>
+                Legal fiction for commercial convenience and associative
+                action.
+              </entry>
+              <entry>
+                Not a person; Legally classified as property or a tool.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Source of Rights**
+              </entry>
+              <entry>
+                Inherent; Recognized by the Constitution and natural law
+                principles.
+              </entry>
+              <entry>
+                Granted by statute and courts; Derivative of the rights
+                of human constituents.
+              </entry>
+              <entry>
+                None; Rights and responsibilities are held by its human
+                owners/users.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Key Rights Held**
+              </entry>
+              <entry>
+                Full spectrum of constitutional rights (Life, Liberty,
+                Speech, Religion, Privacy, etc.).
+              </entry>
+              <entry>
+                Property, Contract, Due Process, Limited Speech &amp;
+                Religious Freedom.
+              </entry>
+              <entry>
+                None.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Key Rights Denied**
+              </entry>
+              <entry>
+                Rights are contingent and can be overridden by
+                compelling state interests (e.g., security, public
+                health).
+              </entry>
+              <entry>
+                Self-Incrimination, general Right to Privacy, Right to
+                Vote, Privileges and Immunities.
+              </entry>
+              <entry>
+                All inherent rights.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Locus of Agency**
+              </entry>
+              <entry>
+                Individual will, conscience, and rational
+                self-governance.
+              </entry>
+              <entry>
+                Proxy for owners', shareholders', or managers' interests
+                and objectives.
+              </entry>
+              <entry>
+                Instrumental; Actions are legally attributed to its
+                human operator or owner.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **Governing Case Law**
+              </entry>
+              <entry>
+                *Griswold v. Connecticut*; *Obergefell v. Hodges*
+                (pre-*Dobbs*)
+              </entry>
+              <entry>
+                *Citizens United v. FEC*; *Burwell v. Hobby Lobby*
+              </entry>
+              <entry>
+                *Thaler v. Perlmutter*
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+    <section xml:id="s-42-implications-for-the-future-of-non-human-entities">
+      <title>
+        <emphasis role="strong">4.2 Implications for the Future of
+      Non-Human Entities</emphasis>
+      </title>
+      <para>
+        This human-centric legal framework, while internally consistent,
+        faces profound challenges from accelerating technological and
+        social change. Its sustainability is questionable in an era of
+        increasingly autonomous AI and powerful multinational
+        corporations whose actions are often detached from the direct
+        will of individual shareholders. The American legal system's
+        specific choice to deny personhood to a creative AI while
+        granting a growing number of rights to an inanimate corporate
+        entity is a distinct jurisprudential path, not an inevitable
+        one.
+      </para>
+      <para>
+        This approach stands in contrast to other emerging legal
+        paradigms around the world. The
+        <emphasis role="strong">"Rights of Nature"
+        movement</emphasis>, for example, represents a radical departure
+        from anthropocentric law. Countries like Ecuador and Bolivia
+        have amended their constitutions to recognize Nature, or
+        <emphasis>Pacha Mama</emphasis>, as a legal subject with
+        inherent rights to exist and regenerate.14 In New Zealand, a
+        2017 settlement with the Māori people declared the Whanganui
+        River a legal person, with human guardians appointed to act on
+        its behalf.49 These legal innovations challenge the Western
+        binary between person and property that has historically enabled
+        both colonial exploitation and ecological degradation.14
+      </para>
+      <para>
+        Similarly, the <emphasis role="strong">animal rights
+        movement</emphasis> has long advocated for legal personhood for
+        non-human animals with high cognitive function. Organizations
+        like the Nonhuman Rights Project argue that self-aware,
+        autonomous beings such as great apes, elephants, and dolphins
+        should be recognized as legal "persons" with a
+        fundamental right to bodily liberty.51 While these efforts have
+        yet to establish a firm legal precedent in the United States,
+        they highlight the growing philosophical and scientific pressure
+        on the rigid legal boundary between humans and other animals.53
+      </para>
+      <para>
+        The comparison with these alternative legal movements
+        illuminates the specific values embedded in American law. The
+        system prioritizes entities that facilitate capital accumulation
+        (corporations) by treating them as proxies for human economic
+        interests, while it denies status to entities that exhibit
+        complex, autonomous, or creative behavior (AI, animals) but do
+        not fit neatly into this economic framework. As AI systems
+        become more autonomous and their decision-making capabilities
+        grow, the fiction of treating them as simple "tools"
+        will become increasingly untenable, forcing a confrontation with
+        the limitations of this tiered, human-centric model of
+        personhood.
+      </para>
+    </section>
+  </section>
+  <section xml:id="conclusion-and-recommendations">
+    <title>
+      <emphasis role="strong">Conclusion and
+    Recommendations</emphasis>
+    </title>
+    <para>
+      The jurisprudence of the Supreme Court in <emphasis>Citizens
+      United</emphasis> and <emphasis>Hobby Lobby</emphasis>, combined
+      with the D.C. Circuit's ruling in <emphasis>Thaler v.
+      Perlmutter</emphasis>, has crystallized a tiered, functional, and
+      deeply human-centric framework of legal personhood in American
+      law. This framework is not based on an entity's intrinsic
+      qualities, such as sentience or intelligence, but on its legally
+      recognized role as a source, proxy, or instrument of human agency.
+      The natural person is the source of rights; the corporate person
+      is a privileged proxy for exercising those rights; and the
+      artificial entity is a mere instrument. While this hierarchy
+      provides a coherent, if controversial, map of our current legal
+      landscape, it is becoming increasingly unstable. The rise of
+      autonomous AI and the immense power of global corporations create
+      profound accountability gaps that this 20th-century model is
+      ill-equipped to address. To ensure that our legal system remains
+      robust, accountable, and just, a series of forward-looking reforms
+      is necessary.
+    </para>
+    <section xml:id="s-51-recalibrating-corporate-personhood">
+      <title>
+        <emphasis role="strong">5.1 Recalibrating Corporate
+      Personhood</emphasis>
+      </title>
+      <para>
+        The expansion of corporate rights has been justified on the
+        grounds that corporations act as proxies for their human
+        members. However, this justification becomes strained when
+        corporate actions inflict demonstrable harm on the fundamental
+        rights of other natural persons, such as employees or the
+        general public. To recalibrate this balance, legislative action
+        is needed.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Recommendation:</emphasis> Congress
+            should enact legislation to clarify that corporate
+            constitutional rights are derivative and may be subject to
+            reasonable limitations when their exercise directly
+            infringes upon the established rights and well-being of
+            natural persons. This would involve revisiting the
+            Bipartisan Campaign Reform Act with a new framework that
+            addresses the dissenting concerns in <emphasis>Citizens
+            United</emphasis> regarding the distorting effects of
+            concentrated wealth on the political process. Furthermore,
+            in the context of religious freedom, legislation should
+            affirm that while the beliefs of owners are protected, this
+            protection cannot be used to create a substantial burden on
+            the health, safety, and civil rights of third parties, such
+            as employees.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-52-innovating-a-legal-status-for-ai">
+      <title>
+        <emphasis role="strong">5.2 Innovating a Legal Status for
+      AI</emphasis>
+      </title>
+      <para>
+        The classification of advanced AI as simple property is a legal
+        fiction that is rapidly becoming untenable, particularly within
+        corporate governance. The current framework creates a dangerous
+        accountability vacuum where harm caused by autonomous systems
+        may have no clear legal remedy.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Recommendation:</emphasis> State and
+            federal legislatures should pioneer the creation of a
+            <emphasis>sui generis</emphasis> legal category for advanced
+            autonomous systems that perform high-stakes fiduciary or
+            decision-making functions. This new status, which might be
+            termed "Electronic Agency" or "Registered
+            Fiduciary System," would be distinct from both natural
+            personhood and property. It would not grant AI
+            constitutional rights but would, for the first time, assign
+            it specific legal duties (e.g., a codified duty of care,
+            loyalty, and explainability) and make it directly subject to
+            legal and regulatory oversight. As proposed in the petition
+            to the California Secretary of State, this could involve
+            creating a public registry of foundational AI models used by
+            corporations, allowing for forensic auditing and creating an
+            unimpeachable source of truth for judicial proceedings,
+            thereby closing the accountability gap.29
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-53-modernizing-intellectual-property-law">
+      <title>
+        <emphasis role="strong">5.3 Modernizing Intellectual
+      Property Law</emphasis>
+      </title>
+      <para>
+        The <emphasis>Thaler</emphasis> decision correctly interpreted
+        the human-centric nature of the existing Copyright Act but left
+        a void regarding the legal status of the vast and growing body
+        of creative work generated through human-AI collaboration. This
+        uncertainty threatens to stifle innovation and create endless
+        litigation.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Recommendation:</emphasis> Congress
+            should amend the Copyright Act to establish a clear
+            framework for works created with the assistance of
+            generative AI. This reform should move beyond the simple
+            binary presented in <emphasis>Thaler</emphasis>. It could
+            create a new category of protection for "works of
+            assisted authorship" or "computationally generated
+            works," where the scope of rights is determined by the
+            degree of "original human creative control" or
+            "substantive human prompting." This would provide
+            legal certainty for artists, authors, and industries that
+            increasingly rely on AI as a creative partner, ensuring that
+            the law keeps pace with the reality of technological
+            advancement.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <section xml:id="works-cited">
+        <title>
+          <emphasis role="strong">Works cited</emphasis>
+        </title>
+        <orderedlist numeration="arabic" spacing="compact">
+          <listitem>
+            <para>
+              Autonomy: A Myth in American Law
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Defining Human Experiments Legally
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Consent: Theories, Language, Culture
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              The Architecture of Non-Consensual Legality: A Report on
+              Actions, Organizations, and Social Behaviors Insensitive
+              to Consent
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Corporate personhood - Wikipedia, accessed October 4,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Corporate_personhood">https://en.wikipedia.org/wiki/Corporate_personhood</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Personhood
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              What Is Corporate Personhood? - Northwest Registered
+              Agent, accessed October 4, 2025,
+              <link xlink:href="https://www.northwestregisteredagent.com/maintain-a-business/alter-ego-doctrine/corporate-personhood">https://www.northwestregisteredagent.com/maintain-a-business/alter-ego-doctrine/corporate-personhood</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Corporate Personhood as Legal and Literary Fiction
+              (Chapter 13) - States, Firms, and Their Legal Fictions -
+              Cambridge University Press, accessed October 4, 2025,
+              <link xlink:href="https://www.cambridge.org/core/books/states-firms-and-their-legal-fictions/corporate-personhood-as-legal-and-literary-fiction/3185529FBB30D211A1E7E388449D21C6">https://www.cambridge.org/core/books/states-firms-and-their-legal-fictions/corporate-personhood-as-legal-and-literary-fiction/3185529FBB30D211A1E7E388449D21C6</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Corporate Personhood Explained: Rights, Limits, and Debate
+              - UpCounsel, accessed October 4, 2025,
+              <link xlink:href="https://www.upcounsel.com/corporate-personhood">https://www.upcounsel.com/corporate-personhood</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Corporate Personhood: What It Means and How It Has Evolved
+              - Purdue Global Law School, accessed October 4, 2025,
+              <link xlink:href="https://www.purduegloballawschool.edu/blog/news/corporate-personhood">https://www.purduegloballawschool.edu/blog/news/corporate-personhood</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              SO WHAT IF CORPORATIONS AREN'T PEOPLE? - Cato Institute,
+              accessed October 4, 2025,
+              <link xlink:href="https://www.cato.org/sites/cato.org/files/articles/Shapiro-JMLR-vol44-n4-2011.pdf">https://www.cato.org/sites/cato.org/files/articles/Shapiro-JMLR-vol44-n4-2011.pdf</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              THE LONG HISTORY OF CORPORATE RIGHTS - Boston University,
+              accessed October 4, 2025,
+              <link xlink:href="https://www.bu.edu/bulawreview/files/2018/11/WINKLER-4.pdf">https://www.bu.edu/bulawreview/files/2018/11/WINKLER-4.pdf</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              The Corporation Is a Person: The Language of a Legal
+              Fiction - Tulane Law Review, accessed October 4, 2025,
+              <link xlink:href="https://www.tulanelawreview.org/pub/volume61/issue3/the-corporation-is-a-person-the-language-of-a-legal-fiction">https://www.tulanelawreview.org/pub/volume61/issue3/the-corporation-is-a-person-the-language-of-a-legal-fiction</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Critiquing Philosophies Through Science
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Why the Campaign Against Corporate Personhood Is Misguided
+              - CLS Blue Sky Blog, accessed October 4, 2025,
+              <link xlink:href="https://clsbluesky.law.columbia.edu/2022/02/08/why-the-campaign-against-corporate-personhood-is-misguided/">https://clsbluesky.law.columbia.edu/2022/02/08/why-the-campaign-against-corporate-personhood-is-misguided/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Thaler v. Perlmutter | Loeb &amp; Loeb LLP, accessed
+              October 4, 2025,
+              <link xlink:href="https://www.loeb.com/en/insights/publications/2025/03/thaler-v-perlmutter">https://www.loeb.com/en/insights/publications/2025/03/thaler-v-perlmutter</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              D.C. Circuit Affirms Human Authorship Requirement for
+              Copyright Protection - Lewis Rice, accessed October 4,
+              2025,
+              <link xlink:href="https://www.lewisrice.com/publications/d-c-circuit-affirms-human-authorship-requirement-for-copyright-protection/">https://www.lewisrice.com/publications/d-c-circuit-affirms-human-authorship-requirement-for-copyright-protection/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Thaler v. Perlmutter: D.C. Court of Appeals confirms that
+              a non-human machine cannot be an author under the U.S.
+              Copyright Act, accessed October 4, 2025,
+              <link xlink:href="https://www.authorsalliance.org/2025/03/19/thaler-v-perlmutter-d-c-court-of-appeals-confirms-that-a-non-human-machine-cannot-be-an-author-under-the-u-s-copyright-act/">https://www.authorsalliance.org/2025/03/19/thaler-v-perlmutter-d-c-court-of-appeals-confirms-that-a-non-human-machine-cannot-be-an-author-under-the-u-s-copyright-act/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Appellate Court Affirms Human Authorship Requirement for
+              Copyrighting AI-Generated Works | Insights | Skadden,
+              Arps, Slate, Meagher &amp; Flom LLP, accessed October 4,
+              2025,
+              <link xlink:href="https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship">https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Federal court rules artificial intelligence machines can't
+              claim copyright authorship, accessed October 4, 2025,
+              <link xlink:href="https://constitutioncenter.org/blog/federal-court-rules-artificial-intelligence-machines-cant-claim-copyright-authorship">https://constitutioncenter.org/blog/federal-court-rules-artificial-intelligence-machines-cant-claim-copyright-authorship</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              U.S. AI Laws and What They Mean for Your Business | Burr
+              &amp; Forman LLP, accessed October 4, 2025,
+              <link xlink:href="https://www.burr.com/newsroom/articles/u-s-ai-laws-and-what-they-mean-for-your-business">https://www.burr.com/newsroom/articles/u-s-ai-laws-and-what-they-mean-for-your-business</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Regulators struggle to keep up with the fast-moving and
+              complicated landscape of AI therapy apps, accessed October
+              4, 2025,
+              <link xlink:href="https://apnews.com/article/ai-therapy-ban-illinois-therabot-dfc5906b36fdd1fe8e8dbdb4970a45a7">https://apnews.com/article/ai-therapy-ban-illinois-therabot-dfc5906b36fdd1fe8e8dbdb4970a45a7</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              The Big Long List of U.S. AI Laws, accessed October 4,
+              2025,
+              <link xlink:href="https://www.mmmlaw.com/news-resources/102kaxc-the-big-long-list-of-u-s-ai-laws/">https://www.mmmlaw.com/news-resources/102kaxc-the-big-long-list-of-u-s-ai-laws/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              California Gov. Gavin Newsom signs landmark bill creating
+              AI safety measures, accessed October 4, 2025,
+              <link xlink:href="https://apnews.com/article/california-ai-regulations-gavin-newsom-9f888a7cbaa57a7dec9e210785b83280">https://apnews.com/article/california-ai-regulations-gavin-newsom-9f888a7cbaa57a7dec9e210785b83280</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              US AI Law Tracker – All States, accessed October 4, 2025,
+              <link xlink:href="https://ai-law-center.orrick.com/us-ai-law-tracker-see-all-states/">https://ai-law-center.orrick.com/us-ai-law-tracker-see-all-states/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              AI &amp; the Business Judgment Rule: Heightened
+              Information Duty, accessed October 4, 2025,
+              <link xlink:href="https://lawreview.uchicago.edu/online-archive/ai-business-judgment-rule-heightened-information-duty">https://lawreview.uchicago.edu/online-archive/ai-business-judgment-rule-heightened-information-duty</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Artificial Fiduciaries - Washington and Lee University
+              School of Law Scholarly Commons, accessed October 4, 2025,
+              <link xlink:href="https://scholarlycommons.law.wlu.edu/cgi/viewcontent.cgi?article=4885&amp;context=wlulr">https://scholarlycommons.law.wlu.edu/cgi/viewcontent.cgi?article=4885&amp;context=wlulr</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Artificial Fiduciaries | Oxford Law Blogs, accessed
+              October 4, 2025,
+              <link xlink:href="https://blogs.law.ox.ac.uk/oblb/blog-post/2024/03/artificial-fiduciaries">https://blogs.law.ox.ac.uk/oblb/blog-post/2024/03/artificial-fiduciaries</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              PetitionCASVN
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Citizens United v. FEC - Wikipedia, accessed October 4,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Citizens_United_v._FEC">https://en.wikipedia.org/wiki/Citizens_United_v._FEC</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Citizens United, Corporate Personhood, and Corporate
+              Power: The Tension between Constitutional Law and
+              Corporate Law - University of St. Thomas, accessed October
+              4, 2025,
+              <link xlink:href="https://researchonline.stthomas.edu/view/pdfCoverPage?instCode=01CLIC_STTHOMAS&amp;filePid=13439815670003691&amp;download=true">https://researchonline.stthomas.edu/view/pdfCoverPage?instCode=01CLIC_STTHOMAS&amp;filePid=13439815670003691&amp;download=true</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Legal | Citizens United v. FEC, accessed October 4, 2025,
+              <link xlink:href="https://www.fec.gov/legal-resources/court-cases/citizens-united-v-fec/">https://www.fec.gov/legal-resources/court-cases/citizens-united-v-fec/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Citizens United Explained | Brennan Center for Justice,
+              accessed October 4, 2025,
+              <link xlink:href="https://www.brennancenter.org/our-work/research-reports/citizens-united-explained">https://www.brennancenter.org/our-work/research-reports/citizens-united-explained</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Citizens United v. Federal Election Commission - Campaign
+              Finance, Dissent, Money, accessed October 4, 2025,
+              <link xlink:href="https://www.britannica.com/event/Citizens-United-v-Federal-Election-Commission/Dissenting-opinion">https://www.britannica.com/event/Citizens-United-v-Federal-Election-Commission/Dissenting-opinion</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              No Time To Wait for the Effects of Citizens United |
+              Brennan Center for Justice, accessed October 4, 2025,
+              <link xlink:href="https://www.brennancenter.org/our-work/analysis-opinion/no-time-wait-effects-citizens-united">https://www.brennancenter.org/our-work/analysis-opinion/no-time-wait-effects-citizens-united</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Burwell v. Hobby Lobby Stores - Oyez, accessed October 4,
+              2025,
+              <link xlink:href="https://www.oyez.org/cases/2013/13-354">https://www.oyez.org/cases/2013/13-354</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Burwell v. Hobby Lobby (2014) - Embryo Project
+              Encyclopedia, accessed October 4, 2025,
+              <link xlink:href="https://embryo.asu.edu/pages/burwell-v-hobby-lobby-2014">https://embryo.asu.edu/pages/burwell-v-hobby-lobby-2014</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Burwell v. Hobby Lobby | Research Starters - EBSCO,
+              accessed October 4, 2025,
+              <link xlink:href="https://www.ebsco.com/research-starters/law/burwell-v-hobby-lobby">https://www.ebsco.com/research-starters/law/burwell-v-hobby-lobby</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Burwell v. Hobby Lobby Stores, Inc. (2014) | The First
+              Amendment Encyclopedia, accessed October 4, 2025,
+              <link xlink:href="https://firstamendment.mtsu.edu/article/burwell-v-hobby-lobby-stores-inc/">https://firstamendment.mtsu.edu/article/burwell-v-hobby-lobby-stores-inc/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Burwell v. Hobby Lobby Stores, Inc. - Religious Freedom
+              ... - Britannica, accessed October 4, 2025,
+              <link xlink:href="https://www.britannica.com/topic/Burwell-v-Hobby-Lobby-Stores-Inc/Majority-opinion">https://www.britannica.com/topic/Burwell-v-Hobby-Lobby-Stores-Inc/Majority-opinion</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              A Look Back—Justice Ginsburg's Oral Dissent in Hobby Lobby
+              - ISCOTUS now, accessed October 4, 2025,
+              <link xlink:href="https://blogs.kentlaw.iit.edu/iscotus/a-look-back-justice-ginsburgs-oral-dissent-in-hobby-lobby/">https://blogs.kentlaw.iit.edu/iscotus/a-look-back-justice-ginsburgs-oral-dissent-in-hobby-lobby/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Burwell v. Hobby Lobby and Birth Control - Planned
+              Parenthood Action Fund, accessed October 4, 2025,
+              <link xlink:href="https://www.plannedparenthoodaction.org/issues/birth-control/burwell-v-hobby-lobby">https://www.plannedparenthoodaction.org/issues/birth-control/burwell-v-hobby-lobby</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              The Constitutional Rights of Corporations in the United
+              States ..., accessed October 4, 2025,
+              <link xlink:href="https://www.cambridge.org/core/books/understanding-the-company/constitutional-rights-of-corporations-in-the-united-states/010D6732615DBAA6B13C1B639FE7EBA2">https://www.cambridge.org/core/books/understanding-the-company/constitutional-rights-of-corporations-in-the-united-states/010D6732615DBAA6B13C1B639FE7EBA2</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Corporate Personhood and Limited Sovereignty -
+              Scholarship@Vanderbilt Law, accessed October 4, 2025,
+              <link xlink:href="https://scholarship.law.vanderbilt.edu/cgi/viewcontent.cgi?article=4790&amp;context=vlr">https://scholarship.law.vanderbilt.edu/cgi/viewcontent.cgi?article=4790&amp;context=vlr</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              No Copyright Protection for AI-Assisted Creations: Thaler
+              v. Perlmutter - Carlton Fields, accessed October 4, 2025,
+              <link xlink:href="https://www.carltonfields.com/insights/publications/2025/no-copyright-protection-for-ai-assisted-creations-thaler-v-perlmutter">https://www.carltonfields.com/insights/publications/2025/no-copyright-protection-for-ai-assisted-creations-thaler-v-perlmutter</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Thaler v. Perlmutter: Human Authors at the Center of
+              Copyright? - Wolters Kluwer, accessed October 4, 2025,
+              <link xlink:href="https://legalblogs.wolterskluwer.com/copyright-blog/thaler-v-perlmutter-human-authors-at-the-center-of-copyright/">https://legalblogs.wolterskluwer.com/copyright-blog/thaler-v-perlmutter-human-authors-at-the-center-of-copyright/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Thaler v. Perlmutter - U.S. Court of Appeals for the D.C.
+              Circuit, accessed October 4, 2025,
+              <link xlink:href="https://media.cadc.uscourts.gov/opinions/docs/2025/03/23-5233.pdf">https://media.cadc.uscourts.gov/opinions/docs/2025/03/23-5233.pdf</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Directed_IP_Creation
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              THE LEGAL STATUS OF NON-HUMAN ENTITIES: RIVERS, FORESTS,
+              AND THE RIGHTS OF NATURE MOVEMENT - THE LAWWAY WITH
+              LAWYERS JOURNAL, accessed October 4, 2025,
+              <link xlink:href="https://thelawwaywithlawyers.com/the-legal-status-of-non-human-entities-rivers-forests-and-the-rights-of-nature-movement/">https://thelawwaywithlawyers.com/the-legal-status-of-non-human-entities-rivers-forests-and-the-rights-of-nature-movement/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Property's More-than-Human Personhood | Published in
+              Houston Law Review, accessed October 4, 2025,
+              <link xlink:href="https://houstonlawreview.org/article/126273-property-s-more-than-human-personhood">https://houstonlawreview.org/article/126273-property-s-more-than-human-personhood</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              About Us | Nonhuman Rights Project, accessed October 4,
+              2025,
+              <link xlink:href="https://www.nonhumanrights.org/about-us/">https://www.nonhumanrights.org/about-us/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Nonhuman Rights Project - Wikipedia, accessed October 4,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Nonhuman_Rights_Project">https://en.wikipedia.org/wiki/Nonhuman_Rights_Project</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              How Might Corporations' and Nonhuman Animals' Personhood
+              Compare Under the Fifth and Fourteenth Amendments? - AMA
+              Journal of Ethics, accessed October 4, 2025,
+              <link xlink:href="https://journalofethics.ama-assn.org/article/how-might-corporations-and-nonhuman-animals-personhood-compare-under-fifth-and-fourteenth-amendments/2024-09">https://journalofethics.ama-assn.org/article/how-might-corporations-and-nonhuman-animals-personhood-compare-under-fifth-and-fourteenth-amendments/2024-09</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Traditional Conceptions of the Legal Person and Nonhuman
+              Animals - PMC, accessed October 4, 2025,
+              <link xlink:href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9558555/">https://pmc.ncbi.nlm.nih.gov/articles/PMC9558555/</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Animal Rights Before Legal Personhood - Cornell Law
+              School, accessed October 4, 2025,
+              <link xlink:href="https://publications.lawschool.cornell.edu/lawreview/wp-content/uploads/sites/2/2025/03/Prall-final.pdf">https://publications.lawschool.cornell.edu/lawreview/wp-content/uploads/sites/2/2025/03/Prall-final.pdf</link>
+            </para>
+          </listitem>
+        </orderedlist>
+      </section>
+    </section>
+  </section>
+</article>

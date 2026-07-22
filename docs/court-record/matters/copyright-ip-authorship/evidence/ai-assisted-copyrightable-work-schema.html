@@ -1,0 +1,2305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Formalized Legal and Data Framework for AI-Assisted Copyrightable Works</title>
+<meta name="DC.title" content="A Formalized Legal and Data Framework for AI-Assisted Copyrightable Works">
+<meta name="DC.creator" content="Ian D.L.N. McLean">
+<meta name="DC.subject" content="">
+<meta name="DC.description" content="">
+<meta name="DC.date" content="">
+<meta name="DC.type" content="Article">
+<meta name="DC.language" content="en">
+<meta name="DC.rights" content="CC BY-SA 4.0">
+<style>
+          :root {
+            --ink: #101922;
+            --ink-soft: #3f4f5c;
+            --rule: #d3dbe3;
+            --surface: #fbfcfd;
+            --amber: #cf7d18;
+            --teal: #0b6169;
+            --green: #1a7a4a;
+            --blue: #0b3d91;
+            --paper: #f5f7f9;
+          }
+          body { font-family: 'Georgia', serif; max-width: 820px; margin: 0 auto;
+                 padding: 2rem 1.5rem; background: var(--paper); color: var(--ink);
+                 font-size: 18px; line-height: 1.65; }
+          h1, h2, h3, h4 { font-family: system-ui, sans-serif; }
+          h1 { font-size: 2.2rem; margin-bottom: 0.25em; }
+          h2 { font-size: 1.55rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3em; }
+          h3 { font-size: 1.2rem; }
+          h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em;
+               color: var(--ink-soft); }
+          pre, code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
+          pre { background: #0b1418; color: #c9d6d3; padding: 1.1rem 1.3rem;
+                border-radius: 6px; overflow-x: auto; }
+          blockquote { border-left: 3px solid var(--teal); margin: 1.5rem 0;
+                       padding: 0.3rem 0 0.3rem 1.2rem; color: var(--ink-soft); }
+          table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; font-size: 0.9rem; }
+          th, td { border: 1px solid var(--rule); padding: 0.5rem 0.8rem; text-align: left; }
+          th { background: var(--surface); font-family: system-ui, sans-serif; }
+          a { color: var(--teal); }
+
+          /* Finding sections */
+          section[data-condition="confirmed"] {
+            border-left: 4px solid var(--green);
+            padding-left: 1.2rem;
+            margin-left: -1.2rem;
+          }
+          section[data-condition="confirmed-with-caveats"] {
+            border-left: 4px solid var(--blue);
+            padding-left: 1.2rem;
+            margin-left: -1.2rem;
+          }
+          section[data-condition="split"] {
+            border-left: 4px solid var(--amber);
+            padding-left: 1.2rem;
+            margin-left: -1.2rem;
+          }
+
+          header.doc-header { margin-bottom: 2.5rem; }
+          .abstract { background: var(--surface); border: 1px solid var(--rule);
+                      border-radius: 6px; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+          .abstract p:first-child::before { content: "Abstract. "; font-weight: bold; }
+          footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+                   font-size: 0.8rem; color: var(--ink-soft); }
+        </style>
+</head>
+<body>
+  <header class="doc-header"><h1>A Formalized Legal and Data Framework for AI-Assisted Copyrightable Works</h1>
+<p class="byline">
+        By Ian D.L.N. McLean — </p></header>
+  
+  <section id="introduction-navigating-copyright-in-the-age-of-generative-ai">
+    <h2>
+      <em>Introduction: Navigating Copyright in
+    the Age of Generative AI</em>
+    </h2>
+    <section id="problem-statement">
+      <h3>
+        <em>Problem
+      Statement</em>
+      </h3>
+      <p>
+        The proliferation of sophisticated generative artificial
+        intelligence (AI) tools has created a critical legal and
+        technical ambiguity at the heart of creative industries. Systems
+        capable of producing text, images, and music that are
+        aesthetically indistinguishable from human-created works
+        challenge the foundational principles of intellectual property
+        law.1 The central challenge is to delineate the boundary between
+        a human-authored, AI-assisted work eligible for copyright
+        protection and a machine-generated work that falls into the
+        public domain. This ambiguity poses significant risks for
+        creators, who need clarity on the protectability of their
+        efforts; for technology platforms, which must manage liability
+        and define terms of service; and for investors, who require a
+        stable legal framework to assess the value of AI-driven
+        enterprises.4 Without a clear, operational framework, innovation
+        may be stifled by legal uncertainty, and the economic incentives
+        that copyright is designed to foster may be undermined.3
+      </p>
+    </section>
+    <section id="reports-objective-and-scope">
+      <h3>
+        <em>Report's Objective and
+      Scope</em>
+      </h3>
+      <p>
+        This report provides a comprehensive, expert-level analysis of
+        the legal doctrines governing AI-assisted works and related
+        creative practices like sampling and remixing. Its primary
+        objective is to translate these complex legal standards into a
+        formalized data schema and a set of logical conditions. This
+        framework is designed to be directly implemented within an
+        AI-assisted creative tool to guide users, assess
+        copyrightability in real-time, and manage intellectual property
+        risk. The scope of this analysis is centered on United States
+        copyright law, synthesizing the latest guidance from the U.S.
+        Copyright Office (USCO), seminal and recent federal court
+        decisions, and established legal doctrines of fair use,
+        transformative use, and <em>de minimis</em> copying.
+        The report culminates in a unified data model that provides a
+        technical blueprint for a system of "Copyright
+        Provenance," enabling an auditable and legally-grounded
+        approach to modern creation.
+      </p>
+    </section>
+    <section id="methodology">
+      <h3>
+        <em>Methodology</em>
+      </h3>
+      <p>
+        The analysis synthesizes the latest guidance from the U.S.
+        Copyright Office (USCO), seminal and recent federal court
+        decisions, established legal doctrines of fair use and
+        transformative use, and existing technical standards for data
+        provenance. The report builds from foundational legal principles
+        to concrete, actionable guidelines and a unified data model. It
+        examines the USCO's multi-part report on AI, key judicial
+        precedents including <em>Thaler v. Perlmutter</em>
+        and <em>Andy Warhol Foundation v. Goldsmith</em>,
+        and the statutory framework of the Copyright Act. By
+        deconstructing these legal sources into their constituent
+        logical parts, the report constructs a schema capable of
+        capturing the legally significant events in the lifecycle of a
+        creative work, from initial prompt to final human modification.
+        This approach bridges the gap between abstract legal theory and
+        concrete technical implementation, providing a robust foundation
+        for the development of legally-compliant creative tools.
+      </p>
+    </section>
+  </section>
+  <section id="part-i-the-foundation-of-copyrightability-human-authorship-in-the-ai-era">
+    <h2>
+      <em>Part I: The Foundation of
+    Copyrightability: Human Authorship in the AI Era</em>
+    </h2>
+    <p>
+      The legal system's response to the advent of generative AI has not
+      been to invent new legal paradigms, but rather to mount a vigorous
+      defense of its most foundational principle: that copyright is an
+      exclusively human right. This reaction is not merely an
+      interpretation of statutory text but a reaffirmation of the
+      constitutional, economic, and philosophical underpinnings of
+      American intellectual property law. The consistent position of the
+      legislature, the courts, and the primary administrative body for
+      copyright is that for a work to be protected, it must originate
+      from a human mind.
+    </p>
+    <section id="the-constitutional-and-statutory-mandate-for-a-human-author">
+      <h3>
+        <em>The Constitutional and Statutory
+      Mandate for a Human Author</em>
+      </h3>
+      <p>
+        The requirement for human authorship is deeply rooted in the
+        U.S. Constitution and the subsequent statutes enacted under its
+        authority. The Copyright Clause grants Congress the power to
+        "secur[e] for limited Times to Authors... the exclusive
+        Right to their respective Writings".7 The Supreme Court's
+        earliest interpretations of this clause established a direct
+        link between the concepts of "author" and "human
+        intellect." In the seminal 1884 case
+      </p>
+      <p>
+        <em>Burrow-Giles Lithographic Co. v. Sarony</em>,
+        the Court confronted the question of whether a photograph—a work
+        created with the aid of a machine—could be copyrighted. It
+        concluded that it could, but only insofar as the photograph was
+        a representation of the photographer's "original
+        intellectual conceptions".8 The Court defined an
+        "author" as "he to whom anything owes its origin;
+        originator; maker," consistently framing the role in human
+        terms as a product of a person's "genius or
+        intellect".9
+      </p>
+      <p>
+        This foundational understanding has been carried forward into
+        modern copyright law. The Copyright Act of 1976, which governs
+        current law, provides protection for "original works of
+        authorship".11 While the Act does not explicitly define
+        "author" to mean "human," the entire
+        structure of the law—with its provisions on duration based on
+        the author's life, termination rights, and
+        inheritance—presupposes a human creator.12 The USCO and federal
+        courts have consistently interpreted this statutory silence not
+        as an ambiguity, but as an implicit adoption of the
+        long-standing, human-centric understanding established in cases
+        like
+      </p>
+      <p>
+        <em>Burrow-Giles</em>.12 The legal system's reaction
+        to generative AI, therefore, can be understood as a robust
+        "doctrinal immune response." Faced with a novel
+        technological entity capable of producing expressive works, the
+        system has not mutated but has instead reinforced its core
+        identity, vigorously reasserting the human authorship doctrine
+        to defend the philosophical and economic purpose of copyright
+        law: to provide incentives for human creativity.8 This strong,
+        defensive posture suggests that any future arguments for machine
+        authorship will face immense doctrinal resistance. The path to
+        copyrightability for works made with AI lies not in supplanting
+        the human, but in meticulously documenting the human's role as
+        the master of the AI tool.
+      </p>
+    </section>
+    <section id="the-uscos-modern-stance-a-rejection-of-machine-authorship">
+      <h3>
+        <em>The USCO's Modern Stance: A
+      Rejection of Machine Authorship</em>
+      </h3>
+      <p>
+        In response to the rapid development of generative AI, the U.S.
+        Copyright Office launched a broad initiative in 2023 to study
+        its implications.14 The resulting multi-part report,
+        particularly Part 2 on the Copyrightability of AI-Generated
+        Works, represents the definitive administrative position on the
+        matter. The Office's primary conclusion is that "existing
+        principles of copyright law are flexible enough to apply to this
+        new technology".14 This statement signals a clear policy
+        preference for applying established legal doctrines rather than
+        seeking new legislation to create sui generis rights for
+        AI-generated material.
+      </p>
+      <p>
+        The core of the USCO's guidance is its finding that copyright
+        can protect AI-generated outputs "only where a human author
+        has determined sufficient expressive elements".14 This
+        principle is the central pivot upon which all subsequent
+        analysis turns. The Office explicitly rejects the notion that a
+        machine can be an author, stating that extending protection to
+        material whose expression is determined by a machine would
+        "undermine rather than further the constitutional goals of
+        copyright".14 To enforce this principle, the USCO has
+        issued registration guidance that imposes a duty on applicants
+        to disclose the inclusion of AI-generated content in any
+        submitted work. Applicants must provide a clear explanation of
+        the human author's contributions and disclaim any copyright in
+        the portions of the work that were "generated by AI".8
+        This procedural mandate is not merely administrative; it
+        transforms the human/machine distinction into a material fact
+        that is legally essential for a valid copyright registration.
+      </p>
+      <p>
+        While the United States has solidified its human-only stance,
+        this position is not universal. Other jurisdictions have shown
+        greater flexibility, creating a potential for significant
+        friction in the global digital marketplace. The United Kingdom,
+        for example, explicitly recognizes
+        "computer-generated" works in its copyright statute,
+        assigning authorship to "the person by whom the
+        arrangements necessary for the creation of the work are
+        undertaken".10 Similarly, a court in China has granted
+        copyright protection to an AI-generated image, reasoning that
+        the user's intellectual investment in the prompt and selection
+        process was sufficient to constitute authorship.18 This
+        divergence in legal philosophy will inevitably lead to differing
+        outcomes for identical creative processes. A work generated
+        through a specific workflow in the U.S. may be relegated to the
+        public domain, while the same work created via the same process
+        in the U.K. or China could be protected intellectual property.
+        This fragmentation complicates international licensing,
+        enforcement, and investment for any platform operating on a
+        global scale and underscores the need for any copyright-aware
+        tool to be designed with jurisdictional adaptability in mind.3
+      </p>
+    </section>
+    <section id="judicial-affirmation-the-thaler-v-perlmutter-line-of-cases">
+      <h3>
+        <em>Judicial Affirmation: The Thaler v.
+      Perlmutter Line of Cases</em>
+      </h3>
+      <p>
+        The USCO's administrative position has been unequivocally
+        affirmed by the federal judiciary. The landmark case in this
+        area is <em>Thaler v. Perlmutter</em>, in which
+        computer scientist Stephen Thaler sought to register a copyright
+        for an image he claimed was created "autonomously" by
+        his AI system, the "Creativity Machine".10 The USCO
+        refused registration, and Thaler sued.
+      </p>
+      <p>
+        In August 2023, the U.S. District Court for the District of
+        Columbia granted summary judgment to the Copyright Office,
+        holding that "human authorship is an essential part of a
+        valid copyright claim".7 The D.C. Circuit Court of Appeals
+        affirmed this decision in March 2025, providing a thorough
+        analysis that solidifies the human authorship requirement in
+        U.S. law.12 The court's reasoning was twofold. First, it found
+        that the text of the Copyright Act, "taken as a
+        whole," makes clear that authors must be human.12 Second,
+        and perhaps more importantly, the court addressed the underlying
+        policy rationale for copyright. It dismissed Thaler's argument
+        that denying copyright to AI works would disincentivize
+        creativity, noting that the human authorship requirement still
+        incentivizes humans to create works
+      </p>
+      <p>
+        <em>with the assistance</em> of AI.12 The court
+        pointed out that machines, unlike humans, do not respond to the
+        economic incentives that copyright provides, and therefore,
+        extending protection to them would not serve the constitutional
+        purpose of promoting "the Progress of Science and useful
+        Arts".8
+      </p>
+      <p>
+        This ruling places AI-generated works in the same legal category
+        as other works created by non-human actors. Courts have
+        previously rejected copyright claims for a book purportedly
+        dictated by a "non-human spiritual being" and for
+        photographs taken by a monkey in the famous "monkey
+        selfie" case, <em>Naruto v. Slater</em>.7 The
+      </p>
+      <p>
+        <em>Thaler</em> decision confirms that AI, for all
+        its sophistication, is viewed by the law as another non-human
+        agent incapable of authorship. The legal question is therefore
+        no longer <em>whether</em> a human is required, but
+        <em>what level</em> of human involvement is
+        sufficient to claim authorship of a work that incorporates
+        AI-generated material.
+      </p>
+    </section>
+  </section>
+  <section id="part-ii-formalizing-the-conditions-for-an-ai-assisted-copyrightable-work">
+    <h2>
+      <em>Part II: Formalizing the Conditions
+    for an "AI-Assisted Copyrightable Work"</em>
+    </h2>
+    <p>
+      Having established that human authorship is a non-negotiable
+      prerequisite for copyright, the analysis must now shift from the
+      "what" to the "how." The central task is to
+      deconstruct the USCO's guidance into a set of formal, logical
+      conditions that can distinguish a copyrightable act of human
+      creation from an uncopyrightable act of machine generation. This
+      requires identifying the specific human interventions that the law
+      recognizes as sufficiently creative and understanding why other
+      actions, such as the mere crafting of prompts, are deemed
+      insufficient.
+    </p>
+    <section id="the-spectrum-of-human-involvement-ai-as-tool-vs-ai-as-author">
+      <h3>
+        <em>The Spectrum of Human Involvement:
+      AI as Tool vs. AI as Author</em>
+      </h3>
+      <p>
+        The copyrightability of works involving AI exists on a spectrum
+        defined by the degree of human creative control.8 At one end of
+        this spectrum, AI functions as a simple, assistive tool, much
+        like a word processor's spell-checker or a photo editor's
+        color-correction filter. In these cases, where the human author
+        maintains full control over the expressive elements of the work,
+        the use of AI has no bearing on the work's copyrightability.16
+        The human author creates a work, and the AI merely refines or
+        assists in its execution.
+      </p>
+      <p>
+        At the other extreme lies a work "autonomously"
+        created by an AI system, where a human simply provides a prompt
+        and the machine generates a complex and complete work in
+        response.9 As established in
+      </p>
+      <p>
+        <em>Thaler</em>, such a work lacks human authorship
+        and is not copyrightable; it falls immediately into the public
+        domain.12
+      </p>
+      <p>
+        The legally complex and commercially critical territory lies in
+        the middle of this spectrum: hybrid works that incorporate
+        substantial AI-generated material but are also shaped by a human
+        hand. For these works, the USCO has made clear that
+        copyrightability must be determined through a case-by-case
+        inquiry that scrutinizes the "quantum of human creative
+        contribution".16 The dispositive question is whether a
+        human exercised sufficient creative control over the final
+        expression of the work.
+      </p>
+    </section>
+    <section id="copyrightable-human-interventions-the-sufficient-creative-control-test">
+      <h3>
+        <em>Copyrightable Human Interventions:
+      The "Sufficient Creative Control"
+      Test</em>
+      </h3>
+      <p>
+        The USCO's guidance and registration decisions have identified
+        three primary categories of human intervention that may be
+        sufficient to meet the standard for authorship, even when the
+        raw material is generated by an AI. These interventions
+        represent a fundamental shift in the locus of legally
+        significant creativity. In traditional authorship, the creative
+        act is primarily one of conception and initial expression. In
+        the context of generative AI, however, the USCO explicitly
+        rejects the initial conception (the prompt) as a basis for
+        authorship and instead locates copyrightable creativity in the
+        <em>post-generation</em> acts of curation,
+        modification, and arrangement of the AI's output.16 This
+        effectively redefines the "author" in this context as
+        the "curator-in-chief" or "master editor" of
+        the machine's raw material. A data schema designed to assess
+        copyrightability must therefore be architected to capture these
+        specific curatorial actions with high fidelity.
+      </p>
+      <p>
+        The three recognized categories of copyrightable intervention
+        are:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <em>Creative Selection and
+            Arrangement:</em> A human may claim authorship in a
+            compilation if they creatively select from a range of
+            AI-generated outputs and arrange them in a sufficiently
+            original way. For example, in the case of the graphic novel
+            <em>Zarya of the Dawn</em>, the USCO granted
+            copyright in the human-authored text and the creative
+            arrangement of the AI-generated images on the page, but
+            refused to register the individual images themselves.9 The
+            copyright protects the human's contribution—the selection
+            and coordination—but does not extend to the underlying
+            AI-generated elements, which remain in the public domain.9
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Material Modification:</em> A
+            human can claim authorship in the new expression they add by
+            making significant, creative modifications to an
+            AI-generated output. This is legally analogous to creating a
+            derivative work based on a public domain photograph. The
+            human author can copyright their creative additions, but not
+            the pre-existing material generated by the AI.16 The USCO
+            notes that some AI tools which allow a user to "select
+            and regenerate regions of an [AI-generated] image with a
+            modified prompt" may provide the user with sufficient
+            control over "the selection and placement of individual
+            creative elements" to support a claim of authorship in
+            the modified result.16
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Embedding in a Larger Human
+            Work:</em> When AI-generated material is incorporated
+            as a component of a larger, predominantly human-authored
+            work, the copyright in the overall work remains intact.
+            Examples include using AI to generate background artwork for
+            a film, a specific sound effect for a musical track, or a
+            descriptive paragraph in a novel.14 In these cases, the
+            AI-generated portion should be disclaimed during copyright
+            registration if it represents an "appreciable portion
+            of the work as a whole," but its inclusion does not
+            invalidate the copyright in the human-authored components.8
+          </p>
+        </li>
+      </ol>
+    </section>
+    <section id="the-status-of-prompts-uncopyrightable-instructions">
+      <h3>
+        <em>The Status of Prompts:
+      Uncopyrightable Instructions</em>
+      </h3>
+      <p>
+        The USCO has taken a definitive and restrictive stance on the
+        role of user prompts. It has concluded that guiding an AI system
+        with prompts, even through the sophisticated practice of
+        "prompt engineering," does not generally meet the
+        threshold of creativity required to establish authorship in the
+        resulting output.7
+      </p>
+      <p>
+        The legal reasoning for this position is twofold. First, the
+        Office analogizes prompts to unprotectable "ideas" or
+        "instructions".16 Under the fundamental
+        idea-expression dichotomy of copyright law, protection extends
+        only to the expression of an idea, not the idea itself.22 A
+        prompt, in this view, is like a set of instructions given to a
+        human artist; the client who commissions the work by describing
+        their idea is not considered the author—the artist who
+        translates that idea into a fixed, tangible expression is.7
+      </p>
+      <p>
+        Second, this legal conclusion is buttressed by a technical
+        reality of current generative AI systems: their
+        unpredictability. These systems are often described as a
+        "black box," as even expert researchers have a limited
+        ability to predict the specific output that will result from a
+        given input.7 Because a user cannot exercise fine-grained
+        control over the expressive details of the output, they cannot
+        be said to be the "mastermind" who "formed"
+        the work in the way the law requires.9 The AI system's own
+        internal architecture and training data play a determinative
+        role in the final expression.
+      </p>
+      <p>
+        This reasoning, however, implicitly contains the seeds of its
+        own potential future obsolescence. The USCO's conclusion is
+        predicated on the <em>current</em> state of
+        technology and its inherent lack of user control. The Office
+        itself has acknowledged that, in theory, AI systems could evolve
+        to a point where they "allow users to exert such a high
+        degree of control over the output that the system's role becomes
+        purely mechanical".21 This creates a direct causal link
+        between technological advancement and legal status. As AI tools
+        become more deterministic and provide users with more direct
+        control over expressive elements, the legal argument that a
+        prompt (or a series of interactive prompts) can constitute
+        authorship will become substantially stronger. A forward-looking
+        data schema should therefore not treat all AI models as a
+        monolith. It should include fields to capture the specific model
+        used and, if available, a metric of its known
+        "determinism" or "controllability." This
+        would allow a copyright assessment tool to adapt its logic over
+        time, future-proofing the system against the inevitable
+        co-evolution of technology and law.
+      </p>
+    </section>
+  </section>
+  <section id="part-iii-cross-referencing-with-remix-culture-doctrines-fair-use-and-transformative-works">
+    <h2>
+      <em>Part III: Cross-Referencing with
+    Remix Culture Doctrines: Fair Use and Transformative
+    Works</em>
+    </h2>
+    <p>
+      The creation of AI-assisted works often involves the use of
+      pre-existing material, either as training data for the model or as
+      sampled elements within a new composition. This practice places
+      such works at the intersection of copyright doctrines that have
+      long governed remix and mashup cultures, primarily the doctrine of
+      fair use and its central component, transformative use.
+      Formalizing these complex, case-by-case analyses is essential for
+      any tool that aims to provide guidance on copyright risk.
+    </p>
+    <section id="the-fair-use-formalization-a-four-factor-logical-model">
+      <h3>
+        <em>The Fair Use Formalization: A
+      Four-Factor Logical Model</em>
+      </h3>
+      <p>
+        Fair use is a statutory defense to copyright infringement
+        codified in Section 107 of the Copyright Act. It permits the
+        unlicensed use of copyrighted works in certain circumstances,
+        balancing the rights of copyright holders with the public
+        interest in freedom of expression and innovation. A court
+        assesses a fair use claim by weighing four non-exclusive
+        factors.23
+      </p>
+      <ol>
+        <li>
+          <p>
+            <em>The Purpose and Character of the
+            Use:</em> This factor examines why and how the work
+            was used. Key considerations include whether the use is
+            commercial or for nonprofit educational purposes, with
+            commercial use weighing against fair use.25 The most
+            critical part of this inquiry, however, is whether the use
+            is "transformative"—a concept so central it
+            warrants its own detailed analysis in the next section.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>The Nature of the Copyrighted
+            Work:</em> This factor considers the characteristics
+            of the work that was used. The law affords greater
+            protection to highly creative and fictional works (like
+            novels and films) than to factual works (like news articles
+            or technical manuals). Consequently, using a creative work
+            is less likely to be deemed fair use.25 Additionally, the
+            use of an unpublished work weighs heavily against a finding
+            of fair use, as it infringes on the author's right of first
+            publication.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>The Amount and Substantiality of the
+            Portion Used:</em> This factor assesses both the
+            quantity and quality of the material taken. A court will
+            consider what percentage of the original work was used
+            (quantitative analysis) and whether the portion taken
+            constitutes the "heart of the work" (qualitative
+            analysis).25 Copying a small but critically important part
+            of a work can weigh more heavily against fair use than
+            copying a larger but less significant portion.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>The Effect of the Use Upon the
+            Potential Market for or Value of the Copyrighted
+            Work:</em> Often described as the most important
+            factor, this inquiry examines the economic impact of the use
+            on the original work.27 The analysis considers not only
+            whether the new work acts as a direct market substitute for
+            the original, but also whether it harms potential derivative
+            markets, such as licensing opportunities.23 This is a
+            particularly contentious issue in the context of AI, where
+            the use of works for training data could usurp a nascent
+            licensing market for that specific purpose.27
+          </p>
+        </li>
+      </ol>
+    </section>
+    <section id="the-transformative-use-test-the-impact-of-warhol-v-goldsmith">
+      <h3>
+        <em>The Transformative Use Test: The
+      Impact of Warhol v. Goldsmith</em>
+      </h3>
+      <p>
+        For decades, the analysis of the first fair use factor has been
+        dominated by the concept of transformative use, which asks
+        whether the new work "adds new expression, meaning, or
+        message" to the original.28 Classic examples of
+        transformative use include parody, which uses an original work
+        to comment on or criticize that work itself, as established in
+      </p>
+      <p>
+        <em>Campbell v. Acuff-Rose Music, Inc.</em>.23
+      </p>
+      <p>
+        However, the Supreme Court's 2023 decision in <em>Andy
+        Warhol Foundation for the Visual Arts, Inc. v.
+        Goldsmith</em> significantly reframed and narrowed the
+        transformative use inquiry, particularly for commercial uses.23
+        The case involved an Andy Warhol silkscreen of the musician
+        Prince, which was based on a photograph by Lynn Goldsmith. The
+        Warhol Foundation licensed its image to a magazine for a cover
+        story about Prince. The Court held that this was not a fair use.
+      </p>
+      <p>
+        The critical pivot in <em>Warhol</em> was a shift in
+        focus from whether the new work added a new "meaning or
+        message" to whether it served a different
+        <em>purpose</em> from the original. The Court
+        reasoned that because both Goldsmith's original photograph and
+        Warhol's licensed image served the same essential purpose—a
+        commercial portrait of Prince for use in a magazine—the first
+        factor weighed against fair use, even if Warhol's work was
+        aesthetically different and conveyed a different message about
+        celebrity.23
+      </p>
+      <p>
+        This "purpose" test creates a significant new hurdle
+        for many common applications of generative AI. Before
+        <em>Warhol</em>, one could argue that an
+        AI-generated image "in the style of" a famous artist
+        was transformative because the AI's unique process and digital
+        aesthetic added a new meaning. After
+        <em>Warhol</em>, the primary question is whether the
+        new work serves a similar commercial purpose. An AI-generated
+        landscape sold as a fine art print serves the same purpose as a
+        human-photographed landscape sold as a fine art print. This
+        precedent directly targets the market viability of AI art that
+        competes with human artists in the same market niche. To
+        successfully claim fair use, creators of AI-assisted works will
+        increasingly need to demonstrate that their use serves a
+        fundamentally different purpose, such as criticism, commentary,
+        or research, rather than simply offering an aesthetic variation
+        for the same market.32
+      </p>
+      <p>
+        This distinction between the <em>process</em> of AI
+        training and the <em>output</em> of an AI model is
+        critical. A growing legal consensus suggests that the process of
+        using copyrighted works as <em>inputs</em> to train
+        an AI is a highly transformative fair use. The purpose—to enable
+        a machine to learn statistical patterns from data—is
+        fundamentally different from the original expressive purpose of
+        the works.34 However, if that same trained model produces an
+      </p>
+      <p>
+        <em>output</em> that is substantially similar to, or
+        serves as a market substitute for, one of its training inputs,
+        that output is likely infringing and not a fair use.30 This
+        creates a legal paradox where the act of training is
+        permissible, but it creates a tool whose use may be
+        impermissible. The infringement exists in a latent state until
+        an output is generated and evaluated against the market.
+        Therefore, a copyright assessment tool cannot issue a blanket
+        "fair use" certification; it must analyze the use of
+        copyrighted material at each stage of the creative lifecycle
+        independently.
+      </p>
+    </section>
+    <section id="table-1-logical-conditions-for-fair-use-and-transformative-status">
+      <h3>
+        <em>Table 1: Logical Conditions for
+      Fair Use and Transformative Status</em>
+      </h3>
+      <p>
+        To translate the abstract four-factor test into an operational
+        model for a software tool, each factor can be broken down into
+        measurable parameters. This allows for a weighted analysis that
+        can generate a "risk score" for a proposed use of
+        copyrighted material, transforming a subjective legal defense
+        into a concrete risk-management feature.
+      </p>
+      
+        <table>
+          
+          
+          
+          
+          
+          <tbody>
+            <tr>
+              <td>
+                Factor
+              </td>
+              <td>
+                Parameter to Measure
+              </td>
+              <td>
+                Condition Favoring Fair Use
+              </td>
+              <td>
+                Condition Disfavoring Fair Use
+              </td>
+              <td>
+                Relevant Sources
+              </td>
+            </tr>
+            <tr>
+              <td>
+                **1. Purpose &amp; Character**
+              </td>
+              <td>
+                Use.Purpose (Enum: Commercial, Education, Parody,
+                Criticism, Research, News)
+              </td>
+              <td>
+                Use.Purpose is Parody, Criticism, Research, News,
+                Education
+              </td>
+              <td>
+                Use.Purpose is Commercial
+              </td>
+              <td>
+                25
+              </td>
+            </tr>
+            <tr>
+              <td>
+              </td>
+              <td>
+                Use.TransformativeScore (Float: 0-1, based on *Warhol*
+                purpose test)
+              </td>
+              <td>
+                High score (fundamentally different purpose, e.g., data
+                analysis vs. aesthetic enjoyment)
+              </td>
+              <td>
+                Low score (substitutive purpose, e.g., magazine portrait
+                vs. magazine portrait)
+              </td>
+              <td>
+                23
+              </td>
+            </tr>
+            <tr>
+              <td>
+                **2. Nature of Work**
+              </td>
+              <td>
+                Source.Nature (Enum: Factual, Creative)
+              </td>
+              <td>
+                Source.Nature is Factual/Informational
+              </td>
+              <td>
+                Source.Nature is Highly Creative/Fictional
+              </td>
+              <td>
+                25
+              </td>
+            </tr>
+            <tr>
+              <td>
+              </td>
+              <td>
+                Source.PublicationStatus (Enum: Published, Unpublished)
+              </td>
+              <td>
+                Source.PublicationStatus is Published
+              </td>
+              <td>
+                Source.PublicationStatus is Unpublished
+              </td>
+              <td>
+                25
+              </td>
+            </tr>
+            <tr>
+              <td>
+                **3. Amount Used**
+              </td>
+              <td>
+                Use.AmountQuantitative (Float: 0-1, percentage of work
+                used)
+              </td>
+              <td>
+                Low percentage
+              </td>
+              <td>
+                High percentage
+              </td>
+              <td>
+                26
+              </td>
+            </tr>
+            <tr>
+              <td>
+              </td>
+              <td>
+                Use.AmountQualitative (Boolean: "Heart of the
+                work" taken)
+              </td>
+              <td>
+                False
+              </td>
+              <td>
+                True
+              </td>
+              <td>
+                28
+              </td>
+            </tr>
+            <tr>
+              <td>
+                **4. Market Effect**
+              </td>
+              <td>
+                Use.MarketEffect.Substitution (Boolean: Is it a direct
+                market replacement?)
+              </td>
+              <td>
+                False
+              </td>
+              <td>
+                True
+              </td>
+              <td>
+                23
+              </td>
+            </tr>
+            <tr>
+              <td>
+              </td>
+              <td>
+                Use.MarketEffect.LicensingHarm (Boolean: Does it harm an
+                existing or potential licensing market?)
+              </td>
+              <td>
+                False
+              </td>
+              <td>
+                True (disrupts an established or emerging licensing
+                market, e.g., for AI training data)
+              </td>
+              <td>
+                27
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+    </section>
+  </section>
+  <section id="part-iv-defining-the-boundaries-minimum-expression-and-maximum-appropriation">
+    <h2>
+      <em>Part IV: Defining the Boundaries:
+    Minimum Expression and Maximum Appropriation</em>
+    </h2>
+    <p>
+      To be practically useful, an AI-assisted creation tool must
+      provide clear guidance on the legal boundaries of creation. This
+      requires formalizing two critical thresholds: the minimum amount
+      of human creativity required to generate a copyrightable work, and
+      the maximum amount of another's work that can be appropriated
+      without triggering infringement. These boundaries are defined by
+      the doctrines of originality and <em>de minimis</em>
+      use, respectively.
+    </p>
+    <section id="minimum-copyrightable-expression-the-modicum-of-creativity-standard">
+      <h3>
+        <em>Minimum Copyrightable Expression:
+      The "Modicum of Creativity" Standard</em>
+      </h3>
+      <p>
+        For a work to be eligible for copyright protection, it must be
+        an "original work of authorship".22 The legal standard
+        for originality consists of two distinct requirements:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <em>Independent Creation:</em> The
+            work must be independently created by the author, meaning it
+            cannot be copied from another work.40
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>A Modicum of Creativity:</em>
+            The work must possess "at least a modicum of
+            creativity".22 The Supreme Court has described this as
+            requiring a "spark" of creativity, emphasizing
+            that the bar is intentionally set very low.41
+          </p>
+        </li>
+      </ol>
+      <p>
+        This low threshold is balanced by the fundamental principle of
+        the idea-expression dichotomy: copyright protects the expression
+        of an idea, but never the idea, procedure, process, system,
+        concept, or discovery itself.22 This principle leads to several
+        specific categories of material that are deemed to lack the
+        requisite creativity and are therefore uncopyrightable. These
+        include:
+      </p>
+      <ul>
+        <li>
+          <p>
+            Names, titles, short phrases, and slogans.22
+          </p>
+        </li>
+        <li>
+          <p>
+            Familiar symbols or designs.
+          </p>
+        </li>
+        <li>
+          <p>
+            Mere variations of typographic ornamentation, lettering, or
+            coloring.
+          </p>
+        </li>
+        <li>
+          <p>
+            Mere listings of ingredients or contents.41
+          </p>
+        </li>
+      </ul>
+      <p>
+        For an AI-assisted work, this means that the human contribution
+        must rise above these excluded categories. A human author who
+        simply provides a title, a short phrase, or a basic instruction
+        to an AI will not have contributed sufficient original
+        expression to be considered an author of the output. However, a
+        human who creatively selects and arranges AI-generated
+        paragraphs into an original narrative, or who materially
+        modifies an AI-generated image with their own artistic choices,
+        will likely have contributed the necessary "modicum of
+        creativity" to claim copyright in their contributions.
+      </p>
+    </section>
+    <section id="maximum-sampleable-work-the-de-minimis-doctrine">
+      <h3>
+        <em>Maximum Sampleable Work: The De
+      Minimis Doctrine</em>
+      </h3>
+      <p>
+        At the other end of the spectrum is the question of
+        appropriation. The <em>de minimis</em> doctrine,
+        from the Latin maxim <em>de minimis non curat
+        lex</em> ("the law does not concern itself with
+        trifles"), provides that a technical act of copying may be
+        so trivial or insignificant that it does not rise to the level
+        of a legally actionable infringement.42 This doctrine is
+        distinct from fair use, though it is related to the third fair
+        use factor (amount and substantiality). A finding of
+      </p>
+      <p>
+        <em>de minimis</em> use means no infringement has
+        occurred in the first place.
+      </p>
+      <p>
+        Courts typically apply a two-part test to determine if a use is
+        <em>de minimis</em>:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <em>Quantitative Analysis:</em>
+            This considers the raw amount of the original work that was
+            copied. Examples of uses found to be quantitatively small
+            include a pinball machine appearing in the background of a
+            movie for a few seconds or fleeting, out-of-focus
+            illustrations.42
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Qualitative Analysis:</em>
+            This is often the more important inquiry. It asks whether
+            the copied portion, regardless of its size, is qualitatively
+            significant or constitutes the "heart" of the
+            original work.45 A key element of this analysis in many
+            circuits is whether an "average audience would
+            recognize the appropriation".45 If the copied element
+            is not recognizable to an ordinary observer, the use is more
+            likely to be considered <em>de minimis</em>.
+          </p>
+        </li>
+      </ol>
+      <p>
+        The application of this doctrine is most contentious and
+        fragmented in the area of digital music sampling, where a
+        significant circuit split creates different legal standards
+        across the country.
+      </p>
+      <ul>
+        <li>
+          <p>
+            <em>The 6th Circuit's Bright-Line
+            Rule:</em> In <em>Bridgeport Music, Inc. v.
+            Dimension Films</em>, the Sixth Circuit Court of
+            Appeals established a strict, bright-line rule for sound
+            recordings. The court held that any digital sampling of a
+            copyrighted sound recording, no matter how brief or altered,
+            constitutes infringement. The court's blunt directive was:
+            "Get a license or do not sample".39 Under this
+            standard, the maximum sampleable amount of a sound recording
+            without a license is effectively zero.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>The 9th Circuit's Qualitative
+            Approach:</em> In contrast, the Ninth Circuit, in
+            cases like <em>VMG Salsoul, LLC v. Ciccone</em>,
+            has adopted a qualitative approach consistent with the
+            "average audience" test. The court held that a
+            fleeting, 0.23-second sample of a horn hit was <em>de
+            minimis</em> because it was not recognizable to the
+            ordinary listener.45 This standard allows for the
+            possibility of legally permissible, unlicensed sampling of
+            sound recordings, provided the use is truly trivial in both
+            quantity and quality.
+          </p>
+        </li>
+      </ul>
+      <p>
+        This circuit split means that any tool providing guidance on
+        sampling must account for jurisdictional variance. A
+        conservative approach would advise users to treat any digital
+        sample of a sound recording as requiring a license, while a more
+        permissive, risk-tolerant approach could incorporate the Ninth
+        Circuit's recognizability test.
+      </p>
+    </section>
+    <section id="table-2-guidelines-for-minimum-expression-and-de-minimis-use">
+      <h3>
+        <em>Table 2: Guidelines for Minimum
+      Expression and De Minimis Use</em>
+      </h3>
+      <p>
+        This table translates the legal thresholds for originality and
+        <em>de minimis</em> use into practical rules and
+        risk assessments that can be implemented within a creative
+        tool's user interface and internal logic.
+      </p>
+      
+        <table>
+          
+          
+          
+          
+          
+          <tbody>
+            <tr>
+              <td>
+                Guideline Category
+              </td>
+              <td>
+                Rule / Test
+              </td>
+              <td>
+                Tool Implementation / User Guidance
+              </td>
+              <td>
+                Risk Level
+              </td>
+              <td>
+                Relevant Sources
+              </td>
+            </tr>
+            <tr>
+              <td>
+                **Minimum Expression**
+              </td>
+              <td>
+                Is the human contribution more than a short phrase,
+                name, title, or simple geometric shape?
+              </td>
+              <td>
+                "Your contribution '\[text\]' is likely too brief
+                to be protected by copyright on its own. To secure
+                copyright, consider elaborating on this idea or
+                combining it with other creative elements."
+              </td>
+              <td>
+                N/A (Not Copyrightable)
+              </td>
+              <td>
+                22
+              </td>
+            </tr>
+            <tr>
+              <td>
+              </td>
+              <td>
+                Does the human contribution involve creative selection,
+                coordination, or arrangement of elements?
+              </td>
+              <td>
+                "By selecting and arranging these 5 AI-generated
+                images into a unique sequence, you have likely created a
+                new, copyrightable compilation. Your copyright protects
+                the arrangement, not the individual images."
+              </td>
+              <td>
+                Low
+              </td>
+              <td>
+                16
+              </td>
+            </tr>
+            <tr>
+              <td>
+                **De Minimis Use (Visual)**
+              </td>
+              <td>
+                Is the sampled visual work fleeting (e.g., \&lt; 3
+                seconds), out of focus, and not central to the new
+                work's theme or narrative?
+              </td>
+              <td>
+                "The background image appears for less than 3
+                seconds and is not the focus of the scene. The risk of
+                an infringement claim is likely low under the *de
+                minimis* doctrine."
+              </td>
+              <td>
+                Low
+              </td>
+              <td>
+                42
+              </td>
+            </tr>
+            <tr>
+              <td>
+                **De Minimis Use (Audio - Conservative / 6th Circuit
+                Rule)**
+              </td>
+              <td>
+                Is any part of a copyrighted *sound recording* being
+                digitally sampled without a license?
+              </td>
+              <td>
+                "**HIGH RISK WARNING:** You are digitally sampling
+                a sound recording. In some jurisdictions, any unlicensed
+                sampling, regardless of length, is considered copyright
+                infringement. A license is strongly recommended."
+              </td>
+              <td>
+                High
+              </td>
+              <td>
+                39
+              </td>
+            </tr>
+            <tr>
+              <td>
+                **De Minimis Use (Audio - Permissive / 9th Circuit
+                Rule)**
+              </td>
+              <td>
+                Is the sampled audio quantitatively and qualitatively
+                insignificant? Would an average listener recognize its
+                source?
+              </td>
+              <td>
+                "**MODERATE RISK:** The sampled audio is less than
+                one second and has been significantly altered. It is
+                unlikely to be recognizable to an average listener.
+                While this may be considered *de minimis* use in some
+                jurisdictions, a risk of legal challenge remains."
+              </td>
+              <td>
+                Moderate
+              </td>
+              <td>
+                39
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+    </section>
+  </section>
+  <section id="part-v-the-unified-data-schema-for-copyright-provenance-and-status">
+    <h2>
+      <em>Part V: The Unified Data Schema for
+    Copyright Provenance and Status</em>
+    </h2>
+    <p>
+      The culmination of this legal analysis is the development of a
+      formal data schema designed to capture and track the copyright
+      status of an AI-assisted work throughout its creation. Traditional
+      metadata standards like IPTC are well-suited for describing the
+      attributes of a finished creative asset but are insufficient for
+      the dynamic, layered, and iterative process inherent in
+      AI-assisted creation.48 A new model is required.
+    </p>
+    <section id="design-principles-beyond-static-metadata">
+      <h3>
+        <em>Design Principles: Beyond Static
+      Metadata</em>
+      </h3>
+      <p>
+        The proposed schema is architected not as a static record, but
+        as a dynamic, auditable log of the entire creative process—a
+        "Copyright Provenance Ledger." Its design is guided by
+        the following principles:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <em>Process-Oriented:</em> The
+            schema's primary function is to record the
+            <em>process</em> of creation, not just the final
+            product. As the legal analysis has shown, the sequence and
+            nature of human interventions are the dispositive factors in
+            determining copyrightability.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Atomicity and
+            Immutability:</em> Each creative act—a prompt, an AI
+            generation, a human modification, a selection—is recorded as
+            a discrete, atomic "contribution." This creates an
+            immutable ledger that can be audited to determine the
+            provenance of any element in the final work.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Inspiration from Modern Data
+            Standards:</em> The design draws inspiration from
+            technical standards like the Coalition for Content
+            Provenance and Authenticity (C2PA), which focuses on
+            tracking the origin and history of digital media, including
+            edits and AI generation.51 It also incorporates concepts
+            from version control systems, which excel at tracking
+            changes over time.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Enabling Automated
+            Analysis:</em> The structure is explicitly designed to
+            support algorithmic analysis. By logging legally significant
+            data points (e.g., contributor type, contribution type,
+            source material status), the system can automatically
+            calculate risk scores and provide real-time feedback to the
+            user.
+          </p>
+        </li>
+      </ol>
+    </section>
+    <section id="the-core-schema-tables-and-fields">
+      <h3>
+        <em>The Core Schema: Tables and
+      Fields</em>
+      </h3>
+      <p>
+        The schema is relational, comprising four interconnected tables
+        that work together to model the creative ecosystem. This
+        structure separates the actors (Contributors), the actions
+        (Contributions), the raw materials (Assets), and the final
+        composite product (Works). This separation allows the system to
+        algorithmically trace the provenance of every pixel, word, or
+        note in the final work back to its origin—a human prompt, an AI
+        generation, a human modification, or a third-party sample. This
+        traceability is what enables the calculation of sophisticated,
+        legally-grounded metrics like a HumanAuthorshipScore and a
+        FairUseRiskScore, providing the precise and actionable guidance
+        required for a modern creative tool.
+      </p>
+    </section>
+    <section id="table-3-the-unified-data-schema-for-copyright-provenance-and-status">
+      <h3>
+        <em>Table 3: The Unified Data Schema
+      for Copyright Provenance and Status</em>
+      </h3>
+      <section id="table-31-works-table-the-final-product">
+        <h4>
+          <em>Table 3.1: Works Table (The Final
+        Product)</em>
+        </h4>
+        <p>
+          This table represents the final, composite work that is the
+          output of the creative process.
+        </p>
+        
+          <table>
+            
+            
+            
+            <tbody>
+              <tr>
+                <td>
+                  Field Name
+                </td>
+                <td>
+                  Data Type
+                </td>
+                <td>
+                  Description
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  WorkID
+                </td>
+                <td>
+                  UUID
+                </td>
+                <td>
+                  Primary key for the final composite work. Uniquely
+                  identifies this specific creative endeavor.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Title
+                </td>
+                <td>
+                  Text
+                </td>
+                <td>
+                  The human-assigned title of the work.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  FinalCreationTimestamp
+                </td>
+                <td>
+                  Timestamp
+                </td>
+                <td>
+                  Timestamp marking the completion or export of the
+                  final version of the work.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  OverallCopyrightStatus
+                </td>
+                <td>
+                  Enum (Copyrightable, Public Domain, Mixed-Status)
+                </td>
+                <td>
+                  A system-determined overall status, calculated based
+                  on the aggregation of all contributions and assets.
+                  "Mixed-Status" indicates the work contains
+                  both protectable human authorship and unprotectable
+                  elements (e.g., AI-generated material, third-party
+                  samples).
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  HumanAuthorshipScore
+                </td>
+                <td>
+                  Float (0.0 to 1.0)
+                </td>
+                <td>
+                  A calculated score representing the proportion of the
+                  final work attributable to protectable human creative
+                  actions (e.g., modification, selection, arrangement)
+                  versus unprotectable actions (e.g., prompting) or AI
+                  generation. A higher score indicates a stronger claim
+                  to copyright.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  FairUseRiskScore
+                </td>
+                <td>
+                  Float (0.0 to 1.0)
+                </td>
+                <td>
+                  A calculated risk score based on the automated
+                  analysis of all incorporated third-party assets using
+                  the logic from Table 1. A higher score indicates a
+                  greater risk that the use of third-party material
+                  would not be considered fair use.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Jurisdiction
+                </td>
+                <td>
+                  Text
+                </td>
+                <td>
+                  The legal jurisdiction under which the work was
+                  created (e.g., "USA", "GBR",
+                  "CHN"). Essential for applying the correct
+                  legal rules (e.g., for *de minimis* use).
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        
+      </section>
+      <section id="table-32-contributions-table-the-creative-ledger">
+        <h4>
+          <em>Table 3.2: Contributions Table
+        (The Creative Ledger)</em>
+        </h4>
+        <p>
+          This is the core of the schema, logging every single creative
+          event in chronological order to build an auditable chain of
+          provenance.
+        </p>
+        
+          <table>
+            
+            
+            
+            <tbody>
+              <tr>
+                <td>
+                  Field Name
+                </td>
+                <td>
+                  Data Type
+                </td>
+                <td>
+                  Description
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  ContributionID
+                </td>
+                <td>
+                  UUID
+                </td>
+                <td>
+                  Primary key for each discrete creative action.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  WorkID
+                </td>
+                <td>
+                  UUID
+                </td>
+                <td>
+                  Foreign key linking this action to the overall Works
+                  table.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  ParentContributionID
+                </td>
+                <td>
+                  UUID
+                </td>
+                <td>
+                  Foreign key to the previous contribution this one
+                  modifies. This linkage creates the historical chain of
+                  edits and transformations. A NULL value indicates an
+                  initial action.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  ContributorID
+                </td>
+                <td>
+                  UUID
+                </td>
+                <td>
+                  Foreign key to the Contributors table, identifying who
+                  (or what) performed this action.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  ContributionTimestamp
+                </td>
+                <td>
+                  Timestamp
+                </td>
+                <td>
+                  The precise time the action was performed.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  ContributionType
+                </td>
+                <td>
+                  Enum (Human-Creation, Human-Modification,
+                  Human-Selection, Human-Arrangement, Human-Prompt,
+                  AI-Generation)
+                </td>
+                <td>
+                  The nature of the action. This is the most critical
+                  field for legal analysis, directly mapping to the
+                  copyrightable interventions identified by the USCO.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  ContributionData
+                </td>
+                <td>
+                  JSONB
+                </td>
+                <td>
+                  A flexible field to store the specific data of the
+                  action. For a Human-Prompt, this would be the text of
+                  the prompt. For a Human-Modification, it could store
+                  coordinates and transformation data. For a
+                  Human-Selection, it would list the AssetIDs that were
+                  chosen.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        
+      </section>
+      <section id="table-33-contributors-table-human-and-ai-actors">
+        <h4>
+          <em>Table 3.3: Contributors Table
+        (Human and AI Actors)</em>
+        </h4>
+        <p>
+          This table identifies every actor, human or machine, that
+          participates in the creation of the work.
+        </p>
+        
+          <table>
+            
+            
+            
+            <tbody>
+              <tr>
+                <td>
+                  Field Name
+                </td>
+                <td>
+                  Data Type
+                </td>
+                <td>
+                  Description
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  ContributorID
+                </td>
+                <td>
+                  UUID
+                </td>
+                <td>
+                  Primary key for the contributor.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  ContributorType
+                </td>
+                <td>
+                  Enum (Human, AI)
+                </td>
+                <td>
+                  A simple but legally crucial flag distinguishing
+                  between human users and AI systems.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  HumanIdentifier
+                </td>
+                <td>
+                  Text
+                </td>
+                <td>
+                  For human contributors, a unique identifier such as a
+                  user account ID or a persistent author identifier like
+                  an ORCID.53
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  AIModelIdentifier
+                </td>
+                <td>
+                  Text
+                </td>
+                <td>
+                  For AI contributors, the specific name and version of
+                  the model used (e.g., "Midjourney-v6.0",
+                  "Claude-3-Opus-20240229"). This is vital for
+                  tracking the capabilities of the tool used.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  AIControllabilityScore
+                </td>
+                <td>
+                  Float (0.0 to 1.0)
+                </td>
+                <td>
+                  A metric representing the known determinism or
+                  fine-grained controllability of the AI model. A higher
+                  score indicates the user has more direct control over
+                  the output's expressive elements, which may become
+                  legally significant in the future.21
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        
+      </section>
+      <section id="table-34-assets-table-the-raw-materials">
+        <h4>
+          <em>Table 3.4: Assets Table (The Raw
+        Materials)</em>
+        </h4>
+        <p>
+          This table catalogs every discrete piece of content—whether
+          created, generated, or imported—that is part of the work.
+        </p>
+        
+          <table>
+            
+            
+            
+            <tbody>
+              <tr>
+                <td>
+                  Field Name
+                </td>
+                <td>
+                  Data Type
+                </td>
+                <td>
+                  Description
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  AssetID
+                </td>
+                <td>
+                  UUID
+                </td>
+                <td>
+                  Primary key for each discrete piece of content (e.g.,
+                  an image, a block of text, an audio clip).
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  ContributionID
+                </td>
+                <td>
+                  UUID
+                </td>
+                <td>
+                  Foreign key to the Contributions table entry that
+                  created or imported this asset. This links every piece
+                  of content to its origin.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  AssetHash
+                </td>
+                <td>
+                  SHA256
+                </td>
+                <td>
+                  A cryptographic hash of the asset's binary content,
+                  ensuring data integrity and providing a unique
+                  fingerprint for the content.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  AssetType
+                </td>
+                <td>
+                  Enum (Text, Image, Audio, Video)
+                </td>
+                <td>
+                  The media type of the asset.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  SourceAssetID
+                </td>
+                <td>
+                  UUID
+                </td>
+                <td>
+                  If this asset is a modification or derivative of
+                  another asset, this field points to the original
+                  source asset, creating a lineage.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  OriginalCopyrightStatus
+                </td>
+                <td>
+                  Enum (Human-Authored, AI-Generated,
+                  Third-Party-Copyrighted, Public-Domain)
+                </td>
+                <td>
+                  The copyright status of the asset at the moment of its
+                  creation or ingestion into the system. This is a
+                  critical input for the FairUseRiskScore calculation.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  ThirdPartyLicense
+                </td>
+                <td>
+                  Text
+                </td>
+                <td>
+                  If the asset is from a third party, this field stores
+                  the details of its license (e.g., "Creative
+                  Commons CC-BY-SA 4.0", "Getty Images
+                  Royalty-Free License \#12345").
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        
+      </section>
+    </section>
+  </section>
+  <section id="conclusion-and-recommendations">
+    <h2>
+      <em>Conclusion and
+    Recommendations</em>
+    </h2>
+    <section id="summary-of-findings">
+      <h3>
+        <em>Summary of
+      Findings</em>
+      </h3>
+      <p>
+        The legal framework for copyright in the United States, when
+        confronted with generative AI, has demonstrated a powerful
+        adherence to its foundational principles. The analysis confirms
+        that human authorship is the absolute and indispensable
+        prerequisite for copyright protection. The USCO and federal
+        courts have consistently held that works generated autonomously
+        by machines are not copyrightable. For hybrid works created
+        through human-AI collaboration, copyrightability is not
+        determined by the user's initial idea or prompt, but rather by
+        the quantum of creative control the human exercises over the
+        final expressive output. Legally cognizable contributions are
+        found in the post-generation acts of creative selection,
+        arrangement, and material modification of AI-generated content.
+      </p>
+      <p>
+        Simultaneously, the doctrines governing the use of pre-existing
+        works have been clarified and sharpened. The Supreme Court's
+        decision in <em>Andy Warhol Foundation v.
+        Goldsmith</em> has narrowed the scope of transformative
+        fair use for commercial works, shifting the focus from aesthetic
+        change to the ultimate purpose of the use. This places many
+        common "in the style of" AI generations on precarious
+        legal ground if they compete in the same market as the original
+        works. Finally, the <em>de minimis</em> doctrine
+        provides a narrow safe harbor for truly trivial copying, but a
+        significant circuit split in music sampling cases highlights the
+        jurisdictional risks inherent in appropriation.
+      </p>
+    </section>
+    <section id="strategic-recommendations-for-implementation">
+      <h3>
+        <em>Strategic Recommendations for
+      Implementation</em>
+      </h3>
+      <p>
+        Based on these findings, the following strategic recommendations
+        are provided for the successful development and deployment of an
+        AI-assisted creative tool that is both powerful for users and
+        legally robust.
+      </p>
+      <ol>
+        <li>
+          <p>
+            <em>Adopt a Provenance-Led
+            Architecture:</em> The tool's core architecture must
+            be built around the proposed ledger-style data schema. This
+            is not an optional feature but a foundational requirement.
+            An immutable and auditable record of the entire creative
+            process is the only reliable way to generate the evidence
+            needed to support a claim of human authorship and to
+            accurately assess copyright risks.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Implement a Dynamic Risk Analysis
+            Engine:</em> The tool should leverage the data
+            captured in the schema to power a real-time analysis engine.
+            This engine should continuously calculate and display the
+            HumanAuthorshipScore and FairUseRiskScore to the user. This
+            transforms the tool from a simple content generator into an
+            intelligent co-pilot that provides active, legally-informed
+            feedback, guiding creators toward copyrightable outcomes and
+            away from high-risk activities.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Educate Users Through an Interactive
+            Interface:</em> The user interface should be designed
+            to make the underlying legal principles transparent and
+            understandable. Using the guidelines from Table 2, the tool
+            should provide clear, context-sensitive warnings and
+            explanations. For example, when a user attempts to digitally
+            sample a sound recording, a pop-up should explain the high
+            risk associated with this action under the 6th Circuit's
+            <em>Bridgeport</em> rule. This educational
+            component empowers users to make informed decisions about
+            their creative choices.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Prepare for Jurisdictional
+            Variance:</em> While this report focuses on U.S. law,
+            the global nature of digital content creation necessitates a
+            multi-jurisdictional approach. The schema's Jurisdiction
+            field is a crucial first step. The product roadmap should
+            include the development of separate rule sets for other
+            major legal regimes, such as the European Union and the
+            United Kingdom, to provide accurate guidance to a global
+            user base.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Monitor Legal and Technological
+            Evolution:</em> The intersection of AI and copyright
+            is one of the most dynamic areas of law. The company must
+            dedicate legal and technical resources to continuously
+            monitor new case law, evolving administrative guidance from
+            the USCO, and significant advancements in AI technology. The
+            logic of the risk analysis engine and the parameters of the
+            data schema (such as the AIControllabilityScore) must be
+            updated regularly to reflect the changing landscape,
+            ensuring the tool remains relevant and reliable.
+          </p>
+        </li>
+      </ol>
+      <section id="works-cited">
+        <h4>
+          <em>Works cited</em>
+        </h4>
+        <ol>
+          <li>
+            <p>
+              Who Owns the Output? Bridging Law and Technology in LLMs
+              Attribution - arXiv, accessed October 3, 2025,
+              <a href="https://arxiv.org/html/2504.01032v1">https://arxiv.org/html/2504.01032v1</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Authorship in AI-Generated Works: Exploring Originality in
+              Text Prompts and AI Outputs Through Philosophical
+              Foundations of Copyright and Collage Protection Francesca
+              Mazzi - ATRIP, accessed October 3, 2025,
+              <a href="https://atrip.org/wp-content/uploads/2024/05/3rd-place-revised.pdf">https://atrip.org/wp-content/uploads/2024/05/3rd-place-revised.pdf</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright and Generative AI | The Regulatory Review,
+              accessed October 3, 2025,
+              <a href="https://www.theregreview.org/2025/06/07/seminar-copyright-and-generative-ai/">https://www.theregreview.org/2025/06/07/seminar-copyright-and-generative-ai/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Artificial Intelligence Impacts on Copyright Law - RAND,
+              accessed October 3, 2025,
+              <a href="https://www.rand.org/pubs/perspectives/PEA3243-1.html">https://www.rand.org/pubs/perspectives/PEA3243-1.html</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Developing a Coherent National Strategy: Artificial
+              Intelligence (AI) and Copyright Law, accessed October 3,
+              2025,
+              <a href="https://businesslawreview.uchicago.edu/online-archive/developing-coherent-national-strategy-artificial-intelligence-ai-and-copyright-law">https://businesslawreview.uchicago.edu/online-archive/developing-coherent-national-strategy-artificial-intelligence-ai-and-copyright-law</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              DOES TRAINING AI VIOLATE COPYRIGHT LAW?, accessed October
+              3, 2025,
+              <a href="https://btlj.org/wp-content/uploads/2023/02/0003-36-4Quang.pdf">https://btlj.org/wp-content/uploads/2023/02/0003-36-4Quang.pdf</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf,
+              accessed October 3, 2025,
+              <a href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf">https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyrightability of AI-Generated Works, accessed October
+              3, 2025,
+              <a href="https://copyrightalliance.org/copyright-ai-generated-works/">https://copyrightalliance.org/copyright-ai-generated-works/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright Registration Guidance: Works ... - Federal
+              Register, accessed October 3, 2025,
+              <a href="https://www.federalregister.gov/documents/2023/03/16/2023-05321/copyright-registration-guidance-works-containing-material-generated-by-artificial-intelligence">https://www.federalregister.gov/documents/2023/03/16/2023-05321/copyright-registration-guidance-works-containing-material-generated-by-artificial-intelligence</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright Law in the Age of AI: Navigating Authorship,
+              Infringement, and Creative Rights - New York State Bar
+              Association, accessed October 3, 2025,
+              <a href="https://nysba.org/copyright-law-in-the-age-of-ai-navigating-authorship-infringement-and-creative-rights/">https://nysba.org/copyright-law-in-the-age-of-ai-navigating-authorship-infringement-and-creative-rights/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Generative Artificial Intelligence and Copyright Law -
+              Congress.gov, accessed October 3, 2025,
+              <a href="https://www.congress.gov/crs-product/LSB10922">https://www.congress.gov/crs-product/LSB10922</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Appellate Court Affirms Human Authorship Requirement for
+              Copyrighting AI-Generated Works | Insights | Skadden,
+              Arps, Slate, Meagher &amp; Flom LLP, accessed October 3,
+              2025,
+              <a href="https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship">https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              D.C. Circuit Affirms Human Authorship Requirement for
+              Copyright Protection - Lewis Rice, accessed October 3,
+              2025,
+              <a href="https://www.lewisrice.com/publications/d-c-circuit-affirms-human-authorship-requirement-for-copyright-protection/">https://www.lewisrice.com/publications/d-c-circuit-affirms-human-authorship-requirement-for-copyright-protection/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright Office Releases Part 2 of Artificial
+              Intelligence Report, accessed October 3, 2025,
+              <a href="https://www.copyright.gov/newsnet/2025/1060.html">https://www.copyright.gov/newsnet/2025/1060.html</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright and Artificial Intelligence | U.S. Copyright
+              Office, accessed October 3, 2025,
+              <a href="https://www.copyright.gov/ai/">https://www.copyright.gov/ai/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              U.S. Copyright Office issues report on copyrightability of
+              AI assisted and generated works, accessed October 3, 2025,
+              <a href="https://www.hoganlovells.com/en/publications/us-copyright-office-issues-report-on-copyrightability-of-ai-assisted-and-generated-works">https://www.hoganlovells.com/en/publications/us-copyright-office-issues-report-on-copyrightability-of-ai-assisted-and-generated-works</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright Office Releases Part 2 of Artificial
+              Intelligence Report - Library of Congress, accessed
+              October 3, 2025,
+              <a href="https://newsroom.loc.gov/news/copyright-office-releases-part-2-of-artificial-intelligence-report/s/f3959c36-d616-498d-b8f9-67641fd18bab">https://newsroom.loc.gov/news/copyright-office-releases-part-2-of-artificial-intelligence-report/s/f3959c36-d616-498d-b8f9-67641fd18bab</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              AI, Copyright, and the Law: The Ongoing Battle Over
+              Intellectual Property Rights - USC, accessed October 3,
+              2025,
+              <a href="https://sites.usc.edu/iptls/2025/02/04/ai-copyright-and-the-law-the-ongoing-battle-over-intellectual-property-rights/">https://sites.usc.edu/iptls/2025/02/04/ai-copyright-and-the-law-the-ongoing-battle-over-intellectual-property-rights/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright Infringement &amp; Litigation: 15 Famous Cases
+              Analyzed | Abounaja IP, accessed October 3, 2025,
+              <a href="https://abounaja.com/index.php/blog/copyright-infringement-cases">https://abounaja.com/index.php/blog/copyright-infringement-cases</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyrightability of AI Outputs: U.S. Copyright Office
+              Analyzes Human Authorship Requirement | Insights | Jones
+              Day, accessed October 3, 2025,
+              <a href="https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement">https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright Offices Rules AI-Works from Text Not Protected -
+              The National Law Review, accessed October 3, 2025,
+              <a href="https://natlawreview.com/article/copyright-office-says-ai-generated-works-based-text-prompts-are-not-protected">https://natlawreview.com/article/copyright-office-says-ai-generated-works-based-text-prompts-are-not-protected</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright Basics - Copyright Information, accessed October
+              3, 2025,
+              <a href="https://copyright.psu.edu/copyright-basics/">https://copyright.psu.edu/copyright-basics/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyrights Supreme Court Cases, accessed October 3, 2025,
+              <a href="https://supreme.justia.com/cases-by-topic/copyrights/">https://supreme.justia.com/cases-by-topic/copyrights/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Navigating Fair Use: A Journey Through Recent Case Law - |
+              Ohio State University Libraries, accessed October 3, 2025,
+              <a href="https://library.osu.edu/news/navigating-fair-use-a-journey-through-recent-case-law">https://library.osu.edu/news/navigating-fair-use-a-journey-through-recent-case-law</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Fair Use Defense to Copyright Infringement Lawsuits |
+              Intellectual Property Law Center, accessed October 3,
+              2025,
+              <a href="https://www.justia.com/intellectual-property/copyright/fair-use/">https://www.justia.com/intellectual-property/copyright/fair-use/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              17 U.S. Code § 107 - Limitations on exclusive rights: Fair
+              use - Legal Information Institute, accessed October 3,
+              2025,
+              <a href="https://www.law.cornell.edu/uscode/text/17/107">https://www.law.cornell.edu/uscode/text/17/107</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Court Issues First Decision on AI and Fair Use | Alerts
+              and Articles | Insights | Ballard Spahr, accessed October
+              3, 2025,
+              <a href="https://www.ballardspahr.com/insights/alerts-and-articles/2025/02/court-issues-first-decision-on-ai-and-fair-use">https://www.ballardspahr.com/insights/alerts-and-articles/2025/02/court-issues-first-decision-on-ai-and-fair-use</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Fair Use: What Is Transformative? - Nolo, accessed October
+              3, 2025,
+              <a href="https://www.nolo.com/legal-encyclopedia/fair-use-what-transformative.html">https://www.nolo.com/legal-encyclopedia/fair-use-what-transformative.html</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              First of its Kind Decision Finds AI Training is Not Fair
+              Use - Copyright Alliance, accessed October 3, 2025,
+              <a href="https://copyrightalliance.org/ai-training-not-fair-use/">https://copyrightalliance.org/ai-training-not-fair-use/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright Office Weighs In on AI Training and Fair Use,
+              accessed October 3, 2025,
+              <a href="https://www.skadden.com/insights/publications/2025/05/copyright-office-report">https://www.skadden.com/insights/publications/2025/05/copyright-office-report</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Transformative use - Wikipedia, accessed October 3, 2025,
+              <a href="https://en.wikipedia.org/wiki/Transformative_use">https://en.wikipedia.org/wiki/Transformative_use</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Artificial Intelligence and Transformative Use After
+              Warhol, accessed October 3, 2025,
+              <a href="https://scholarlycommons.law.wlu.edu/wlulr-online/vol81/iss1/2/">https://scholarlycommons.law.wlu.edu/wlulr-online/vol81/iss1/2/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              "LIMITS OF ALGORITHMIC FAIR USE" by Jacob
+              Alhadeff, Cooper Cuene et al., accessed October 3, 2025,
+              <a href="https://digitalcommons.law.uw.edu/wjlta/vol19/iss1/1/">https://digitalcommons.law.uw.edu/wjlta/vol19/iss1/1/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Fair Use and AI Training: Two Recent Decisions Highlight
+              the Complexity of This Issue, accessed October 3, 2025,
+              <a href="https://www.skadden.com/insights/publications/2025/07/fair-use-and-ai-training">https://www.skadden.com/insights/publications/2025/07/fair-use-and-ai-training</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Two U.S. Courts Address Fair Use in Generative AI Training
+              Cases | Insights | Jones Day, accessed October 3, 2025,
+              <a href="https://www.jonesday.com/en/insights/2025/06/two-us-courts-address-fair-use-in-genai-training-cases">https://www.jonesday.com/en/insights/2025/06/two-us-courts-address-fair-use-in-genai-training-cases</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Training Generative AI Models on Copyrighted Works Is Fair
+              Use, accessed October 3, 2025,
+              <a href="https://www.arl.org/blog/training-generative-ai-models-on-copyrighted-works-is-fair-use/">https://www.arl.org/blog/training-generative-ai-models-on-copyrighted-works-is-fair-use/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright Implications and Legal Responses to AI Training:
+              A Chinese Perspective - MDPI, accessed October 3, 2025,
+              <a href="https://www.mdpi.com/2075-471X/14/4/43">https://www.mdpi.com/2075-471X/14/4/43</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Foundation Models and Fair Use - Journal Article -
+              Stanford Law School, accessed October 3, 2025,
+              <a href="https://law.stanford.edu/publications/foundation-models-and-fair-use/">https://law.stanford.edu/publications/foundation-models-and-fair-use/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              The Song Remains the Same: A Review of the Legalities of
+              Music ..., accessed October 3, 2025,
+              <a href="https://www.wipo.int/web/wipo-magazine/articles/the-song-remains-the-same-a-review-of-the-legalities-of-music-sampling-37091">https://www.wipo.int/web/wipo-magazine/articles/the-song-remains-the-same-a-review-of-the-legalities-of-music-sampling-37091</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Requirements for Copyright Protection, accessed October 3,
+              2025,
+              <a href="https://copyrightalliance.org/education/copyright-law-explained/copyright-basics/requirements-for-copyright-protection/">https://copyrightalliance.org/education/copyright-law-explained/copyright-basics/requirements-for-copyright-protection/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              What is Copyright?, accessed October 3, 2025,
+              <a href="https://www.copyright.gov/what-is-copyright/">https://www.copyright.gov/what-is-copyright/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              The De Minimis Doctrine: When Is Copying Too Trivial? -
+              Lutzker ..., accessed October 3, 2025,
+              <a href="https://www.lutzker.com/the-de-minimis-doctrine-when-is-copying-too-trivial/">https://www.lutzker.com/the-de-minimis-doctrine-when-is-copying-too-trivial/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              De Minimis &amp; Copyright Infringement : Where To Draw
+              The Line? - IP and Legal Filings, accessed October 3,
+              2025,
+              <a href="https://www.ipandlegalfilings.com/de-minimis-copyright-infringement-where-to-draw-the-line/">https://www.ipandlegalfilings.com/de-minimis-copyright-infringement-where-to-draw-the-line/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              De Minimis Use - Entertainment Law - USLegal, accessed
+              October 3, 2025,
+              <a href="https://entertainmentlaw.uslegal.com/intellectual-property/copyright/de-minimis-use/">https://entertainmentlaw.uslegal.com/intellectual-property/copyright/de-minimis-use/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              The deminimis defense to copyright infringement
+              Introduction - Vondran Legal, accessed October 3, 2025,
+              <a href="https://www.vondranlegal.com/the-deminimis-defense-to-copyright-infringement-introduction">https://www.vondranlegal.com/the-deminimis-defense-to-copyright-infringement-introduction</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              De Minimis Copyright Infringement in Music - Talks On Law,
+              accessed October 3, 2025,
+              <a href="https://www.talksonlaw.com/blog/a-split-on-de-minimis-copyright-infringement-in-music">https://www.talksonlaw.com/blog/a-split-on-de-minimis-copyright-infringement-in-music</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Fair Use and an Attribution-Oriented Approach to Music
+              Sampling - Yale Law School Legal Scholarship Repository,
+              accessed October 3, 2025,
+              <a href="https://openyls.law.yale.edu/bitstreams/25470cc8-3ce6-4f37-ba69-38704d4b30ad/download">https://openyls.law.yale.edu/bitstreams/25470cc8-3ce6-4f37-ba69-38704d4b30ad/download</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Introduction to Metadata: Rights Metadata Made Simple,
+              accessed October 3, 2025,
+              <a href="https://www.getty.edu/publications/intrometadata/rights-metadata/">https://www.getty.edu/publications/intrometadata/rights-metadata/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Copyright's critical mess: music metadata - Wolters
+              Kluwer, accessed October 3, 2025,
+              <a href="https://legalblogs.wolterskluwer.com/copyright-blog/copyrights-critical-mess-music-metadata/">https://legalblogs.wolterskluwer.com/copyright-blog/copyrights-critical-mess-music-metadata/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Photo Metadata IPTC, accessed October 3, 2025,
+              <a href="https://iptc.org/standards/photo-metadata/">https://iptc.org/standards/photo-metadata/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              C2PA | Verifying Media Content Sources, accessed October
+              3, 2025,
+              <a href="https://c2pa.org/">https://c2pa.org/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Provenance Research - Denver Art Museum, accessed October
+              3, 2025,
+              <a href="https://www.denverartmuseum.org/en/provenance-research">https://www.denverartmuseum.org/en/provenance-research</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              ACM Policy on Authorship, accessed October 3, 2025,
+              <a href="https://www.acm.org/publications/policies/new-acm-policy-on-authorship">https://www.acm.org/publications/policies/new-acm-policy-on-authorship</a>
+            </p>
+          </li>
+        </ol>
+      </section>
+    </section>
+  </section>
+<footer><p>Copyright © 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This document publishes general legal analysis and does not constitute legal advice.</p></footer>
+</body>
+</html>
