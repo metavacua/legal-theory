@@ -98,6 +98,36 @@ problems; every other default rule disabled as pure noise for this corpus's auth
 style) — **linting via that config is a mandatory step** before investigating any new
 class this taxonomy doesn't already cover.
 
+**Phase 2 complete (2026-07-21).** Remaining 4 matters converted in sequence, each following
+the same process: mandatory scoped lint → dry-run `convert()` → per-file schema/build
+verification → known-class cross-check against the taxonomy doc → `docs/index.md` link
+rewrite (including draft-lineage cross-reference annotations, never touching links to
+not-yet-converted documents) → full corpus link/anchor sweep → commit → push → live
+verification.
+
+- `platform-tos-constitutional-limits` (12 docs, commit `612bb4b`) — 1 genuine Class D title
+  patch (`vrp-legal-vulnerability.md`), 2 MD041 false positives correctly ruled out.
+- `copyright-ip-authorship` (13 docs, commit `409b939`) — 1 genuine Class D title patch
+  (`strategic-compliant-ip.md`), 3 MD041 false positives; 1 already-known Class C file
+  (`ai-corporate-personhood-and-legal-rights.md`) re-verified against the taxonomy's
+  recorded pattern before proceeding.
+- `cooperative-investment-law` (19 docs, commit `f53b7b3`) — largest matter; 1 genuine Class D
+  patch (`from-intangible-to-investment-ip-securitization.md`), 3 MD041 false positives (the
+  "Unified Framework" draft-lineage trio all extract identically and correctly); 1 known
+  Class C file re-verified; all evidentiary revision files (community-care-cooperatives
+  v1/v2, the three "Unified Framework" revisions, from-clay-tablets-to-blockchains
+  draft/final, the-membership-security/securitizing-cooperative-membership-voting-rights)
+  converted independently with no consolidation, per the still-deferred Task 6 constraint.
+- `sex-work-consent-bodily-autonomy` (20 docs, commit `153ec7c`) — final matter; zero MD041
+  hits, zero Class D issues; 2 known Class C files re-verified; the corpus's largest document
+  (`the-architecture-of-non-consensual-legality.md`, 18.4k words) converted clean; correctly
+  left the-nexus-of-consent-and-consideration.md's cross-reference to the still-unconverted
+  theory document `california-sex-contracts-and-consent.md` pointing at its `.md` path.
+
+**Result: all 70 evidence documents + 5 `findings.md` across all 5 matters are now DocBook
+5.2, validated, built, and live.** Only Phase 3 (theory 22, cross-cutting 8, wip 8,
+proposals 6 — 44 documents) remains of the original corpus-migration scope.
+
 ## Section 4 — Testing, CI, and Safety Net
 
 - **Tool testing (TDD):** `docs/scripts/convert-to-docbook.sh` ships with a test fixture and a test asserting well-formed + schema-valid + zero-flagged-diff output, written before the implementation, per `superpowers:test-driven-development`.
