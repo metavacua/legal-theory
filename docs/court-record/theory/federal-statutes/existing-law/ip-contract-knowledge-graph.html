@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IP Contract Knowledge Graph — Conceptual Ontology</title>
+<meta name="DC.title" content="IP Contract Knowledge Graph — Conceptual Ontology">
+<meta name="DC.creator" content="Ian D.L.N. McLean">
+<meta name="DC.subject" content="">
+<meta name="DC.description" content="">
+<meta name="DC.date" content="">
+<meta name="DC.type" content="Article">
+<meta name="DC.language" content="en">
+<meta name="DC.rights" content="CC BY-SA 4.0">
+<style>
+          :root {
+            --ink: #101922;
+            --ink-soft: #3f4f5c;
+            --rule: #d3dbe3;
+            --surface: #fbfcfd;
+            --amber: #cf7d18;
+            --teal: #0b6169;
+            --green: #1a7a4a;
+            --blue: #0b3d91;
+            --paper: #f5f7f9;
+          }
+          body { font-family: 'Georgia', serif; max-width: 820px; margin: 0 auto;
+                 padding: 2rem 1.5rem; background: var(--paper); color: var(--ink);
+                 font-size: 18px; line-height: 1.65; }
+          h1, h2, h3, h4 { font-family: system-ui, sans-serif; }
+          h1 { font-size: 2.2rem; margin-bottom: 0.25em; }
+          h2 { font-size: 1.55rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3em; }
+          h3 { font-size: 1.2rem; }
+          h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em;
+               color: var(--ink-soft); }
+          pre, code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
+          pre { background: #0b1418; color: #c9d6d3; padding: 1.1rem 1.3rem;
+                border-radius: 6px; overflow-x: auto; }
+          blockquote { border-left: 3px solid var(--teal); margin: 1.5rem 0;
+                       padding: 0.3rem 0 0.3rem 1.2rem; color: var(--ink-soft); }
+          table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; font-size: 0.9rem; }
+          th, td { border: 1px solid var(--rule); padding: 0.5rem 0.8rem; text-align: left; }
+          th { background: var(--surface); font-family: system-ui, sans-serif; }
+          a { color: var(--teal); }
+
+          /* Finding sections */
+          section[data-condition="confirmed"] {
+            border-left: 4px solid var(--green);
+            padding-left: 1.2rem;
+            margin-left: -1.2rem;
+          }
+          section[data-condition="confirmed-with-caveats"] {
+            border-left: 4px solid var(--blue);
+            padding-left: 1.2rem;
+            margin-left: -1.2rem;
+          }
+          section[data-condition="split"] {
+            border-left: 4px solid var(--amber);
+            padding-left: 1.2rem;
+            margin-left: -1.2rem;
+          }
+
+          header.doc-header { margin-bottom: 2.5rem; }
+          .abstract { background: var(--surface); border: 1px solid var(--rule);
+                      border-radius: 6px; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+          .abstract p:first-child::before { content: "Abstract. "; font-weight: bold; }
+          footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+                   font-size: 0.8rem; color: var(--ink-soft); }
+        </style>
+</head>
+<body>
+  <header class="doc-header"><h1>IP Contract Knowledge Graph — Conceptual Ontology</h1>
+<p class="byline">
+        By Ian D.L.N. McLean — </p></header>
+  
+  <p>
+  This document details the strategy for implementing the Semantic
+  Knowledge Graph (KG), focusing on the conceptual ontology,
+  relationship mapping, and the mechanisms for implementation and
+  access.
+</p>
+  <section id="a-the-conceptual-ontology-the-blueprint-of-the-knowledge-graph">
+    <h2>
+      <em>A. The Conceptual Ontology: The
+  Blueprint of the Knowledge Graph</em>
+    </h2>
+    <p>
+    The foundation of the KG is a robust ontology that defines the
+    entities (nodes), relationships (edges), and argumentative
+    structures within the corpus. This ontology must capture the nuances
+    of the legal arguments surrounding IP creation, labor
+    classification, compliant business models, and financialization.
+  </p>
+    <section id="s-1-core-entities-the-nouns">
+      <h3>
+        <em>1. Core Entities (The
+    "Nouns")</em>
+      </h3>
+      <ul>
+        <li>
+          <p>
+            <em>Actors:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Creators/Workers:</em> Hobbyist, Professional
+          Contractor, Sole Proprietor, Employee (W-2), Statutory
+          Employee (via WFH agreement), User (Data Generator), FOSS
+          Contributor, Investor.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Managers/Directors:</em> Moderator
+          (Supervisor), Executive Producer/Author.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Hiring Entities/Platforms:</em> Platform
+          (Social Media, AI Company, Crowdfunding), Foundation (FOSS),
+          Corporation, Limited Liability Company (LLC - Compliant
+          Collective), Cooperative.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Financial Vehicles:</em> Special Purpose
+          Vehicle (SPV for Securitization).
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Intermediaries:</em> Payment Processor (Joint
+          Employer Risk).
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Intellectual Property (IP)
+          Assets:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Creation Types:</em> UGC, AI Training Data
+          (RLHF), Commissioned Work, Vulnerability Report (VRP), Code
+          Contribution, Collective Work.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Financial Forms:</em> Royalty Streams, IP
+          Securities (e.g., Bowie Bonds), Tokenized IP.
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Legal Instruments (The
+          Contracts):</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Adhesive/Platform:</em> Terms of Service
+          (ToS), Unilateral Contract (VRPs).
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Negotiated/Compliant:</em> Master Service
+          Agreement (MSA), Statement of Work (SOW), Option-to-Purchase
+          Agreement, Copyright Assignment, IP Contribution Agreement.
+        </p>
+        </li>
+      </ul>
+    </section>
+    <section id="s-2-legal-frameworks-and-doctrines-the-rules">
+      <h3>
+        <em>2. Legal Frameworks and Doctrines
+    (The "Rules")</em>
+      </h3>
+      <ul>
+        <li>
+          <p>
+            <em>Worker Classification:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+          ABC Test (Prongs A, B, C).
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Borello</em> Test (Multi-factor analysis, used
+          for exemptions).
+        </p>
+        </li>
+        <li>
+          <p>
+          Statutory Exemptions (e.g., AB 2257 "Fine Artist").
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Contract Law:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+          Predominant Factor Test (Service vs. Good).
+        </p>
+        </li>
+        <li>
+          <p>
+          Restatement (Second) of Contracts § 45 (Irrevocability of
+          Unilateral Offers).
+        </p>
+        </li>
+        <li>
+          <p>
+          Statute of Frauds; Freelance Worker Protection Act (FWPA).
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>IP Law:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+          Work Made for Hire (WFH) Doctrine (and its risks in CA).
+        </p>
+        </li>
+        <li>
+          <p>
+          Copyright Assignment vs. Licensing.
+        </p>
+        </li>
+        <li>
+          <p>
+          Moral Rights (VARA/CAPA).
+        </p>
+        </li>
+        <li>
+          <p>
+          Idea-Expression Dichotomy (AI Authorship).
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Administrative/Tax Law:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>De Minimis Non Curat Lex</em> (The zone of
+          non-enforcement).
+        </p>
+        </li>
+        <li>
+          <p>
+          Hobby vs. Business (IRS 9-factor test).
+        </p>
+        </li>
+        <li>
+          <p>
+          Information Fiduciary Duties.
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Key Cases:</em>
+            <em>Dynamex</em>, <em>Vazquez</em>
+          (Retroactivity), <em>Drennan</em> (Promissory
+          Estoppel), <em>Borello</em>, <em>Harris v.
+          Time</em>, <em>Steiner v. Thexton</em>.
+        </p>
+        </li>
+      </ul>
+    </section>
+    <section id="s-3-core-concepts-and-arguments-the-logic">
+      <h3>
+        <em>3. Core Concepts and Arguments (The
+    "Logic")</em>
+      </h3>
+      <ul>
+        <li>
+          <p>
+            <em>Mechanisms of Control (External
+          Direction):</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+          Algorithmic Control ("The Algorithmic Editor").
+        </p>
+        </li>
+        <li>
+          <p>
+          Soft Control (Gamification, UX Design).
+        </p>
+        </li>
+        <li>
+          <p>
+          Hard Control (Content moderation policies).
+        </p>
+        </li>
+        <li>
+          <p>
+          Financial Control (Payment Processor Acceptable Use Policies).
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Systemic Vulnerabilities:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>The Hobbyist Dilemma:</em> The
+          legal impossibility of a hobbyist satisfying Prong C of the
+          ABC test.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>The Service Nexus:</em> How
+          unilateral contracts for labor become irrevocable upon
+          performance, linking payment to the labor itself.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Cascading
+          Misclassification:</em> Volunteer moderators acting as
+          uncompensated managers.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>WFH Trap:</em> The automatic
+          triggering of statutory employment status in CA via WFH
+          agreements.
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Constructive Solutions (Compliance
+          Architecture):</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>The Compliant Collective:</em>
+          Utilizing the "Executive Author" LLC structure,
+          MSA/SOW framework, and earned equity pathways (Tiered
+          Engagement Model).
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>The Option Agreement
+          Strategy:</em> Structuring IP acquisition as the
+          purchase of a right (the option), not a service, to avoid WFH
+          risks and the Service Nexus.
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Technology &amp;
+          Authorship:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+          "Prompt as Expression" argument.
+        </p>
+        </li>
+        <li>
+          <p>
+          "Canon Architect" Workflow (AI as Engineer/Human as
+          Architect).
+        </p>
+        </li>
+      </ul>
+    </section>
+    <section id="s-4-economic-models-the-business-logic">
+      <h3>
+        <em>4. Economic Models (The Business
+    Logic)</em>
+      </h3>
+      <ul>
+        <li>
+          <p>
+            <em>High-Risk Models:</em> UGC
+          platforms, directed crowdfunding commissions, VRPs.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Compliant/Alternative
+          Models:</em> FOSS, Cooperatives, Pure Patronage.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Scalable Models:</em> The
+          Transmedia IP Funnel (Incubator model).
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Financialization Models:</em> IP
+          Securitization (WBS, Royalty Securitization).
+        </p>
+        </li>
+      </ul>
+    </section>
+  </section>
+  <section id="b-relationship-mapping-and-argument-clusters-the-verbs-and-themes">
+    <h2>
+      <em>B. Relationship Mapping and Argument
+  Clusters (The "Verbs" and
+  "Themes")</em>
+    </h2>
+    <p>
+    The power of the KG lies in defining how these entities and concepts
+    interact (the relationships) and organizing them into thematic
+    clusters that represent the core arguments of the corpus.
+  </p>
+    <section id="s-1-relationships-edges">
+      <h3>
+        <em>1. Relationships
+    (Edges)</em>
+      </h3>
+      <p>
+      These define the logical connections and arguments within the
+      corpus.
+    </p>
+      <ul>
+        <li>
+          <p>
+            <em>Causal Relationships:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+          TRIGGERS (e.g., Service Relationship TRIGGERS ABC Test).
+        </p>
+        </li>
+        <li>
+          <p>
+          CAUSES_FAILURE_OF (e.g., Algorithmic Control CAUSES_FAILURE_OF
+          Prong A).
+        </p>
+        </li>
+        <li>
+          <p>
+          CREATES_RISK (e.g., WFH Agreement CREATES_RISK Statutory
+          Employment in CA).
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Governance Relationships:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+          GOVERNED_BY (e.g., Platform-User Relationship GOVERNED_BY
+          ToS).
+        </p>
+        </li>
+        <li>
+          <p>
+          EXEMPTS_FROM (e.g., AB 2257 Fine Artist Exemption EXEMPTS_FROM
+          ABC Test).
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Mitigation Relationships:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+          MITIGATES (e.g., Option-to-Purchase Agreement MITIGATES
+          Service Nexus Risk).
+        </p>
+        </li>
+        <li>
+          <p>
+          REQUIRES (e.g., Fine Artist Exemption REQUIRES Business
+          License).
+        </p>
+        </li>
+      </ul>
+    </section>
+    <section id="s-2-core-argument-clusters-the-meta-document-structure">
+      <h3>
+        <em>2. Core Argument Clusters (The
+    Meta-Document Structure)</em>
+      </h3>
+      <p>
+      The KG organizes the entities and relationships into high-level
+      thematic clusters, forming the navigable structure of the
+      meta-document.
+    </p>
+      <ul>
+        <li>
+          <p>
+            <em>Cluster 1: The Misclassification
+          Engine:</em> Focuses on how platform models trigger
+          labor laws.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Cluster 2: Systemic
+          Vulnerabilities:</em> Details the specific failure
+          points in common business models (Hobbyist Dilemma, Service
+          Nexus, WFH Trap).
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Cluster 3: Compliant Architectures
+          (The Playbook):</em> Outlines the constructive models
+          for compliant engagement (Executive Author LLC, MSA/SOW
+          Framework).
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Cluster 4: Strategic IP Management
+          &amp; Financialization:</em> Details mechanisms for
+          acquiring, scaling, and monetizing IP (Option-to-Purchase,
+          Transmedia Funnel, IP Securitization).
+        </p>
+        </li>
+      </ul>
+    </section>
+  </section>
+  <section id="c-implementation-and-access-the-dynamic-meta-document">
+    <h2>
+      <em>C. Implementation and Access: The
+  Dynamic Meta-Document</em>
+    </h2>
+    <p>
+    The implementation strategy focuses on transforming the static
+    corpus into this dynamic structure and providing intuitive access.
+  </p>
+    <section id="s-1-ingestion-and-enrichment">
+      <h3>
+        <em>1. Ingestion and
+    Enrichment</em>
+      </h3>
+      <ul>
+        <li>
+          <p>
+            <em>Argument Atomization:</em>
+          Documents are processed to identify discrete claims,
+          definitions, evidence, and counter-arguments. This moves
+          beyond simple keyword tagging to identifying the logical
+          structure of the text.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>NLP Assistance and
+          Curation:</em> Utilize Natural Language Processing (NLP)
+          tools for entity recognition and relationship extraction,
+          followed by expert curation to ensure the logical integrity of
+          the arguments is captured and mapped according to the
+          ontology.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Graph Database Storage:</em> The
+          structured data (entities and relationships) is stored in a
+          graph database, optimized for traversing complex connections.
+        </p>
+        </li>
+      </ul>
+    </section>
+    <section id="s-2-access-and-synthesis-the-user-experience">
+      <h3>
+        <em>2. Access and Synthesis (The User
+    Experience)</em>
+      </h3>
+      <p>
+      The strategy shifts access from retrieving static documents to
+      dynamically synthesizing knowledge based on the user's query.
+    </p>
+      <ul>
+        <li>
+          <p>
+            <em>Concept-Based Querying:</em> The
+          primary interface allows users to ask complex, conceptual
+          questions rather than search for keywords.
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Example Query:</em> "Analyze the
+          compliance risks of using a Work-for-Hire agreement with a
+          hobbyist artist in California."
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Dynamic Synthesis:</em> The
+          system does not retrieve a pre-written document. Instead, it
+          traverses the knowledge graph, identifying all relevant nodes
+          and edges related to the query.
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>KG Traversal Example:</em> For the query
+          above, the system traverses: [WFH Agreement] -&gt; [Triggers
+          Statutory Employment (CA)]. It also traverses: [Hobbyist]
+          -&gt; [Inherently Fails Prong C].
+        </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>The Meta-Document Output:</em>
+          The system synthesizes this traversed information into a
+          coherent, structured response—a dynamically generated
+          "meta-document" tailored to the query, citing the
+          underlying logic and source concepts.
+        </p>
+        </li>
+        <li>
+          <p>
+            <em>Visualization and Gap
+          Analysis:</em> Provide interactive visualizations of the
+          KG. This allows users to explore the connections between
+          concepts visually and identify gaps in the knowledge base or
+          weaknesses in the arguments.
+        </p>
+        </li>
+      </ul>
+    </section>
+  </section>
+<footer><p>Copyright © 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This document publishes general legal analysis and does not constitute legal advice.</p></footer>
+</body>
+</html>

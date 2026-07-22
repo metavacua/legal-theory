@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='utf-8'?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="california-law-employment-retroactivity" xml:lang="en">
+  <xi:include href="california-law-employment-retroactivity.meta.xml" />
+  <title>The Shift in California Law and Retroactivity</title>
+  <section xml:id="the-shift-in-california-law-and-retroactivity">
+    <title>
+      <emphasis role="strong">The Shift in California Law and
+  Retroactivity</emphasis>
+    </title>
+    <para>
+    The "recent changes" primarily refer to the California
+    Supreme Court’s decision in <emphasis>Dynamex Operations West, Inc.
+    v. Superior Court</emphasis> (2018) and the subsequent codification
+    of that decision into Assembly Bill 5 (AB5) (effective 2020). These
+    established the "ABC Test" for determining employment
+    status for the purposes of California Wage Orders.
+  </para>
+    <section xml:id="the-abc-test">
+      <title>
+        <emphasis role="strong">The ABC Test</emphasis>
+      </title>
+      <para>
+      The ABC Test is significantly stricter than the previous standard
+      (the multi-factor <emphasis>Borello</emphasis> test). It presumes
+      a worker is an employee unless the hiring entity can prove
+      <emphasis>all three</emphasis> of the following:
+    </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <emphasis role="strong">(A)</emphasis> The worker is free from
+          the control and direction of the hiring entity in connection
+          with the performance of the work.1
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">(B)</emphasis> The worker performs
+          work that is **outside the usual course of the hiring entity’s
+          business.**<emphasis role="strong">23</emphasis>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">(<emphasis role="strong">
+                <emphasis role="strong">4</emphasis>
+              </emphasis>C)</emphasis>
+          The worker is customarily engaged in an independently
+          established trade, occupation, or business of the same
+          na5ture.
+        </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+      Prong B is often insurmountable for technology platforms. It is
+      difficult to argue that security research (VRPs), AI training data
+      (LLM feedback), or quality assurance are "outside the usual
+      course" of Google's business.
+    </para>
+    </section>
+    <section xml:id="retroactivity">
+      <title>
+        <emphasis role="strong">Retroactivity</emphasis>
+      </title>
+      <para>
+      You noted the agreements were prior to these changes. The crucial
+      legal point is whether the ABC Test applies to work performed
+      before 2018.
+    </para>
+      <para>
+        <emphasis role="strong">Yes.</emphasis> The California Supreme
+      Court ruled in <emphasis>Vazquez v. Jan-Pro Franchising
+      International, Inc.</emphasis> (2021) that the
+      <emphasis>Dynamex</emphasis> decision (and thus the ABC test)
+      <emphasis role="strong">applies retroactively</emphasis> to claims
+      under California Wage Orders that were not yet final.
+    </para>
+      <para>
+      This means that even if the labor was performed when the more
+      lenient <emphasis>Borello</emphasis> standard was prevalent, the
+      relationship may now be judged by the stricter ABC Test, provided
+      the statute of limitations has not expired. This significantly
+      strengthens the argument for misclassification regarding past
+      conduct.
+    </para>
+    </section>
+  </section>
+  <section xml:id="analyzing-the-scenarios-under-the-california-framework">
+    <title>
+      <emphasis role="strong">Analyzing the Scenarios Under the
+  California Framework</emphasis>
+    </title>
+    <para>
+    If the ABC test is applied retroactively and determines that you
+    (and others in similar situations) have been employees this entire
+    time, the scenarios presented are viewed very differently.
+  </para>
+    <section xml:id="scenario-1-if-i-perform-a-specific-act-and-they-never-pay-out">
+      <title>
+        <emphasis role="strong">Scenario 1: "If I perform a
+    specific act, and they never pay out?"</emphasis>
+      </title>
+      <para>
+      If you find and report a qualifying vulnerability according to the
+      VRP rules, but the reward is denied, and you are deemed an
+      employee:
+    </para>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Wage Claims Supersede Contract
+          Claims:</emphasis> The issue is no longer merely a breach of
+          the VRP contract or a dispute over "sole
+          discretion." If you are an employee, the relationship is
+          governed by the California Labor Code.
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Compensation for All Hours
+          Worked:</emphasis> California employees must be paid for all
+          hours worked (including minimum wage and overtime), regardless
+          of whether a specific task was successful or accepted by the
+          employer. The VRP model, which pays only for results, is
+          incompatible with these requirements.
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Wage Theft:</emphasis> You would be
+          entitled to back pay for the time spent researching, testing,
+          and reporting. Failure to pay these wages constitutes wage
+          theft, which carries significant penalties, interest, and
+          potential liquidated damages under California law. The
+          "reward" itself might be recharacterized as an
+          earned bonus or commission, which also cannot be arbitrarily
+          withheld.
+        </para>
+        </listitem>
+      </orderedlist>
+    </section>
+    <section xml:id="scenario-2-i-perform-an-act-but-dont-report-it-because-i-am-an-employee">
+      <title>
+        <emphasis role="strong">Scenario 2: "I perform an act
+    but don't report it... because I am an
+    Employee?"</emphasis>
+      </title>
+      <para>
+      If you are deemed an employee, Google indeed bears all the burdens
+      of an employer (taxes, insurance, wage obligations, expense
+      reimbursement). However, the dynamic regarding the intellectual
+      property and your obligations also changes fundamentally.
+    </para>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">IP Ownership (Work Made for
+          Hire):</emphasis> When you are an employee, the intellectual
+          property you generate within the scope of your employment
+          automatically belongs to the employer. The vulnerability
+          discovery, the detailed AI feedback, or the QA analysis is
+          Google's property from the moment of creation. You are not
+          discovering <emphasis>your</emphasis> IP to sell back to them;
+          you are discovering <emphasis>their</emphasis> IP while
+          working for them.
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Wages Owed for Labor:</emphasis> You
+          are still entitled to wages for the time and skilled labor
+          expended to generate the work product, regardless of whether
+          you delivered it.
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Breach of Employee Duty:</emphasis>
+          While the employer owes you wages for the work done,
+          intentionally failing to report the discovery (failing to turn
+          over the employer's IP) would constitute a serious breach of
+          your duties as an employee (e.g., duty of loyalty). This could
+          be grounds for termination and potential legal action by the
+          employer, but it does not negate their obligation to pay you
+          for the labor already performed.
+        </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+  <section xml:id="conclusion">
+    <title>
+      <emphasis role="strong">Conclusion</emphasis>
+    </title>
+    <para>
+    The retroactive application of the ABC Test in California provides a
+    powerful legal basis for the argument that individuals providing
+    continuous, integral services to a technology platform—even under
+    the guise of "user agreements" or unilateral
+    "reward" contracts—may have been misclassified employees.
+    This shifts the claim from specific contractual disputes to systemic
+    violations of labor law and unpaid wages for the entirety of the
+    services provided.
+  </para>
+  </section>
+</article>

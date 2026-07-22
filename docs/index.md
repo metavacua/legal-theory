@@ -108,7 +108,7 @@ CA Corporations Code; federal securities law; IRC cooperative treatment.
   *(largest document in the repo, 18.4k words — earlier draft: [legal-actions-without-consent-draft.md](court-record/matters/sex-work-consent-bodily-autonomy/evidence/legal-actions-without-consent-draft.html))*
 - [The Laudable Contract: A New Jurisprudence for Licit Sexual Service Agreements](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-laudable-contract-licit-sexual-service-agreements.html)
 - [The Nexus of Consent and Consideration: A Legal Framework for Navigating Modern Relationships in California](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-nexus-of-consent-and-consideration.html)
-  *(shares its title with [a theory document](court-record/theory/california-statutes/existing-law/california-sex-contracts-and-consent.md) of different length — unresolved, see plan Task 6)*
+  *(shares its title with [a theory document](court-record/theory/california-statutes/existing-law/california-sex-contracts-and-consent.html) of different length — unresolved, see plan Task 6)*
 - [The Sovereign Self: Bodily Autonomy at the Intersection of Kink, Sex Work, and Self-Expression](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-sovereign-self-bodily-autonomy-kink-sex-work.html)
   *(companion: [kink-sex-work-body-autonomy-research.md](court-record/matters/sex-work-consent-bodily-autonomy/evidence/kink-sex-work-body-autonomy-research.html), same title)*
 - [The Architecture of Legally Permissible Non-Consensual Sexual Interaction in the United States](court-record/matters/sex-work-consent-bodily-autonomy/evidence/us-sex-crime-law-analysis.html)
@@ -147,43 +147,43 @@ constitutional questions that belong to higher levels. Only branches with conten
 ### Federal Constitutional
 
 **Existing Doctrine**
-- [The First Amendment Canon: 100 Landmark Cases](court-record/theory/federal-constitutional/existing-doctrine/first-amendment-landmark-cases-research.md)
-- [The Legal Status of Bodily Autonomy in the United States: A Post-Dobbs Jurisdictional Analysis](court-record/theory/federal-constitutional/existing-doctrine/legal-status-of-bodily-autonomy-post-dobbs.md)
+- [The First Amendment Canon: 100 Landmark Cases](court-record/theory/federal-constitutional/existing-doctrine/first-amendment-landmark-cases-research.html)
+- [The Legal Status of Bodily Autonomy in the United States: A Post-Dobbs Jurisdictional Analysis](court-record/theory/federal-constitutional/existing-doctrine/legal-status-of-bodily-autonomy-post-dobbs.html)
 
 **Extensions**
-- [Prostitution as Impermissible Expression: A First Amendment Analysis](court-record/theory/federal-constitutional/extensions/first-amendment-and-prostitution-law.md)
-- [Large Language Models as Categories: An Exploration of Internal Logics](court-record/theory/federal-constitutional/extensions/llms-as-categorical-systems.md)
-- [The New Gatekeepers: Payment Processor Discretion as Censorship and Discriminatory Enforcement](court-record/theory/federal-constitutional/extensions/payment-processors-censorship-and-discrimination.md)
+- [Prostitution as Impermissible Expression: A First Amendment Analysis](court-record/theory/federal-constitutional/extensions/first-amendment-and-prostitution-law.html)
+- [Large Language Models as Categories: An Exploration of Internal Logics](court-record/theory/federal-constitutional/extensions/llms-as-categorical-systems.html)
+- [The New Gatekeepers: Payment Processor Discretion as Censorship and Discriminatory Enforcement](court-record/theory/federal-constitutional/extensions/payment-processors-censorship-and-discrimination.html)
 
 ### Federal Statutes
 
 **Existing Law**
-- [The Investor Cooperative: A Constitutional and Logical Framework](court-record/theory/federal-statutes/existing-law/cooperative-investing-us-ca-irc.md)
-- [IP Contract Knowledge Graph — Conceptual Ontology](court-record/theory/federal-statutes/existing-law/ip-contract-knowledge-graph.md)
-- [Patronage-Sourced Income — The Patronage Incentive and the "Directly Related" Test](court-record/theory/federal-statutes/existing-law/patronage-sourced-income.md)
-- [The Constitutional Paradox of Section 230: Intermediary Immunity and the Digital Public Sphere](court-record/theory/federal-statutes/existing-law/section-230-legal-shield-under-fire.md)
+- [The Investor Cooperative: A Constitutional and Logical Framework](court-record/theory/federal-statutes/existing-law/cooperative-investing-us-ca-irc.html)
+- [IP Contract Knowledge Graph — Conceptual Ontology](court-record/theory/federal-statutes/existing-law/ip-contract-knowledge-graph.html)
+- [Patronage-Sourced Income — The Patronage Incentive and the "Directly Related" Test](court-record/theory/federal-statutes/existing-law/patronage-sourced-income.html)
+- [The Constitutional Paradox of Section 230: Intermediary Immunity and the Digital Public Sphere](court-record/theory/federal-statutes/existing-law/section-230-legal-shield-under-fire.html)
 
 **Extensions**
-- [An Architectural and Legal Analysis of the SynthPlayground Initiative: Agentic Self-Improvement](court-record/theory/federal-statutes/extensions/agpl-ai-training-and-code-licensing.md)
+- [An Architectural and Legal Analysis of the SynthPlayground Initiative: Agentic Self-Improvement](court-record/theory/federal-statutes/extensions/agpl-ai-training-and-code-licensing.html)
 
 ### California Statutes
 
 **Existing Law**
-- [Structuring Service-Free Acquisition of Future Artwork in California](court-record/theory/california-statutes/existing-law/california-contract-law-analysis.md)
-- [An Exhaustive Analysis of California "Patron Law"](court-record/theory/california-statutes/existing-law/california-patron-law-section-analysis.md)
-- [The Bifurcated Standard: Reconciling Contractual and Sexual Consent in California](court-record/theory/california-statutes/existing-law/california-sex-contract-consent-standards.md)
-- [The Nexus of Consent and Consideration: A Legal Framework for Navigating Modern Relationships in California](court-record/theory/california-statutes/existing-law/california-sex-contracts-and-consent.md)
+- [Structuring Service-Free Acquisition of Future Artwork in California](court-record/theory/california-statutes/existing-law/california-contract-law-analysis.html)
+- [An Exhaustive Analysis of California "Patron Law"](court-record/theory/california-statutes/existing-law/california-patron-law-section-analysis.html)
+- [The Bifurcated Standard: Reconciling Contractual and Sexual Consent in California](court-record/theory/california-statutes/existing-law/california-sex-contract-consent-standards.html)
+- [The Nexus of Consent and Consideration: A Legal Framework for Navigating Modern Relationships in California](court-record/theory/california-statutes/existing-law/california-sex-contracts-and-consent.html)
   *(see cross-location note under Sex Work, Consent, and Bodily Autonomy above)*
-- [Patronage in California Law](court-record/theory/california-statutes/existing-law/ca-patronage-law.md)
-- [Principles of Patron Law in California](court-record/theory/california-statutes/existing-law/ca-patron-law-v2.md) *(v2)*
-- [A Legal Framework for Minor-Operated Businesses in California](court-record/theory/california-statutes/existing-law/minors-operating-businesses-in-california.md)
+- [Patronage in California Law](court-record/theory/california-statutes/existing-law/ca-patronage-law.html)
+- [Principles of Patron Law in California](court-record/theory/california-statutes/existing-law/ca-patron-law-v2.html) *(v2)*
+- [A Legal Framework for Minor-Operated Businesses in California](court-record/theory/california-statutes/existing-law/minors-operating-businesses-in-california.html)
 
 **Extensions**
-- [The Shift in California Law and Retroactivity](court-record/theory/california-statutes/extensions/california-law-employment-retroactivity.md)
-- [The Consent Paradox: Lawful Non-Consensual Interaction in Social and Sexual Contexts](court-record/theory/california-statutes/extensions/the-consent-paradox-lawful-non-consensual-interaction.md)
+- [The Shift in California Law and Retroactivity](court-record/theory/california-statutes/extensions/california-law-employment-retroactivity.html)
+- [The Consent Paradox: Lawful Non-Consensual Interaction in Social and Sexual Contexts](court-record/theory/california-statutes/extensions/the-consent-paradox-lawful-non-consensual-interaction.html)
 
 **Specializations**
-- [From Presumption to Practice: Consensual Sexual Relations and Economic Exchange in California](court-record/theory/california-statutes/specializations/from-presumption-to-practice-consensual-sexual-relations-ca.md)
+- [From Presumption to Practice: Consensual Sexual Relations and Economic Exchange in California](court-record/theory/california-statutes/specializations/from-presumption-to-practice-consensual-sexual-relations-ca.html)
 
 ---
 
