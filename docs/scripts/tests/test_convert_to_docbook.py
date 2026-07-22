@@ -213,6 +213,21 @@ class TestSplitIntoFragments(unittest.TestCase):
         self.assertIn("Second Topic", resolved)
         self.assertIn("Content for the second topic.", resolved)
 
+    def test_flat_document_is_not_split(self):
+        from convert_to_docbook import (
+            pandoc_to_docbook_fragment, wrap_fragment, split_into_fragments,
+        )
+        fragment = pandoc_to_docbook_fragment(self.fixtures / "flat.md")
+        article, _ = wrap_fragment(fragment, "flat", "A Flat Document", "flat.meta.xml")
+        children_before = list(article)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            out_dir = Path(tmp)
+            result = split_into_fragments(article, out_dir, "flat")
+            self.assertFalse(result)
+            self.assertFalse((out_dir / "flat").exists())
+            self.assertEqual(list(article), children_before)
+
 
 class TestWriteMetadata(unittest.TestCase):
     def test_write_metadata_produces_well_formed_xincludable_info(self):
