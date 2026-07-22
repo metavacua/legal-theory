@@ -32,13 +32,13 @@
 
         <!-- Dublin Core meta tags -->
         <meta name="DC.title"       content="{db:info/dc:title}"/>
-        <meta name="DC.creator"     content="{db:info/dc:creator}"/>
+        <meta name="DC.creator"     content="{db:info//dc:creator}"/>
         <meta name="DC.subject"     content="{db:info/dc:subject}"/>
         <meta name="DC.description" content="{db:info/dc:description}"/>
         <meta name="DC.date"        content="{db:info/dc:date}"/>
-        <meta name="DC.type"        content="{db:info/dc:type}"/>
-        <meta name="DC.language"    content="{db:info/dc:language}"/>
-        <meta name="DC.rights"      content="{db:info/dc:rights}"/>
+        <meta name="DC.type"        content="{db:info//dc:type}"/>
+        <meta name="DC.language"    content="{db:info//dc:language}"/>
+        <meta name="DC.rights"      content="{db:info//dc:rights}"/>
 
         <!-- Schema.org JSON-LD (extracted from bibliomisc element) -->
         <xsl:if test="db:info/db:bibliomisc[@role='schema-org-jsonld']">
@@ -126,7 +126,7 @@
         <xsl:apply-templates/>
         <footer>
           <p>
-            <xsl:value-of select="db:info/db:legalnotice/db:para"/>
+            <xsl:value-of select="db:info//db:legalnotice/db:para"/>
           </p>
         </footer>
       </body>
@@ -140,11 +140,11 @@
     <header class="doc-header">
       <h1><xsl:value-of select="dc:title"/></h1>
       <p class="byline">
-        By <xsl:value-of select="db:authorgroup/db:author/db:personname/db:firstname"/>
+        By <xsl:value-of select=".//db:authorgroup/db:author/db:personname/db:firstname"/>
         <xsl:text> </xsl:text>
-        <xsl:value-of select="db:authorgroup/db:author/db:personname/db:othername"/>
+        <xsl:value-of select=".//db:authorgroup/db:author/db:personname/db:othername"/>
         <xsl:text> </xsl:text>
-        <xsl:value-of select="db:authorgroup/db:author/db:personname/db:surname"/>
+        <xsl:value-of select=".//db:authorgroup/db:author/db:personname/db:surname"/>
         <xsl:text> — </xsl:text>
         <xsl:value-of select="dc:date"/>
       </p>
