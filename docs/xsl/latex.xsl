@@ -53,11 +53,11 @@
     </xsl:call-template>
     <xsl:text>}
 \author{</xsl:text>
-    <xsl:value-of select="db:info/db:authorgroup/db:author/db:personname/db:firstname"/>
+    <xsl:value-of select="db:info//db:authorgroup/db:author/db:personname/db:firstname"/>
     <xsl:text> </xsl:text>
-    <xsl:value-of select="db:info/db:authorgroup/db:author/db:personname/db:othername"/>
+    <xsl:value-of select="db:info//db:authorgroup/db:author/db:personname/db:othername"/>
     <xsl:text> </xsl:text>
-    <xsl:value-of select="db:info/db:authorgroup/db:author/db:personname/db:surname"/>
+    <xsl:value-of select="db:info//db:authorgroup/db:author/db:personname/db:surname"/>
     <xsl:text>}
 \date{</xsl:text>
     <xsl:value-of select="db:info/dc:date"/>
