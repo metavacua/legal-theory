@@ -8,7 +8,6 @@
     confirmed-with-caveats → blue border
     split                → amber border
 -->
-<!-- CI verification no-op: confirms build-corpus.yml triggers on docs/xsl/** changes -->
 <xsl:stylesheet
     version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -96,6 +95,11 @@
             margin-left: -1.2rem;
           }
 
+          nav.site-nav { font-family: system-ui, sans-serif; font-size: 0.85rem;
+                         margin-bottom: 1.5rem; }
+          nav.site-nav a { text-decoration: none; }
+          nav.site-nav a:hover { text-decoration: underline; }
+
           header.doc-header { margin-bottom: 2.5rem; }
           .abstract { background: var(--surface); border: 1px solid var(--rule);
                       border-radius: 6px; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
@@ -105,6 +109,11 @@
         </style>
       </head>
       <body>
+        <nav class="site-nav">
+          <a href="/legal-theory/">legal-theory</a>
+          <xsl:text> · </xsl:text>
+          <a href="/legal-theory/index.html">Index</a>
+        </nav>
         <xsl:apply-templates/>
         <footer>
           <p>
