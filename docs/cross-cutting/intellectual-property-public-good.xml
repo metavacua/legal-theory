@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='utf-8'?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="intellectual-property-public-good" xml:lang="en">
+  <xi:include href="intellectual-property-public-good.meta.xml" />
+  <title>Intellectual Property as a Public Good: An Analysis of Non-Commercial Creation and Contribution</title>
+  <section xml:id="introduction-beyond-the-service-model">
+    <title>
+      <emphasis role="strong">Introduction: Beyond the Service
+    Model</emphasis>
+    </title>
+    <para>
+      While intellectual property (IP) is often created within a
+      commercial, service-based framework, a significant portion of
+      creative and innovative work is intended for the benefit of a
+      community, government, or other organization without a traditional
+      client-provider relationship. These scenarios, which often involve
+      mutual aid, material support, or the advancement of a public good,
+      rely on legal and economic arguments that distinguish the act of
+      creation from a compensable service.
+    </para>
+    <para>
+      This report examines the material frameworks that enable the
+      creation and transfer of IP in a manner that is potentially
+      tax-free, unencumbered by significant administrative burdens, and
+      rooted in a relationship of support rather than commerce. The
+      analysis focuses on three primary models: the treatment of IP as a
+      donatable asset, the use of collaborative licensing frameworks
+      like Open Source and Creative Commons, and the specific legal
+      status of IP created for or by government entities. These models
+      demonstrate that the "property" aspect of IP is the key
+      mechanism that allows creators to contribute their work to the
+      public good outside of a service-for-hire context.
+    </para>
+  </section>
+  <section xml:id="s-1-the-constitutional-shield-ip-as-a-donatable-asset">
+    <title>
+      <emphasis role="strong">1. The Constitutional Shield: IP as a
+    Donatable Asset</emphasis>
+    </title>
+    <para>
+      The foundational argument for non-service creation rests on the
+      legal nature of intellectual property in the United States. The
+      U.S. Constitution empowers Congress to grant creators exclusive
+      rights to their works, establishing IP as a form of property.1
+      This property right is fundamentally a right to
+    </para>
+    <para>
+      <emphasis>exclude</emphasis> others from using the creation, which
+      is the philosophical opposite of an obligation to provide a
+      service.3 An inventor or author who holds a patent or copyright
+      can legally refuse to license or sell it to anyone.3
+    </para>
+    <para>
+      This principle of ownership is what enables a creator to
+      voluntarily contribute their IP. Instead of selling their work as
+      a service, they can create it and then transfer ownership or grant
+      permissions for its use as a gift or contribution.
+    </para>
+    <section xml:id="legal-and-economic-framework">
+      <title>
+        <emphasis role="strong">Legal and Economic
+      Framework</emphasis>
+      </title>
+      <para>
+        A creator can transfer their IP to a qualifying nonprofit
+        organization, community group, or even a government entity
+        through a simple assignment or license agreement.5 In this
+        model, the creation is not a service rendered
+      </para>
+      <para>
+        <emphasis>for</emphasis> the organization but an asset
+        transferred <emphasis>to</emphasis> the organization. The
+        transaction is one of material support, not a fee for service.
+      </para>
+    </section>
+    <section xml:id="tax-and-regulatory-implications">
+      <title>
+        <emphasis role="strong">Tax and Regulatory
+      Implications</emphasis>
+      </title>
+      <para>
+        The tax implications of donating IP are complex and hinge on the
+        distinction between donating services and donating property.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Donation of Services vs.
+            Property:</emphasis> The value of donated time or services
+            is not tax-deductible.7 A graphic designer who volunteers to
+            create a logo for a charity cannot deduct the value of their
+            labor. However, intellectual property is a recognized asset,
+            and its donation can qualify as a tax-deductible charitable
+            contribution.10
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Limitations on
+            Deductions:</emphasis> The American Jobs Creation Act of
+            2004 significantly altered the tax benefits for donating IP.
+            The donor's initial deduction is limited to the lesser of
+            the property's fair market value or their adjusted basis
+            (cost) in the property.12 The law allows for potential
+            additional deductions in subsequent years based on the net
+            income the charity earns from the donated IP.12
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Achieving a "Tax-Free" and
+            "Low-Burden" Scenario:</emphasis> A truly tax-free
+            and low-burden scenario for the creator is achieved when
+            they donate the IP without seeking a tax deduction. In this
+            case, the transfer is a gift, generating no income and thus
+            no tax liability for the creator.13 The administrative
+            burden can be minimal, requiring only a written agreement to
+            transfer the rights. The process becomes administratively
+            complex only when the donor seeks to claim a tax deduction,
+            which may require formal appraisals and specific IRS
+            reporting by both the donor and the recipient
+            organization.12
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        Therefore, the "Constitutional Shield" argument aligns
+        with a mutual aid scenario where a creator formally transfers
+        their property rights to an organization without the expectation
+        of payment or a significant tax benefit, thereby avoiding both
+        service classification and regulatory complexity.
+      </para>
+    </section>
+  </section>
+  <section xml:id="s-2-collaborative-frameworks-open-source-and-creative-commons">
+    <title>
+      <emphasis role="strong">2. Collaborative Frameworks: Open
+    Source and Creative Commons</emphasis>
+    </title>
+    <para>
+      The "Independent Vision" argument, which posits that
+      creators often seek to protect their work from market pressures,
+      finds its most robust legal and economic expression in
+      collaborative licensing models. Open Source Software (OSS) and
+      Creative Commons (CC) are sophisticated legal frameworks designed
+      to facilitate the creation and sharing of IP as a community
+      resource or public good.
+    </para>
+    <section xml:id="open-source-software-oss">
+      <title>
+        <emphasis role="strong">Open Source Software
+      (OSS)</emphasis>
+      </title>
+      <para>
+        The OSS model is built on the principle of collaborative,
+        decentralized development.16 While the underlying code is
+        protected by copyright, OSS licenses use those copyright
+        protections to enforce norms of openness rather than
+        exclusion.17
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Legal and Economic
+            Framework:</emphasis> OSS licenses grant users the right to
+            use, study, modify, and distribute the software and its
+            source code for any purpose.18 This creates a
+            "commons" where contributions are a form of mutual
+            aid, benefiting all users and co-developers.18 The legal
+            structure is a standardized, pre-written license that
+            removes the need for individual negotiation. While
+            developers <emphasis>can</emphasis> charge for OSS, the
+            licenses permit free redistribution, which severely
+            constrains the ability to sell the code itself.17
+            Monetization typically comes from selling related services
+            and support rather than the IP itself.19
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Tax and Regulatory
+            Implications:</emphasis> For an individual contributing to
+            an OSS project without direct payment, the act is generally
+            tax-neutral—it generates no income and offers no
+            deduction.20 If a developer receives payments through
+            crowdfunding or sponsorship platforms, this is typically
+            treated as taxable self-employment income, not a tax-free
+            gift, because it is compensation for their work.13 This
+            introduces a tax burden. The administrative overhead for
+            participating in OSS is extremely low, often involving
+            nothing more than choosing a standard license for a
+            project.19
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="creative-commons-cc">
+      <title>
+        <emphasis role="strong">Creative Commons
+      (CC)</emphasis>
+      </title>
+      <para>
+        Similarly, Creative Commons provides a suite of standardized
+        licenses that allow creators of artistic and literary works to
+        grant the public permission to share and use their work under
+        specific conditions.21
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Legal and Economic
+            Framework:</emphasis> CC licenses are legal tools that
+            modify the default "all rights reserved" nature of
+            copyright to "some rights reserved".21 A creator
+            can choose a license that allows for reuse and modification,
+            creating a framework for mutual aid and cultural sharing.
+            Critically, licenses can include a NonCommercial (NC)
+            clause, which explicitly permits use for non-commercial
+            purposes only, directly aligning with the user's scenario.21
+            These licenses are irrevocable, ensuring that once a work is
+            contributed to the commons, it remains there.23
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Tax and Regulatory
+            Implications:</emphasis> Applying a CC license is a simple,
+            no-cost action with no direct tax consequences. It is a
+            declaration of permissions, not a financial transaction. It
+            allows a creator to contribute their work to a community or
+            the public at large with minimal administrative burden while
+            retaining ownership of the copyright.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        Both OSS and CC models provide robust, legally sound frameworks
+        for creating and distributing IP in a system of mutual support,
+        largely free from the tax and administrative burdens of
+        commercial transactions.
+      </para>
+    </section>
+  </section>
+  <section xml:id="s-3-creation-for-the-public-domain-government-works">
+    <title>
+      <emphasis role="strong">3. Creation for the Public Domain:
+    Government Works</emphasis>
+    </title>
+    <para>
+      A distinct scenario arises when IP is created for a government
+      entity. The legal and economic outcome in these cases can
+      represent the most complete form of contribution to the public
+      good.
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Works by Federal Employees:</emphasis>
+          Under U.S. copyright law, a "work of the United States
+          Government" is defined as a work prepared by a federal
+          officer or employee as part of their official duties.25 Such
+          works are not entitled to copyright protection in the U.S. and
+          are automatically placed in the public domain.26 This is a
+          clear-cut case where IP is created for society, is entirely
+          free of IP restrictions, and involves no additional tax or
+          regulatory burden beyond the creator's normal employment.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Works from Federally Funded
+          Research:</emphasis> The Bayh-Dole Act governs IP created
+          through federally funded research. It allows universities and
+          small businesses to retain the title to their inventions but
+          grants the federal government a "nonexclusive,
+          nontransferable, irrevocable, paid-up license" to use the
+          invention.28 This arrangement ensures that the public, having
+          funded the research, retains a material interest and right to
+          use the resulting IP. While the creator can commercialize the
+          IP, the public's contribution is secured through this
+          permanent, royalty-free license, reflecting a form of societal
+          mutual aid. This framework, however, does involve significant
+          administrative and reporting requirements.28
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="conclusion">
+    <title>
+      <emphasis role="strong">Conclusion</emphasis>
+    </title>
+    <para>
+      The arguments against a universal service model for IP creation
+      provide a strong basis for scenarios involving mutual aid and the
+      contribution of IP for the public good. The key is the legal
+      status of IP as a form of property, which can be owned, licensed,
+      and transferred by choice.
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          A creator can <emphasis role="strong">donate</emphasis> their
+          IP as a tangible asset, a transaction that can be structured
+          to be tax-free and low-burden, provided no tax deduction is
+          sought.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Creators can use established legal frameworks like
+          <emphasis role="strong">Open Source and Creative Commons
+          licenses</emphasis> to release their work into a collaborative
+          commons, creating a system of mutual aid with minimal
+          administrative overhead.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          IP created for or by the <emphasis role="strong">U.S. federal
+          government</emphasis> can directly enter the public domain or
+          be subject to broad, royalty-free government use rights,
+          ensuring a return to the public that supported its creation.
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+      These models demonstrate that IP creation is not inherently an act
+      of service. Through deliberate legal and economic choices,
+      creators can structure the creation and dissemination of their
+      work to function as a contribution, a gift, or a shared resource,
+      aligning with principles of community support and the advancement
+      of the public good.
+    </para>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            Intellectual Property Law: A Brief Introduction -
+            Congress.gov, accessed September 2, 2025,
+            <link xlink:href="https://www.congress.gov/crs-product/IF10986">https://www.congress.gov/crs-product/IF10986</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            ArtI.S8.C8.1 Overview of Congress's Power Over Intellectual
+            Property - Constitution Annotated, accessed September 2,
+            2025,
+            <link xlink:href="https://constitution.congress.gov/browse/essay/artI-S8-C8-1/ALDE_00013060/">https://constitution.congress.gov/browse/essay/artI-S8-C8-1/ALDE_00013060/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            A Lockean Approach to the Compulsory Patent Licensing
+            Controversy - UF Law Scholarship Repository, accessed
+            September 2, 2025,
+            <link xlink:href="https://scholarship.law.ufl.edu/cgi/viewcontent.cgi?article=1044&amp;context=jtlp">https://scholarship.law.ufl.edu/cgi/viewcontent.cgi?article=1044&amp;context=jtlp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            How Patents Differ From Copyrights and Trademarks - FindLaw,
+            accessed September 2, 2025,
+            <link xlink:href="https://www.findlaw.com/smallbusiness/intellectual-property/patent-definition-and-the-difference-between-copyrights-and.html">https://www.findlaw.com/smallbusiness/intellectual-property/patent-definition-and-the-difference-between-copyrights-and.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Frequently Asked Questions: Patents - WIPO, accessed
+            September 2, 2025,
+            <link xlink:href="https://www.wipo.int/en/web/patents/faq_patents">https://www.wipo.int/en/web/patents/faq_patents</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Intellectual Property Policy - UF General Counsel -
+            University of Florida, accessed September 2, 2025,
+            <link xlink:href="https://generalcounsel.ufl.edu/media/generalcounselufledu/documents/Intellectual-Property-Policy.pdf">https://generalcounsel.ufl.edu/media/generalcounselufledu/documents/Intellectual-Property-Policy.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Volunteer Work Tax Deductions | H&amp;R Block, accessed
+            September 2, 2025,
+            <link xlink:href="https://www.hrblock.com/tax-center/filing/adjustments-and-deductions/volunteer-work-tax-deductions/">https://www.hrblock.com/tax-center/filing/adjustments-and-deductions/volunteer-work-tax-deductions/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            What volunteer expenses are tax-deductible? Learn what to
+            claim &amp; how. - Squire, accessed September 2, 2025,
+            <link xlink:href="https://www.squire.com/resources/blog/tax-deductible-expenses-charity-volunteers/">https://www.squire.com/resources/blog/tax-deductible-expenses-charity-volunteers/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Can volunteering your time be used as a tax deduction? |
+            CAPATA CPAs, accessed September 2, 2025,
+            <link xlink:href="https://capatacpa.com/can-volunteering-your-time-be-used-as-a-tax-deduction/">https://capatacpa.com/can-volunteering-your-time-be-used-as-a-tax-deduction/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Donate Intellectual Property to charity - Giving Center,
+            accessed September 2, 2025,
+            <link xlink:href="https://www.givingcenter.org/intellectual-property.html">https://www.givingcenter.org/intellectual-property.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            California State University, San Bernardino - Gifts of
+            Intellectual Property - Planned Giving, accessed September
+            2, 2025,
+            <link xlink:href="https://planmylegacy.csusb.edu/?pageID=1006">https://planmylegacy.csusb.edu/?pageID=1006</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Intellectual Property - Financial Services, accessed
+            September 2, 2025,
+            <link xlink:href="https://financialservices.wustl.edu/wfin-topic/tax-topics/contributions/intellectual-property-contributions/">https://financialservices.wustl.edu/wfin-topic/tax-topics/contributions/intellectual-property-contributions/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Should donations received for contributions for open-source
+            project be considered self-employment income? : r/tax -
+            Reddit, accessed September 2, 2025,
+            <link xlink:href="https://www.reddit.com/r/tax/comments/10pk682/should_donations_received_for_contributions_for/">https://www.reddit.com/r/tax/comments/10pk682/should_donations_received_for_contributions_for/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Frequently Asked Questions by Donors - Washington Secretary
+            of State, accessed September 2, 2025,
+            <link xlink:href="https://www.sos.wa.gov/corporations-charities/nonprofits-charities/charities/information-donors/resources-donors/frequently-asked-questions-donors">https://www.sos.wa.gov/corporations-charities/nonprofits-charities/charities/information-donors/resources-donors/frequently-asked-questions-donors</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Information on Donated Property for Tax Professionals |
+            Internal Revenue Service, accessed September 2, 2025,
+            <link xlink:href="https://www.irs.gov/charities-non-profits/contributors/information-on-donated-property-for-tax-professionals">https://www.irs.gov/charities-non-profits/contributors/information-on-donated-property-for-tax-professionals</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Some Economic &amp; Legal Aspects of Open Source Software -
+            ResearchGate, accessed September 2, 2025,
+            <link xlink:href="https://www.researchgate.net/publication/228884500_Some_Economic_Legal_Aspects_of_Open_Source_Software">https://www.researchgate.net/publication/228884500_Some_Economic_Legal_Aspects_of_Open_Source_Software</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Legal Implications of Open-Source Software - University of
+            Illinois Law Review, accessed September 2, 2025,
+            <link xlink:href="https://illinoislawreview.org/wp-content/uploads/2000/12/McGowan.pdf">https://illinoislawreview.org/wp-content/uploads/2000/12/McGowan.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Open-source software - Wikipedia, accessed September 2,
+            2025,
+            <link xlink:href="https://en.wikipedia.org/wiki/Open-source_software">https://en.wikipedia.org/wiki/Open-source_software</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            What is open source? | Opensource.com, accessed September 2,
+            2025,
+            <link xlink:href="https://opensource.com/resources/what-open-source">https://opensource.com/resources/what-open-source</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            An Open Source Tax Credit - Center for American Progress,
+            accessed September 2, 2025,
+            <link xlink:href="https://www.americanprogress.org/article/an-open-source-tax-credit/">https://www.americanprogress.org/article/an-open-source-tax-credit/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            About CC Licenses - Creative Commons, accessed September 2,
+            2025,
+            <link xlink:href="https://creativecommons.org/share-your-work/cclicenses/">https://creativecommons.org/share-your-work/cclicenses/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            What We Do - Creative Commons, accessed September 2, 2025,
+            <link xlink:href="https://creativecommons.org/about/">https://creativecommons.org/about/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Legal Code - Attribution 4.0 International - Creative
+            Commons, accessed September 2, 2025,
+            <link xlink:href="https://creativecommons.org/licenses/by/4.0/legalcode.en">https://creativecommons.org/licenses/by/4.0/legalcode.en</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Frequently Asked Questions - Creative Commons Wiki, accessed
+            September 2, 2025,
+            <link xlink:href="https://wiki.creativecommons.org/wiki/frequently_asked_questions">https://wiki.creativecommons.org/wiki/frequently_asked_questions</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Copyright status of works by the federal government of the
+            United States - Wikipedia, accessed September 2, 2025,
+            <link xlink:href="https://en.wikipedia.org/wiki/Copyright_status_of_works_by_the_federal_government_of_the_United_States">https://en.wikipedia.org/wiki/Copyright_status_of_works_by_the_federal_government_of_the_United_States</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Public Domain Copyright Trademark &amp; Patent Information
+            Schedule, accessed September 2, 2025,
+            <link xlink:href="https://www.dol.gov/general/aboutdol/copyright">https://www.dol.gov/general/aboutdol/copyright</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            ISSUE BRIEF U.S. Copyright Status of U.S. Federal Government
+            Works1 Works that are prepared by employees of the
+            government pursu, accessed September 2, 2025,
+            <link xlink:href="https://www.arl.org/wp-content/uploads/2015/06/copyright-status-of-government-works.pdf">https://www.arl.org/wp-content/uploads/2015/06/copyright-status-of-government-works.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Intellectual Property Policy | Grants &amp; Funding,
+            accessed September 2, 2025,
+            <link xlink:href="https://grants.nih.gov/policy-and-compliance/policy-topics/intellectual-property">https://grants.nih.gov/policy-and-compliance/policy-topics/intellectual-property</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Rules and Regulations | NSF SBIR, accessed September 2,
+            2025,
+            <link xlink:href="https://seedfund.nsf.gov/resources/awardees/phase-1/rules-and-regulations/">https://seedfund.nsf.gov/resources/awardees/phase-1/rules-and-regulations/</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</article>

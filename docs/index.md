@@ -191,14 +191,14 @@ constitutional questions that belong to higher levels. Only branches with conten
 
 Analysis spanning multiple matters or jurisdictional levels.
 
-- [Comprehensive Analysis of Contracting Intellectual Property Creation in the Digital Economy](cross-cutting/contract-ip-create-digital-econ.md)
-- [Intellectual Property as a Public Good](cross-cutting/intellectual-property-public-good.md)
-- [Knowledge Graph — CA Service Contracts (Semantic Knowledge Graph Strategy)](cross-cutting/knowledge-graph-ca-service-contracts.md)
-- [The Patron as Client: Crowdfunded Commissions Under California Labor Law](cross-cutting/patron-as-client.md)
-- [Beyond Employment: Non-Disclaimable Duties in Patron, Client, and Professional Relationships](cross-cutting/patron-client-non-disclaimable-duties.md)
-- [The Threshold of State Interest: De Jure and De Facto Exemptions from Tax and Administrative Burdens](cross-cutting/tax-and-regulatory-thresholds-explained.md)
-- [The Unwritten Ledger: Valuing and Preserving Non-Fungible Human Capital in an Age of Institutional Amnesia](cross-cutting/the-unwritten-ledger-non-fungible-human-capital.md)
-- [The Economic Architecture of Human Value: A Life's Price](cross-cutting/valuing-human-life-economically.md)
+- [Comprehensive Analysis of Contracting Intellectual Property Creation in the Digital Economy](cross-cutting/contract-ip-create-digital-econ.html)
+- [Intellectual Property as a Public Good](cross-cutting/intellectual-property-public-good.html)
+- [Knowledge Graph — CA Service Contracts (Semantic Knowledge Graph Strategy)](cross-cutting/knowledge-graph-ca-service-contracts.html)
+- [The Patron as Client: Crowdfunded Commissions Under California Labor Law](cross-cutting/patron-as-client.html)
+- [Beyond Employment: Non-Disclaimable Duties in Patron, Client, and Professional Relationships](cross-cutting/patron-client-non-disclaimable-duties.html)
+- [The Threshold of State Interest: De Jure and De Facto Exemptions from Tax and Administrative Burdens](cross-cutting/tax-and-regulatory-thresholds-explained.html)
+- [The Unwritten Ledger: Valuing and Preserving Non-Fungible Human Capital in an Age of Institutional Amnesia](cross-cutting/the-unwritten-ledger-non-fungible-human-capital.html)
+- [The Economic Architecture of Human Value: A Life's Price](cross-cutting/valuing-human-life-economically.html)
 
 ---
 
