@@ -1,4 +1,5 @@
 import io
+import subprocess
 import sys
 import unittest
 import xml.etree.ElementTree as ET
@@ -147,8 +148,22 @@ class TestWriteMetadata(unittest.TestCase):
         dc_ns = "{http://purl.org/dc/terms/}"
         title_el = root.find(f"{dc_ns}title")
         self.assertEqual(title_el.text, "A Flat Document")
-        rights_el = root.find(f"{dc_ns}rights")
+
+        xi_ns = "{http://www.w3.org/2001/XInclude}"
+        includes = root.findall(f"{xi_ns}include")
+        self.assertEqual(len(includes), 1)
+
+        resolved = subprocess.run(
+            ["xmllint", "--xinclude", str(meta_path)],
+            capture_output=True, text=True, check=True,
+        ).stdout
+        resolved_root = ET.fromstring(resolved)
+        rights_el = resolved_root.find(f".//{dc_ns}rights")
+        self.assertIsNotNone(rights_el)
         self.assertEqual(rights_el.text, "CC BY-SA 4.0")
+        publisher_el = resolved_root.find(f".//{dc_ns}publisher")
+        self.assertEqual(publisher_el.text, "metavacua/legal-theory (GitHub)")
+
         meta_path.unlink()
 
     def test_write_metadata_escapes_special_characters_in_title(self):

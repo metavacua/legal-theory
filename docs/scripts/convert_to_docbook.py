@@ -115,31 +115,19 @@ def sanitize_xml_ids(article):
 
 
 def write_metadata(meta_path, title):
+    meta_path = Path(meta_path)
+    docs_dir = (REPO_ROOT / "docs").resolve()
+    meta_dir = meta_path.resolve().parent
+    depth = len(meta_dir.relative_to(docs_dir).parts)
+    shared_href = "../" * depth + "common/shared-metadata.xml"
     escaped_title = xml_escape(title)
     content = f"""<?xml version="1.0" encoding="UTF-8"?>
-<info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/">
+<info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="{XI_NS}">
   <dc:title>{escaped_title}</dc:title>
-  <dc:creator>Ian D.L.N. McLean</dc:creator>
-  <dc:publisher>metavacua/legal-theory (GitHub)</dc:publisher>
-  <dc:type>Article</dc:type>
-  <dc:language>en</dc:language>
-  <dc:rights>CC BY-SA 4.0</dc:rights>
-  <authorgroup>
-    <author>
-      <personname>
-        <firstname>Ian</firstname>
-        <othername role="middle">D.L.N.</othername>
-        <surname>McLean</surname>
-      </personname>
-      <email>metavacua@gmail.com</email>
-    </author>
-  </authorgroup>
-  <legalnotice>
-    <para>Copyright &#169; 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This document publishes general legal analysis and does not constitute legal advice.</para>
-  </legalnotice>
+  <xi:include href="{shared_href}" />
 </info>
 """
-    Path(meta_path).write_text(content, encoding="utf-8")
+    meta_path.write_text(content, encoding="utf-8")
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
