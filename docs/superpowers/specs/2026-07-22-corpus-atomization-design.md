@@ -133,17 +133,23 @@ document's own inline content:
 </shared>
 ```
 
-This requires exactly two small XPath changes in `html5.xsl` (already hand-tested against a
-throwaway fixture): the two direct-child lookups (`db:info/db:legalnotice/db:para` and
-`db:authorgroup/db:author/...` inside the `db:info` template) become descendant-axis lookups
-(`db:info//db:legalnotice/db:para`, `.//db:authorgroup/db:author/...`) so they find the fields
-regardless of the extra wrapper level. `db:legalnotice`'s existing suppress-from-body template
-(`<xsl:template match="db:legalnotice | db:bibliomisc"/>`) needs no change — template *matching*
-by element name works at any depth automatically. **The identical two-line change is needed in
-`latex.xsl`**, which has the same direct-child lookups, for the paper's metadata sharing (see
-Section 6). Section fragments (Section 2) need no such workaround — a fragment's root **is**
-the `<section>` element itself, so a plain `xi:include` inserts it directly with no extra
-wrapper, matching the schema's existing `block-content` pattern with no changes needed there.
+This requires small XPath changes in `html5.xsl` (already hand-tested against a throwaway
+fixture) — 6 in total, not just the 2 obvious ones: the 2 direct-child lookups
+(`db:info/db:legalnotice/db:para` and `db:authorgroup/db:author/...` inside the `db:info`
+template) become descendant-axis lookups (`db:info//db:legalnotice/db:para`,
+`.//db:authorgroup/db:author/...`), and a further 4 easy-to-miss direct-child lookups in the
+`<head>` block's Dublin Core meta tags (`DC.creator`, `DC.type`, `DC.language`, `DC.rights` —
+all fields that move into the shared block) need the identical treatment, or those meta tags
+silently render `content=""` for every migrated document. `db:legalnotice`'s existing
+suppress-from-body template (`<xsl:template match="db:legalnotice | db:bibliomisc"/>`) needs no
+change — template *matching* by element name works at any depth automatically. **The identical
+authorgroup change is needed in `latex.xsl`**, which has the same direct-child lookups but no
+Dublin Core meta tags and no legalnotice lookup at all (its `db:info` template is empty, so
+legal notice text never appears in the LaTeX build regardless), for the paper's metadata
+sharing (see Section 6). Section fragments (Section 2) need no such workaround — a fragment's
+root **is** the `<section>` element itself, so a plain `xi:include` inserts it directly with no
+extra wrapper, matching the schema's existing `block-content` pattern with no changes needed
+there.
 
 ## 5. Remix Workflow
 
@@ -192,10 +198,12 @@ not pulled from the shared file — only the corpus-wide-identical fields move.
 - **`write_metadata()`** changes to write the minimal `<dc:title>` + shared-metadata
   `xi:include` form, computing the correct relative path depth from the document's own
   directory to `docs/common/shared-metadata.xml`.
-- **`content_preservation_diff()`** currently reads the raw XML file to round-trip through
-  `pandoc -f docbook`. It must instead resolve XIncludes first (`xmllint --xinclude`) before
-  handing the result to pandoc, since a shell file alone no longer contains the section content
-  being diffed.
+- **`content_preservation_diff()`** already resolves XIncludes (`xmllint --xinclude`) before
+  handing the result to `pandoc -f docbook` — re-confirmed against the actual current source
+  during implementation planning, correcting an earlier draft of this section that assumed
+  otherwise. No behavior change needed; only a refactor to extract that resolve-then-render
+  logic into a named `render_docbook_plain()` helper, shared with the migration script
+  (Section 8), which needs the identical operation for its own before/after comparison.
 - **`validate()` and `build_html()`** need no logic changes — both already operate via
   `xmllint --xinclude` / `jing` / `xsltproc --xinclude` against the shell's path, which already
   resolves the full tree.
