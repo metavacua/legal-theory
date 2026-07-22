@@ -210,15 +210,15 @@ and state agencies) is scaffolded but empty.
 
 ### Legislative — California State Legislature
 
-- [Blueprint for Innovation: Securing IP in Novel Cooperative Securities](proposals/legislative/california/state-legislature/blueprint-for-innovation-ip-in-cooperative-securities.md)
-- [A Tripartite Framework for a Publicly-Traded California Cooperative Benefit Corporation](proposals/legislative/california/state-legislature/hybrid-cooperative-ipo-framework.md)
-- [Beyond Obscenity: The Case for Enforceability of Private Sexual Service Contracts](proposals/legislative/california/state-legislature/legalizing-sexual-service-contracts.md)
-- [The Sanctioned Exchange: State Power and the Legitimization of the Sexual Service Contract](proposals/legislative/california/state-legislature/regulating-sexual-services-states-role.md)
+- [Blueprint for Innovation: Securing IP in Novel Cooperative Securities](proposals/legislative/california/state-legislature/blueprint-for-innovation-ip-in-cooperative-securities.html)
+- [A Tripartite Framework for a Publicly-Traded California Cooperative Benefit Corporation](proposals/legislative/california/state-legislature/hybrid-cooperative-ipo-framework.html)
+- [Beyond Obscenity: The Case for Enforceability of Private Sexual Service Contracts](proposals/legislative/california/state-legislature/legalizing-sexual-service-contracts.html)
+- [The Sanctioned Exchange: State Power and the Legitimization of the Sexual Service Contract](proposals/legislative/california/state-legislature/regulating-sexual-services-states-role.html)
 
 ### Executive — CA Secretary of State
 
-- [The New Corporate Person: AI, Accountability, and a Public Registry in California](proposals/executive/agencies/california/secretary-of-state/improving-ai-accountability-petition-arguments.md)
-- [Petition: Corporate AI Registry (CA SOS)](proposals/executive/agencies/california/secretary-of-state/petition-corporate-ai-registry-ca-sos.md) *(template — placeholder fields not yet filled in)*
+- [The New Corporate Person: AI, Accountability, and a Public Registry in California](proposals/executive/agencies/california/secretary-of-state/improving-ai-accountability-petition-arguments.html)
+- [Petition: Corporate AI Registry (CA SOS)](proposals/executive/agencies/california/secretary-of-state/petition-corporate-ai-registry-ca-sos.html) *(template — placeholder fields not yet filled in)*
 
 ---
 
