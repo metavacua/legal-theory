@@ -114,12 +114,60 @@ def sanitize_xml_ids(article):
             el.set(xml_id_attr, f"s-{value}")
 
 
+def split_into_fragments(article, out_dir, stem):
+    sections = [c for c in article if c.tag == f"{{{DB_NS}}}section"]
+    if not sections:
+        return False
+
+    # Remove metadata include if it exists (it will be managed separately for each fragment)
+    for child in list(article):
+        if child.tag == f"{{{XI_NS}}}include" and child.get("href", "").endswith(".meta.xml"):
+            article.remove(child)
+            break
+
+    out_dir = Path(out_dir)
+    frag_dir = out_dir / stem
+    frag_dir.mkdir(parents=True, exist_ok=True)
+
+    used_slugs = {}
+    for i, section in enumerate(sections, start=1):
+        title_el = section.find(f"{{{DB_NS}}}title")
+        section_title = title_el.text if title_el is not None else ""
+        base_slug = slugify(section_title)
+        count = used_slugs.get(base_slug, 0)
+        slug = base_slug if count == 0 else f"{base_slug}-{count}"
+        used_slugs[base_slug] = count + 1
+
+        frag_name = f"{i:02d}-{slug}.xml"
+        frag_path = frag_dir / frag_name
+
+        frag_tree = ET.ElementTree(section)
+        ET.indent(frag_tree, space="  ")
+        frag_tree.write(frag_path, encoding="unicode", xml_declaration=True)
+
+        idx = list(article).index(section)
+        xi_include = ET.Element(f"{{{XI_NS}}}include")
+        xi_include.set("href", f"{stem}/{frag_name}")
+        article.remove(section)
+        article.insert(idx, xi_include)
+
+    return True
+
+
 def write_metadata(meta_path, title):
     meta_path = Path(meta_path)
     docs_dir = (REPO_ROOT / "docs").resolve()
     meta_dir = meta_path.resolve().parent
-    depth = len(meta_dir.relative_to(docs_dir).parts)
-    shared_href = "../" * depth + "common/shared-metadata.xml"
+    shared_metadata_path = docs_dir / "common" / "shared-metadata.xml"
+
+    try:
+        depth = len(meta_dir.relative_to(docs_dir).parts)
+        shared_href = "../" * depth + "common/shared-metadata.xml"
+    except ValueError:
+        # meta_dir is not under docs_dir (e.g., in a temp directory),
+        # use absolute path for shared-metadata.xml
+        shared_href = str(shared_metadata_path)
+
     escaped_title = xml_escape(title)
     content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="{XI_NS}">

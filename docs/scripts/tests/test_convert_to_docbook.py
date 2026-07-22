@@ -1,6 +1,7 @@
 import io
 import subprocess
 import sys
+import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -42,6 +43,7 @@ class TestSlugifyAndTitle(unittest.TestCase):
 
 
 DB_NS = "{http://docbook.org/ns/docbook}"
+XI_NS = "{http://www.w3.org/2001/XInclude}"
 XLINK_NS = "{http://www.w3.org/1999/xlink}"
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 
@@ -134,6 +136,67 @@ class TestPandocAndWrapping(unittest.TestCase):
         self.assertTrue(ids, "expected at least one xml:id in the converted tree")
         for id_value in ids:
             self.assertRegex(id_value, r"^[A-Za-z_]")
+
+
+class TestSplitIntoFragments(unittest.TestCase):
+    def setUp(self):
+        self.fixtures = Path(__file__).resolve().parent / "fixtures"
+
+    def test_multi_section_splits_each_top_level_section(self):
+        from convert_to_docbook import (
+            pandoc_to_docbook_fragment, wrap_fragment, split_into_fragments,
+        )
+        fragment = pandoc_to_docbook_fragment(self.fixtures / "multi_section.md")
+        article, _ = wrap_fragment(fragment, "multi", "Multi Section", "multi.meta.xml")
+
+        with tempfile.TemporaryDirectory() as tmp:
+            out_dir = Path(tmp)
+            result = split_into_fragments(article, out_dir, "multi")
+            self.assertTrue(result)
+
+            frag_dir = out_dir / "multi"
+            self.assertTrue((frag_dir / "01-first-topic.xml").exists())
+            self.assertTrue((frag_dir / "02-second-topic.xml").exists())
+
+            frag1 = ET.parse(frag_dir / "01-first-topic.xml").getroot()
+            self.assertEqual(frag1.tag, f"{DB_NS}section")
+            self.assertEqual(frag1.get("{http://www.w3.org/XML/1998/namespace}id"), "first-topic")
+
+            includes = [c for c in article if c.tag == f"{XI_NS}include"]
+            self.assertEqual(len(includes), 2)
+            self.assertEqual(includes[0].get("href"), "multi/01-first-topic.xml")
+            self.assertEqual(includes[1].get("href"), "multi/02-second-topic.xml")
+
+            sections_left = [c for c in article if c.tag == f"{DB_NS}section"]
+            self.assertEqual(sections_left, [])
+
+    def test_split_shell_resolves_to_original_content(self):
+        # The shell + fragments, resolved via xmllint --xinclude, must
+        # reproduce the exact original tree.
+        from convert_to_docbook import (
+            pandoc_to_docbook_fragment, wrap_fragment, write_metadata,
+            split_into_fragments,
+        )
+        fragment = pandoc_to_docbook_fragment(self.fixtures / "multi_section.md")
+        article, _ = wrap_fragment(fragment, "multi", "Multi Section", "multi.meta.xml")
+
+        with tempfile.TemporaryDirectory() as tmp:
+            out_dir = Path(tmp)
+            split_into_fragments(article, out_dir, "multi")
+            write_metadata(out_dir / "multi.meta.xml", "Multi Section")
+            xml_path = out_dir / "multi.xml"
+            tree = ET.ElementTree(article)
+            ET.indent(tree, space="  ")
+            tree.write(xml_path, encoding="unicode", xml_declaration=True)
+
+            resolved = subprocess.run(
+                ["xmllint", "--xinclude", str(xml_path)],
+                capture_output=True, text=True, check=True,
+            ).stdout
+            self.assertIn("First Topic", resolved)
+            self.assertIn("Content for the first topic.", resolved)
+            self.assertIn("Second Topic", resolved)
+            self.assertIn("Content for the second topic.", resolved)
 
 
 class TestWriteMetadata(unittest.TestCase):
