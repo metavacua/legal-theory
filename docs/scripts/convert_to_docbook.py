@@ -126,7 +126,7 @@ def split_into_fragments(article, out_dir, stem):
     used_slugs = {}
     for i, section in enumerate(sections, start=1):
         title_el = section.find(f"{{{DB_NS}}}title")
-        section_title = title_el.text if title_el is not None else ""
+        section_title = "".join(title_el.itertext()).strip() if title_el is not None else ""
         base_slug = slugify(section_title)
         count = used_slugs.get(base_slug, 0)
         slug = base_slug if count == 0 else f"{base_slug}-{count}"

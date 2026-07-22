@@ -260,6 +260,33 @@ class TestSplitIntoFragments(unittest.TestCase):
                 "nested-subsection",
             )
 
+    def test_bold_wrapped_title_produces_descriptive_slug(self):
+        # Root-caused on docs/cross-cutting/patron-as-client.xml: pandoc
+        # wraps a bold Markdown heading's text in <emphasis role="strong">
+        # inside <title>, so title_el.text (which only sees text before the
+        # first child element) is empty — slugify("") falls back to "s",
+        # producing generic fragment filenames (01-s.xml, 02-s-1.xml, ...)
+        # instead of descriptive ones, for every section with a styled
+        # title. Using itertext() instead of .text fixes this.
+        from convert_to_docbook import (
+            pandoc_to_docbook_fragment, wrap_fragment, split_into_fragments,
+        )
+        fragment = pandoc_to_docbook_fragment(self.fixtures / "bold_title_section.md")
+        article, _ = wrap_fragment(
+            fragment, "bold-title", "Bold Title Test", "bold-title.meta.xml"
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            out_dir = Path(tmp)
+            split_into_fragments(article, out_dir, "bold-title")
+
+            frag_dir = out_dir / "bold-title"
+            frag_names = sorted(f.name for f in frag_dir.iterdir())
+            self.assertEqual(
+                frag_names,
+                ["01-introduction-the-blurring-line.xml", "02-second-section.xml"],
+            )
+
 
 class TestWriteMetadata(unittest.TestCase):
     def test_write_metadata_produces_well_formed_xincludable_info(self):
