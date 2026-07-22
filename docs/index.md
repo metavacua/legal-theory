@@ -92,27 +92,27 @@ CA Corporations Code; federal securities law; IRC cooperative treatment.
 1st Amendment; CA Art. I §1 privacy; CA consent and criminal law.
 [Findings](court-record/matters/sex-work-consent-bodily-autonomy/findings.html) · 20 evidence documents
 
-- [The Contingent Privilege: Deconstructing Autonomy in American Liberal Democracy](court-record/matters/sex-work-consent-bodily-autonomy/evidence/autonomy-a-myth-in-american-law.md)
-- [The Legal Status of Bodily Autonomy in the United States: A Post-Dobbs Jurisdictional Analysis](court-record/matters/sex-work-consent-bodily-autonomy/evidence/bodily-autonomy-legal-research.md)
-- [The Quantum Contract: A New Jurisprudence of Consent, Coercion, and Agreement](court-record/matters/sex-work-consent-bodily-autonomy/evidence/consent-contracts-and-legal-ambiguity.md)
-- [The Architectures of Agreement: A Multi-Disciplinary Analysis of Consent](court-record/matters/sex-work-consent-bodily-autonomy/evidence/consent-theories-language-culture.md)
-- [Beyond Illicidity: A Relational Theory of Moral and Licit Contracts for Sexual Services](court-record/matters/sex-work-consent-bodily-autonomy/evidence/contractual-capacity-for-sexual-services.md)
-- [The Legal Architecture of Human Experimentation: U.S. Regulations and Ethical Imperatives](court-record/matters/sex-work-consent-bodily-autonomy/evidence/defining-human-experiments-legally.md)
-- [Beyond the Laboratory: Delineating the Legal Boundaries of Human Experimentation in the Digital Age](court-record/matters/sex-work-consent-bodily-autonomy/evidence/defining-legal-human-experiments.md)
-- [Re-Characterizing Prostitution: Lewd Acts, Sexual Service Contracts, and Illicit Labor in California](court-record/matters/sex-work-consent-bodily-autonomy/evidence/defining-lewd-acts-and-prostitution-law.md)
-- [The Prostitution-Miller Test: Differentiating Licit Sex Work from Obscene Conduct](court-record/matters/sex-work-consent-bodily-autonomy/evidence/prostitution-law-obscenity-consent-regulation.md)
-- [Pactum de Sexu: Re-Theorizing Sexual Service Contracts as Protected Economic and Expressive Association](court-record/matters/sex-work-consent-bodily-autonomy/evidence/sex-work-contracts-free-speech-and-law.md)
-- [The Business of Bodies: Biopolitics, Panopticism, and the Regulatory Gaze in Nevada's Legal Sex Industry](court-record/matters/sex-work-consent-bodily-autonomy/evidence/sex-work-regulation-and-state-surveillance.md)
-- [The Final Word: Landmark Jurisprudence in American State Supreme Courts](court-record/matters/sex-work-consent-bodily-autonomy/evidence/state-supreme-court-case-study-report.md)
-- [The Architecture of Non-Consensual Legality: Actions, Organizations, and Social Behaviors Insensitive to Consent](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-architecture-of-non-consensual-legality.md)
-  *(largest document in the repo, 18.4k words — earlier draft: [legal-actions-without-consent-draft.md](court-record/matters/sex-work-consent-bodily-autonomy/evidence/legal-actions-without-consent-draft.md))*
-- [The Laudable Contract: A New Jurisprudence for Licit Sexual Service Agreements](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-laudable-contract-licit-sexual-service-agreements.md)
-- [The Nexus of Consent and Consideration: A Legal Framework for Navigating Modern Relationships in California](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-nexus-of-consent-and-consideration.md)
+- [The Contingent Privilege: Deconstructing Autonomy in American Liberal Democracy](court-record/matters/sex-work-consent-bodily-autonomy/evidence/autonomy-a-myth-in-american-law.html)
+- [The Legal Status of Bodily Autonomy in the United States: A Post-Dobbs Jurisdictional Analysis](court-record/matters/sex-work-consent-bodily-autonomy/evidence/bodily-autonomy-legal-research.html)
+- [The Quantum Contract: A New Jurisprudence of Consent, Coercion, and Agreement](court-record/matters/sex-work-consent-bodily-autonomy/evidence/consent-contracts-and-legal-ambiguity.html)
+- [The Architectures of Agreement: A Multi-Disciplinary Analysis of Consent](court-record/matters/sex-work-consent-bodily-autonomy/evidence/consent-theories-language-culture.html)
+- [Beyond Illicidity: A Relational Theory of Moral and Licit Contracts for Sexual Services](court-record/matters/sex-work-consent-bodily-autonomy/evidence/contractual-capacity-for-sexual-services.html)
+- [The Legal Architecture of Human Experimentation: U.S. Regulations and Ethical Imperatives](court-record/matters/sex-work-consent-bodily-autonomy/evidence/defining-human-experiments-legally.html)
+- [Beyond the Laboratory: Delineating the Legal Boundaries of Human Experimentation in the Digital Age](court-record/matters/sex-work-consent-bodily-autonomy/evidence/defining-legal-human-experiments.html)
+- [Re-Characterizing Prostitution: Lewd Acts, Sexual Service Contracts, and Illicit Labor in California](court-record/matters/sex-work-consent-bodily-autonomy/evidence/defining-lewd-acts-and-prostitution-law.html)
+- [The Prostitution-Miller Test: Differentiating Licit Sex Work from Obscene Conduct](court-record/matters/sex-work-consent-bodily-autonomy/evidence/prostitution-law-obscenity-consent-regulation.html)
+- [Pactum de Sexu: Re-Theorizing Sexual Service Contracts as Protected Economic and Expressive Association](court-record/matters/sex-work-consent-bodily-autonomy/evidence/sex-work-contracts-free-speech-and-law.html)
+- [The Business of Bodies: Biopolitics, Panopticism, and the Regulatory Gaze in Nevada's Legal Sex Industry](court-record/matters/sex-work-consent-bodily-autonomy/evidence/sex-work-regulation-and-state-surveillance.html)
+- [The Final Word: Landmark Jurisprudence in American State Supreme Courts](court-record/matters/sex-work-consent-bodily-autonomy/evidence/state-supreme-court-case-study-report.html)
+- [The Architecture of Non-Consensual Legality: Actions, Organizations, and Social Behaviors Insensitive to Consent](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-architecture-of-non-consensual-legality.html)
+  *(largest document in the repo, 18.4k words — earlier draft: [legal-actions-without-consent-draft.md](court-record/matters/sex-work-consent-bodily-autonomy/evidence/legal-actions-without-consent-draft.html))*
+- [The Laudable Contract: A New Jurisprudence for Licit Sexual Service Agreements](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-laudable-contract-licit-sexual-service-agreements.html)
+- [The Nexus of Consent and Consideration: A Legal Framework for Navigating Modern Relationships in California](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-nexus-of-consent-and-consideration.html)
   *(shares its title with [a theory document](court-record/theory/california-statutes/existing-law/california-sex-contracts-and-consent.md) of different length — unresolved, see plan Task 6)*
-- [The Sovereign Self: Bodily Autonomy at the Intersection of Kink, Sex Work, and Self-Expression](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-sovereign-self-bodily-autonomy-kink-sex-work.md)
-  *(companion: [kink-sex-work-body-autonomy-research.md](court-record/matters/sex-work-consent-bodily-autonomy/evidence/kink-sex-work-body-autonomy-research.md), same title)*
-- [The Architecture of Legally Permissible Non-Consensual Sexual Interaction in the United States](court-record/matters/sex-work-consent-bodily-autonomy/evidence/us-sex-crime-law-analysis.md)
-- [The Progressive Facade and the Punitive Reality of Vice Regulation in Aotearoa New Zealand](court-record/matters/sex-work-consent-bodily-autonomy/evidence/vice-regulation-in-aotearoa-new-zealand.md)
+- [The Sovereign Self: Bodily Autonomy at the Intersection of Kink, Sex Work, and Self-Expression](court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-sovereign-self-bodily-autonomy-kink-sex-work.html)
+  *(companion: [kink-sex-work-body-autonomy-research.md](court-record/matters/sex-work-consent-bodily-autonomy/evidence/kink-sex-work-body-autonomy-research.html), same title)*
+- [The Architecture of Legally Permissible Non-Consensual Sexual Interaction in the United States](court-record/matters/sex-work-consent-bodily-autonomy/evidence/us-sex-crime-law-analysis.html)
+- [The Progressive Facade and the Punitive Reality of Vice Regulation in Aotearoa New Zealand](court-record/matters/sex-work-consent-bodily-autonomy/evidence/vice-regulation-in-aotearoa-new-zealand.html)
 
 ### [Copyright, IP Authorship, and AI-Assisted Creation](court-record/matters/copyright-ip-authorship/README.md)
 
