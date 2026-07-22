@@ -1,0 +1,43 @@
+name: Validate & Build DocBook Corpus
+
+on:
+  push:
+    branches: [main, claude/llm-database-theory-codification]
+    paths:
+      - 'docs/**/*.xml'
+      - 'docs/xsl/**'
+      - 'docs/schema/**'
+      - '!docs/papers/**'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install DocBook toolchain
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils xsltproc jing
+
+      - name: Validate and rebuild corpus HTML
+        run: |
+          set -euo pipefail
+          while IFS= read -r xml; do
+            echo "== $xml =="
+            xmllint --noout --xinclude "$xml"
+            jing -c docs/schema/docbook-corpus.rnc "$xml"
+            xsltproc --xinclude docs/xsl/html5.xsl "$xml" > "${xml%.xml}.html"
+          done < <(find docs -name '*.xml' -not -name '*.meta.xml' -not -path 'docs/papers/*' -not -path '*/scratch/*' | sort)
+
+      - name: Commit rebuilt HTML if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          # No [skip ci]: a rebuild here means committed HTML drifted from its
+          # XML source, and Deploy Pages (no path filter) must pick up the fix.
+          git diff --cached --quiet || git commit -m "chore: rebuild corpus HTML"
+          git push
