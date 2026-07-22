@@ -128,6 +128,40 @@ verification.
 5.2, validated, built, and live.** Only Phase 3 (theory 22, cross-cutting 8, wip 8,
 proposals 6 — 44 documents) remains of the original corpus-migration scope.
 
+**Phase 3 complete — entire corpus migration complete (2026-07-22).** Remaining four
+matters converted in sequence, same process as Phase 2:
+
+- `theory` (20 docs, commit `92b2716`) — no new markup-quality classes; genuine Class D
+  titles and MD041 false positives handled per the established taxonomy checks.
+- `cross-cutting` (8 docs, commit `a018134`) — a `git rm docs/cross-cutting/*.md` glob
+  accidentally staged `docs/cross-cutting/README.md` for deletion; caught via
+  `git status --short` before committing, unstaged with `git restore --staged` +
+  `git checkout --`. From this matter on, `git rm` was always given explicit file paths,
+  never a glob, specifically to prevent recurrence.
+- `wip` (8 docs, commit `d36b775`) — no new issues.
+- `proposals` (6 docs, commit `ece3bf5`) — the final matter. 5 of 6 documents converted
+  clean. The 6th, `petition-corporate-ai-registry-ca-sos.md`, is the Class E document that
+  crashed the tool before commit `f67bac7`'s fix (a stray, unmatched `</content>` closing
+  tag with no corresponding opening tag anywhere in the source, apparently left over from
+  whatever template generated the document). `f67bac7` only made the tool fail cleanly
+  instead of crashing; this commit fixes the actual source document — the stray tag was
+  manually removed, verified via a scratch-directory dry run that no other content
+  changed (empty `content_diff`). The document also has no heading at all (a Class D
+  variant: filename-fallback rather than wrong-heading), so `extract_title()` produced
+  "Petition Corporate Ai Registry Ca Sos" — patched to the curated "Petition: Corporate AI
+  Registry (CA SOS)" in both the `.xml` and `.meta.xml`. All 6 verified: jing schema-valid,
+  xsltproc build clean, word-level content-preservation diff empty, live on the deployed
+  site (confirmed via `curl` against the built HTML, title tag included).
+
+**Final result: the entire corpus-migration scope is complete.** 128 documents — 5
+`findings.md` + 70 evidence + 20 theory + 8 cross-cutting + 8 wip + 6 proposals, plus the
+flagship paper's pre-existing DocBook files — are DocBook 5.2, RELAX-NG-schema-valid,
+built to HTML5 via `xsltproc`, and live at `https://metavacua.github.io/legal-theory/`.
+Every conversion is its own commit (one document set per commit, matter-by-matter), so
+`git revert <sha>` isolates exactly one matter's changes if a defect surfaces later. No
+document was bulk-converted or bulk-deleted without the per-file verification sequence
+in Section 2.
+
 ## Section 4 — Testing, CI, and Safety Net
 
 - **Tool testing (TDD):** `docs/scripts/convert-to-docbook.sh` ships with a test fixture and a test asserting well-formed + schema-valid + zero-flagged-diff output, written before the implementation, per `superpowers:test-driven-development`.
