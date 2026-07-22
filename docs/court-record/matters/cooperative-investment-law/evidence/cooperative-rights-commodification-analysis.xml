@@ -1,0 +1,1697 @@
+<?xml version='1.0' encoding='utf-8'?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="cooperative-rights-commodification-analysis" xml:lang="en">
+  <xi:include href="cooperative-rights-commodification-analysis.meta.xml" />
+  <title>Capital, Control, and Commodification: Structuring Tradable and Non-Tradable Rights in a California Subchapter T Cooperative</title>
+  <section xml:id="introduction-the-modern-cooperatives-dilemma">
+    <title>
+      <emphasis role="strong">Introduction: The Modern
+    Cooperative's Dilemma</emphasis>
+    </title>
+    <para>
+      The cooperative business model, founded on principles of
+      democratic member control and mutual benefit, presents a profound
+      and persistent challenge in the modern economy: the cooperative
+      capital conundrum.1 While investor-owned corporations have
+      well-established pathways to capital markets, cooperatives are
+      structurally constrained by their foundational tenets. The very
+      principles that define them—such as one-member, one-vote
+      governance and the subordination of capital to the service of
+      patronage—are often antithetical to the expectations of
+      traditional equity investors seeking returns proportional to their
+      capital and control commensurate with their investment. This
+      inherent tension creates significant hurdles for cooperatives
+      seeking to raise the capital necessary for growth, innovation, and
+      long-term sustainability.
+    </para>
+    <para>
+      This report addresses this central challenge by providing a
+      rigorous analytical framework for structuring ownership and
+      management rights within a cooperative formed under California law
+      and operating under the federal tax provisions of Subchapter T.
+      The core purpose is to explore the boundaries of the cooperative
+      model, investigating how the "bundle of rights" inherent
+      in a traditional membership can be disaggregated, or
+      "unbundled," and selectively commodified into distinct
+      financial instruments. Such instruments, if designed correctly,
+      could attract new forms of capital and provide liquidity for
+      stakeholders without violating the legal and philosophical pillars
+      of the cooperative enterprise.
+    </para>
+    <para>
+      The analysis proceeds through three sequential and interlocking
+      lenses: California Corporate Law, Federal Subchapter T Tax Law,
+      and Federal Securities Law. Any proposed instrument must
+      successfully navigate all three regulatory regimes to be viable.
+      First, it must be permissible under the specific statutes
+      governing cooperatives in California, which establish the
+      fundamental guardrails for control, transferability, and
+      distributions. Second, its design must ensure the entity continues
+      "operating on a cooperative basis" to preserve the
+      crucial single-taxation benefit of Subchapter T. Finally, if the
+      instrument is structured in a way that constitutes a
+      "security," it must comply with the registration and
+      anti-fraud provisions of federal securities law. By systematically
+      applying this three-lens analysis, this report provides a
+      comprehensive guide for founders, advisors, and stakeholders to
+      design innovative, compliant, and effective capital structures for
+      the modern cooperative.
+    </para>
+  </section>
+  <section xml:id="section-i-the-foundation-the-bundle-of-rights-in-a-california-cooperative">
+    <title>
+      <emphasis role="strong">Section I: The Foundation: The Bundle
+    of Rights in a California Cooperative</emphasis>
+    </title>
+    <para>
+      To understand what can be commodified, one must first define the
+      baseline: the specific bundle of ownership, management, and
+      benefit rights established by the California Cooperative
+      Corporation Law.3 The formation of a cooperative is not merely the
+      creation of a new legal entity; it is a fundamental transformation
+      of individual rights into a collective enterprise, governed by a
+      unique set of statutory principles that prioritize the user-patron
+      over the investor.
+    </para>
+    <section xml:id="a-the-primacy-of-the-patron-member-relationship">
+      <title>
+        <emphasis role="strong">A. The Primacy of the Patron-Member
+      Relationship</emphasis>
+      </title>
+      <para>
+        The foundational principle of a California cooperative is its
+        purpose. Unlike a standard corporation organized to maximize
+        shareholder profit, a cooperative must be "organized
+        and...conduct its business primarily for the mutual benefit of
+        its members as patrons".6 The law explicitly states that
+        cooperatives are "not organized to make a profit for
+        themselves, as such, or for their members, as such, but
+        primarily for their members as patrons".2 This statutory
+        language establishes the primacy of the patron relationship. A
+        member's core identity within the cooperative is that of a user
+        of its services—a consumer buying goods, a worker providing
+        labor, or a producer marketing a crop.1
+      </para>
+      <para>
+        All legitimate economic benefits flowing to members must derive
+        from this relationship. The "earnings, savings, or benefits
+        of the corporation" are to be used for the general welfare
+        of the members or, more commonly, "proportionately and
+        equitably distributed to some or all of its members or its
+        patrons, based upon their patronage".6 This distribution,
+        known as a patronage refund or dividend, can take the form of
+        cash, property, or equity instruments like capital credits or
+        memberships.2 The amount of the distribution is tied directly to
+        the quantity or value of business the patron has conducted with
+        the cooperative, not the amount of capital they have invested.7
+      </para>
+    </section>
+    <section xml:id="b-the-surrender-and-transformation-of-rights-upon-formation">
+      <title>
+        <emphasis role="strong">B. The Surrender and Transformation
+      of Rights upon Formation</emphasis>
+      </title>
+      <para>
+        The act of forming a cooperative involves a deliberate
+        subordination and transformation of rights that would otherwise
+        be retained in a traditional business venture.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">From Individual Profit to Collective
+            Benefit:</emphasis> A founder or member extinguishes their
+            individual right to seek profit from the enterprise's
+            activities in the conventional sense. This right is
+            transformed into a collective one: the right to receive a
+            proportionate share of the cooperative's net margins, which
+            are generated through the collective patronage of all
+            members. The focus shifts from private accumulation to
+            equitable distribution of collectively generated surplus.6
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Encumbrance of Capital:</emphasis>
+            Capital contributed to a cooperative, whether through
+            membership fees or other investments, is fundamentally
+            encumbered by the entity's cooperative purpose. It ceases to
+            be purely private capital seeking the highest possible
+            return and is instead subordinated to the operational needs
+            of the patronage-focused enterprise.9 Its role is to serve
+            as a tool to facilitate the cooperative's business with its
+            patrons, not as an independent source of profit and control.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Transformation of
+            Control:</emphasis> The quintessential right of capital in a
+            standard corporation—control proportional to investment
+            (i.e., one share, one vote)—is extinguished. It is replaced
+            by a right to democratic control, where governance power is
+            distributed among member-patrons, typically on an equal
+            basis, irrespective of their individual capital
+            contributions.1
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="c-statutory-guardrails-california-corporations-code">
+      <title>
+        <emphasis role="strong">C. Statutory Guardrails (California
+      Corporations Code)</emphasis>
+      </title>
+      <para>
+        The California Corporations Code establishes firm,
+        non-negotiable guardrails that define the legal boundaries of a
+        cooperative. Any attempt to unbundle and commodify rights must
+        operate within these constraints.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Democratic Control:</emphasis> The
+            cornerstone of the cooperative model is democratic
+            governance. California Corporations Code § 12404 states
+            unequivocally, "the voting power of members having
+            voting rights shall be equal".10 This codifies the
+            "one member, one vote" principle as the default
+            and essential characteristic of a California cooperative.1
+            While the code allows for different classes of membership
+            with varying proprietary rights, the voting power among
+            those members who are granted a vote must be equal.12 The
+            law does provide for narrow and specific exceptions, such as
+            for voting in a "central organization" of
+            cooperatives (a federated cooperative) under § 12314 or for
+            the creation of non-voting "community investors"
+            in worker cooperatives under § 12404.5.10 These exceptions,
+            however, are tightly circumscribed and reinforce the general
+            rule of equal voting power for patrons.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Transferability of
+            Interests:</emphasis> In stark contrast to shares in a
+            publicly-traded corporation, membership in a California
+            cooperative is not, by default, a "saleable
+            commodity".1 The Consumer Cooperative Corporation Law
+            specifies that a membership is <emphasis>not
+            transferable</emphasis> unless the cooperative's articles of
+            incorporation or bylaws explicitly permit it.1 This default
+            non-transferability serves as a critical protective
+            mechanism, insulating the cooperative from speculative
+            interests and ensuring that its ownership remains in the
+            hands of active patrons who use its services. When
+            transferability is permitted, the bylaws can and often do
+            impose significant restrictions.14 For example, they may
+            require that any potential transferee must meet certain
+            qualifications, such as being actively engaged in a specific
+            line of business or activity compatible with the
+            cooperative's purpose.1 These restrictions are a powerful
+            tool for maintaining the integrity of the membership base.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Distributions and the Subordination
+            of Capital:</emphasis> The principle of subordinating
+            capital is not merely a philosophical concept; it is
+            enforced by statute.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">The 15% Cap:</emphasis> California
+            Corporations Code § 12451 imposes a hard ceiling on
+            "distributions," which are defined to include
+            dividends on capital but explicitly exclude patronage
+            refunds.2 The law states that such distributions "in
+            any fiscal year shall not exceed 15 percent, multiplied by
+            contributions...to capital".15 This provision
+            statutorily limits the return on capital, ensuring that the
+            primary financial benefit of the cooperative flows through
+            patronage, not investment.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Prohibited Distributions:</emphasis>
+            The code further protects the cooperative's financial
+            integrity and the primacy of the patronage system. Section
+            12453 prohibits a cooperative from making a patronage
+            distribution to members out of earnings generated from
+            non-member patronage.16 It also forbids any distribution
+            (including redemptions of memberships) that would result in
+            the cooperative being unable to meet its liabilities (i.e.,
+            would render it insolvent).16
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        The legal architecture of California cooperative law, while
+        protective, contains the very tools needed for financial
+        innovation. The statutes explicitly differentiate between
+        <emphasis>voting power</emphasis>, which must generally remain
+        equal among voting members, and <emphasis>proprietary
+        interests</emphasis> (such as rights to distributions or assets
+        upon liquidation), which can be unequal if the rules for
+        determining them are set forth in the articles or bylaws.12 This
+        statutory separation of control rights from financial rights is
+        the fundamental legal gateway that permits the creation of
+        non-voting equity instruments. A cooperative can, in compliance
+        with the law, design a class of membership or stock that carries
+        a right to a financial return (a proprietary interest) but
+        carries no vote, thereby attracting passive capital without
+        violating the sacrosanct principle of democratic control by
+        patrons.
+      </para>
+      <para>
+        This framework, however, establishes a default state of maximum
+        control and minimum liquidity. By defaulting to
+        one-member-one-vote and non-transferability, the law creates a
+        "closed-loop" system designed to preserve the
+        cooperative's character and serve its active patrons.1 Any
+        attempt to commodify rights and introduce transferability
+        represents a deliberate move away from this protective default.
+        Such a move is permissible but requires careful and intentional
+        design, using the articles and bylaws to create new rules that
+        still honor the spirit and letter of the law.
+      </para>
+    </section>
+  </section>
+  <section xml:id="section-ii-the-federal-tax-filter-preserving-subchapter-t-status">
+    <title>
+      <emphasis role="strong">Section II: The Federal Tax Filter:
+    Preserving Subchapter T Status</emphasis>
+    </title>
+    <para>
+      Once an instrument is deemed permissible under California law, it
+      must pass through the second, equally critical filter: federal tax
+      law. The primary tax advantage of the cooperative structure is
+      found in Subchapter T of the Internal Revenue Code (IRC §§
+      1381-1388), which allows a cooperative to achieve single-taxation
+      on its patronage-sourced earnings.9 By deducting patronage
+      dividends paid to members, the cooperative avoids the double
+      taxation faced by standard C-corporations, where profits are taxed
+      first at the corporate level and again when distributed to
+      shareholders.7 Losing this status would impose a significant
+      financial burden and undermine a key rationale for choosing the
+      cooperative form. This privileged tax treatment is not automatic;
+      it is contingent upon the entity "operating on a cooperative
+      basis," a standard defined not by a single statute but by a
+      consistent body of judicial precedent and IRS interpretation.7
+    </para>
+    <section xml:id="a-the-three-pillars-of-operating-on-a-cooperative-basis">
+      <title>
+        <emphasis role="strong">A. The Three Pillars of
+      "Operating on a Cooperative Basis"</emphasis>
+      </title>
+      <para>
+        To qualify for Subchapter T treatment, a cooperative must
+        demonstrate adherence to three fundamental principles 9:
+      </para>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Subordination of Capital:</emphasis>
+            This principle requires that capital serves the
+            cooperative's operational purposes rather than being an end
+            in itself. The return paid on capital must be limited,
+            ensuring that the primary financial rewards of the
+            enterprise flow from patronage, not investment. This aligns
+            perfectly with California's 15% statutory cap on
+            distributions and is a core test for the IRS.2 Structures
+            like non-voting preferred stock with a fixed, limited
+            dividend are designed specifically to meet this requirement
+            by treating capital as a tool that receives a reasonable
+            "rent" for its use, not a claim on all residual
+            profits.20
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Democratic Control:</emphasis> The
+            cooperative must be controlled by its member-patrons on a
+            democratic basis. The one-member, one-vote standard is the
+            clearest and safest way to meet this test.8 While the IRS
+            has shown some flexibility, any structure that cedes
+            significant or controlling governance power to non-patron
+            investors puts the cooperative's Subchapter T status at
+            severe risk.21 Control must ultimately rest with those who
+            use the cooperative's services.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Patronage-Based
+            Operations:</emphasis> The cooperative's activities must be
+            conducted for the benefit of its patrons, and the net
+            earnings generated from that business must be allocated and
+            distributed to them based on their respective patronage.9
+            This ensures that the cooperative exists to serve its users,
+            not to accumulate profit for its own sake.
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+    <section xml:id="b-the-critical-distinction-patronage-vs-non-patronage-sourced-income">
+      <title>
+        <emphasis role="strong">B. The Critical Distinction:
+      Patronage vs. Non-Patronage Sourced Income</emphasis>
+      </title>
+      <para>
+        The operational core of Subchapter T lies in the meticulous
+        separation of income into two distinct "pockets":
+        patronage-sourced and non-patronage-sourced.19 A non-exempt
+        cooperative (the most common type) is permitted to deduct from
+        its gross income the value of patronage dividends distributed to
+        its members from patronage-sourced earnings.7 Conversely, any
+        income derived from non-patronage sources is fully taxable at
+        standard corporate rates, and only the after-tax remainder can
+        be retained or distributed.9
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Defining
+            "Patronage-Sourced" Income:</emphasis> The IRC
+            defines this as income "arising out of earnings of the
+            cooperative from business done with or for its
+            patrons".9 Federal regulations further clarify that
+            this excludes earnings from business done with or for
+            non-patrons, or from other sources unrelated to the core
+            cooperative activity.22
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">The "Actually Facilitates"
+            Test:</emphasis> The crucial test applied by the IRS and
+            courts to determine the character of income is the
+            "actually facilitates" test.23 For income to be
+            considered patronage-sourced, the transaction that generated
+            it must be "directly related to" and must
+            "actually facilitate" the cooperative's primary
+            business activities with its patrons.24 It cannot be merely
+            incidental to the business or simply enhance overall
+            profitability.22
+          </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Compliant Example:</emphasis> An
+            agricultural marketing cooperative invests in and operates a
+            grain elevator. The fees and margins earned from storing and
+            handling its members' grain are patronage-sourced because
+            the elevator directly facilitates the marketing of their
+            products.23
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Non-Compliant Example:</emphasis> A
+            worker cooperative takes its retained earnings and invests
+            them in a portfolio of publicly traded stocks. Any dividends
+            or capital gains from this portfolio would be
+            non-patronage-sourced income. The investment activity does
+            not facilitate the work performed by the member-patrons; it
+            is a separate, unrelated business venture.23
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        This dual-income system has profound implications for the design
+        of any commodified financial instrument. If a cooperative wishes
+        to issue a dividend-bearing instrument, such as preferred stock,
+        to attract outside capital from non-patrons, the funds used to
+        pay that dividend cannot be patronage-sourced earnings. To do so
+        would violate the principle that patronage earnings must be
+        returned to patrons. Therefore, for a non-exempt cooperative,
+        the dividend on such stock must be paid from its
+        "non-patronage" income pocket, which is subject to
+        corporate income tax.9 This creates a significant tax drag; the
+        cooperative must earn enough non-patronage revenue to pay
+        corporate taxes and still have sufficient after-tax profit to
+        pay the promised dividend. This makes capital raised through
+        such instruments inherently more expensive than capital retained
+        from patronage. The only exception is for "exempt"
+        agricultural cooperatives under IRC §521, which have stricter
+        operational requirements but are allowed a limited deduction for
+        dividends paid on capital stock.25
+      </para>
+      <para>
+        The "actually facilitates" test, however, provides a
+        powerful logic for designing innovative capital structures that
+        remain within the patronage framework. The New Generation
+        Cooperative (NGC) model is a prime example.27 In an NGC, a
+        member makes a substantial upfront capital investment to acquire
+        a "delivery right," which is both a right and an
+        obligation to deliver a specific quantity of a commodity to the
+        cooperative. While this upfront payment looks like a traditional
+        investment, the capital raised is used to build a value-added
+        processing facility (e.g., an ethanol plant) that the members
+        will use. The return to the member comes not as a dividend on
+        the initial investment, but in the form of higher prices or
+        margins received for their processed product—a return generated
+        directly by their patronage. The initial capital contribution is
+        thus defensible as "actually facilitating" the
+        cooperative's core patronage business, allowing the entire
+        structure to be treated as a cohesive patronage-based system
+        under Subchapter T.23 This model demonstrates that a large
+        capital contribution can be integrated into the cooperative
+        framework if its purpose is inextricably linked to enabling and
+        enhancing the cooperative's primary business with its members.
+      </para>
+    </section>
+  </section>
+  <section xml:id="section-iii-the-securities-law-gauntlet-when-a-commodified-right-becomes-a-security">
+    <title>
+      <emphasis role="strong">Section III: The Securities Law
+    Gauntlet: When a Commodified Right Becomes a
+    Security</emphasis>
+    </title>
+    <para>
+      After an instrument is cleared by California cooperative law and
+      structured for Subchapter T compliance, it faces the final and
+      often most complex hurdle: federal securities law. The moment a
+      cooperative interest is designed to be transferable or to provide
+      a financial return beyond the benefits of patronage, it risks
+      being classified as a "security." Such a classification
+      triggers a host of demanding obligations under the Securities Act
+      of 1933 and the Securities Exchange Act of 1934, including
+      potential registration with the Securities and Exchange Commission
+      (SEC) and stringent anti-fraud liability. The analysis of whether
+      a cooperative instrument is a security is a fact-intensive inquiry
+      that hinges on its economic reality, not its name. A unified
+      framework, integrating the key Supreme Court tests, is essential
+      for this determination.23
+    </para>
+    <section xml:id="a-initial-characterization-debt-or-equity">
+      <title>
+        <emphasis role="strong">A. Initial Characterization: Debt
+      or Equity?</emphasis>
+      </title>
+      <para>
+        The first analytical step is to characterize the fundamental
+        nature of the instrument, as this determines which legal test to
+        apply.23
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Is it a "Note" or
+            Debt-Like Instrument?</emphasis> This category includes
+            instruments that involve a loan of money, a promise to repay
+            a principal amount, and a stated interest rate (even if
+            zero). If the instrument has these characteristics, the
+            proper analysis falls under the <emphasis>Reves</emphasis>
+            test.23
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Is it an "Investment
+            Contract" or Equity-Like Instrument?</emphasis> This
+            category includes instruments representing a stake in the
+            cooperative's assets or profits, where the holder's return
+            is primarily dependent on the cooperative's financial
+            success. This includes things like preferred stock, tradable
+            delivery rights, or any instrument marketed for its
+            potential appreciation. If so, the analysis proceeds under
+            the <emphasis>Howey</emphasis> test.23
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="b-applying-the-supreme-court-tests">
+      <title>
+        <emphasis role="strong">B. Applying the Supreme Court
+      Tests</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">The</emphasis>
+            <emphasis>
+              <emphasis role="strong">Reves</emphasis>
+            </emphasis>
+            <emphasis role="strong">"Family Resemblance" Test
+            for Notes:</emphasis> In <emphasis>Reves v. Ernst &amp;
+            Young</emphasis>, the Supreme Court established that every
+            note is presumed to be a security. This presumption can be
+            rebutted only if the note bears a strong "family
+            resemblance" to a list of judicially created exceptions
+            for notes with a commercial, rather than investment,
+            character. The test involves analyzing four factors 23:
+          </para>
+        </listitem>
+      </orderedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Motivations of Seller and
+            Buyer:</emphasis> Is the cooperative raising money for
+            general business use (leaning towards a security) or to
+            facilitate a specific, short-term commercial transaction for
+            a patron (leaning away)? Is the buyer primarily motivated by
+            the potential for profit from the interest earned (leaning
+            towards a security) or by a commercial purpose, such as
+            financing a purchase from the cooperative (leaning away)?
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Plan of Distribution:</emphasis> Is
+            the note offered and traded on a public market or to a broad
+            class of investors (leaning towards a security)? Or is its
+            distribution narrowly limited to member-patrons for whom it
+            facilitates a transaction (leaning away)?
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Reasonable Expectations of the
+            Investing Public:</emphasis> Is the instrument marketed and
+            referred to as an "investment," a
+            "bond," or a "note" in the investment
+            sense (leaning towards a security)? Or is it consistently
+            described as "patronage capital," a "member
+            deposit," or an "advance" (leaning away)?
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Presence of an Alternative
+            Regulatory Scheme:</emphasis> Does the existing framework of
+            state cooperative law and Subchapter T provide sufficient
+            protection to the noteholder, making the application of
+            federal securities law unnecessary (leaning away)?
+          </para>
+        </listitem>
+      </itemizedlist>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">The</emphasis>
+            <emphasis>
+              <emphasis role="strong">Howey</emphasis>
+            </emphasis>
+            <emphasis role="strong">Test for Investment
+            Contracts:</emphasis> The seminal case of <emphasis>SEC v.
+            W.J. Howey Co.</emphasis> defined an "investment
+            contract" as a security if four conditions are met 23:
+          </para>
+        </listitem>
+      </orderedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">An Investment of Value:</emphasis>
+            The holder must give up something of value, such as money,
+            assets, or even significant labor, to acquire the
+            instrument.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">In a Common Enterprise:</emphasis>
+            The holder's fortunes must be interwoven with and dependent
+            upon the fortunes of the promoter (the cooperative) and
+            other investors.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">With an Expectation of
+            Profit:</emphasis> The holder must be attracted to the
+            instrument by the prospect of a valuable return on their
+            investment. This "profit" can come in various
+            forms, including capital appreciation, dividends, or other
+            earnings derived from the enterprise's operations.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Derived Primarily from the Efforts
+            of Others:</emphasis> The realization of the expected profit
+            must depend predominantly on the managerial,
+            entrepreneurial, or operational efforts of the cooperative's
+            leadership or a third party.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+        A traditional, non-transferable membership in a consumer
+        cooperative often evades security classification because it
+        fails the "expectation of profit" prong of the
+        <emphasis>Howey</emphasis> test. The member's primary motivation
+        is not financial return but rather to gain access to goods or
+        services at a lower cost or higher quality—a benefit of use, not
+        of investment.1 However, the moment a cooperative unbundles
+        rights and creates a special instrument designed to attract
+        capital, the analysis shifts dramatically. An instrument that is
+        transferable, can appreciate in value, or pays a dividend is
+        almost certain to be classified as a security.
+      </para>
+      <para>
+        Consider the Class A Preferred Stock offered by Shared Capital
+        Cooperative, a Subchapter T entity.20 Applying the
+      </para>
+      <para>
+        <emphasis>Howey</emphasis> test demonstrates why it is a
+        security:
+      </para>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis>Investment of Value:</emphasis> Yes, investors
+            purchase the shares for cash ($10 per share).
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis>Common Enterprise:</emphasis> Yes, the ability to
+            pay dividends depends entirely on the success of Shared
+            Capital's lending operations, which are managed as a common
+            enterprise.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis>Expectation of Profit:</emphasis> Yes, the
+            instrument is explicitly marketed with a target annual
+            dividend of 3-6%. This is a clear expectation of financial
+            profit.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Efforts of Others: Yes, the generation of profits to pay the
+            dividend depends entirely on the managerial efforts of
+            Shared Capital's professional team. Because it squarely
+            meets all four prongs, the Class A Preferred Stock is a
+            security, which is precisely why Shared Capital undertook a
+            formal offering process compliant with SEC regulations.
+          </para>
+        </listitem>
+      </orderedlist>
+      <para>
+        Furthermore, the argument that an "alternative regulatory
+        scheme" obviates the need for securities law is a weak
+        shield for commodified instruments sold to non-patrons. While
+        state cooperative law provides robust protections for
+        <emphasis>patron-members</emphasis> (e.g., democratic rights,
+        access to information), these protections do not extend
+        meaningfully to passive, non-patron investors. An outside
+        investor in a non-voting instrument has no voice in governance
+        and their primary interest—financial return—is statutorily
+        subordinated to the interests of the patron-members.2 For
+        example, the patron-controlled board could decide to forgo
+        paying a preferred dividend in favor of making investments that
+        lower costs for patrons, leaving the investor with no recourse
+        under cooperative law. A court would likely recognize this
+        vulnerability and conclude that the comprehensive disclosure and
+        anti-fraud protections of federal securities law are essential
+        to protect this class of stakeholder, rendering the
+        "alternative regulatory scheme" defense ineffective.
+      </para>
+    </section>
+  </section>
+  <section xml:id="section-iv-synthesis-a-framework-for-designing-compliant-cooperative-instruments">
+    <title>
+      <emphasis role="strong">Section IV: Synthesis: A Framework
+    for Designing Compliant Cooperative Instruments</emphasis>
+    </title>
+    <para>
+      Integrating the distinct requirements of California corporate law,
+      federal Subchapter T, and securities law is the critical task in
+      designing viable cooperative capital instruments. A failure in any
+      one domain renders an instrument unworkable. This section presents
+      a unified framework, operationalizing the analysis from the
+      preceding sections into a practical tool for assessing the
+      compliance and tradability of various potential instruments. The
+      goal is to move from abstract principles to a concrete
+      decision-making matrix.
+    </para>
+    <section xml:id="a-defining-the-subchapter-t-security">
+      <title>
+        <emphasis role="strong">A. Defining the "Subchapter T
+      Security"</emphasis>
+      </title>
+      <para>
+        The intersection of these legal regimes gives rise to a novel
+        asset class that can be termed a "Subchapter T
+        Security".23 This is an instrument that is legally
+        classified as a security under the
+      </para>
+      <para>
+        <emphasis>Reves</emphasis> or <emphasis>Howey</emphasis> tests
+        but is simultaneously and intentionally engineered to be fully
+        compliant with the core principles of cooperative operation. It
+        is a hybrid instrument. On one hand, it acknowledges the
+        holder's expectation of a financial return, triggering
+        securities law protections. On the other hand, it contractually
+        and structurally subordinates that profit motive to the
+        cooperative's primary patronage purpose. Its design must ensure
+        that any value generated by the collective efforts of the
+        cooperative's patrons is socialized for the benefit of all
+        patrons, rather than being privatized and captured by the
+        instrument holder alone. It is a tool for injecting capital
+        <emphasis>into</emphasis> the cooperative commons, not for
+        enclosing and extracting value <emphasis>from</emphasis> it.23
+      </para>
+    </section>
+    <section xml:id="b-the-three-pillar-compliance-test">
+      <title>
+        <emphasis role="strong">B. The Three-Pillar Compliance
+      Test</emphasis>
+      </title>
+      <para>
+        To qualify as a Subchapter T Security, any instrument must be
+        tested against three pillars of cooperative compliance 23:
+      </para>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Subordination of Capital as Defense
+            of the Commons:</emphasis> This pillar reframes the concept
+            from a simple limit on returns to a fundamental test of
+            purpose. The instrument's structure must be analyzed to
+            determine if it is a tool for the private capture of
+            cooperatively-created value or a defense against it. A
+            compliant instrument is engineered to ensure that gains are
+            captured by the cooperative and distributed according to
+            patronage principles, thereby socializing the benefits of
+            the capital rather than privatizing them.23
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Democratic Member
+            Control:</emphasis> The instrument must not dilute or
+            undermine the democratic control of the patron-members. Any
+            structure where an individual or entity can acquire
+            disproportionate voting power in a single decision-making
+            body by purchasing more securities is fundamentally
+            non-compliant. This test permits models like a single voting
+            security per member or multiple non-duplicative voting
+            securities (e.g., one vote for the main board, a separate
+            vote for a regional committee), but it forbids the standard
+            corporate "one share, one vote" model.23
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Patronage-Source Income
+            Integrity:</emphasis> The capital raised by the instrument
+            must pass the "actually facilitates" test. Its
+            function must be inextricably linked to the cooperative's
+            core mission and its business with its patrons. Instruments
+            like per-unit capital retains or NGC delivery rights are
+            compliant because the capital is used to enable and quantify
+            patronage (e.g., by funding a processing plant). An
+            instrument that raises capital for purposes unrelated to the
+            cooperative's direct business with patrons, such as for a
+            speculative investment fund, would sever this link and fail
+            the test.23
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+    <section xml:id="c-a-proposed-compliance-and-tradability-matrix-for-cooperative-instruments">
+      <title>
+        <emphasis role="strong">C. A Proposed Compliance and
+      Tradability Matrix for Cooperative Instruments</emphasis>
+      </title>
+      <para>
+        The following matrix provides a comparative framework for
+        assessing various potential instruments. It synthesizes the
+        complex, multi-domain analysis into a single reference tool,
+        allowing founders and advisors to visualize the strategic
+        trade-offs inherent in different capitalization strategies. By
+        showing how a design choice (e.g., adding a dividend or
+        transferability) impacts compliance across all three legal
+        regimes, it transforms abstract legal principles into a
+        practical guide for structural decision-making.
+      </para>
+      <informaltable>
+        <tgroup cols="5">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                **Instrument Type**
+              </entry>
+              <entry>
+                **CA Corp. Law Compliance**
+              </entry>
+              <entry>
+                **Subchapter T Compliance**
+              </entry>
+              <entry>
+                **Securities Law Status (*****Reves/Howey*****)**
+              </entry>
+              <entry>
+                **Tradability Analysis &amp; Risk**
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **1. Standard Membership Share**
+              </entry>
+              <entry>
+                **High:** The baseline model. Equal voting power is the
+                default (§12404).10 Default is non-transferable
+                (§12404).1
+              </entry>
+              <entry>
+                **High:** Perfectly embodies the three pillars. The
+                member's primary relationship is patronage.
+              </entry>
+              <entry>
+                **Low Risk of Security Classification:** Often fails the
+                "expectation of profit" prong of the *Howey*
+                test, as the benefit is cost savings or access to
+                services, not financial return.1
+              </entry>
+              <entry>
+                **Non-Tradable:** Not considered a "saleable
+                commodity".1 Liquidity is available only through
+                redemption by the cooperative, subject to its bylaws and
+                solvency.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **2. Non-Voting Preferred Stock (e.g., Shared Capital
+                Model)**
+              </entry>
+              <entry>
+                **High:** Permitted by the statutory distinction between
+                equal voting rights and potentially unequal proprietary
+                rights (§12310).12 Dividends must adhere to the 15%
+                annual cap on distributions (§12451).15
+              </entry>
+              <entry>
+                **Medium:** Compliant only if dividends are paid from
+                the cooperative's after-tax non-patronage income.9 Risks
+                failing the "subordination of capital" pillar
+                if returns are excessive or if it creates pressure to
+                prioritize non-patronage business over patronage
+                business.
+              </entry>
+              <entry>
+                **High Likelihood of Security Classification:** Clearly
+                meets all four prongs of the *Howey* test due to the
+                investment of money for an expected profit (dividends)
+                based on the efforts of management.20
+              </entry>
+              <entry>
+                **Privately Tradable:** Can be sold to investors,
+                typically under a securities law exemption like
+                Regulation D. Robust transfer restrictions in the bylaws
+                (e.g., right of first refusal for the co-op) are
+                essential to maintain control. Public trading is
+                extremely high risk and likely incompatible with
+                Subchapter T.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **3. Tradable Delivery Right (e.g., NGC Model)**
+              </entry>
+              <entry>
+                **High:** Can be structured as a contractual right tied
+                to membership. The terms of transferability must be
+                explicitly defined in the articles or bylaws.1
+              </entry>
+              <entry>
+                **High:** Passes the "actually facilitates"
+                test, as the capital raised is directly used to enable
+                and enhance the patronage activity (e.g., building a
+                processing plant).23 The right's value is tied to the
+                benefit of patronage, not passive profit.
+              </entry>
+              <entry>
+                **Medium Risk of Security Classification:** Likely meets
+                the *Howey* test. There is an investment of value, a
+                common enterprise, and the return depends on the efforts
+                of management. The potential for the right to appreciate
+                in value creates an expectation of profit.
+              </entry>
+              <entry>
+                **Internally Tradable:** Designed for trading within a
+                closed pool of qualified patrons (e.g., other farmers
+                who can meet the delivery obligation). A public market
+                would sever the essential link to patronage and likely
+                violate Subchapter T principles.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **4. Patronage-Linked Debt Note**
+              </entry>
+              <entry>
+                **High:** Cooperatives have the general power to borrow
+                money and issue debt securities (§12320).3
+              </entry>
+              <entry>
+                **High:** Compliant if interest payments are treated as
+                a legitimate cost of doing business that facilitates the
+                cooperative's patronage activities (e.g., borrowing for
+                operating capital to serve members).
+              </entry>
+              <entry>
+                **Medium Risk of Security Classification (under**
+                ***Reves*****):** Highly fact-dependent. If marketed
+                broadly to the public as an "investment note,"
+                it is almost certainly a security. If structured as a
+                member loan program with limited distribution and framed
+                as a commercial transaction, it may escape
+                classification.23
+              </entry>
+              <entry>
+                **Privately Tradable (if a security):** Similar risk
+                profile to preferred stock. If it is not a security, its
+                tradability is governed purely by the terms of the
+                contract.
+              </entry>
+            </row>
+            <row>
+              <entry>
+                **5. Special Management Share (Hypothetical)**
+              </entry>
+              <entry>
+                **Very Low:** Fundamentally violates the principle of
+                equal voting power for members (§12404).10 It is
+                unlikely to fit within the narrow statutory exceptions
+                for worker or federated cooperatives.
+              </entry>
+              <entry>
+                **Very Low:** Directly violates the "democratic
+                control" pillar of Subchapter T by concentrating
+                power based on a special class of share rather than
+                patronage.9
+              </entry>
+              <entry>
+                **High Likelihood of Security Classification:** A clear
+                investment contract where the "profit" sought
+                is control and influence over the enterprise.
+              </entry>
+              <entry>
+                **Not Recommended:** This structure is fundamentally
+                incompatible with the legal and tax definitions of a
+                cooperative. It represents a direct attempt to import
+                the C-Corp governance model, which would disqualify the
+                entity as a cooperative.
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+  </section>
+  <section xml:id="section-v-structural-models-and-case-studies">
+    <title>
+      <emphasis role="strong">Section V: Structural Models and Case
+    Studies</emphasis>
+    </title>
+    <para>
+      To move from theoretical analysis to practical application, it is
+      instructive to examine established and documented models that
+      illustrate how these principles are applied in the real world.
+      These cases demonstrate the spectrum of possibilities, from the
+      most traditional structures to highly innovative capital-raising
+      vehicles.
+    </para>
+    <section xml:id="a-the-traditional-model-the-indivisible-membership">
+      <title>
+        <emphasis role="strong">A. The Traditional Model: The
+      Indivisible Membership</emphasis>
+      </title>
+      <para>
+        The most common cooperative structure, particularly for consumer
+        and worker cooperatives, is the traditional, indivisible
+        membership. In this model, all rights—use, control, and
+        benefit—are bundled into a single membership share or
+        certificate.1 Capital is raised through one-time membership fees
+        and, most significantly, through retained patronage refunds
+        (also known as capital credits). In this system, a portion of
+        the annual surplus allocated to a member is retained by the
+        cooperative as equity, with the promise of redemption at a
+        future date.29 The membership itself is typically
+        non-transferable and can only be redeemed by the cooperative,
+        often upon the member leaving the co-op. This structure
+        maximizes the integrity of the "closed loop," ensuring
+        ownership and control remain exclusively with active patrons.
+        However, it offers minimal liquidity and can be slow to
+        accumulate the large amounts of capital needed for major
+        projects.
+      </para>
+    </section>
+    <section xml:id="b-the-new-generation-cooperative-ngc-model-commodifying-patronage">
+      <title>
+        <emphasis role="strong">B. The New Generation Cooperative
+      (NGC) Model: Commodifying Patronage</emphasis>
+      </title>
+      <para>
+        The New Generation Cooperative, which emerged primarily in the
+        agricultural sector, represents a major innovation in
+        cooperative finance. The NGC commodifies the very right and
+        obligation of patronage itself through the creation of tradable
+        delivery rights.27 To join, a producer must make a significant
+        upfront investment to purchase the right to deliver a specific
+        quantity and quality of a commodity to the cooperative's
+        value-added processing facility. This delivery right is a
+        distinct, appreciable, and transferable asset.
+      </para>
+      <para>
+        This model brilliantly solves several problems. It raises
+        substantial upfront capital to finance large-scale facilities.
+        By making the delivery right an obligation as well as a right,
+        it guarantees a stable supply of raw materials, allowing the
+        plant to operate at peak efficiency.27 Crucially, it aligns with
+        cooperative principles because the right is typically
+        transferable only to other producers who can meet the delivery
+        obligation, keeping ownership and control within the class of
+        active patrons. The return on the investment comes from enhanced
+        patronage—higher prices for the processed goods—not from a
+        passive dividend. As analyzed previously, this structure is
+        highly defensible under the "actually facilitates"
+        test of Subchapter T.23
+      </para>
+    </section>
+    <section xml:id="c-the-external-capital-model-the-shared-capital-cooperative-case-study">
+      <title>
+        <emphasis role="strong">C. The External Capital Model: The
+      Shared Capital Cooperative Case Study</emphasis>
+      </title>
+      <para>
+        Shared Capital Cooperative, a loan fund that lends to other
+        cooperatives, provides a well-documented example of a Subchapter
+        T cooperative that successfully raised external capital from
+        non-patrons. Its SEC filing details a capital structure that
+        includes multiple classes of stock, most notably Class A
+        Preferred Stock sold to outside investors.20 This instrument is
+        a quintessential "Subchapter T Security."
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Structure:</emphasis> The Class A
+            Preferred Stock is non-voting, explicitly separating
+            financial rights from control rights.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Return:</emphasis> It offers a
+            <emphasis>discretionary</emphasis>, non-cumulative dividend
+            with a target rate of 3-6%, clearly subordinating the return
+            on capital to the financial health and mission of the
+            cooperative. The board, controlled by borrowing members, is
+            not obligated to pay a dividend in any given year.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Compliance:</emphasis> This
+            structure respects the three pillars. Democratic control is
+            preserved with the patron-borrowers. Subordination of
+            capital is achieved through the discretionary and capped
+            dividend. The capital raised "actually
+            facilitates" the cooperative's mission of providing
+            loans to its members.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Securities Law:</emphasis> Shared
+            Capital acknowledged the Class A Preferred Stock is a
+            security and undertook a formal offering process, providing
+            full disclosure to investors about the nature of their
+            investment and its subordinated status.20 It also includes
+            strict transfer restrictions, requiring board approval and
+            giving the cooperative a right of first refusal, thereby
+            preventing a secondary market from developing outside its
+            control.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="d-the-worker-co-op-community-investor-model">
+      <title>
+        <emphasis role="strong">D. The Worker Co-op "Community
+      Investor" Model</emphasis>
+      </title>
+      <para>
+        California law provides a unique statutory pathway for worker
+        cooperatives to attract mission-aligned capital. California
+        Corporations Code § 12253 and § 12404.5 create a special
+        category for "community investors," defined as
+        individuals or entities that invest in a worker cooperative but
+        are not worker-members.13 This statute creates a specific,
+        limited exception to the "one member, one vote" rule.
+        It allows the articles or bylaws to grant these community
+        investors voting rights, but their votes are subordinate to the
+        worker-members. This model provides a legal framework for what
+        is often called "multi-stakeholder" governance,
+        allowing a cooperative to bring in capital from community allies
+        who support its mission, while ensuring that ultimate control
+        remains with the workers. This is a powerful, albeit narrowly
+        targeted, tool for blending external capital with cooperative
+        principles.
+      </para>
+    </section>
+  </section>
+  <section xml:id="section-vi-strategic-recommendations-and-risk-analysis">
+    <title>
+      <emphasis role="strong">Section VI: Strategic Recommendations
+    and Risk Analysis</emphasis>
+    </title>
+    <para>
+      The preceding analysis demonstrates that while a California
+      cooperative operates within a strict legal and tax framework,
+      significant innovation in its capital structure is possible. The
+      key is to select a pathway that aligns with the cooperative's
+      strategic goals for capital, control, and liquidity, while
+      meticulously adhering to the compliance requirements. The
+      following recommendations outline three distinct strategic
+      pathways and conclude with a critical risk mitigation checklist.
+    </para>
+    <section xml:id="a-pathway-to-commodified-non-tradable-rights">
+      <title>
+        <emphasis role="strong">A. Pathway to Commodified,
+      Non-Tradable Rights</emphasis>
+      </title>
+      <para>
+        This pathway is ideal for cooperatives that wish to raise
+        additional capital from their existing membership base or
+        provide a return to members who contribute more capital, without
+        creating an external market for their equity.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Structure:</emphasis> The primary
+            instruments are non-transferable preferred membership shares
+            or patronage advance certificates. These instruments would
+            be issued only to members and would carry a preferred, but
+            limited and likely discretionary, dividend.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Purpose:</emphasis> To create an
+            internal mechanism for members to invest further in their
+            cooperative and receive a modest, non-patronage-based return
+            on that extra investment.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Implementation:</emphasis> The
+            rights and limitations of these instruments must be clearly
+            defined in the cooperative's articles and bylaws. The
+            dividend must comply with California's 15% cap on
+            distributions (§ 12451).15 Liquidity is provided exclusively
+            through redemption by the cooperative, which is itself
+            subject to the solvency requirements of § 12453, meaning the
+            cooperative cannot redeem shares if doing so would
+            jeopardize its financial stability.16 This structure is
+            low-risk from a securities perspective as there is no public
+            plan of distribution.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="b-pathway-to-commodified-privately-traded-rights">
+      <title>
+        <emphasis role="strong">B. Pathway to Commodified,
+      Privately-Traded Rights</emphasis>
+      </title>
+      <para>
+        This pathway is designed for cooperatives that need to raise
+        significant capital from outside, mission-aligned investors,
+        including non-patrons. It requires a sophisticated understanding
+        of securities law.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Structure:</emphasis> The
+            instruments of choice are non-voting preferred stock (like
+            the Shared Capital model) or, in an agricultural context,
+            tradable delivery rights (like the NGC model).20 These
+            instruments are intentionally designed as securities.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Process:</emphasis> The cooperative
+            must acknowledge that it is offering a security and comply
+            with federal and state securities laws. This typically
+            involves structuring the offering to qualify for an
+            exemption from the full, costly registration process. Common
+            exemptions include Regulation D private placements, which
+            limit the sale to "accredited investors," or
+            intrastate offering exemptions.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Implementation:</emphasis> This is
+            the most critical element. The cooperative must draft and
+            enforce robust transfer restrictions within its bylaws and
+            the investor subscription agreements. A right of first
+            refusal, giving the cooperative the option to buy back the
+            shares before they can be sold to a third party, is an
+            essential tool for maintaining control over the ownership
+            base. Full and transparent disclosure to potential investors
+            is paramount; they must understand the subordinated nature
+            of their investment, the discretionary nature of their
+            returns, and the severe limitations on liquidity.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="c-the-high-bar-for-publicly-traded-rights">
+      <title>
+        <emphasis role="strong">C. The High Bar for Publicly-Traded
+      Rights</emphasis>
+      </title>
+      <para>
+        This pathway, which involves creating a cooperative equity
+        instrument that can be freely bought and sold by the general
+        public on a stock exchange, is fundamentally incompatible with
+        the cooperative model and is not recommended.
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Analysis:</emphasis> A
+            publicly-traded security would fail the core compliance
+            tests. The profit-maximization motive of public market
+            investors is diametrically opposed to the principle of
+            <emphasis role="strong">subordination of
+            capital</emphasis>.9 A public market would create immense
+            pressure to prioritize shareholder returns over patron
+            benefits, violating the essence of Subchapter T. It would
+            destroy <emphasis role="strong">democratic
+            control</emphasis>, as ownership would shift to a dispersed
+            and anonymous group of non-patrons with no connection to the
+            cooperative's mission. The "closed loop" of
+            patronage that cooperative law is designed to protect would
+            be irrevocably broken.1 From a securities law perspective,
+            under the <emphasis>Reves</emphasis> and
+            <emphasis>Howey</emphasis> tests, the instrument would be so
+            clearly an investment for profit that it would be difficult
+            to argue it retains any cooperative character at all.23
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Conclusion:</emphasis> Attempting to
+            create a publicly-traded cooperative security is an attempt
+            to merge two irreconcilable legal and economic structures.
+            The result would almost certainly be the loss of Subchapter
+            T tax status and a legal challenge to its status as a
+            cooperative under California law.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="d-risk-mitigation-checklist-for-founders">
+      <title>
+        <emphasis role="strong">D. Risk Mitigation Checklist for
+      Founders</emphasis>
+      </title>
+      <para>
+        When drafting the foundational documents for a cooperative
+        contemplating an innovative capital structure, the following
+        points must be meticulously addressed in the Articles of
+        Incorporation and Bylaws:
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">[ ] Purpose Clause:</emphasis> State
+            clearly that the corporation is a cooperative organized
+            under the Cooperative Corporation Law and that its primary
+            purpose is the mutual benefit of its members as patrons.3
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">[ ] Membership
+            Qualifications:</emphasis> Define precisely who is eligible
+            for membership, tying eligibility directly to patronage of
+            the cooperative's services.1
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">[ ] Voting Rights:</emphasis>
+            Explicitly state that voting rights for members are equal,
+            adhering to the one-member, one-vote principle (§ 12404),
+            unless utilizing a specific statutory exception.10
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">[ ] Classes of Equity:</emphasis> If
+            creating multiple classes of equity (e.g., voting common and
+            non-voting preferred), define the rights, preferences,
+            privileges, and restrictions of each class with absolute
+            clarity, especially the absence of voting rights for any
+            non-patron class.12
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">[ ] Transfer
+            Restrictions:</emphasis> State that memberships and other
+            equity are not transferable except as provided in the
+            bylaws. The bylaws should then detail the restrictions,
+            including, at a minimum, a right of first refusal for the
+            cooperative.1
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">[ ] Dividend Policy:</emphasis> For
+            any dividend-bearing instrument, state that dividends are
+            discretionary, non-cumulative, and subject to the 15% cap
+            under § 12451. Specify that they will be paid from
+            non-patronage sources (for non-exempt co-ops).9
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">[ ] Redemption Rights:</emphasis>
+            Clarify that any redemption of shares is at the sole
+            discretion of the board and is subject to the solvency
+            requirements of § 12453.16
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">[ ] Patronage Definition:</emphasis>
+            Define what constitutes "patronage" and the
+            formula for calculating and distributing patronage refunds
+            to ensure compliance with Subchapter T.6
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">[ ] Investor Disclosures:</emphasis>
+            For any instrument sold to outsiders, create a comprehensive
+            disclosure document (e.g., a private placement memorandum)
+            that clearly and forcefully explains the risks, the
+            subordinated nature of the investment, the lack of control,
+            and the severe limits on transferability and liquidity.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </section>
+  <section xml:id="conclusion-the-future-of-cooperative-capitalization">
+    <title>
+      <emphasis role="strong">Conclusion: The Future of Cooperative
+    Capitalization</emphasis>
+    </title>
+    <para>
+      The analysis reveals that the California cooperative, governed by
+      state corporate law and federal Subchapter T, is a resilient and
+      surprisingly flexible legal structure. While its foundational
+      principles of democratic control and subordination of capital
+      create inherent friction with conventional capital markets, they
+      do not foreclose the possibility of financial innovation. The
+      legal framework permits the careful unbundling of ownership
+      rights, allowing for the creation of distinct, non-voting equity
+      instruments that can attract capital without fatally compromising
+      the cooperative's identity.
+    </para>
+    <para>
+      The viability of any such instrument hinges on its purpose. The
+      most successful and legally defensible structures—from the
+      tradable delivery rights of New Generation Cooperatives to the
+      non-voting preferred stock of mission-driven loan funds—are those
+      designed to use capital as a tool to <emphasis>defend and enhance
+      the cooperative commons</emphasis>. They raise funds to facilitate
+      and deepen the cooperative's core patronage business, ensuring
+      that the ultimate benefits of the capital are socialized and
+      returned to the patrons who create the value.23
+    </para>
+    <para>
+      Conversely, any instrument designed primarily to <emphasis>extract
+      value</emphasis> from the cooperative for the private benefit of
+      an investor is destined to fail the compliance tests. Structures
+      that attempt to import the governance model of a standard
+      corporation or promise market-rate, non-subordinated returns will
+      inevitably violate the legal pillars of democratic control and
+      subordination of capital. The pathway to a publicly-traded
+      cooperative security remains, for these reasons, legally and
+      philosophically untenable for an entity wishing to retain its
+      cooperative status.
+    </para>
+    <para>
+      Ultimately, a cooperative can adapt to the demands of the modern
+      economy and raise substantial capital. It can create special
+      classes of ownership and even instruments that can be privately
+      traded. However, it cannot do so by abandoning its core
+      principles. It must innovate from within its own unique logic,
+      using its legal and financial tools not to mimic the
+      investor-owned corporation, but to strengthen its capacity to
+      serve its member-patrons.
+    </para>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            California Law Cooperatives | Lewitt Hackman, accessed June
+            28, 2025,
+            <link xlink:href="https://www.lewitthackman.com/wp-content/uploads/2018/08/california-law-cooperatives.DGurnickLAlawyermag.pdf">https://www.lewitthackman.com/wp-content/uploads/2018/08/california-law-cooperatives.DGurnickLAlawyermag.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Legal Sourcebook for California Cooperatives, accessed June
+            28, 2025,
+            <link xlink:href="https://ucanr.edu/?legacy-file=143728.pdf&amp;legacy-site=sfp">https://ucanr.edu/?legacy-file=143728.pdf&amp;legacy-site=sfp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            California General Cooperative Statute - National
+            Cooperative ..., accessed June 28, 2025,
+            <link xlink:href="https://ncbaclusa.coop/images/StateCooperativeStatutes/California-General-Statute.pdf">https://ncbaclusa.coop/images/StateCooperativeStatutes/California-General-Statute.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            California Code, Corporations Code - CORP § 12200 - Codes -
+            FindLaw, accessed June 28, 2025,
+            <link xlink:href="https://codes.findlaw.com/ca/corporations-code/corp-sect-12200/">https://codes.findlaw.com/ca/corporations-code/corp-sect-12200/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            California COOPERATIVE CORPORATIONS Laws - 2024 California
+            ..., accessed June 28, 2025,
+            <link xlink:href="https://law.justia.com/codes/california/code-corp/title-1/division-3/part-2/">https://law.justia.com/codes/california/code-corp/title-1/division-3/part-2/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            2009 California Corporations Code - Section 12200-12203 ::
+            :: Article 1. :: Title, Purposes And Application Of Part -
+            Justia Law, accessed June 28, 2025,
+            <link xlink:href="https://law.justia.com/codes/california/2009/corp/12200-12203.html">https://law.justia.com/codes/california/2009/corp/12200-12203.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Bite-Sized Legal Guide: Subchapter T Taxation - Google Docs,
+            accessed June 28, 2025,
+            <link xlink:href="https://docs.google.com/document/d/15rpLMeSfLA99_5lSnX9Uui9LUCr17qUMBKZcnsqtId8/edit">https://docs.google.com/document/d/15rpLMeSfLA99_5lSnX9Uui9LUCr17qUMBKZcnsqtId8/edit</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Legal Memo | Sustainable Solano, accessed June 28, 2025,
+            <link xlink:href="https://sustainablesolano.org/wp-content/uploads/2019/05/ATT-F-SELC-Legal-Structure-Co-op-Memo-FINAL.pdf">https://sustainablesolano.org/wp-content/uploads/2019/05/ATT-F-SELC-Legal-Structure-Co-op-Memo-FINAL.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Taxation of Cooperatives Under Subchapter T - NCBarBlog,
+            accessed June 28, 2025,
+            <link xlink:href="https://www.ncbarblog.com/tax-taxation-of-cooperatives-under-subchapter-t/">https://www.ncbarblog.com/tax-taxation-of-cooperatives-under-subchapter-t/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            California Corporations Code section 12404 (2025) -
+            California.Public.Law, accessed June 28, 2025,
+            <link xlink:href="https://california.public.law/codes/corporations_code_section_12404">https://california.public.law/codes/corporations_code_section_12404</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            California Corporations Code § 12404 (2024) - Justia Law,
+            accessed June 28, 2025,
+            <link xlink:href="https://law.justia.com/codes/california/code-corp/title-1/division-3/part-2/chapter-3/article-1/section-12404/">https://law.justia.com/codes/california/code-corp/title-1/division-3/part-2/chapter-3/article-1/section-12404/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            California Code, Corporations Code - CORP § 12401 - Codes -
+            FindLaw, accessed June 28, 2025,
+            <link xlink:href="https://codes.findlaw.com/ca/corporations-code/corp-sect-12401/">https://codes.findlaw.com/ca/corporations-code/corp-sect-12401/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            California Corporations Code section 12404.5 (2025) -
+            California.Public.Law, accessed June 28, 2025,
+            <link xlink:href="https://california.public.law/codes/ca_corp_code_section_12404.5">https://california.public.law/codes/ca_corp_code_section_12404.5</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Stock Transfer Restrictions: Continuing Uncertainties and a
+            Legislative Proposal - Villanova University Charles Widger
+            School of Law, accessed June 28, 2025,
+            <link xlink:href="https://digitalcommons.law.villanova.edu/cgi/viewcontent.cgi?referer&amp;httpsredir=1&amp;article=1501&amp;context=vlr">
+              <link xlink:href="https://digitalcommons.law.villanova.edu/cgi/viewcontent.cgi?referer=">https://digitalcommons.law.villanova.edu/cgi/viewcontent.cgi?referer=</link>&amp;httpsredir=1&amp;article=1501&amp;context=vlr</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Corporations Code section 12451 - California.Public.Law,
+            accessed June 28, 2025,
+            <link xlink:href="https://california.public.law/codes/corporations_code_section_12451">https://california.public.law/codes/corporations_code_section_12451</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            2005 California Corporations Code Sections 12450-12454 :: ::
+            :: Article 1. :: Limitations, accessed June 28, 2025,
+            <link xlink:href="https://law.justia.com/codes/california/2005/corp/12450-12454.html">https://law.justia.com/codes/california/2005/corp/12450-12454.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            California Corporations Code section 12453 (2025) -
+            California.Public.Law, accessed June 28, 2025,
+            <link xlink:href="https://california.public.law/codes/corporations_code_section_12453">https://california.public.law/codes/corporations_code_section_12453</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            26 U.S. Code Subtitle A Chapter 1 Subchapter T -
+            Cooperatives and ..., accessed June 28, 2025,
+            <link xlink:href="https://www.law.cornell.edu/uscode/text/26/subtitle-A/chapter-1/subchapter-T">https://www.law.cornell.edu/uscode/text/26/subtitle-A/chapter-1/subchapter-T</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Topic:Issues relating to Taxation of Subchapter T
+            Cooperatives - DSB Co CPAs, accessed June 28, 2025,
+            <link xlink:href="https://www.dsbcpas.com/faqtechnical/0001_subt.html">https://www.dsbcpas.com/faqtechnical/0001_subt.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <link xlink:href="http://www.sec.gov">www.sec.gov</link>,
+            accessed June 28, 2025,
+            <link xlink:href="https://www.sec.gov/Archives/edgar/data/1722839/000121390021055158/ea149542-1aa1_sharedcapital.htm">https://www.sec.gov/Archives/edgar/data/1722839/000121390021055158/ea149542-1aa1_sharedcapital.htm</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Think Outside The Boss: How To Create A Worker Owned
+            Business - Cloudfront.net, accessed June 28, 2025,
+            <link xlink:href="https://d3n8a8pro7vhmx.cloudfront.net/theselc/pages/146/attachments/original/1417036445/TOTB5_Manual_FINAL.pdf?1417036445">https://d3n8a8pro7vhmx.cloudfront.net/theselc/pages/146/attachments/original/1417036445/TOTB5_Manual_FINAL.pdf?1417036445</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            26 CFR § 1.1388-1 - Definitions and special rules. |
+            Electronic Code ..., accessed June 28, 2025,
+            <link xlink:href="https://www.law.cornell.edu/cfr/text/26/1.1388-1">https://www.law.cornell.edu/cfr/text/26/1.1388-1</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            USCACoopSecv6
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Patronage Refunds and other Income Issues Cooperative
+            Information Report 44, Part 2 2005, accessed June 28, 2025,
+            <link xlink:href="https://www.rd.usda.gov/sites/default/files/cir44-2.pdf">https://www.rd.usda.gov/sites/default/files/cir44-2.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            26 CFR § 1.521-1 - Farmers' cooperative marketing and
+            purchasing ..., accessed June 28, 2025,
+            <link xlink:href="https://www.law.cornell.edu/cfr/text/26/1.521-1">https://www.law.cornell.edu/cfr/text/26/1.521-1</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            INCOME TAX TREATMENT OF COOPERATIVES: Internal Revenue Code
+            Section 521 Cooperative Information Report 44, Part 4 2005
+            Edition - USDA Rural Development, accessed June 28, 2025,
+            <link xlink:href="https://www.rd.usda.gov/files/cir44-4.pdf">https://www.rd.usda.gov/files/cir44-4.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            What is a Cooperative? | UC Agriculture and Natural
+            Resources, accessed June 28, 2025,
+            <link xlink:href="https://ucanr.edu/statewide-program/uc-anr-small-farms-network/what-cooperative">https://ucanr.edu/statewide-program/uc-anr-small-farms-network/what-cooperative</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Think Outside The Boss: How To Create A Worker Owned
+            Business - Democracy at Work Institute, accessed June 28,
+            2025,
+            <link xlink:href="https://institute.coop/sites/default/files/resources/SELC%20-%20Think%20Outside%20the%20Boss.pdf">https://institute.coop/sites/default/files/resources/SELC%20-%20Think%20Outside%20the%20Boss.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            TAXES - COOPERATIVES AND THE INTERNAL REVENUE SERVICE,
+            accessed June 28, 2025,
+            <link xlink:href="https://southcenters.osu.edu/sites/southc/files/site-library/site-documents/OCDC-formation/TAXES%20-%20Cooperatives.pdf">https://southcenters.osu.edu/sites/southc/files/site-library/site-documents/OCDC-formation/TAXES%20-%20Cooperatives.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            California Corporations Code Section 12452, accessed June
+            28, 2025,
+            <link xlink:href="https://california.public.law/codes/corporations_code_section_12452">https://california.public.law/codes/corporations_code_section_12452</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</article>

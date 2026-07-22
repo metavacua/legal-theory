@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='utf-8'?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="us-ca-coop-securities" xml:lang="en">
+  <xi:include href="us-ca-coop-securities.meta.xml" />
+  <title>A Unified Framework for Analyzing a Cooperative Security</title>
+  <section xml:id="a-unified-framework-for-analyzing-a-cooperative-security">
+    <title>
+      <emphasis role="strong">A Unified Framework for Analyzing a
+  Cooperative Security</emphasis>
+    </title>
+    <para>
+      <emphasis role="strong">Preamble:</emphasis> This document provides
+    a formal, unified framework for analyzing any proposed cooperative
+    security. It integrates the Supreme Court's primary tests for
+    defining a security (<emphasis>Reves</emphasis> and
+    <emphasis>Howey</emphasis>) with the core operational pillars of
+    Subchapter T. This allows for a robust, step-by-step analysis of
+    whether a cooperative instrument should be treated as a security
+    and, if so, whether its design is compliant and safe for the
+    cooperative.
+  </para>
+  </section>
+  <section xml:id="part-1-initial-characterization--what-is-the-nature-of-the-instrument">
+    <title>
+      <emphasis role="strong">Part 1: Initial Characterization – What
+  is the Nature of the Instrument?</emphasis>
+    </title>
+    <para>
+    The first and most critical step is to determine the fundamental
+    nature of the instrument in question. The path of legal analysis
+    depends entirely on this initial characterization.
+  </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Is it a "Note" or Debt-Like
+        Instrument?</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Characteristics:</emphasis> Does it
+        involve a loan of money? Is there a promise to repay a principal
+        amount? Is there a stated interest rate (even if it's 0%)? Is
+        the instrument actually called a "note"?
+      </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">If YES, proceed to Part 2, Path A:
+        The</emphasis>
+          <emphasis>
+            <emphasis role="strong">Reves</emphasis>
+          </emphasis>
+          <emphasis role="strong">Test.</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Is it an "Investment Contract"
+        or Equity-Like Instrument?</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Characteristics:</emphasis> Does it
+        represent a stake in the cooperative's assets or profits? Is the
+        return for the holder entirely dependent on the success and
+        profitability of the cooperative's ventures? Does it involve
+        pooling capital with others in a common enterprise?
+      </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">If YES, proceed to Part 2, Path B:
+        The</emphasis>
+          <emphasis>
+            <emphasis role="strong">Howey</emphasis>
+          </emphasis>
+          <emphasis role="strong">Test.</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="part-2-the-threshold-analysis--is-the-instrument-a-security">
+    <title>
+      <emphasis role="strong">Part 2: The Threshold Analysis – Is the
+  Instrument a Security?</emphasis>
+    </title>
+    <para>
+    Based on the characterization above, apply the appropriate Supreme
+    Court test.
+  </para>
+    <section xml:id="path-a-the-reves-family-resemblance-test-for-notes">
+      <title>
+        <emphasis role="strong">Path A: The</emphasis>
+        <emphasis>
+          <emphasis role="strong">Reves</emphasis>
+        </emphasis>
+        <emphasis role="strong">"Family Resemblance" Test (for
+    Notes)</emphasis>
+      </title>
+      <para>
+      The <emphasis>Reves</emphasis> test determines if a note bears a
+      "family resemblance" to an investment, thus classifying
+      it as a security.
+    </para>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Motivations of
+          Seller/Buyer:</emphasis> Is the cooperative raising money for
+          general business use (leans toward security) or to facilitate
+          a specific patron's transaction (leans away)? Is the buyer
+          motivated by profit (leans toward security) or acquiring a
+          good/service (leans away)?
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Plan of Distribution:</emphasis> Is
+          the note offered on a public market (leans toward security) or
+          is the distribution narrowly limited to patrons for whom it
+          facilitates a transaction (leans away)?
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Reasonable Expectations of the
+          Public:</emphasis> Is the instrument marketed as an
+          "investment" (leans toward security) or as
+          "patronage capital" or a "membership
+          deposit" (leans away)?
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Presence of an Alternative Regulatory
+          Scheme:</emphasis> Does the framework of cooperative law and
+          Subchapter T itself provide sufficient protection, making
+          securities law unnecessary (leans away from security)?
+        </para>
+        </listitem>
+      </orderedlist>
+    </section>
+    <section xml:id="path-b-the-howey-test-for-investment-contracts">
+      <title>
+        <emphasis role="strong">Path B: The</emphasis>
+        <emphasis>
+          <emphasis role="strong">Howey</emphasis>
+        </emphasis>
+        <emphasis role="strong">Test (for Investment
+    Contracts)</emphasis>
+      </title>
+      <para>
+      The <emphasis>Howey</emphasis> test defines an investment contract
+      as a security if these four conditions are met:
+    </para>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">An Investment of Value:</emphasis> Has
+          the holder given up something of value (money, assets, labor)
+          to acquire the instrument?
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">In a Common Enterprise:</emphasis> Is
+          the holder's fortune interwoven with the fortune of the
+          cooperative and other members?
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">With an Expectation of
+          Benefit/Profit:</emphasis> Does the holder expect to receive a
+          valuable benefit, such as appreciation, dividends, or access
+          to services?
+        </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Derived from the Efforts of
+          Others:</emphasis> Does the realization of the benefit depend
+          primarily on the managerial or operational efforts of the
+          cooperative's leadership?
+        </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+  <section xml:id="part-3-the-cooperative-compliance-test--is-it-a-safe-cooperative-security">
+    <title>
+      <emphasis role="strong">Part 3: The Cooperative Compliance Test
+  – Is it a "Safe" Cooperative Security?</emphasis>
+    </title>
+    <para>
+    If an instrument is determined to be a security under either
+    <emphasis>Reves</emphasis> or <emphasis>Howey</emphasis>, it must
+    then be tested for its compliance with the core principles of
+    cooperative operation.
+  </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Subordination of Capital as Defense of
+        the Commons:</emphasis> Does the security's structure ensure
+        that financial gains are socialized for the benefit of the
+        entire patronage, rather than being privately captured by the
+        instrument holder?
+      </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Democratic Member Control:</emphasis> Is
+        the instrument's ownership separated from governance, preserving
+        the "one-member, one-vote" principle?
+      </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Patronage-Source Income Integrity (The
+        "Actually Facilitates" Test):</emphasis> Is the
+        security engineered so its function "actually
+        facilitates" the cooperative's core mission, ensuring
+        income generated is defensibly patronage-sourced?
+      </para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="conclusion-classifying-the-instrument">
+    <title>
+      <emphasis role="strong">Conclusion: Classifying the
+  Instrument</emphasis>
+    </title>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Non-Security Instrument:</emphasis> An
+        instrument that fails to be classified as a security under the
+        appropriate <emphasis>Reves</emphasis> or
+        <emphasis>Howey</emphasis> test.
+      </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Non-Subchapter-T Security:</emphasis> An
+        instrument classified as a security that fails the Cooperative
+        Compliance Test, creating a conflict with the cooperative's
+        legal and tax status.
+      </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Subchapter T Security:</emphasis> An
+        instrument that is legally a security but is so deeply
+        integrated with the principles of cooperative compliance that it
+        functions safely within the Subchapter T framework.
+      </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</article>

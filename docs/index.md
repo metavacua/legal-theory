@@ -68,24 +68,24 @@ CA Labor Code ABC test; NLRA; worker classification of platform users.
 CA Corporations Code; federal securities law; IRC cooperative treatment.
 [Findings](court-record/matters/cooperative-investment-law/findings.html) · 19 evidence documents
 
-- [A Comprehensive Blueprint for an Integrated Community Support Ecosystem](court-record/matters/cooperative-investment-law/evidence/community-care-cooperatives.md)
-- [Reference Guide: Benefit-Compliant Contractual Instruments](court-record/matters/cooperative-investment-law/evidence/community-care-cooperatives-v2.md) *(v2)*
-- [Architecting the Resilient Enterprise: Contractual, Corporate, and Financial Frameworks for the New Economy](court-record/matters/cooperative-investment-law/evidence/contractual-architectures-for-ip-and-cooperatives.md)
-- [Capital, Control, and Commodification: Tradable and Non-Tradable Rights in a CA Subchapter T Cooperative](court-record/matters/cooperative-investment-law/evidence/cooperative-rights-commodification-analysis.md)
-- [A Comprehensive Analysis of Cooperative Securities: Legal Structure, IP, and Regulatory Challenges](court-record/matters/cooperative-investment-law/evidence/cooperative-securities-analysis-and-strategy.md)
-- [Cooperative Securities in the Global Marketplace: A Multi-Jurisdictional Analysis](court-record/matters/cooperative-investment-law/evidence/cooperative-securities-in-the-global-marketplace.md)
-- [Cooperative Capital in the Public Markets: A Legal and Strategic Framework for a New Asset Class](court-record/matters/cooperative-investment-law/evidence/cooperative-securities-novel-financial-instruments.md)
-- [A Unified Framework for Analyzing a Cooperative Security](court-record/matters/cooperative-investment-law/evidence/us-ca-coop-securities-v6.md)
-  *(v6, latest revision — earlier revisions: [cooperative-security.md](court-record/matters/cooperative-investment-law/evidence/cooperative-security.md), [us-ca-coop-securities.md](court-record/matters/cooperative-investment-law/evidence/us-ca-coop-securities.md))*
-- [The Political Cooperative: Tradable Securities for Democratic Exit and Influence](court-record/matters/cooperative-investment-law/evidence/cooperatives-politics-and-investible-patronage.md)
-- [Structuring a California Cooperative with Tradable Membership Securities: A Legal and Strategic Blueprint](court-record/matters/cooperative-investment-law/evidence/cooperative-tradeable-securities-research.md)
-- [From Clay Tablets to Blockchains: An IP History and Strategic Guide for Securities Markets](court-record/matters/cooperative-investment-law/evidence/from-clay-tablets-to-blockchains-final.md)
-  *(final — earlier draft: [from-clay-tablets-to-blockchains-draft.md](court-record/matters/cooperative-investment-law/evidence/from-clay-tablets-to-blockchains-draft.md))*
-- [From Intangible to Investment — IP Securitization: Foundational Concepts](court-record/matters/cooperative-investment-law/evidence/from-intangible-to-investment-ip-securitization.md)
-- [Properties of an Ideal Security: A Multidimensional Analysis](court-record/matters/cooperative-investment-law/evidence/ideal-security-formal-legal-economic.md)
-- [From Intangible to Investment: A Comprehensive History of Intellectual Property Securitization](court-record/matters/cooperative-investment-law/evidence/ip-securitization-historical-research.md)
-- [The Membership Security: Structuring a New Asset Class from the Principles of Cooperative Law](court-record/matters/cooperative-investment-law/evidence/the-membership-security.md)
-  *(companion: [securitizing-cooperative-membership-voting-rights.md](court-record/matters/cooperative-investment-law/evidence/securitizing-cooperative-membership-voting-rights.md), same title)*
+- [A Comprehensive Blueprint for an Integrated Community Support Ecosystem](court-record/matters/cooperative-investment-law/evidence/community-care-cooperatives.html)
+- [Reference Guide: Benefit-Compliant Contractual Instruments](court-record/matters/cooperative-investment-law/evidence/community-care-cooperatives-v2.html) *(v2)*
+- [Architecting the Resilient Enterprise: Contractual, Corporate, and Financial Frameworks for the New Economy](court-record/matters/cooperative-investment-law/evidence/contractual-architectures-for-ip-and-cooperatives.html)
+- [Capital, Control, and Commodification: Tradable and Non-Tradable Rights in a CA Subchapter T Cooperative](court-record/matters/cooperative-investment-law/evidence/cooperative-rights-commodification-analysis.html)
+- [A Comprehensive Analysis of Cooperative Securities: Legal Structure, IP, and Regulatory Challenges](court-record/matters/cooperative-investment-law/evidence/cooperative-securities-analysis-and-strategy.html)
+- [Cooperative Securities in the Global Marketplace: A Multi-Jurisdictional Analysis](court-record/matters/cooperative-investment-law/evidence/cooperative-securities-in-the-global-marketplace.html)
+- [Cooperative Capital in the Public Markets: A Legal and Strategic Framework for a New Asset Class](court-record/matters/cooperative-investment-law/evidence/cooperative-securities-novel-financial-instruments.html)
+- [A Unified Framework for Analyzing a Cooperative Security](court-record/matters/cooperative-investment-law/evidence/us-ca-coop-securities-v6.html)
+  *(v6, latest revision — earlier revisions: [cooperative-security.md](court-record/matters/cooperative-investment-law/evidence/cooperative-security.html), [us-ca-coop-securities.md](court-record/matters/cooperative-investment-law/evidence/us-ca-coop-securities.html))*
+- [The Political Cooperative: Tradable Securities for Democratic Exit and Influence](court-record/matters/cooperative-investment-law/evidence/cooperatives-politics-and-investible-patronage.html)
+- [Structuring a California Cooperative with Tradable Membership Securities: A Legal and Strategic Blueprint](court-record/matters/cooperative-investment-law/evidence/cooperative-tradeable-securities-research.html)
+- [From Clay Tablets to Blockchains: An IP History and Strategic Guide for Securities Markets](court-record/matters/cooperative-investment-law/evidence/from-clay-tablets-to-blockchains-final.html)
+  *(final — earlier draft: [from-clay-tablets-to-blockchains-draft.md](court-record/matters/cooperative-investment-law/evidence/from-clay-tablets-to-blockchains-draft.html))*
+- [From Intangible to Investment — IP Securitization: Foundational Concepts](court-record/matters/cooperative-investment-law/evidence/from-intangible-to-investment-ip-securitization.html)
+- [Properties of an Ideal Security: A Multidimensional Analysis](court-record/matters/cooperative-investment-law/evidence/ideal-security-formal-legal-economic.html)
+- [From Intangible to Investment: A Comprehensive History of Intellectual Property Securitization](court-record/matters/cooperative-investment-law/evidence/ip-securitization-historical-research.html)
+- [The Membership Security: Structuring a New Asset Class from the Principles of Cooperative Law](court-record/matters/cooperative-investment-law/evidence/the-membership-security.html)
+  *(companion: [securitizing-cooperative-membership-voting-rights.md](court-record/matters/cooperative-investment-law/evidence/securitizing-cooperative-membership-voting-rights.html), same title)*
 
 ### [Sex Work, Consent, and Bodily Autonomy](court-record/matters/sex-work-consent-bodily-autonomy/README.md)
 
