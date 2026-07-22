@@ -3,14 +3,17 @@
 Repository of findings of fact supporting arguments in legal controversies of clear merit.
 Copyright Ian D.L.N. McLean — CC BY-SA 4.0.
 
-**124 documents:** 70 evidentiary research files across 5 active matters, 22 jurisdictional
-theory files, 8 cross-cutting analyses, 6 legislative/executive proposals, 1 formal scholarly
-paper (DocBook 5.2, 2 articles).
+**117 documents:** 70 evidentiary research files and 5 findings-of-fact stubs across 5 active
+matters, 20 jurisdictional theory files, 8 cross-cutting analyses, 8 works-in-progress drafts,
+6 legislative/executive proposals — all DocBook 5.2, validated and built to HTML5 — plus
+1 formal scholarly paper (DocBook 5.2, 2 articles, also builds to LaTeX/PDF).
 
-Every link below points directly to a document, not a bare directory. See the
+**Live at [metavacua.github.io/legal-theory](https://metavacua.github.io/legal-theory/).**
+Every link below points directly to a document's built HTML page, not a bare directory or a
+`.md` source file. See the
 [reorganization plan](superpowers/plans/2026-07-20-repo-accessibility-reorganization.md) for
-how this index is maintained and what's still pending (a live deployed site, a draft-consolidation
-pass).
+how this index is maintained (a draft-consolidation pass remains open; the deployed-site item
+is now done).
 
 ---
 

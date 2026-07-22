@@ -2,12 +2,17 @@
 
 This repository is a semi-formal collection of findings of fact supporting arguments in legal controversies of clear merit. The controversies concern persons, their bodies, their work, and their expressions: labor and employment law, cooperative investment and patron securities law, and free expression and First Amendment law — each situated within California jurisdiction and engaging federal and constitutional dimensions where applicable. Intellectual property law is not a separate domain here but runs through all of these, governing the fixed expressions — writings, images, programs, and other media — that labor, investment, and expression claims are made against. The bodily autonomy questions concern whether a person may be treated as property and who exercises authority over the body and its expressions; this intersects with each domain.
 
-**124 documents:** 70 evidentiary research files across 5 active matters, 22 jurisdictional theory files, 8 cross-cutting analyses, 6 legislative/executive proposals, and 1 formal scholarly paper.
+**117 documents**, all DocBook 5.2 (validated, built to HTML5, live below): 70 evidentiary
+research files and 5 findings-of-fact stubs across 5 active matters, 20 jurisdictional theory
+files, 8 cross-cutting analyses, 8 works-in-progress drafts, and 6 legislative/executive
+proposals — plus 1 formal scholarly paper (2 articles, also builds to LaTeX/PDF).
 
 ## Start Here
 
+- **[metavacua.github.io/legal-theory](https://metavacua.github.io/legal-theory/)** — the
+  deployed site. Every document below is a live HTML page there, not just a file in this repo.
 - **[Language Models Are Databases](docs/papers/ai_and_ip/llm-database-theory/README.md)** — flagship scholarly position paper: transformer LLMs are legally-operative graph databases. DocBook 5.2 source, builds to HTML5/LaTeX/PDF, 6 findings of fact and 6 conclusions of law.
-- **[docs/index.md](docs/index.md)** — full file-level index of every matter, theory branch, cross-cutting analysis, proposal, and paper in this repository.
+- **[docs/index.md](docs/index.md)** — full file-level index of every matter, theory branch, cross-cutting analysis, proposal, draft, and paper in this repository, linked directly to its live page.
 - **The five active matters:**
   [Google Platform Worker Misclassification](docs/court-record/matters/google-platform-misclassification/README.md) ·
   [Platform ToS and Constitutional Limits](docs/court-record/matters/platform-tos-constitutional-limits/README.md) ·
