@@ -119,12 +119,6 @@ def split_into_fragments(article, out_dir, stem):
     if not sections:
         return False
 
-    # Remove metadata include if it exists (it will be managed separately for each fragment)
-    for child in list(article):
-        if child.tag == f"{{{XI_NS}}}include" and child.get("href", "").endswith(".meta.xml"):
-            article.remove(child)
-            break
-
     out_dir = Path(out_dir)
     frag_dir = out_dir / stem
     frag_dir.mkdir(parents=True, exist_ok=True)
@@ -158,16 +152,8 @@ def write_metadata(meta_path, title):
     meta_path = Path(meta_path)
     docs_dir = (REPO_ROOT / "docs").resolve()
     meta_dir = meta_path.resolve().parent
-    shared_metadata_path = docs_dir / "common" / "shared-metadata.xml"
-
-    try:
-        depth = len(meta_dir.relative_to(docs_dir).parts)
-        shared_href = "../" * depth + "common/shared-metadata.xml"
-    except ValueError:
-        # meta_dir is not under docs_dir (e.g., in a temp directory),
-        # use absolute path for shared-metadata.xml
-        shared_href = str(shared_metadata_path)
-
+    depth = len(meta_dir.relative_to(docs_dir).parts)
+    shared_href = "../" * depth + "common/shared-metadata.xml"
     escaped_title = xml_escape(title)
     content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="{XI_NS}">
