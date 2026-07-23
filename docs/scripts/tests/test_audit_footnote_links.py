@@ -44,17 +44,34 @@ class TestFindCandidates(unittest.TestCase):
         # before the "." is a letter ("A"), not a digit -- so it was
         # wrongly treated as a real footnote marker (number 800),
         # inflating max_footnote and wrongly flagging real documents as
-        # degenerate. A real footnote with no alphanumeric code
-        # immediately before it ("...restricted asset.58") must still
-        # be found.
+        # degenerate.
+        #
+        # Simplify-pass fix: the original alphanumeric-code check was
+        # uppercase-only, missing a REAL, LIVE false-positive candidate
+        # confirmed in the corpus -- "Chapter 9a.44 RCW" (a lowercase
+        # statute-chapter suffix) in
+        # docs/court-record/matters/sex-work-consent-bodily-autonomy/
+        # evidence/us-sex-crime-law-analysis/
+        # 04-section-iv-factual-synthesis.xml, which produced a spurious
+        # Candidate(number=44, ...) before the fix unified the
+        # uppercase and lowercase cases into one case-insensitive rule.
+        # This fixture now covers both the uppercase ("441A") and
+        # lowercase ("9a") alphanumeric-code cases in one place. A real
+        # footnote with no compound-identifier tail immediately before
+        # it ("...restricted asset.58") must still be found.
         from audit_footnote_links import find_candidates
         candidates = find_candidates(FIXTURES / "alphanumeric_code_sample.xml")
         numbers = [c.number for c in candidates]
         self.assertEqual(numbers, [58])
 
     def test_is_excluded_context_directly_flags_alphanumeric_code_prefix(self):
+        # Covers both case variants of the compound-identifier-tail rule:
+        # uppercase ("441A", the original NAC case) and lowercase ("9a",
+        # the "Chapter 9a.44 RCW" live-corpus case), plus a plain
+        # non-code prose tail that must NOT be excluded.
         from audit_footnote_links import _is_excluded_context
         self.assertTrue(_is_excluded_context("The agency relied on NAC 441A"))
+        self.assertTrue(_is_excluded_context("Chapter 9a"))
         self.assertFalse(_is_excluded_context("the court found the restricted asset"))
 
 
@@ -103,6 +120,17 @@ class TestMarkerCollidesWithHeading(unittest.TestCase):
         from audit_footnote_links import _marker_collides_with_heading
         path = FIXTURES / "heading_word_boundary" / "doc.html"
         self.assertTrue(_marker_collides_with_heading(path, ".5"))
+
+    def test_alphanumeric_regulatory_code_in_heading_does_not_collide_with_unrelated_marker(self):
+        # Simplify-pass fix: _marker_collides_with_heading originally
+        # only implemented the plain-digit half of the compound-
+        # identifier-tail concept -- a heading containing "Chapter
+        # 9a.44 RCW" would wrongly register a collision for a real,
+        # unrelated footnote ".44" elsewhere in the document. Now
+        # excluded the same way _is_excluded_context excludes it.
+        from audit_footnote_links import _marker_collides_with_heading
+        path = FIXTURES / "heading_word_boundary" / "doc.html"
+        self.assertFalse(_marker_collides_with_heading(path, ".44"))
 
     def test_full_doc_collision_fixture_still_flags_genuine_collision(self):
         # Regression: the real end-to-end collision fixture (a marker
@@ -311,13 +339,13 @@ class TestWriteReport(unittest.TestCase):
                                        confidence="Needs manual triage", flags=["exceeds_length"])],
         }
         out = FIXTURES / "report_out.csv"
+        self.addCleanup(out.unlink)
         write_report(rows_by_shell, out)
         with open(out, newline="", encoding="utf-8") as f:
             rows = list(csv.DictReader(f))
         self.assertEqual(rows[0]["file"], "docs/a.html")
         self.assertEqual(rows[1]["file"], "docs/b.html")
         self.assertEqual(rows[0]["flags"], "exceeds_length")
-        out.unlink()
 
     def test_multiple_rows_within_the_same_file_sort_by_footnote_number(self):
         # Adversarial: the brief's own sample sorts on (row["file"],
@@ -338,12 +366,12 @@ class TestWriteReport(unittest.TestCase):
             ],
         }
         out = FIXTURES / "report_out_numeric.csv"
+        self.addCleanup(out.unlink)
         write_report(rows_by_shell, out)
         with open(out, newline="", encoding="utf-8") as f:
             import csv
             rows = list(csv.DictReader(f))
         self.assertEqual([r["footnote_number"] for r in rows], ["2", "10"])
-        out.unlink()
 
     def test_context_snippet_containing_a_comma_and_newline_round_trips_safely(self):
         # Real corpus prose in body_context_snippet will routinely
@@ -366,6 +394,7 @@ class TestWriteReport(unittest.TestCase):
             ],
         }
         out = FIXTURES / "report_out_tricky.csv"
+        self.addCleanup(out.unlink)
         write_report(rows_by_shell, out)
         with open(out, newline="", encoding="utf-8") as f:
             rows = list(csv.DictReader(f))
@@ -373,20 +402,19 @@ class TestWriteReport(unittest.TestCase):
         self.assertEqual(rows[0]["body_context_snippet"], tricky_context)
         self.assertEqual(rows[0]["matched_works_cited_entry"], "Some Title, With A Comma")
         self.assertEqual(rows[0]["flags"], "exceeds_length;no_link_corroboration")
-        out.unlink()
 
 
 class TestMain(unittest.TestCase):
     def test_main_writes_report_against_a_fixture_corpus(self):
         from audit_footnote_links import main
         out_path = FIXTURES / "mini_corpus_report.csv"
+        self.addCleanup(out_path.unlink)
         exit_code = main(["--corpus-root", str(FIXTURES / "mini_corpus"), "--out", str(out_path)])
         self.assertEqual(exit_code, 0)
         self.assertTrue(out_path.is_file())
         content = out_path.read_text(encoding="utf-8")
         self.assertIn("mini_corpus/doc.html", content)
         self.assertIn("High", content)
-        out_path.unlink()
 
 
 class TestEndToEndIntegration(unittest.TestCase):
@@ -415,6 +443,7 @@ class TestEndToEndIntegration(unittest.TestCase):
         from audit_footnote_links import main
         import csv
         out_path = FIXTURES / "integration_report.csv"
+        self.addCleanup(out_path.unlink)
         exit_code = main(["--corpus-root", str(FIXTURES / "integration_corpus"), "--out", str(out_path)])
         self.assertEqual(exit_code, 0)
 
@@ -431,8 +460,6 @@ class TestEndToEndIntegration(unittest.TestCase):
         for r in doc_b_rows:
             self.assertEqual(r["confidence_tier"], "Needs manual triage")
             self.assertIn("degenerate_bibliography", r["flags"])
-
-        out_path.unlink()
 
     def test_cross_fragment_document_exercises_medium_and_restart_tiers_via_main(self):
         # doc-c is a shell whose body lives in one xi:include fragment
@@ -471,6 +498,7 @@ class TestEndToEndIntegration(unittest.TestCase):
         from audit_footnote_links import main
         import csv
         out_path = FIXTURES / "integration_report_multi.csv"
+        self.addCleanup(out_path.unlink)
         exit_code = main(["--corpus-root", str(FIXTURES / "integration_corpus"), "--out", str(out_path)])
         self.assertEqual(exit_code, 0)
 
@@ -505,8 +533,6 @@ class TestEndToEndIntegration(unittest.TestCase):
         )
         self.assertTrue(any("Source" in e for e in matched_entries))
 
-        out_path.unlink()
-
     def test_real_corpus_runs_without_exceptions(self):
         # Mirrors build_bibliography.py's own
         # test_real_bibliography_bib_parses_and_classifies_without_exceptions:
@@ -518,12 +544,12 @@ class TestEndToEndIntegration(unittest.TestCase):
         # drift as the corpus grows, so they are not asserted here.
         from audit_footnote_links import main, REPO_ROOT
         out_path = FIXTURES / "real_corpus_report.csv"
+        self.addCleanup(out_path.unlink)
         exit_code = main(["--corpus-root", str(REPO_ROOT / "docs"), "--out", str(out_path)])
         self.assertEqual(exit_code, 0)
         self.assertTrue(out_path.is_file())
         content = out_path.read_text(encoding="utf-8")
         self.assertTrue(len(content.strip()) > 0)
-        out_path.unlink()
 
 
 if __name__ == "__main__":

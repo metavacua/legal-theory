@@ -8,13 +8,14 @@ import csv
 import html.parser
 import re
 import sys
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_bibliography import (  # noqa: E402,F401
-    DB_NS, XI_NS, XLINK_NS, XML_NS,
-    REPO_ROOT, parse_xincludes, build_backlink_map, extract_works_cited,
+from build_bibliography import (  # noqa: E402
+    DB_NS, REPO_ROOT, parse_xincludes, build_backlink_map, extract_works_cited,
+    _normalize_ws,
 )
 
 
@@ -56,7 +57,24 @@ class Candidate:
     heading_collision: bool = False
 
 
-_ALPHANUMERIC_CODE_RE = re.compile(r"\d+[A-Z]$")
+# The unified "compound identifier tail" signal shared by
+# _is_excluded_context and _marker_collides_with_heading: a bare
+# trailing digit (a decimal number's own digit run, e.g. "6751" before
+# ".1") or a digit immediately followed by exactly one letter of either
+# case (an alphanumeric regulatory-code pincite's tail, e.g. "441A" in
+# "NAC 441A.800" or "9a" in "Chapter 9a.44 RCW") -- case-insensitive
+# because the underlying shape (a code-suffix letter glued onto a
+# digit run) carries no case convention of its own; corpus statutes use
+# both ("441A", "9a").
+_COMPOUND_TAIL_RE = re.compile(r"\d[A-Za-z]?$")
+
+# _marker_collides_with_heading's counterpart to _COMPOUND_TAIL_RE above:
+# the same "digit, or digit-plus-letter" compound-identifier-tail
+# concept, but expressed as two fixed-width negative lookbehinds for
+# embedding directly in a search pattern (Python's re module requires
+# fixed-width lookbehind, so _COMPOUND_TAIL_RE's own trailing `?` can't
+# be reused verbatim here).
+_COMPOUND_TAIL_LOOKBEHIND = r"(?<!\d)(?<![0-9][A-Za-z])"
 
 
 def _is_excluded_context(preceding_text):
@@ -65,10 +83,13 @@ def _is_excluded_context(preceding_text):
     alphanumeric regulatory-code pincite, or any other decimal number
     rather than a real footnote.
 
-    The decisive, general signal is structural: if the character right
-    before the marker's "." is itself a digit, the "." is splitting a
-    decimal number (e.g. "6751.1", "2.3"), not terminating a sentence a
-    footnote is glued to. This alone covers pincites and rule labels
+    The decisive, general signal is structural: the text right before
+    the marker's "." ends in a "compound identifier tail" -- either a
+    bare digit (the "." is splitting a decimal number, e.g. "6751.1",
+    "2.3") or a digit followed by a single letter of either case (an
+    alphanumeric code pincite, e.g. "441A.800", "9a.44") -- not a word,
+    punctuation mark, or closing tag boundary a real footnote marker's
+    "." would follow. This alone covers pincites and rule labels
     regardless of the specific code name or label word used, and does
     not depend on the word immediately preceding the marker -- a bare
     keyword lookback (e.g. "Rule"/"Section"/"Article" or a code-name
@@ -80,19 +101,27 @@ def _is_excluded_context(preceding_text):
     already handles.
 
     Whole-branch review fix: alphanumeric regulatory-code pincites like
-    "NAC 441A.800" are NOT caught by the digit-adjacency rule above --
-    the character immediately before the "." is a letter ("A"), not a
+    "NAC 441A.800" are NOT caught by a bare-digit check alone -- the
+    character immediately before the "." is a letter ("A"), not a
     digit. Left unexcluded, these inflate max_footnote for the
     documents that cite them, wrongly flagging real documents as
-    degenerate (measured: 2 real corpus documents affected). Added a
-    second, additive check: if the text immediately before the marker
-    ends in a digit run followed by a single uppercase letter (e.g.
-    "441A"), it is a code-like alphanumeric token, not prose a real
-    footnote is glued to.
+    degenerate (measured: 2 real corpus documents affected).
+
+    Simplify-pass fix: the alphanumeric-code case was originally its
+    own separate, uppercase-only check (a second regex, `\\d+[A-Z]$`),
+    stated alongside the bare-digit check as if they were unrelated
+    rules. They are really the same "compound identifier tail" concept
+    twice, and the uppercase-only restriction was an unprincipled
+    special case: it misses real, lowercase-suffixed statute citations
+    like "Chapter 9a.44 RCW" (confirmed live in
+    docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/
+    us-sex-crime-law-analysis/04-section-iv-factual-synthesis.xml,
+    which wrongly produced a spurious Candidate(number=44, ...) before
+    this fix). Unified into the single case-insensitive
+    _COMPOUND_TAIL_RE above, which subsumes both the old bare-digit and
+    uppercase-alphanumeric checks without narrowing either.
     """
-    if preceding_text and preceding_text[-1].isdigit():
-        return True
-    return bool(_ALPHANUMERIC_CODE_RE.search(preceding_text))
+    return bool(preceding_text) and bool(_COMPOUND_TAIL_RE.search(preceding_text))
 
 
 def _element_body_text(el):
@@ -112,7 +141,6 @@ def find_candidates(xml_path):
     """Every glued footnote-shaped digit run in xml_path's body content
     (never inside <title>), excluding statute pincites and
     Rule/Section/Article labels, in document order."""
-    import xml.etree.ElementTree as ET
     root = ET.parse(xml_path).getroot()
     text = _element_body_text(root)
     candidates = []
@@ -123,7 +151,7 @@ def find_candidates(xml_path):
         number = int(m.group(1))
         start = max(0, m.start() - 60)
         end = min(len(text), m.end() + 20)
-        context = " ".join(text[start:end].split())
+        context = _normalize_ws(text[start:end])
         candidates.append(Candidate(number=number, context=context))
     return candidates
 
@@ -139,30 +167,31 @@ def locate_works_cited(content_files):
 
 
 class _HeadingTextCollector(html.parser.HTMLParser):
-    """Splits an HTML document's text into heading_text (everything
-    inside an <h1>-<h6> element) and body_text (everything else), used
-    by _marker_collides_with_heading's heading-collision signal.
+    """Collects heading_text: everything inside an <h1>-<h6> element,
+    used by _marker_collides_with_heading's heading-collision signal.
 
     Deviation from the Task 4 brief's literal sample code: the brief's
     version has no notion of <script>/<style> content and feeds every
-    handle_data() call -- including raw CSS/JS -- into body_text. Every
-    built HTML file sampled from the corpus (docs/cross-cutting and
+    handle_data() call -- including raw CSS/JS -- into its body-text
+    tracking, which this class does not carry (see the Task 5 deviation
+    note below for why body text is not needed here). Every built HTML
+    file sampled from the corpus (docs/cross-cutting and
     docs/court-record/matters) embeds an inline <style> block, and that
     CSS routinely contains decimal-looking substrings (e.g.
     "padding: 1.1rem;"). Confirmed on
     docs/cross-cutting/valuing-human-life-economically.html: the CSS
-    rule "padding: 1.1rem 1.3rem;" makes "1.1" a false hit in body_text,
-    even though "1.1" is also the real heading number for section 1.1
-    ("<h3><em>1.1 The Value of a Statistical Life ...</em></h3>") --
-    the brief's is_inside_heading(path, "1.1") returns False
-    (in_heading=True but in_body=True too, so `in_heading and not
-    in_body` fails) on real data, exactly backwards. This is a
-    corpus-wide defect, not a one-off: every sampled file has a <style>
-    block. Fixed here by tracking a skip_depth for <script>/<style> and
-    dropping their handle_data() entirely (added to neither list),
-    rather than special-casing CSS unit suffixes or the specific "rem"
-    string, since script/script-like content is never real prose in
-    this pipeline's inputs.
+    rule "padding: 1.1rem 1.3rem;" makes "1.1" a false hit in the
+    brief's body_text, even though "1.1" is also the real heading
+    number for section 1.1 ("<h3><em>1.1 The Value of a Statistical
+    Life ...</em></h3>") -- the brief's is_inside_heading(path, "1.1")
+    returns False (in_heading=True but in_body=True too, so
+    `in_heading and not in_body` fails) on real data, exactly
+    backwards. This is a corpus-wide defect, not a one-off: every
+    sampled file has a <style> block. Fixed here by tracking a
+    skip_depth for <script>/<style> and dropping their handle_data()
+    entirely, rather than special-casing CSS unit suffixes or the
+    specific "rem" string, since script/script-like content is never
+    real prose in this pipeline's inputs.
     """
 
     _HEADING_TAGS = ("h1", "h2", "h3", "h4", "h5", "h6")
@@ -173,7 +202,6 @@ class _HeadingTextCollector(html.parser.HTMLParser):
         self.heading_depth = 0
         self.skip_depth = 0
         self.heading_text = []
-        self.body_text = []
 
     def handle_starttag(self, tag, attrs):
         if tag in self._HEADING_TAGS:
@@ -188,9 +216,9 @@ class _HeadingTextCollector(html.parser.HTMLParser):
             self.skip_depth = max(0, self.skip_depth - 1)
 
     def handle_data(self, data):
-        if self.skip_depth > 0:
+        if self.skip_depth > 0 or self.heading_depth <= 0:
             return
-        (self.heading_text if self.heading_depth > 0 else self.body_text).append(data)
+        self.heading_text.append(data)
 
 
 def _marker_collides_with_heading(html_path, marker_text):
@@ -235,12 +263,27 @@ def _marker_collides_with_heading(html_path, marker_text):
     the marker's digits not be adjacent to other digits in the heading
     text -- the same digit-adjacency principle find_candidates' own
     _is_excluded_context already uses to distinguish a real marker from
-    a decimal number it is part of."""
+    a decimal number it is part of.
+
+    Simplify-pass fix: that word-boundary regex only implemented the
+    plain-digit half of the shared "compound identifier tail" concept
+    (see _COMPOUND_TAIL_RE), with no equivalent of
+    _is_excluded_context's alphanumeric-code case -- so a heading
+    containing e.g. "Chapter 9a.44 RCW" would wrongly register a
+    collision for a real, unrelated footnote ".44" elsewhere in the
+    document. Extended with a second negative lookbehind,
+    _COMPOUND_TAIL_LOOKBEHIND, covering the digit-plus-letter case too.
+    Python's re module requires fixed-width lookbehind, so this is
+    expressed as two fixed-width negative lookbehinds (one char, two
+    chars) rather than _COMPOUND_TAIL_RE's own variable-width `?`
+    pattern -- the same "digit, or digit-plus-letter" concept, reshaped
+    for embedding at this position instead of anchored to the end of a
+    preceding-text string."""
     parser = _HeadingTextCollector()
     parser.feed(Path(html_path).read_text(encoding="utf-8"))
     heading_text = "".join(parser.heading_text)
     number = marker_text.lstrip(".")
-    pattern = re.compile(r"(?<!\d)\." + re.escape(number) + r"(?!\d)")
+    pattern = re.compile(_COMPOUND_TAIL_LOOKBEHIND + r"\." + re.escape(number) + r"(?!\d)")
     return bool(pattern.search(heading_text))
 
 
@@ -300,6 +343,7 @@ def is_degenerate(entries, max_footnote):
 _RESTART_DROP_THRESHOLD = 20   # preceding value must exceed the dip by at least this much
 _RESTART_LOW_CEILING = 10      # the dip value itself must be at or below this
 _RESTART_RUN_LENGTH = 3        # at least this many subsequent values must also stay low
+_RESTART_WINDOW_CEILING = _RESTART_LOW_CEILING * 2  # the post-dip window's own values may run slightly higher than the dip itself while still reading as "low"
 
 
 @dataclass
@@ -420,7 +464,7 @@ def detect_restart_index(numbers):
         if cur > _RESTART_LOW_CEILING or prev - cur < _RESTART_DROP_THRESHOLD:
             continue
         window = numbers[i:i + _RESTART_RUN_LENGTH]
-        if len(window) != _RESTART_RUN_LENGTH or not all(n <= _RESTART_LOW_CEILING * 2 for n in window):
+        if len(window) != _RESTART_RUN_LENGTH or not all(n <= _RESTART_WINDOW_CEILING for n in window):
             continue
         remainder = numbers[i:]
         if max(remainder, default=0) >= prev - _RESTART_DROP_THRESHOLD:
@@ -491,8 +535,6 @@ def main(argv=None):
     article found, write the §8 CSV report, and print a one-line
     per-tier summary. Never writes to any corpus document -- read-only
     end to end."""
-    import xml.etree.ElementTree as ET
-
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--corpus-root", default=str(REPO_ROOT / "docs"))
     parser.add_argument("--out", default=str(REPO_ROOT / "docs" / "audits" / "footnote-citation-audit.csv"))
