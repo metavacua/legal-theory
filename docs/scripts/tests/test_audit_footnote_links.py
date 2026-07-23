@@ -310,5 +310,18 @@ class TestWriteReport(unittest.TestCase):
         out.unlink()
 
 
+class TestMain(unittest.TestCase):
+    def test_main_writes_report_against_a_fixture_corpus(self):
+        from audit_footnote_links import main
+        out_path = FIXTURES / "mini_corpus_report.csv"
+        exit_code = main(["--corpus-root", str(FIXTURES / "mini_corpus"), "--out", str(out_path)])
+        self.assertEqual(exit_code, 0)
+        self.assertTrue(out_path.is_file())
+        content = out_path.read_text(encoding="utf-8")
+        self.assertIn("mini_corpus/doc.html", content)
+        self.assertIn("High", content)
+        out_path.unlink()
+
+
 if __name__ == "__main__":
     unittest.main()

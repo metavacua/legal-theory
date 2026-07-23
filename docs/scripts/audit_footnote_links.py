@@ -3,6 +3,7 @@ against their candidate works-cited entries. Writes a report; never
 modifies a corpus document. See
 docs/superpowers/specs/2026-07-23-footnote-citation-audit-design.md."""
 
+import argparse
 import csv
 import html.parser
 import re
@@ -440,3 +441,55 @@ def write_report(rows_by_shell, out_path):
         writer = csv.DictWriter(f, fieldnames=_REPORT_FIELDS)
         writer.writeheader()
         writer.writerows(flat)
+
+
+DEFAULT_EXCLUDE_DIRS = {"papers", "scripts", "scratch", "bibliography"}
+
+
+def main(argv=None):
+    """CLI entry point: walk a corpus (default docs/, excluding
+    docs/papers, docs/scripts, docs/scratch, docs/bibliography per the
+    design doc), run the full Task 1-8 pipeline over every shell
+    article found, write the §8 CSV report, and print a one-line
+    per-tier summary. Never writes to any corpus document -- read-only
+    end to end."""
+    import xml.etree.ElementTree as ET
+
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--corpus-root", default=str(REPO_ROOT / "docs"))
+    parser.add_argument("--out", default=str(REPO_ROOT / "docs" / "audits" / "footnote-citation-audit.csv"))
+    args = parser.parse_args(argv)
+
+    corpus_root = Path(args.corpus_root)
+    backlinks = build_backlink_map(corpus_root)
+
+    shells = []
+    for xml_path in sorted(corpus_root.rglob("*.xml")):
+        if any(part in DEFAULT_EXCLUDE_DIRS for part in xml_path.relative_to(corpus_root).parts):
+            continue
+        try:
+            root_tag = ET.parse(xml_path).getroot().tag
+        except ET.ParseError:
+            continue
+        if root_tag == f"{{{DB_NS}}}article":
+            shells.append(xml_path)
+
+    rows_by_shell = {}
+    tier_counts = {"High": 0, "Medium": 0, "Needs manual triage": 0}
+    for shell in shells:
+        audit = audit_document(shell, backlinks)
+        if not audit.candidates:
+            continue
+        rows = score_document(audit)
+        rows_by_shell[audit.shell_html] = rows
+        for r in rows:
+            tier_counts[r.confidence] += 1
+
+    write_report(rows_by_shell, Path(args.out))
+    print(f"OK: {sum(tier_counts.values())} candidates -- High {tier_counts['High']}, "
+          f"Medium {tier_counts['Medium']}, Needs manual triage {tier_counts['Needs manual triage']}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
