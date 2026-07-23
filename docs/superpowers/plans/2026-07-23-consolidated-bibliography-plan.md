@@ -1,3 +1,4 @@
+{% raw %}
 # Consolidated References & Bibliography Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
@@ -2002,3 +2003,4 @@ Expected: all four commands succeed with no output/no diff.
 git add docs/bibliography/ docs/index.md
 git commit -m "feat: generate consolidated references & bibliography for the full corpus"
 ```
+{% endraw %}
