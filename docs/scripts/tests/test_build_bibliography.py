@@ -441,5 +441,36 @@ class TestVerifyInvariants(unittest.TestCase):
         self.assertTrue(any("does-not-exist.html" in v for v in violations))
 
 
+class TestEmitDocbook(unittest.TestCase):
+    def test_relative_html_link_from_bibliography_dir(self):
+        from build_bibliography import relative_html_link
+        self.assertEqual(
+            relative_html_link("docs/cross-cutting/foo.html"),
+            "../cross-cutting/foo.html",
+        )
+
+    def test_emits_sections_with_alphabetized_entries_and_backlinks(self):
+        from build_bibliography import emit_docbook, BibliographyEntry
+        legal = [BibliographyEntry(section="legal", display="Marvin v. Marvin, 18 Cal. 3d 660 (1976).",
+                                     citing_htmls=["docs/a.html"], dedup_key="k1")]
+        secondary = [BibliographyEntry(section="secondary", display='Justia. "X." Accessed 1. https://justia.com/x',
+                                         citing_htmls=["docs/b.html"], dedup_key="k2")]
+        xml_text = emit_docbook(legal, secondary, ["Garbled Entry"])
+
+        self.assertIn('xml:id="legal-citations"', xml_text)
+        self.assertIn('xml:id="academic-secondary-sources"', xml_text)
+        self.assertIn('xml:id="appendix-needs-review"', xml_text)
+        self.assertIn("Marvin v. Marvin", xml_text)
+        self.assertIn('xlink:href="../a.html"', xml_text)
+        self.assertIn("Garbled Entry", xml_text)
+
+    def test_emitted_xml_is_well_formed(self):
+        import xml.etree.ElementTree as ET
+        from build_bibliography import emit_docbook, BibliographyEntry
+        legal = [BibliographyEntry(section="legal", display="A & B v. C.", citing_htmls=["docs/a.html"], dedup_key="k1")]
+        xml_text = emit_docbook(legal, [], [])
+        ET.fromstring(xml_text)  # raises ParseError if malformed — must not raise
+
+
 if __name__ == "__main__":
     unittest.main()
