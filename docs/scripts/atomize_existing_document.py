@@ -16,6 +16,7 @@ from convert_to_docbook import (
     REPO_ROOT,
     _cleanup_fragments,
     build_html,
+    element_full_text,
     render_docbook_plain,
     split_into_fragments,
     validate,
@@ -71,7 +72,7 @@ def atomize_existing_document(xml_path, meta_path):
         before_plain = render_docbook_plain(xml_path)
 
         title_el = meta_root.find(f"{{{DC_NS}}}title")
-        title = "".join(title_el.itertext()).strip() if title_el is not None else ""
+        title = element_full_text(title_el)
 
         tree = ET.parse(xml_path)
         article = tree.getroot()

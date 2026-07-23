@@ -18,6 +18,19 @@ ET.register_namespace("xi", XI_NS)
 ET.register_namespace("xlink", XLINK_NS)
 
 
+def element_full_text(el):
+    """Full text content of an XML element, including text inside nested
+    child elements — unlike .text, which only returns text directly
+    before the element's first child. Returns "" if el is None.
+
+    Root-caused on real corpus documents: a section or document title
+    wrapped in inline markup (e.g. <title><emphasis role="strong">...
+    </emphasis></title>, produced by pandoc for a bold Markdown heading)
+    has .text == None or whitespace-only, silently losing the real title
+    text if read the naive way."""
+    return "".join(el.itertext()).strip() if el is not None else ""
+
+
 def slugify(text):
     text = text.strip().lower()
     text = re.sub(r"[^\w\s-]", "", text)
@@ -140,7 +153,7 @@ def split_into_fragments(article, out_dir, stem):
     used_slugs = {}
     for i, section in enumerate(sections, start=1):
         title_el = section.find(f"{{{DB_NS}}}title")
-        section_title = "".join(title_el.itertext()).strip() if title_el is not None else ""
+        section_title = element_full_text(title_el)
         base_slug = slugify(section_title)
         count = used_slugs.get(base_slug, 0)
         slug = base_slug if count == 0 else f"{base_slug}-{count}"
