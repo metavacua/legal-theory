@@ -39,5 +39,31 @@ class TestFindCandidates(unittest.TestCase):
         self.assertEqual(numbers, [44])
 
 
+class TestLocateWorksCited(unittest.TestCase):
+    def test_finds_entries_in_whichever_fragment_has_them(self):
+        from audit_footnote_links import document_content_files, locate_works_cited
+        files = document_content_files(FIXTURES / "works_cited_doc" / "shell.xml")
+        entries = locate_works_cited(files)
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0][1], "https://example.com/a")
+
+    def test_empty_when_no_works_cited_section_present(self):
+        from audit_footnote_links import document_content_files, locate_works_cited
+        files = document_content_files(FIXTURES / "doc_order" / "shell.xml")
+        self.assertEqual(locate_works_cited(files), [])
+
+
+class TestIsDegenerate(unittest.TestCase):
+    def test_single_linkless_entry_against_many_footnotes_is_degenerate(self):
+        from audit_footnote_links import is_degenerate
+        entries = [("Bare Title With No Link", None)]
+        self.assertTrue(is_degenerate(entries, max_footnote=72))
+
+    def test_well_populated_linked_list_is_not_degenerate(self):
+        from audit_footnote_links import is_degenerate
+        entries = [(f"Source {i}", f"https://example.com/{i}") for i in range(1, 11)]
+        self.assertFalse(is_degenerate(entries, max_footnote=10))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xml:id="degenerate-doc" xml:lang="en">
+  <title>Degenerate Doc</title>
+  <section xml:id="body">
+    <title>Body</title>
+    <para>Text.1 more text.1 more.1</para>
+  </section>
+  <section xml:id="works-cited">
+    <title>Works cited</title>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem><para>Bare Title With No Link</para></listitem>
+    </orderedlist>
+  </section>
+</article>

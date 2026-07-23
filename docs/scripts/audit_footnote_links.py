@@ -106,3 +106,25 @@ def find_candidates(xml_path):
         context = " ".join(text[start:end].split())
         candidates.append(Candidate(number=number, context=context))
     return candidates
+
+
+def locate_works_cited(content_files):
+    """The works-cited (text, href) entries, in order, from whichever
+    content file in content_files has them -- empty list if none."""
+    for f in content_files:
+        entries = extract_works_cited(f)
+        if entries:
+            return entries
+    return []
+
+
+def is_degenerate(entries, max_footnote):
+    """True if entries has no real (linked) entries at all, or is
+    implausibly short relative to max_footnote -- fewer than half the
+    entries needed to cover the highest footnote number referencing it."""
+    if max_footnote == 0:
+        return False
+    linked = [e for e in entries if e[1]]
+    if not linked:
+        return True
+    return len(entries) < max(1, max_footnote // 2)
