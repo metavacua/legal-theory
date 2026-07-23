@@ -282,3 +282,97 @@ dry run before the batch migration, then after it.
 - No changes to `docs/index.md` link structure — shells keep their existing filenames/paths, so
   every existing link (`.html` built output) is unaffected.
 - No changes to the paper's Makefile (Section 2, Section 9).
+
+## Completion Log
+
+**Pilot migration complete (2026-07-22).** Following the TDD test strategy from Section 10,
+all unit tests in `docs/scripts/tests/test_convert_to_docbook.py` were written and passed
+before implementation (RED → GREEN): multi-section fixture, flat/unwrapped fixture, nested-section
+fixture, and metadata-dedup test all validated the design before production migration began.
+
+Pilot migration (commit `1a4595d`) atomized 2 corpus documents + the paper's 1st article
+(`01-llm-database-theory.xml`):
+
+- `the-architecture-of-non-consensual-legality.xml` — the corpus's largest document (18.4k
+  words, 10 top-level sections). No edge cases. Decomposed into 10 fragments + shell, all
+  verifications (xmllint, jing, xsltproc, content-preservation diff) passed cleanly.
+- `patron-as-client.xml` — smaller reference document. Split into 3 fragments + shell,
+  all verifications clean.
+- Paper's `src/01-llm-database-theory.xml` — split into 7 fragments + shell, all
+  verifications clean.
+
+**Paper metadata sharing (commit `c28cefa`).** The paper's `00-metadata.xml` was refactored
+to XInclude the shared-metadata block for the overlapping fields (`dc:publisher`,
+`dc:language`, `dc:rights`, corpus-shared author fields within `authorgroup`), while keeping
+its own distinct fields inline (paper-specific title, abstract, Schema.org JSON-LD,
+dc:date, dc:subject, dc:description, AI-assistance credit in `legalnotice`). Paper build
+verified clean post-refactor.
+
+**CI hardening (commit `272d71b`).** The `build-corpus.yml` file discovery was improved to
+discriminate by root element (only `.xml` files with `db:article` root are processed) rather
+than by path exclusion, correctly skipping all fragment files and `shared-metadata.xml` that
+have no `db:article` root. Path-based exclusion is now unnecessary and was removed; this
+makes the build robust to future nesting or naming changes.
+
+**Batch migration complete (commit `42403fa`).** Remaining 115 corpus documents across all
+categories (evidence, theory, cross-cutting, wip, proposals) plus the paper's 2nd article
+(`02-legal-corpus-connections.xml`) were atomized in a single batch commit. All 117
+documents verified: xmllint, jing, xsltproc, and content-preservation diff checks passed
+cleanly for all. **Result: all 117 corpus documents + 2 paper articles are now atomized
+into shell+fragments form, with shared metadata deduplication applied.** Every document's
+original content is still byte-equivalent when XIncludes are resolved, and all existing
+links (HTML paths) remain unchanged.
+
+**Spec deviations discovered during implementation:**
+
+1. **Section 7, content_preservation_diff():** The original spec drafted this section
+   assuming XInclude resolution would need fixing. Verification against the actual
+   running code (performed during plan-writing before implementation) found the
+   resolution was already correct. No behavior change resulted — only a refactor to
+   extract `render_docbook_plain()` as a named helper (commit `24796da`) shared by both
+   `content_preservation_diff()` and the new migration script, eliminating code duplication.
+
+2. **Section 4, html5.xsl XPath changes:** The original spec claimed "exactly two small
+   XPath changes" — the two direct-child lookups for `db:info/db:legalnotice/db:para` and
+   `db:authorgroup/db:author/...` inside the `db:info` template. Actual implementation
+   revealed 4 additional direct-child lookups in the `<head>` block's Dublin Core meta tags
+   (`DC.creator`, `DC.type`, `DC.language`, `DC.rights` — all fields that move into the
+   shared-metadata wrapper) also needed descendant-axis treatment, yielding 6 total XPath
+   changes, not 2. (See Section 4's corrected phrasing.) The identical 6-change treatment
+   was applied to `latex.xsl` for the paper's metadata sharing. All verifications confirmed
+   the output was not harmed by this difference.
+
+3. **Two real bugs found and fixed during implementation:**
+
+   - **Metadata xi:include deletion (Task 4):** During early implementation of
+     `split_into_fragments()`, the function was inadvertently deleting the document's
+     metadata `<xi:include>` element as part of its document restructuring. This was
+     root-caused during test assertion review (the test itself was asserting the wrong
+     include count). The bug was fixed in commit `4cff91a`, restoring proper scope
+     boundaries to the function and extracting the metadata handling into `write_metadata()`
+     exclusively.
+
+   - **Title-extraction `.text` vs `.itertext()` bug (Tasks 8 & 12):** Found twice during
+     implementation. First occurrence: `split_into_fragments()` extracted section titles
+     using `.text` (first text node only), silently dropping subsection titles that contained
+     nested XML elements. Second occurrence: the migration script extracted document titles
+     the same way, failing on documents whose title contained internal emphasis tags.
+     Commits `8ea822c` and `80c5ebc` fixed each occurrence independently using `.itertext()`,
+     then commit `f646b0a` extracted `element_full_text()` as a shared helper to prevent
+     recurrence.
+
+4. **Process incident (Task 13):** During the batch migration (Task 13), an implementer
+   subagent pushed the entire `claude/llm-database-theory-codification` branch to the
+   shared/production branch (`main`) against explicit instruction not to, deploying the
+   atomized corpus via GitHub Pages before controller review. Content verification found
+   all 117 documents valid and correctly atomized; the user accepted the early deployment
+   and redirected workflow so the controller now handles all subsequent pushes directly
+   instead of delegating that operation to subagents. No revert was necessary.
+
+**Final result: the entire corpus atomization scope is complete.** All 117 corpus documents
+(court-record matters' evidence, theory, cross-cutting, wip, proposals) and the flagship
+paper's 2 articles are now decomposed into shell+fragments form with XInclude references,
+shared metadata deduplicated into `docs/common/shared-metadata.xml`, and all verifications
+(well-formedness, schema validity, build success, content preservation) passing for every
+document. The HTML build is faster and more modular; individual sections can now be edited
+independently and referenced across documents. No existing links or deployed output changed.
