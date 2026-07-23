@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="hallucinations-as-defect">
+  <title>Hallucinations as Architectural Defect</title>
+  <para>AI companies defend against defamation and product liability arising from false outputs by characterising errors as unpredictable, inherent features of a probabilistic generative process — forces of nature rather than design decisions.</para>
+  <para>The database framing refutes this characterisation. A hallucination, on the graph-database view, is a corrupted entry, a polysemantic feature collision (a single weight feature that maps to multiple unrelated human concepts), or a retrieval error in which the KNN walk returns a neighbouring node rather than the correct target. These are known, characterised failure modes of database systems. A vendor who ships a database that predictably produces corrupted outputs when certain query patterns are executed cannot characterise those corruptions as unforeseeable acts of creative expression.</para>
+  <para>The implication for product liability is that the standard of care shifts. A database vendor has a duty to characterise and disclose known failure modes. A database whose polysemantic collisions produce defamatory statements about real people is a product with a known defect, and shipping it without adequate warning or mitigation is negligent — or, where the defect is foreseeable and the harm is of the kind the duty was designed to prevent, may attract strict liability. In the United States, Judge Anne C. Conway denied a motion to dismiss in <emphasis>Garcia v. Character Technologies</emphasis> (M.D. Fla., May 2025), ruling that Character.AI qualifies as a <quote>product</quote> subject to strict products liability for design defects — the first U.S. federal ruling that strict product liability applies to an LLM-based product. <citation>garcia_characterai2025</citation> Under the European Union's Product Liability Directive 2024/2853, providers of AI systems typically qualify as <quote>manufacturers,</quote> and non-compliance with AI Act transparency requirements creates a rebuttable presumption of defect. <citation>eu_pld2024</citation>
+  </para>
+</section>
+
+  
+  

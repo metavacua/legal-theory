@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="legal-classification">
+  <title>Legal Classification: Derivative Work, Collective Work, and Database</title>
+  <section xml:id="derivative-work">
+    <title>Derivative Work</title>
+    <para>Training takes a great many protected works and recasts, transforms, and adapts them into weight form. A work based upon one or more preexisting works, recast or transformed, is a <emphasis>derivative work</emphasis> under 17 U.S.C. § 101. The near-verbatim regeneration demonstrated in Cooper et al. 2025 is substantial copying by any standard the courts apply to the derivative-work analysis. See <emphasis>Litchfield v. Spielberg</emphasis>, 736 F.2d 1352, 1356 (9th Cir. 1984) (setting out the two-step extrinsic/intrinsic test for substantial similarity). <citation>litchfield1984</citation>
+    </para>
+    <para>The model is therefore not an innocent abstraction sitting at arm's length from its inputs. It is <emphasis>based upon</emphasis> them in the direct, statutory sense. The weights preserve the expressive content of the training corpus in machine-readable form, and they reproduce it on demand.</para>
+  </section>
+  <section xml:id="collective-work">
+    <title>Collective Work</title>
+    <para>A language model does not draw on one work. It assembles a multitude of separate, independent copyrighted contributions — books, articles, images, code, from a wide variety of rights-holders — into a single whole. That is the definition of a <emphasis>collective work</emphasis> under 17 U.S.C. § 101: a work in which a number of contributions, constituting separate and independent works in themselves, are assembled into a collective whole. The model is an assembled compilation of others' intellectual property, fixed in a single artifact.</para>
+  </section>
+  <section xml:id="database-law">
+    <title>Database Law</title>
+    <para>Under the European Union Database Directive (Directive 96/9/EC), a database is a collection of independent works, data, or other materials arranged in a systematic or methodical way and individually accessible by electronic or other means. <citation>eu_database_directive1996</citation> A transformer weight file satisfies this definition: the FFN layers contain individually accessible knowledge entries (the edges LARQL returns), arranged in a systematic way (by layer, by feature index), electronically accessible via the vindex interface.</para>
+    <para>The European Parliament's 2025 institutional study on AI and intellectual property (Nicola Lucchi) confirms that it is a <quote>strong argument</quote> that model weights <quote>may implicate</quote> reproduction rights, and that distributing weights embedding memorised protected content constitutes prima facie infringement. <citation>lucchi2025ep</citation> On 11 November 2025, the Munich Regional Court ruled in GEMA v. OpenAI (case 42 O 14139/24) that memorisation of protected musical works in <quote>probability values distributed across parameters</quote> is unlawful reproduction under German <emphasis>UrhG</emphasis> §16 — the first EU ruling that model weights containing memorised content constitute unauthorised reproduction. <citation>gema_openai2025</citation>
+    </para>
+    <para>The Directive's sui generis protection attaches to any database in whose making there has been substantial investment in obtaining, verifying, or presenting the contents — a criterion that the training of any frontier model satisfies by many orders of magnitude (billions of dollars of compute, petabytes of curated training data).</para>
+    <para>In U.S. law, compilation copyright under 17 U.S.C. § 103 protects the selection, coordination, and arrangement of pre-existing materials to the extent that the compiler exercised creative judgment in those choices. The selection of training data and the architectural choices that determine how it is encoded both qualify.</para>
+  </section>
+</section>
+
+  
+  

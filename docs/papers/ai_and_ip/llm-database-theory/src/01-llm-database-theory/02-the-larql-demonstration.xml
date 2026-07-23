@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="larql-demonstration">
+  <title>The LARQL Demonstration</title>
+  <para>LARQL (Lazarus Query Language), written in Rust and released as open source under the Apache-2.0 licence by Chris Hay of the UK, extracts a transformer into a <emphasis>vindex</emphasis> — a directory in which the weights are reorganised for querying — and then lets a user address it in LQL. Gate vectors become a nearest-neighbour index; embeddings become token lookups; the feed-forward down-projections become edge labels. The tool's own tagline states the finding without hedging: <emphasis role="italic">the model is the database</emphasis>. <citation>hay2024larql</citation>
+  </para>
+  <para>A <command>DESCRIBE "France"</command> query against a Gemma 3 4B vindex returns labelled, directed edges:</para>
+  <programlisting language="lql">larql&gt; USE "gemma-3-4b.vindex";
+Using: gemma-3-4b.vindex  (34 layers · 348.2K features · 512 relation types)
+
+larql&gt; DESCRIBE "France";
+France
+  capital    → Paris       1436.9   L27
+  borders    → Spain         13.3   L18
+  language   → French        35.2   L24</programlisting>
+  <para>Each row is a property-graph edge: an entity, a relation type, a target entity, a strength score, and the layer in which it predominantly fires. These entries were not added by the query; they are what the weights already are. Nothing was inserted; the query merely reads out what was always there.</para>
+  <section xml:id="larql-mutability">
+    <title>The Entries Are Addressable, Editable, and Exportable</title>
+    <para>LARQL further demonstrates that the graph is mutable through structured operations:</para>
+    <programlisting language="lql">larql&gt; INSERT INTO EDGES (entity, relation, target)
+  ...   VALUES ("Atlantis", "capital-of", "Poseidon");
+Inserted 1 edge.  Feature F8821@L26 allocated.
+
+larql&gt; INFER "The capital of Atlantis is";
+  1. Poseidon   (56.91%)
+
+larql&gt; COMPILE CURRENT INTO MODEL "edited/" FORMAT safetensors;
+Wrote standard safetensors.  Loads in Transformers / llama.cpp — no special loader.</programlisting>
+    <para>An entry is inserted, retrieved by inference, then compiled back into ordinary model files that run in standard frameworks unchanged. The insert-retrieve-compile cycle is the full CRUD cycle of a database. The traversal that answers an inference query is the same computation as the model's forward pass — on Gemma 3 4B it is reported to be marginally faster than the dense matrix multiply it replaces.</para>
+    <para>LARQL is one tool, early in its development trajectory. Foreseeable successors will read these entries more completely and more precisely. That trajectory only sharpens the point: the store exists now; the interface is improving; the direction is toward more legibility, not less.</para>
+  </section>
+</section>
+
+  
+  

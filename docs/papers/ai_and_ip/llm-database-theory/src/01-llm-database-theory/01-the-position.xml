@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="the-position">
+  <title>The Position</title>
+  <para>A trained language model is a database of the works it was built from. Its contents are stored arithmetically and its schema is obscured, but neither of those facts changes what it is or what law applies to it. It is a fixed compilation of protected expression; distributing it distributes copies; operating it reproduces them. That conclusion does not wait on any change in the law — the law of databases and copies is old, and it already reaches this case.</para>
+  <blockquote>
+    <attribution>Central thesis</attribution>
+    <para>LARQL does not turn a model into a database. It demonstrates that the model was one all along — and hands us the query language to prove it.</para>
+  </blockquote>
+</section>
+
+  
+  

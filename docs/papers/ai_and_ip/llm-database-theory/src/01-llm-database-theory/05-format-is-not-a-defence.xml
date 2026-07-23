@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="format-not-a-defence">
+  <title>Format Is Not a Defence</title>
+  <para>The industry's principal defence against all of this is that a model holds no copies — only numbers. OpenAI told the U.S. Copyright Office that its models <quote>do not store copies of the information that they learn from,</quote> describing them as large strings of parameters that software executes. Google likewise asserted that <quote>there is no copy of the training data … present in the model itself.</quote>
+    <citation>admissions2025compilation</citation>
+  </para>
+  <para>This defence fails on its own terms. Every stored file is only numbers. A copyrighted song on disk is a sequence of bytes. A film in a proprietary container is a sequence of bytes. An encrypted or compressed archive is a sequence of bytes that no human can read without machine assistance. The legal status of a copy has never depended on whether a person can read it directly.</para>
+  <para>The Copyright Act of 1976 defines a work as <quote>fixed</quote> — and a copy as existing — when the work can be perceived, reproduced, or otherwise communicated <emphasis>with the aid of a machine or device,</emphasis> by any method now known or later developed. 17 U.S.C. § 101. <citation>copyright1976fixation</citation> The inference engine is that machine. The weights are the fixation. That the fixation is expressed as tensors rather than glyphs is a fact about encoding, not about copyright.</para>
+  <section xml:id="degenerate-database">
+    <title>A Degenerate Database Is Still a Database</title>
+    <para>It does not matter that the store is lossy, that features are polysemantic, that entries are fragmented across layers, or that recovering them requires the right sequence of prompts. A low-bitrate recording is still a copy of the performance it retains. A compressed image is still a copy. A partially corrupted archive is still a copy of what survives in it. Imperfect, obscured, or effortful retrieval speaks to how the copy is stored, never to whether it is stored.</para>
+    <para>The internal degradation a model may exhibit does not lift it out of the category of databases. It simply makes it a degraded database — and a degraded database is a database still. A library with water-damaged books does not cease to be a library. A database with corrupted records does not cease to be a database.</para>
+    <para>Obscuring the entries changes the packaging. It does not dissolve the rights that attach to them.</para>
+  </section>
+  <section xml:id="encryption-analogy">
+    <title>The Encryption Analogy</title>
+    <para>The arithmetic encoding of training content in model weights is structurally analogous to encryption. An encrypted database contains all the data of the plaintext database. The data is present; it requires a key to read. The law does not permit an entity to escape data-protection obligations — Right to Erasure under GDPR, production obligations under discovery rules, copyright liability — by encrypting its database before distribution. The same logic applies here: the transformer's weight encoding is the key; the vindex is the decryption; the entries are the data; and the data is subject to the same law it was subject to before encoding.</para>
+  </section>
+</section>
+
+  
+  

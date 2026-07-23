@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="privacy-law-gdpr">
+  <title>Privacy Law: The Right to Erasure and INSERT INTO EDGES</title>
+  <para>GDPR Article 17 grants data subjects the right to erasure of personal data without undue delay. AI companies have argued that this right cannot be fulfilled with respect to model weights because there is no identifiable location of personal data within the parameters — no rows to delete, no records to mark. <citation>gdpr2016</citation>
+  </para>
+  <para>LARQL's <command>INSERT INTO EDGES</command> operation refutes this defence structurally. If a named personal fact can be inserted into the model's weights at a specific feature location (Feature F8821@L26 in the demonstration), retrieved by inference, and compiled back into a standard model file, then named personal facts already present in the weights can, in principle, be located, inspected, and removed by the same mechanism. The technical argument that the data cannot be targeted for removal collapses as the tooling to target it matures.</para>
+  <para>The legal conclusion follows: if the model weights contain personal data — which the extraction studies demonstrate they do, for training data subjects who appear in the training corpus — then the weights are a personal data store, and the GDPR's obligations attach: lawful basis for processing, data minimisation, accuracy, storage limitation, and the right of erasure. These obligations applied from the moment the training data was ingested and the personal facts were encoded into the weights. The absence of prior tooling to retrieve those facts did not suspend the obligations; it only made compliance impractical. LARQL, and its foreseeable successors, are making compliance practical.</para>
+</section>
+
+  
+  

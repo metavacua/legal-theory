@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="basis-limitation">
+  <title>The Basis Limitation: Outputs Cannot Exceed Inputs</title>
+  <para>A language model is a function from an input token sequence to a probability distribution over the vocabulary. The weights of that function were determined entirely by the training corpus. The model has no other source of information. It follows that the model's output, at every point, is a linear combination (or, under non-linearity, a composition of linear combinations) of features whose values were fixed by training. A model cannot generate content whose information content exceeds the information present in its training data, expressed in its weight space.</para>
+  <para>This is not a contingent empirical claim subject to exception. It is a mathematical consequence of the architecture. The weights are a finite-dimensional vector; the model's outputs are determined by that vector; therefore the model's outputs are entirely determined by the training corpus.</para>
+  <para>The practical implication: when a model generates a recognisable image of Superman, the Superman content of that image derives from Superman images in the training data, however the representation is distributed across the weight tensors. When a model regenerates the text of <emphasis>Harry Potter</emphasis>, that text was present in the training data and is now present, in encoded form, in the weights. The generation is not creation; it is retrieval.</para>
+  <section xml:id="memorization-evidence">
+    <title>Empirical Evidence of Memorisation</title>
+    <para>The basis-limitation argument is not merely theoretical. Peer-reviewed extraction studies have demonstrated direct retrieval of protected works from model weights:</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <emphasis role="bold">Text (Cooper et al. 2025):</emphasis> Researchers at Stanford, Cornell, Princeton, and West Virginia demonstrated that Llama 3.1 70B entirely memorises some books, including the first <emphasis>Harry Potter</emphasis> novel and Orwell's <emphasis>Nineteen Eighty-Four</emphasis>. Seeding the model with the first few tokens of chapter one causes it to deterministically regenerate the entire book near-verbatim. The authors state plainly that the memorised content is <quote>copied inside the model parameters.</quote>
+          <citation>cooper2025memorized</citation>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="bold">Images — Diffusion Models (Carlini et al. 2023):</emphasis> Over a hundred near-identical replicas of training images — including trademarked logos and identifiable photographs of individuals — were extracted directly from Stable Diffusion and Imagen. <citation>carlini2023extracting</citation>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="bold">Images — Novel Generations as Copies (Somepalli et al. 2023):</emphasis> A measurable share of ostensibly novel diffusion-model outputs are near-exact copies of training images, including images that the model presents as generations from textual prompts it was never given during training. <citation>somepalli2023diffusion</citation>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>These studies are not outlier demonstrations of edge cases. They represent the predictable consequence of training large models on large corpora without exclusion mechanisms. The memorisation scales with model size and training iterations. The question is not whether models memorise — the empirical record establishes that they do — but how much, and for which works.</para>
+  </section>
+</section>
+
+  
+  

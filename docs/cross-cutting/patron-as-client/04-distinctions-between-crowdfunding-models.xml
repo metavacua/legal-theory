@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="distinctions-between-crowdfunding-models">
+  <title>
+    <emphasis role="strong">Distinctions Between Crowdfunding
+    Models</emphasis>
+  </title>
+  <para>
+      While the legal risk applies broadly, the structure of different
+      platforms can heighten the vulnerability.
+    </para>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">Patreon and Subscription
+          Models:</emphasis> In its purest form, Patreon is a
+          subscription for ongoing support, which offers a stronger
+          argument for a non-service relationship. However, the moment a
+          creator introduces a "commission" tier—"pay
+          this amount and I will create X for you"—that specific
+          transaction becomes a contract for services. The IRS already
+          treats Patreon income as self-employment income, not as a
+          gift, because there is an expectation of receiving something
+          in return (content, benefits, etc.).7 Adding a specific,
+          patron-directed deliverable solidifies this transactional
+          nature.
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Kickstarter and Project-Based
+          Models:</emphasis> Kickstarter's model is even more closely
+          aligned with a service contract. Its Terms of Use explicitly
+          state that a contract is formed between the creator and the
+          backer, obligating the creator to fulfill promised rewards.10
+          While Kickstarter frames this as "helping to create
+          something new" rather than buying from a store, the legal
+          reality is an exchange of money for a future good or
+          service.14 If a backer's reward is a custom piece of IP based
+          on their pledge, the service relationship is unambiguous.
+        </para>
+    </listitem>
+  </itemizedlist>
+</section>
+  

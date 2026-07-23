@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="the-patron-as-client-scenario-applying-the-abc-test">
+  <title>
+    <emphasis role="strong">The Patron-as-Client Scenario:
+    Applying the ABC Test</emphasis>
+  </title>
+  <para>
+      When a creator on a platform like Patreon offers a tier where
+      patrons can request and receive a specific piece of art, or
+      promises to fulfill all such requests from a pool of patrons, the
+      legal nature of the relationship is fundamentally altered. It
+      shifts from a model of general support for an independent vision
+      to a specific, transactional exchange.
+    </para>
+  <para>
+    <emphasis role="strong">1. Identifying the "Hiring
+      Entity"</emphasis>
+  </para>
+  <para>
+      In a legal challenge, the platform itself (Patreon, Kickstarter,
+      etc.) is the most likely target to be designated the "hiring
+      entity." The platform is not a passive intermediary; it
+      controls the entire ecosystem, processes payments, sets the terms
+      of service, and provides the tools that define the relationship.1
+      The platform's business model is predicated on facilitating this
+      exact type of transaction between creators and their audiences.
+    </para>
+  <para>
+    <emphasis role="strong">2. Analyzing the Three Prongs of the
+      Test</emphasis>
+  </para>
+  <para>
+      When the platform is viewed as the hiring entity, its ability to
+      satisfy the ABC test in a patronage-commission scenario becomes
+      exceptionally difficult.
+    </para>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">Prong A (Control): Failure.</emphasis>
+          The creator is subject to two layers of control. First, the
+          platform exercises significant control through its terms of
+          service, payment processing requirements, and
+          "algorithmic management," which guides creator and
+          patron behavior.1 Second, and more directly in this scenario,
+          the <emphasis>patron</emphasis> exerts control over the
+          "manner and means" of the work by specifying the IP
+          to be created. The creator is no longer fully autonomous; they
+          are fulfilling a client's (the patron's) directive. This dual
+          control makes it highly unlikely that the creator would be
+          considered "free from control and direction".1
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Prong B (Course of Business):
+          Failure.</emphasis> This prong requires the creator's work to
+          be outside the platform's usual course of business. This is a
+          clear failure. The core business of platforms like Patreon and
+          Kickstarter is to facilitate the creation and funding of
+          content. The intellectual labor provided by creators is not
+          ancillary to the platform's business; it
+          <emphasis>is</emphasis> the business. The platform's value is
+          derived entirely from the creative work it hosts and
+          monetizes.1
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Prong C (Independent Business): The
+          "Hobbyist Dilemma."</emphasis> This is the most
+          critical and systemic failure point for platforms. To satisfy
+          Prong C, the platform must prove the creator is
+          "customarily engaged in an independently established
+          trade, occupation, or business." While many full-time,
+          professional creators on these platforms would meet this
+          standard (often operating as LLCs or sole proprietors), the
+          platforms' business models are built on a massive scale that
+          relies on millions of casual, non-professional
+          "hobbyist" creators.1 A hobbyist, by legal and tax
+          definitions, is not engaged in an independent business with an
+          intent to profit.3 Therefore, for this substantial segment of
+          their user base, platforms cannot satisfy Prong C. This
+          structural conflict between the business model and the legal
+          requirement is what is termed the "Hobbyist
+          Dilemma".1
+        </para>
+    </listitem>
+  </itemizedlist>
+</section>
+  
