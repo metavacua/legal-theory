@@ -281,3 +281,22 @@ def format_secondary_chicago(text, href):
     date_str = f"Accessed {access_date}." if access_date else "[access date unknown]."
     url_str = href if href else "[no url]"
     return f'{publisher}. "{title}." {date_str} {url_str}'
+
+
+def classify_and_format(raw):
+    """(section, display_text) for a RawEntry, where section is one of
+    "legal", "secondary", "appendix". Thin dispatcher over the Task 6-8
+    classifiers/formatters: statute, then case, then a generic link
+    (secondary), else appendix (no link and no recognized pattern)."""
+    statute = classify_statute(raw.text)
+    if statute:
+        return "legal", format_statute_bluebook(statute)
+
+    case = classify_case(raw.text, raw.href)
+    if case:
+        return "legal", format_case_bluebook(case)
+
+    if raw.href:
+        return "secondary", format_secondary_chicago(raw.text, raw.href)
+
+    return "appendix", raw.text

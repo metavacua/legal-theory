@@ -256,5 +256,39 @@ class TestFormatSecondaryChicago(unittest.TestCase):
         self.assertNotIn('..."', result)
 
 
+class TestClassifyAndFormat(unittest.TestCase):
+    def test_statute_routes_to_legal(self):
+        from build_bibliography import classify_and_format, RawEntry
+        raw = RawEntry(text="California Civil Code § 1550 (2024)", href="https://justia.com/x",
+                        citing_html="docs/x.html", source_file="docs/x.xml")
+        section, display = classify_and_format(raw)
+        self.assertEqual(section, "legal")
+        self.assertEqual(display, "Cal. Civ. Code § 1550 (2024).")
+
+    def test_case_with_reporter_routes_to_legal(self):
+        from build_bibliography import classify_and_format, RawEntry
+        raw = RawEntry(text="Marvin v. Marvin (1976) 18 Cal. 3d 660.", href=None,
+                        citing_html="docs/x.html", source_file="docs/x.xml")
+        section, display = classify_and_format(raw)
+        self.assertEqual(section, "legal")
+        self.assertIn("18 Cal. 3d 660", display)
+
+    def test_generic_link_routes_to_secondary(self):
+        from build_bibliography import classify_and_format, RawEntry
+        raw = RawEntry(text="Entertainment", href="https://www.jmbm.com/entertainment.html",
+                        citing_html="docs/x.html", source_file="docs/x.xml")
+        section, display = classify_and_format(raw)
+        self.assertEqual(section, "secondary")
+        self.assertIn("jmbm.com", display)
+
+    def test_no_link_no_pattern_routes_to_appendix(self):
+        from build_bibliography import classify_and_format, RawEntry
+        raw = RawEntry(text="Systemic_Misclassification", href=None,
+                        citing_html="docs/x.html", source_file="docs/x.xml")
+        section, display = classify_and_format(raw)
+        self.assertEqual(section, "appendix")
+        self.assertEqual(display, "Systemic_Misclassification")
+
+
 if __name__ == "__main__":
     unittest.main()
