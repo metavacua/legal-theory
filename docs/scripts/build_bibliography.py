@@ -277,7 +277,7 @@ def _guess_publisher(href):
 def format_secondary_chicago(text, href):
     publisher = _guess_publisher(href) or "[author unknown]"
     access_date = extract_access_date(text)
-    title = strip_access_date(text) or "[title unknown]"
+    title = (strip_access_date(text) or "[title unknown]").rstrip(".")
     date_str = f"Accessed {access_date}." if access_date else "[access date unknown]."
     url_str = href if href else "[no url]"
     return f'{publisher}. "{title}." {date_str} {url_str}'

@@ -247,6 +247,14 @@ class TestFormatSecondaryChicago(unittest.TestCase):
         self.assertIn("[access date unknown]", result)
         self.assertIn("[no url]", result)
 
+    def test_title_ending_in_ellipsis_does_not_produce_doubled_period(self):
+        from build_bibliography import format_secondary_chicago
+        text = "Consent and Assent Guidelines and Templates – Division of ..., accessed September 2, 2025,"
+        result = format_secondary_chicago(text, "https://example.com/x")
+        self.assertIn('Division of ." Accessed', result)
+        self.assertNotIn("...." , result)
+        self.assertNotIn('..."', result)
+
 
 if __name__ == "__main__":
     unittest.main()
