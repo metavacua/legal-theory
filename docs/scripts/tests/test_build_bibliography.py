@@ -494,5 +494,50 @@ class TestEmitDocbook(unittest.TestCase):
             self.assertTrue(html_path.is_file(), f"{key} -> {html} does not exist on disk")
 
 
+class TestEndToEndIntegration(unittest.TestCase):
+    def test_full_pipeline_produces_valid_docbook_with_all_four_buckets(self):
+        from build_bibliography import (
+            extract_all_raw_entries, parse_bibtex, classify_and_format, classify_bib_entry,
+            dedupe, verify_invariants, emit_docbook, SELF_CITATION_HTML,
+        )
+        import xml.etree.ElementTree as ET
+
+        root = FIXTURES / "integration_corpus"
+        raw_entries = extract_all_raw_entries(root, exclude_dirs=set())
+        self.assertEqual(len(raw_entries), 4)
+
+        classified = [(*classify_and_format(r), r) for r in raw_entries]
+        appendix_texts = [d for s, d, r in classified if s == "appendix"]
+        legal = dedupe([c for c in classified if c[0] == "legal"])
+        secondary = dedupe([c for c in classified if c[0] == "secondary"])
+
+        self.assertEqual(len(legal), 2)     # statute + case
+        self.assertEqual(len(secondary), 1)  # jmbm.com entry
+        self.assertEqual(len(appendix_texts), 1)  # Systemic_Misclassification
+
+        violations = verify_invariants(raw_entries, appendix_texts, legal, secondary, REPO_ROOT)
+        self.assertEqual(violations, [])
+
+        xml_text = emit_docbook(legal, secondary, appendix_texts)
+        ET.fromstring(xml_text)  # well-formed
+        self.assertIn("Cal. Civ. Code § 1550", xml_text)
+        self.assertIn("Dynamex Operations West, Inc. v. Superior Court", xml_text)
+        self.assertIn("[reporter citation unknown]", xml_text)
+        self.assertIn("Systemic_Misclassification", xml_text)
+
+    def test_real_bibliography_bib_parses_and_classifies_without_exceptions(self):
+        # Runs Tasks 10-11 against the ACTUAL repo file, not a fixture --
+        # the one place a real-file regression (e.g. an unhandled field
+        # shape) would be caught before Task 16's full run.
+        from build_bibliography import parse_bibtex, classify_bib_entry
+        bib_path = REPO_ROOT / "docs" / "papers" / "ai_and_ip" / "llm-database-theory" / "src" / "bibliography.bib"
+        entries = parse_bibtex(bib_path)
+        self.assertEqual(len(entries), 28)
+        for entry in entries:
+            section, display = classify_bib_entry(entry)
+            self.assertIn(section, ("legal", "secondary"))
+            self.assertNotEqual(display.strip(), "")
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xml:id="doc" xml:lang="en">
+  <title>Integration Doc</title>
+  <section xml:id="works-cited">
+    <title>Works cited</title>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem><para>California Civil Code § 1550 (2024)</para></listitem>
+      <listitem><para>Dynamex Operations West, Inc. v. Superior Court, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.courtlistener.com/opinion/dynamex/">https://www.courtlistener.com/opinion/dynamex/</link></para></listitem>
+      <listitem><para>Entertainment, accessed May 1, 2025, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.jmbm.com/entertainment.html">https://www.jmbm.com/entertainment.html</link></para></listitem>
+      <listitem><para>Systemic_Misclassification</para></listitem>
+    </orderedlist>
+  </section>
+</article>
