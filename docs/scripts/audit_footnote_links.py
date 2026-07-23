@@ -284,6 +284,93 @@ _RESTART_LOW_CEILING = 10      # the dip value itself must be at or below this
 _RESTART_RUN_LENGTH = 3        # at least this many subsequent values must also stay low
 
 
+@dataclass
+class AuditRow:
+    candidate: Candidate
+    matched_entry_text: str | None
+    matched_entry_url: str | None
+    confidence: str          # "High" | "Medium" | "Needs manual triage"
+    flags: list[str]         # subset of restart_detected, exceeds_length,
+                              # no_link_corroboration, degenerate_bibliography,
+                              # possible_heading_collision
+
+
+def score_document(audit):
+    """One AuditRow per audit.candidates entry (Task 5's DocumentAudit),
+    per the design doc's §5 tier rules: High requires a linked works-cited
+    entry at the matching position AND no restart detected before this
+    candidate's position; Needs manual triage covers an out-of-bounds
+    footnote number, a flagged-degenerate works-cited list (§7), a
+    heading-text collision (Task 5), or -- per §5's own explicit compound
+    case -- a linkless entry that ALSO falls after a detected restart
+    point; everything else with exactly one weaker signal is Medium.
+
+    Deviation from the brief's literal Step 3 sample code: that sample's
+    confidence if/elif only promotes to "Needs manual triage" for
+    exceeds_length, degenerate_bibliography, or possible_heading_collision,
+    and otherwise falls through to a flat "Medium" whenever EITHER
+    restart_detected or no_link_corroboration is set -- never checking
+    whether both are set together. But design section 5's own text is
+    explicit that this is a fourth, distinct "Needs manual triage"
+    trigger: "entry N is itself garbled/linkless AND the footnote is also
+    past a restart point (both problems compounding)" -- named as
+    compounding precisely because each condition ALONE is only Medium
+    (per §5's own Medium definition: "missing exactly one of the two High
+    conditions"), and per §6, "Every footnote at or after a detected
+    restart point is downgraded AT LEAST ONE confidence tier from what
+    its own individual signals would otherwise earn" -- for a candidate
+    whose individual signal (no link) already earns Medium, "at least one
+    tier down" from Medium is Needs manual triage, not a no-op back to
+    Medium. The brief's literal code silently drops this compound trigger
+    entirely (confirmed via a new adversarial test,
+    test_compounding_no_link_and_restart_forces_needs_manual_triage, that
+    fails against the brief's literal sample and passes against the fix
+    below). Fixed by adding an explicit
+    ("restart_detected" in flags and "no_link_corroboration" in flags)
+    clause to the Needs-manual-triage condition; everything else is
+    unchanged from the brief's sample.
+    """
+    numbers = [c.number for c in audit.candidates]
+    restart_idx = detect_restart_index(numbers)
+
+    rows = []
+    for i, c in enumerate(audit.candidates):
+        flags = []
+        entry_text = entry_url = None
+        idx = c.number - 1
+        if 0 <= idx < len(audit.works_cited):
+            entry_text, entry_url = audit.works_cited[idx]
+        else:
+            flags.append("exceeds_length")
+
+        if audit.degenerate:
+            flags.append("degenerate_bibliography")
+        if restart_idx is not None and i >= restart_idx:
+            flags.append("restart_detected")
+        if entry_text is not None and not entry_url:
+            flags.append("no_link_corroboration")
+        if c.heading_collision:
+            flags.append("possible_heading_collision")
+
+        if (
+            "exceeds_length" in flags
+            or "degenerate_bibliography" in flags
+            or "possible_heading_collision" in flags
+            or ("restart_detected" in flags and "no_link_corroboration" in flags)
+        ):
+            confidence = "Needs manual triage"
+        elif "restart_detected" in flags or "no_link_corroboration" in flags:
+            confidence = "Medium"
+        else:
+            confidence = "High"
+
+        rows.append(AuditRow(
+            candidate=c, matched_entry_text=entry_text, matched_entry_url=entry_url,
+            confidence=confidence, flags=flags,
+        ))
+    return rows
+
+
 def detect_restart_index(numbers):
     """Detect the index in a document-order candidate-number sequence
     where footnote numbering restarts mid-document: a drop from a high

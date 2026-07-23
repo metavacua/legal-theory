@@ -136,5 +136,101 @@ class TestDetectRestartIndex(unittest.TestCase):
         self.assertIsNone(detect_restart_index(numbers))
 
 
+class TestScoreDocument(unittest.TestCase):
+    def _audit(self, candidates, works_cited, degenerate=False):
+        from audit_footnote_links import DocumentAudit
+        return DocumentAudit(shell_html="docs/x.html", candidates=candidates, works_cited=works_cited, degenerate=degenerate)
+
+    def test_high_confidence_linked_entry_no_restart(self):
+        from audit_footnote_links import score_document, Candidate
+        audit = self._audit(
+            [Candidate(number=1, context="ctx")],
+            [("Real Source", "https://example.com/a")],
+        )
+        rows = score_document(audit)
+        self.assertEqual(rows[0].confidence, "High")
+        self.assertEqual(rows[0].matched_entry_url, "https://example.com/a")
+
+    def test_medium_confidence_when_entry_has_no_link(self):
+        from audit_footnote_links import score_document, Candidate
+        audit = self._audit(
+            [Candidate(number=1, context="ctx")],
+            [("Plausible Title, No Link", None)],
+        )
+        rows = score_document(audit)
+        self.assertEqual(rows[0].confidence, "Medium")
+        self.assertIn("no_link_corroboration", rows[0].flags)
+
+    def test_needs_triage_when_footnote_exceeds_works_cited_length(self):
+        from audit_footnote_links import score_document, Candidate
+        audit = self._audit([Candidate(number=99, context="ctx")], [("Only One", "https://example.com/a")])
+        rows = score_document(audit)
+        self.assertEqual(rows[0].confidence, "Needs manual triage")
+        self.assertIn("exceeds_length", rows[0].flags)
+
+    def test_needs_triage_when_document_is_degenerate_regardless_of_other_signals(self):
+        from audit_footnote_links import score_document, Candidate
+        audit = self._audit(
+            [Candidate(number=1, context="ctx")],
+            [("Real Source", "https://example.com/a")],
+            degenerate=True,
+        )
+        rows = score_document(audit)
+        self.assertEqual(rows[0].confidence, "Needs manual triage")
+        self.assertIn("degenerate_bibliography", rows[0].flags)
+
+    def test_heading_collision_forces_needs_manual_triage(self):
+        from audit_footnote_links import score_document, Candidate
+        audit = self._audit(
+            [Candidate(number=1, context="ctx", heading_collision=True)],
+            [("Real Source", "https://example.com/a")],
+        )
+        rows = score_document(audit)
+        self.assertEqual(rows[0].confidence, "Needs manual triage")
+        self.assertIn("possible_heading_collision", rows[0].flags)
+
+    def test_restart_downgrades_everything_from_its_index_onward(self):
+        from audit_footnote_links import score_document, Candidate
+        works_cited = [(f"Source {i}", f"https://example.com/{i}") for i in range(1, 6)]
+        candidates = [Candidate(number=n, context="ctx") for n in [1, 2, 3, 100, 1, 1, 1]]
+        audit = self._audit(candidates, works_cited)
+        rows = score_document(audit)
+        # First three (1,2,3) precede any restart signal and should be High;
+        # the restart is only detectable once the sequence actually drops
+        # back down after climbing -- rows at/after that point are downgraded.
+        self.assertEqual(rows[0].confidence, "High")
+        restart_flagged = [r for r in rows if "restart_detected" in r.flags]
+        self.assertTrue(restart_flagged)
+        for r in restart_flagged:
+            self.assertNotEqual(r.confidence, "High")
+
+    def test_compounding_no_link_and_restart_forces_needs_manual_triage(self):
+        # Adversarial, not in the brief's own test list: design doc §5's
+        # "Needs manual triage" tier explicitly names the COMPOUND case --
+        # "entry N is itself garbled/linkless AND the footnote is also past
+        # a restart point (both problems compounding)" -- as its own
+        # distinct trigger, separate from either signal alone (each of
+        # which, alone, is only Medium). The brief's literal Step 3 sample
+        # code does not implement this: its confidence if/elif only ever
+        # promotes to "Needs manual triage" for exceeds_length,
+        # degenerate_bibliography, or possible_heading_collision, and
+        # falls through to a flat "Medium" whenever restart_detected or
+        # no_link_corroboration is present -- regardless of whether BOTH
+        # are present together. See the deviation note next to
+        # score_document for the fix (an explicit compound check ANDing
+        # the two flags into the Needs-manual-triage branch).
+        from audit_footnote_links import score_document, Candidate
+        works_cited = [("Plausible Title, No Link", None)] + [
+            (f"Source {i}", f"https://example.com/{i}") for i in range(2, 6)
+        ]
+        candidates = [Candidate(number=n, context="ctx") for n in [1, 2, 3, 100, 1, 1, 1]]
+        audit = self._audit(candidates, works_cited)
+        rows = score_document(audit)
+        compound_rows = [r for r in rows if "restart_detected" in r.flags and "no_link_corroboration" in r.flags]
+        self.assertTrue(compound_rows)
+        for r in compound_rows:
+            self.assertEqual(r.confidence, "Needs manual triage")
+
+
 if __name__ == "__main__":
     unittest.main()
