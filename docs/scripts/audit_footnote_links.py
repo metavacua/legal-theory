@@ -3,6 +3,7 @@ against their candidate works-cited entries. Writes a report; never
 modifies a corpus document. See
 docs/superpowers/specs/2026-07-23-footnote-citation-audit-design.md."""
 
+import csv
 import html.parser
 import re
 import sys
@@ -387,3 +388,55 @@ def detect_restart_index(numbers):
         if len(window) == _RESTART_RUN_LENGTH and all(n <= _RESTART_LOW_CEILING * 2 for n in window):
             return i
     return None
+
+
+_REPORT_FIELDS = [
+    "file", "footnote_number", "body_context_snippet",
+    "matched_works_cited_entry", "matched_works_cited_url",
+    "confidence_tier", "flags",
+]
+
+
+def write_report(rows_by_shell, out_path):
+    """Flatten rows_by_shell (Task 6/7's per-document AuditRow lists,
+    keyed by shell .html path) into the design doc's §8 CSV report:
+    one row per candidate, columns exactly _REPORT_FIELDS, flags joined
+    with ';', sorted by (file, footnote_number) for a deterministic
+    diff-friendly output regardless of dict/candidate iteration order.
+
+    Sorting happens on the flat dict BEFORE footnote_number is handed
+    to csv.DictWriter, so the sort key is still the int
+    r.candidate.number, not its eventual string form in the CSV cell --
+    confirmed with an adversarial test (numbers 2 and 10 in the same
+    file) that a naive post-stringification sort would get wrong
+    ("10" < "2" lexicographically) but this ordering does not.
+
+    csv.DictWriter (the stdlib csv module, default dialect) already
+    quotes any field containing a comma, double quote, or newline and
+    escapes embedded double quotes, so a body_context_snippet or
+    matched_works_cited_entry containing a comma and/or a newline --
+    both routine in real corpus prose -- round-trips through
+    write+csv.DictReader unmangled with no extra escaping needed here;
+    confirmed via
+    test_context_snippet_containing_a_comma_and_newline_round_trips_safely.
+    """
+    flat = []
+    for shell_html, rows in rows_by_shell.items():
+        for r in rows:
+            flat.append({
+                "file": shell_html,
+                "footnote_number": r.candidate.number,
+                "body_context_snippet": r.candidate.context,
+                "matched_works_cited_entry": r.matched_entry_text or "",
+                "matched_works_cited_url": r.matched_entry_url or "",
+                "confidence_tier": r.confidence,
+                "flags": ";".join(r.flags),
+            })
+    flat.sort(key=lambda row: (row["file"], row["footnote_number"]))
+
+    out_path = Path(out_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=_REPORT_FIELDS)
+        writer.writeheader()
+        writer.writerows(flat)

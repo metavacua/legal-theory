@@ -232,5 +232,83 @@ class TestScoreDocument(unittest.TestCase):
             self.assertEqual(r.confidence, "Needs manual triage")
 
 
+class TestWriteReport(unittest.TestCase):
+    def test_writes_expected_csv_columns_and_deterministic_order(self):
+        import csv
+        from audit_footnote_links import write_report, AuditRow, Candidate
+        rows_by_shell = {
+            "docs/b.html": [AuditRow(candidate=Candidate(number=2, context="b ctx"),
+                                       matched_entry_text="B", matched_entry_url="https://example.com/b",
+                                       confidence="High", flags=[])],
+            "docs/a.html": [AuditRow(candidate=Candidate(number=1, context="a ctx"),
+                                       matched_entry_text=None, matched_entry_url=None,
+                                       confidence="Needs manual triage", flags=["exceeds_length"])],
+        }
+        out = FIXTURES / "report_out.csv"
+        write_report(rows_by_shell, out)
+        with open(out, newline="", encoding="utf-8") as f:
+            rows = list(csv.DictReader(f))
+        self.assertEqual(rows[0]["file"], "docs/a.html")
+        self.assertEqual(rows[1]["file"], "docs/b.html")
+        self.assertEqual(rows[0]["flags"], "exceeds_length")
+        out.unlink()
+
+    def test_multiple_rows_within_the_same_file_sort_by_footnote_number(self):
+        # Adversarial: the brief's own sample sorts on (row["file"],
+        # row["footnote_number"]) where footnote_number is stored as an
+        # int in the dict handed to DictWriter -- but two documents with
+        # footnote numbers like 2 and 10 must sort numerically (2 before
+        # 10), not lexicographically ("10" before "2"), within the same
+        # file. Confirms the flat-dict sort key is genuinely numeric.
+        from audit_footnote_links import write_report, AuditRow, Candidate
+        rows_by_shell = {
+            "docs/c.html": [
+                AuditRow(candidate=Candidate(number=10, context="ten"),
+                         matched_entry_text=None, matched_entry_url=None,
+                         confidence="Medium", flags=[]),
+                AuditRow(candidate=Candidate(number=2, context="two"),
+                         matched_entry_text=None, matched_entry_url=None,
+                         confidence="Medium", flags=[]),
+            ],
+        }
+        out = FIXTURES / "report_out_numeric.csv"
+        write_report(rows_by_shell, out)
+        with open(out, newline="", encoding="utf-8") as f:
+            import csv
+            rows = list(csv.DictReader(f))
+        self.assertEqual([r["footnote_number"] for r in rows], ["2", "10"])
+        out.unlink()
+
+    def test_context_snippet_containing_a_comma_and_newline_round_trips_safely(self):
+        # Real corpus prose in body_context_snippet will routinely
+        # contain commas, and (less often but plausibly, e.g. via
+        # collapsed <literallayout> or a stray embedded line break)
+        # newlines. Confirms Python's csv module quotes/escapes both so
+        # the row structure -- column count and content -- survives a
+        # full write/read round trip unmangled, rather than a comma
+        # silently splitting into an extra column or a newline splitting
+        # into an extra row.
+        import csv
+        from audit_footnote_links import write_report, AuditRow, Candidate
+        tricky_context = "the court held, per Dynamex,\nthat ABC applies"
+        rows_by_shell = {
+            "docs/tricky.html": [
+                AuditRow(candidate=Candidate(number=1, context=tricky_context),
+                         matched_entry_text="Some Title, With A Comma",
+                         matched_entry_url="https://example.com/x",
+                         confidence="High", flags=["exceeds_length", "no_link_corroboration"]),
+            ],
+        }
+        out = FIXTURES / "report_out_tricky.csv"
+        write_report(rows_by_shell, out)
+        with open(out, newline="", encoding="utf-8") as f:
+            rows = list(csv.DictReader(f))
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["body_context_snippet"], tricky_context)
+        self.assertEqual(rows[0]["matched_works_cited_entry"], "Some Title, With A Comma")
+        self.assertEqual(rows[0]["flags"], "exceeds_length;no_link_corroboration")
+        out.unlink()
+
+
 if __name__ == "__main__":
     unittest.main()
