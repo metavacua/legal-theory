@@ -70,7 +70,8 @@ def atomize_existing_document(xml_path, meta_path):
     try:
         before_plain = render_docbook_plain(xml_path)
 
-        title = meta_root.find(f"{{{DC_NS}}}title").text
+        title_el = meta_root.find(f"{{{DC_NS}}}title")
+        title = "".join(title_el.itertext()).strip() if title_el is not None else ""
 
         tree = ET.parse(xml_path)
         article = tree.getroot()

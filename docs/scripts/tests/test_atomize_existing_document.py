@@ -43,6 +43,49 @@ class TestAtomizeExistingDocument(unittest.TestCase):
             meta_text,
         )
 
+    def test_preserves_full_title_when_title_wraps_inline_markup(self):
+        # Regression test for the same root-cause bug fixed in
+        # split_into_fragments(): reading title_el.text only returns the
+        # text directly before an element's first child, so a <dc:title>
+        # wrapping its text in inline markup would silently lose the real
+        # title. Overwrite the copied .meta.xml with one whose <dc:title>
+        # is styled, keeping all other elements identical to
+        # shared-metadata.xml so the shared-shape guard still passes.
+        styled_meta = f"""<?xml version="1.0" encoding="UTF-8"?>
+<info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/">
+  <dc:title><emphasis role="strong">Styled Title</emphasis></dc:title>
+  <dc:creator>Ian D.L.N. McLean</dc:creator>
+  <dc:publisher>metavacua/legal-theory (GitHub)</dc:publisher>
+  <dc:type>Article</dc:type>
+  <dc:language>en</dc:language>
+  <dc:rights>CC BY-SA 4.0</dc:rights>
+  <authorgroup>
+    <author>
+      <personname>
+        <firstname>Ian</firstname>
+        <othername role="middle">D.L.N.</othername>
+        <surname>McLean</surname>
+      </personname>
+      <email>metavacua@gmail.com</email>
+    </author>
+  </authorgroup>
+  <legalnotice>
+    <para>Copyright &#169; 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This document publishes general legal analysis and does not constitute legal advice.</para>
+  </legalnotice>
+</info>
+"""
+        self.meta_path.write_text(styled_meta, encoding="utf-8")
+
+        from atomize_existing_document import atomize_existing_document
+        diff, errors = atomize_existing_document(self.xml_path, self.meta_path)
+        self.assertEqual(errors, [])
+        self.assertEqual(diff, [])
+
+        meta_root = ET.parse(self.meta_path).getroot()
+        title_el = meta_root.find(f"{{{DC_NS}}}title")
+        self.assertIsNotNone(title_el)
+        self.assertEqual(title_el.text, "Styled Title")
+
     def test_rolls_back_on_validation_failure(self):
         # Simulate a corrupt shell by making the schema fail: strip the
         # xml:id off a section, which docbook-corpus.rnc's finding-section
