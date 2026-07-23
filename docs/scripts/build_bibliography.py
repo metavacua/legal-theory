@@ -3,6 +3,7 @@ document's "works cited" section plus the flagship paper's
 bibliography.bib. See
 docs/superpowers/specs/2026-07-23-consolidated-bibliography-design.md."""
 
+import re
 import sys
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -132,3 +133,19 @@ def normalize_url(url):
     netloc = parts.netloc.lower()
     path = parts.path.rstrip("/")
     return urlunsplit((scheme, netloc, path, parts.query, parts.fragment))
+
+
+ACCESSED_RE = re.compile(r",?\s*accessed\s+([A-Za-z]+\s+\d{1,2},\s*\d{4})", re.IGNORECASE)
+
+
+def extract_access_date(text):
+    """The 'Month D, YYYY' access date embedded in an "accessed ..." clause,
+    or None if text has no such clause."""
+    m = ACCESSED_RE.search(text)
+    return m.group(1) if m else None
+
+
+def strip_access_date(text):
+    """text with any "accessed ..." clause removed and surrounding
+    punctuation/whitespace trimmed."""
+    return ACCESSED_RE.sub("", text).strip(" ,.")

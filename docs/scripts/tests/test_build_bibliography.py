@@ -84,5 +84,21 @@ class TestNormalizeUrl(unittest.TestCase):
         )
 
 
+class TestAccessDate(unittest.TestCase):
+    def test_extracts_accessed_date(self):
+        from build_bibliography import extract_access_date
+        text = "California Civil Code § 1550 (2024) - Justia Law, accessed September 19, 2025,"
+        self.assertEqual(extract_access_date(text), "September 19, 2025")
+
+    def test_returns_none_when_absent(self):
+        from build_bibliography import extract_access_date
+        self.assertIsNone(extract_access_date("No date marker here at all."))
+
+    def test_strip_removes_accessed_clause_and_trims_punctuation(self):
+        from build_bibliography import strip_access_date
+        text = "Justia Law, accessed September 19, 2025,"
+        self.assertEqual(strip_access_date(text), "Justia Law")
+
+
 if __name__ == "__main__":
     unittest.main()
