@@ -444,6 +444,25 @@ class TestDedupe(unittest.TestCase):
         href2 = SELF_CITATION_HTML[keys[1]]
         self.assertNotEqual(_dedup_key("display text", href1), _dedup_key("display text", href2))
 
+    def test_legal_entries_dedup_by_display_text_not_aggregator_url(self):
+        from build_bibliography import dedupe, RawEntry
+        raw1 = RawEntry(text="t1", href="https://shouselaw.com/x", citing_html="docs/a.html", source_file="docs/a.xml")
+        raw2 = RawEntry(text="t2", href="https://justia.com/y", citing_html="docs/b.html", source_file="docs/b.xml")
+        classified = [("legal", "Cal. Penal Code § 647 ([year unknown]).", raw1),
+                      ("legal", "Cal. Penal Code § 647 ([year unknown]).", raw2)]
+        result = dedupe(classified)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(sorted(result[0].citing_htmls), ["docs/a.html", "docs/b.html"])
+
+    def test_secondary_entries_with_different_urls_still_dedup_by_url_not_text(self):
+        from build_bibliography import dedupe, RawEntry
+        raw1 = RawEntry(text="t1", href="https://a.example.com/x", citing_html="docs/a.html", source_file="docs/a.xml")
+        raw2 = RawEntry(text="t2", href="https://b.example.com/y", citing_html="docs/b.html", source_file="docs/b.xml")
+        classified = [("secondary", "Same display text coincidentally.", raw1),
+                      ("secondary", "Same display text coincidentally.", raw2)]
+        result = dedupe(classified)
+        self.assertEqual(len(result), 2)
+
 
 class TestVerifyInvariants(unittest.TestCase):
     def _entry(self, section, display, htmls):

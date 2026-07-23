@@ -430,8 +430,15 @@ class BibliographyEntry:
     dedup_key: str
 
 
-def _dedup_key(display_text, href):
-    if href:
+def _dedup_key(display_text, href, section=None):
+    """Dedup key for an entry. For "legal" entries, the elevated Bluebook
+    citation string itself IS the canonical identity -- the href is just
+    the incidental aggregator URL (shouselaw.com, justia.com, ...) a
+    works-cited entry happened to link to, and the same statute/case is
+    routinely linked from 2-3 different aggregator sites. Every other
+    section keys on normalized URL when present, else normalized display
+    text, as before."""
+    if section != "legal" and href:
         return "url:" + normalize_url(href)
     return "text:" + _normalize_ws(display_text.lower())
 
@@ -439,12 +446,15 @@ def _dedup_key(display_text, href):
 def dedupe(classified):
     """[BibliographyEntry, ...] merging (section, display_text, raw_entry)
     triples that share a dedup key (normalized URL if present, else
-    normalized display text), unioning citing_htmls and keeping the
-    first-seen display text/section, in file-walk order."""
+    normalized display text -- except "legal" entries, which always key
+    on normalized display text since the Bluebook citation string is the
+    canonical identity there, not the incidental aggregator URL),
+    unioning citing_htmls and keeping the first-seen display text/section,
+    in file-walk order."""
     by_key = {}
     order = []
     for section, display, raw in classified:
-        key = _dedup_key(display, raw.href)
+        key = _dedup_key(display, raw.href, section)
         if key not in by_key:
             by_key[key] = BibliographyEntry(section=section, display=display, citing_htmls=[], dedup_key=key)
             order.append(key)
@@ -475,7 +485,7 @@ def verify_invariants(raw_entries, appendix_entries, legal_entries, secondary_en
         if section == "appendix":
             if display not in appendix_set:
                 violations.append(f"raw entry lost (missing from appendix): {raw.text!r}")
-        elif _dedup_key(display, raw.href) not in output_keys:
+        elif _dedup_key(display, raw.href, section) not in output_keys:
             violations.append(f"raw entry lost (missing from {section}): {raw.text!r}")
 
     for e in legal_entries:
@@ -514,7 +524,7 @@ def verify_bib_coverage(bib_entries, bib_classified, legal_entries, secondary_en
     output_by_key = {e.dedup_key: e for e in legal_entries + secondary_entries}
     violations = []
     for entry, (section, display, raw) in zip(bib_entries, bib_classified):
-        key = _dedup_key(display, raw.href)
+        key = _dedup_key(display, raw.href, section)
         survivor = output_by_key.get(key)
         if survivor is None or survivor.display != display:
             violations.append(f"bib entry lost to dedup collision: {entry['key']!r}")

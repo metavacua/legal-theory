@@ -259,7 +259,7 @@ XSLT 1.0 transforms to HTML5 and LaTeX, RELAX NG compact schema validation, BibT
 ## Bibliography
 
 - **[Consolidated References & Bibliography](bibliography/references.html)** — every citation
-  in this repository's 117 documents' "works cited" sections plus the flagship paper's
+  across the corpus's works-cited sections plus the flagship paper's
   `bibliography.bib`, deduplicated and elevated to Bluebook (legal sources: cases, statutes,
   regulations) or Chicago Author-Date (everything else) format, with an explicit no-fabrication
   policy — a field not verifiable from the source is marked `[unknown]`, never guessed. Generated
