@@ -290,5 +290,27 @@ class TestClassifyAndFormat(unittest.TestCase):
         self.assertEqual(display, "Systemic_Misclassification")
 
 
+class TestParseBibtex(unittest.TestCase):
+    def test_parses_both_entries_with_correct_types_and_keys(self):
+        from build_bibliography import parse_bibtex
+        entries = parse_bibtex(FIXTURES / "sample.bib")
+        self.assertEqual(len(entries), 2)
+        self.assertEqual(entries[0]["key"], "hay2024larql")
+        self.assertEqual(entries[0]["entry_type"], "misc")
+        self.assertEqual(entries[1]["key"], "litchfield1984")
+        self.assertEqual(entries[1]["entry_type"], "article")
+
+    def test_field_with_nested_braces_extracted_without_the_braces(self):
+        from build_bibliography import parse_bibtex
+        entries = parse_bibtex(FIXTURES / "sample.bib")
+        title = entries[0]["fields"]["title"]
+        self.assertEqual(title, "LARQL --- Lazarus Query Language: A Graph Database Interface")
+
+    def test_no_author_field_is_simply_absent_not_fabricated(self):
+        from build_bibliography import parse_bibtex
+        entries = parse_bibtex(FIXTURES / "sample.bib")
+        self.assertNotIn("author", entries[1]["fields"])
+
+
 if __name__ == "__main__":
     unittest.main()

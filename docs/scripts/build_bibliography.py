@@ -300,3 +300,57 @@ def classify_and_format(raw):
         return "secondary", format_secondary_chicago(raw.text, raw.href)
 
     return "appendix", raw.text
+
+
+_BIB_ENTRY_START_RE = re.compile(r"@(?P<type>\w+)\{(?P<key>[^,\s]+),")
+_BIB_FIELD_NAME_RE = re.compile(r"(?P<name>\w+)\s*=\s*\{")
+
+
+def _read_balanced(text, start):
+    """text[start] must be '{'. Returns (contents without outer braces,
+    index just after the matching closing brace), correctly handling
+    arbitrarily nested {..} inside."""
+    assert text[start] == "{"
+    depth = 0
+    i = start
+    while i < len(text):
+        if text[i] == "{":
+            depth += 1
+        elif text[i] == "}":
+            depth -= 1
+            if depth == 0:
+                return text[start + 1:i], i + 1
+        i += 1
+    raise ValueError(f"unbalanced braces in BibTeX starting at index {start}")
+
+
+def _strip_inner_braces(value):
+    return re.sub(r"[{}]", "", value)
+
+
+def parse_bibtex(path):
+    """[{"key": str, "entry_type": str, "fields": dict[str, str]}, ...]
+    for every @type{key, ...} entry in a BibTeX file. Field values are
+    extracted with a manual balanced-brace scan (not a pure regex) since
+    nested braces like {{LARQL} --- {Lazarus Query Language}} defeat a
+    naive non-greedy regex, which stops at the first closing brace."""
+    text = Path(path).read_text(encoding="utf-8")
+    entries = []
+    for m in _BIB_ENTRY_START_RE.finditer(text):
+        open_brace_idx = text.index("{", m.start())
+        _, end_idx = _read_balanced(text, open_brace_idx)
+        body = text[m.end():end_idx - 1]
+
+        fields = {}
+        for fm in _BIB_FIELD_NAME_RE.finditer(body):
+            value_raw, _ = _read_balanced(body, fm.end() - 1)
+            value = " ".join(_strip_inner_braces(value_raw).split())
+            if value:
+                fields[fm.group("name").lower()] = value
+
+        entries.append({
+            "key": m.group("key").strip(),
+            "entry_type": m.group("type").lower(),
+            "fields": fields,
+        })
+    return entries
