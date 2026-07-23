@@ -56,10 +56,14 @@ class Candidate:
     heading_collision: bool = False
 
 
+_ALPHANUMERIC_CODE_RE = re.compile(r"\d+[A-Z]$")
+
+
 def _is_excluded_context(preceding_text):
     """True if the text immediately before a candidate marker signals a
-    statute pincite, a decimal Rule/Section/Article label, or any other
-    decimal number rather than a real footnote.
+    statute pincite, a decimal Rule/Section/Article label, an
+    alphanumeric regulatory-code pincite, or any other decimal number
+    rather than a real footnote.
 
     The decisive, general signal is structural: if the character right
     before the marker's "." is itself a digit, the "." is splitting a
@@ -74,8 +78,21 @@ def _is_excluded_context(preceding_text):
     and silently dropped real footnotes, with no confirmed corpus
     instance it uniquely caught beyond what this digit-adjacency rule
     already handles.
+
+    Whole-branch review fix: alphanumeric regulatory-code pincites like
+    "NAC 441A.800" are NOT caught by the digit-adjacency rule above --
+    the character immediately before the "." is a letter ("A"), not a
+    digit. Left unexcluded, these inflate max_footnote for the
+    documents that cite them, wrongly flagging real documents as
+    degenerate (measured: 2 real corpus documents affected). Added a
+    second, additive check: if the text immediately before the marker
+    ends in a digit run followed by a single uppercase letter (e.g.
+    "441A"), it is a code-like alphanumeric token, not prose a real
+    footnote is glued to.
     """
-    return bool(preceding_text and preceding_text[-1].isdigit())
+    if preceding_text and preceding_text[-1].isdigit():
+        return True
+    return bool(_ALPHANUMERIC_CODE_RE.search(preceding_text))
 
 
 def _element_body_text(el):
@@ -123,8 +140,8 @@ def locate_works_cited(content_files):
 
 class _HeadingTextCollector(html.parser.HTMLParser):
     """Splits an HTML document's text into heading_text (everything
-    inside an <h1>-<h6> element) and body_text (everything else),
-    for is_inside_heading's second, HTML-side signal.
+    inside an <h1>-<h6> element) and body_text (everything else), used
+    by _marker_collides_with_heading's heading-collision signal.
 
     Deviation from the Task 4 brief's literal sample code: the brief's
     version has no notion of <script>/<style> content and feeds every
@@ -176,23 +193,10 @@ class _HeadingTextCollector(html.parser.HTMLParser):
         (self.heading_text if self.heading_depth > 0 else self.body_text).append(data)
 
 
-def is_inside_heading(html_path, marker_text):
-    """True if marker_text appears only inside an <h1>-<h6> element in
-    the built HTML at html_path, False if it appears in body text (or
-    both, or neither) -- a second, independently-derived signal that a
-    candidate is real body content rather than a section-heading number
-    the XML-side <title> exclusion should already have caught."""
-    parser = _HeadingTextCollector()
-    parser.feed(Path(html_path).read_text(encoding="utf-8"))
-    in_heading = marker_text in "".join(parser.heading_text)
-    in_body = marker_text in "".join(parser.body_text)
-    return in_heading and not in_body
-
-
 def _marker_collides_with_heading(html_path, marker_text):
-    """True if marker_text appears anywhere inside an <h1>-<h6> element
-    in the built HTML at html_path, regardless of whether it ALSO
-    appears in body text.
+    """True if marker_text (e.g. ".9") collides with a genuine,
+    standalone footnote-shaped number inside an <h1>-<h6> element in
+    the built HTML at html_path.
 
     Deviation from the Task 5 brief's literal Step 4 sample, which
     reuses is_inside_heading (Task 4) directly as this flag's
@@ -219,13 +223,25 @@ def _marker_collides_with_heading(html_path, marker_text):
     implement. Fixed by adding this separate, deliberately looser
     "appears anywhere in a heading" signal -- reusing the existing
     _HeadingTextCollector rather than duplicating its HTML-parsing
-    logic -- and using it (not is_inside_heading) as the
-    heading_collision trigger in audit_document. is_inside_heading
-    itself is left untouched; Task 4's own tests still exercise its
-    original, stricter semantics unchanged."""
+    logic.
+
+    Whole-branch review fix: the original looser signal was a plain
+    substring check (marker_text in heading_text). Since marker_text is
+    always ".N", that matched ANY decimal number in the heading ending
+    in that digit -- a heading like "Section 1.1:" made every real
+    footnote ".1" in the document collide, which dominated the real
+    corpus's "Needs manual triage" tier with noise (measured: 1136
+    spurious flags). Fixed with a word-boundary-aware regex requiring
+    the marker's digits not be adjacent to other digits in the heading
+    text -- the same digit-adjacency principle find_candidates' own
+    _is_excluded_context already uses to distinguish a real marker from
+    a decimal number it is part of."""
     parser = _HeadingTextCollector()
     parser.feed(Path(html_path).read_text(encoding="utf-8"))
-    return marker_text in "".join(parser.heading_text)
+    heading_text = "".join(parser.heading_text)
+    number = marker_text.lstrip(".")
+    pattern = re.compile(r"(?<!\d)\." + re.escape(number) + r"(?!\d)")
+    return bool(pattern.search(heading_text))
 
 
 @dataclass
@@ -376,18 +392,40 @@ def score_document(audit):
 def detect_restart_index(numbers):
     """Detect the index in a document-order candidate-number sequence
     where footnote numbering restarts mid-document: a drop from a high
-    value to a low one that STAYS low for several subsequent markers,
-    as opposed to a single-value dip consistent with ordinary
-    out-of-order reuse of a low footnote number. Returns the index of
-    the first low value in that sustained drop, or None if no such
-    restart is present."""
+    value to a low one that STAYS low for several subsequent markers
+    AND never climbs back near its pre-drop height for the rest of the
+    document, as opposed to a single-value dip or a low-number-reuse
+    cluster consistent with ordinary out-of-order reuse of a low
+    footnote number that resumes climbing afterward. Returns the index
+    of the first low value in that sustained drop, or None if no such
+    restart is present.
+
+    Whole-branch review fix: corpus-wide measurement found 37 of 38
+    real restart_detected flags were false positives -- an ordinary
+    low-number-reuse cluster mid-climb that RESUMES climbing
+    afterward, not a genuine renumbering restart (e.g.
+    [29, 26, 27, 1, 1, 12, 12, 12, 33]: dips to 1,1,12,12,12 then
+    climbs right back to 33, proving reuse, not a restart). The
+    original heuristic only checked that the _RESTART_RUN_LENGTH
+    markers immediately after the drop were low; it never checked
+    whether the sequence ever climbs back near its pre-drop height
+    afterward, which is exactly what distinguishes a genuine restart
+    (never returns) from reuse (returns). Added a second check after
+    the existing window test: the remainder of the sequence from the
+    dip onward must never climb back to within _RESTART_DROP_THRESHOLD
+    of the pre-drop value.
+    """
     for i in range(1, len(numbers)):
         prev, cur = numbers[i - 1], numbers[i]
         if cur > _RESTART_LOW_CEILING or prev - cur < _RESTART_DROP_THRESHOLD:
             continue
         window = numbers[i:i + _RESTART_RUN_LENGTH]
-        if len(window) == _RESTART_RUN_LENGTH and all(n <= _RESTART_LOW_CEILING * 2 for n in window):
-            return i
+        if len(window) != _RESTART_RUN_LENGTH or not all(n <= _RESTART_LOW_CEILING * 2 for n in window):
+            continue
+        remainder = numbers[i:]
+        if max(remainder, default=0) >= prev - _RESTART_DROP_THRESHOLD:
+            continue
+        return i
     return None
 
 
