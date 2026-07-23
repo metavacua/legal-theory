@@ -1,0 +1,608 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="part-iv-strategic-risk-assessment-and-actionable-recommendations">
+  <title>
+    <emphasis role="strong">Part IV: Strategic Risk Assessment
+    and Actionable Recommendations</emphasis>
+  </title>
+  <para>
+      The preceding analysis reveals a project operating within a
+      three-way legal conflict between Google's restrictive terms of
+      service, the viral obligations of the chosen GPL 3.0 license, and
+      the unsettled nature of U.S. copyright law regarding AI. To
+      proceed, the project must adopt a new, more defensible legal and
+      technical posture.
+    </para>
+  <section xml:id="a-synthesis-of-the-core-incompatibilities">
+    <title>
+      <emphasis role="strong">A Synthesis of the Core
+      Incompatibilities</emphasis>
+    </title>
+    <para>
+        The project is currently positioned at the intersection of three
+        fundamental incompatibilities:
+      </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Google's ToS vs. Project
+            Intent:</emphasis> Google's terms prohibit developing
+            "related technology," while the project's entire
+            purpose is to formalize a methodology for AI agent
+            self-improvement.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">GPL 3.0 vs. Google's Business
+            Model:</emphasis> The choice of a strong copyleft license
+            for a public repository explicitly enabled for training
+            creates a potential "poison pill" that is
+            existentially threatening to Google's proprietary model.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">GPL 3.0 vs. AI-Generated
+            Output:</emphasis> The GPL's copyleft mechanism is rendered
+            partially ineffective by the public domain status of purely
+            AI-generated contributions, creating a "copyleft
+            hole" that undermines the license's integrity.
+          </para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="a-blueprint-for-compliant-and-defensible-operation">
+    <title>
+      <emphasis role="strong">A Blueprint for Compliant and
+      Defensible Operation</emphasis>
+    </title>
+    <para>
+        The current configuration is legally untenable. The following
+        recommendations are designed to move the project from a
+        high-risk, legally antagonistic position to a low-risk, legally
+        defensible one.
+      </para>
+    <section xml:id="immediate-mandates-non-negotiable">
+      <title>
+        <emphasis role="strong">Immediate Mandates
+        (Non-Negotiable)</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Cease Use of Personal Google
+              Accounts:</emphasis> The project must immediately
+              transition all interactions with Jules and the Gemini API
+              to a paid-tier Google Cloud or Google Workspace account.
+              This is the only way to gain the contractual data
+              confidentiality and IP protections necessary to safeguard
+              the project's work from being used to train Google's
+              models.6
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Make the SynthPlayground
+              Repository Private:</emphasis> The combination of a public
+              repository, a strong copyleft license, and the
+              "enable training" flag creates an unacceptably
+              high-risk legal posture. By making the repository private,
+              the project severs the "public performance" and
+              "distribution" elements that trigger the most
+              dangerous interpretations of the GPL and AGPL. This single
+              action largely neutralizes the "poison pill"
+              threat by removing the public conveyance of the licensed
+              work.
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="licensing-strategy-re-evaluation">
+      <title>
+        <emphasis role="strong">Licensing Strategy
+        Re-evaluation</emphasis>
+      </title>
+      <para>
+          The choice of GPL 3.0, while ideologically aligned with free
+          software principles, is a high-risk choice for this specific
+          use case due to its volatile interaction with unsettled AI
+          legal questions. A re-evaluation is strongly recommended. The
+          following table compares the GPL with more suitable
+          alternatives.
+        </para>
+      <informaltable>
+        <tgroup cols="5">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                  License
+                </entry>
+              <entry>
+                  Derivative Works Obligation
+                </entry>
+              <entry>
+                  Network Service Obligation
+                </entry>
+              <entry>
+                  Patent Grant
+                </entry>
+              <entry>
+                  Key Implication for SynthPlayground
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **MIT**
+                </entry>
+              <entry>
+                  None. Derivative works can be proprietary.46
+                </entry>
+              <entry>
+                  None.
+                </entry>
+              <entry>
+                  No explicit grant.
+                </entry>
+              <entry>
+                  **Low Risk.** Removes the "poison pill"
+                  threat and "copyleft hole" problem.
+                  Maximizes legal simplicity and safety but sacrifices
+                  the share-alike requirement.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Apache 2.0**
+                </entry>
+              <entry>
+                  None. Derivative works can be proprietary.46
+                </entry>
+              <entry>
+                  None.
+                </entry>
+              <entry>
+                  Yes, explicit grant from contributors.47
+                </entry>
+              <entry>
+                  **Low Risk.** Similar to MIT but provides explicit
+                  protection against patent trolling. Legally more
+                  verbose but robust for corporate environments.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **GPL 3.0**
+                </entry>
+              <entry>
+                  **Strong Copyleft.** Derivative works must also be
+                  licensed under GPL 3.0.20
+                </entry>
+              <entry>
+                  None (this is the "SaaS loophole").30
+                </entry>
+              <entry>
+                  Yes, explicit grant from contributors.18
+                </entry>
+              <entry>
+                  **High Risk (Current Choice).** Creates the
+                  "poison pill" threat when public. The
+                  "copyleft hole" from AI output undermines
+                  its core purpose.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **AGPL 3.0**
+                </entry>
+              <entry>
+                  **Strong Copyleft.**
+                </entry>
+              <entry>
+                  **Yes.** Users interacting over a network must be
+                  offered the source code.29
+                </entry>
+              <entry>
+                  Yes, explicit grant from contributors.
+                </entry>
+              <entry>
+                  **Very High Risk.** Explicitly codifies the network
+                  interaction obligation, making the legal argument
+                  against Google even more direct and antagonistic. Not
+                  recommended.
+                </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>
+          The most prudent course of action is to re-license the
+          repository under a permissive license like
+          <emphasis role="strong">MIT</emphasis> or
+          <emphasis role="strong">Apache 2.0</emphasis>. This would
+          resolve the central conflict with Google's business model
+          while the project operates in a private, controlled
+          environment.
+        </para>
+    </section>
+    <section xml:id="architectural-safeguards-a-provenance-first-design">
+      <title>
+        <emphasis role="strong">Architectural Safeguards: A
+        'Provenance-First' Design</emphasis>
+      </title>
+      <para>
+          Regardless of the license chosen, the most effective strategy
+          for securing the project's own intellectual property is to
+          architect the system to meticulously track and log human
+          versus AI contributions. Adopting a
+          "provenance-first" architecture is the single most
+          effective way to establish human authorship over the final
+          work product.49
+        </para>
+      <para>
+          This approach involves creating an auditable "Copyright
+          Provenance Ledger" that records every legally significant
+          creative act: every prompt, every AI generation, and, most
+          critically, every human modification, selection, and
+          arrangement.49 By logging this granular evidence, the project
+          can definitively prove the "quantum of human creative
+          contribution" required by the U.S. Copyright Office. This
+          allows the project to confidently disclaim the purely
+          AI-generated portions while asserting strong copyright
+          ownership over the human-authored modifications and the
+          creative work as a whole.41 This transforms the repository
+          from a simple codebase into a legally defensible evidentiary
+          record of human creativity.
+        </para>
+    </section>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              Jules Environment Limitations Analysis
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Architecting the Symbiont: A Step-by-Step Manual for an
+              AI-Centric Development Environment
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Jules Repository Setup and Self-Improvement
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              GitHub Repository Setup for Jules
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Architecting an Introspection and Orientation Framework
+              for the Jules AI Coding Assistant Using Open Deep Research
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              AI Toolchain, Licensing, and ToS
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Open Research, AI Pro TOS Analysis
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              AI Agent Architecture for Code Introspection
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Generative AI Prohibited Use Policy, accessed October 7,
+              2025,
+              <link xlink:href="https://policies.google.com/terms/generative-ai/use-policy">https://policies.google.com/terms/generative-ai/use-policy</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Explore our Privacy Policy, Terms of Service and AI
+              Principles - Transparency Center, accessed October 7,
+              2025,
+              <link xlink:href="https://transparency.google/intl/en/our-policies/privacy-policy-terms-of-service">https://transparency.google/intl/en/our-policies/privacy-policy-terms-of-service</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Generative AI Additional Terms of Service - Google's
+              Policies, accessed October 7, 2025,
+              <link xlink:href="https://policies.google.com/terms/generative-ai">https://policies.google.com/terms/generative-ai</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Google's new Jules coding agent is free to use for anyone
+              – and it just got a big update to prevent bad code output
+              - ITPro, accessed October 7, 2025,
+              <link xlink:href="https://www.itpro.com/software/development/google-jules-coding-agent-code-quality-update">https://www.itpro.com/software/development/google-jules-coding-agent-code-quality-update</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Gemini API Additional Terms of Service | Google AI for
+              Developers, accessed October 7, 2025,
+              <link xlink:href="https://ai.google.dev/gemini-api/terms">https://ai.google.dev/gemini-api/terms</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Will Google's Jules AI Start Making Games on Its Own? :
+              r/gamedev - Reddit, accessed October 7, 2025,
+              <link xlink:href="https://www.reddit.com/r/gamedev/comments/1mrzc26/will_googles_jules_ai_start_making_games_on_its/">https://www.reddit.com/r/gamedev/comments/1mrzc26/will_googles_jules_ai_start_making_games_on_its/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Generative AI in Google Workspace Privacy Hub, accessed
+              October 7, 2025,
+              <link xlink:href="https://support.google.com/a/answer/15706919?hl=en">https://support.google.com/a/answer/15706919?hl=en</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Legal Definitions of AI: Considerations and Common Threads
+              - Sourcing Speak, accessed October 7, 2025,
+              <link xlink:href="https://www.sourcingspeak.com/legal-definitions-ai/">https://www.sourcingspeak.com/legal-definitions-ai/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              AI Terms in Commercial Agreements: Safeguarding Your
+              Business in the Era of Artificial Intelligence – A Blog
+              Post by David Goldenberg - VLP Law Group LLP, accessed
+              October 7, 2025,
+              <link xlink:href="https://www.vlplawgroup.com/blog/2024/12/02/ai-terms-in-commercial-agreements-safeguarding-your-business-in-the-era-of-artificial-intelligence-a-blog-post-by-david-goldenberg/">https://www.vlplawgroup.com/blog/2024/12/02/ai-terms-in-commercial-agreements-safeguarding-your-business-in-the-era-of-artificial-intelligence-a-blog-post-by-david-goldenberg/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              A Quick Guide to GPLv3 - GNU Project - Free Software
+              Foundation, accessed October 7, 2025,
+              <link xlink:href="https://www.gnu.org/licenses/quick-guide-gplv3.html">https://www.gnu.org/licenses/quick-guide-gplv3.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              GNU Affero General Public License - GNU Project - Free
+              Software ..., accessed October 7, 2025,
+              <link xlink:href="https://www.gnu.org/licenses/agpl-3.0.html">https://www.gnu.org/licenses/agpl-3.0.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Navigating Licensing Issues in AI-Generated Code | by
+              Vidhyalakshmi GRB - Medium, accessed October 7, 2025,
+              <link xlink:href="https://medium.com/@vidhyalakshmi_balasubramanian/navigating-licensing-issues-in-ai-generated-code-defdedc73fe1">https://medium.com/@vidhyalakshmi_balasubramanian/navigating-licensing-issues-in-ai-generated-code-defdedc73fe1</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Solving Open Source Problems With AI Code Generators –
+              Legal issues and Solutions - Law of The Ledger, accessed
+              October 7, 2025,
+              <link xlink:href="https://www.lawoftheledger.com/wp-content/uploads/sites/15/2023/08/AI-Code-Generators-Articles-0823.pdf">https://www.lawoftheledger.com/wp-content/uploads/sites/15/2023/08/AI-Code-Generators-Articles-0823.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Comments on Copyright Office Docket 2023-6 from Software
+              ..., accessed October 7, 2025,
+              <link xlink:href="https://sfconservancy.org/static/docs/2023-10-30_Software-Freedom-Conservancy-Copyright-Office-Generative-AI-Comments-Docket-2023-6.pdf">https://sfconservancy.org/static/docs/2023-10-30_Software-Freedom-Conservancy-Copyright-Office-Generative-AI-Comments-Docket-2023-6.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Open source licenses need to leave the 1980s and evolve to
+              deal with AI | Hacker News, accessed October 7, 2025,
+              <link xlink:href="https://news.ycombinator.com/item?id=36444854">https://news.ycombinator.com/item?id=36444854</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Give Up GitHub - Software Freedom Conservancy, accessed
+              October 7, 2025,
+              <link xlink:href="https://sfconservancy.org/GiveUpGitHub/">https://sfconservancy.org/GiveUpGitHub/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Project Uses Code Under Non-Permissive License to train AI
+              models in violation of these licenses. · Issue #9 ·
+              bigcode-project/starcoder - GitHub, accessed October 7,
+              2025,
+              <link xlink:href="https://github.com/bigcode-project/starcoder/issues/9">https://github.com/bigcode-project/starcoder/issues/9</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              GNU Affero General Public License v3 (AGPL-3.0) Explained
+              in Plain English - TLDRLegal, accessed October 7, 2025,
+              <link xlink:href="https://www.tldrlegal.com/license/gnu-affero-general-public-license-v3-agpl-3-0">https://www.tldrlegal.com/license/gnu-affero-general-public-license-v3-agpl-3-0</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The fundamentals of the AGPLv3 - Free Software Foundation,
+              accessed October 7, 2025,
+              <link xlink:href="https://www.fsf.org/bulletin/2021/fall/the-fundamentals-of-the-agplv3">https://www.fsf.org/bulletin/2021/fall/the-fundamentals-of-the-agplv3</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Why the GNU Affero GPL - GNU Project - Free Software
+              Foundation, accessed October 7, 2025,
+              <link xlink:href="https://www.gnu.org/licenses/why-affero-gpl.html">https://www.gnu.org/licenses/why-affero-gpl.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Do I need to provide access to source code under the
+              AGPLv3 license? - Opensource.com, accessed October 7,
+              2025,
+              <link xlink:href="https://opensource.com/article/17/1/providing-corresponding-source-agplv3-license">https://opensource.com/article/17/1/providing-corresponding-source-agplv3-license</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Reading AGPL - /dev/lawyer, accessed October 7, 2025,
+              <link xlink:href="https://writing.kemitchell.com/2021/01/24/Reading-AGPL">https://writing.kemitchell.com/2021/01/24/Reading-AGPL</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              On the Possibility of Breaking Copyleft Licenses When
+              Reusing Code Generated by ChatGPT - arXiv, accessed
+              October 7, 2025,
+              <link xlink:href="https://arxiv.org/html/2502.05023v1">https://arxiv.org/html/2502.05023v1</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Hidden risks of AI and open-source software - Insight -
+              MinterEllison, accessed October 7, 2025,
+              <link xlink:href="https://www.minterellison.com/articles/decoding-risks-within-ai-and-open-source-software">https://www.minterellison.com/articles/decoding-risks-within-ai-and-open-source-software</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Open source license for humans so code not usable for AI.
+              : r/opensource - Reddit, accessed October 7, 2025,
+              <link xlink:href="https://www.reddit.com/r/opensource/comments/1husspv/open_source_license_for_humans_so_code_not_usable/">https://www.reddit.com/r/opensource/comments/1husspv/open_source_license_for_humans_so_code_not_usable/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Training Generative AI Models on Copyrighted Works Is Fair
+              Use - Association of Research Libraries, accessed October
+              7, 2025,
+              <link xlink:href="https://www.arl.org/blog/training-generative-ai-models-on-copyrighted-works-is-fair-use/">https://www.arl.org/blog/training-generative-ai-models-on-copyrighted-works-is-fair-use/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Challenges For License Compliance And Copyright With
+              AI - Mend.io, accessed October 7, 2025,
+              <link xlink:href="https://www.mend.io/blog/the-challenges-for-license-compliance-and-copyright-with-ai/">https://www.mend.io/blog/the-challenges-for-license-compliance-and-copyright-with-ai/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Navigating the Legal Landscape of AI-Generated Code:
+              Ownership and Liability Challenges, accessed October 7,
+              2025,
+              <link xlink:href="https://www.mbhb.com/intelligence/snippets/navigating-the-legal-landscape-of-ai-generated-code-ownership-and-liability-challenges/">https://www.mbhb.com/intelligence/snippets/navigating-the-legal-landscape-of-ai-generated-code-ownership-and-liability-challenges/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Is AI generated code copyright protected? - Reddit,
+              accessed October 7, 2025,
+              <link xlink:href="https://www.reddit.com/r/COPYRIGHT/comments/1m6b8pv/is_ai_generated_code_copyright_protected/">https://www.reddit.com/r/COPYRIGHT/comments/1m6b8pv/is_ai_generated_code_copyright_protected/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright and Artificial Intelligence, Part 2
+              Copyrightability Report - U.S. Copyright Office, accessed
+              October 7, 2025,
+              <link xlink:href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf">https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Generative Artificial Intelligence and Copyright Law -
+              Congress.gov, accessed October 7, 2025,
+              <link xlink:href="https://www.congress.gov/crs-product/LSB10922">https://www.congress.gov/crs-product/LSB10922</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              AI, Corporate Personhood, and Legal Rights
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Generative AI Generates Excitement—and Copyright Concerns
+              - Jones Day, accessed October 7, 2025,
+              <link xlink:href="https://www.jonesday.com/en/insights/2023/04/generative-ai-generates-copyright-concerns">https://www.jonesday.com/en/insights/2023/04/generative-ai-generates-copyright-concerns</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Is It Possible to Copyright Works That Include
+              AI-Generated Material? - Goodwin, accessed October 7,
+              2025,
+              <link xlink:href="https://www.goodwinlaw.com/en/insights/publications/2023/10/insights-technology-aiml-is-it-possible-to-copyright-works">https://www.goodwinlaw.com/en/insights/publications/2023/10/insights-technology-aiml-is-it-possible-to-copyright-works</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              US Copyright Office Report on AI: Pure AI Works
+              Unprotected - The National Law Review, accessed October 7,
+              2025,
+              <link xlink:href="https://natlawreview.com/article/clarifying-copyrightability-ai-assisted-works">https://natlawreview.com/article/clarifying-copyrightability-ai-assisted-works</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Who Owns the Copyright to AI-Generated Works?, accessed
+              October 7, 2025,
+              <link xlink:href="https://copyrightalliance.org/faqs/artificial-intelligence-copyright-ownership/">https://copyrightalliance.org/faqs/artificial-intelligence-copyright-ownership/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What happens when code written with GenAI is open-sourced?
+              - Law Stack Exchange, accessed October 7, 2025,
+              <link xlink:href="https://law.stackexchange.com/questions/107474/what-happens-when-code-written-with-genai-is-open-sourced">https://law.stackexchange.com/questions/107474/what-happens-when-code-written-with-genai-is-open-sourced</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Which License Should I Use? MIT vs. Apache vs. GPL -
+              Exygy, accessed October 7, 2025,
+              <link xlink:href="https://www.exygy.com/blog/which-license-should-i-use-mit-vs-apache-vs-gpl">https://www.exygy.com/blog/which-license-should-i-use-mit-vs-apache-vs-gpl</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Various Licenses and Comments about Them - GNU Project -
+              Free Software Foundation, accessed October 7, 2025,
+              <link xlink:href="https://www.gnu.org/licenses/license-list.html">https://www.gnu.org/licenses/license-list.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Open Source License Comparison: Connecting and Contrasting
+              The Dots - Mend.io, accessed October 7, 2025,
+              <link xlink:href="https://www.mend.io/blog/open-source-licenses-comparison-guide/">https://www.mend.io/blog/open-source-licenses-comparison-guide/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              AI-Assisted Copyright Tool Blueprint
+            </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

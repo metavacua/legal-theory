@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="findings-stub-implications">
+  <title>Implications for Outstanding Findings Stubs</title>
+  <para>The copyright-ip-authorship matter's findings document is currently a stub in FRCP Rule 52 format awaiting completion. The following findings of fact, drawn from the primary article and the memorisation evidence, are ready for incorporation:</para>
+  <table frame="all" rowsep="1" colsep="1">
+    <title>Proposed Findings of Fact for copyright-ip-authorship Matter</title>
+    <tgroup cols="3">
+      <colspec colname="c1" colwidth="1*" />
+      <colspec colname="c2" colwidth="3*" />
+      <colspec colname="c3" colwidth="2*" />
+      <thead>
+        <row>
+          <entry>FOF #</entry>
+          <entry>Proposed Finding</entry>
+          <entry>Supporting Evidence</entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry>FOF-AI-1</entry>
+          <entry>The FFN layers of a transformer LLM function as key-value stores structurally isomorphic to a property graph.</entry>
+          <entry>LARQL demonstration; Self-Attention as Parametric Endofunctor (arXiv:2501.02931)</entry>
+        </row>
+        <row>
+          <entry>FOF-AI-2</entry>
+          <entry>LARQL v0.x returns labelled directed edges from a transformer's weights via declarative LQL queries, without retraining or structural modification.</entry>
+          <entry>github.com/chrishayuk/larql; YouTube demonstration</entry>
+        </row>
+        <row>
+          <entry>FOF-AI-3</entry>
+          <entry>Llama 3.1 70B regenerates the first Harry Potter novel near-verbatim from a seed of the opening tokens.</entry>
+          <entry>Cooper et al. 2025 (arXiv:2505.12546)</entry>
+        </row>
+        <row>
+          <entry>FOF-AI-4</entry>
+          <entry>Over 100 near-identical training images, including trademarked logos, were extracted from Stable Diffusion and Imagen.</entry>
+          <entry>Carlini et al. 2023 (arXiv:2301.13188)</entry>
+        </row>
+        <row>
+          <entry>FOF-AI-5</entry>
+          <entry>A measurable share of ostensibly novel diffusion-model image outputs are near-exact copies of training images.</entry>
+          <entry>Somepalli et al. 2023 (CVPR 2023)</entry>
+        </row>
+        <row>
+          <entry>FOF-AI-6</entry>
+          <entry>OpenAI and Google stated to the U.S. Copyright Office that their models store no copies of training data — only numbers.</entry>
+          <entry>Admissions compilation (arXiv:2603.20957)</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
+  <para>Conclusions of law flowing from FOF-AI-1 through FOF-AI-6: an LLM trained on protected works is (a) a derivative work, (b) a collective work, and (c) a database as defined under applicable database-right regimes; distributing it distributes copies; the fair-use affirmative defence is undermined by the memorisation record.</para>
+</section>
+

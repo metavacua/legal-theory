@@ -1,0 +1,727 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="viii-conclusion-synthesizing-llms-and-category-theory-for-deeper-understanding">
+  <title>
+    <emphasis role="strong">VIII. Conclusion: Synthesizing LLMs
+    and Category Theory for Deeper Understanding</emphasis>
+  </title>
+  <para>
+      The exploration of Large Language Models through the prism of
+      category theory represents a nascent but profoundly promising
+      frontier in artificial intelligence research. It seeks to move
+      beyond empirical observation and ad-hoc engineering towards a more
+      fundamental, mathematical understanding of these complex systems.
+    </para>
+  <section xml:id="a-recapitulation-of-key-findings">
+    <title>
+      <emphasis role="strong">A. Recapitulation of Key
+      Findings</emphasis>
+    </title>
+    <para>
+        This report has surveyed various avenues through which LLM
+        components and processes can be interpreted using categorical
+        concepts. Neural network layers find natural analogues as
+        morphisms transforming objects (representations) within
+        categories like vector spaces. The pivotal self-attention
+        mechanism, particularly its linear components, can be formalized
+        as a parametric endofunctor, with stacked attention layers
+        potentially forming a free monad—revealing an inherent algebraic
+        structure in Transformer architectures. The learning process
+        itself, exemplified by backpropagation, has been shown to
+        possess functorial properties, implying a deep compositional
+        structure in how learning algorithms are derived and combined.
+        Furthermore, the autoregressive generation characteristic of
+        many LLMs aligns with monadic structures for sequencing
+        computations. More broadly, different aspects of LLMs—their
+        static architecture, dynamic state evolution, probabilistic
+        nature, and learning dynamics—can potentially be modeled by
+        distinct but related categories. The "internal logics"
+        emerging from these interpretations revolve around principles of
+        compositionality (how operations chain together), hierarchy (how
+        abstract features are built), symmetry and equivariance
+        (structural constraints on transformations), and probabilistic
+        reasoning (the management of uncertainty).
+      </para>
+  </section>
+  <section xml:id="b-the-value-of-a-categorical-perspective">
+    <title>
+      <emphasis role="strong">B. The Value of a Categorical
+      Perspective</emphasis>
+    </title>
+    <para>
+        The primary value of adopting a categorical perspective lies in
+        its provision of a <emphasis role="strong">unifying
+        language</emphasis> and a <emphasis role="strong">rigorous
+        framework</emphasis> for analyzing the inherently compositional
+        nature of LLMs. By abstracting away from the specific numerical
+        details of parameters and focusing on the structure of
+        transformations and their compositions, category theory offers
+        several potential benefits:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Principled Design:</emphasis>
+            Insights into the categorical structure of successful models
+            might guide the design of new architectures with desirable
+            properties (e.g., better generalization, enhanced
+            robustness, or specific invariances).
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Enhanced
+            Interpretability:</emphasis> Understanding the functional
+            roles of components as morphisms or functors within a larger
+            system can aid in demystifying the "black box."
+            For example, identifying which structures are preserved or
+            transformed by certain functors can clarify their
+            contribution.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Deeper Understanding of Emergent
+            Properties:</emphasis> Phenomena like few-shot learning or
+            unexpected capabilities might be explained by universal
+            properties or complex compositional effects within the
+            underlying categorical structure.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Formal Analysis:</emphasis> Category
+            theory provides tools for precise reasoning about systems,
+            potentially enabling formal verification of certain
+            properties or guarantees about model behavior under
+            composition.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="c-towards-a-more-mathematical-theory-of-artificial-general-intelligence">
+    <title>
+      <emphasis role="strong">C. Towards a More Mathematical
+      Theory of Artificial General Intelligence</emphasis>
+    </title>
+    <para>
+        The synthesis of LLM research and category theory is more than
+        an academic exercise in describing current models; it is a
+        potential step towards a more fundamental, mathematical theory
+        of intelligence, particularly artificial general intelligence
+        (AGI). A core aspect of intelligence, whether natural or
+        artificial, appears to be the ability to compose knowledge and
+        processes to solve novel problems and understand complex
+        situations. Category theory, as the "mathematics of
+        composition," is uniquely suited to formalize this aspect.
+        The structured, compositional thinking fostered by category
+        theory 10 is essential for designing, understanding, and
+        ultimately trusting the increasingly complex and powerful AI
+        systems of the future.
+      </para>
+    <para>
+        The ultimate promise of this convergence is not merely to
+        understand <emphasis>how</emphasis> current LLMs work, but to
+        begin to grasp <emphasis>why</emphasis> they work—that is, to
+        identify the fundamental principles of information processing,
+        representation, and composition that they exploit. These
+        principles may well be universal, applicable across different
+        intelligent systems, whether biological or artificial. If LLMs,
+        in their remarkable ability to process language and other
+        complex data, are indeed instantiating deep categorical
+        patterns, then elucidating these patterns will not only advance
+        AI but also enrich our understanding of structure and process in
+        the abstract.
+      </para>
+    <para>
+        Furthermore, a mature categorical theory of LLMs could play a
+        pivotal role in transforming AI engineering from what is often
+        an art—reliant on heuristics, intuition, and extensive empirical
+        experimentation—into a more principled engineering discipline.
+        Much like mathematical physics underpins various branches of
+        physical engineering, providing tools for design, analysis, and
+        prediction, a categorical foundation for AI could enable more
+        systematic exploration of the design space, predictable behavior
+        from composed modules, and potentially even formal verification
+        of critical system properties like safety and reliability. Such
+        a development would signify a profound maturation of the field
+        of artificial intelligence, paving the way for the construction
+        of even more capable, robust, and ultimately, trustworthy AI
+        systems.
+      </para>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              Large Language Models: What You Need to Know in 2025 ...,
+              accessed June 9, 2025,
+              <link xlink:href="https://hatchworks.com/blog/gen-ai/large-language-models-guide/">https://hatchworks.com/blog/gen-ai/large-language-models-guide/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is an LLM (large language model)? | Cloudflare,
+              accessed June 9, 2025,
+              <link xlink:href="https://www.cloudflare.com/learning/ai/what-is-large-language-model/">https://www.cloudflare.com/learning/ai/what-is-large-language-model/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Language Models are Few-Shot Learners, accessed June 9,
+              2025,
+              <link xlink:href="https://arxiv.org/abs/2005.14165">https://arxiv.org/abs/2005.14165</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What are LLM parameters and what is their role? - Pieces
+              for developers, accessed June 9, 2025,
+              <link xlink:href="https://pieces.app/blog/llm-parameters">https://pieces.app/blog/llm-parameters</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Transformer (deep learning architecture) - Wikipedia,
+              accessed June 9, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)">https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Understanding the GPT Architecture: A Comprehensive
+              Overview - DhiWise, accessed June 9, 2025,
+              <link xlink:href="https://www.dhiwise.com/post/understanding-the-gpt-architecture-a-comprehensive-overview">https://www.dhiwise.com/post/understanding-the-gpt-architecture-a-comprehensive-overview</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is GPT (generative pre-trained transformer)? - IBM,
+              accessed June 9, 2025,
+              <link xlink:href="https://www.ibm.com/think/topics/gpt">https://www.ibm.com/think/topics/gpt</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Deep Learning with Category Theory for Developers - ML
+              Conference, accessed June 9, 2025,
+              <link xlink:href="https://mlconference.ai/blog/deep-learning-category-theory-developers/">https://mlconference.ai/blog/deep-learning-category-theory-developers/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Understanding Multi-compositional learning in Vision and
+              Language ..., accessed June 9, 2025,
+              <link xlink:href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06472.pdf">https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06472.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Sridhar Mahadevan Adobe and University of Massachusetts,
+              Amherst, accessed June 9, 2025,
+              <link xlink:href="https://people.cs.umass.edu/~mahadeva/papers/aaai2025-tutorial-th18.pdf">https://people.cs.umass.edu/~mahadeva/papers/aaai2025-tutorial-th18.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Where Does Meaning Live in a Sentence? Math Might Tell Us
+              ..., accessed June 9, 2025,
+              <link xlink:href="https://www.quantamagazine.org/where-does-meaning-live-in-a-sentence-math-might-tell-us-20250409/">https://www.quantamagazine.org/where-does-meaning-live-in-a-sentence-math-might-tell-us-20250409/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Applied category theory - Wikipedia, accessed June 9,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Applied_category_theory">https://en.wikipedia.org/wiki/Applied_category_theory</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Principles of Natural Language, Logic, and Tensor
+              Semantics - DROPS, accessed June 9, 2025,
+              <link xlink:href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol139-calco2019/LIPIcs.CALCO.2019.3/LIPIcs.CALCO.2019.3.pdf">https://drops.dagstuhl.de/storage/00lipics/lipics-vol139-calco2019/LIPIcs.CALCO.2019.3/LIPIcs.CALCO.2019.3.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              DisCoCat - Wikipedia, accessed June 9, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/DisCoCat">https://en.wikipedia.org/wiki/DisCoCat</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Attention Is All You Need - arXiv, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/1706.03762v7">https://arxiv.org/html/1706.03762v7</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Attention Is All You Need - Wikipedia, accessed June 9,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Attention_Is_All_You_Need">https://en.wikipedia.org/wiki/Attention_Is_All_You_Need</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              (PDF) Attention is All you Need (2017) | Ashish Vaswani |
+              88778 Citations - SciSpace, accessed June 9, 2025,
+              <link xlink:href="https://typeset.io/papers/attention-is-all-you-need-1hodz0wcqb">https://typeset.io/papers/attention-is-all-you-need-1hodz0wcqb</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Transformer models: an introduction and catalog - arXiv,
+              accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2302.07730v4">https://arxiv.org/html/2302.07730v4</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              T5 (language model) - Wikipedia, accessed June 9, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/T5_(language_model)">https://en.wikipedia.org/wiki/T5_(language_model)</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Understanding Large Language Model Architectures - WhyLabs
+              AI, accessed June 9, 2025,
+              <link xlink:href="https://whylabs.ai/learning-center/introduction-to-llms/understanding-large-language-model-architectures">https://whylabs.ai/learning-center/introduction-to-llms/understanding-large-language-model-architectures</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How ð¤ Transformers solve tasks - Hugging Face LLM
+              Course, accessed June 9, 2025,
+              <link xlink:href="https://huggingface.co/learn/llm-course/chapter1/5">https://huggingface.co/learn/llm-course/chapter1/5</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              arXiv:1810.04805v2 [cs.CL] 24 May 2019, accessed June 9,
+              2025,
+              <link xlink:href="https://arxiv.org/abs/1810.04805">https://arxiv.org/abs/1810.04805</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              arXiv:1810.04805v2 [cs.CL] 24 May 2019, accessed June 9,
+              2025,
+              <link xlink:href="https://arxiv.org/pdf/1810.04805">https://arxiv.org/pdf/1810.04805</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              BERT Architecture Explained for Beginners - Analytics
+              Vidhya, accessed June 9, 2025,
+              <link xlink:href="https://www.analyticsvidhya.com/blog/2022/11/comprehensive-guide-to-bert/">https://www.analyticsvidhya.com/blog/2022/11/comprehensive-guide-to-bert/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              BERT Model - NLP - GeeksforGeeks, accessed June 9, 2025,
+              <link xlink:href="https://www.geeksforgeeks.org/explanation-of-bert-model-nlp/">https://www.geeksforgeeks.org/explanation-of-bert-model-nlp/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Transformer models: an introduction and catalog, accessed
+              June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2302.07730">https://arxiv.org/html/2302.07730</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              ChatGPT's Architecture - Decoder Only? Or Encoder-Decoder?
+              - Data Science Stack Exchange, accessed June 9, 2025,
+              <link xlink:href="https://datascience.stackexchange.com/questions/118260/chatgpts-architecture-decoder-only-or-encoder-decoder">https://datascience.stackexchange.com/questions/118260/chatgpts-architecture-decoder-only-or-encoder-decoder</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Language Models are Few-Shot Learners - arXiv, accessed
+              June 9, 2025,
+              <link xlink:href="http://arxiv.org/pdf/2005.14165">http://arxiv.org/pdf/2005.14165</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              T5 - A Lazy Data Science Guide - Mohit Mayank, accessed
+              June 9, 2025,
+              <link xlink:href="http://mohitmayank.com/a_lazy_data_science_guide/natural_language_processing/T5/">http://mohitmayank.com/a_lazy_data_science_guide/natural_language_processing/T5/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How Transformers Work: A Detailed Exploration of
+              Transformer ..., accessed June 9, 2025,
+              <link xlink:href="https://www.datacamp.com/tutorial/how-transformers-work">https://www.datacamp.com/tutorial/how-transformers-work</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Illustrated Transformer - Pelayo Arbués, accessed June
+              9, 2025,
+              <link xlink:href="https://www.pelayoarbues.com/literature-notes/Articles/The-Illustrated-Transformer">https://www.pelayoarbues.com/literature-notes/Articles/The-Illustrated-Transformer</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              An Introduction to Transformers - arXiv, accessed June 9,
+              2025,
+              <link xlink:href="https://arxiv.org/pdf/2304.10557">https://arxiv.org/pdf/2304.10557</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Illustrated Transformer, accessed June 9, 2025,
+              <link xlink:href="https://the-illustrated-transformer--omosha.on.websim.ai/">https://the-illustrated-transformer--omosha.on.websim.ai/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              (PDF) Attention is All you Need (2017) | Chat PDF -
+              Nanonets, accessed June 9, 2025,
+              <link xlink:href="https://nanonets.com/chat-pdf/attention-is-all-you-need">https://nanonets.com/chat-pdf/attention-is-all-you-need</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Transformer Attention Mechanism in NLP - GeeksforGeeks,
+              accessed June 9, 2025,
+              <link xlink:href="https://www.geeksforgeeks.org/transformer-attention-mechanism-in-nlp/">https://www.geeksforgeeks.org/transformer-attention-mechanism-in-nlp/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Transformer Attention Mechanism -
+              MachineLearningMastery.com, accessed June 9, 2025,
+              <link xlink:href="https://machinelearningmastery.com/the-transformer-attention-mechanism/">https://machinelearningmastery.com/the-transformer-attention-mechanism/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Weights and Biases in machine learning | H2O.ai Wiki,
+              accessed June 9, 2025,
+              <link xlink:href="https://h2o.ai/wiki/weights-and-biases/">https://h2o.ai/wiki/weights-and-biases/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Where Does an LLM Keep All That Knowledge? A Peek into the
+              Physical Side of AI, accessed June 9, 2025,
+              <link xlink:href="https://techcommunity.microsoft.com/blog/machinelearningblog/where-does-an-llm-keep-all-that-knowledge-a-peek-into-the-physical-side-of-ai/4410287">https://techcommunity.microsoft.com/blog/machinelearningblog/where-does-an-llm-keep-all-that-knowledge-a-peek-into-the-physical-side-of-ai/4410287</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Beyond Self-learned Attention: Mitigating Attention Bias
+              in Transformer-based Models Using Attention Guidance -
+              arXiv, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2402.16790v1">https://arxiv.org/html/2402.16790v1</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              MIT Open Access Articles Backprop as Functor: A ... -
+              DSpace@MIT, accessed June 9, 2025,
+              <link xlink:href="https://dspace.mit.edu/bitstream/handle/1721.1/123513/learners.pdf">https://dspace.mit.edu/bitstream/handle/1721.1/123513/learners.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Backprop as Functor: A compositional perspective on
+              supervised learning - ResearchGate, accessed June 9, 2025,
+              <link xlink:href="https://www.researchgate.net/publication/338738998_Backprop_as_Functor_A_compositional_perspective_on_supervised_learning">https://www.researchgate.net/publication/338738998_Backprop_as_Functor_A_compositional_perspective_on_supervised_learning</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Prompting LLMs: The Lifecycle of a Prompt - Databricks
+              Community, accessed June 9, 2025,
+              <link xlink:href="https://community.databricks.com/t5/technical-blog/foundation-models-api-prompting-guide-1-lifecycle-of-a-prompt/ba-p/77749">https://community.databricks.com/t5/technical-blog/foundation-models-api-prompting-guide-1-lifecycle-of-a-prompt/ba-p/77749</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Understanding LLM Inference - by Alex Razvant - Neural
+              Bits - Substack, accessed June 9, 2025,
+              <link xlink:href="https://substack.com/home/post/p-157424291?utm_campaign=post&amp;utm_medium=web">https://substack.com/home/post/p-157424291?utm_campaign=post&amp;utm_medium=web</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              5 LLM Inference Techniques to Reduce Latency and Boost
+              Performance - Hyperstack, accessed June 9, 2025,
+              <link xlink:href="https://www.hyperstack.cloud/technical-resources/tutorials/llm-inference-techniques-to-reduce-latency-and-boost-performance">https://www.hyperstack.cloud/technical-resources/tutorials/llm-inference-techniques-to-reduce-latency-and-boost-performance</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Decoding Strategies: How LLMs Choose The Next Word -
+              AssemblyAI, accessed June 9, 2025,
+              <link xlink:href="https://www.assemblyai.com/blog/decoding-strategies-how-llms-choose-the-next-word">https://www.assemblyai.com/blog/decoding-strategies-how-llms-choose-the-next-word</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Mastering LLM Prompts: How to Structure Your Queries for
+              Better AI Responses - Codesmith, accessed June 9, 2025,
+              <link xlink:href="https://www.codesmith.io/blog/mastering-llm-prompts">https://www.codesmith.io/blog/mastering-llm-prompts</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Decoding Strategies: How LLMs Choose The Next Word -
+              AssemblyAI, accessed June 9, 2025,
+              <link xlink:href="https://www.assemblyai.com/blog/decoding-strategies-how-llms-choose-the-next-word/">https://www.assemblyai.com/blog/decoding-strategies-how-llms-choose-the-next-word/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Top-k and Top-p Decoding - Aussie AI, accessed June 9,
+              2025,
+              <link xlink:href="https://www.aussieai.com/research/top-k-decoding">https://www.aussieai.com/research/top-k-decoding</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              (PDF) Self-Attention as a Parametric Endofunctor: A
+              Categorical Framework for Transformer Architectures -
+              ResearchGate, accessed June 9, 2025,
+              <link xlink:href="https://www.researchgate.net/publication/387767268_Self-Attention_as_a_Parametric_Endofunctor_A_Categorical_Framework_for_Transformer_Architectures">https://www.researchgate.net/publication/387767268_Self-Attention_as_a_Parametric_Endofunctor_A_Categorical_Framework_for_Transformer_Architectures</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Self-Attention as a Parametric Endofunctor: A Categorical
+              Framework for Transformer Architectures - arXiv, accessed
+              June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2501.02931v2">https://arxiv.org/html/2501.02931v2</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              monad in nLab, accessed June 9, 2025,
+              <link xlink:href="https://ncatlab.org/nlab/show/monad">https://ncatlab.org/nlab/show/monad</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Self-Attention as a Parametric Endofunctor: A Categorical
+              Framework for Transformer Architectures - arXiv, accessed
+              June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2501.02931v1">https://arxiv.org/html/2501.02931v1</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Calculating monad transformers with category theory -
+              arXiv, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/html/2503.20024v1">https://arxiv.org/html/2503.20024v1</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Monads Tutorial - Monday Morning Haskell, accessed June 9,
+              2025,
+              <link xlink:href="https://mmhaskell.com/monads/tutorial">https://mmhaskell.com/monads/tutorial</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              [BLOG] A no-maths guide to monads - Community - OCaml
+              Discuss, accessed June 9, 2025,
+              <link xlink:href="https://discuss.ocaml.org/t/blog-a-no-maths-guide-to-monads/16712/1">https://discuss.ocaml.org/t/blog-a-no-maths-guide-to-monads/16712/1</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Markov category in nLab, accessed June 9, 2025,
+              <link xlink:href="https://ncatlab.org/nlab/show/Markov+category">https://ncatlab.org/nlab/show/Markov+category</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Kleisli Semantics for Conditioning in Probabilistic
+              Programming - Group MMM, accessed June 9, 2025,
+              <link xlink:href="https://group-mmm.org/~kenta/papers/semantics-conditioning.pdf">https://group-mmm.org/~kenta/papers/semantics-conditioning.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Categories of Neural Networks, accessed June 9, 2025,
+              <link xlink:href="https://ntrs.nasa.gov/api/citations/20230009019/downloads/Categories_of_Neural_Networks.pdf">https://ntrs.nasa.gov/api/citations/20230009019/downloads/Categories_of_Neural_Networks.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Categorical model of neural networks | OpenReview,
+              accessed June 9, 2025,
+              <link xlink:href="https://openreview.net/forum?id=zm7ZqDOAzy">https://openreview.net/forum?id=zm7ZqDOAzy</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              From Categorical Semantics to Neural Network Design |
+              Request PDF - ResearchGate, accessed June 9, 2025,
+              <link xlink:href="https://www.researchgate.net/publication/4030241_From_Categorical_Semantics_to_Neural_Network_Design">https://www.researchgate.net/publication/4030241_From_Categorical_Semantics_to_Neural_Network_Design</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              [2403.13001] Fundamental Components of Deep Learning: A
+              category-theoretic approach, accessed June 9, 2025,
+              <link xlink:href="https://arxiv.org/abs/2403.13001">https://arxiv.org/abs/2403.13001</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Graph-aware isomorphic attention for adaptive dynamics in
+              transformers - AIP Publishing, accessed June 9, 2025,
+              <link xlink:href="https://pubs.aip.org/aip/aml/article-pdf/doi/10.1063/5.0256873/20497255/026108_1_5.0256873.pdf">https://pubs.aip.org/aip/aml/article-pdf/doi/10.1063/5.0256873/20497255/026108_1_5.0256873.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              An Invitation to Applied Category Theory - Brendan Fong,
+              accessed June 9, 2025,
+              <link xlink:href="http://brendanfong.com/fong_spivak_an_invitation.pdf">http://brendanfong.com/fong_spivak_an_invitation.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Illustrating the idea of residual connections [14]. -
+              ResearchGate, accessed June 9, 2025,
+              <link xlink:href="https://www.researchgate.net/figure/llustrating-the-idea-of-residual-connections-14_fig3_349039254">https://www.researchgate.net/figure/llustrating-the-idea-of-residual-connections-14_fig3_349039254</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Softmax Activation Function for Neural Network - Analytics
+              Vidhya, accessed June 9, 2025,
+              <link xlink:href="https://www.analyticsvidhya.com/blog/2021/04/introduction-to-softmax-for-neural-network/">https://www.analyticsvidhya.com/blog/2021/04/introduction-to-softmax-for-neural-network/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Softmax Activation Function Explained - Ultralytics,
+              accessed June 9, 2025,
+              <link xlink:href="https://www.ultralytics.com/glossary/softmax">https://www.ultralytics.com/glossary/softmax</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What are Distilled Models? - Analytics Vidhya, accessed
+              June 9, 2025,
+              <link xlink:href="https://www.analyticsvidhya.com/blog/2025/03/distilled-models/">https://www.analyticsvidhya.com/blog/2025/03/distilled-models/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Model Distillation Explained: How DeepSeek Leverages the
+              Technique for AI Success, accessed June 9, 2025,
+              <link xlink:href="https://www.gaussianwaves.com/2025/02/model-distillation-explained-how-deepseek-leverages-the-technique-for-ai-success/">https://www.gaussianwaves.com/2025/02/model-distillation-explained-how-deepseek-leverages-the-technique-for-ai-success/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Knowledge Distillation: Principles, Algorithms,
+              Applications, accessed June 9, 2025,
+              <link xlink:href="https://neptune.ai/blog/knowledge-distillation">https://neptune.ai/blog/knowledge-distillation</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Distillation Walkthrough - Vlad Feinberg, accessed June 9,
+              2025,
+              <link xlink:href="https://vladfeinberg.com/2024/02/04/distillation-walkthrough.html">https://vladfeinberg.com/2024/02/04/distillation-walkthrough.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              4 Popular Model Compression Techniques Explained -
+              Xailient, accessed June 9, 2025,
+              <link xlink:href="https://xailient.com/blog/4-popular-model-compression-techniques-explained/">https://xailient.com/blog/4-popular-model-compression-techniques-explained/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Improving Knowledge Distillation via Category Structure -
+              Rongchang Zhao Homepage, accessed June 9, 2025,
+              <link xlink:href="https://rongchangzhao.github.io/papers/eccv2.pdf">https://rongchangzhao.github.io/papers/eccv2.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Quantization - Hugging Face, accessed June 9, 2025,
+              <link xlink:href="https://huggingface.co/docs/optimum/concept_guides/quantization">https://huggingface.co/docs/optimum/concept_guides/quantization</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Quantization of Convolutional Neural Networks: Model
+              Quantization - Edge AI and Vision Alliance, accessed June
+              9, 2025,
+              <link xlink:href="https://www.edge-ai-vision.com/2024/02/quantization-of-convolutional-neural-networks-model-quantization/">https://www.edge-ai-vision.com/2024/02/quantization-of-convolutional-neural-networks-model-quantization/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Essential building blocks: Categories and Functors - Petar
+              Veličković - YouTube, accessed June 9, 2025,
+              <link xlink:href="https://www.youtube.com/watch?v=jU7KyZn_hBc">https://www.youtube.com/watch?v=jU7KyZn_hBc</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Tai-Danae Bradley - Math3ma, accessed June 9, 2025,
+              <link xlink:href="https://www.math3ma.com/about">https://www.math3ma.com/about</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              An Intro To Fine Tuning - Hyperbolic, accessed June 9,
+              2025,
+              <link xlink:href="https://www.hyperbolic.xyz/blog/an-intro-to-fine-tuning">https://www.hyperbolic.xyz/blog/an-intro-to-fine-tuning</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Direct Preference Optimization (DPO): A Lightweight
+              Counterpart to RLHF - Toloka, accessed June 9, 2025,
+              <link xlink:href="https://toloka.ai/blog/direct-preference-optimization/">https://toloka.ai/blog/direct-preference-optimization/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Direct Preference Optimization: A Technical Deep Dive -
+              Together AI, accessed June 9, 2025,
+              <link xlink:href="https://www.together.ai/blog/direct-preference-optimization">https://www.together.ai/blog/direct-preference-optimization</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              LLM Guardrails for Data Leakage, Prompt Injection, and
+              More ..., accessed June 9, 2025,
+              <link xlink:href="https://www.confident-ai.com/blog/llm-guardrails-the-ultimate-guide-to-safeguard-llm-systems">https://www.confident-ai.com/blog/llm-guardrails-the-ultimate-guide-to-safeguard-llm-systems</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What metrics are used to evaluate the success of LLM
+              guardrails?, accessed June 9, 2025,
+              <link xlink:href="https://milvus.io/ai-quick-reference/what-metrics-are-used-to-evaluate-the-success-of-llm-guardrails">https://milvus.io/ai-quick-reference/what-metrics-are-used-to-evaluate-the-success-of-llm-guardrails</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Functorial ML - UniGe, accessed June 9, 2025,
+              &lt;<link xlink:href="https://person.dibris.unige.it/moggi-eugenio/ftp/jfp98.p">https://person.dibris.unige.it/moggi-eugenio/ftp/jfp98.p</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

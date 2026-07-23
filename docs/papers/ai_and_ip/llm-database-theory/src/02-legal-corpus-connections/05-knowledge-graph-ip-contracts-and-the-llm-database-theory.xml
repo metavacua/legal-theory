@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="knowledge-graph-contracts" role="finding" condition="confirmed-with-caveats">
+  <title>Knowledge Graph, IP Contracts, and the LLM-Database Theory</title>
+  <para>The cross-cutting document <emphasis>knowledge-graph-ca-service-contracts.md</emphasis> and the evidence document <emphasis>ip-contract-knowledge-graph.md</emphasis> develop an ontology of IP actors, assets, legal instruments, and doctrines structured as a knowledge graph. <citation>mclean2025categorical</citation>
+  </para>
+  <para>The LLM-database theory creates a direct technical connection between that ontology and the structure of the model weights: the knowledge graph ontology developed in the IP-contract analysis is formally the same type of structure as the knowledge graph embedded in the model's FFN layers. This means:</para>
+  <itemizedlist>
+    <listitem>
+      <para>LARQL-class tools can, in principle, be used to audit model weights against an IP-contract knowledge graph — to ask, for a given model, which of the graph's IP-asset nodes (specific books, articles, code repositories, images) are present in the model's weight graph, and with what fidelity.</para>
+    </listitem>
+    <listitem>
+      <para>Discovery requests in IP litigation can be structured as graph queries against the model's vindex, rather than as black-box prompting exercises, enabling more precise identification of which training-corpus works are present and in what form.</para>
+    </listitem>
+  </itemizedlist>
+  <para>
+    <emphasis role="bold">Caveat:</emphasis> LARQL as of 2026-07-01 operates at the level of general semantic knowledge (entity–relation–target triples for factual propositions). Its ability to identify specific literary works, images, or code files as the source of specific weight entries is still developing. The technical capacity to perform source attribution at the level required by IP litigation (identifying that a specific 32-token excerpt of Harry Potter is the source of a specific cluster of weight features) is not yet demonstrated. This gap is an open research question, not a refutation of the basic database theory.</para>
+</section>
+
+  
+  

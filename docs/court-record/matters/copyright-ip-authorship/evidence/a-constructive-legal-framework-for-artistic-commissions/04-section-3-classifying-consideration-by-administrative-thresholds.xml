@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="section-3-classifying-consideration-by-administrative-thresholds">
+  <title>
+    <emphasis role="strong">Section 3: Classifying Consideration
+    by Administrative Thresholds</emphasis>
+  </title>
+  <para>
+      A key innovation in this framework is to classify contracts based
+      on the administrative burden triggered by the Consideration. This
+      creates a practical distinction between "substantial"
+      and "insubstantial" agreements.
+    </para>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">Substantial Contracts:</emphasis> A
+          contract is deemed "substantial" if the
+          consideration triggers a mandatory government administrative
+          or reporting requirement. This occurs in two primary ways:
+        </para>
+    </listitem>
+  </itemizedlist>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">Financial Threshold:</emphasis> The
+          most common trigger is financial. In California, a contract
+          becomes substantial when payments to an independent contractor
+          reach or exceed $600 in a calendar year, which compels the
+          hiring entity to issue an IRS Form 1099-NEC and report the
+          payment to state and federal agencies.12 This threshold is set
+          to increase to $2,000 federally in 2026.13
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Legal Status Trigger:</emphasis> A
+          contract automatically becomes "substantial" in
+          California if it creates an employer-employee relationship.
+          Crucially, any work-for-hire agreement with an individual
+          artist (as opposed to a separate legal entity like another
+          LLC) creates a legal presumption of employment status.16 This
+          immediately triggers the highest level of administrative
+          overhead, including the requirement to issue a W-2 form,
+          withhold payroll taxes, and provide workers' compensation
+          insurance.20
+        </para>
+    </listitem>
+  </itemizedlist>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">Insubstantial Contracts:</emphasis>
+          These are agreements where the total consideration falls below
+          the mandatory reporting threshold and the nature of the
+          agreement does not create an employment relationship. While
+          still legally binding and executed in good faith, they operate
+          with a lower administrative burden.
+        </para>
+    </listitem>
+  </itemizedlist>
+  <para>
+      This classification allows the organization to tailor its
+      administrative processes, applying rigorous accounting and
+      compliance measures only when legally required, thereby
+      streamlining operations for smaller, exploratory projects.
+    </para>
+</section>
+  

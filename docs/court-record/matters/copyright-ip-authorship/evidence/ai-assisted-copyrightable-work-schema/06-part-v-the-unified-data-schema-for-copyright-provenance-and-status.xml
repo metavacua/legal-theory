@@ -1,0 +1,563 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-v-the-unified-data-schema-for-copyright-provenance-and-status">
+  <title>
+    <emphasis role="strong">Part V: The Unified Data Schema for
+    Copyright Provenance and Status</emphasis>
+  </title>
+  <para>
+      The culmination of this legal analysis is the development of a
+      formal data schema designed to capture and track the copyright
+      status of an AI-assisted work throughout its creation. Traditional
+      metadata standards like IPTC are well-suited for describing the
+      attributes of a finished creative asset but are insufficient for
+      the dynamic, layered, and iterative process inherent in
+      AI-assisted creation.48 A new model is required.
+    </para>
+  <section xml:id="design-principles-beyond-static-metadata">
+    <title>
+      <emphasis role="strong">Design Principles: Beyond Static
+      Metadata</emphasis>
+    </title>
+    <para>
+        The proposed schema is architected not as a static record, but
+        as a dynamic, auditable log of the entire creative process—a
+        "Copyright Provenance Ledger." Its design is guided by
+        the following principles:
+      </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Process-Oriented:</emphasis> The
+            schema's primary function is to record the
+            <emphasis>process</emphasis> of creation, not just the final
+            product. As the legal analysis has shown, the sequence and
+            nature of human interventions are the dispositive factors in
+            determining copyrightability.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Atomicity and
+            Immutability:</emphasis> Each creative act—a prompt, an AI
+            generation, a human modification, a selection—is recorded as
+            a discrete, atomic "contribution." This creates an
+            immutable ledger that can be audited to determine the
+            provenance of any element in the final work.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Inspiration from Modern Data
+            Standards:</emphasis> The design draws inspiration from
+            technical standards like the Coalition for Content
+            Provenance and Authenticity (C2PA), which focuses on
+            tracking the origin and history of digital media, including
+            edits and AI generation.51 It also incorporates concepts
+            from version control systems, which excel at tracking
+            changes over time.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Enabling Automated
+            Analysis:</emphasis> The structure is explicitly designed to
+            support algorithmic analysis. By logging legally significant
+            data points (e.g., contributor type, contribution type,
+            source material status), the system can automatically
+            calculate risk scores and provide real-time feedback to the
+            user.
+          </para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="the-core-schema-tables-and-fields">
+    <title>
+      <emphasis role="strong">The Core Schema: Tables and
+      Fields</emphasis>
+    </title>
+    <para>
+        The schema is relational, comprising four interconnected tables
+        that work together to model the creative ecosystem. This
+        structure separates the actors (Contributors), the actions
+        (Contributions), the raw materials (Assets), and the final
+        composite product (Works). This separation allows the system to
+        algorithmically trace the provenance of every pixel, word, or
+        note in the final work back to its origin—a human prompt, an AI
+        generation, a human modification, or a third-party sample. This
+        traceability is what enables the calculation of sophisticated,
+        legally-grounded metrics like a HumanAuthorshipScore and a
+        FairUseRiskScore, providing the precise and actionable guidance
+        required for a modern creative tool.
+      </para>
+  </section>
+  <section xml:id="table-3-the-unified-data-schema-for-copyright-provenance-and-status">
+    <title>
+      <emphasis role="strong">Table 3: The Unified Data Schema
+      for Copyright Provenance and Status</emphasis>
+    </title>
+    <section xml:id="table-31-works-table-the-final-product">
+      <title>
+        <emphasis role="strong">Table 3.1: Works Table (The Final
+        Product)</emphasis>
+      </title>
+      <para>
+          This table represents the final, composite work that is the
+          output of the creative process.
+        </para>
+      <informaltable>
+        <tgroup cols="3">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                  Field Name
+                </entry>
+              <entry>
+                  Data Type
+                </entry>
+              <entry>
+                  Description
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  WorkID
+                </entry>
+              <entry>
+                  UUID
+                </entry>
+              <entry>
+                  Primary key for the final composite work. Uniquely
+                  identifies this specific creative endeavor.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  Title
+                </entry>
+              <entry>
+                  Text
+                </entry>
+              <entry>
+                  The human-assigned title of the work.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  FinalCreationTimestamp
+                </entry>
+              <entry>
+                  Timestamp
+                </entry>
+              <entry>
+                  Timestamp marking the completion or export of the
+                  final version of the work.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  OverallCopyrightStatus
+                </entry>
+              <entry>
+                  Enum (Copyrightable, Public Domain, Mixed-Status)
+                </entry>
+              <entry>
+                  A system-determined overall status, calculated based
+                  on the aggregation of all contributions and assets.
+                  "Mixed-Status" indicates the work contains
+                  both protectable human authorship and unprotectable
+                  elements (e.g., AI-generated material, third-party
+                  samples).
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  HumanAuthorshipScore
+                </entry>
+              <entry>
+                  Float (0.0 to 1.0)
+                </entry>
+              <entry>
+                  A calculated score representing the proportion of the
+                  final work attributable to protectable human creative
+                  actions (e.g., modification, selection, arrangement)
+                  versus unprotectable actions (e.g., prompting) or AI
+                  generation. A higher score indicates a stronger claim
+                  to copyright.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  FairUseRiskScore
+                </entry>
+              <entry>
+                  Float (0.0 to 1.0)
+                </entry>
+              <entry>
+                  A calculated risk score based on the automated
+                  analysis of all incorporated third-party assets using
+                  the logic from Table 1. A higher score indicates a
+                  greater risk that the use of third-party material
+                  would not be considered fair use.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  Jurisdiction
+                </entry>
+              <entry>
+                  Text
+                </entry>
+              <entry>
+                  The legal jurisdiction under which the work was
+                  created (e.g., "USA", "GBR",
+                  "CHN"). Essential for applying the correct
+                  legal rules (e.g., for *de minimis* use).
+                </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+    <section xml:id="table-32-contributions-table-the-creative-ledger">
+      <title>
+        <emphasis role="strong">Table 3.2: Contributions Table
+        (The Creative Ledger)</emphasis>
+      </title>
+      <para>
+          This is the core of the schema, logging every single creative
+          event in chronological order to build an auditable chain of
+          provenance.
+        </para>
+      <informaltable>
+        <tgroup cols="3">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                  Field Name
+                </entry>
+              <entry>
+                  Data Type
+                </entry>
+              <entry>
+                  Description
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  ContributionID
+                </entry>
+              <entry>
+                  UUID
+                </entry>
+              <entry>
+                  Primary key for each discrete creative action.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  WorkID
+                </entry>
+              <entry>
+                  UUID
+                </entry>
+              <entry>
+                  Foreign key linking this action to the overall Works
+                  table.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  ParentContributionID
+                </entry>
+              <entry>
+                  UUID
+                </entry>
+              <entry>
+                  Foreign key to the previous contribution this one
+                  modifies. This linkage creates the historical chain of
+                  edits and transformations. A NULL value indicates an
+                  initial action.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  ContributorID
+                </entry>
+              <entry>
+                  UUID
+                </entry>
+              <entry>
+                  Foreign key to the Contributors table, identifying who
+                  (or what) performed this action.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  ContributionTimestamp
+                </entry>
+              <entry>
+                  Timestamp
+                </entry>
+              <entry>
+                  The precise time the action was performed.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  ContributionType
+                </entry>
+              <entry>
+                  Enum (Human-Creation, Human-Modification,
+                  Human-Selection, Human-Arrangement, Human-Prompt,
+                  AI-Generation)
+                </entry>
+              <entry>
+                  The nature of the action. This is the most critical
+                  field for legal analysis, directly mapping to the
+                  copyrightable interventions identified by the USCO.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  ContributionData
+                </entry>
+              <entry>
+                  JSONB
+                </entry>
+              <entry>
+                  A flexible field to store the specific data of the
+                  action. For a Human-Prompt, this would be the text of
+                  the prompt. For a Human-Modification, it could store
+                  coordinates and transformation data. For a
+                  Human-Selection, it would list the AssetIDs that were
+                  chosen.
+                </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+    <section xml:id="table-33-contributors-table-human-and-ai-actors">
+      <title>
+        <emphasis role="strong">Table 3.3: Contributors Table
+        (Human and AI Actors)</emphasis>
+      </title>
+      <para>
+          This table identifies every actor, human or machine, that
+          participates in the creation of the work.
+        </para>
+      <informaltable>
+        <tgroup cols="3">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                  Field Name
+                </entry>
+              <entry>
+                  Data Type
+                </entry>
+              <entry>
+                  Description
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  ContributorID
+                </entry>
+              <entry>
+                  UUID
+                </entry>
+              <entry>
+                  Primary key for the contributor.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  ContributorType
+                </entry>
+              <entry>
+                  Enum (Human, AI)
+                </entry>
+              <entry>
+                  A simple but legally crucial flag distinguishing
+                  between human users and AI systems.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  HumanIdentifier
+                </entry>
+              <entry>
+                  Text
+                </entry>
+              <entry>
+                  For human contributors, a unique identifier such as a
+                  user account ID or a persistent author identifier like
+                  an ORCID.53
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  AIModelIdentifier
+                </entry>
+              <entry>
+                  Text
+                </entry>
+              <entry>
+                  For AI contributors, the specific name and version of
+                  the model used (e.g., "Midjourney-v6.0",
+                  "Claude-3-Opus-20240229"). This is vital for
+                  tracking the capabilities of the tool used.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  AIControllabilityScore
+                </entry>
+              <entry>
+                  Float (0.0 to 1.0)
+                </entry>
+              <entry>
+                  A metric representing the known determinism or
+                  fine-grained controllability of the AI model. A higher
+                  score indicates the user has more direct control over
+                  the output's expressive elements, which may become
+                  legally significant in the future.21
+                </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+    <section xml:id="table-34-assets-table-the-raw-materials">
+      <title>
+        <emphasis role="strong">Table 3.4: Assets Table (The Raw
+        Materials)</emphasis>
+      </title>
+      <para>
+          This table catalogs every discrete piece of content—whether
+          created, generated, or imported—that is part of the work.
+        </para>
+      <informaltable>
+        <tgroup cols="3">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                  Field Name
+                </entry>
+              <entry>
+                  Data Type
+                </entry>
+              <entry>
+                  Description
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  AssetID
+                </entry>
+              <entry>
+                  UUID
+                </entry>
+              <entry>
+                  Primary key for each discrete piece of content (e.g.,
+                  an image, a block of text, an audio clip).
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  ContributionID
+                </entry>
+              <entry>
+                  UUID
+                </entry>
+              <entry>
+                  Foreign key to the Contributions table entry that
+                  created or imported this asset. This links every piece
+                  of content to its origin.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  AssetHash
+                </entry>
+              <entry>
+                  SHA256
+                </entry>
+              <entry>
+                  A cryptographic hash of the asset's binary content,
+                  ensuring data integrity and providing a unique
+                  fingerprint for the content.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  AssetType
+                </entry>
+              <entry>
+                  Enum (Text, Image, Audio, Video)
+                </entry>
+              <entry>
+                  The media type of the asset.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  SourceAssetID
+                </entry>
+              <entry>
+                  UUID
+                </entry>
+              <entry>
+                  If this asset is a modification or derivative of
+                  another asset, this field points to the original
+                  source asset, creating a lineage.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  OriginalCopyrightStatus
+                </entry>
+              <entry>
+                  Enum (Human-Authored, AI-Generated,
+                  Third-Party-Copyrighted, Public-Domain)
+                </entry>
+              <entry>
+                  The copyright status of the asset at the moment of its
+                  creation or ingestion into the system. This is a
+                  critical input for the FairUseRiskScore calculation.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  ThirdPartyLicense
+                </entry>
+              <entry>
+                  Text
+                </entry>
+              <entry>
+                  If the asset is from a third party, this field stores
+                  the details of its license (e.g., "Creative
+                  Commons CC-BY-SA 4.0", "Getty Images
+                  Royalty-Free License \#12345").
+                </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+  </section>
+</section>
+  

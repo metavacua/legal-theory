@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="iv-llms-as-categories-towards-formal-frameworks">
+  <title>
+    <emphasis role="strong">IV. LLMs as Categories: Towards
+    Formal Frameworks</emphasis>
+  </title>
+  <para>
+      Building on the component-wise interpretations, this section
+      explores more holistic approaches: can an LLM, or a significant
+      operational aspect of it, be formally defined as a category
+      itself? This involves specifying the objects and morphisms that
+      would constitute such a category and considering the role of
+      functors in relating these internal LLM categories to external
+      data or semantic domains.
+    </para>
+  <section xml:id="a-defining-objects-in-a-potential-llm-category">
+    <title>
+      <emphasis role="strong">A. Defining Objects in a Potential
+      "LLM Category"</emphasis>
+    </title>
+    <para>
+        The choice of <emphasis role="strong">objects</emphasis> in a
+        hypothetical "LLM category" depends heavily on the
+        aspect of the LLM one aims to model. Several candidates exist,
+        each offering a different level of abstraction:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Token Sequences:</emphasis> At the
+            most direct level, objects could be the raw input and output
+            sequences of tokens, drawn from a vocabulary Σ. The
+            collection of all finite sequences, Σ∗, could form the set
+            of objects.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Embedding Vectors/Spaces:</emphasis>
+            Given that LLMs internally process numerical vectors,
+            objects could be the specific vector spaces (e.g., Rd) that
+            house token embeddings or hidden states, or even individual
+            embedding vectors themselves.30
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Hidden States:</emphasis> The
+            internal representations of data at each layer of the LLM
+            are pivotal. Objects could be defined as the set of all
+            possible hidden state vectors at a particular layer, or
+            perhaps the type of these states.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Probability
+            Distributions:</emphasis> Since LLMs often output
+            probability distributions over a vocabulary (e.g., via a
+            softmax layer 65), objects could be elements of a
+            probability simplex, or the spaces of such distributions.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Contexts/Prompts:</emphasis> The
+            conditioning information provided to an LLM (the prompt) is
+            crucial for its behavior.42 Contexts themselves could be
+            considered objects, representing the initial state or
+            information upon which the LLM operates.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="b-defining-morphisms-in-a-potential-llm-category">
+    <title>
+      <emphasis role="strong">B. Defining Morphisms in a
+      Potential "LLM Category"</emphasis>
+    </title>
+    <para>
+        Corresponding to the choice of objects,
+        <emphasis role="strong">morphisms</emphasis> would represent
+        transformations or relations between them:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Layer Transformations:</emphasis> If
+            objects are hidden states or vector spaces of
+            representations, then an entire LLM layer (or a block of
+            layers) acts as a morphism mapping an input state (object)
+            to an output state (object).58
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Attention Computations:</emphasis>
+            The self-attention mechanism, or even individual attention
+            heads, can be viewed as morphisms that transform a set of
+            input token representations into a refined, contextualized
+            set.62
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Decoding Steps:</emphasis> In
+            autoregressive generation, the transition from a state
+            (context,previous_tokens) to (context,previous_tokens,
+            new_token) can be seen as a morphism. This aligns with the
+            idea of monadic composition, where each step is a morphism
+            in a Kleisli category.51
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Probabilistic Mappings (Stochastic
+            Kernels):</emphasis> If objects are input contexts and
+            output distributions, the LLM itself can be modeled as a
+            morphism—specifically, a stochastic kernel—that maps an
+            input context to a probability distribution over possible
+            outputs.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        It is unlikely that a single definition of "the LLM
+        Category" will capture all facets of LLM structure and
+        operation. Instead, it might be more fruitful to define multiple
+        relevant categories, each tailored to a specific aspect. For
+        example, one category might describe the static architecture
+        (layers as objects, connections as morphisms), while another
+        might describe the dynamic evolution of states during inference
+        for a given input (states as objects, state transitions as
+        morphisms). A third might focus on the learning process itself
+        (parameterized functions as objects, optimization steps as
+        morphisms). Functors could then serve as bridges, relating these
+        different categorical perspectives and showing how, for
+        instance, architectural choices constrain dynamic behavior. This
+        suggests a multi-layered categorical model rather than a
+        monolithic one, offering a richer and more nuanced
+        understanding.
+      </para>
+  </section>
+  <section xml:id="c-the-role-of-functors-in-relating-llm-internal-categories-to-external-datasemantic-categories">
+    <title>
+      <emphasis role="strong">C. The Role of Functors in Relating
+      LLM-Internal Categories to External Data/Semantic
+      Categories</emphasis>
+    </title>
+    <para>
+        Functors, as structure-preserving maps between categories, play
+        a crucial role in connecting the internal categorical structures
+        of LLMs to external domains, such as input data or abstract
+        semantic spaces.
+      </para>
+    <para>
+        1. LLMs as Functors
+      </para>
+    <para>
+        An LLM as a whole can be conceptualized as a functor. For
+        instance, it might be a functor F:CInput​→COutput​, where CInput​
+        is a category whose objects are prompts and whose morphisms
+        might represent prompt modifications (e.g., paraphrasing, adding
+        information), and COutput​ is a category whose objects are
+        generated texts and whose morphisms might represent semantic
+        similarity or entailment relations.
+      </para>
+    <para>
+        This idea draws inspiration from frameworks like DisCoCat
+        (Distributional Compositional Categorical Semantics).13 In
+        DisCoCat, functors map from a category representing grammatical
+        structure (syntax) to a category of vector spaces representing
+        meaning (semantics). An LLM could similarly be viewed as
+        implementing a functor
+        FLLM​:CLanguageSyntax​→CInternalRepresentation​, where
+        CLanguageSyntax​ captures aspects of the input language
+        structure, and CInternalRepresentation​ is the category of the
+        LLM's internal "meaning space." A subsequent functor
+        might then map these internal representations to an output
+        language category. The example of an image encoder being a
+        functor from a Category of Images to a Category of Vectors 9
+        provides a concrete analogy for how LLMs might map from one
+        domain (e.g., text) to another (e.g., internal embeddings).
+      </para>
+    <para>
+        The success of DisCoCat in modeling compositional semantics for
+        linguistic structures based on explicit grammars (like pregroup
+        grammars) offers both a template and a challenge. LLMs, in
+        contrast, learn complex, implicit compositional rules from data
+        without being given an explicit grammar. A categorical framework
+        for LLMs must therefore account for this
+        <emphasis>emergent</emphasis> and <emphasis>learned</emphasis>
+        compositionality. If an LLM is a functor
+        F:CInput​→CRepresentation​, the input category CInput​ may not be a
+        neatly predefined grammatical category but perhaps a category of
+        raw sequences. The functor F itself would then be responsible
+        for <emphasis>learning</emphasis> the relevant
+        "grammatical" and "semantic" compositions,
+        and the challenge lies in characterizing the structure of F and
+        CRepresentation​ that enables this. This is a significantly
+        deeper problem than applying a fixed, predefined functor.
+      </para>
+    <para>
+        2. Functors for Modularity and Interoperability
+      </para>
+    <para>
+        If different LLMs, or distinct large-scale components of an LLM
+        (like a specialized vision encoder and a language decoder in a
+        multimodal model), are themselves describable as categories,
+        then functors could define structure-preserving mappings between
+        them. This would offer a principled approach to model
+        combination, transfer learning, or ensuring interoperability
+        between heterogeneous AI modules. For example, a functor could
+        map the output category of one LLM to the input category of
+        another, ensuring that semantic structures are coherently
+        transferred.
+      </para>
+  </section>
+  <section xml:id="d-potential-universal-properties-and-limitscolimits-within-llm-operations">
+    <title>
+      <emphasis role="strong">D. Potential Universal Properties
+      and Limits/Colimits within LLM Operations</emphasis>
+    </title>
+    <para>
+        Category theory provides tools for identifying unique or optimal
+        structures through universal properties, and for combining or
+        decomposing objects/information through limits and colimits.
+      </para>
+    <para>
+        1. Universal Properties
+      </para>
+    <para>
+        A universal property characterizes an object in a category
+        uniquely up to isomorphism by its relationship to other objects
+        via morphisms. Exploring whether any LLM components or processes
+        satisfy such properties is an avenue for research. For instance:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            Is the embedding of discrete tokens into a continuous vector
+            space a "free" construction in some categorical
+            sense, meaning it's the most general or canonical way to
+            achieve this mapping given certain constraints?
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Does the self-attention mechanism, in its aggregation of
+            information, optimize some universal mapping property,
+            making it a canonical way to contextualize sequence
+            elements?
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            52 and 49 show that standard sinusoidal positional
+            encodings, while not strictly additive (which would be a
+            monoid action), possess a universal property among faithful,
+            injective, non-additive position-preserving functors,
+            suggesting a degree of optimality in their design.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        2. Limits and Colimits
+      </para>
+    <para>
+        Limits (e.g., products, pullbacks) and colimits (e.g.,
+        coproducts, pushouts) are categorical constructions for
+        combining or decomposing objects and morphisms in a universal
+        way.10
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Limits</emphasis> often represent
+            ways of integrating information or finding "shared
+            structure." For example, a
+            <emphasis role="strong">product</emphasis> of two objects
+            A×B combines them, and a
+            <emphasis role="strong">pullback</emphasis> can find objects
+            that map coherently to two other objects via a common
+            target. Could the way an LLM conditions its output on both a
+            prompt and its internally generated history be modeled using
+            product-like constructions?
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Colimits</emphasis> often represent
+            ways of "gluing" or "merging" objects.
+            For example, a <emphasis role="strong">coproduct</emphasis>
+            (sum) A+B represents a disjoint union, and a
+            <emphasis role="strong">pushout</emphasis> can glue two
+            objects together along a shared sub-object. Could the
+            aggregation of information from multiple attention heads
+            into a single representation be modeled as a colimit (e.g.,
+            a coproduct followed by a coequalizer or a direct sum if in
+            <emphasis role="strong">Vect</emphasis>)? Research in
+            categorical neural network semantics has explored colimits
+            as a way to express how specialized concepts are formed from
+            combinations of more abstract concepts along shared
+            sub-concept relationships.59 This suggests that limits and
+            colimits could provide a formal language for understanding
+            how LLMs integrate diverse pieces of information (like
+            attention pooling from various tokens, which could be a type
+            of colimit) or differentiate information (like a specific
+            token's representation being distinct yet contextualized,
+            perhaps involving product-like limits when conditioning on
+            context).
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        The following table offers a comparison of potential ways to
+        formulate an "LLM Category," highlighting the
+        different focuses each formulation would entail:
+      </para>
+    <para>
+      <emphasis role="strong">Table 2: Comparison of Potential
+        "LLM Category" Formulations</emphasis>
+    </para>
+    <informaltable>
+      <tgroup cols="5">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                **Formulation Focus**
+              </entry>
+            <entry>
+                **Objects**
+              </entry>
+            <entry>
+                **Morphisms**
+              </entry>
+            <entry>
+                **Key Composition Rule**
+              </entry>
+            <entry>
+                **Illustrative LLM Aspect Modeled**
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Static Architecture**
+              </entry>
+            <entry>
+                Layers, Functional Modules (e.g., Attention Block, FFN
+                Block)
+              </entry>
+            <entry>
+                Connections/Data flow paths between layers/modules
+              </entry>
+            <entry>
+                Sequential application of layers/blocks
+              </entry>
+            <entry>
+                The fixed blueprint or circuit diagram of the LLM.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Dynamic State Space**
+              </entry>
+            <entry>
+                Hidden states, Embedding vectors at a specific
+                processing step t
+              </entry>
+            <entry>
+                State transitions (e.g., statet​→statet+1​ via layer
+                computation)
+              </entry>
+            <entry>
+                Temporal or sequential composition during
+                inference/generation
+              </entry>
+            <entry>
+                The processing trajectory of a single input sequence.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Probabilistic Mappings**
+              </entry>
+            <entry>
+                Input Contexts, Vocabulary Sets, Spaces of Probability
+                Distributions
+              </entry>
+            <entry>
+                LLM as a map $P(\\text{output} \\$
+              </entry>
+            <entry>
+                \\text{input}), Stochastic kernels
+              </entry>
+            <entry>
+                Bayesian inference, Composition of conditional
+                probabilities
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Learning Processes**
+              </entry>
+            <entry>
+                Parameterized Functions, Datasets, Loss Landscapes
+              </entry>
+            <entry>
+                Update rules (e.g., gradient descent step), Optimization
+                algorithms
+              </entry>
+            <entry>
+                Composition of learning stages (e.g., pre-training then
+                fine-tuning)
+              </entry>
+            <entry>
+                The training, adaptation, and optimization of the LLM.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Semantic Interpretation**
+              </entry>
+            <entry>
+                Linguistic Units (words, phrases, sentences), Concepts
+              </entry>
+            <entry>
+                Semantic relations, Grammatical derivations (inspired by
+                DisCoCat)
+              </entry>
+            <entry>
+                Composition of meanings based on syntax or learned
+                relations
+              </entry>
+            <entry>
+                How LLMs might represent and compose meaning (more
+                speculative).
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <para>
+        This table illustrates that the endeavor to see "LLMs as
+        categories" is not about finding one single, monolithic
+        category. Rather, it is about leveraging the flexibility of
+        category theory to build various models that illuminate
+        different, complementary facets of LLM functionality. Such a
+        multi-faceted approach can lead to a more comprehensive and
+        nuanced understanding of these complex systems.
+      </para>
+  </section>
+</section>
+  

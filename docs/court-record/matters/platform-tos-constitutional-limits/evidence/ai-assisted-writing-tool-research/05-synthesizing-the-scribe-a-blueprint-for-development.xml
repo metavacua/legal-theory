@@ -1,0 +1,665 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="synthesizing-the-scribe-a-blueprint-for-development">
+  <title>
+    <emphasis role="strong">Synthesizing 'The Scribe': A
+    Blueprint for Development</emphasis>
+  </title>
+  <para>
+      This report has systematically deconstructed the architectural
+      limitations of the current creative writing software market and
+      proposed a new foundation for 'The Scribe'. By unifying a
+      schema-driven plain-text data model, a writer-centric version
+      control system, an automated narrative integrity pipeline, and a
+      legally-principled AI integration, 'The Scribe' can move beyond
+      the category of "writing software" to become the first
+      true "Integrated Development Environment (IDE) for
+      Storytellers."
+    </para>
+  <section xml:id="the-core-vision-an-ide-for-storytellers">
+    <title>
+      <emphasis role="strong">The Core Vision: An IDE for
+      Storytellers</emphasis>
+    </title>
+    <para>
+        The central vision for 'The Scribe' is to provide narrative
+        creators with the same level of rigor, power, and tooling that
+        software developers have benefited from for decades. The project
+        is not treated as a single, monolithic document but as a
+        structured codebase of interconnected components.
+        "Saving" is replaced by version-controlled
+        checkpoints. Experimentation is facilitated through safe,
+        isolated branches. Quality is ensured through automated,
+        continuous validation. Collaboration is managed through a clear,
+        review-based workflow. And assistance is provided by an
+        intelligent, context-aware AI that understands the project's
+        entire architecture. This paradigm shift addresses the core pain
+        points of modern creative workflows—collaboration friction, data
+        loss, continuity errors, and creative paralysis.
+      </para>
+  </section>
+  <section xml:id="high-level-system-architecture">
+    <title>
+      <emphasis role="strong">High-Level System
+      Architecture</emphasis>
+    </title>
+    <para>
+        The proposed system is a modern, local-first application with
+        robust backend services for synchronization, validation, and AI
+        processing.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Frontend (UI Layer):</emphasis> A
+            cross-platform desktop and web application built with a
+            modern framework (e.g., Vue, React). The interface will
+            feature a multi-pane editor that simultaneously displays the
+            prose (Markdown editor), the associated structured data
+            (YAML editor with schema-driven autocompletion), and a
+            project navigation/VCS panel.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Workspace (Local Data):</emphasis>
+            The source of truth for a project is a standard directory on
+            the user's local machine containing all .yaml and .md files,
+            managed by a local Git repository. This ensures offline
+            capability and user ownership of data.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Backend Services:</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">VCS Service:</emphasis> A core
+            service that wraps Git commands in a simplified,
+            narrative-focused API for the frontend (e.g.,
+            createAlternatePath(sceneId)). It manages all interactions
+            with the local Git repository.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Sync Service:</emphasis> Handles
+            authentication and communication with remote Git providers
+            (e.g., GitHub, GitLab) to push and pull changes, enabling
+            cloud backup and collaboration.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Narrative Integrity
+            Service:</emphasis> A containerized service, deployable as a
+            GitHub Action or similar CI/CD tool. It is triggered by Git
+            events and executes the validation pipeline (linting, schema
+            checks, consistency analysis).
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">AI Service Gateway:</emphasis> A
+            secure API gateway that constructs detailed, context-rich
+            prompts from the project's YAML files and routes them to a
+            third-party LLM provider (e.g., OpenAI, Anthropic), managing
+            API keys and responses.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="strategic-development-roadmap">
+    <title>
+      <emphasis role="strong">Strategic Development
+      Roadmap</emphasis>
+    </title>
+    <para>
+        A phased development approach is recommended to manage technical
+        complexity and deliver value incrementally.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Phase 1: The Core Editor and Data
+            Model (Minimum Viable Product).</emphasis> The initial focus
+            is on building a powerful, single-user, offline-capable
+            structured writing tool. This phase includes the local-first
+            editor for YAML and Markdown, the implementation of
+            foundational schemas (character, scene, location), and
+            integration with a local Git repository to power the
+            "Save Checkpoint" functionality.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Phase 2: Collaboration and the
+            Narrative Pipeline.</emphasis> This phase introduces
+            multi-user capabilities. It involves integrating with remote
+            Git providers for synchronization, building the UI for the
+            "Submit for Review" (pull request) and
+            "Incorporate Edits" (merge) workflow, and
+            deploying the Narrative Integrity Pipeline as an automated
+            service.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Phase 3: Principled AI
+            Integration.</emphasis> With the robust data and versioning
+            foundation in place, this phase focuses on building the AI
+            Service Gateway and implementing the prompt engineering
+            templates. AI features will be rolled out incrementally,
+            beginning with the core Prose Generation from Scene Data,
+            ensuring each feature adheres to the principle of
+            maintaining human authorship.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="conclusion-building-the-future-of-creative-tooling">
+    <title>
+      <emphasis role="strong">Conclusion: Building the Future of
+      Creative Tooling</emphasis>
+    </title>
+    <para>
+        The analysis presented in this report identifies a clear and
+        significant opportunity in the creative software market.
+        Existing tools are encumbered by legacy architectures that are
+        fundamentally ill-suited to the demands of modern,
+        collaborative, and AI-augmented creation. 'The Scribe' is not an
+        incremental improvement but a fundamental rethinking of how
+        creative projects are structured and managed. By prioritizing a
+        version-controlled, schema-driven, and plain-text foundation
+        from day one, it can solve the core problems that have plagued
+        writers for years. This architecture provides a robust, ethical,
+        and future-proof platform poised to become the essential tool
+        for the next generation of storytellers.
+      </para>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              #1 Novel &amp; Book Writing Software For Writers -
+              Literature &amp; Latte, accessed October 3, 2025,
+              <link xlink:href="https://www.literatureandlatte.com/scrivener/overview">https://www.literatureandlatte.com/scrivener/overview</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Scrivener and git (or github) - Literature &amp; Latte
+              Forums, accessed October 3, 2025,
+              <link xlink:href="https://forum.literatureandlatte.com/t/scrivener-and-git-or-github/51085">https://forum.literatureandlatte.com/t/scrivener-and-git-or-github/51085</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              GitHub for Writers: An Introduction | by Rich Hosek -
+              Medium, accessed October 3, 2025,
+              <link xlink:href="https://medium.com/@RichHosek/github-for-writers-an-introduction-8cec9d9ece2">https://medium.com/@RichHosek/github-for-writers-an-introduction-8cec9d9ece2</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Software engineers - have you used github or version
+              control : r/writing - Reddit, accessed October 3, 2025,
+              <link xlink:href="https://www.reddit.com/r/writing/comments/16wlu3a/software_engineers_have_you_used_github_or/">https://www.reddit.com/r/writing/comments/16wlu3a/software_engineers_have_you_used_github_or/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Best Book Writing Software: Word vs. Scrivener, accessed
+              October 3, 2025,
+              <link xlink:href="https://thewritepractice.com/book-writing-software-word-vs-scrivener/">https://thewritepractice.com/book-writing-software-word-vs-scrivener/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Google Docs vs. Scrivener for Writing - Jamie Todd Rubin,
+              accessed October 3, 2025,
+              <link xlink:href="https://jamierubin.net/2015/01/21/google-docs-vs-scrivener-for-writing/">https://jamierubin.net/2015/01/21/google-docs-vs-scrivener-for-writing/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Does Scrivener use AI? / General / Knowledge Base -
+              Literature and Latte Support, accessed October 3, 2025,
+              <link xlink:href="https://scrivener.tenderapp.com/help/kb/general/does-scrivener-use-ai">https://scrivener.tenderapp.com/help/kb/general/does-scrivener-use-ai</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Community Suggestion: Article Version Control / Saving -
+              World Anvil, accessed October 3, 2025,
+              <link xlink:href="https://www.worldanvil.com/community/voting/suggestion/74c70152-3bda-4ce0-89f5-75b3e0b35fe8/view">https://www.worldanvil.com/community/voting/suggestion/74c70152-3bda-4ce0-89f5-75b3e0b35fe8/view</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Novel Writing Software | Online Novel Planner - World
+              Anvil, accessed October 3, 2025,
+              <link xlink:href="https://www.worldanvil.com/features/novel-writing-software">https://www.worldanvil.com/features/novel-writing-software</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Online Book Writing Tools | Start Free - World Anvil,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.worldanvil.com/nanowrimo">https://www.worldanvil.com/nanowrimo</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              World Anvil Review [2025]: Everything Need to Know -
+              Kindlepreneur, accessed October 3, 2025,
+              <link xlink:href="https://kindlepreneur.com/world-anvil/">https://kindlepreneur.com/world-anvil/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Anvil Docs | Version Control and Collaboration, accessed
+              October 3, 2025,
+              <link xlink:href="https://anvil.works/docs/version-control">https://anvil.works/docs/version-control</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Writing Software for Novelists and Worldbuilders -
+              Campfire, accessed October 3, 2025,
+              <link xlink:href="https://www.campfirewriting.com/write">https://www.campfirewriting.com/write</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Campfire Write Review [2025]: Worldbuilding Software for
+              Authors - Kindlepreneur, accessed October 3, 2025,
+              <link xlink:href="https://kindlepreneur.com/campfire-write-review/">https://kindlepreneur.com/campfire-write-review/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Campfire – Write Your Book - Apps on Google Play, accessed
+              October 3, 2025,
+              <link xlink:href="https://play.google.com/store/apps/details?id=com.campfiremobile">https://play.google.com/store/apps/details?id=com.campfiremobile</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Frequently Asked Questions - Campfire, accessed October 3,
+              2025,
+              <link xlink:href="https://www.campfirewriting.com/faq">https://www.campfirewriting.com/faq</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Update 37: New Editing Tools, Goal Tracking, and Wallets -
+              Campfire, accessed October 3, 2025,
+              <link xlink:href="https://www.campfirewriting.com/learn/update37">https://www.campfirewriting.com/learn/update37</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Campfire - Ai Tool Details &amp; Features, accessed
+              October 3, 2025,
+              <link xlink:href="https://airespo.com/ai-tools/campfire/">https://airespo.com/ai-tools/campfire/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Campfire Is AI a magic button? Intelligently incorporating
+              AI technologies into your work, accessed October 3, 2025,
+              <link xlink:href="https://www.youtube.com/watch?v=ittaTwZW1vg">https://www.youtube.com/watch?v=ittaTwZW1vg</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Campfire, accessed October 3, 2025,
+              <link xlink:href="https://www.campfirewriting.com/">https://www.campfirewriting.com/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Does anyone use Git for their personal writing? :
+              r/technicalwriting101 - Reddit, accessed October 3, 2025,
+              <link xlink:href="https://www.reddit.com/r/technicalwriting101/comments/1dkg6ol/does_anyone_use_git_for_their_personal_writing/">https://www.reddit.com/r/technicalwriting101/comments/1dkg6ol/does_anyone_use_git_for_their_personal_writing/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How To Use Git to Manage Your Writing Project |
+              DigitalOcean, accessed October 3, 2025,
+              <link xlink:href="https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-writing-project">https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-writing-project</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Should I suggest to use version control for writing a
+              paper with new collaborators?, accessed October 3, 2025,
+              <link xlink:href="https://academia.stackexchange.com/questions/85635/should-i-suggest-to-use-version-control-for-writing-a-paper-with-new-collaborato">https://academia.stackexchange.com/questions/85635/should-i-suggest-to-use-version-control-for-writing-a-paper-with-new-collaborato</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Why Git is worth the learning curve - GitLab, accessed
+              October 3, 2025,
+              <link xlink:href="https://about.gitlab.com/blog/learning-curve-is-the-biggest-challenge-developers-face-with-git/">https://about.gitlab.com/blog/learning-curve-is-the-biggest-challenge-developers-face-with-git/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What are the biggest learning curves in Github? ·
+              community · Discussion #138591, accessed October 3, 2025,
+              <link xlink:href="https://github.com/orgs/community/discussions/138591">https://github.com/orgs/community/discussions/138591</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Git for Writers | How to Organize Projects with Git and
+              GitKraken, accessed October 3, 2025,
+              <link xlink:href="https://www.gitkraken.com/gitkon/git-for-writers">https://www.gitkraken.com/gitkon/git-for-writers</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              YAML Tutorial : A Complete Language Guide with Examples,
+              accessed October 3, 2025,
+              <link xlink:href="https://spacelift.io/blog/yaml">https://spacelift.io/blog/yaml</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              YAML Syntax — Ansible Community Documentation, accessed
+              October 3, 2025,
+              <link xlink:href="https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html">https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Appendix: YAML Techniques - Helm, accessed October 3,
+              2025,
+              <link xlink:href="https://helm.sh/docs/chart_template_guide/yaml_techniques/">https://helm.sh/docs/chart_template_guide/yaml_techniques/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              JSON Schema Examples Tutorial - MongoDB, accessed October
+              3, 2025,
+              <link xlink:href="https://www.mongodb.com/resources/languages/json-schema-examples">https://www.mongodb.com/resources/languages/json-schema-examples</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              23andMe/Yamale: A schema and validator for YAML. - GitHub,
+              accessed October 3, 2025,
+              <link xlink:href="https://github.com/23andMe/Yamale">https://github.com/23andMe/Yamale</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Creating your first schema - JSON Schema, accessed October
+              3, 2025,
+              <link xlink:href="https://json-schema.org/learn/getting-started-step-by-step">https://json-schema.org/learn/getting-started-step-by-step</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              redhat-developer/yaml-language-server - GitHub, accessed
+              October 3, 2025,
+              <link xlink:href="https://github.com/redhat-developer/yaml-language-server">https://github.com/redhat-developer/yaml-language-server</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Best character card format? : r/SillyTavernAI - Reddit,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.reddit.com/r/SillyTavernAI/comments/1ge0bqp/best_character_card_format/">https://www.reddit.com/r/SillyTavernAI/comments/1ge0bqp/best_character_card_format/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              mhgolkar/Arrow: Game Narrative Design Tool - GitHub,
+              accessed October 3, 2025,
+              <link xlink:href="https://github.com/mhgolkar/Arrow">https://github.com/mhgolkar/Arrow</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              mluogh/eastworld: Framework for Generative Agents in Games
+              - GitHub, accessed October 3, 2025,
+              <link xlink:href="https://github.com/mluogh/eastworld">https://github.com/mluogh/eastworld</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Free Hero's Journey Template &amp; Example - Milanote,
+              accessed October 3, 2025,
+              <link xlink:href="https://milanote.com/templates/creative-writing/heros-journey">https://milanote.com/templates/creative-writing/heros-journey</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How to Outline Your Novel with the Hero's Journey -
+              Savannah Gilbo, accessed October 3, 2025,
+              <link xlink:href="https://www.savannahgilbo.com/blog/plotting-hero's-journey">https://www.savannahgilbo.com/blog/plotting-hero's-journey</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Snowflake Method: 10 Steps to Outline Your Novel - The
+              Wordling, accessed October 3, 2025,
+              <link xlink:href="https://www.thewordling.com/the-snowflake-method/">https://www.thewordling.com/the-snowflake-method/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Snowflake Method: Plot Bold Characters, accessed
+              October 3, 2025,
+              <link xlink:href="https://plottr.com/snowflake-method-for-characters/">https://plottr.com/snowflake-method-for-characters/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How to Outline Your Novel with the Save the Cat! Beat
+              Sheet - Savannah Gilbo, accessed October 3, 2025,
+              <link xlink:href="https://www.savannahgilbo.com/blog/plotting-save-the-cat">https://www.savannahgilbo.com/blog/plotting-save-the-cat</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Save the Cat Beat Sheet Explained [with FREE Template],
+              accessed October 3, 2025,
+              <link xlink:href="https://www.studiobinder.com/blog/save-the-cat-beat-sheet/">https://www.studiobinder.com/blog/save-the-cat-beat-sheet/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Revolutionizing Novel Writing: Introducing novelWriter -
+              DEV ..., accessed October 3, 2025,
+              <link xlink:href="https://dev.to/githubopensource/revolutionizing-novel-writing-introducing-novelwriter-52j4">https://dev.to/githubopensource/revolutionizing-novel-writing-introducing-novelwriter-52j4</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              opengaming/osgameclones: Open Source Clones of Popular
+              Games - GitHub, accessed October 3, 2025,
+              <link xlink:href="https://github.com/opengaming/osgameclones">https://github.com/opengaming/osgameclones</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Git for Web Development: Get to Know the Typical Workflow
+              of a Project - Kinsta, accessed October 3, 2025,
+              <link xlink:href="https://kinsta.com/blog/git-for-web-development/">https://kinsta.com/blog/git-for-web-development/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Git Workflows for API Technical Writers - Bump.sh,
+              accessed October 3, 2025,
+              <link xlink:href="https://bump.sh/blog/git-workflows-for-api-technical-writers/">https://bump.sh/blog/git-workflows-for-api-technical-writers/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              PR Build &amp; Merge · Actions · GitHub Marketplace,
+              accessed October 3, 2025,
+              <link xlink:href="https://github.com/marketplace/actions/pr-build-merge">https://github.com/marketplace/actions/pr-build-merge</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Managing a merge queue - GitHub Docs, accessed October 3,
+              2025,
+              <link xlink:href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue">https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Triggering a workflow - GitHub Docs, accessed October 3,
+              2025,
+              <link xlink:href="https://docs.github.com/actions/using-workflows/triggering-a-workflow">https://docs.github.com/actions/using-workflows/triggering-a-workflow</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Using GitHub Actions on pull requests - Graphite, accessed
+              October 3, 2025,
+              <link xlink:href="https://graphite.dev/guides/github-actions-on-pull-requests">https://graphite.dev/guides/github-actions-on-pull-requests</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Triggering a workflow - GitHub Docs, accessed October 3,
+              2025,
+              <link xlink:href="https://docs.github.com/en/actions/using-workflows/triggering-a-workflow">https://docs.github.com/en/actions/using-workflows/triggering-a-workflow</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Yamllint Github Action · Actions · GitHub Marketplace ·
+              GitHub, accessed October 3, 2025,
+              <link xlink:href="https://github.com/marketplace/actions/yamllint-github-action">https://github.com/marketplace/actions/yamllint-github-action</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Frenck's yamllint · Actions · GitHub Marketplace, accessed
+              October 3, 2025,
+              <link xlink:href="https://github.com/marketplace/actions/frenck-s-yamllint">https://github.com/marketplace/actions/frenck-s-yamllint</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              github.com, accessed October 3, 2025,
+              <link xlink:href="https://github.com/marketplace/actions/post-pr-comment-from-artifact#:~:text=This%20GitHub%20Action%20allows%20you,used%20as%20the%20comment%20body.">https://github.com/marketplace/actions/post-pr-comment-from-artifact#:~:text=This%20GitHub%20Action%20allows%20you,used%20as%20the%20comment%20body.</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Add PR Comment · Actions · GitHub Marketplace · GitHub,
+              accessed October 3, 2025,
+              <link xlink:href="https://github.com/marketplace/actions/add-pr-comment">https://github.com/marketplace/actions/add-pr-comment</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What Does Copyright Protect? (FAQ) | U.S. Copyright
+              Office, accessed October 3, 2025,
+              <link xlink:href="https://www.copyright.gov/help/faq/faq-protect.html">https://www.copyright.gov/help/faq/faq-protect.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf">https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Registration Guidance: Works Containing Material
+              Generated by Artificial Intelligence, accessed October 3,
+              2025,
+              <link xlink:href="https://www.copyright.gov/ai/ai_policy_guidance.pdf">https://www.copyright.gov/ai/ai_policy_guidance.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyrightability and Artificial Intelligence: A new report
+              from the U.S. Copyright Office, accessed October 3, 2025,
+              <link xlink:href="https://www.authorsalliance.org/2025/02/20/copyrightability-and-artificial-intelligence-a-new-report-from-the-u-s-copyright-office/">https://www.authorsalliance.org/2025/02/20/copyrightability-and-artificial-intelligence-a-new-report-from-the-u-s-copyright-office/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Office Releases Part 2 of Artificial
+              Intelligence Report - Library of Congress, accessed
+              October 3, 2025,
+              <link xlink:href="https://newsroom.loc.gov/news/copyright-office-releases-part-2-of-artificial-intelligence-report/s/f3959c36-d616-498d-b8f9-67641fd18bab">https://newsroom.loc.gov/news/copyright-office-releases-part-2-of-artificial-intelligence-report/s/f3959c36-d616-498d-b8f9-67641fd18bab</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How to Use JSON Format to Write Shockingly Accurate
+              Prompts? - Apidog, accessed October 3, 2025,
+              <link xlink:href="https://apidog.com/blog/json-format-prompts/">https://apidog.com/blog/json-format-prompts/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              JSON Prompt: The Ultimate Guide to Perfect AI Outputs -
+              MPG ONE, accessed October 3, 2025,
+              <link xlink:href="https://mpgone.com/json-prompt-guide/">https://mpgone.com/json-prompt-guide/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How to Write JSON Prompts for Maximizing the Accuracy of
+              AI Responses - Mindbees, accessed October 3, 2025,
+              <link xlink:href="https://www.mindbees.com/blog/json-prompts-ai-accuracy/">https://www.mindbees.com/blog/json-prompts-ai-accuracy/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Prompt Engineering: The Art of Getting What You Need From
+              Generative AI, accessed October 3, 2025,
+              <link xlink:href="https://iac.gatech.edu/featured-news/2024/02/AI-prompt-engineering-ChatGPT">https://iac.gatech.edu/featured-news/2024/02/AI-prompt-engineering-ChatGPT</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Prompt engineering techniques - Azure OpenAI | Microsoft
+              Learn, accessed October 3, 2025,
+              <link xlink:href="https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/prompt-engineering">https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/prompt-engineering</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Mastering LLM Prompts: How to Structure Your Queries for
+              Better AI Responses - Codesmith, accessed October 3, 2025,
+              <link xlink:href="https://www.codesmith.io/blog/mastering-llm-prompts">https://www.codesmith.io/blog/mastering-llm-prompts</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Prompt Engineering for AI Guide | Google Cloud, accessed
+              October 3, 2025,
+              <link xlink:href="https://cloud.google.com/discover/what-is-prompt-engineering">https://cloud.google.com/discover/what-is-prompt-engineering</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Prompt engineering - OpenAI API, accessed October 3, 2025,
+              <link xlink:href="https://platform.openai.com/docs/guides/prompt-engineering">https://platform.openai.com/docs/guides/prompt-engineering</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

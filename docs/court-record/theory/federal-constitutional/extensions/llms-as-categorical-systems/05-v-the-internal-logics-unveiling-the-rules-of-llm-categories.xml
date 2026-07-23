@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="v-the-internal-logics-unveiling-the-rules-of-llm-categories">
+  <title>
+    <emphasis role="strong">V. The Internal Logics: Unveiling the
+    Rules of LLM Categories</emphasis>
+  </title>
+  <para>
+      If LLMs or their components can be described using categories,
+      then the "internal logics" of these LLMs are the
+      inherent rules, structures, and properties that define these
+      categories. This section explores some of these potential logics,
+      focusing on composition, hierarchy, symmetry, and probabilistic
+      reasoning.
+    </para>
+  <section xml:id="a-composition-as-a-core-logic-how-llm-operations-chain-together">
+    <title>
+      <emphasis role="strong">A. Composition as a Core Logic: How
+      LLM Operations Chain Together</emphasis>
+    </title>
+    <para>
+        Composition is arguably the most fundamental concept in category
+        theory: morphisms compose associatively, and complex
+        transformations are built from simpler ones.8 This principle is
+        directly mirrored in LLM architectures.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Layer-wise Composition:</emphasis>
+            LLMs are deep networks where layers are applied
+            sequentially. The output of one layer becomes the input to
+            the next. If each layer is a morphism, the entire network is
+            a long composition of these morphisms.58 The
+            "logic" here is that complex feature extraction
+            and representation transformation are achieved through the
+            iterative application of simpler transformations. The
+            associativity of this composition ensures that,
+            mathematically, the overall function computed by the network
+            is well-defined regardless of how intermediate compositions
+            are conceptually grouped.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Intra-Component
+            Composition:</emphasis> Even within complex components like
+            a multi-head attention layer, composition is at play. For
+            example, input embeddings are first projected to Q, K, V (a
+            composition of an input object with projection morphisms).
+            Then, attention scores are computed and used to weight the V
+            vectors. The outputs from multiple parallel attention heads
+            are then concatenated (which can be seen as forming a
+            product or coproduct depending on the categorical setup) and
+            subsequently transformed by another linear projection
+            morphism.31
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        This compositional logic dictates how representations evolve
+        layer by layer, forming the dynamic pathway of information flow
+        and transformation through the network.
+      </para>
+  </section>
+  <section xml:id="b-abstraction-and-hierarchy-categorical-perspectives-on-feature-learning">
+    <title>
+      <emphasis role="strong">B. Abstraction and Hierarchy:
+      Categorical Perspectives on Feature Learning</emphasis>
+    </title>
+    <para>
+        Deep neural networks, including LLMs, are widely believed to
+        learn hierarchical representations of data. Early layers tend to
+        capture low-level features (e.g., simple textual patterns or
+        n-grams), while deeper layers combine these to form more complex
+        and abstract features (e.g., syntactic structures, semantic
+        concepts).
+      </para>
+    <para>
+        Categorically, this hierarchical abstraction can be
+        conceptualized in several ways:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Functors between Categories of
+            Features:</emphasis> One could imagine a sequence of
+            categories, C0​,C1​,…,CL​, where each Ci​ represents features at
+            a certain level of abstraction. Functors Fi​:Ci​→Ci+1​ would
+            then map lower-level features to higher-level ones,
+            preserving some structural relations.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Sequences of Morphisms within a
+            Single Category:</emphasis> Alternatively, within a single,
+            rich category of representations, sequences of morphisms
+            (corresponding to layers or blocks of layers) could
+            progressively transform objects (representations) into new
+            objects that embody greater abstraction.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Colimits for Concept
+            Formation:</emphasis> As suggested by research into
+            categorical neural network semantics,
+            <emphasis role="strong">colimits</emphasis> can be used to
+            express how more specialized or complex concepts are
+            constructed from simpler, more abstract ones by
+            "gluing" them together along shared sub-concept
+            relationships.59 An LLM might implicitly perform such
+            colimit-like operations to build up its understanding of
+            complex linguistic phenomena from simpler learned patterns.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        The "internal logic" here is one of constructive
+        abstraction, where the model builds sophisticated understanding
+        by composing and refining simpler representational elements.
+      </para>
+  </section>
+  <section xml:id="c-symmetry-equivariance-and-invariance-in-llm-structures">
+    <title>
+      <emphasis role="strong">C. Symmetry, Equivariance, and
+      Invariance in LLM Structures</emphasis>
+    </title>
+    <para>
+        Symmetries and the related concepts of equivariance and
+        invariance play a crucial role in the design and understanding
+        of many machine learning models, particularly in geometric deep
+        learning. Recent work has begun to explore these concepts in
+        LLMs through a categorical lens.
+      </para>
+    <para>
+        52 and 49 demonstrate that the linear part of the self-attention
+        mechanism exhibits natural equivariance with respect to
+        permutations of the input tokens. Equivariance means that if the
+        input tokens are permuted, the output token representations are
+        permuted in a corresponding manner. This implies that, at its
+        core (before positional encodings impose an explicit order), the
+        self-attention mechanism treats its input tokens in a set-like
+        fashion, and the relationships it learns are consistent across
+        different orderings of these fundamental units.
+      </para>
+    <para>
+        This symmetry-based "logic" is a structural constraint
+        that influences the learning process and the types of functions
+        the LLM can efficiently learn. It connects the architecture of
+        Transformer layers to broader algebraic settings involving group
+        actions and provides a bridge to the principles of geometric
+        deep learning. Understanding such symmetries is key to
+        understanding what invariances the model might learn (or fail to
+        learn). For example, an ideal language model might be invariant
+        to certain paraphrases of an input; categorical tools could help
+        formalize and analyze such desired invariances.
+      </para>
+  </section>
+  <section xml:id="d-probabilistic-logics-integrating-uncertainty-via-kleisli-categories-or-similar">
+    <title>
+      <emphasis role="strong">D. Probabilistic Logics:
+      Integrating Uncertainty via Kleisli Categories or
+      Similar</emphasis>
+    </title>
+    <para>
+        LLMs are fundamentally probabilistic models. At their output,
+        they typically produce a probability distribution over the next
+        possible token in a sequence.2 This inherent stochasticity needs
+        to be part of any complete "internal logic."
+      </para>
+    <para>
+        Categorical probability theory offers formalisms for dealing
+        with probabilistic processes and mappings. Key structures
+        include:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Markov Categories:</emphasis> These
+            are symmetric monoidal categories equipped with additional
+            structure (copy and discard operations) that allows
+            morphisms to be interpreted as stochastic processes or
+            conditional probability kernels.56
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Kleisli Categories of Probability
+            Monads:</emphasis> A probability monad (like the Giry monad
+            or simpler distribution monads for discrete spaces) on a
+            category C captures the notion of "probabilistic
+            choice" over objects of C. The Kleisli category of such
+            a monad, denoted Kl(D) for a distribution monad D, has the
+            same objects as C, but its morphisms A→B are morphisms
+            A→D(B) in C—that is, functions that map an input from A to a
+            probability distribution over B.56 Composition in Kl(D)
+            naturally handles the propagation of probabilities.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        The "internal logic" from this perspective is that LLM
+        operations, especially the generative steps, are not merely
+        deterministic transformations but are morphisms within a
+        category that explicitly models and composes probabilistic
+        events. For example, each token generation step in an
+        autoregressive LLM could be a morphism in a Kleisli category
+        Kl(D), taking the current context (an object) to a distribution
+        over the next token (an object in D(Vocabulary)).57 This
+        framework allows for a rigorous treatment of how uncertainty is
+        managed and propagated through the model during generation.
+      </para>
+    <para>
+        The interplay between these different logics—compositional,
+        hierarchical, symmetry-based, and probabilistic—ultimately
+        defines the overall behavior and capabilities of an LLM. For
+        instance, the ability to generate coherent, long-form text
+        relies on the compositional logic of layers building upon each
+        other, the hierarchical logic of feature abstraction to capture
+        meaning at different scales, and the probabilistic logic of
+        making sensible token choices at each step. Deviations from, or
+        imperfections in the learning of, these underlying logics could
+        provide a principled way to understand common LLM failure modes.
+        For example, a loss of long-range coherence in generated text
+        might indicate a breakdown in the effective propagation of
+        information through many compositional steps (perhaps related to
+        issues like vanishing or exploding gradients, which
+        architectural elements like residual connections aim to mitigate
+        32). Hallucinations could arise from the probabilistic logic
+        "misfiring" due to insufficient conditioning or from
+        an inadequately rich hierarchical representation of the relevant
+        knowledge. Similarly, undue sensitivity to input phrasing might
+        indicate a failure to achieve true invariance (a form of
+        symmetry) to semantically equivalent but syntactically varied
+        inputs. A categorical analysis could potentially pinpoint
+        structural weaknesses or bottlenecks within these logical
+        frameworks.
+      </para>
+  </section>
+</section>
+  

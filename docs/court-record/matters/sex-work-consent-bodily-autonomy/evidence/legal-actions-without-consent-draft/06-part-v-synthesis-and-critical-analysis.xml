@@ -1,0 +1,1753 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="part-v-synthesis-and-critical-analysis">
+  <title>
+    <emphasis role="strong">Part V: Synthesis and Critical
+    Analysis</emphasis>
+  </title>
+  <section xml:id="chapter-11-a-taxonomy-of-non-consensual-legality-from-implied-agreement-to-coercive-power">
+    <title>
+      <emphasis role="strong">Chapter 11: A Taxonomy of
+      Non-Consensual Legality: From Implied Agreement to Coercive
+      Power</emphasis>
+    </title>
+    <section xml:id="systematic-classification">
+      <title>
+        <emphasis role="strong">Systematic
+        Classification</emphasis>
+      </title>
+      <para>
+          The preceding analysis has surveyed a wide range of actions,
+          organizations, and behaviors that are legally permissible in
+          the United States without the consent of the affected
+          individual. To synthesize these disparate phenomena, this
+          chapter organizes them into a comprehensive taxonomy based on
+          their underlying legal and philosophical justifications. This
+          classification reveals a spectrum of non-consensual legality,
+          ranging from actions based on pragmatic legal fictions of
+          agreement to those rooted in the raw exercise of sovereign or
+          individual power. The five primary categories are:
+        </para>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Actions Justified by Implied or
+              Waived Consent:</emphasis> These actions operate under the
+              legal premise that consent has been given, not expressly,
+              but through participation in an activity, acceptance of a
+              benefit, or a change in legal status. This category
+              includes DUI checkpoints for licensed drivers, the
+              assumption of risk in contact sports, and the submission
+              to military authority upon enlistment.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Actions Justified by Superseding
+              Public Interest/Welfare:</emphasis> In these cases, the
+              law recognizes an individual's lack of consent but deems
+              it subordinate to a compelling collective good. This
+              justification underpins the state's power of
+              <emphasis>parens patriae</emphasis> in involuntary civil
+              commitment and the expanded "public purpose"
+              doctrine in eminent domain.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Actions Justified by Sovereign
+              Prerogative:</emphasis> This category includes actions
+              that are considered inherent to the state's function of
+              maintaining order and security. National security
+              surveillance and the command structure of emergency
+              services fall under this heading, where the state's
+              authority is seen as a prerequisite for the functioning of
+              civil society itself.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Actions Justified by Competing
+              Individual Rights:</emphasis> Here, the non-consensual
+              nature of an act is a consequence of a conflict between
+              the rights of different individuals. The First Amendment
+              rights of journalists, photographers, and protesters to
+              document and speak in public forums necessarily operate
+              without the consent of their subjects or audience.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Actions Justified by the Absence
+              of a Recognized Right:</emphasis> These are actions that
+              are legal by default because the law does not recognize a
+              right to be free from them. The business model of data
+              brokers thrives in the absence of a comprehensive federal
+              right to data privacy, while social ostracism is
+              permissible due to the primacy of the freedom of
+              association over a legally unrecognized right to social
+              belonging.
+            </para>
+        </listitem>
+      </orderedlist>
+      <para>
+          The following table provides a detailed, comparative summary
+          of these categories, illustrating the legal doctrines, power
+          dynamics, and societal risks associated with each form of
+          consent-insensitive action. This framework serves not merely
+          as a summary but as an analytical instrument, revealing the
+          common structures and justifications that underpin these
+          seemingly unrelated phenomena and providing a unified theory
+          of non-consensual legality.
+        </para>
+      <section xml:id="table-1-a-taxonomy-of-consent-insensitive-legal-actions">
+        <title>
+          <emphasis role="strong">Table 1: A Taxonomy of
+          Consent-Insensitive Legal Actions</emphasis>
+        </title>
+        <informaltable>
+          <tgroup cols="7">
+            <colspec align="center" />
+            <colspec align="center" />
+            <colspec align="center" />
+            <colspec align="center" />
+            <colspec align="center" />
+            <colspec align="center" />
+            <colspec align="center" />
+            <tbody>
+              <row>
+                <entry>
+                    **Category of Action**
+                  </entry>
+                <entry>
+                    **Specific Example**
+                  </entry>
+                <entry>
+                    **Legal Doctrine/Justification**
+                  </entry>
+                <entry>
+                    **Nature of Consent**
+                  </entry>
+                <entry>
+                    **Key Legal Instruments/Cases**
+                  </entry>
+                <entry>
+                    **Locus of Power**
+                  </entry>
+                <entry>
+                    **Identified Risks/Harms**
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **State Security**
+                  </entry>
+                <entry>
+                    Mass Electronic Surveillance
+                  </entry>
+                <entry>
+                    National Security Exception to Fourth Amendment
+                  </entry>
+                <entry>
+                    Overridden
+                  </entry>
+                <entry>
+                    USA PATRIOT Act; FISA
+                  </entry>
+                <entry>
+                    State (Executive)
+                  </entry>
+                <entry>
+                    Erosion of privacy; Chilling effect; Racial bias
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **State Security**
+                  </entry>
+                <entry>
+                    Warrantless Search (Exigent Circumstances)
+                  </entry>
+                <entry>
+                    Fourth Amendment Exception
+                  </entry>
+                <entry>
+                    Overridden
+                  </entry>
+                <entry>
+                    *Terry v. Ohio*; *Kentucky v. King*
+                  </entry>
+                <entry>
+                    State (Law Enforcement)
+                  </entry>
+                <entry>
+                    Abuse of power; Racial profiling
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **Public Welfare**
+                  </entry>
+                <entry>
+                    Eminent Domain for Economic Development
+                  </entry>
+                <entry>
+                    Fifth Amendment (Takings Clause); Expanded
+                    "Public Use" Doctrine
+                  </entry>
+                <entry>
+                    Overridden
+                  </entry>
+                <entry>
+                    *Kelo v. City of New London*
+                  </entry>
+                <entry>
+                    State (Legislative/Judicial)
+                  </entry>
+                <entry>
+                    Displacement; Disparate impact on minority/poor
+                    communities
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **Public Welfare**
+                  </entry>
+                <entry>
+                    Involuntary Civil Commitment
+                  </entry>
+                <entry>
+                    *Parens Patriae* Doctrine
+                  </entry>
+                <entry>
+                    Overridden
+                  </entry>
+                <entry>
+                    State Mental Health Codes
+                  </entry>
+                <entry>
+                    State (Judicial/Medical)
+                  </entry>
+                <entry>
+                    Deprivation of liberty; Stigmatization
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **Hierarchical Command**
+                  </entry>
+                <entry>
+                    Military Orders
+                  </entry>
+                <entry>
+                    UCMJ; Enlistment Contract
+                  </entry>
+                <entry>
+                    Implied/Waived
+                  </entry>
+                <entry>
+                    UCMJ Articles 90, 92
+                  </entry>
+                <entry>
+                    State (Military)
+                  </entry>
+                <entry>
+                    Moral injury; Abuse of authority
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **Hierarchical Command**
+                  </entry>
+                <entry>
+                    Emergency Response (ICS)
+                  </entry>
+                <entry>
+                    Incident Command System Protocols
+                  </entry>
+                <entry>
+                    Suspended
+                  </entry>
+                <entry>
+                    NIMS; State Emergency Management Acts
+                  </entry>
+                <entry>
+                    State/Local (Executive)
+                  </entry>
+                <entry>
+                    Overreach of authority post-emergency
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **Commercial Activity**
+                  </entry>
+                <entry>
+                    Data Brokerage &amp; Sale of Personal Info
+                  </entry>
+                <entry>
+                    Lack of Comprehensive Federal Privacy Law
+                  </entry>
+                <entry>
+                    Irrelevant
+                  </entry>
+                <entry>
+                    Fair Credit Reporting Act (FCRA)
+                  </entry>
+                <entry>
+                    Corporation
+                  </entry>
+                <entry>
+                    Privacy invasion; Discrimination ("secret
+                    scores"); Fraud
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **Commercial Activity**
+                  </entry>
+                <entry>
+                    Public Video Surveillance by Businesses
+                  </entry>
+                <entry>
+                    Property Rights; No Reasonable Expectation of
+                    Privacy
+                  </entry>
+                <entry>
+                    Irrelevant
+                  </entry>
+                <entry>
+                    State-specific statutes
+                  </entry>
+                <entry>
+                    Corporation
+                  </entry>
+                <entry>
+                    Chilling effect; Normalization of surveillance
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **Social Expression**
+                  </entry>
+                <entry>
+                    Public Photography/Videography
+                  </entry>
+                <entry>
+                    First Amendment (Freedom of Press/Speech)
+                  </entry>
+                <entry>
+                    Irrelevant
+                  </entry>
+                <entry>
+                    *Glik v. Cunniffe*
+                  </entry>
+                <entry>
+                    Individual/Media
+                  </entry>
+                <entry>
+                    Invasion of privacy; Harassment
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **Social Expression**
+                  </entry>
+                <entry>
+                    Public Protest
+                  </entry>
+                <entry>
+                    First Amendment (Freedom of Assembly/Speech)
+                  </entry>
+                <entry>
+                    Irrelevant
+                  </entry>
+                <entry>
+                    *Perry Education Ass'n v. Perry Local Educators'
+                    Ass'n*
+                  </entry>
+                <entry>
+                    Individual/Social Group
+                  </entry>
+                <entry>
+                    Public disruption; Infringement on others' rights
+                  </entry>
+              </row>
+              <row>
+                <entry>
+                    **Social Behavior**
+                  </entry>
+                <entry>
+                    Social Ostracism/Exclusion
+                  </entry>
+                <entry>
+                    Freedom of Association
+                  </entry>
+                <entry>
+                    Irrelevant
+                  </entry>
+                <entry>
+                    N/A (Legal by default)
+                  </entry>
+                <entry>
+                    Individual/Social Group
+                  </entry>
+                <entry>
+                    Psychological harm; Social fragmentation
+                  </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </section>
+    </section>
+  </section>
+  <section xml:id="chapter-12-the-penumbra-of-harm-civil-liberties-human-rights-and-the-disparate-impact-of-consent-insensitive-systems">
+    <title>
+      <emphasis role="strong">Chapter 12: The Penumbra of Harm:
+      Civil Liberties, Human Rights, and the Disparate Impact of
+      Consent-Insensitive Systems</emphasis>
+    </title>
+    <section xml:id="a-critical-synthesis-of-harms">
+      <title>
+        <emphasis role="strong">A Critical Synthesis of
+        Harms</emphasis>
+      </title>
+      <para>
+          While each of the consent-insensitive systems analyzed in this
+          report may be legally justified in isolation, their cumulative
+          effect represents a significant and systematic erosion of
+          individual autonomy, privacy, and dignity. These systems
+          create a "penumbra of harm"—a shadowed area where
+          legally permissible actions inflict profound personal and
+          societal costs. The normalization of surveillance chills free
+          expression and association, as individuals become warier of
+          what they say, read, or whom they meet.32 The commodification
+          of personal data creates opaque systems of judgment
+          ("secret scores") that can deny people opportunities
+          for housing, credit, and employment without their knowledge or
+          recourse.94 The exercise of state power, from eminent domain
+          to civil commitment, can lead to the loss of property,
+          community, and liberty. Collectively, these legally
+          sanctioned, non-consensual actions create a society where the
+          sphere of personal sovereignty is continuously shrinking in
+          the face of state and corporate power.
+        </para>
+    </section>
+    <section xml:id="the-disproportionate-burden">
+      <title>
+        <emphasis role="strong">The Disproportionate
+        Burden</emphasis>
+      </title>
+      <para>
+          A critical and recurring theme throughout this analysis is
+          that the burdens and harms of these consent-insensitive
+          systems are not distributed equally across society. They fall
+          disproportionately on marginalized and vulnerable populations,
+          thereby reinforcing and amplifying existing social
+          inequalities.
+        </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Racial and Economic
+              Minorities:</emphasis> These communities are
+              systematically disadvantaged by multiple overlapping
+              systems. They have been the primary targets of eminent
+              domain actions justified by "blight removal" and
+              "urban renewal," leading to mass displacement
+              and the destruction of generational wealth.47 They are
+              disproportionately subjected to government surveillance,
+              from historical programs like COINTELPRO targeting civil
+              rights activists to modern, algorithmically biased facial
+              recognition technologies that have higher error rates for
+              people of color.33 Furthermore, they are more likely to be
+              harmed by the algorithmic scoring systems used by data
+              brokers and credit agencies, which can perpetuate and
+              obscure discriminatory outcomes in lending and
+              employment.94
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Individuals with Mental
+              Illness:</emphasis> This population is uniquely vulnerable
+              to the most extreme form of non-consensual state action:
+              involuntary civil commitment. This process, while intended
+              to be therapeutic, results in a profound loss of liberty
+              and subjects individuals to significant social stigma.62
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Political Dissenters and
+              Activists:</emphasis> Individuals and groups who challenge
+              the status quo are often the targets of government
+              surveillance aimed at monitoring their activities.35 They
+              are also subject to "time, place, and manner"
+              restrictions that, while content-neutral on their face,
+              can be used to marginalize and control protest
+              movements.132
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="international-human-rights-perspective">
+      <title>
+        <emphasis role="strong">International Human Rights
+        Perspective</emphasis>
+      </title>
+      <para>
+          When benchmarked against international human rights standards,
+          U.S. law and practice in several of these areas appear
+          deficient. The right to privacy is a fundamental human right,
+          enshrined in Article 12 of the Universal Declaration of Human
+          Rights and Article 17 of the International Covenant on Civil
+          and Political Rights (ICCPR), which the U.S. has ratified.143
+          These instruments protect individuals from "arbitrary or
+          unlawful interference with his privacy, family, home or
+          correspondence".144 The expansive government surveillance
+          programs authorized under the PATRIOT Act and the largely
+          unregulated data brokerage industry in the U.S. stand in
+          tension with these international norms. The U.S.
+          "opt-out" approach to data privacy, which places the
+          burden on the individual to protect their information, is
+          significantly weaker than the "opt-in,"
+          consent-based framework of the EU's GDPR, which reflects a
+          stronger commitment to privacy as a fundamental right.108 This
+          comparison highlights a philosophical and legal divergence,
+          where U.S. law often prioritizes security and commercial
+          interests over the international standard of privacy
+          protection.
+        </para>
+    </section>
+  </section>
+  <section xml:id="chapter-13-re-evaluating-the-boundaries-recommendations-for-legal-and-ethical-frameworks">
+    <title>
+      <emphasis role="strong">Chapter 13: Re-evaluating the
+      Boundaries: Recommendations for Legal and Ethical
+      Frameworks</emphasis>
+    </title>
+    <section xml:id="proposals-for-legislative-and-judicial-reform">
+      <title>
+        <emphasis role="strong">Proposals for Legislative and
+        Judicial Reform</emphasis>
+      </title>
+      <para>
+          The architecture of non-consensual legality, while justified
+          by various principles, has created significant risks to civil
+          liberties, privacy, and equality. Recalibrating the balance
+          between collective imperatives and individual consent requires
+          deliberate and targeted reforms across the state, corporate,
+          and social spheres.
+        </para>
+      <section xml:id="for-state-power">
+        <title>
+          <emphasis role="strong">For State
+          Power</emphasis>
+        </title>
+        <itemizedlist spacing="compact">
+          <listitem>
+            <para>
+              <emphasis role="strong">Surveillance Reform:</emphasis>
+                Congress should repeal or fundamentally reform the
+                statutes that enable mass, suspicionless surveillance,
+                such as Section 215 of the PATRIOT Act and Section 702
+                of the Foreign Intelligence Surveillance Act. A warrant
+                based on probable cause should be the unyielding
+                standard for government access to sensitive personal
+                information, including data held by third parties.
+                Courts should apply stronger scrutiny to government
+                claims of "national security" to prevent the
+                exception from swallowing the Fourth Amendment's rule.
+              </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="strong">Eminent Domain
+                Reform:</emphasis> In the wake of
+                <emphasis>Kelo</emphasis>, states should pass
+                legislation and constitutional amendments that narrowly
+                define "public use" to mean direct ownership
+                or use by the public (e.g., for roads, parks, public
+                buildings). The use of eminent domain for the primary
+                purpose of economic development or transfer to another
+                private party should be explicitly prohibited. The
+                definition of "blight" should be tightened to
+                refer only to specific properties that pose a direct
+                threat to public health and safety, preventing its use
+                as a pretext for large-scale displacement.
+              </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="strong">Civil Commitment
+                Oversight:</emphasis> States should strengthen
+                procedural protections in civil commitment proceedings,
+                including ensuring robust, independent legal
+                representation and mandating the exploration of less
+                restrictive community-based treatment alternatives
+                before commitment is considered. Independent oversight
+                bodies should be empowered to review commitment
+                decisions and facility conditions to prevent abuse.
+              </para>
+          </listitem>
+        </itemizedlist>
+      </section>
+      <section xml:id="for-corporate-power">
+        <title>
+          <emphasis role="strong">For Corporate
+          Power</emphasis>
+        </title>
+        <itemizedlist spacing="compact">
+          <listitem>
+            <para>
+              <emphasis role="strong">Federal Data Privacy
+                Legislation:</emphasis> Congress should enact a
+                comprehensive federal data privacy law that establishes
+                a national standard for data protection. This law should
+                be modeled on the "opt-in" framework of the
+                GDPR, requiring businesses to obtain explicit, informed,
+                and unambiguous consent from individuals before
+                collecting, using, or sharing their personal data. Such
+                a law would effectively dismantle the current business
+                model of data brokers, which relies on non-consensual
+                data harvesting. It should also include a private right
+                of action, allowing individuals to sue companies for
+                privacy violations.
+              </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="strong">Regulation of Private
+                Surveillance:</emphasis> Clear national standards should
+                be established for the use of private surveillance
+                technologies, particularly those with audio recording
+                capabilities and advanced analytical tools like facial
+                recognition. These standards should include mandatory,
+                conspicuous notification requirements and strict
+                prohibitions on surveillance in areas where a reasonable
+                expectation of privacy exists.
+              </para>
+          </listitem>
+        </itemizedlist>
+      </section>
+      <section xml:id="for-social-behavior">
+        <title>
+          <emphasis role="strong">For Social
+          Behavior</emphasis>
+        </title>
+        <itemizedlist spacing="compact">
+          <listitem>
+            <para>
+              <emphasis role="strong">Clarifying Harassment
+                Law:</emphasis> Legislatures and courts should provide
+                clearer guidance on the line between legally protected
+                freedom of association (and exclusion) and legally
+                actionable harassment, particularly in workplace and
+                educational contexts.
+              </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="strong">Educational
+                Initiatives:</emphasis> Schools and workplaces should
+                implement educational programs focused on digital
+                citizenship, the psychological harms of ostracism and
+                cyberbullying, and the promotion of inclusive
+                environments. These initiatives can help foster social
+                norms that discourage harmful exclusionary behavior,
+                even when such behavior does not rise to the level of
+                illegality.
+              </para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+    <section xml:id="a-call-for-a-renewed-philosophy-of-consent">
+      <title>
+        <emphasis role="strong">A Call for a Renewed Philosophy
+        of Consent</emphasis>
+      </title>
+      <para>
+          Ultimately, legal and policy reforms must be animated by a
+          renewed philosophical commitment to the principle of consent.
+          The analysis in this report demonstrates that justifications
+          based on efficiency, security, or public benefit are often
+          used to sideline the fundamental importance of individual
+          autonomy. This trend comes at an unacceptably high cost to
+          liberty, equality, and human dignity. Policymakers, judges,
+          and citizens must adopt a more deliberate and skeptical
+          approach to any legal framework that deems consent irrelevant.
+          The foundational premise of a just and free society is that
+          power is legitimized by the consent of those over whom it is
+          exercised. While exceptions to this rule are sometimes
+          necessary, they must remain just that: rare, narrowly defined,
+          and subject to the most rigorous scrutiny. Reclaiming the
+          centrality of consent is essential to preserving the core
+          values of a liberal democratic society in an age of expanding
+          technological and institutional power.
+        </para>
+    </section>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              Consent | Definition, Principles &amp; Examples |
+              Britannica, accessed September 16, 2025,
+              <link xlink:href="https://www.britannica.com/topic/consent-political-philosophy-and-ethics">https://www.britannica.com/topic/consent-political-philosophy-and-ethics</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Consent - Routledge Encyclopedia of Philosophy, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.rep.routledge.com/articles/thematic/consent/v-1/sections/meaning-and-importance">https://www.rep.routledge.com/articles/thematic/consent/v-1/sections/meaning-and-importance</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Philosophy, Psychology, and the Ethics of Consent -
+              EliScholar, accessed September 16, 2025,
+              <link xlink:href="https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=1584&amp;context=gsas_dissertations">https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=1584&amp;context=gsas_dissertations</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Consent - Routledge Encyclopedia of Philosophy, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.rep.routledge.com/articles/thematic/consent/v-1">https://www.rep.routledge.com/articles/thematic/consent/v-1</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              consent | Wex | US Law | LII / Legal Information
+              Institute, accessed September 16, 2025,
+              <link xlink:href="https://www.law.cornell.edu/wex/consent">https://www.law.cornell.edu/wex/consent</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Consent - Wikipedia, accessed September 16, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Consent">https://en.wikipedia.org/wiki/Consent</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              implied consent | Wex | US Law | LII / Legal Information
+              Institute, accessed September 16, 2025,
+              <link xlink:href="https://www.law.cornell.edu/wex/implied_consent">https://www.law.cornell.edu/wex/implied_consent</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Implied Consent — McDougall LawFirm, LLC, accessed
+              September 16, 2025,
+              <link xlink:href="https://mcdougalllawfirm.com/glossary/implied-consent/">https://mcdougalllawfirm.com/glossary/implied-consent/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Express and Implied Consent - Law Office of Cohen &amp;
+              Jaffe, accessed September 16, 2025,
+              <link xlink:href="https://www.cohenjaffe.com/blog/express-and-implied-consent/">https://www.cohenjaffe.com/blog/express-and-implied-consent/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Definition of Consent | University of St. Thomas |
+              Catholic University Houston, TX, accessed September 16,
+              2025,
+              <link xlink:href="https://catalog.stthom.edu/definition-of-consent">https://catalog.stthom.edu/definition-of-consent</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Consent Definition | Termly Legal Dictionary, accessed
+              September 16, 2025,
+              <link xlink:href="https://termly.io/legal-dictionary/consent/">https://termly.io/legal-dictionary/consent/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is Consent?: Policies &amp; Key Terms - Stop Sexual
+              Violence - Indiana University, accessed September 16,
+              2025,
+              <link xlink:href="https://stopsexualviolence.iu.edu/policies-terms/consent.html">https://stopsexualviolence.iu.edu/policies-terms/consent.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Definition: consent from 10 USC § 920(g)(8)(A) | LII /
+              Legal Information Institute, accessed September 16, 2025,
+              <link xlink:href="https://www.law.cornell.edu/definitions/uscode.php?width=840&amp;height=800&amp;iframe=true&amp;def_id=10-USC-951500826-1920865552&amp;term_occur=3&amp;term_src=title:10:subtitle:A:part:II:chapter:47:subchapter:X:section:920">https://www.law.cornell.edu/definitions/uscode.php?width=840&amp;height=800&amp;iframe=true&amp;def_id=10-USC-951500826-1920865552&amp;term_occur=3&amp;term_src=title:10:subtitle:A:part:II:chapter:47:subchapter:X:section:920</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Does social contract theory justify political authority? -
+              Consensus, accessed September 16, 2025,
+              <link xlink:href="https://consensus.app/search/does-social-contract-theory-justify-political-auth/ElT8ViCMTuWv8sAa_25DIg/">https://consensus.app/search/does-social-contract-theory-justify-political-auth/ElT8ViCMTuWv8sAa_25DIg/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Social contract - Wikipedia, accessed September 16, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Social_contract">https://en.wikipedia.org/wiki/Social_contract</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Social Contract and Its Impact on American Politics -
+              ThoughtCo, accessed September 16, 2025,
+              <link xlink:href="https://www.thoughtco.com/social-contract-in-politics-105424">https://www.thoughtco.com/social-contract-in-politics-105424</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Social contract | Definition, Examples, Hobbes, Locke,
+              &amp; Rousseau | Britannica, accessed September 16, 2025,
+              <link xlink:href="https://www.britannica.com/topic/social-contract">https://www.britannica.com/topic/social-contract</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Privacy &amp; Technology | American Civil Liberties Union,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.aclu.org/issues/privacy-technology">https://www.aclu.org/issues/privacy-technology</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Land Rights | Human Rights Watch, accessed September 16,
+              2025,
+              <link xlink:href="https://www.hrw.org/tag/land-rights">https://www.hrw.org/tag/land-rights</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Reasonable Expectation of Privacy Under the Fourth
+              Amendment - Law for Seniors, accessed September 16, 2025,
+              <link xlink:href="https://lawforseniors.org/lifelong-legal-learning/reasonable-expectation-of-privacy-under-the-fourth-amendment">https://lawforseniors.org/lifelong-legal-learning/reasonable-expectation-of-privacy-under-the-fourth-amendment</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fourth Amendment | Wex | US Law | LII / Legal Information
+              Institute, accessed September 16, 2025,
+              <link xlink:href="https://www.law.cornell.edu/wex/fourth_amendment">https://www.law.cornell.edu/wex/fourth_amendment</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Amdt4.3.1 Overview of Unreasonable Searches and Seizures -
+              Constitution Annotated, accessed September 16, 2025,
+              <link xlink:href="https://constitution.congress.gov/browse/essay/amdt4-3-1/ALDE_00013715/">https://constitution.congress.gov/browse/essay/amdt4-3-1/ALDE_00013715/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Reasonable expectation of privacy - Alaska State
+              Legislature, accessed September 16, 2025,
+              <link xlink:href="https://www.akleg.gov/basis/get_documents.asp?session=28&amp;docid=24919">https://www.akleg.gov/basis/get_documents.asp?session=28&amp;docid=24919</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              expectation of privacy | Wex | US Law | LII / Legal
+              Information Institute, accessed September 16, 2025,
+              <link xlink:href="https://www.law.cornell.edu/wex/expectation_of_privacy">https://www.law.cornell.edu/wex/expectation_of_privacy</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Reasonable expectation of privacy (United States) -
+              Wikipedia, accessed September 16, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Reasonable_expectation_of_privacy_(United_States)">https://en.wikipedia.org/wiki/Reasonable_expectation_of_privacy_(United_States)</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              unreasonable search and seizure | Wex | US Law | LII /
+              Legal Information Institute, accessed September 16, 2025,
+              <link xlink:href="https://www.law.cornell.edu/wex/unreasonable_search_and_seizure">https://www.law.cornell.edu/wex/unreasonable_search_and_seizure</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Amdt4.6.3 Exigent Circumstances and Warrants -
+              Constitution Annotated - Congress.gov, accessed September
+              16, 2025,
+              <link xlink:href="https://constitution.congress.gov/browse/essay/amdt4-6-3/ALDE_00013720/">https://constitution.congress.gov/browse/essay/amdt4-6-3/ALDE_00013720/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Search &amp; Seizure Supreme Court Cases, accessed
+              September 16, 2025,
+              <link xlink:href="https://supreme.justia.com/cases-by-topic/search-seizure/">https://supreme.justia.com/cases-by-topic/search-seizure/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              PATRIOT Act – EPIC – Electronic Privacy Information
+              Center, accessed September 16, 2025,
+              <link xlink:href="https://epic.org/issues/surveillance-oversight/patriot-act/">https://epic.org/issues/surveillance-oversight/patriot-act/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              USA PATRIOT Act | ALA - American Library Association,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.ala.org/advocacy/patriot-act">https://www.ala.org/advocacy/patriot-act</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              USA Patriot Act: Protecting National Security or Violating
+              Civil Liberties? - UMBC, accessed September 16, 2025,
+              <link xlink:href="https://www2.umbc.edu/che/arch/documents/PatriotActPAT_final.pdf">https://www2.umbc.edu/che/arch/documents/PatriotActPAT_final.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              End Mass Surveillance Under the Patriot Act | American
+              Civil Liberties Union, accessed September 16, 2025,
+              <link xlink:href="https://www.aclu.org/end-mass-surveillance-under-the-patriot-act">https://www.aclu.org/end-mass-surveillance-under-the-patriot-act</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              FACE SURVEILLANCE AND RACIAL BIAS, accessed September 16,
+              2025,
+              <link xlink:href="https://www.aclum.org/sites/default/files/field_documents/presspause_face_surveillance_and_race.pdf">https://www.aclum.org/sites/default/files/field_documents/presspause_face_surveillance_and_race.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Biased Technology: The Automated Discrimination of Facial
+              Recognition | ACLU of Minnesota, accessed September 16,
+              2025,
+              <link xlink:href="https://www.aclu-mn.org/en/news/biased-technology-automated-discrimination-facial-recognition">https://www.aclu-mn.org/en/news/biased-technology-automated-discrimination-facial-recognition</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How is Face Recognition Surveillance Technology Racist? |
+              American Civil Liberties Union, accessed September 16,
+              2025,
+              <link xlink:href="https://www.aclu.org/news/privacy-technology/how-is-face-recognition-surveillance-technology-racist">https://www.aclu.org/news/privacy-technology/how-is-face-recognition-surveillance-technology-racist</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Privacy &amp; Racial Justice - Epic.org, accessed
+              September 16, 2025,
+              <link xlink:href="https://epic.org/issues/democracy-free-speech/privacy-and-racial-justice/">https://epic.org/issues/democracy-free-speech/privacy-and-racial-justice/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Vile vigilance: An integrated theoretical framework for
+              understanding the state of Black surveillance - PMC,
+              accessed September 16, 2025,
+              <link xlink:href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7581301/">https://pmc.ncbi.nlm.nih.gov/articles/PMC7581301/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Environment and Natural Resources Division | History of
+              the Federal ..., accessed September 16, 2025,
+              <link xlink:href="https://www.justice.gov/enrd/condemnation/land-acquisition-section/history-federal-use-eminent-domain">https://www.justice.gov/enrd/condemnation/land-acquisition-section/history-federal-use-eminent-domain</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Eminent Domain - National Association of REALTORS®,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.nar.realtor/eminent-domain">https://www.nar.realtor/eminent-domain</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Eminent Domain: An Overview | Research Starters - EBSCO,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.ebsco.com/research-starters/law/eminent-domain-overview">https://www.ebsco.com/research-starters/law/eminent-domain-overview</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              National Eminent Domain Power :: Fifth Amendment - Justia
+              Law, accessed September 16, 2025,
+              <link xlink:href="https://law.justia.com/constitution/us/amendment-05/14-national-eminent-domain-power.html">https://law.justia.com/constitution/us/amendment-05/14-national-eminent-domain-power.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              eminent domain | Wex | US Law | LII / Legal Information
+              Institute, accessed September 16, 2025,
+              <link xlink:href="https://www.law.cornell.edu/wex/eminent_domain">https://www.law.cornell.edu/wex/eminent_domain</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Understanding Eminent Domain: How the Fifth Amendment
+              Protects Your Property Rights, accessed September 16,
+              2025,
+              <link xlink:href="https://www.hansenhowell.com/blog/undersanding-eminent-domain-fifth-amendment-rights/">https://www.hansenhowell.com/blog/undersanding-eminent-domain-fifth-amendment-rights/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Eminent Domain - Minnesota Issues Resources Guides,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.lrl.mn.gov/guides/guides?issue=eminentdomain">https://www.lrl.mn.gov/guides/guides?issue=eminentdomain</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              public use | Wex | US Law | LII / Legal Information
+              Institute, accessed September 16, 2025,
+              <link xlink:href="https://www.law.cornell.edu/wex/public_use">https://www.law.cornell.edu/wex/public_use</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Comments: The Continued Expansion of the Public Use
+              Requirement in Eminent Domain, accessed September 16,
+              2025,
+              <link xlink:href="https://scholarworks.law.ubalt.edu/cgi/viewcontent.cgi?article=1503&amp;context=ublr">https://scholarworks.law.ubalt.edu/cgi/viewcontent.cgi?article=1503&amp;context=ublr</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Civil Rights Implications of Eminent Domain Abuse,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.usccr.gov/files/pubs/docs/FINAL_FY14_Eminent-Domain-Report.pdf">https://www.usccr.gov/files/pubs/docs/FINAL_FY14_Eminent-Domain-Report.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              en.wikipedia.org, accessed September 16, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Kelo_v._City_of_New_London">https://en.wikipedia.org/wiki/Kelo_v._City_of_New_London</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Kelo v. City of New London | 545 U.S. 469 (2005) | Justia
+              U.S. Supreme Court Center, accessed September 16, 2025,
+              <link xlink:href="https://supreme.justia.com/cases/federal/us/545/469/">https://supreme.justia.com/cases/federal/us/545/469/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Kelo v. New London - The Federalist Society, accessed
+              September 16, 2025,
+              <link xlink:href="https://fedsoc.org/case/kelo-v-new-london">https://fedsoc.org/case/kelo-v-new-london</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Kelo v. New London | Oyez, accessed September 16, 2025,
+              <link xlink:href="https://www.oyez.org/cases/2004/04-108">https://www.oyez.org/cases/2004/04-108</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <link xlink:href="http://www.law.cornell.edu">www.law.cornell.edu</link>,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.law.cornell.edu/wex/eminent_domain#:~:text=Public%20Use%20Requirement&amp;text=The%20Court%20considered%20the%20taking,to%20a%20conceivable%20public%20purpose.">https://www.law.cornell.edu/wex/eminent_domain#:~:text=Public%20Use%20Requirement&amp;text=The%20Court%20considered%20the%20taking,to%20a%20conceivable%20public%20purpose.</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What if Kelo v. City of New London Had Gone the Other Way?
+              | Antonin Scalia Law School, accessed September 16, 2025,
+              <link xlink:href="https://www.law.gmu.edu/pubs/papers/12_13">https://www.law.gmu.edu/pubs/papers/12_13</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Untitled - Cato Institute, accessed September 16, 2025,
+              <link xlink:href="https://www.cato.org/sites/cato.org/files/serials/files/cato-handbook-policymakers/2009/9/hb111-34.pdf">https://www.cato.org/sites/cato.org/files/serials/files/cato-handbook-policymakers/2009/9/hb111-34.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Eminent Domain Shenanigans | Cato at Liberty Blog,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.cato.org/blog/eminent-domain-shenanigans">https://www.cato.org/blog/eminent-domain-shenanigans</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Pain of Eminent Domain - Cato Institute, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.cato.org/commentary/pain-eminent-domain">https://www.cato.org/commentary/pain-eminent-domain</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Frontier of Eminent Domain - Cato Institute, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.cato.org/regulation/summer-2008/frontier-eminent-domain">https://www.cato.org/regulation/summer-2008/frontier-eminent-domain</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Class, Race and Displacement: Community Uprooted: Eminent
+              Domain in the U.S., accessed September 16, 2025,
+              <link xlink:href="https://www.luc.edu/eminent-domain/siteessays/norristn/classraceanddisplacement/">https://www.luc.edu/eminent-domain/siteessays/norristn/classraceanddisplacement/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Eminent Domain &amp; African Americans - The Institute for
+              Justice, accessed September 16, 2025,
+              <link xlink:href="https://ij.org/report/eminent-domain-african-americans/">https://ij.org/report/eminent-domain-african-americans/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Eminent Domain and the Displacement of Black Communities -
+              Deeply Rooted, accessed September 16, 2025,
+              <link xlink:href="https://historyfortomorrow.org/story/eminent-domain-and-the-displacement-of-black-communities/">https://historyfortomorrow.org/story/eminent-domain-and-the-displacement-of-black-communities/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              V I C T I M I Z I N G THE VULNERABLE - The Institute for
+              Justice, accessed September 16, 2025,
+              <link xlink:href="https://ij.org/wp-content/uploads/2015/03/Victimizing_the_Vulnerable.pdf">https://ij.org/wp-content/uploads/2015/03/Victimizing_the_Vulnerable.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Mental Health Holds and Civil Commitment — DRO, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.droregon.org/disability-rights-oregon-resources/mental-health-holds-and-civil-commitment">https://www.droregon.org/disability-rights-oregon-resources/mental-health-holds-and-civil-commitment</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Civil Commitment : Behavioral Health Division : State of
+              Oregon, accessed September 16, 2025,
+              <link xlink:href="https://www.oregon.gov/oha/hsd/amh/pages/civil-commitment.aspx">https://www.oregon.gov/oha/hsd/amh/pages/civil-commitment.aspx</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Involuntary Commitment: What It Is, How It Works &amp;
+              Criteria - Cleveland Clinic, accessed September 16, 2025,
+              <link xlink:href="https://my.clevelandclinic.org/health/articles/involuntary-commitment">https://my.clevelandclinic.org/health/articles/involuntary-commitment</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              22 CIVIL COMMITMENT - American Psychiatric Association,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.psychiatry.org/File%20Library/Psychiatrists/Practice/Practice-Management/Starting-a-Practice/Online-Practice-Handbook/PatientCare-Civil-Commitment.pdf">https://www.psychiatry.org/File%20Library/Psychiatrists/Practice/Practice-Management/Starting-a-Practice/Online-Practice-Handbook/PatientCare-Civil-Commitment.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Ethical Considerations of Involuntary Psychiatric
+              Treatment, accessed September 16, 2025,
+              <link xlink:href="https://www.psychiatrictimes.com/view/ethical-considerations-of-involuntary-psychiatric-treatment">https://www.psychiatrictimes.com/view/ethical-considerations-of-involuntary-psychiatric-treatment</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Involuntary Civil Commitment - National Alliance on Mental
+              Illness (NAMI), accessed September 16, 2025,
+              <link xlink:href="https://www.nami.org/advocacy/policy-priorities/improving-health/involuntary-civil-commitment/">https://www.nami.org/advocacy/policy-priorities/improving-health/involuntary-civil-commitment/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Civil Involuntary Detention | dmh.mo.gov - Missouri
+              Department of Mental Health, accessed September 16, 2025,
+              <link xlink:href="https://dmh.mo.gov/behavioral-health/help/civil">https://dmh.mo.gov/behavioral-health/help/civil</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Unlawful Orders in the Military - Attorney Matthew Barry,
+              accessed September 16, 2025,
+              <link xlink:href="https://mattbarrylaw.com/2024/11/10/unlawful-orders-in-the-military/">https://mattbarrylaw.com/2024/11/10/unlawful-orders-in-the-military/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <link xlink:href="http://www.militarydefense.com">www.militarydefense.com</link>,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.militarydefense.com/military-personnel-must-know-the-limits-of-lawful-orders/#:~:text=Under%20the%20Uniform%20Code%20of,those%20that%20must%20be%20refused.">https://www.militarydefense.com/military-personnel-must-know-the-limits-of-lawful-orders/#:~:text=Under%20the%20Uniform%20Code%20of,those%20that%20must%20be%20refused.</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Article 92 Failure to Obey an Order - Daniel Conway and
+              Associates, accessed September 16, 2025,
+              <link xlink:href="https://www.mcmilitarylaw.com/articles-of-ucmj/article-92-failure-to-obey-an-order/">https://www.mcmilitarylaw.com/articles-of-ucmj/article-92-failure-to-obey-an-order/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Understanding Article 92: Disobeying Orders - National
+              Security Law Firm, accessed September 16, 2025,
+              <link xlink:href="https://www.nationalsecuritylawfirm.com/courts-martial-defense-military-defense-lawyers/understanding-article-92-disobeying-orders/">https://www.nationalsecuritylawfirm.com/courts-martial-defense-military-defense-lawyers/understanding-article-92-disobeying-orders/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Disobey a superior officer: defenses to UCMJ Article 90
+              and UCMJ Article 92, accessed September 16, 2025,
+              <link xlink:href="https://www.ucmjlaw.com/disobey-a-superior-officer/">https://www.ucmjlaw.com/disobey-a-superior-officer/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Ix. Military Enlistment Contracts - Washington and Lee
+              University School of Law Scholarly Commons, accessed
+              September 16, 2025,
+              <link xlink:href="https://scholarlycommons.law.wlu.edu/cgi/viewcontent.cgi?article=2320&amp;context=wlulr">https://scholarlycommons.law.wlu.edu/cgi/viewcontent.cgi?article=2320&amp;context=wlulr</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Enlistment Contract: A Uniform Approach - Digital
+              Commons at St. Mary's University, accessed September 16,
+              2025,
+              <link xlink:href="https://commons.stmarytx.edu/cgi/viewcontent.cgi?article=1336&amp;context=facarticles">https://commons.stmarytx.edu/cgi/viewcontent.cgi?article=1336&amp;context=facarticles</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              32 CFR § 634.8 - Implied consent. - Legal Information
+              Institute, accessed September 16, 2025,
+              <link xlink:href="https://www.law.cornell.edu/cfr/text/32/634.8">https://www.law.cornell.edu/cfr/text/32/634.8</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              ArtI.S8.C14.1 Care of Armed Forces - Constitution
+              Annotated - Congress.gov, accessed September 16, 2025,
+              <link xlink:href="https://constitution.congress.gov/browse/essay/artI-S8-C14-1/ALDE_00001076/">https://constitution.congress.gov/browse/essay/artI-S8-C14-1/ALDE_00001076/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              NOTE Enlistment of Minors Into Military Service - Penn
+              Carey Law: Legal Scholarship Repository, accessed
+              September 16, 2025,
+              <link xlink:href="https://scholarship.law.upenn.edu/cgi/viewcontent.cgi?article=9288&amp;context=penn_law_review">https://scholarship.law.upenn.edu/cgi/viewcontent.cgi?article=9288&amp;context=penn_law_review</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              "A Contractual Analysis of the Military
+              Enlistment" by Neil J. Dilloff, accessed September
+              16, 2025,
+              <link xlink:href="https://scholarship.richmond.edu/lawreview/vol8/iss2/2/">https://scholarship.richmond.edu/lawreview/vol8/iss2/2/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              "The Enlistment Contract: A Uniform Approach" by
+              David A. Schlueter, accessed September 16, 2025,
+              <link xlink:href="https://commons.stmarytx.edu/facarticles/336/">https://commons.stmarytx.edu/facarticles/336/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              You're in the Army Now! Reforming Military Enlistment
+              Contracts - DigitalCommons@Hamline, accessed September 16,
+              2025,
+              <link xlink:href="https://digitalcommons.hamline.edu/cgi/viewcontent.cgi?article=1065&amp;context=hlr">https://digitalcommons.hamline.edu/cgi/viewcontent.cgi?article=1065&amp;context=hlr</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Orders Under Fire: When Following Command Becomes a Legal
+              Risk in Today's Military, accessed September 16, 2025,
+              <link xlink:href="https://www.militarydefense.com/military-personnel-must-know-the-limits-of-lawful-orders/">https://www.militarydefense.com/military-personnel-must-know-the-limits-of-lawful-orders/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What Is a Military 'Duty to Disobey'? - FindLaw, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.findlaw.com/legalblogs/law-and-life/what-is-a-military-duty-to-disobey/">https://www.findlaw.com/legalblogs/law-and-life/what-is-a-military-duty-to-disobey/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              FAQ on Refusing Illegal Orders - Military Law Task Force,
+              accessed September 16, 2025,
+              <link xlink:href="https://nlgmltf.org/military-law/2025/faq-on-refusing-illegal-orders/">https://nlgmltf.org/military-law/2025/faq-on-refusing-illegal-orders/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Refusing an Unlawful Military Order: Your Legal Duty, Your
+              Constitutional Right, and the Courage That Defines True
+              Service : r/navy - Reddit, accessed September 16, 2025,
+              <link xlink:href="https://www.reddit.com/r/navy/comments/1l8zbwp/refusing_an_unlawful_military_order_your_legal/">https://www.reddit.com/r/navy/comments/1l8zbwp/refusing_an_unlawful_military_order_your_legal/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Customary IHL - Rule 154. Obedience to Superior Orders,
+              accessed September 16, 2025,
+              <link xlink:href="https://ihl-databases.icrc.org/en/customary-ihl/v1/rule154">https://ihl-databases.icrc.org/en/customary-ihl/v1/rule154</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              ICS 100 – Incident Command System - USDA, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.usda.gov/sites/default/files/documents/ICS100.pdf">https://www.usda.gov/sites/default/files/documents/ICS100.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              National Incident Management System and Incident Command
+              System | Division of Homeland Security and Emergency
+              Services, accessed September 16, 2025,
+              <link xlink:href="https://www.dhses.ny.gov/national-incident-management-system-and-incident-command-system">https://www.dhses.ny.gov/national-incident-management-system-and-incident-command-system</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Incident Command System - Wikipedia, accessed September
+              16, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Incident_Command_System">https://en.wikipedia.org/wiki/Incident_Command_System</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              ICS Organizational Structure and Elements | FEMA Training,
+              accessed September 16, 2025,
+              <link xlink:href="https://training.fema.gov/emiweb/is/icsresource/assets/ics%20organizational%20structure%20and%20elements.pdf">https://training.fema.gov/emiweb/is/icsresource/assets/ics%20organizational%20structure%20and%20elements.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Standardized Emergency Management System (SEMS)
+              Guidelines, accessed September 16, 2025,
+              <link xlink:href="https://www.caloes.ca.gov/wp-content/uploads/Preparedness/Documents/Standardized-Emergency-Management-System_Part2.pdf">https://www.caloes.ca.gov/wp-content/uploads/Preparedness/Documents/Standardized-Emergency-Management-System_Part2.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Data broker - Wikipedia, accessed September 16, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Data_broker">https://en.wikipedia.org/wiki/Data_broker</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Data brokers and data privacy: Monetization, regulation,
+              and how they affect consumers, accessed September 16,
+              2025,
+              <link xlink:href="https://usercentrics.com/knowledge-hub/data-brokers-and-data-privacy-monetization/">https://usercentrics.com/knowledge-hub/data-brokers-and-data-privacy-monetization/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Data Brokers – EPIC – Electronic Privacy Information
+              Center, accessed September 16, 2025,
+              <link xlink:href="https://epic.org/issues/consumer-privacy/data-brokers/">https://epic.org/issues/consumer-privacy/data-brokers/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How to stop data brokers from selling your personal data -
+              Kaspersky, accessed September 16, 2025,
+              <link xlink:href="https://usa.kaspersky.com/resource-center/preemptive-safety/how-to-stop-data-brokers-from-selling-your-personal-information">https://usa.kaspersky.com/resource-center/preemptive-safety/how-to-stop-data-brokers-from-selling-your-personal-information</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Data Brokers Are Ignoring Privacy Law. We Deserve Better
+              ..., accessed September 16, 2025,
+              <link xlink:href="https://www.eff.org/deeplinks/2025/08/data-brokers-are-ignoring-privacy-law-we-deserve-better">https://www.eff.org/deeplinks/2025/08/data-brokers-are-ignoring-privacy-law-we-deserve-better</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              All about data brokers | OCJ - Oregon Consumer Justice,
+              accessed September 16, 2025,
+              <link xlink:href="https://ocj.org/data/what-are-data-brokers">https://ocj.org/data/what-are-data-brokers</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Consumer and Credit Reporting, Scoring, and Related Policy
+              Issues - Congress.gov, accessed September 16, 2025,
+              <link xlink:href="https://www.congress.gov/crs-product/R44125">https://www.congress.gov/crs-product/R44125</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Learn about your credit report and how to get a copy |
+              USAGov, accessed September 16, 2025,
+              <link xlink:href="https://www.usa.gov/credit-reports">https://www.usa.gov/credit-reports</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Key Dimensions and Processes in the U.S. Credit Reporting
+              System: - files.consumerfinance.gov., accessed September
+              16, 2025,
+              <link xlink:href="https://files.consumerfinance.gov/f/201212_cfpb_credit-reporting-white-paper.pdf">https://files.consumerfinance.gov/f/201212_cfpb_credit-reporting-white-paper.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Fair Credit Reporting Act (FCRA) - Epic.org, accessed
+              September 16, 2025,
+              <link xlink:href="https://epic.org/fcra/">https://epic.org/fcra/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              A Summary of Your Rights Under the Fair Credit Reporting
+              Act - files.consumerfinance.gov., accessed September 16,
+              2025,
+              <link xlink:href="https://files.consumerfinance.gov/f/documents/bcfp_consumer-rights-summary_2018-09.pdf">https://files.consumerfinance.gov/f/documents/bcfp_consumer-rights-summary_2018-09.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Credit Reporting - OCC.gov - Treasury, accessed September
+              16, 2025,
+              <link xlink:href="https://www.occ.treas.gov/topics/consumers-and-communities/consumer-protection/credit-reporting/index-credit-reporting.html">https://www.occ.treas.gov/topics/consumers-and-communities/consumer-protection/credit-reporting/index-credit-reporting.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              understanding-the-fcra.pdf - Jones Day, accessed September
+              16, 2025,
+              <link xlink:href="https://www.jonesday.com/-/media/files/publications/2016/04/understanding-the-fair-credit-reporting-act-ipract/files/understanding-the-fcra/fileattachment/understanding-the-fcra.pdf">https://www.jonesday.com/-/media/files/publications/2016/04/understanding-the-fair-credit-reporting-act-ipract/files/understanding-the-fcra/fileattachment/understanding-the-fcra.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              A Summary of Your Rights Under the Fair Credit Reporting
+              Act - Federal Trade Commission, accessed September 16,
+              2025,
+              <link xlink:href="https://www.consumer.ftc.gov/sites/default/files/articles/pdf/pdf-0096-fair-credit-reporting-act.pdf">https://www.consumer.ftc.gov/sites/default/files/articles/pdf/pdf-0096-fair-credit-reporting-act.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fair Credit Reporting Act | Federal Trade Commission,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act">https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fair Credit Reporting Act (FCRA Law): What it Means,
+              Consumer Rights, and Compliance, accessed September 16,
+              2025,
+              <link xlink:href="https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/compliance-management/lending-regulations/fair-credit-reporting-act-regulation-v">https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/compliance-management/lending-regulations/fair-credit-reporting-act-regulation-v</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How GDPR and U.S. Privacy Laws Handle Consent -
+              Reform.app, accessed September 16, 2025,
+              <link xlink:href="https://www.reform.app/blog/how-gdpr-and-us-privacy-laws-handle-consent">https://www.reform.app/blog/how-gdpr-and-us-privacy-laws-handle-consent</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              3 Big Differences Between GDPR and U.S. Privacy Laws -
+              TrueVault, accessed September 16, 2025,
+              <link xlink:href="https://www.truevault.com/learn/3-biggest-differences-between-gdpr-and-us-privacy-laws">https://www.truevault.com/learn/3-biggest-differences-between-gdpr-and-us-privacy-laws</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Learn The Differences Between EU and US Data Protection,
+              accessed September 16, 2025,
+              <link xlink:href="https://degree.astate.edu/online-programs/business/masters-strategic-communications/technology-law-and-policy/eu-and-us-data-protection/">https://degree.astate.edu/online-programs/business/masters-strategic-communications/technology-law-and-policy/eu-and-us-data-protection/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Comparing Data Privacy Laws Between the EU and US -
+              Datafisher, accessed September 16, 2025,
+              <link xlink:href="https://datafisher.com/news/comparing-data-privacy-laws-between-the-eu-and-us/">https://datafisher.com/news/comparing-data-privacy-laws-between-the-eu-and-us/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Consent - General Data Protection Regulation (GDPR),
+              accessed September 16, 2025,
+              <link xlink:href="https://gdpr-info.eu/issues/consent/">https://gdpr-info.eu/issues/consent/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is GDPR, the EU's new data protection law?, accessed
+              September 16, 2025,
+              <link xlink:href="https://gdpr.eu/what-is-gdpr/">https://gdpr.eu/what-is-gdpr/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Video Surveillance Laws by State: Legal Guidelines &amp;
+              Privacy Rules, accessed September 16, 2025,
+              <link xlink:href="https://www.upcounsel.com/video-surveillance-laws-by-state">https://www.upcounsel.com/video-surveillance-laws-by-state</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Legalities of Surveillance: What You Need to Know -
+              Ethos Risk Services, accessed September 16, 2025,
+              <link xlink:href="https://ethosrisk.com/blog/the-legalities-of-surveillance-what-you-need-to-know/">https://ethosrisk.com/blog/the-legalities-of-surveillance-what-you-need-to-know/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Video Surveillance Laws by State: Comprehensive Guide
+              (2025) - Safe and Sound Security, accessed September 16,
+              2025,
+              <link xlink:href="https://getsafeandsound.com/blog/video-surveillance-laws-by-state/">https://getsafeandsound.com/blog/video-surveillance-laws-by-state/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Interpretation: Freedom of Speech and the Press - The
+              National Constitution Center, accessed September 16, 2025,
+              <link xlink:href="https://constitutioncenter.org/the-constitution/amendments/amendment-i/interpretations/266">https://constitutioncenter.org/the-constitution/amendments/amendment-i/interpretations/266</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              constitution.congress.gov, accessed September 16, 2025,
+              <link xlink:href="https://constitution.congress.gov/constitution/amendment-1/#:~:text=Congress%20shall%20make%20no%20law,for%20a%20redress%20of%20grievances.">https://constitution.congress.gov/constitution/amendment-1/#:~:text=Congress%20shall%20make%20no%20law,for%20a%20redress%20of%20grievances.</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              First Amendment Handbook | The Reporters Committee,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.rcfp.org/resources/first-amendment-handbook/">https://www.rcfp.org/resources/first-amendment-handbook/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Photographers | ACLU of Southern California, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.aclusocal.org/en/know-your-rights/photographers">https://www.aclusocal.org/en/know-your-rights/photographers</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              If Stopped for Photographing in Public - ACLU of DC,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.acludc.org/know-your-rights/if-stopped-photographing-public/">https://www.acludc.org/know-your-rights/if-stopped-photographing-public/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Freedom of Press, accessed September 16, 2025,
+              <link xlink:href="https://www.freedomforum.org/freedom-of-press/">https://www.freedomforum.org/freedom-of-press/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Photographers' Rights | ACLU of Southern California,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.aclusocal.org/en/photographers-rights">https://www.aclusocal.org/en/photographers-rights</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Protesters' Rights | American Civil Liberties Union,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.aclu.org/know-your-rights/protesters-rights">https://www.aclu.org/know-your-rights/protesters-rights</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Can Someone Take My Photo Without Permission? - FindLaw,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.findlaw.com/injury/torts-and-personal-injuries/can-someone-take-my-photo-without-permission.html">https://www.findlaw.com/injury/torts-and-personal-injuries/can-someone-take-my-photo-without-permission.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Photographing People in Public: Legal &amp; Ethical
+              Considerations - John Peltier Photography, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.jmpeltier.com/photographing-people-in-public-legal-ethical-considerations/">https://www.jmpeltier.com/photographing-people-in-public-legal-ethical-considerations/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              RECOMMENDATIONS ON THE PROTECTION OF PRIVACY IN MEDIA
+              COVERAGE - https: //rm. coe. int, accessed September 16,
+              2025,
+              <link xlink:href="https://rm.coe.int/recommendations-on-the-protection-of-privacy-in-media-coverage-prepare/168073f565">https://rm.coe.int/recommendations-on-the-protection-of-privacy-in-media-coverage-prepare/168073f565</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Ethical guidelines for the practice of journalism –
+              English - Rhodes University, accessed September 16, 2025,
+              <link xlink:href="https://www.ru.ac.za/jms/studentresources/ethicalguidelinesforthepracticeofjournalismenglish/">https://www.ru.ac.za/jms/studentresources/ethicalguidelinesforthepracticeofjournalismenglish/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              News Ethics Guidelines | APM Reports, accessed September
+              16, 2025,
+              <link xlink:href="https://www.apmreports.org/news-ethics-guidelines">https://www.apmreports.org/news-ethics-guidelines</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              First Amendment and Censorship | ALA - American Library
+              Association, accessed September 16, 2025,
+              <link xlink:href="https://www.ala.org/advocacy/intfreedom/censorship">https://www.ala.org/advocacy/intfreedom/censorship</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Regulation of the Media Under the First Amendment - U.S.
+              Constitution - FindLaw, accessed September 16, 2025,
+              <link xlink:href="https://constitution.findlaw.com/amendment1/regulation-of-the-media-under-the-first-amendment.html">https://constitution.findlaw.com/amendment1/regulation-of-the-media-under-the-first-amendment.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The First Amendment to the United States Constitution
+              guarantees the right to assemble and engage in peaceful
+              protest in what have become known as “traditional public
+              forums,” such as streets, sidewalks and parks. The Supreme
+              Court has upheld certain restrictions on the “time, place
+              and manner” of the speech - Oregon State Bar, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.osbar.org/publications/bulletin/12febmar/protest.html">https://www.osbar.org/publications/bulletin/12febmar/protest.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Rights of Protesters - ACLU of Arizona, accessed September
+              16, 2025,
+              <link xlink:href="https://www.acluaz.org/rights-protesters/">https://www.acluaz.org/rights-protesters/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Protesters' Rights | ACLU of Texas | We defend the civil
+              rights and civil liberties of all people in Texas, by
+              working through the legislature, the courts, and in the
+              streets., accessed September 16, 2025,
+              <link xlink:href="https://www.aclutx.org/en/know-your-rights/freedom-of-speech-right-to-protest">https://www.aclutx.org/en/know-your-rights/freedom-of-speech-right-to-protest</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              7 Public Photography Laws You Must Know as a Photographer
+              - Professional Clipping Path &amp; Photo Editing Services,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.clippingpathcampus.com/public-photography-laws/">https://www.clippingpathcampus.com/public-photography-laws/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Protest and Assembly - Campus Free Speech Guide - PEN
+              America, accessed September 16, 2025,
+              <link xlink:href="https://campusfreespeechguide.pen.org/the-law/protest-and-assembly/">https://campusfreespeechguide.pen.org/the-law/protest-and-assembly/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Know Your Rights: Demonstrations and Protests - ACLU,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.aclu.org/sites/default/files/field_pdf_file/kyr_protests.pdf">https://www.aclu.org/sites/default/files/field_pdf_file/kyr_protests.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What are my rights during a protest? | GeorgiaLegalAid.org
+              | Free, easy to understand legal information and
+              resources, accessed September 16, 2025,
+              <link xlink:href="https://www.georgialegalaid.org/resource/what-are-my-rights-during-a-protest">https://www.georgialegalaid.org/resource/what-are-my-rights-during-a-protest</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Ostracism: Understanding Its Legal Definition and
+              Implications, accessed September 16, 2025,
+              <link xlink:href="https://legal-resources.uslegalforms.com/o/ostracism">https://legal-resources.uslegalforms.com/o/ostracism</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Institutionalized Ostracism, accessed September 16, 2025,
+              <link xlink:href="https://repository.law.umich.edu/cgi/viewcontent.cgi?article=1410&amp;context=mjrl">https://repository.law.umich.edu/cgi/viewcontent.cgi?article=1410&amp;context=mjrl</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Cancellation, inquisition, and fatwa | Meer, accessed
+              September 16, 2025,
+              <link xlink:href="https://www.meer.com/en/97773-cancellation-inquisition-and-fatwa">https://www.meer.com/en/97773-cancellation-inquisition-and-fatwa</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Refusal of Social Cooperation as a Legal Problem: On the
+              Legal Institutions of Ostracism and Boycott, accessed
+              September 16, 2025,
+              <link xlink:href="https://services.bepress.com/cgi/viewcontent.cgi?referer&amp;httpsredir=1&amp;article=1009&amp;context=ostracism">
+              <link xlink:href="https://services.bepress.com/cgi/viewcontent.cgi?referer=">https://services.bepress.com/cgi/viewcontent.cgi?referer=</link>&amp;httpsredir=1&amp;article=1009&amp;context=ostracism</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              International standards | OHCHR, accessed September 16,
+              2025,
+              <link xlink:href="https://www.ohchr.org/en/special-procedures/sr-privacy/international-standards">https://www.ohchr.org/en/special-procedures/sr-privacy/international-standards</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              **Approved Copy** Human rights, international law and the
+              right to privacy - University of Greenwich, accessed
+              September 16, 2025,
+              <link xlink:href="https://gala.gre.ac.uk/id/eprint/29182/7/29182%20HUMBLE_Human_Rights_International_Law_and_the_Right_to_Privacy_%28AAM%29_2020.pdf">https://gala.gre.ac.uk/id/eprint/29182/7/29182%20HUMBLE_Human_Rights_International_Law_and_the_Right_to_Privacy_%28AAM%29_2020.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Right to privacy - Wikipedia, accessed September 16, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Right_to_privacy">https://en.wikipedia.org/wiki/Right_to_privacy</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Universal Declaration of Human Rights - the United
+              Nations, accessed September 16, 2025,
+              <link xlink:href="https://www.un.org/en/about-us/universal-declaration-of-human-rights">https://www.un.org/en/about-us/universal-declaration-of-human-rights</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Human Rights and Privacy | American Civil Liberties Union,
+              accessed September 16, 2025,
+              <link xlink:href="https://www.aclu.org/issues/human-rights/human-rights-and-privacy">https://www.aclu.org/issues/human-rights/human-rights-and-privacy</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

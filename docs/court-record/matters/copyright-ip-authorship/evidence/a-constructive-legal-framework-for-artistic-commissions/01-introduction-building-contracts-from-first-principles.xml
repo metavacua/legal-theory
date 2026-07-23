@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="introduction-building-contracts-from-first-principles">
+  <title>
+    <emphasis role="strong">Introduction: Building Contracts from
+    First Principles</emphasis>
+  </title>
+  <para>
+      The success of a creative enterprise that cultivates artistic
+      talent hinges on the integrity and clarity of its legal
+      agreements. Rather than relying on monolithic, one-size-fits-all
+      templates, a more resilient and adaptable system can be built from
+      the ground up. This report outlines a constructive legal framework
+      that deconstructs contracts into their essential components,
+      allowing for the creation of precise, fit-for-purpose agreements
+      that align with the evolving nature of the artist-patron
+      relationship.
+    </para>
+  <para>
+      This model is built on two core concepts:
+    </para>
+  <orderedlist numeration="arabic" spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">The Four Pillars of a Valid
+          Contract:</emphasis> Every agreement, regardless of
+          complexity, must satisfy four necessary and sufficient
+          conditions to be legally valid: Mutual Assent, Capacity,
+          Consideration, and a Lawful Object.1
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">The Two Planes of Contractual
+          Terms:</emphasis> All legal terms can be divided into two
+          categories: non-negotiable (mandatory) rules dictated by law,
+          and negotiable (default) terms that parties are free to define
+          for themselves.3
+        </para>
+    </listitem>
+  </orderedlist>
+  <para>
+      By using these principles as a blueprint, we can design a modular
+      system where a Master Service Agreement (MSA) establishes the
+      non-negotiable legal foundation, and a Statement of Work (SOW)
+      defines the specific, negotiable terms of each creative project.
+    </para>
+</section>
+  

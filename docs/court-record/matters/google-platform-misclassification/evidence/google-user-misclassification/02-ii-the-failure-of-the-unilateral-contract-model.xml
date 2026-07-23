@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="ii-the-failure-of-the-unilateral-contract-model">
+  <title>
+    <emphasis role="strong">II. The Failure of the Unilateral
+  Contract Model</emphasis>
+  </title>
+  <para>
+    Google frequently utilizes a Unilateral Contract structure (Model
+    1), offering a reward or benefit in exchange for the performance of
+    an act (Section 1). The analysis identifies this model as "High
+    Risk" for re-characterization as a service contract (Section
+    8.1) due to a critical flaw under California law.
+  </para>
+  <section xml:id="the-service-nexus-created-by-irrevocability">
+    <title>
+      <emphasis role="strong">The "Service Nexus" Created
+    by Irrevocability</emphasis>
+    </title>
+    <para>
+      California law (adopting Restatement (Second) of Contracts § 45
+      and established in <emphasis>Drennan v. Star Paving
+      Co.</emphasis>) holds that an offer for a unilateral contract
+      becomes <emphasis>irrevocable</emphasis> once the offeree begins
+      substantial performance in reliance on the offer (Sections 1.3,
+      1.4).
+    </para>
+    <para>
+      When a researcher begins hunting for a vulnerability, or a user
+      starts crafting detailed technical feedback for an LLM, they
+      commence performance. This makes Google's offer binding
+      <emphasis>during the labor process</emphasis>. As the analysis
+      highlights, this "creates a strong nexus between the buyer's
+      payment obligation and the [worker's] labor, which is the hallmark
+      of a service agreement" (Section 6.2). This inherent linkage
+      undermines the argument that Google is merely purchasing a
+      finished product.
+    </para>
+  </section>
+</section>
+  

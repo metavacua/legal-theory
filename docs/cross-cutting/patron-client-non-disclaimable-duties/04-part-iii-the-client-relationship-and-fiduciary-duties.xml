@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-iii-the-client-relationship-and-fiduciary-duties">
+  <title>
+    <emphasis role="strong">Part III: The "Client"
+    Relationship and Fiduciary Duties</emphasis>
+  </title>
+  <para>
+      The most stringent standard of care recognized by California law
+      is a fiduciary duty. This duty arises in relationships where one
+      party (the "client" or beneficiary) places special trust
+      and confidence in another (the fiduciary). While often associated
+      with professionals like attorneys and trustees, the duty can be
+      imposed in any relationship where such confidence is reposed and
+      accepted.5
+    </para>
+  <section xml:id="s-31-the-core-fiduciary-duties">
+    <title>
+      <emphasis role="strong">3.1 The Core Fiduciary
+      Duties</emphasis>
+    </title>
+    <para>
+        A fiduciary relationship imposes several fundamental duties that
+        are non-disclaimable as a matter of public policy 5:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Duty of Loyalty</emphasis>: This is
+            the paramount duty, requiring the fiduciary to act solely in
+            the best interest of the client. The fiduciary must avoid
+            any conflicts of interest or acts of self-dealing.6
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Duty of Care</emphasis>: A fiduciary
+            must manage the client's affairs with the reasonable care,
+            skill, and caution that a prudent person would exercise in a
+            similar situation.6
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Duty of Confidentiality</emphasis>:
+            This duty requires the fiduciary to preserve the client's
+            secrets "at every peril to himself or herself".6
+            It is a far more rigorous standard than in a typical
+            commercial relationship.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="s-32-application-to-digital-platforms-and-services">
+    <title>
+      <emphasis role="strong">3.2 Application to Digital
+      Platforms and Services</emphasis>
+    </title>
+    <para>
+        The concept of a fiduciary duty is increasingly being applied to
+        the digital realm. A platform that acts as a
+        "custodian" of a user's digital assets may be seen as
+        taking on fiduciary-like responsibilities. California's Revised
+        Uniform Fiduciary Access to Digital Assets Act defines a
+        "user" as a person with an account with a
+        "custodian," and imposes duties of care, loyalty, and
+        confidentiality on fiduciaries charged with managing such
+        assets.18
+      </para>
+    <para>
+        An argument can be made that when a platform encourages users to
+        entrust it with vast amounts of personal data, creative content,
+        and other digital assets, and then uses those assets for its own
+        commercial benefit, it has voluntarily accepted a position of
+        trust and confidence. In such a scenario, a court could find
+        that the platform owes its users fiduciary duties. An explicit
+        disclaimer of these duties in the Terms of Service would be
+        highly vulnerable to being struck down as unconscionable, as it
+        would represent an attempt to waive the very essence of the
+        trust-based relationship the platform has cultivated.
+      </para>
+  </section>
+</section>
+  

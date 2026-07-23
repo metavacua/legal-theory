@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-ii-in-depth-analysis-of-professional-graphic-novel-creation-suites">
+  <title>
+    <emphasis role="strong">Part II: In-Depth Analysis of
+    Professional Graphic Novel Creation Suites</emphasis>
+  </title>
+  <para>
+      Applying the established legal and technical framework, this
+      section provides a rigorous evaluation of the leading digital art
+      applications for graphic novel creation. Each analysis assesses
+      the software's core comic-centric features, the nature of its AI
+      integration according to the defined spectrum, and a detailed
+      examination of its licensing terms to determine its suitability
+      for a creator focused on securing full copyright ownership.
+    </para>
+  <section xml:id="s-21-clip-studio-paint-ex-the-specialists-choice-for-unambiguous-ownership">
+    <title>
+      <emphasis role="strong">2.1 Clip Studio Paint (EX): The
+      Specialist's Choice for Unambiguous Ownership</emphasis>
+    </title>
+    <para>
+        Clip Studio Paint (CSP) has established itself as the global
+        industry standard for comic, manga, and webtoon creation,
+        offering a feature set specifically tailored to the needs of
+        sequential artists.22
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Comic Creation Features:</emphasis>
+            CSP's strength lies in its comprehensive, specialized
+            toolset that streamlines the entire graphic novel production
+            pipeline. The EX version, in particular, is designed for
+            long-form projects, offering multi-page project management
+            that allows an artist to view and organize an entire chapter
+            or book in a single file.22 Key features include:
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Panel and Frame Tools:</emphasis>
+            Intuitive tools to quickly create and divide comic panels
+            with customizable gutter widths.25
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Vector Layers:</emphasis> The
+            ability to draw with a natural, hand-drawn feel on vector
+            layers is a significant advantage. This allows for resizing
+            and editing line thickness and shape without any loss in
+            quality, which is crucial for high-resolution printing.25
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Speech Balloons and Text:</emphasis>
+            Advanced tools for creating and customizing speech balloons,
+            along with a Story Editor (in EX) to manage and edit all the
+            dialogue for a multi-page project at once.25
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Rulers and 3D Models:</emphasis> A
+            powerful suite of perspective rulers, symmetry tools, and a
+            library of posable 3D models for characters, props, and
+            backgrounds. These models can be used as direct reference or
+            converted into line art and tones, dramatically accelerating
+            the creation of complex scenes.24
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Tones and Effects:</emphasis> An
+            extensive library of screentones, patterns, and effect lines
+            essential for traditional manga and comic aesthetics.25
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Nature of AI Integration (Level 2:
+            Intelligent Assistance):</emphasis> Clip Studio Paint's
+            integration of AI is conservative and strictly assistive,
+            functioning as an intelligent enhancement to the artist's
+            workflow rather than a generative replacement.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">AI Posing:</emphasis> The software
+            uses deep learning to analyze a photograph and automatically
+            apply the depicted pose to a 3D drawing figure.6 This
+            feature does not create the final artwork; it provides a
+            customizable 3D reference model for the artist to draw from,
+            saving significant time in setting up complex poses.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Colorization (Technology
+            Preview):</emphasis> CSP offers AI-powered tools that can
+            automatically apply flat colors to an artist's own line
+            art.5 The artist can guide this process by creating a
+            "hint layer" with rough color blobs, giving them a
+            high degree of control over the final output, which can then
+            be manually refined.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Smart Smoothing and Tone
+            Removal:</emphasis> These are advanced filters that use
+            machine learning for image processing tasks, such as
+            upscaling images while minimizing noise or converting
+            screentone layers to grayscale.5 They function as
+            sophisticated image editing tools, not content creators.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Copyright &amp; Ownership
+            Analysis:</emphasis> The legal terms governing Clip Studio
+            Paint are clear and favorable to the creator.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            The Celsys "Posting Guidelines" for its
+            asset-sharing service state that "Copyright owners
+            retain the copyrights to content that they post,"
+            establishing the principle that the user owns their
+            creations.28
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            The End User License Agreement (EULA) is a contract for the
+            use of the software itself and makes no claim on the
+            intellectual property created by the user.29
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Materials downloaded from the Clip Studio ASSETS store are
+            explicitly permitted for commercial use, allowing artists to
+            incorporate them into their own commercially sold,
+            copyrighted works.17
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Conclusion:</emphasis> Clip Studio
+            Paint's AI features fall squarely into the "intelligent
+            assistance" category. They function as tools that
+            augment the artist's skill and speed without usurping
+            creative control. This, combined with a clear and
+            creator-friendly ToS, makes Clip Studio Paint EX a premier
+            and legally sound choice for professional graphic novelists
+            who require unambiguous ownership of their work.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="s-22-adobe-photoshop-the-industry-standards-foray-into-generative-assistance">
+    <title>
+      <emphasis role="strong">2.2 Adobe Photoshop: The Industry
+      Standard's Foray into Generative Assistance</emphasis>
+    </title>
+    <para>
+        Adobe Photoshop remains the gold standard for digital image
+        manipulation and painting, valued for its powerful and versatile
+        raster engine.23 While not as specialized for comics as Clip
+        Studio Paint, its deep feature set and seamless integration with
+        the Adobe Creative Cloud suite make it a cornerstone of many
+        professional graphic novel workflows, particularly for coloring,
+        rendering, and final production.31
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Comic Creation Features:</emphasis>
+            Photoshop offers a vast library of customizable brushes that
+            can emulate traditional media, non-destructive editing via
+            smart objects and adjustment layers, and robust color
+            management tools, including support for the CMYK color space
+            required for professional printing.22 Its text and shape
+            tools can be used to create panels and lettering, though
+            this process is more manual than in CSP.33 The ability to
+            move assets effortlessly between Photoshop, Illustrator (for
+            vector work), and InDesign (for layout) is a major workflow
+            advantage.31
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Nature of AI Integration (Levels 2,
+            4, &amp; 5):</emphasis> Photoshop's AI capabilities span the
+            spectrum, from helpful assistive tools to fully generative
+            features powered by the Adobe Firefly model.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Level 2 (Assistive):</emphasis> Many
+            long-standing features now use machine learning to improve
+            performance. These include the Object Selection tool, Sky
+            Replacement, and the library of Neural Filters, which
+            automate complex but mechanical editing tasks like
+            colorization or style smoothing.36 These features accelerate
+            the artist's workflow without generating novel content from
+            a prompt.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Levels 4 &amp; 5
+            (Generative):</emphasis> The introduction of Firefly-powered
+            features marks a significant shift. "Generative
+            Fill" allows users to select an area and generate
+            content within it from a text prompt (Level 4).9
+            "Generative Expand" extends the canvas and fills
+            the new space with AI-generated content (Level 4).10 The
+            "Text to Image" feature can generate entirely new
+            images from scratch (Level 5).10 These tools place Photoshop
+            squarely in the legally contentious generative category.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Copyright &amp; Ownership
+            Analysis:</emphasis> Adobe's legal terms surrounding its
+            generative AI are complex and require careful
+            interpretation.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            Adobe's Generative AI Product Specific Terms state that the
+            user's "Input" and the resulting
+            "Output" are considered the user's
+            "Content".20 This sounds promising, but it is
+            immediately followed by two critical disclaimers: the Output
+            "may not be unique," and it "may not be
+            protectable by Intellectual Property Rights".20 This is
+            Adobe's legal department acknowledging that the output may
+            not meet the human authorship standard for copyright.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Adobe heavily promotes Firefly as being "designed to be
+            safe for commercial use" because it is trained on
+            licensed Adobe Stock content and public domain works.13 This
+            is a crucial point of potential misunderstanding.
+            "Commercially safe" refers to indemnification; it
+            means Adobe has minimized the risk that a user will be sued
+            for copyright infringement by an artist whose work was used
+            to train the model. It is a statement about Adobe's legal
+            liability, <emphasis>not</emphasis> a guarantee that the
+            user will be granted copyright ownership of the output. An
+            image generated with a simple prompt is still likely
+            non-copyrightable under USCO guidelines, regardless of the
+            training data's legal status.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Conclusion:</emphasis> Using
+            Photoshop for its traditional drawing, painting, and editing
+            capabilities is legally secure. However, incorporating its
+            generative AI features into final artwork introduces
+            significant risk to copyright claims. To build a defensible
+            case for authorship, any element created with Generative
+            Fill or Expand must be treated as raw material. It must be
+            substantially and demonstrably transformed through manual
+            painting, editing, and integration by the artist to the
+            point where the human's creative expression is the dominant
+            feature of that section of the work. Relying on unaltered or
+            lightly edited generative output for key parts of a graphic
+            novel is a legally perilous strategy.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="s-23-procreate-the-purists-studioa-principled-stance-against-generative-ai">
+    <title>
+      <emphasis role="strong">2.3 Procreate: The Purist's
+      Studio—A Principled Stance Against Generative
+      AI</emphasis>
+    </title>
+    <para>
+        Procreate, an application exclusive to Apple's iPad, has become
+        a dominant force in the digital art world, celebrated for its
+        fluid performance, intuitive user interface, and powerful raster
+        painting engine.31 For many graphic novelists, its portability
+        and responsiveness make it an ideal tool for sketching, inking,
+        and coloring on the go.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Comic Creation Features:</emphasis>
+            While not a dedicated comic production suite like CSP,
+            Procreate offers a robust set of features that are highly
+            applicable to graphic novel creation. Its brush engine is
+            world-class, with over 200 default presets and a vast
+            community of third-party brush creators.31 Key features for
+            comic artists include:
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Page Assist:</emphasis> This feature
+            transforms a Procreate file into a sketchbook-like
+            interface, allowing artists to create and navigate multiple
+            pages within a single document, which is ideal for
+            storyboarding or laying out a comic chapter.40
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Drawing and Shape
+            Assists:</emphasis> Tools like StreamLine for smoothing
+            strokes, Drawing Assist for snapping to guides (including
+            perspective and symmetry), and QuickShape for creating
+            perfect geometric shapes are invaluable for clean line art
+            and panel construction.40
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Clipping Masks and Layer
+            Management:</emphasis> A straightforward and powerful layer
+            system, including easy-to-use clipping masks, simplifies the
+            coloring and shading process.41
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            While its text tools are less advanced than those in
+            dedicated layout programs, they are sufficient for basic
+            lettering.42 Many artists use Procreate for all visual
+            creation and then move the files to another program for
+            final lettering and layout.42
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Nature of AI Integration (Level 1:
+            Pure Human Creation):</emphasis> Procreate's most defining
+            feature in the current landscape is its complete and
+            principled rejection of generative AI.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            The company has issued a public statement on its website
+            titled "Creativity is made, not generated," in
+            which it declares that generative AI is "built on a
+            foundation of theft" and is a "moral threat to our
+            greatest jewel: human creativity".43
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Procreate's CEO, James Cuda, has been even more direct,
+            stating, "I really fucking hate generative AI,"
+            and confirming that the company will "never go
+            there".44
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            This is not a temporary lack of features but a core tenet of
+            the company's philosophy, positioning Procreate as a
+            sanctuary for artists who demand absolute certainty about
+            the human origin of their work.44
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Copyright &amp; Ownership
+            Analysis:</emphasis> Procreate's legal position is the most
+            straightforward and creator-friendly in the market.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            The Brand Use Guidelines answer the critical question
+            directly: "Do I own the copyright in things I make in
+            Procreate? Yes! All the original work you create in our apps
+            belongs to you".16
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            This is reinforced by their strict privacy policy, which
+            states that Savage (the parent company) does not collect,
+            share, or have access to any user artwork or data. All work
+            is stored locally on the user's device, ensuring complete
+            user control.47
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            The Terms and Conditions for their online community,
+            Procreate Folio, further clarify that uploading artwork for
+            sharing does not transfer ownership; the work remains the
+            property of the creator.48
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Conclusion:</emphasis> Procreate
+            offers the highest possible degree of legal certainty.
+            Because the software contains no generative AI features,
+            every mark made is a direct result of the artist's hand.
+            There is no ambiguity regarding human authorship. For a
+            graphic novelist whose primary concern is securing
+            unimpeachable copyright and ownership, Procreate is an
+            exemplary choice.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="s-24-corel-painter-traditional-media-simulation-meets-ai-style-transfer">
+    <title>
+      <emphasis role="strong">2.4 Corel Painter: Traditional
+      Media Simulation Meets AI Style Transfer</emphasis>
+    </title>
+    <para>
+        Corel Painter has long held a unique position in the digital art
+        software market, distinguished by its unparalleled ability to
+        simulate traditional, real-world media.31 For artists who want
+        to bring the textures of oil paint, the bleed of watercolor, or
+        the grain of charcoal into a digital workflow, Painter is often
+        the top choice.23
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Comic Creation Features:</emphasis>
+            Painter is a powerful tool for illustrators and can be
+            adapted for graphic novel work, especially for artists with
+            a painterly style. It offers a dedicated "Manga"
+            workspace layout that organizes tools for comic creation.49
+            Its vast library of brushes, including pens, inks, and
+            markers, is excellent for line art, while its Natural-Media™
+            brushes provide rich textures for coloring.49 Compositional
+            tools like perspective guides and the mirror tool are also
+            beneficial for comic layout.49
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Nature of AI Integration (Level 3
+            &amp; 5):</emphasis> Corel Painter integrates AI in two
+            distinct ways, one transformative and one fully generative.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Level 3 (Transformative):</emphasis>
+            The built-in "AI Styles" feature uses neural style
+            transfer, a form of deep learning, to analyze an existing
+            image (like a photograph or a 3D render) and re-render it in
+            the style of a famous art movement or medium (e.g.,
+            Post-Impressionist, Charcoal, Acrylic).7 Artists can use
+            this feature to create an "underpainting" which
+            they can then paint over manually.7 Because this process
+            transforms a user-provided image rather than creating
+            something new from a text prompt, the user's authorship of
+            the underlying content and composition remains intact,
+            strengthening their copyright claim over the final, modified
+            work.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Level 5 (Generative):</emphasis>
+            Corel also offers an optional, separate "Vision
+            FX" plugin.53 This is a full text-to-image generator
+            that allows users to transform photos or create new images
+            from prompts. The use of this plugin introduces the same
+            significant copyright risks as other Level 5 generative
+            tools, as the output lacks direct human authorship.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Copyright &amp; Ownership
+            Analysis:</emphasis> Corel's licensing agreements are
+            standard for professional software and are generally
+            favorable to creators regarding ownership of their original
+            work.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            The Corel EULA is a license to use the software and does not
+            assert any ownership rights over the content created by the
+            user.54
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Corel's guidelines for the use of its included clipart and
+            stock photos specify that users can incorporate these assets
+            into their own original works, which they can then publish
+            and distribute, implying that work created from a blank
+            canvas is fully owned by the user.56
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            The terms for the Vision FX plugin state that "you are
+            allowed to sell the artwork you create".53 It is
+            critical to understand that this is a grant of a commercial
+            use license, not a guarantee that the work is copyrightable.
+            As with other generative tools, the output is likely not
+            protected by copyright law.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Conclusion:</emphasis> Using Corel
+            Painter's core drawing and painting tools provides a secure
+            path to copyright ownership. The transformative "AI
+            Styles" feature, when used on an artist's own base
+            images to create underpaintings, presents a relatively low
+            risk to copyright as the artist's compositional work is
+            preserved. However, the use of the generative Vision FX
+            plugin for creating final artwork is highly inadvisable for
+            any creator seeking to secure and defend a copyright
+            registration.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="s-25-krita--the-open-source-path-unparalleled-freedom-and-third-party-caveats">
+    <title>
+      <emphasis role="strong">2.5 Krita &amp; The Open-Source
+      Path: Unparalleled Freedom and Third-Party
+      Caveats</emphasis>
+    </title>
+    <para>
+        Krita is a professional-grade digital painting program that
+        stands out for being completely free and open-source.23
+        Developed by a global community of artists and volunteers, it
+        offers a powerful and feature-rich alternative to paid software,
+        making it an accessible option for creators at all levels.38
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Comic Creation Features:</emphasis>
+            Krita is a versatile application fully capable of producing
+            professional graphic novels. Its features include:
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Brush Engine:</emphasis> A robust
+            and highly customizable brush engine with over 100 preloaded
+            professional brushes and nine unique engine types.4
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Vector &amp; Text Tools:</emphasis>
+            Built-in vector tools allow for the creation of comic panels
+            and word bubbles, which can be saved to and reused from a
+            library. The text tool supports the addition of dialogue.4
+            While the workflow for panel creation can be more manual
+            than in CSP, it is fully functional.59
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Drawing Assistants:</emphasis> A
+            comprehensive set of drawing assistants helps with creating
+            straight lines, ellipses, and complex perspective grids.4
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Layer Management:</emphasis> Krita
+            supports a wide variety of layer types, including vector,
+            filter, and group layers, to keep complex comic page files
+            organized.4
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Nature of AI Integration (Level 1,
+            with optional Level 5):</emphasis> The base installation of
+            Krita is free from generative AI, placing it firmly in the
+            "Pure Human Creation" category. However, its
+            open-source nature allows for the development of third-party
+            plugins that can fundamentally change its function.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            The most prominent example is the "Krita AI
+            Diffusion" plugin, which integrates the Stable
+            Diffusion text-to-image model directly into the Krita
+            interface.61 This powerful plugin adds Level 5 generative
+            capabilities, including inpainting, outpainting, and
+            generating new images from scratch via text prompts.61
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            This creates a critical distinction between Krita the
+            application and Krita with the plugin installed. The Krita
+            development team explicitly states that they are not
+            responsible for third-party plugins and that users install
+            them at their own risk.63 The legal implications of using
+            the AI Diffusion plugin are therefore not governed by
+            Krita's license, but by the far more complex and legally
+            contested status of the underlying Stable Diffusion models,
+            which have faced lawsuits over their training data.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Copyright &amp; Ownership
+            Analysis:</emphasis> The legal standing of work created in
+            Krita is bifurcated.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Without Generative
+            Plugins:</emphasis> As Krita is distributed under the GNU
+            General Public License (GPL), the software itself is free,
+            but this license makes absolutely no claim on the artwork
+            you create with it.57 The creator retains 100% ownership and
+            full copyright of any original work produced in the base
+            application. This makes Krita, by itself, one of the most
+            legally secure options available.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">With the AI Diffusion
+            Plugin:</emphasis> Any image or portion of an image
+            generated using this plugin is subject to the same legal
+            uncertainty as all other purely AI-generated content. It
+            almost certainly lacks the human authorship required for
+            copyright protection in the U.S.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Conclusion:</emphasis> Krita is an
+            outstanding and legally safe choice for graphic novelists,
+            offering professional-level tools at no cost with guaranteed
+            user ownership. However, this recommendation comes with a
+            crucial and non-negotiable caveat: the AI Diffusion plugin
+            (and any similar generative plugins) must be strictly
+            avoided for the creation of any final, copyrightable
+            artwork. Using such plugins transforms Krita from a secure
+            creative tool into a legally high-risk generative platform.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</section>
+  

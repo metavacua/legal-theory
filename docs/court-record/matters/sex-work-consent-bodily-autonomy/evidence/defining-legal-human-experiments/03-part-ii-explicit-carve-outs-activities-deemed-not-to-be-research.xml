@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-ii-explicit-carve-outs-activities-deemed-not-to-be-research">
+  <title>
+    <emphasis role="strong">Part II: Explicit Carve-Outs:
+    Activities Deemed Not to Be Research</emphasis>
+  </title>
+  <para>
+      The 2018 revision to the Common Rule introduced a significant
+      clarification by creating four categories of activities that are
+      explicitly "deemed not to be research" for the purposes
+      of the regulation.12 These exclusions function as legal "safe
+      harbors," removing entire classes of activity from the
+      purview of IRBs, regardless of whether they appear systematic or
+      are intended to produce knowledge that could be generalized. These
+      carve-outs reflect a deliberate policy decision to prioritize
+      other public functions or to recognize alternative ethical
+      frameworks governing certain professional fields.
+    </para>
+  <section xml:id="section-21-the-public-mandate-exclusions-public-health-criminal-justice-and-national-security">
+    <title>
+      <emphasis role="strong">Section 2.1: The Public Mandate
+      Exclusions: Public Health, Criminal Justice, and National
+      Security</emphasis>
+    </title>
+    <para>
+        A significant set of exclusions applies to activities conducted
+        by or for authorized public authorities. These activities are
+        removed from the definition of research because their primary
+        purpose is to fulfill a direct governmental or public health
+        mission, not to generate generalizable knowledge in the academic
+        sense. The regulations operate on the presumption that these
+        activities are already governed by other legal and ethical
+        frameworks appropriate to their specific public function.11
+      </para>
+    <para>
+        The first and most detailed exclusion is for
+        <emphasis role="strong">Public Health Surveillance</emphasis>.
+        This includes "the collection and testing of information or
+        biospecimens, conducted, supported, requested, ordered,
+        required, or authorized by a public health authority".11
+        Such activities are limited to those necessary for an
+        authority's mission, such as identifying and monitoring disease
+        outbreaks, assessing public health signals, or providing
+        situational awareness during a crisis like a natural disaster.21
+        The critical distinction, as outlined in guidance from the
+        Office for Human Research Protections (OHRP), is one of purpose.
+        Surveillance is designed "to inform the decisions or
+        actions that must be made by a public health authority,"
+        whereas research is designed to contribute to generalizable
+        knowledge.23 The line can be difficult to draw, as the methods
+        may be identical to epidemiological research.21 However, if the
+        primary intent is immediate public health action, the activity
+        is not research under the Common Rule. The National Institutes
+        of Health (NIH) has emphasized that it expects this exclusion to
+        be applied narrowly, stating that it will be "extremely
+        rare" for NIH-funded projects to qualify, underscoring the
+        high bar for its application.25
+      </para>
+    <para>
+        Similar exclusions exist for criminal justice and national
+        security activities. The Common Rule deems not to be research
+        the "collection and analysis of information, biospecimens,
+        or records by or for a criminal justice agency for activities
+        authorized by law or court order solely for criminal justice or
+        criminal investigative purposes".11 Likewise,
+        "authorized operational activities...in support of
+        intelligence, homeland security, defense, or other national
+        security missions" are also excluded.11
+      </para>
+    <para>
+        These exclusions represent a deliberate policy choice to
+        subordinate research ethics regulations to what are considered
+        overriding public imperatives. This creates a potential for
+        significant ethical tension. An activity that is
+        methodologically indistinguishable from research—for instance,
+        the large-scale analysis of identifiable population health
+        data—can be subject to vastly different rules based solely on
+        who authorized it and for what stated purpose. Consider a
+        scenario where an academic researcher wishes to analyze
+        identifiable patient data from a network of hospitals to study
+        the spread of a novel virus. This project would clearly be a
+        "systematic investigation" for "generalizable
+        knowledge" involving "human subjects" and would
+        require rigorous IRB review and informed consent (or a formal
+        waiver of consent). Now, consider a public health authority,
+        such as the Centers for Disease Control and Prevention (CDC),
+        conducting the exact same analysis on the same dataset to track
+        the same virus and inform quarantine policies. Under the Common
+        Rule, this second activity is deemed "public health
+        surveillance" and is not research, requiring no IRB review
+        or consent under 45 CFR 46.11 The methods and data are
+        identical; the only variable is the institutional sponsor and
+        the stated primary purpose. This reveals a fundamental power
+        dynamic embedded in the regulation of knowledge production,
+        where the government has carved out an exemption for itself from
+        the very regulations it imposes on academic and private sector
+        researchers, justifying this on the grounds that its own public
+        mandates provide an alternative and sufficient ethical
+        foundation for the activity.
+      </para>
+  </section>
+  <section xml:id="section-22-the-specific-focus-exclusions-scholarly-and-journalistic-activities">
+    <title>
+      <emphasis role="strong">Section 2.2: The Specific-Focus
+      Exclusions: Scholarly and Journalistic
+      Activities</emphasis>
+    </title>
+    <para>
+        The Common Rule also explicitly excludes a category of
+        activities defined by their unique methodological focus. These
+        are "scholarly and journalistic activities (e.g., oral
+        history, journalism, biography, literary criticism, legal
+        research, and historical scholarship), including the collection
+        and use of information, that focus directly on the specific
+        individuals about whom the information is collected".1
+      </para>
+    <para>
+        The determining factor for this exclusion is not the
+        professional field of the person conducting the activity but
+        rather the intellectual purpose and design of the project
+        itself.1 The critical distinction is that these activities aim
+        to understand and portray the specific individuals involved, not
+        to abstract from their experiences to create generalizable
+        scientific theories about populations or to test a hypothesis.22
+        For example, a journalist conducting a series of in-depth
+        interviews to write a book about the lives of coal miners in a
+        specific town is engaged in an activity that focuses on those
+        particular individuals. In contrast, a sociologist interviewing
+        the same group of miners using a standardized questionnaire to
+        test a hypothesis about the relationship between working
+        conditions and mental health would be conducting research.
+      </para>
+    <para>
+        These fields are typically governed by their own
+        well-established professional codes of ethics. Journalistic
+        ethics, for instance, emphasize principles such as truth,
+        accuracy, fairness, and accountability to the public. While
+        these principles differ from the Belmont principles, they serve
+        a similar function of guiding professional conduct and
+        protecting the individuals who are the subjects of the work. The
+        Common Rule's exclusion of these activities is a recognition of
+        these alternative ethical frameworks and the distinct nature of
+        the knowledge they produce.28
+      </para>
+    <para>
+        This exclusion reveals a deep epistemological orientation within
+        the Common Rule. The regulation is meticulously designed to
+        govern a specific mode of knowledge production: that which is
+        scientific, generalizable, predictive, and often quantitative.
+        It implicitly treats other forms of knowledge—such as historical
+        narrative, biographical detail, or literary interpretation—as
+        fundamentally different and not requiring the same type of
+        prophylactic oversight, even when they involve intensive
+        interaction with individuals and the collection of highly
+        sensitive personal information. The law is therefore structured
+        to protect against the specific risks associated with being a
+        data point in a scientific study—the risks of objectification,
+        abstraction, and being used to serve a generalized hypothesis.
+        It does not, however, regulate the distinct risks associated
+        with being the subject of a news story or biography, such as the
+        harms of public exposure, misrepresentation, or narrative
+        framing. This suggests that the primary concern of the drafters
+        of the Common Rule was the unique power dynamic and potential
+        for exploitation inherent in the scientific method when applied
+        to human beings, rather than the broader universe of potential
+        harms that can arise from public inquiry into private lives.
+      </para>
+  </section>
+</section>
+  

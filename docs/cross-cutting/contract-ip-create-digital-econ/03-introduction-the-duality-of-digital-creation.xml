@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="introduction-the-duality-of-digital-creation">
+  <title>
+    <emphasis role="strong">Introduction: The Duality of Digital
+  Creation</emphasis>
+  </title>
+  <para>
+    Intellectual property (IP) embodies a fundamental tension between
+    the internal act of creation and its external manifestation as a
+    legally defined, economically valuable asset. In the digital age,
+    the mechanisms for contracting this IP—Terms of Service (ToS),
+    unilateral contracts, and licensing agreements—are designed to
+    facilitate the frictionless transfer of rights. However, this system
+    is built on a critical ambiguity: Is the creator selling a distinct
+    asset (a "good") or providing a "service"?
+  </para>
+  <para>
+    The resolution of this ambiguity has profound consequences. If the
+    transaction is a sale of goods, it is governed by commercial law. If
+    it is a contract for services, it triggers labor laws, the
+    presumption of employment, and potentially non-disclaimable
+    fiduciary duties. As platforms increasingly rely on user-generated
+    content (UGC), AI feedback (RLHF), and decentralized labor, the
+    legal and economic structures governing IP acquisition are facing
+    unprecedented scrutiny.
+  </para>
+</section>
+  

@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-ii-characterization-of-the-transaction-under-commercial-and-labor-law">
+  <title>
+    <emphasis role="strong">Part II: Characterization of the
+    Transaction Under Commercial and Labor Law</emphasis>
+  </title>
+  <section xml:id="section-3-classifying-commissioned-artwork-and-copyright-under-the-california-commercial-code-ucc">
+    <title>
+      <emphasis role="strong">Section 3: Classifying Commissioned
+      Artwork and Copyright Under the California Commercial Code
+      (UCC)</emphasis>
+    </title>
+    <para>
+        The classification of the subject matter of the transaction—the
+        artwork and its associated rights—is a critical preliminary
+        step. Whether the transaction is governed by the California
+        Commercial Code or common law has significant implications for
+        the rights and obligations of the parties and for how a court
+        will analyze the nature of the agreement.
+      </para>
+    <section xml:id="s-31-statutory-definitions-goods-future-goods-and-specially-manufactured-goods">
+      <title>
+        <emphasis role="strong">3.1. Statutory Definitions:
+        "Goods," "Future Goods," and "Specially
+        Manufactured Goods"</emphasis>
+      </title>
+      <para>
+          Division 2 of the California Commercial Code governs
+          transactions in "goods."
+          <emphasis role="strong">Section 2105</emphasis> provides the
+          operative definitions. "Goods" are defined as
+          "all things (including specially manufactured goods)
+          which are movable at the time of identification to the
+          contract for sale".25 This definition is broad,
+          encompassing tangible personal property from manufactured
+          items to growing crops.27
+        </para>
+      <para>
+          The UCC explicitly addresses items that do not yet exist.
+          "Goods which are not both existing and identified are
+          'future' goods. A purported present sale of future goods or of
+          any interest therein operates as a contract to sell".25 A
+          commissioned piece of artwork, which will be created to a
+          buyer's specifications and does not exist at the time of the
+          agreement, fits squarely within the UCC's definitions of both
+          "
+        </para>
+      <para>
+        <emphasis role="strong">future goods</emphasis>" and
+          "<emphasis role="strong">specially manufactured
+          goods</emphasis>".27 This provides a strong statutory
+          basis for treating the physical artwork itself as a
+          "good" subject to the provisions of UCC Division 2.
+        </para>
+    </section>
+    <section xml:id="s-32-intellectual-property-in-commerce-is-a-copyright-a-good-or-a-general-intangible">
+      <title>
+        <emphasis role="strong">3.2. Intellectual Property in
+        Commerce: Is a Copyright a "Good" or a "General
+        Intangible"?</emphasis>
+      </title>
+      <para>
+          While the physical artwork is a "good," the
+          intellectual property rights associated with it are treated
+          differently. The UCC's definition of "goods"
+          expressly excludes "things in action" 25, a category
+          that encompasses intangible rights. Under Division 9 of the
+          UCC, which governs secured transactions, intellectual property
+          rights such as patents, trademarks, and copyrights are
+          consistently classified as "
+        </para>
+      <para>
+        <emphasis role="strong">general
+          intangibles</emphasis>".31 A general intangible is a
+          catch-all category for "any personal property, including
+          things in action, other than" specifically enumerated
+          categories like accounts, goods, and instruments.32
+        </para>
+      <para>
+          Therefore, the sale of a commissioned artwork involves a
+          transfer of two distinct types of property: the tangible
+          physical object (the painting, sculpture, etc.), which is a
+          "good," and the copyright, which is a "general
+          intangible".31
+        </para>
+    </section>
+    <section xml:id="s-33-legal-significance-of-the-distinction-application-of-ucc-division-2-vs-common-law">
+      <title>
+        <emphasis role="strong">3.3. Legal Significance of the
+        Distinction: Application of UCC Division 2 vs. Common
+        Law</emphasis>
+      </title>
+      <para>
+          This dual classification has significant legal consequences. A
+          contract for the sale of "goods" is governed by
+          <emphasis role="strong">UCC Division 2</emphasis>, which
+          provides a comprehensive set of rules regarding contract
+          formation (including the statute of frauds), warranties
+          (express and implied), risk of loss, and remedies for
+          breach.27
+        </para>
+      <para>
+          In contrast, a contract for the transfer of a "general
+          intangible" like a copyright is governed not by UCC
+          Division 2, but by the common law of contracts.27 While
+        </para>
+      <para>
+        <emphasis role="strong">UCC Division 9</emphasis> provides the
+          rules for creating and perfecting a <emphasis>security
+          interest</emphasis> in a general intangible, it does not
+          govern the outright sale of most general intangibles.31
+        </para>
+      <para>
+          This means that any agreement for the acquisition of a
+          commissioned artwork is necessarily a
+          <emphasis role="strong">hybrid transaction</emphasis>. The
+          transfer of title to the physical object is a sale of goods
+          under the UCC. The assignment of the copyright is a transfer
+          of a general intangible under common law. This hybrid nature
+          demands careful and explicit drafting. A contract that simply
+          states the "sale of artwork" might be legally
+          insufficient to transfer the copyright, potentially leaving
+          the buyer with ownership of the physical canvas but without
+          the legal right to reproduce, display, or create derivative
+          works from the image. The agreement must contain separate and
+          clear language effectuating both the passage of title to the
+          "good" and the assignment of the intellectual
+          property rights. This complexity also feeds directly into the
+          primary challenge of avoiding a service contract
+          classification. A court analyzing the transaction's
+          "essence" may find that the true value lies not in
+          the physical materials but in the creation of the unique
+          copyright, pushing the analysis toward a finding that the
+          contract's predominant purpose was the artist's creative
+          service.
+        </para>
+    </section>
+  </section>
+  <section xml:id="section-4-the-critical-boundary-sale-of-goods-vs-contract-for-services">
+    <title>
+      <emphasis role="strong">Section 4: The Critical Boundary:
+      Sale of Goods vs. Contract for Services</emphasis>
+    </title>
+    <para>
+        The distinction between a sale of goods and a contract for
+        services is the legal battleground where the risk of employee
+        misclassification is won or lost. If a transaction is properly
+        characterized as a sale of goods, the strictures of California
+        labor law may not apply. If it is characterized as a contract
+        for services, a rigorous worker classification analysis is
+        triggered.
+      </para>
+    <section xml:id="s-41-the-predominant-factor-test-in-california-courts">
+      <title>
+        <emphasis role="strong">4.1. The "Predominant Factor
+        Test" in California Courts</emphasis>
+      </title>
+      <para>
+          When a contract involves both goods and services—a hybrid
+          transaction—California courts apply the
+          "<emphasis role="strong">predominant factor
+          test</emphasis>" (also known as the "predominant
+          purpose" or "Bonebrake" test) to determine the
+          agreement's essential character.30 The court must ascertain
+          the "essence of the agreement".30 If the primary
+          purpose of the contract is the rendition of a service, with
+          goods being incidentally involved (e.g., an artist painting a
+          portrait, where the skill and labor are paramount), the
+          contract is treated as one for services and governed by common
+          law.30 Conversely, if the contract is fundamentally for a
+          transaction of sale, with labor being incidentally involved
+          (e.g., the installation of a purchased appliance), it is
+          treated as a sale of goods governed by the UCC.30
+        </para>
+      <para>
+          Factors courts consider in this analysis include the language
+          of the contract, the method of billing (e.g., lump sum for a
+          product versus hourly rates for labor), and the comparative
+          value of the physical goods versus the service component.35
+        </para>
+    </section>
+    <section xml:id="s-42-application-to-creative-works-analyzing-the-thrust-of-a-commissioned-artwork-transaction">
+      <title>
+        <emphasis role="strong">4.2. Application to Creative
+        Works: Analyzing the "Thrust" of a Commissioned
+        Artwork Transaction</emphasis>
+      </title>
+      <para>
+          There is a notable absence of controlling California case law
+          that directly applies the predominant factor test to a
+          contract for commissioned art.38 This legal vacuum creates
+          both risk and opportunity. The risk is that a court, as a
+          matter of first impression, could easily conclude that the
+          "thrust" of such an agreement is the artist's unique
+          skill, talent, and creative labor. The paint and canvas are of
+          negligible value compared to the artistic service that
+          transforms them into a valuable work.30 This makes a standard
+          commission agreement highly vulnerable to being classified as
+          a service contract.
+        </para>
+      <para>
+          The opportunity lies in the ability to shape the outcome
+          through meticulous contract drafting. Because there is no
+          binding precedent, the language chosen by the parties to
+          describe their relationship and the nature of the transaction
+          becomes the most powerful evidence of their intent. A contract
+          that is carefully structured to emphasize the sale of a
+          finished "specially manufactured good" and
+          de-emphasize the process of creation stands a better chance of
+          persuading a court to apply the UCC.
+        </para>
+    </section>
+    <section xml:id="s-43-statutory-trigger-defining-labor-or-services-for-remuneration">
+      <title>
+        <emphasis role="strong">4.3. Statutory Trigger: Defining
+        "Labor or Services for
+        Remuneration"</emphasis>
+      </title>
+      <para>
+          The entire framework of California's worker classification
+          law, including the ABC test, is activated when one person
+          provides "<emphasis role="strong">labor or services for
+          remuneration</emphasis>" to another.39 This phrase, found
+          in
+        </para>
+      <para>
+        <emphasis role="strong">California Labor Code §
+          2775</emphasis> and <emphasis role="strong">Unemployment
+          Insurance Code § 621(b)</emphasis>, is the statutory gateway
+          to an employment analysis.41
+        </para>
+      <para>
+          The Employment Development Department (EDD) and California
+          courts interpret this trigger broadly. There is a default
+          presumption that any individual providing labor or services in
+          exchange for payment is an employee.41 The term
+          "remuneration" is not limited to hourly wages; it
+          encompasses any form of compensation paid for work performed,
+          including commissions and non-discretionary bonuses.43 The
+          burden then falls squarely on the hiring entity to prove that
+          the relationship is not one of employment by satisfying the
+          stringent requirements of the ABC test or another statutory
+          exception.41
+        </para>
+      <para>
+          The classification of the transaction under the predominant
+          factor test is therefore determinative. A finding that the
+          agreement is for a "sale of goods" could potentially
+          avoid the "labor or services for remuneration"
+          trigger altogether, rendering the ABC test inapplicable.
+          Conversely, a finding that the agreement is a "contract
+          for services" leads directly into the statutory
+          presumption of employment and places a heavy evidentiary
+          burden on the hiring entity.
+        </para>
+    </section>
+  </section>
+  <section xml:id="section-5-the-hobbyist-dilemma-in-californias-worker-classification-framework">
+    <title>
+      <emphasis role="strong">Section 5: The Hobbyist Dilemma in
+      California's Worker Classification Framework</emphasis>
+    </title>
+    <para>
+        The legal status of the artist themselves—whether they are
+        operating as a professional business or engaging in a personal
+        hobby—is a dispositive factor in assessing the risk of
+        misclassification under California law. A failure to appreciate
+        the distinction between tax law definitions and labor law
+        requirements can lead to a catastrophic failure of any
+        service-free contract model.
+      </para>
+    <section xml:id="s-51-defining-the-artists-status-the-irs-nine-factor-test-for-hobby-vs-business">
+      <title>
+        <emphasis role="strong">5.1. Defining the Artist's
+        Status: The IRS Nine-Factor Test for "Hobby" vs.
+        "Business"</emphasis>
+      </title>
+      <para>
+          For federal and California income tax purposes, the
+          distinction between a business and a hobby hinges on the
+          intent to make a profit.45 An activity engaged in for sport,
+          recreation, or personal enjoyment is a hobby, even if it
+          occasionally generates income. An activity conducted with a
+          genuine profit motive is a business.47
+        </para>
+      <para>
+          To determine this intent, the IRS and the California Franchise
+          Tax Board (FTB) use a non-exhaustive, nine-factor test. These
+          factors include 45:
+        </para>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              Whether the activity is carried on in a businesslike
+              manner (e.g., maintaining complete and accurate books).
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              The expertise of the taxpayer or their advisors.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              The time and effort expended in the activity.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              The expectation that assets used in the activity may
+              appreciate in value.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              The success of the taxpayer in carrying on other similar
+              or dissimilar activities.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              The taxpayer's history of income or losses with respect to
+              the activity (a history of profits suggests a business).
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              The amount of occasional profits, if any, that are earned.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              The financial status of the taxpayer (a taxpayer with
+              substantial income from other sources may be engaging in a
+              hobby).
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Elements of personal pleasure or recreation.
+            </para>
+        </listitem>
+      </orderedlist>
+      <para>
+          No single factor is determinative. An artist who paints for
+          pleasure, does not keep business records, has never made a
+          profit, and does not depend on art for their livelihood would
+          likely be classified as a hobbyist for tax purposes.45
+        </para>
+    </section>
+    <section xml:id="s-52-intersection-with-the-abc-test-can-a-hobbyist-satisfy-prong-c">
+      <title>
+        <emphasis role="strong">5.2. Intersection with the ABC
+        Test: Can a "Hobbyist" Satisfy Prong
+        C?</emphasis>
+      </title>
+      <para>
+          California's ABC test, codified in Labor Code § 2775,
+          establishes a presumption of employment. To rebut this
+          presumption, a hiring entity must prove all three of the
+          following prongs 49:
+        </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">(A)</emphasis> The person is free
+              from the control and direction of the hiring entity in
+              connection with the performance of the work.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">(B)</emphasis> The person performs
+              work that is outside the usual course of the hiring
+              entity's business.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">(C)</emphasis> The person is
+              <emphasis role="strong">customarily engaged in an
+              independently established trade, occupation, or
+              business</emphasis> of the same nature as that involved in
+              the work performed.
+            </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+          Prong C is the most critical in this context. The California
+          Supreme Court in <emphasis>Dynamex</emphasis> clarified that
+          to satisfy Prong C, the hiring entity must show that the
+          worker "independently has made the decision to go into
+          business for himself or herself".39 This involves taking
+          the usual steps to establish and promote that business, such
+          as through incorporation, licensure, advertisements, or
+          offering services to the public or a number of clients.39
+        </para>
+      <para>
+          A fundamental and irreconcilable conflict exists between the
+          legal definition of a "hobby" and the requirements
+          of Prong C. A hobby is, by definition, an activity
+          <emphasis>not</emphasis> engaged in for profit and
+          <emphasis>not</emphasis> conducted in a businesslike manner.46
+          Prong C requires proof that the individual
+        </para>
+      <para>
+        <emphasis>is</emphasis> engaged in an "independently
+          established... business".52 It is logically impossible
+          for a hiring entity to argue that an individual whose activity
+          legally qualifies as a hobby is simultaneously engaged in an
+          independently established business.
+        </para>
+    </section>
+    <section xml:id="s-53-review-of-ftb-and-edd-guidance-the-gap-between-tax-status-and-labor-law-classification">
+      <title>
+        <emphasis role="strong">5.3. Review of FTB and EDD
+        Guidance: The Gap Between Tax Status and Labor Law
+        Classification</emphasis>
+      </title>
+      <para>
+          An examination of guidance from California's tax and labor
+          agencies reveals that they operate in separate spheres. The
+          FTB's guidance on online activities focuses entirely on the
+          nine-factor test to distinguish a hobby from a business for
+          tax reporting purposes.45 The EDD's guidance focuses squarely
+          on the ABC test and its exceptions for determining employment
+          status for payroll tax purposes.41 There is no official
+          guidance that directly reconciles these two standards or
+          explains how an individual's tax status as a hobbyist should
+          be treated in a labor law analysis.
+        </para>
+      <para>
+          This gap, however, does not benefit the hiring entity. The
+          burden of proof under the ABC test rests entirely on the
+          hiring entity. In a wage claim proceeding, an artist's own tax
+          returns, where they have declared their art income as hobby
+          income and have not taken business deductions, would serve as
+          powerful evidence <emphasis>against</emphasis> the hiring
+          entity. It would demonstrate that the artist does not consider
+          themselves to be in an independently established business,
+          making it nearly impossible for the hiring entity to meet its
+          burden of proof for Prong C.
+        </para>
+      <para>
+          Consequently, the artist's status as a "hobbyist" is
+          the single greatest vulnerability in any attempt to structure
+          a service-free acquisition agreement. The legal and factual
+          indicia that define an activity as a hobby for tax law
+          purposes are the very same factors that would cause a hiring
+          entity to fail Prong C of the ABC test. Therefore, a
+          non-negotiable prerequisite for the defensible use of either
+          of the contract models proposed below is that the artist must
+          already be operating as a legitimate business, even if as a
+          sole proprietor, and be able to provide objective evidence of
+          that status.
+        </para>
+    </section>
+  </section>
+</section>
+  

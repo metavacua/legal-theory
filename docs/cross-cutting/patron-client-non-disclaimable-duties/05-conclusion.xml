@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="conclusion">
+  <title>
+    <emphasis role="strong">Conclusion</emphasis>
+  </title>
+  <para>
+      The written agreements governing the use of digital services do
+      not exist in a legal vacuum. Under California law, the nature of
+      the relationship between a service provider and a user can give
+      rise to duties that cannot be contractually disclaimed. A user may
+      be legally classified as a "patron," triggering a host
+      of specific, non-waivable statutory protections related to safety,
+      fairness, and privacy. In cases where a platform acts as a
+      custodian for a user's data and digital life, it may even assume
+      the role of a "fiduciary," imposing the highest duties
+      of loyalty and care recognized by law. Any attempt to disclaim
+      these foundational duties through one-sided Terms of Service is
+      subject to invalidation under the doctrine of unconscionability,
+      leaving the service provider exposed to liability for breaches of
+      duties they may have believed they had successfully waived.
+    </para>
+</section>

@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="section-6-precedent-and-proportionality-in-ai-regulation">
+  <title>
+    <emphasis role="strong">Section 6: Precedent and
+    Proportionality in AI Regulation</emphasis>
+  </title>
+  <section xml:id="s-61-the-global-context-a-move-toward-transparency-and-accountability">
+    <title>
+      <emphasis role="strong">6.1. The Global Context: A Move
+      Toward Transparency and Accountability</emphasis>
+    </title>
+    <para>
+        The proposal for a public AI registry in California, while
+        innovative, does not exist in a regulatory vacuum. It aligns
+        with and builds upon a clear and growing international consensus
+        that the rapid proliferation of powerful AI systems necessitates
+        new frameworks for transparency, risk management, and
+        accountability. Situating the California proposal within this
+        global context demonstrates that it is not an outlier but a
+        pioneering and logical next step in a worldwide regulatory
+        evolution.
+      </para>
+    <para>
+        The most comprehensive effort to date is the
+        <emphasis role="strong">European Union's AI Act</emphasis>, the
+        world's first major regulation on artificial intelligence.20 The
+        Act establishes a risk-based approach, categorizing AI systems
+        into tiers of risk from "unacceptable" (which are
+        banned) to "high," "limited," and
+        "minimal".20 For systems classified as
+        "high-risk"—a category that includes AI used in
+        employment, critical infrastructure, and law enforcement—the Act
+        imposes stringent obligations. These include requirements for
+        robust data governance, detailed technical documentation, human
+        oversight, and a high level of transparency.20 High-risk systems
+        must undergo "conformity assessments" before being
+        placed on the market and must be registered in an EU-wide
+        database.52 The California proposal can be framed as identifying
+        "foundational corporate AI" as an inherently high-risk
+        application of technology that, under the EU's logic, would
+        warrant exactly this type of registration and oversight.
+      </para>
+    <para>
+        In the United States, while a comprehensive federal law has yet
+        to pass, the proposed <emphasis role="strong">Algorithmic
+        Accountability Act (AAA)</emphasis> reflects a similar
+        legislative intent.16 The AAA would require companies to conduct
+        and report on detailed impact assessments for any
+        "automated critical decision process" that affects
+        consumers' lives in significant ways.16 The Act's focus on
+        assessing risks related to bias, privacy, and fairness, and its
+        mandate for the Federal Trade Commission (FTC) to create
+        structured guidelines for these assessments, signals a clear
+        move away from self-regulation toward mandatory, documented
+        accountability.16 The "AI Charter" component of the
+        California proposal is, in effect, a form of proactive impact
+        assessment, directly aligned with the principles of the AAA. By
+        establishing a registry, California would be implementing at the
+        state level the kind of transparency that is already being
+        contemplated at the federal level.
+      </para>
+  </section>
+  <section xml:id="s-62-a-targeted-proportional-approach">
+    <title>
+      <emphasis role="strong">6.2. A Targeted, Proportional
+      Approach</emphasis>
+    </title>
+    <para>
+        A key strength of the petition's proposal is its targeted and
+        proportional nature, which distinguishes it from broader, more
+        sweeping regulatory frameworks. This is not an attempt to
+        regulate all AI development, nor does it impose burdens on the
+        entire technology ecosystem. Instead, it is a narrow
+        intervention focused on a specific problem at the intersection
+        of corporate law and advanced technology.
+      </para>
+    <para>
+        The scope of the registry is limited in two important ways.
+        First, it applies only to
+        <emphasis role="strong">foundational</emphasis> AI systems, as
+        defined by their critical function within the corporation or
+        their significant impact on the public.2 This exempts the vast
+        majority of AI applications, such as research projects, internal
+        productivity tools, and AI features in non-critical consumer
+        products. This risk-based scoping prevents the stifling of
+        innovation and avoids imposing undue burdens on startups or
+        academic institutions that are crucial to the vitality of the AI
+        field.85
+      </para>
+    <para>
+        Second, the proposal leverages the
+        <emphasis role="strong">existing jurisdiction</emphasis> of the
+        Secretary of State over corporations registered to do business
+        in California. It applies to entities that are already subject
+        to a regime of public filing and disclosure. This is not a new
+        regulatory body being created, but an existing one being asked
+        to adapt its long-standing mandate to a new reality. By focusing
+        on large, established corporate actors deploying the most
+        powerful AI systems, the proposal ensures that the regulatory
+        burden is placed on the entities with the greatest capacity to
+        bear it and whose actions pose the most significant potential
+        risk to the public. This proportionality is a critical element
+        of sound regulation and makes the proposal far more defensible
+        against claims of governmental overreach.
+      </para>
+  </section>
+  <section xml:id="s-63-existing-us-regulatory-efforts">
+    <title>
+      <emphasis role="strong">6.3. Existing U.S. Regulatory
+      Efforts</emphasis>
+    </title>
+    <para>
+        While Congress deliberates on comprehensive legislation, federal
+        executive agencies are not waiting. A host of U.S. regulatory
+        bodies are already actively applying their existing statutory
+        authorities to address the harms caused by AI, signaling a clear
+        end to the era of industry self-regulation.87 The California
+        proposal should be seen as a complement to these ongoing federal
+        efforts, addressing a specific gap in corporate law that federal
+        agencies may not be equipped to fill.
+      </para>
+    <para>
+        Agencies such as the Federal Trade Commission (FTC), the Equal
+        Employment Opportunity Commission (EEOC), the Consumer Financial
+        Protection Bureau (CFPB), and the Department of Justice (DOJ)
+        have issued joint statements and initiated enforcement actions
+        clarifying that existing laws against discrimination, unfair and
+        deceptive practices, and other harms apply with full force to AI
+        systems.11 The EEOC's lawsuits against companies using biased
+        hiring algorithms and the DOJ's settlement over discriminatory
+        advertising algorithms are prime examples of this trend.11
+      </para>
+    <para>
+        Simultaneously, other parts of the federal government are laying
+        the groundwork for greater transparency. The U.S. Copyright
+        Office is conducting a major study on AI, examining the
+        requirements for registering AI-generated works and the use of
+        copyrighted materials in AI training—a process that inherently
+        involves questions of transparency into training data.89
+        Following a Presidential Executive Order, the Department of
+        Commerce's Bureau of Industry and Security (BIS) is in the
+        process of establishing mandatory reporting requirements for
+        companies developing advanced, dual-use AI models, citing
+        national security concerns.91
+      </para>
+    <para>
+        These federal activities demonstrate a government-wide
+        recognition that AI cannot be left unregulated. The California
+        proposal for a public registry fits perfectly within this
+        landscape. While federal agencies focus on the
+        <emphasis>outputs</emphasis> of AI (e.g., discriminatory
+        outcomes, copyright issues), the California proposal focuses on
+        the <emphasis>structure of the corporate actor
+        itself</emphasis>. It addresses the unique question of how to
+        maintain corporate accountability when the corporation's
+        internal decision-making architecture has been fundamentally
+        altered. It is a state-level innovation in corporate law that
+        complements, rather than conflicts with, federal efforts in
+        consumer protection, civil rights, and national security.
+      </para>
+    <para>
+      <emphasis role="strong">Table 2: Comparative Analysis of AI
+        Transparency Frameworks</emphasis>
+    </para>
+    <informaltable>
+      <tgroup cols="4">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                Regulatory Framework
+              </entry>
+            <entry>
+                Scope of Application
+              </entry>
+            <entry>
+                Core Transparency Requirement
+              </entry>
+            <entry>
+                Auditing/Verification Mechanism
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **EU AI Act**
+              </entry>
+            <entry>
+                High-Risk Systems (as defined by the Act)
+              </entry>
+            <entry>
+                Technical Documentation, Data Governance Records,
+                Instructions for Use
+              </entry>
+            <entry>
+                Third-Party Conformity Assessments by Notified Bodies;
+                Registration in EU Database
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **US Algorithmic Accountability Act (proposed)**
+              </entry>
+            <entry>
+                Automated Critical Decision Processes (affecting
+                consumers)
+              </entry>
+            <entry>
+                Detailed Impact Assessment Reports on Bias, Privacy, and
+                Fairness
+              </entry>
+            <entry>
+                Mandatory Reporting of Summaries to the FTC; Public
+                Repository of Reports
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **CA Public Registry Proposal**
+              </entry>
+            <entry>
+                Foundational Corporate AI Systems (functional
+                definition)
+              </entry>
+            <entry>
+                Forensic Snapshot (Architecture, Weights) &amp; AI
+                Charter (Purpose, Limits)
+              </entry>
+            <entry>
+                Judicial Access to Escrowed Model via Court Order for
+                Forensic Analysis
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+</section>
+  

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="platform-tos-constitutional-limits" role="finding" condition="confirmed-with-caveats">
+  <title>Platform ToS and Constitutional Limits</title>
+  <para>The platform-ToS-constitutional-limits matter addresses, in part, whether and how platform policies that restrict AI use interact with First Amendment protections. The LLM-database theory directly informs the characterisation of AI model outputs as a form of speech or expression.</para>
+  <section xml:id="llm-output-as-database-retrieval">
+    <title>Model Output as Database Retrieval, Not Speech</title>
+    <para>If a language model's forward pass is a KNN graph walk over a property graph of training-corpus entries, then the model's output when queried for known content is database retrieval, not original speech. The First Amendment analysis applicable to database retrieval differs from the analysis applicable to original expression: databases may be compelled to disclose or exclude entries; the selection and arrangement of database entries may itself be speech, but the entries themselves carry the rights of their authors.</para>
+    <para>This connects directly to two evidence documents in the matter:</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <emphasis>llm-data-vs-program.md</emphasis> in this repository analyses the data-versus-program distinction in LLMs. The database theory resolves the ambiguity that document identifies: the model is not a pure program (an instruction set with no data content) nor pure data (a static dataset without processing capability). It is both simultaneously — a database whose retrieval engine and data store are encoded in the same weight tensor.</para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>llm-information-encoding-and-covert-channels.md</emphasis> documents the latent-space encoding of information in LLM weights and the existence of covert channels through that encoding. The database theory provides the formal structure that the covert-channels analysis presupposes: the latent space is a graph database, the covert channel is a steganographic embedding within the graph's edge-weight encoding, and the legal analysis of such a channel should be that of database-embedded covert communication rather than generative expression. <citation>mclean2025encoding</citation>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+      <emphasis role="bold">Caveat:</emphasis> The First Amendment implications of characterising AI output as database retrieval rather than speech are contested. Some courts and commentators have analogised AI outputs to editorial selection — a speech act. The database theory does not resolve that question in all cases; it resolves it specifically in the case of outputs that are demonstrably retrieved from training-data content (memorisation), while leaving open the question of outputs that are genuinely compositional rather than reproductive.</para>
+  </section>
+</section>
+
+  
+  

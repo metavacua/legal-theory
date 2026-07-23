@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="conclusion-classifying-the-instrument">
+  <title>
+    <emphasis role="strong">Conclusion: Classifying the
+  Instrument</emphasis>
+  </title>
+  <itemizedlist>
+    <listitem>
+      <para>
+        <emphasis role="strong">Non-Security Instrument:</emphasis> An
+        instrument that fails to be classified as a security under the
+        appropriate <emphasis>Reves</emphasis> or
+        <emphasis>Howey</emphasis> test.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Non-Subchapter-T Security:</emphasis> An
+        instrument classified as a security that fails the Cooperative
+        Compliance Test.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Subchapter T Security:</emphasis> An
+        instrument that is legally a security but is so deeply
+        integrated with the principles of cooperative compliance that it
+        functions within the Subchapter T framework. These can be
+        further broken down:
+      </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Singular Subchapter T
+            Security:</emphasis> This represents a structure where a
+            single security encompasses the member's entire relationship
+            with the cooperative, typical of traditional models.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Non-Singular Subchapter T
+            Security:</emphasis> This represents a structure where a
+            member may hold multiple, distinct Subchapter T securities
+            (e.g., non-voting delivery rights or non-duplicative voting
+            shares). Each instrument is independently compliant, and
+            their aggregation in the hands of a single member does not
+            violate the principles of democratic control or
+            subordination of capital.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+  </itemizedlist>
+</section>

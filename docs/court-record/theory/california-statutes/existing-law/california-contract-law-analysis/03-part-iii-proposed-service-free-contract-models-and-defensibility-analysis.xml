@@ -1,0 +1,967 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="part-iii-proposed-service-free-contract-models-and-defensibility-analysis">
+  <title>
+    <emphasis role="strong">Part III: Proposed
+    "Service-Free" Contract Models and Defensibility
+    Analysis</emphasis>
+  </title>
+  <para>
+      Based on the foregoing legal principles, two distinct contract
+      models are proposed. Each is designed to minimize the risk of
+      being re-characterized as a service or employment agreement under
+      California law. The analysis below outlines the framework,
+      essential clauses, and a comparative assessment of the legal
+      defensibility of each model.
+    </para>
+  <section xml:id="section-6-model-1---unilateral-offer-to-purchase-future-artwork">
+    <title>
+      <emphasis role="strong">Section 6: Model 1 - Unilateral
+      Offer to Purchase Future Artwork</emphasis>
+    </title>
+    <section xml:id="s-61-framework-and-rationale">
+      <title>
+        <emphasis role="strong">6.1. Framework and
+        Rationale</emphasis>
+      </title>
+      <para>
+          This model is structured as a standing, irrevocable offer by a
+          buyer to purchase a specific type of good from an artist. It
+          draws directly from the principles of unilateral contract
+          formation, where acceptance is not a promise, but the
+          performance of a specific act.1 Here, the act of acceptance is
+          defined as the artist's tender of a finished artwork that
+          conforms to the specifications laid out in the offer. The
+          artist's creative process is framed not as a service rendered
+          to the buyer, but as the independent act of manufacturing a
+          "specially manufactured good" to meet the offer's
+          pre-existing terms. The goal is to create a relationship where
+          the buyer is passive until a finished product is presented for
+          purchase.
+        </para>
+    </section>
+    <section xml:id="s-62-essential-terms-and-clauses">
+      <title>
+        <emphasis role="strong">6.2. Essential Terms and
+        Clauses</emphasis>
+      </title>
+      <para>
+          The following table outlines the critical clauses required to
+          structure this model effectively.
+        </para>
+      <informaltable>
+        <tgroup cols="4">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                  Clause Title
+                </entry>
+              <entry>
+                  Purpose
+                </entry>
+              <entry>
+                  Key Language/Drafting Considerations
+                </entry>
+              <entry>
+                  Primary Legal Risk
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **The Offer**
+                </entry>
+              <entry>
+                  To establish a clear, definite, and irrevocable offer
+                  to purchase a future good.
+                </entry>
+              <entry>
+                  The document must be titled "Unilateral Offer to
+                  Purchase" or similar. It must clearly state:
+                  "This is an offer to purchase a good, not a
+                  contract for services." The offer must specify
+                  the objective characteristics of the desired artwork
+                  (e.g., size, medium, subject matter category) with
+                  enough clarity that a conforming good can be
+                  identified, but without dictating the creative
+                  process.
+                </entry>
+              <entry>
+                  **Ambiguity.** If the specifications are too detailed
+                  or involve subjective approval, a court could
+                  interpret them as "control and direction,"
+                  implicating Prong A of the ABC test and suggesting a
+                  service agreement.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Acceptance by Performance**
+                </entry>
+              <entry>
+                  To define the sole and exclusive method of acceptance
+                  as the tender of a finished good.
+                </entry>
+              <entry>
+                  The clause must explicitly state that the offer can
+                  *only* be accepted by the artist's physical tender of
+                  a completed, conforming artwork to the buyer. It
+                  should further state that no other action, including
+                  communication of intent, commencement of work, or
+                  partial performance, constitutes acceptance of the
+                  offer to purchase.
+                </entry>
+              <entry>
+                  **Re-characterization of Performance.** A court could
+                  find that the "performance" is not merely
+                  the delivery of the good, but the entire creative
+                  process leading to it. This would shift the analysis
+                  toward the "predominant factor" being the
+                  artist's labor.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Irrevocability &amp; Implied Option**
+                </entry>
+              <entry>
+                  To acknowledge California law on irrevocability while
+                  framing it within a sale-of-goods context.
+                </entry>
+              <entry>
+                  The clause should state that the offer becomes
+                  irrevocable for a specified period upon the artist's
+                  commencement of substantial work on a conforming
+                  artwork, consistent with Restatement (Second) of
+                  Contracts § 45. It must frame this as creating an
+                  "option to sell a good," not a right to
+                  demand payment for services.
+                </entry>
+              <entry>
+                  **The "Service" Nexus.** This is the model's
+                  central weakness. Acknowledging that the offer becomes
+                  binding *during the creative process* creates a strong
+                  nexus between the buyer's payment obligation and the
+                  artist's labor, which is the hallmark of a service
+                  agreement.8
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Purchase Price &amp; Title Transfer**
+                </entry>
+              <entry>
+                  To set forth the commercial terms of the sale,
+                  consistent with UCC Division 2.
+                </entry>
+              <entry>
+                  A fixed purchase price for a conforming artwork must
+                  be stated. The clause should detail the process for
+                  the transfer of title and risk of loss upon acceptance
+                  and payment, using language consistent with the UCC
+                  (e.g., referencing "delivery" of
+                  "goods").
+                </entry>
+              <entry>
+                  **Method of Payment.** If payment is structured as
+                  progress payments or advances, it will be viewed as
+                  compensation for ongoing labor, fatally undermining
+                  the model. Payment must be a lump sum upon acceptance
+                  of the finished good.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Disclaimer of Service Relationship**
+                </entry>
+              <entry>
+                  To explicitly disavow any intent to create a service
+                  or employment relationship.
+                </entry>
+              <entry>
+                  The contract should include a clear statement that the
+                  parties' intent is to establish a buyer-seller
+                  relationship for a good, that the artist is not being
+                  engaged to provide any labor or services for
+                  remuneration, and that the artist is acting as an
+                  independent manufacturer of goods for potential sale.
+                </entry>
+              <entry>
+                  **Limited Weight.** While evidence of intent, such a
+                  disclaimer will be disregarded by a court if the
+                  economic reality of the relationship points toward an
+                  employment or service arrangement.
+                </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+  </section>
+  <section xml:id="section-7-model-2---option-to-purchase-agreement">
+    <title>
+      <emphasis role="strong">Section 7: Model 2 - Option to
+      Purchase Agreement</emphasis>
+    </title>
+    <section xml:id="s-71-framework-and-rationale">
+      <title>
+        <emphasis role="strong">7.1. Framework and
+        Rationale</emphasis>
+      </title>
+      <para>
+          This model is structurally different and legally more robust.
+          It separates the transaction into two distinct components: (1)
+          the immediate sale of an intangible right—an exclusive
+          option—and (2) a potential future sale of a good. The buyer
+          pays a non-refundable option fee. In exchange, the artist
+          agrees that <emphasis>if</emphasis> they create a specified
+          type of artwork during the option period, they will offer it
+          exclusively to the buyer at a predetermined price. The
+          cornerstone of this model is the explicit clause stating the
+          artist is under <emphasis role="strong">no obligation
+          whatsoever</emphasis> to create the artwork. This severs the
+          direct link between the buyer's payment and the artist's
+          labor, which is the primary trigger for a service contract
+          analysis.
+        </para>
+    </section>
+    <section xml:id="s-72-essential-terms-and-clauses">
+      <title>
+        <emphasis role="strong">7.2. Essential Terms and
+        Clauses</emphasis>
+      </title>
+      <para>
+          The following table details the essential clauses for the
+          Option Agreement model.
+        </para>
+      <informaltable>
+        <tgroup cols="4">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                  Clause Title
+                </entry>
+              <entry>
+                  Purpose
+                </entry>
+              <entry>
+                  Key Language/Drafting Considerations
+                </entry>
+              <entry>
+                  Primary Legal Risk
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Grant of Option**
+                </entry>
+              <entry>
+                  To define the specific, intangible right being sold.
+                </entry>
+              <entry>
+                  The agreement must clearly state that the Artist
+                  (Optionor) grants the Buyer (Optionee) an exclusive
+                  and irrevocable option to purchase a future, specified
+                  artwork, *if and only if* such artwork is created by
+                  the Artist during the Option Period.
+                </entry>
+              <entry>
+                  **Illusory Promise.** The grant must be for a
+                  sufficiently defined future asset. If the description
+                  is too vague, the option could be deemed unenforceable
+                  for uncertainty.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Option Fee as Independent Consideration**
+                </entry>
+              <entry>
+                  To establish valid, bargained-for consideration for
+                  the option right itself, ensuring irrevocability per
+                  *Steiner v. Thexton*.
+                </entry>
+              <entry>
+                  This clause must state that the Buyer will pay a
+                  non-refundable "Option Fee" as
+                  "independent and sufficient consideration"
+                  for the grant of the option. It must explicitly state
+                  that this fee is not an advance or deposit against the
+                  future purchase price and is fully earned by the
+                  Artist upon execution of the agreement, regardless of
+                  whether an artwork is ever created or purchased.19
+                </entry>
+              <entry>
+                  **Nominal Consideration.** While courts do not
+                  typically weigh the adequacy of consideration, an
+                  exceptionally low fee (e.g., $1) could be challenged
+                  as a sham. The fee should be commercially reasonable
+                  for the exclusivity granted.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **No Obligation to Create**
+                </entry>
+              <entry>
+                  To definitively sever the connection between payment
+                  and labor, thereby avoiding a service contract
+                  characterization.
+                </entry>
+              <entry>
+                  This is the most critical clause. It must state in
+                  unambiguous terms: "Nothing in this Agreement
+                  shall be construed as imposing any duty or obligation
+                  upon the Artist to create, commence, or complete the
+                  Artwork. The decision to create the Artwork rests
+                  solely and exclusively in the Artist's
+                  discretion."
+                </entry>
+              <entry>
+                  **Implied Covenant.** A buyer might argue that the
+                  implied covenant of good faith and fair dealing
+                  creates some obligation on the artist. This clause
+                  must be strong enough to override any such potential
+                  implication.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Option Period**
+                </entry>
+              <entry>
+                  To define the duration for which the option is valid.
+                </entry>
+              <entry>
+                  A clear start and end date for the option period must
+                  be specified (e.g., 12, 18, or 24 months).14
+                </entry>
+              <entry>
+                  **Reasonableness.** An excessively long option period
+                  for a small fee could be challenged as unconscionable,
+                  though this is a high bar to meet.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Exercise of Option &amp; Purchase Agreement**
+                </entry>
+              <entry>
+                  To provide a clear mechanism for the future sale if
+                  the artwork is created.
+                </entry>
+              <entry>
+                  The clause must detail the exact procedure for the
+                  Buyer to exercise the option (e.g., written notice
+                  upon tender of the artwork by the Artist). The terms
+                  of the subsequent purchase (price, transfer of title
+                  to the physical good, and assignment of copyright)
+                  should be included as an exhibit or within the body of
+                  the agreement, to be executed upon exercise.53
+                </entry>
+              <entry>
+                  **Clarity of Terms.** The terms of the future purchase
+                  must be definite enough to be enforceable. An
+                  agreement to "mutually agree" on a price
+                  later would render the option unenforceable.53
+                </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+  </section>
+  <section xml:id="section-8-comparative-analysis-and-legal-defensibility">
+    <title>
+      <emphasis role="strong">Section 8: Comparative Analysis and
+      Legal Defensibility</emphasis>
+    </title>
+    <section xml:id="s-81-risk-of-re-characterization-under-the-predominant-factor-test">
+      <title>
+        <emphasis role="strong">8.1. Risk of Re-characterization
+        under the Predominant Factor Test</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Unilateral Offer Model: High
+              Risk.</emphasis> This model is highly vulnerable under the
+              predominant factor test. The "performance" that
+              forms the contract is, in essence, the artist's labor and
+              creative service. A court is likely to look past the
+              "sale of goods" framing and conclude that the
+              essence of the agreement is to procure the artist's unique
+              skill to create a custom object. The fact that the buyer's
+              obligation becomes binding while the work is in progress
+              further strengthens the argument that the transaction's
+              "thrust" is the service of creation.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Option Agreement Model: Low
+              Risk.</emphasis> This model presents a much stronger
+              defense. The initial transaction is not for the artwork,
+              but for the option itself—a distinct intangible right. The
+              "predominant factor" of this executed agreement
+              is the sale of this right for a fee. The artist's labor is
+              not part of the bargain; it is a condition precedent to
+              the <emphasis>second</emphasis>, potential transaction
+              (the purchase). By creating this two-step structure, the
+              model isolates the service component (the act of creation)
+              from the contractual obligation. The buyer pays for
+              exclusivity, not for labor.
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-82-resilience-against-employee-classification-under-the-abc-test">
+      <title>
+        <emphasis role="strong">8.2. Resilience Against Employee
+        Classification under the ABC Test</emphasis>
+      </title>
+      <para>
+          Assuming a court finds that either model constitutes a
+          contract for services and applies the ABC test, the analysis
+          is as follows:
+        </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Prong A (Control):</emphasis> Both
+              models can be drafted to satisfy this prong. By avoiding
+              detailed instructions on the creative process and giving
+              the artist full autonomy over their methods, materials,
+              and schedule (outside of a final deadline), the buyer can
+              demonstrate a lack of control consistent with an
+              independent contractor relationship.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Prong B (Outside Usual Course of
+              Business):</emphasis> This prong is entirely dependent on
+              the nature of the buyer's business and cannot be
+              controlled by drafting. If the buyer is an art gallery,
+              publisher, or interior design firm that regularly
+              commissions or sells art, both models will fail this
+              prong. The artist's work would be considered part of the
+              buyer's usual course of business. If the buyer is a tech
+              company acquiring art for its office or a private
+              collector, this prong can likely be satisfied.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Prong C (Independently Established
+              Business):</emphasis> This is the critical point of
+              failure for both models if the artist is a hobbyist. As
+              established in Section 5, a hiring entity cannot prove
+              that an individual who operates their creative pursuits as
+              a hobby is "customarily engaged in an independently
+              established... business".39 Both models are equally
+              and fatally vulnerable on this point. However, if the
+              artist <emphasis>does</emphasis> operate as a business
+              (e.g., has a business license, markets their services to
+              others, maintains a professional portfolio), then both
+              models have a strong chance of satisfying Prong C. The
+              Option Agreement may have a slight advantage, as it more
+              closely mirrors a typical business-to-business transaction
+              involving the licensing or sale of contingent assets, a
+              common practice in established creative industries.14
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="s-83-strategic-recommendations-and-mitigation-of-risks">
+      <title>
+        <emphasis role="strong">8.3. Strategic Recommendations
+        and Mitigation of Risks</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Prefer the Option Agreement
+              Model:</emphasis> The Option Agreement model is legally
+              superior and presents a substantially lower risk of
+              re-characterization as a service contract. Its structural
+              separation of the sale of a right from the potential sale
+              of a good provides a robust defense against the
+              predominant factor test.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Mandatory Due Diligence on Artist
+              Status:</emphasis> The single most important risk
+              mitigation strategy is to avoid engaging with artists who
+              are legally "hobbyists." Before entering into
+              any agreement, the buyer must conduct due diligence to
+              confirm that the artist operates as an independent
+              business. This includes, at a minimum:
+            </para>
+        </listitem>
+      </orderedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+              Requiring the artist to warrant in the contract that they
+              are engaged in an independently established business of
+              creating and selling art.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Requesting evidence of this status, such as a business
+              license, a professional website or portfolio, a list of
+              prior sales or commissions, or proof of incorporation or
+              an LLC.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Ensuring the artist will be paid through their business
+              entity or as a sole proprietor, not as an individual for
+              whom payroll taxes might be expected.
+            </para>
+        </listitem>
+      </itemizedlist>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Meticulous Drafting:</emphasis>
+              Regardless of the model chosen, the language of the
+              agreement is paramount.
+            </para>
+        </listitem>
+      </orderedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+              Consistently use terminology associated with the sale of
+              goods (e.g., "buyer," "seller,"
+              "good," "product," "purchase
+              price").
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Avoid terminology associated with services or employment
+              (e.g., "hire," "commission,"
+              "client," "contractor," "fee for
+              services," "compensation").
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Payment must be structured as a lump sum upon completion
+              and delivery. Avoid any form of advance, draw, or progress
+              payment, as these will be interpreted as wages for ongoing
+              labor.
+            </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+          In conclusion, while no contractual structure can entirely
+          eliminate the risk of a misclassification claim in
+          California's highly regulated environment, the Option to
+          Purchase Agreement, when used with an artist who is verifiably
+          operating an independent business, offers the most legally
+          defensible framework for acquiring future artwork without
+          creating a service or employment relationship. The Unilateral
+          Offer model, due to the legal implications of irrevocability
+          upon part performance, carries a significantly higher risk of
+          being re-characterized as a contract for services.
+        </para>
+    </section>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              What Is a Unilateral Contract? Definition &amp; Examples -
+              CobbleStone Software, accessed August 31, 2025,
+              <link xlink:href="https://www.cobblestonesoftware.com/blog/unilateral-contract">https://www.cobblestonesoftware.com/blog/unilateral-contract</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Formation of a Unilateral Contract, accessed August
+              31, 2025,
+              <link xlink:href="https://openyls.law.yale.edu/server/api/core/bitstreams/e59261f2-10f0-4426-8142-592e27466949/content">https://openyls.law.yale.edu/server/api/core/bitstreams/e59261f2-10f0-4426-8142-592e27466949/content</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Unilateral Contract Example and Legal Insights -
+              UpCounsel, accessed August 31, 2025,
+              <link xlink:href="https://www.upcounsel.com/unilateral-offer-cases">https://www.upcounsel.com/unilateral-offer-cases</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              California Code, Civil Code - CIV § 1550 - Codes -
+              FindLaw, accessed August 31, 2025,
+              <link xlink:href="https://codes.findlaw.com/ca/civil-code/civ-sect-1550/">https://codes.findlaw.com/ca/civil-code/civ-sect-1550/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Contract Formation - Greenberg Traurig, LLP, accessed
+              August 31, 2025,
+              <link xlink:href="https://www.gtlaw.com/-/media/files/webinars/ian-ballon-jan-19/ian-ballon-contract-formation.pdf">https://www.gtlaw.com/-/media/files/webinars/ian-ballon-jan-19/ian-ballon-contract-formation.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Harris v. Time, Inc. (1987) :: :: California Court of
+              Appeal Decisions ..., accessed August 31, 2025,
+              <link xlink:href="https://law.justia.com/cases/california/court-of-appeal/3d/191/449.html">https://law.justia.com/cases/california/court-of-appeal/3d/191/449.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Revocation of Offers - Contracts Doctrine, Theory and
+              Practice - CALI, accessed August 31, 2025,
+              <link xlink:href="https://verkerkecontractsone.lawbooks.cali.org/chapter/revocation-of-offers/">https://verkerkecontractsone.lawbooks.cali.org/chapter/revocation-of-offers/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Drennan v. Star Paving Co. :: :: Supreme Court of
+              California ..., accessed August 31, 2025,
+              <link xlink:href="https://law.justia.com/cases/california/supreme-court/2d/51/409.html">https://law.justia.com/cases/california/supreme-court/2d/51/409.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              CONTRACT FORMATION - NYU Law, accessed August 31, 2025,
+              <link xlink:href="https://www.law.nyu.edu/sites/default/files/upload_documents/Davis.Contracts.Fall13%282%29.pdf">https://www.law.nyu.edu/sites/default/files/upload_documents/Davis.Contracts.Fall13%282%29.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Acceptance of Unilateral Contract Offer Requiring Time in
+              Performance - SMU Scholar, accessed August 31, 2025,
+              <link xlink:href="https://scholar.smu.edu/cgi/viewcontent.cgi?article=4432&amp;context=smulr">https://scholar.smu.edu/cgi/viewcontent.cgi?article=4432&amp;context=smulr</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Contracts: Promissory Estoppel - Marquette Law Scholarly
+              Commons, accessed August 31, 2025,
+              <link xlink:href="https://scholarship.law.marquette.edu/cgi/viewcontent.cgi?referer&amp;httpsredir=1&amp;article=2876&amp;context=mulr">
+              <link xlink:href="https://scholarship.law.marquette.edu/cgi/viewcontent.cgi?referer=">https://scholarship.law.marquette.edu/cgi/viewcontent.cgi?referer=</link>&amp;httpsredir=1&amp;article=2876&amp;context=mulr</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Exceptions to Consideration Requirement in California - UC
+              Law SF Scholarship Repository, accessed August 31, 2025,
+              <link xlink:href="https://repository.uclawsf.edu/cgi/viewcontent.cgi?article=1659&amp;context=hastings_law_journal">https://repository.uclawsf.edu/cgi/viewcontent.cgi?article=1659&amp;context=hastings_law_journal</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Real Property Sales | CEB, accessed August 31, 2025,
+              <link xlink:href="https://www.ceb.com/real-property-sales-know-your-options/">https://www.ceb.com/real-property-sales-know-your-options/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Option Agreements – Buying (and Selling) Time | Crown,
+              LLP, accessed August 31, 2025,
+              <link xlink:href="https://crownllp.com/blog/option-agreements-buying-and-selling-time/">https://crownllp.com/blog/option-agreements-buying-and-selling-time/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Option Agreement (Commercial Real Estate) (CA) | Practical
+              Law - Westlaw, accessed August 31, 2025,
+              <link xlink:href="https://content.next.westlaw.com/practical-law/document/I54f2e8ca269411e798dc8b09b4f043e0/Option-Agreement-Commercial-Real-Estate-CA?viewType=FullText&amp;transitionType=Default&amp;contextData=(sc.Default)">https://content.next.westlaw.com/practical-law/document/I54f2e8ca269411e798dc8b09b4f043e0/Option-Agreement-Commercial-Real-Estate-CA?viewType=FullText&amp;transitionType=Default&amp;contextData=(sc.Default)</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              OPTION AND ASSET PURCHASE AGREEMENT - SEC.gov, accessed
+              August 31, 2025,
+              <link xlink:href="https://www.sec.gov/Archives/edgar/data/64892/000006489204000002/sitechoptionag1.htm">https://www.sec.gov/Archives/edgar/data/64892/000006489204000002/sitechoptionag1.htm</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Security documents clause: Copy, customize, and use
+              instantly - Cobrief, accessed August 31, 2025,
+              <link xlink:href="https://www.cobrief.app/resources/contract-clause-library/security-documents-clause-copy-customize-and-use-instantly/">https://www.cobrief.app/resources/contract-clause-library/security-documents-clause-copy-customize-and-use-instantly/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              A Primer for IP Rights Agreements | Intellectual Property
+              &amp; Industry Research Alliances, accessed August 31,
+              2025,
+              <link xlink:href="https://ipira.berkeley.edu/primer-ip-rights-agreements">https://ipira.berkeley.edu/primer-ip-rights-agreements</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Your Purchase Agreement May be an Unenforceable Option
+              ..., accessed August 31, 2025,
+              <link xlink:href="https://www.downeybrand.com/legal-alerts/your-purchase-agreement-may-be-an-unenforceable-option/">https://www.downeybrand.com/legal-alerts/your-purchase-agreement-may-be-an-unenforceable-option/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Independent Consideration (Commercial Real Estate Purchase
+              and Sale) (CA), accessed August 31, 2025,
+              <link xlink:href="https://anzlaw.thomsonreuters.com/w-000-5436?transitionType=Default&amp;contextData=(sc.Default)">https://anzlaw.thomsonreuters.com/w-000-5436?transitionType=Default&amp;contextData=(sc.Default)</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Independent Consideration (Commercial Real Estate Purchase
+              and Sale) (CA) - Westlaw, accessed August 31, 2025,
+              <link xlink:href="https://content.next.westlaw.com/practical-law/document/Iee439d9e45f911e598dc8b09b4f043e0/Independent-Consideration-Commercial-Real-Estate-Purchase-and-Sale-CA?viewType=FullText&amp;ppcid=c03126b15bfc40ab89451eef7af29851&amp;originationContext=knowHow&amp;transitionType=KnowHowItem&amp;contextData=(sc.RelatedInfo)">
+              <link xlink:href="https://content.next.westlaw.com/practical-law/document/Iee439d9e45f911e598dc8b09b4f043e0/Independent-Consideration-Commercial-Real-Estate-Purchase-and-Sale-CA?viewType=FullText">https://content.next.westlaw.com/practical-law/document/Iee439d9e45f911e598dc8b09b4f043e0/Independent-Consideration-Commercial-Real-Estate-Purchase-and-Sale-CA?viewType=FullText</link>&amp;ppcid=c03126b15bfc40ab89451eef7af29851&amp;originationContext=knowHow&amp;transitionType=KnowHowItem&amp;contextData=%28sc.RelatedInfo%29</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              2010 California Code :: Civil Code :: Chapter 5.
+              Consideration - Justia Law, accessed August 31, 2025,
+              <link xlink:href="https://law.justia.com/codes/california/2010/civ/1605-1615.html">https://law.justia.com/codes/california/2010/civ/1605-1615.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Consideration – The Foundation of an Enforceable Contract
+              - Jahangiri Law Group, accessed August 31, 2025,
+              <link xlink:href="https://www.thejlawgroup.com/consideration-the-foundation-of-an-enforceable-contract">https://www.thejlawgroup.com/consideration-the-foundation-of-an-enforceable-contract</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Why Past Consideration Cannot Support a Contract in
+              California - Talkov Law, accessed August 31, 2025,
+              <link xlink:href="https://talkovlaw.com/past-consideration-cannot-support-contract/">https://talkovlaw.com/past-consideration-cannot-support-contract/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              California Code, Commercial Code - COM § 2105 - Codes -
+              FindLaw, accessed August 31, 2025,
+              <link xlink:href="https://codes.findlaw.com/ca/commercial-code/com-sect-2105/">https://codes.findlaw.com/ca/commercial-code/com-sect-2105/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              2009 California Commercial Code - Section 2101-2107 :: ::
+              Chapter 1. :: Short Title, General Construction And
+              Subject Matter - Justia Law, accessed August 31, 2025,
+              <link xlink:href="https://law.justia.com/codes/california/2009/com/2101-2107.html">https://law.justia.com/codes/california/2009/com/2101-2107.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              UCC Definition of Goods and Legal Scope Explained -
+              UpCounsel, accessed August 31, 2025,
+              <link xlink:href="https://www.upcounsel.com/uniform-commercial-code-definition-of-goods">https://www.upcounsel.com/uniform-commercial-code-definition-of-goods</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Scope of the UCC - NYU Law, accessed August 31, 2025,
+              <link xlink:href="https://www.law.nyu.edu/sites/default/files/Commercial%20Sales%20Law%20Outline%20-%20For%20Exam%202%202.pdf">https://www.law.nyu.edu/sites/default/files/Commercial%20Sales%20Law%20Outline%20-%20For%20Exam%202%202.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              UNIFORM COMMERCIAL CODE ARTICLE 2 - SALES PART 1 SHORT
+              TITLE, GENERAL CONSTRUCTION AND SUBJECT MATTER SECTION
+              2–101. SHORT TIT, accessed August 31, 2025,
+              <link xlink:href="https://thorpe.law.ou.edu/TribalUCC/Cherokee%20Nation%20UCC/UNIFORM%20COMMERCIAL%20CODEARTICLE%202cherokee.pdf">https://thorpe.law.ou.edu/TribalUCC/Cherokee%20Nation%20UCC/UNIFORM%20COMMERCIAL%20CODEARTICLE%202cherokee.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              COMMERCIAL SALES - NYU Law, accessed August 31, 2025,
+              <link xlink:href="https://www.law.nyu.edu/sites/default/files/upload_documents/Commercial_Sales_Gillette_Spring_2006.doc">https://www.law.nyu.edu/sites/default/files/upload_documents/Commercial_Sales_Gillette_Spring_2006.doc</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Security Interests in Intellectual Property - Corporate
+              Counsel - FindLaw, accessed August 31, 2025,
+              <link xlink:href="https://corporate.findlaw.com/intellectual-property/security-interests-in-intellectual-property.html">https://corporate.findlaw.com/intellectual-property/security-interests-in-intellectual-property.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Security Interests in Intellectual Property in the United
+              States: Are They Really Secure?, accessed August 31, 2025,
+              <link xlink:href="https://ladas.com/education-center/security-interests-intellectual-property-united-states/">https://ladas.com/education-center/security-interests-intellectual-property-united-states/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Bank Law Monitor | UCC Article 12: Perfection of Security
+              Interests in ..., accessed August 31, 2025,
+              <link xlink:href="https://www.millernash.com/industry-news/article-12-perfection-of-security-interests-in-controllable-electronic-records">https://www.millernash.com/industry-news/article-12-perfection-of-security-interests-in-controllable-electronic-records</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              LLC and Partnership Transfer Restrictions Excluded from
+              UCC ..., accessed August 31, 2025,
+              <link xlink:href="https://www.uniformlaws.org/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=8b7ae028-63fd-ceaa-5f4b-debfe6754742&amp;forceDialog=0">https://www.uniformlaws.org/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=8b7ae028-63fd-ceaa-5f4b-debfe6754742&amp;forceDialog=0</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Jandreau v. Sheesley Plumbing &amp; (and) Heating Company,
+              Inc.: Applying U.C.C. Article Two at Hybrid Transactions -
+              USD RED, accessed August 31, 2025,
+              <link xlink:href="https://red.library.usd.edu/cgi/viewcontent.cgi?article=2670&amp;context=sdlrev">https://red.library.usd.edu/cgi/viewcontent.cgi?article=2670&amp;context=sdlrev</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              CONTRACT LAW'S PREDOMINANT-PURPOSE TEST AND THE LAW-FACT
+              DISTINCTION - Florida State University Law Review,
+              accessed August 31, 2025,
+              <link xlink:href="https://www.fsulawreview.com/wp-content/uploads/2022/08/predominant-purpose-test.pdf">https://www.fsulawreview.com/wp-content/uploads/2022/08/predominant-purpose-test.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Audio Visual Artistry v. Stephen Tanzer - Justia Law,
+              accessed August 31, 2025,
+              <link xlink:href="https://law.justia.com/cases/tennessee/court-of-appeals/2012/w2012-00216-coa-r3-cv.html">https://law.justia.com/cases/tennessee/court-of-appeals/2012/w2012-00216-coa-r3-cv.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The vast majority of California's independent contractors
+              are still ..., accessed August 31, 2025,
+              <link xlink:href="https://laborcenter.berkeley.edu/wp-content/uploads/2023/06/The-vast-majority-of-CAs-independent-contractors-are-still-covered-by-the-ABC-test.pdf">https://laborcenter.berkeley.edu/wp-content/uploads/2023/06/The-vast-majority-of-CAs-independent-contractors-are-still-covered-by-the-ABC-test.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              NEW CALIFORNIA LAW IMPOSES ADJUSTED RULES FOR INDEPENDENT
+              CONTRACTOR CLASSIFICATION - The Vision Council, accessed
+              August 31, 2025,
+              <link xlink:href="https://thevisioncouncil.org/sites/default/files/VC_AB5_memo.pdf">https://thevisioncouncil.org/sites/default/files/VC_AB5_memo.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              AB5 Statute | LWDA - California Labor and Workforce
+              Development Agency, accessed August 31, 2025,
+              <link xlink:href="https://www.labor.ca.gov/ab5-statute/">https://www.labor.ca.gov/ab5-statute/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Contracts for Professional Services (DE 231PF) Rev ... -
+              EDD - CA.gov, accessed August 31, 2025,
+              <link xlink:href="https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231pf.pdf">https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231pf.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Independent Contractor vs. Employee (California Law 2023)
+              - Work Lawyers, accessed August 31, 2025,
+              <link xlink:href="https://www.worklawyers.com/independent-contractor-employee/">https://www.worklawyers.com/independent-contractor-employee/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Re: Remuneration Requirements of Wage Orders, accessed
+              August 31, 2025,
+              <link xlink:href="https://www.dir.ca.gov/dlse/opinions/1997-04-28.pdf">https://www.dir.ca.gov/dlse/opinions/1997-04-28.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              California Employees are owed overtime on bonusses and
+              commission pay., accessed August 31, 2025,
+              <link xlink:href="https://californialaborlaw.info/california-commissions-bonuses/">https://californialaborlaw.info/california-commissions-bonuses/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Reporting taxes on online activities | FTB.ca.gov,
+              accessed August 31, 2025,
+              <link xlink:href="https://www.ftb.ca.gov/file/personal/income-types/reporting-taxes-on-online-activities.html">https://www.ftb.ca.gov/file/personal/income-types/reporting-taxes-on-online-activities.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Self Employment vs Hobby income tax : r/AmazonVine -
+              Reddit, accessed August 31, 2025,
+              <link xlink:href="https://www.reddit.com/r/AmazonVine/comments/19b58qt/self_employment_vs_hobby_income_tax/">https://www.reddit.com/r/AmazonVine/comments/19b58qt/self_employment_vs_hobby_income_tax/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Hobby vs Business: Pros and Cons - Indeed, accessed August
+              31, 2025,
+              <link xlink:href="https://www.indeed.com/hire/c/info/hobby-vs-business-pros-and-cons">https://www.indeed.com/hire/c/info/hobby-vs-business-pros-and-cons</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              My Business isn't a Hobby! Right? | IRS Hobby vs Business
+              - TaxAudit, accessed August 31, 2025,
+              <link xlink:href="https://www.taxaudit.com/tax-audit-blog/2025/my-business-isn-rsquo;t-a-hobby!-right-irs-hobby-vs-business">https://www.taxaudit.com/tax-audit-blog/2025/my-business-isn-rsquo;t-a-hobby!-right-irs-hobby-vs-business</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              ESTREICHER, HARPER &amp; TIPPETT, CASES AND MATERIALS ON
+              EMPLOYMENT DISCRIMINATION AND EMPLOYMENT LAW (5TH ed.)
+              (“EDEL”) EST, accessed August 31, 2025,
+              <link xlink:href="https://3668083.app.netsuite.com/core/media/media.nl?id=5247691&amp;c=3668083&amp;h=6RusDHkCMVOHbensOUlec9XAwQdfwEt6dQtnejdcBITOl4HD&amp;_xt=.pdf">https://3668083.app.netsuite.com/core/media/media.nl?id=5247691&amp;c=3668083&amp;h=6RusDHkCMVOHbensOUlec9XAwQdfwEt6dQtnejdcBITOl4HD&amp;_xt=.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Employee or Independent Contractor - EDD - CA.gov,
+              accessed August 31, 2025,
+              <link xlink:href="https://edd.ca.gov/en/payroll_taxes/employment-status/">https://edd.ca.gov/en/payroll_taxes/employment-status/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              IRS and EDD 1099 Worker Misclassification Cases, accessed
+              August 31, 2025,
+              <link xlink:href="https://klasing-associates.com/irs-1099-worker-misclassification-cases/">https://klasing-associates.com/irs-1099-worker-misclassification-cases/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              +CONGRATULATIONS - Pet Sitters International, accessed
+              August 31, 2025,
+              <link xlink:href="https://www.petsit.com/stuff/contentmgr/files/9/818a6902cce41bd28aeb85c760810099/files/janfeb2020_pet_sitters_world_magazine_download.pdf">https://www.petsit.com/stuff/contentmgr/files/9/818a6902cce41bd28aeb85c760810099/files/janfeb2020_pet_sitters_world_magazine_download.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is a Purchase Option - Agreement Requirements
+              California - Schorr Law, accessed August 31, 2025,
+              <link xlink:href="https://schorr-law.com/what-is-a-purchase-option/">https://schorr-law.com/what-is-a-purchase-option/</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

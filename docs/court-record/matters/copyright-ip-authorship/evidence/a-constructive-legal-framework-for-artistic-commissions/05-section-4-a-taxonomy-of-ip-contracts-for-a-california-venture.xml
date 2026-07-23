@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="section-4-a-taxonomy-of-ip-contracts-for-a-california-venture">
+  <title>
+    <emphasis role="strong">Section 4: A Taxonomy of IP Contracts
+    for a California Venture</emphasis>
+  </title>
+  <para>
+      Within this framework, the treatment of intellectual property is
+      the most critical negotiable term. For this venture, three
+      distinct models of IP ownership can be deployed, each
+      corresponding to a different type of SOW and reflecting a
+      different stage of the artist-patron relationship.
+    </para>
+  <section xml:id="model-1-the-license-default-position">
+    <title>
+      <emphasis role="strong">Model 1: The License (Default
+      Position)</emphasis>
+    </title>
+    <para>
+        This model is ideal for initial "probe" commissions
+        where the goal is to assess talent with minimal commitment.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">IP Ownership:</emphasis> The artist
+            retains the full copyright to the work they create. This is
+            the default legal standard for commissioned works unless a
+            written agreement states otherwise.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Contract Structure:</emphasis> The
+            SOW grants the organization a limited, non-exclusive license
+            for a specific use (e.g., personal display, internal
+            review).12
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="model-2-the-option-to-purchase-the-secured-sale">
+    <title>
+      <emphasis role="strong">Model 2: The Option to Purchase
+      (The Secured Sale)</emphasis>
+    </title>
+    <para>
+        This model is used for acquiring key commercial assets from
+        trusted artists. It is specifically structured to address the
+        legal complexities of transferring rights to an artwork that
+        does not yet exist, providing an enforceable mechanism for both
+        the patron and the artist.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">IP Ownership:</emphasis> Copyright
+            vests with the artist during the creation process. The
+            contract is not a direct pre-purchase of the IP, but rather
+            an <emphasis role="strong">Option Agreement</emphasis>.34
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Contract Structure:</emphasis> This
+            SOW is structured as an Option/Purchase agreement.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The Option Fee:</emphasis> The
+            initial payment (e.g., a 25-50% non-refundable deposit) is
+            legally defined as the <emphasis role="strong">Option
+            Fee</emphasis>.34 This payment is the consideration the
+            patron gives in exchange for securing an exclusive right.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">The Option:</emphasis> For the fee,
+            the patron receives the exclusive and irrevocable right to
+            purchase the full copyright of the completed artwork at a
+            pre-agreed price (the "Purchase Price") within a
+            specified timeframe (the "Option Period").34 The
+            Option Period typically concludes upon the artist's delivery
+            of the final work and a brief review period for the patron.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Exercising the Option:</emphasis>
+            The patron exercises the option by accepting the final
+            artwork and making the final payment. This act triggers the
+            "purchase" part of the agreement, and the
+            copyright assignment becomes effective at that moment.34
+            This structure is legally sound because the initial contract
+            is for a present, enforceable right (the option) rather than
+            for a future, non-existent asset.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Patron's Right of
+            Refusal:</emphasis> This model also protects the patron. If
+            the final artwork is not satisfactory, the patron can
+            decline to exercise the option. In this case, the artist
+            retains the non-refundable option fee and all rights to the
+            artwork, and the patron has no further payment obligation.
+            This functions as a "kill fee" that compensates
+            the artist for their work up to that point.37
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Artist's Obligation:</emphasis> Once
+            the option is exercised by the patron according to the
+            terms, the artist is contractually bound to transfer the
+            copyright. A refusal to do so would constitute a breach of
+            the agreement. The artist's protection lies in the clear
+            terms: if the patron fails to make the final payment, the
+            option expires, and all rights revert to the artist.36
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="model-3-work-for-hire-the-patron-as-author">
+    <title>
+      <emphasis role="strong">Model 3: Work-for-Hire (The Patron
+      as Author)</emphasis>
+    </title>
+    <para>
+        This model is legally complex in California and should be
+        approached with caution. It re-frames the creative relationship
+        to align with emerging concepts of authorship.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">IP Ownership:</emphasis> The patron
+            (the LLC) is deemed the legal author and copyright owner
+            from the moment of creation.6
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Conceptual Framework:</emphasis>
+            This model analogizes the artist to a sophisticated tool,
+            similar to generative AI. The U.S. Copyright Office guidance
+            states that the user of an AI tool can be the author if they
+            exercise sufficient creative control over the output.26 In
+            this model, the patron provides the detailed prompts and
+            maintains creative control, making them the
+            "author," while the artist provides the technical
+            labor to fix the expression in a tangible medium.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">California AB5 Warning:</emphasis>
+            This structure is fundamentally at odds with California's
+            independent contractor laws. A work-for-hire agreement with
+            an individual artist creates a strong presumption of an
+            employer-employee relationship, triggering significant legal
+            and financial liabilities.16 This model should only be
+            considered after extensive legal consultation.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</section>
+  

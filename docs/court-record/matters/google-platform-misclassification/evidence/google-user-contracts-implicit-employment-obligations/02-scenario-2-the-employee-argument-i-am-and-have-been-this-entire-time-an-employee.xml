@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="scenario-2-the-employee-argument-i-am-and-have-been-this-entire-time-an-employee">
+  <title>
+    <emphasis role="strong">Scenario 2: The Employee Argument
+  ("I am and have been this entire time an
+  Employee")</emphasis>
+  </title>
+  <para>
+    This is the more fundamental challenge. If the totality of the
+    relationship—the continuous provision of services (UGC, feedback,
+    QA, AI training), the degree of control exerted by Google (via
+    rules, algorithms, and gamification), and the integral nature of the
+    work—establishes an employment relationship, the VRP structure
+    becomes secondary.
+  </para>
+  <para>
+    If you are legally deemed a misclassified employee, the analysis
+    shifts entirely from contract law to employment law.
+  </para>
+  <section xml:id="the-employers-burdens">
+    <title>
+      <emphasis role="strong">The Employer's
+    Burdens</emphasis>
+    </title>
+    <para>
+      Yes, if an employment relationship exists, Google assumes all the
+      "burdens" of an employer. This fundamentally changes how
+      compensation and IP are treated:
+    </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Wages vs. Prizes:</emphasis> If you
+          are an employee, the work you perform is labor. You are
+          entitled to wages (including minimum wage and overtime) for
+          <emphasis>all hours worked</emphasis>, regardless of whether a
+          specific task was successful. The VRP structure, which only
+          pays for results, is generally incompatible with standard
+          employment wage requirements. The "reward" is
+          recharacterized as a wage, commission, or bonus. Failure to
+          pay wages for labor performed constitutes wage theft.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Benefits and Protections:</emphasis>
+          Employers are responsible for payroll taxes, workers'
+          compensation, unemployment insurance, and potentially other
+          benefits mandated by local labor laws.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">IP Ownership (Work Made for
+          Hire):</emphasis> In an employment context, intellectual
+          property created by an employee within the scope of their
+          employment automatically belongs to the employer. You would
+          not "own" the vulnerability discovery to sell it
+          back to Google via the VRP; Google owns it the moment you
+          discover it.
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="the-implications-of-performing-the-act-but-not-reporting-it">
+    <title>
+      <emphasis role="strong">The Implications of Performing the
+    Act but Not Reporting It</emphasis>
+    </title>
+    <para>
+      If you find a vulnerability (perform the act) but do not report
+      it, and you are deemed an employee:
+    </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Compensation:</emphasis> You are still
+          entitled to wages for the time spent performing the skilled
+          labor required to find it.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Employee Duties:</emphasis> However,
+          employees have a duty of loyalty to their employer. If your
+          implied job function includes improving product security or
+          quality, discovering a vulnerability (which is the employer's
+          IP) and intentionally failing to report it would likely
+          constitute a serious breach of your duties as an employee.
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+</section>
+  

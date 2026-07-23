@@ -2,34 +2,7 @@
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="findings" xml:lang="en">
   <xi:include href="findings.meta.xml" />
   <title>Findings of Fact and Conclusions of Law</title>
-  <section xml:id="matter-cooperative-investment-law-and-patron-securities">
-    <title>Matter: Cooperative Investment Law and Patron
-    Securities</title>
-    <para>
-      <emphasis>[STUB — to be completed in findings-of-fact format per
-      FRCP Rule 52]</emphasis>
-    </para>
-  </section>
-  <section xml:id="findings-of-fact">
-    <title>Findings of Fact</title>
-    <orderedlist numeration="arabic" spacing="compact">
-      <listitem>
-        <para>
-          [First numbered finding — single declarative sentence,
-          evidence cited.]
-        </para>
-      </listitem>
-    </orderedlist>
-  </section>
-  <section xml:id="conclusions-of-law">
-    <title>Conclusions of Law</title>
-    <orderedlist numeration="arabic" spacing="compact">
-      <listitem>
-        <para>
-          [First numbered conclusion — flows from named FOF findings,
-          cites authority.]
-        </para>
-      </listitem>
-    </orderedlist>
-  </section>
+  <xi:include href="findings/01-matter-cooperative-investment-law-and-patron-securities.xml" />
+  <xi:include href="findings/02-findings-of-fact.xml" />
+  <xi:include href="findings/03-conclusions-of-law.xml" />
 </article>

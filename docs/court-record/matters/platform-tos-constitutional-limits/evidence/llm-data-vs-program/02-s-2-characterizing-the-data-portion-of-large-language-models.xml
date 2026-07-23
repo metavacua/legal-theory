@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="s-2-characterizing-the-data-portion-of-large-language-models">
+  <title>
+    <emphasis role="strong">2. Characterizing the "Data
+    Portion" of Large Language Models</emphasis>
+  </title>
+  <para>
+      To systematically compare LLMs based on their data, it is
+      essential to first characterize what constitutes the "data
+      portion." This involves distinguishing between different
+      types of data used in an LLM's lifecycle and understanding the
+      properties of datasets used for specific training phases,
+      particularly fine-tuning.
+    </para>
+  <section xml:id="s-21-pre-training-data-vs-fine-tuning-data">
+    <title>
+      <emphasis role="strong">2.1. Pre-training Data vs.
+      Fine-tuning Data</emphasis>
+    </title>
+    <para>
+        The data an LLM encounters can be broadly categorized into
+        pre-training data and fine-tuning data, each serving a distinct
+        purpose and possessing different characteristics.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Pre-training Data:</emphasis> This
+            forms the foundational knowledge base of an LLM. It consists
+            of massive and diverse datasets, often scraped from the
+            internet, encompassing books, articles, websites, code
+            repositories, and other textual sources.6 The scale can be
+            enormous; for example, Llama 2 was trained on 2 trillion
+            tokens, 40% more than its predecessor, Llama 1.9 GPT-4 is
+            reported to have digested trillions of words.10 The goal of
+            pre-training is to enable the model to learn general
+            language understanding, syntax, semantics, and a broad range
+            of world knowledge through objectives like next-word
+            prediction.11 The quality and diversity of this pre-training
+            data significantly impact the model's ability to handle
+            nuance, its general knowledge, and its propensity for
+            bias.10 However, pre-training datasets for state-of-the-art
+            models are often proprietary and closed-source, making
+            direct comparisons and replicability challenging.6
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Fine-tuning Data (Instruction-Tuning
+            Data):</emphasis> After pre-training, LLMs are often
+            fine-tuned on smaller, more specialized datasets to adapt
+            them to specific tasks, align them with human preferences,
+            or instill particular behaviors like instruction following.6
+            Fine-tuning data typically consists of (instruction, output)
+            pairs or prompt-response examples.11 Examples include
+            datasets for chatbot applications (like Llama-2-chat,
+            fine-tuned on over 1 million human annotations 9),
+            domain-specific tasks (e.g., medical or financial data 7),
+            or general instruction following (e.g.,
+            databricks-dolly-15k, Alpaca). The focus of the user query –
+            comparing LLMs with the same underlying program based on
+            data differences – primarily pertains to variations in these
+            fine-tuning datasets.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        The distinction is critical: the pre-trained model represents
+        the "fixed program" in the context of the user's
+        query, while the fine-tuning dataset is the variable "data
+        portion" whose impact is being assessed. The inherent
+        knowledge and capabilities are largely established during
+        pre-training, while fine-tuning shapes how these capabilities
+        are expressed and applied.17
+      </para>
+  </section>
+  <section xml:id="s-22-comparative-analysis-of-key-instruction-tuning-datasets">
+    <title>
+      <emphasis role="strong">2.2. Comparative Analysis of Key
+      Instruction-Tuning Datasets</emphasis>
+    </title>
+    <para>
+        Instruction-tuning datasets are concrete examples of "data
+        portions" used to modify a base LLM's behavior.
+        Understanding their characteristics is fundamental to
+        hypothesizing and interpreting performance differences when a
+        consistent base model is fine-tuned on them. These datasets vary
+        in size, generation methodology, task diversity, and licensing,
+        all of which can influence the resulting model.
+      </para>
+    <para>
+        Table 1 provides a comparative overview of several prominent
+        instruction-tuning datasets.
+      </para>
+    <informaltable>
+      <tgroup cols="8">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                **Dataset Name**
+              </entry>
+            <entry>
+                **Size (Examples)**
+              </entry>
+            <entry>
+                **Primary Source(s)**
+              </entry>
+            <entry>
+                **Generation Style**
+              </entry>
+            <entry>
+                **Key Task Focus**
+              </entry>
+            <entry>
+                **Licensing**
+              </entry>
+            <entry>
+                **Notable Strengths/Weaknesses/Biases**
+              </entry>
+            <entry>
+                **Relevant Snippets**
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **databricks-dolly-15k**
+              </entry>
+            <entry>
+                \~15,000
+              </entry>
+            <entry>
+                Human (Databricks employees), Wikipedia for context
+              </entry>
+            <entry>
+                Expert-written, crowd-sourced
+              </entry>
+            <entry>
+                Brainstorming, classification, closed QA, generation,
+                info extraction, open QA, summarization
+              </entry>
+            <entry>
+                CC BY-SA 3.0 (Commercial use permitted)
+              </entry>
+            <entry>
+                Human-generated, diverse tasks. Limitations: Wikipedia
+                bias, potential annotator bias/errors, non-native
+                English speakers. Quality issues identified (factual
+                inaccuracies, vague prompts).
+              </entry>
+            <entry>
+                15
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Alpaca (Stanford)**
+              </entry>
+            <entry>
+                52,000
+              </entry>
+            <entry>
+                GPT-3 (text-davinci-003)
+              </entry>
+            <entry>
+                Self-Instruct variant
+              </entry>
+            <entry>
+                General instruction following
+              </entry>
+            <entry>
+                CC BY-NC 4.0 (Research only)
+              </entry>
+            <entry>
+                Low-cost generation, diverse instructions. Original had
+                quality issues (empty outputs, US-centric). Cleaned
+                versions exist.
+              </entry>
+            <entry>
+                24
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **AlpacaDataCleaned**
+              </entry>
+            <entry>
+                \~50,000 (ongoing curation)
+              </entry>
+            <entry>
+                GPT-3, GPT-4-LLM dataset
+              </entry>
+            <entry>
+                Curated Self-Instruct
+              </entry>
+            <entry>
+                General instruction following
+              </entry>
+            <entry>
+                (Likely inherits original Alpaca's non-commercial if
+                based on it, or depends on GPT-4-LLM source)
+              </entry>
+            <entry>
+                Addresses original Alpaca's quality issues (empty
+                outputs, unclear instructions). Aims for higher quality.
+              </entry>
+            <entry>
+                25
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **LIMA (Less Is More for Alignment)**
+              </entry>
+            <entry>
+                1,000
+              </entry>
+            <entry>
+                Human (authors), Community Q\&amp;A (Stack Exchange,
+                wikiHow), Reddit (r/WritingPrompts)
+              </entry>
+            <entry>
+                Carefully curated, stylistically aligned expert-written
+                &amp; community Q\&amp;A
+              </entry>
+            <entry>
+                Diverse, complex queries, helpful AI assistant style
+              </entry>
+            <entry>
+                CC BY-NC-SA (or stricter if source data is stricter)
+              </entry>
+            <entry>
+                High quality, diverse prompts, demonstrates "less
+                is more" for alignment. Small size, non-commercial.
+              </entry>
+            <entry>
+                17
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **OpenAssistant-OASST1**
+              </entry>
+            <entry>
+                \~161,000 messages (varies by export)
+              </entry>
+            <entry>
+                Human (crowdsourced volunteers)
+              </entry>
+            <entry>
+                Conversational, human feedback ranked
+              </entry>
+            <entry>
+                Dialogue, instruction following, assistant-style
+                interaction
+              </entry>
+            <entry>
+                Apache 2.0
+              </entry>
+            <entry>
+                Large, multilingual, human-generated and ranked
+                conversations. Quality can vary with crowdsourcing.
+              </entry>
+            <entry>
+                34
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **FLAN (Fine-tuned Language Net)**
+              </entry>
+            <entry>
+                Varies by version (e.g., Flan 2022 includes \&gt;60
+                datasets, \&gt;40k examples for some tasks)
+              </entry>
+            <entry>
+                Existing NLP datasets (e.g., P3)
+              </entry>
+            <entry>
+                Templated from existing NLP tasks
+              </entry>
+            <entry>
+                Broad NLP tasks (QA, NLI, summarization, translation,
+                etc.)
+              </entry>
+            <entry>
+                Apache 2.0 (for code/templates, dataset licenses vary by
+                source)
+              </entry>
+            <entry>
+                Massive task diversity, improves zero/few-shot
+                generalization. Performance on open-ended instruction
+                following can be poor if not mixed.
+              </entry>
+            <entry>
+                11
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **P3 (Public Pool of Prompts)**
+              </entry>
+            <entry>
+                2,052 English prompts applied to 170 English NLP
+                datasets
+              </entry>
+            <entry>
+                Existing annotated NLP datasets
+              </entry>
+            <entry>
+                Templated from existing NLP tasks
+              </entry>
+            <entry>
+                Broad NLP tasks
+              </entry>
+            <entry>
+                (Varies by source dataset)
+              </entry>
+            <entry>
+                Large collection of prompts, enables task
+                transformation.
+              </entry>
+            <entry>
+                11
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Self-Instruct**
+              </entry>
+            <entry>
+                Variable (framework to generate data, e.g., 52k for
+                original Alpaca)
+              </entry>
+            <entry>
+                LLM-generated (e.g., GPT-3)
+              </entry>
+            <entry>
+                Seed instructions expanded by LLM, outputs generated by
+                LLM
+              </entry>
+            <entry>
+                General instruction following
+              </entry>
+            <entry>
+                (Depends on LLM used and seed data)
+              </entry>
+            <entry>
+                Scalable data generation. Quality depends heavily on
+                seed data and generation model; can be noisy.
+              </entry>
+            <entry>
+                11
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **ShareGPT**
+              </entry>
+            <entry>
+                \~90,000 conversations (common version)
+              </entry>
+            <entry>
+                User-shared ChatGPT conversations
+              </entry>
+            <entry>
+                Real-world user interactions with ChatGPT
+              </entry>
+            <entry>
+                Dialogue, instruction following
+              </entry>
+            <entry>
+                (Content is user-generated, often non-commercial use
+                advised)
+              </entry>
+            <entry>
+                Real-world conversational data. Can contain noise, PII,
+                and reflect biases of ChatGPT and its users.
+              </entry>
+            <entry>
+                34
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <para>
+        The evolution of these datasets reveals a maturing understanding
+        of what constitutes an effective "data portion" for
+        fine-tuning. Initially, the challenge was obtaining any
+        instruction data. This led to the use of LLMs themselves to
+        scale generation, as seen with Self-Instruct and the original
+        Alpaca dataset.11 However, this approach often introduced
+        quality issues, such as factual errors, nonsensical
+        instructions, or biases inherent in the generating LLM.15
+        Consequently, a trend emerged towards higher quality data,
+        either through meticulous human curation of smaller datasets (as
+        exemplified by LIMA, which posits that 1,000 high-quality
+        examples can be highly effective 18) or through extensive
+        cleaning and filtering of larger, potentially noisier datasets
+        (e.g., efforts to clean the Alpaca dataset 25 or analyses of
+        databricks-dolly-15k highlighting areas for improvement 15).
+        This progression underscores that the methodology of creating
+        and refining the "data portion" is as crucial as the
+        raw data itself. The mere fact that data is
+        "human-generated" does not guarantee its superiority
+        over "AI-generated" data if the latter undergoes more
+        rigorous quality control and curation.
+      </para>
+    <para>
+        Furthermore, the licensing and intended use of these datasets
+        carry significant practical weight. Datasets like Alpaca, with
+        its research-only license 28, confine the direct applicability
+        of models fine-tuned on them to academic circles. Conversely,
+        datasets with commercially permissive licenses, such as
+        databricks-dolly-15k 22, allow for broader deployment and study
+        of the resulting "data-conditioned programs" in
+        real-world applications. These practical constraints inevitably
+        shape the ecosystem of comparable models and influence which
+        "data portions" become most influential in the wider
+        LLM landscape.
+      </para>
+  </section>
+</section>
+  

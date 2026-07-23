@@ -1,0 +1,610 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="part-v-advanced-legal-considerations-and-strategic-recommendations">
+  <title>
+    <emphasis role="strong">Part V: Advanced Legal Considerations
+    and Strategic Recommendations</emphasis>
+  </title>
+  <para>
+      Beyond the core contractual architecture and IP models, a truly
+      robust legal framework must account for more nuanced legal
+      doctrines and provide a clear, actionable path for implementation.
+      This includes ensuring the fundamental legality of the
+      commissioned artwork and establishing a comprehensive risk
+      mitigation strategy that incorporates recent legislative changes
+      and operational best practices.
+    </para>
+  <section xml:id="section-51-ensuring-the-copyrightability-of-the-legal-object-obscenity-and-miller-v-california">
+    <title>
+      <emphasis role="strong">Section 5.1: Ensuring the
+      Copyrightability of the Legal Object: Obscenity and Miller v.
+      California</emphasis>
+    </title>
+    <para>
+        For any contract to be valid, its "legal object"—the
+        artwork to be created—must itself be lawful and eligible for the
+        legal protections sought, namely copyright.3 This raises the
+        question of whether a work deemed "obscene" can be
+        protected by copyright. The landmark Supreme Court case
+      </para>
+    <para>
+      <emphasis>Miller v. California</emphasis> established the
+        three-prong test for determining obscenity, which is not
+        protected by the First Amendment.36 A work is considered obscene
+        only if it meets all three criteria: (1) it appeals to the
+        prurient interest, according to contemporary community
+        standards; (2) it depicts or describes sexual conduct in a
+        patently offensive way; and (3) taken as a whole, it "lacks
+        serious literary, artistic, political, or scientific
+        value".37
+      </para>
+    <para>
+        The argument can be made that a contract to create a work of
+        "fine art" is, by its very nature and intent, a
+        contract for an object intended to possess "serious
+        artistic value." This intent would logically cause the work
+        to fail the third prong of the <emphasis>Miller</emphasis> test,
+        thereby ensuring it is not legally obscene and remains a lawful,
+        copyrightable object.7 This provides a sound, first-principles
+        defense against any potential claim that a commissioned work is
+        uncopyrightable due to its content.
+      </para>
+    <para>
+        However, a more robust and modern legal analysis suggests that
+        the question of obscenity may be largely irrelevant to
+        copyrightability in the first place. The U.S. Copyright Act is
+        content-neutral; its purpose is to protect original works of
+        authorship that are fixed in a tangible medium of expression.39
+        The legislative history of the Copyright Act of 1976 explicitly
+        indicates that subjective judgments about a work's aesthetic
+        merit or moral content should not be a factor in determining its
+        eligibility for copyright protection.40
+      </para>
+    <para>
+        Furthermore, the legal trend, exemplified by cases like
+        <emphasis>Mitchell Brothers Film Group v. Cinema Adult
+        Theater</emphasis>, has been to reject the notion of an
+        "obscenity defense" in copyright infringement cases.40
+        The reasoning is that the Constitution does not require such an
+        exception, and it would be a "dangerous undertaking"
+        for courts, which are trained in law and not art criticism, to
+        act as arbiters of artistic value for the purpose of granting or
+        denying copyright.40 Denying copyright protection to a work
+        based on its content could be seen as a form of censorship,
+        which runs counter to the constitutional goal of copyright: to
+        "promote the Progress of Science and useful Arts" by
+        encouraging creation.39
+      </para>
+    <para>
+        Therefore, the venture can proceed with confidence on two
+        fronts. The primary position is that copyright law is
+        content-neutral and does not bar protection for works on the
+        basis of obscenity. The secondary, philosophical position is
+        that the very act of commissioning fine art is predicated on the
+        creation of "serious artistic value," inherently
+        placing the work outside the legal definition of obscenity
+        established in <emphasis>Miller v. California</emphasis>.
+      </para>
+  </section>
+  <section xml:id="section-52-strategic-recommendations-and-risk-mitigation-framework">
+    <title>
+      <emphasis role="strong">Section 5.2: Strategic
+      Recommendations and Risk Mitigation Framework</emphasis>
+    </title>
+    <para>
+        Synthesizing the analysis of contract law, employment status,
+        and intellectual property, the following strategic
+        recommendations provide an actionable framework for implementing
+        this legal structure and mitigating risk.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Adopt the MSA/SOW
+            Architecture:</emphasis> Formally implement the modular
+            contract system. Develop a standardized, attorney-reviewed
+            Master Service Agreement to be used with all individual
+            artists. This MSA should contain all the foundational,
+            non-negotiable clauses outlined in Part II. Each new project
+            should then be initiated with a distinct Statement of Work
+            that details the project-specific terms.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Comply with the 2025 Freelance
+            Worker Protection Act (FWPA):</emphasis> As of January 1,
+            2025, California's FWPA imposes new mandatory requirements
+            for contracts with freelance workers.42 Every SOW must be in
+            writing and must include: the names and addresses of both
+            parties; an itemized list of services and the rate of
+            compensation; the payment due date; and the date by which
+            the artist must submit any required forms (like a W-9).44 If
+            no payment date is specified, payment is due no later than
+            30 days after the completion of services. These terms are
+            now mandatory rules and must be incorporated into the SOW
+            template.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Implement a Worker Classification
+            and IP Strategy Flowchart:</emphasis> Before engaging any
+            artist, use a systematic process to determine the correct
+            contractual approach:
+          </para>
+      </listitem>
+    </itemizedlist>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Is the artist an individual or a
+            legal entity (e.g., an LLC)?</emphasis> If the artist is
+            operating as a separate legal entity like an LLC or
+            corporation, the risk of misclassification is significantly
+            lower, and a Work-for-Hire agreement may be a viable
+            option.32
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">If the artist is an individual, does
+            the "fine artist" exemption to AB5 likely
+            apply?</emphasis> Assess whether the artist meets the
+            criteria for the professional services exemption (e.g., has
+            an independent business, markets their services).
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">If the exemption applies, structure
+            the SOW to satisfy the</emphasis>
+          <emphasis>
+            <emphasis role="strong">Borello</emphasis>
+          </emphasis>
+          <emphasis role="strong">test.</emphasis> Emphasize the
+            artist's autonomy, control over their process, provision of
+            their own tools, and payment by the project rather than by
+            the hour.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">If the exemption does</emphasis>
+          <emphasis>
+            <emphasis role="strong">not</emphasis>
+          </emphasis>
+          <emphasis role="strong">apply, or if the risk is too high,
+            the artist must be classified as an employee.</emphasis>
+            This would require onboarding them through a formal payroll
+            system with all attendant legal obligations.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Based on the project's strategic
+            value, select the appropriate IP Model.</emphasis>
+        </para>
+      </listitem>
+    </orderedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Low-Stakes / Exploratory:</emphasis>
+            Use Model 1 (Limited License).
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">High-Stakes / Asset
+            Acquisition:</emphasis> Use Model 2 (Option to Purchase).
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Alternative for Full
+            Ownership:</emphasis> Use a clear Copyright Assignment
+            agreement instead of the high-risk Work-for-Hire model.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Establish a Standardized Onboarding
+            Process for California Artists:</emphasis> Create a
+            non-negotiable checklist for engaging any new individual
+            artist in California:
+          </para>
+      </listitem>
+    </itemizedlist>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+            Execute the Master Service Agreement.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Draft and execute a detailed Statement of Work compliant
+            with the FWPA <emphasis>before</emphasis> any work begins.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Obtain a completed and signed IRS Form W-9 from the artist.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Implement a system to track all payments made to the artist
+            throughout the calendar year.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Set a calendar reminder for year-end to issue Form 1099-NEC
+            to all artists who were paid at or above the statutory
+            threshold ($600 for 2025; $2,000 for 2026).
+          </para>
+      </listitem>
+    </orderedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Conduct Periodic Legal
+            Review:</emphasis> The landscape of employment and copyright
+            law, particularly in California and in relation to new
+            technologies like AI, is in a constant state of flux.45 It
+            is imperative to schedule an annual review of this entire
+            legal framework with qualified legal counsel to adapt the
+            MSA and SOW templates and internal processes to reflect new
+            legislation, court decisions, and regulatory guidance. This
+            proactive approach ensures that the venture's legal
+            foundation remains not only strong but also current and
+            defensible in a dynamic environment.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              Winning Contract Litigation in California: The Basics -
+              The Bearman Firm, accessed August 30, 2025,
+              <link xlink:href="https://thebearmanfirm.com/winning-contract-litigation-in-california-the-basics">https://thebearmanfirm.com/winning-contract-litigation-in-california-the-basics</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              California Civil Code - Wikipedia, accessed August 30,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/California_Civil_Code">https://en.wikipedia.org/wiki/California_Civil_Code</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              California Code, Civil Code - CIV § 1550 | FindLaw - Codes
+              - FindLaw, accessed August 30, 2025,
+              <link xlink:href="https://codes.findlaw.com/ca/civil-code/civ-sect-1550/">https://codes.findlaw.com/ca/civil-code/civ-sect-1550/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              California Civil Code § 1550 (2024) - Justia Law, accessed
+              August 30, 2025,
+              <link xlink:href="https://law.justia.com/codes/california/code-civ/division-3/part-2/title-1/chapter-1/section-1550/">https://law.justia.com/codes/california/code-civ/division-3/part-2/title-1/chapter-1/section-1550/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The essential elements of a contract - Thomson Reuters
+              Legal Solutions, accessed August 30, 2025,
+              <link xlink:href="https://legal.thomsonreuters.com/blog/the-essential-elements-of-a-contract/">https://legal.thomsonreuters.com/blog/the-essential-elements-of-a-contract/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              CONTRACT LAW, accessed August 30, 2025,
+              <link xlink:href="https://students.ucsd.edu/_files/sls/handbook/SLSHandbook-Contract_Law.pdf">https://students.ucsd.edu/_files/sls/handbook/SLSHandbook-Contract_Law.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              A Constructive Legal Framework for Artistic Commissions
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Historic copyright law, relating to commissioned works -
+              DACS, accessed August 30, 2025,
+              <link xlink:href="https://www.dacs.org.uk/advice/articles/copyright-and-commissioned-works/historic-copyright-law-relating-to-commissioned-works">https://www.dacs.org.uk/advice/articles/copyright-and-commissioned-works/historic-copyright-law-relating-to-commissioned-works</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Ownership in Commissioned Business Works -
+              Attorney Aaron Hall, accessed August 30, 2025,
+              <link xlink:href="https://aaronhall.com/copyright-ownership-in-commissioned-business-works/">https://aaronhall.com/copyright-ownership-in-commissioned-business-works/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              MSAs &amp; SOWs: The Right Way to Use Them - Pixel Law,
+              accessed August 30, 2025,
+              <link xlink:href="https://pixellaw.com/the-right-way-to-use-msas-sows/">https://pixellaw.com/the-right-way-to-use-msas-sows/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Mastering the Master Service Agreement (MSA): The Ultimate
+              Guide - Concord's contract management software, accessed
+              August 30, 2025,
+              <link xlink:href="https://www.concord.app/guide/master-service-agreement">https://www.concord.app/guide/master-service-agreement</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              [2024] Guide to Artist Contracts and Agreements |
+              ArtConnect Magazine, accessed August 30, 2025,
+              <link xlink:href="https://www.magazine.artconnect.com/resources/guide-to-artist-contracts-and-agreements">https://www.magazine.artconnect.com/resources/guide-to-artist-contracts-and-agreements</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is AB-5: Navigating AB-5 and Employment Law for the
+              Arts - California Arts Advocates, accessed August 30,
+              2025,
+              <link xlink:href="https://www.caartsadvocates.org/research/what-is-ab-5-navigating-ab-5-and-employment-law-for-the-arts">https://www.caartsadvocates.org/research/what-is-ab-5-navigating-ab-5-and-employment-law-for-the-arts</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Independent contractor versus employee - California
+              Department of Industrial Relations, accessed August 30,
+              2025,
+              <link xlink:href="https://www.dir.ca.gov/dlse/faq_independentcontractor.htm">https://www.dir.ca.gov/dlse/faq_independentcontractor.htm</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Resources on AB5 - LA County Department of Arts and
+              Culture, accessed August 30, 2025,
+              <link xlink:href="https://www.lacountyarts.org/resources-ab5">https://www.lacountyarts.org/resources-ab5</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              ABC Test | LWDA, accessed August 30, 2025,
+              <link xlink:href="https://www.labor.ca.gov/employmentstatus/abctest/">https://www.labor.ca.gov/employmentstatus/abctest/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Reporting payments to independent contractors | Internal
+              Revenue ..., accessed August 30, 2025,
+              <link xlink:href="https://www.irs.gov/businesses/small-businesses-self-employed/reporting-payments-to-independent-contractors">https://www.irs.gov/businesses/small-businesses-self-employed/reporting-payments-to-independent-contractors</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Tax Bill Changes 1099 Reporting Thresholds - Littler
+              Mendelson P.C., accessed August 30, 2025,
+              <link xlink:href="https://www.littler.com/news-analysis/asap/tax-bill-changes-1099-reporting-thresholds">https://www.littler.com/news-analysis/asap/tax-bill-changes-1099-reporting-thresholds</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Big 1099 Change: IRS Raises the Reporting Threshold to
+              $2000, accessed August 30, 2025,
+              <link xlink:href="https://www.schwartzschwartz.com/blog/2025/7/6/big-1099-change-irs-raises-the-reporting-threshold-to-2000">https://www.schwartzschwartz.com/blog/2025/7/6/big-1099-change-irs-raises-the-reporting-threshold-to-2000</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fact Sheet 13: Employment Relationship Under the Fair
+              Labor ..., accessed August 30, 2025,
+              <link xlink:href="https://www.dol.gov/agencies/whd/fact-sheets/13-flsa-employment-relationship">https://www.dol.gov/agencies/whd/fact-sheets/13-flsa-employment-relationship</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              DOL Publishes New Rule for Determining Whether Individuals
+              are Independent Contractors under the Fair Labor Standard
+              Act - Quarles, accessed August 30, 2025,
+              <link xlink:href="https://www.quarles.com/newsroom/publications/dol-publishes-new-rule-for-determining-whether-individuals-are-independent-contractors-under-the-fair-labor-standard-act">https://www.quarles.com/newsroom/publications/dol-publishes-new-rule-for-determining-whether-individuals-are-independent-contractors-under-the-fair-labor-standard-act</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              17 U.S. Code § 201 - Ownership of copyright - Legal
+              Information Institute - Cornell University, accessed
+              August 30, 2025,
+              <link xlink:href="https://www.law.cornell.edu/uscode/text/17/201">https://www.law.cornell.edu/uscode/text/17/201</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Definitions (FAQ) - U.S. Copyright Office, accessed August
+              30, 2025,
+              <link xlink:href="https://www.copyright.gov/help/faq-definitions.html">https://www.copyright.gov/help/faq-definitions.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Ownership of Copyrights - Corporate Counsel - FindLaw,
+              accessed August 30, 2025,
+              <link xlink:href="https://corporate.findlaw.com/intellectual-property/ownership-of-copyrights.html">https://corporate.findlaw.com/intellectual-property/ownership-of-copyrights.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright and commission agreements | What to look out for
+              and ..., accessed August 30, 2025,
+              <link xlink:href="https://www.dacs.org.uk/advice/articles/copyright-and-commissioned-works">https://www.dacs.org.uk/advice/articles/copyright-and-commissioned-works</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Rights in Commissioned Design Assets - Attorney
+              Aaron Hall, accessed August 30, 2025,
+              <link xlink:href="https://aaronhall.com/copyright-rights-in-commissioned-design-assets/">https://aaronhall.com/copyright-rights-in-commissioned-design-assets/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              OPTION AND PURCHASE AGREEMENT EXPLANATORY NOTES, accessed
+              August 30, 2025,
+              <link xlink:href="https://www.artslaw.com.au/images/uploads/OPTION_AND_PURCHASE_AGREEMENT_explanatory_notes_final.pdf">https://www.artslaw.com.au/images/uploads/OPTION_AND_PURCHASE_AGREEMENT_explanatory_notes_final.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Option Agreements – Buying (and Selling) Time | Crown,
+              LLP, accessed August 30, 2025,
+              <link xlink:href="https://crownllp.com/blog/option-agreements-buying-and-selling-time/">https://crownllp.com/blog/option-agreements-buying-and-selling-time/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Work for Hire: Understanding Copyright and Ownership -
+              UpCounsel, accessed August 30, 2025,
+              <link xlink:href="https://www.upcounsel.com/work-for-hire">https://www.upcounsel.com/work-for-hire</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Standard Application Help: Author - U.S. Copyright Office,
+              accessed August 30, 2025,
+              <link xlink:href="https://www.copyright.gov/eco/help-author.html">https://www.copyright.gov/eco/help-author.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Circular 30 Works Made For Hire - U.S. Copyright Office,
+              accessed August 30, 2025,
+              <link xlink:href="https://www.copyright.gov/circs/circ30.pdf">https://www.copyright.gov/circs/circ30.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Works Made for Hire in California: An Exceptional State,
+              An Exceptional Law - Encore Law Group LLP, accessed August
+              30, 2025,
+              <link xlink:href="https://encorelaw.com/works-made-for-hire-in-california-an-exceptional-state-an-exceptional-law/">https://encorelaw.com/works-made-for-hire-in-california-an-exceptional-state-an-exceptional-law/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Generative AI in Focus: Copyright Office's Latest Report:
+              Wiley, accessed August 30, 2025,
+              <link xlink:href="https://www.wiley.law/alert-Generative-AI-in-Focus-Copyright-Offices-Latest-Report">https://www.wiley.law/alert-Generative-AI-in-Focus-Copyright-Offices-Latest-Report</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Gen-AI output: why the US Copyright Office is right about
+              human authorship, accessed August 30, 2025,
+              <link xlink:href="https://www.pinsentmasons.com/out-law/analysis/gen-ai-output-us-copyright-office-human-authorship">https://www.pinsentmasons.com/out-law/analysis/gen-ai-output-us-copyright-office-human-authorship</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Generative Artificial Intelligence and Copyright Law -
+              Congress.gov, accessed August 30, 2025,
+              <link xlink:href="https://www.congress.gov/crs-product/LSB10922">https://www.congress.gov/crs-product/LSB10922</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Miller v. California - Wikipedia, accessed August 30,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Miller_v._California">https://en.wikipedia.org/wiki/Miller_v._California</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              New York and California grant broad protections to
+              freelance ..., accessed August 30, 2025,
+              <link xlink:href="https://www.nixonpeabody.com/insights/alerts/2024/10/31/new-york-and-california-grant-protections-to-freelance-workers">https://www.nixonpeabody.com/insights/alerts/2024/10/31/new-york-and-california-grant-protections-to-freelance-workers</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Miller v. California (1973) | The First Amendment
+              Encyclopedia - Free Speech Center, accessed August 30,
+              2025,
+              <link xlink:href="https://firstamendment.mtsu.edu/article/miller-v-california/">https://firstamendment.mtsu.edu/article/miller-v-california/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is Copyright?, accessed August 30, 2025,
+              <link xlink:href="https://www.copyright.gov/what-is-copyright/">https://www.copyright.gov/what-is-copyright/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Obscenity Defense to Copyright Revisited - UKnowledge,
+              accessed August 30, 2025,
+              <link xlink:href="https://uknowledge.uky.edu/cgi/viewcontent.cgi?article=2193&amp;context=klj">https://uknowledge.uky.edu/cgi/viewcontent.cgi?article=2193&amp;context=klj</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Fine Art of Copyright Protection: A Suggestion for
+              Change in the Application of the Fair Use Doctrine - USF
+              Scholarship Repository, accessed August 30, 2025,
+              <link xlink:href="https://repository.usfca.edu/cgi/viewcontent.cgi?article=1079&amp;context=usflawreview">https://repository.usfca.edu/cgi/viewcontent.cgi?article=1079&amp;context=usflawreview</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              California's 2025 Employment Law Changes | Malk &amp; Pogo
+              Law Group, accessed August 30, 2025,
+              <link xlink:href="https://malkpogolaw.com/californias-2025-employment-law-changes/">https://malkpogolaw.com/californias-2025-employment-law-changes/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              New California Law Expands Protections for Freelance
+              Workers: What Employers Must Know + 5 Steps You Can Take
+              to Comply | Fisher Phillips, accessed August 30, 2025,
+              <link xlink:href="https://www.fisherphillips.com/en/news-insights/new-california-law-expands-protections-freelance-workers-what-employers-must-know-5-steps-to-comply.html">https://www.fisherphillips.com/en/news-insights/new-california-law-expands-protections-freelance-workers-what-employers-must-know-5-steps-to-comply.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              New 2025 California Employment Laws: Part I | Saul Ewing
+              LLP, accessed August 30, 2025,
+              <link xlink:href="https://www.saul.com/insights/blog/new-2025-california-employment-laws-part-i">https://www.saul.com/insights/blog/new-2025-california-employment-laws-part-i</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              'Tis the Season for California's 2025 Legislative Update:
+              Employer Considerations | Insights, accessed August 30,
+              2025,
+              <link xlink:href="https://www.gtlaw.com/en/insights/2024/12/tis-the-season-for-californias-2025-legislative-update-employer-considerations">https://www.gtlaw.com/en/insights/2024/12/tis-the-season-for-californias-2025-legislative-update-employer-considerations</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Office Releases Part 2 of Artificial
+              Intelligence Report, accessed August 30, 2025,
+              <link xlink:href="https://www.copyright.gov/newsnet/2025/1060.html">https://www.copyright.gov/newsnet/2025/1060.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Top Ten Noteworthy Copyright Stories from July 2025,
+              accessed August 30, 2025,
+              <link xlink:href="https://copyrightalliance.org/copyright-news-july-2025/">https://copyrightalliance.org/copyright-news-july-2025/</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="the-tiered-engagement-model-from-patronage-to-partnership">
+  <title>
+    <emphasis role="strong">The Tiered Engagement Model: From
+    Patronage to Partnership</emphasis>
+  </title>
+  <para>
+      This framework allows for three distinct tiers of engagement, each
+      with a corresponding contract combination that reflects the
+      evolving relationship and commitment level.
+    </para>
+  <section xml:id="tier-1-the-patronage-commission-low-commitment">
+    <title>
+      <emphasis role="strong">Tier 1: The Patronage Commission
+      (Low Commitment)</emphasis>
+    </title>
+    <para>
+        This is the initial "talent scout" phase, designed to
+        assess an artist's skill and collaborative fit on a low-risk
+        project.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Relationship:</emphasis>
+            Patron-Artist
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Contract Used:</emphasis> A simple
+            <emphasis role="strong">Statement of Work (SOW)</emphasis>
+            under the standard MSA.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">IP Treatment:</emphasis> The artist
+            retains full copyright to their derivative work. The LLC
+            receives a limited, non-commercial license to use the piece
+            for personal enjoyment and display.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Valuation Method:</emphasis> A
+            straightforward project fee, typically paid 50% upfront and
+            50% on completion.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="tier-2-the-commercial-commission-medium-commitment">
+    <title>
+      <emphasis role="strong">Tier 2: The Commercial Commission
+      (Medium Commitment)</emphasis>
+    </title>
+    <para>
+        For artists who have proven their value, this tier involves
+        creating core assets for the LLC's commercial projects. This
+        stage introduces the "Ledger Contract" concept to
+        establish a transparent valuation of the IP.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Relationship:</emphasis>
+            Producer-Contractor
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Contract Used:</emphasis> A detailed
+            <emphasis role="strong">"Ledger" SOW</emphasis>
+            under the MSA, which includes a full copyright assignment
+            clause.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">IP Treatment:</emphasis> The artist
+            assigns the full copyright to the LLC upon final payment,
+            granting the organization complete ownership for commercial
+            use (a "buyout").
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Valuation Method:</emphasis> The SOW
+            acts as a financial ledger to establish a defensible
+            "book value" for the IP. This value is calculated
+            as:
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Par Value:</emphasis> The LLC's
+            fixed administrative and legal costs for the commission.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Reimbursed Artist Costs:</emphasis>
+            Documented expenses for the artist's materials and labor
+            (tracked via receipts and timesheets).
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="tier-3-the-partnership-commission-high-commitment">
+    <title>
+      <emphasis role="strong">Tier 3: The Partnership Commission
+      (High Commitment)</emphasis>
+    </title>
+    <para>
+        This final stage formalizes the transition of a key collaborator
+        into a vested member of the LLC, using their creative work as
+        their investment.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Relationship:</emphasis>
+            Partner-Member
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Contract Used:</emphasis> An
+            <emphasis role="strong">IP Contribution
+            Agreement</emphasis>, which serves as an amendment to the
+            LLC Operating Agreement.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">IP Treatment:</emphasis> The
+            artist's high-value IP is formally transferred to the LLC as
+            a <emphasis role="strong">capital contribution</emphasis> in
+            exchange for a membership interest (equity).
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Valuation Method:</emphasis> The
+            "Book Value" established in the Tier 2 Ledger
+            Contract provides a transparent, agreed-upon valuation for
+            the IP being contributed as capital.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <informaltable>
+      <tgroup cols="5">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                Tier
+              </entry>
+            <entry>
+                Relationship Type
+              </entry>
+            <entry>
+                Contract Combination
+              </entry>
+            <entry>
+                IP Treatment
+              </entry>
+            <entry>
+                Valuation Method
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **1. Patronage**
+              </entry>
+            <entry>
+                Patron-Artist
+              </entry>
+            <entry>
+                MSA + Simple SOW
+              </entry>
+            <entry>
+                Artist retains copyright; LLC gets a limited,
+                non-commercial license.
+              </entry>
+            <entry>
+                Simple Project Fee
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **2. Commercial**
+              </entry>
+            <entry>
+                Producer-Contractor
+              </entry>
+            <entry>
+                MSA + "Ledger" SOW with Copyright Assignment
+              </entry>
+            <entry>
+                Artist assigns full copyright to the LLC
+                ("buyout").
+              </entry>
+            <entry>
+                "Book Value" (Par Value + Reimbursed Artist
+                Costs)
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **3. Partnership**
+              </entry>
+            <entry>
+                Partner-Member
+              </entry>
+            <entry>
+                IP Contribution Agreement (Amends LLC Operating
+                Agreement)
+              </entry>
+            <entry>
+                Artist's IP is contributed to the LLC as a capital
+                investment.
+              </entry>
+            <entry>
+                Agreed-upon value, often based on the "Book
+                Value" from Tier 2.
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <para>
+        By integrating these contractual layers, the venture can operate
+        with legal clarity and strategic purpose. This ecosystem allows
+        relationships to mature naturally, providing a clear and
+        defensible pathway for artists to grow from commissioned
+        creators into true equity partners in the collective enterprise.
+      </para>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              MSA vs SOW: Which One To Use When - Ironclad, accessed
+              August 28, 2025,
+              <link xlink:href="https://ironcladapp.com/journal/contracts/msa-vs-sow/">https://ironcladapp.com/journal/contracts/msa-vs-sow/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Distinguishing between a master service agreement and a
+              statement of works - HCR Law, accessed August 28, 2025,
+              <link xlink:href="https://www.hcrlaw.com/news-and-insights/distinguishing-between-a-master-services-agreement-and-a-statement-of-works/">https://www.hcrlaw.com/news-and-insights/distinguishing-between-a-master-services-agreement-and-a-statement-of-works/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is a Master Service Agreement (MSA)? The Ultimate
+              Guide for 2025 - ContractPodAi, accessed August 28, 2025,
+              <link xlink:href="https://contractpodai.com/news/master-service-agreement-guide/">https://contractpodai.com/news/master-service-agreement-guide/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is a master service agreement (MSA)? - Thomson
+              Reuters Legal Solutions, accessed August 28, 2025,
+              <link xlink:href="https://legal.thomsonreuters.com/blog/what-is-an-msa/">https://legal.thomsonreuters.com/blog/what-is-an-msa/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              MSA vs SOW: Understanding the Key Differences and Why Both
+              Matter - Sirion, accessed August 28, 2025,
+              <link xlink:href="https://www.sirion.ai/library/contracts/msa-vs-sow/">https://www.sirion.ai/library/contracts/msa-vs-sow/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              IT Contract Terms Defined: MSA vs. SOW - Kelser
+              Corporation, accessed August 28, 2025,
+              <link xlink:href="https://www.kelsercorp.com/blog/it-terms-defined-msa-sow">https://www.kelsercorp.com/blog/it-terms-defined-msa-sow</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Master services agreement vs. statement of work: What's
+              the difference? - PandaDoc, accessed August 28, 2025,
+              <link xlink:href="https://www.pandadoc.com/blog/master-services-agreement-vs-statement-of-work/">https://www.pandadoc.com/blog/master-services-agreement-vs-statement-of-work/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              MSA, SOW, Consulting Agreements: The Definitive Guide,
+              accessed August 28, 2025,
+              <link xlink:href="https://consultingquest.com/insights/msa-sow-consulting-agreements-guide/">https://consultingquest.com/insights/msa-sow-consulting-agreements-guide/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How Are MSA And Intellectual Property Connected? -
+              Corpbiz, accessed August 28, 2025,
+              <link xlink:href="https://corpbiz.io/learning/how-are-msa-and-intellectual-property-connected/">https://corpbiz.io/learning/how-are-msa-and-intellectual-property-connected/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Demystifying MSAs: Unraveling the Importance and Necessity
+              of Master Service Agreements in Business - Hello Bonsai,
+              accessed August 28, 2025,
+              <link xlink:href="https://www.hellobonsai.com/blog/what-is-a-master-service-agreement">https://www.hellobonsai.com/blog/what-is-a-master-service-agreement</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Mastering the Master Service Agreement (MSA): The Ultimate
+              Guide - Concord's contract management software, accessed
+              August 28, 2025,
+              <link xlink:href="https://www.concord.app/guide/master-service-agreement">https://www.concord.app/guide/master-service-agreement</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Essential software development contracts: NDA, MSA, and
+              SOW explained - DECODE, accessed August 28, 2025,
+              <link xlink:href="https://decode.agency/article/software-development-contracts/">https://decode.agency/article/software-development-contracts/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Key Criteria for Evaluating Your Agency's Service
+              Agreements and SOWs - Matchstick Legal, accessed August
+              28, 2025,
+              <link xlink:href="https://matchstick.legal/blog/msa-sow-key-criteria-evaluation-creative-agency">https://matchstick.legal/blog/msa-sow-key-criteria-evaluation-creative-agency</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              NDAs, MSAs, SOWs, ETC - Legal Documents that Every Startup
+              Needs - Williams Law Pllc, accessed August 28, 2025,
+              <link xlink:href="https://www.trentwilliamslaw.com/resources/ndas-msas-sows-etc-legal-documents-that-every-startup-needs-lrjk9">https://www.trentwilliamslaw.com/resources/ndas-msas-sows-etc-legal-documents-that-every-startup-needs-lrjk9</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Master Services Agreement - Pion, accessed August 28,
+              2025,
+              <link xlink:href="https://www.wearepion.com/msa">https://www.wearepion.com/msa</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is an SOW and How to Write One: a 7-Steps Guide |
+              Icertis, accessed August 28, 2025,
+              <link xlink:href="https://www.icertis.com/contracting-basics/how-to-write-a-solid-statement-of-work/">https://www.icertis.com/contracting-basics/how-to-write-a-solid-statement-of-work/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Freelance Statement of Work Template (FREE - 2025 Updated)
+              - Hello Bonsai, accessed August 28, 2025,
+              <link xlink:href="https://www.hellobonsai.com/scope-of-work-template/freelance-statement-of-work">https://www.hellobonsai.com/scope-of-work-template/freelance-statement-of-work</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Freelance Contract: How to Write an Effective
+              Statement of Work - Nation1099, accessed August 28, 2025,
+              <link xlink:href="https://nation1099.com/freelance-contract-how-to-write-statement-of-work/">https://nation1099.com/freelance-contract-how-to-write-statement-of-work/</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

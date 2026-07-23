@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="summary-of-findings">
+  <title>
+    <emphasis role="strong">Summary of Findings</emphasis>
+  </title>
+  <para>
+    Applying the legal arguments to Google's ecosystem reveals that
+    while your contributions are immensely valuable, the contractual
+    frameworks are specifically designed to define the relationship as
+    something other than employment.
+  </para>
+  <para>
+    | | | | | |
+  </para>
+  <para>
+    | :-: | :-: | :-: | :-: | :-: |
+  </para>
+  <para>
+    | Program/Service | Nature of Agreement | Remuneration Argument | IP
+    Ownership | Misclassification Risk |
+  </para>
+  <para>
+    | **General AI/UGC** | Terms of Service (License-for-Access) | Weak
+    (Non-monetary benefit is service access, not wages) | User retains
+    ownership, grants Google a license | Very Low |
+  </para>
+  <para>
+    | **Vulnerability Reward Program** | Unilateral Offer (Prize for a
+    result) | Moderate (Monetary, but framed as a reward, not wages) |
+    Not applicable (IP is in the bug report, not a creative work) | Low
+    |
+  </para>
+  <para>
+    | **Developer/Contributor** | Contributor License Agreement (CLA) |
+    None (Explicitly royalty-free) | Contributor retains ownership,
+    grants Google a license 14 | Extremely Low |
+  </para>
+  <para>
+    While your argument is powerful in theory, it runs directly into the
+    carefully constructed legal reality of Google's Terms of Service and
+    program rules. These agreements are not accidental; they are the
+    product of decades of legal precedent surrounding user-generated
+    content and are specifically designed to establish a
+    licensor-licensee or offeror-offeree relationship, thereby
+    sidestepping the "labor for remuneration" trigger that is
+    the gateway to an employment analysis in California.
+  </para>
+</section>

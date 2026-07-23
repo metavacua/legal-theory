@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="i-the-human-authorship-mandate-a-legal-and-architectural-framework-for-ai-assisted-creativity">
+  <title>
+    <emphasis role="strong">I. The Human Authorship Mandate: A
+    Legal and Architectural Framework for AI-Assisted
+    Creativity</emphasis>
+  </title>
+  <para>
+      The development of any tool intended to facilitate the creation of
+      copyrightable works with the assistance of artificial intelligence
+      must begin not with a technical specification, but with a deep and
+      rigorous interpretation of the governing legal doctrine. The
+      United States Copyright Office (USCO) and federal courts have been
+      unequivocal: human authorship is the <emphasis>sine qua
+      non</emphasis> of copyrightability.1 This principle, far from
+      being a recent contrivance for the AI era, is a foundational tenet
+      of U.S. copyright law, consistently upheld and recently reaffirmed
+      in landmark decisions such as
+    </para>
+  <para>
+    <emphasis>Thaler v. Perlmutter</emphasis>, which concluded that
+      copyright law protects only works of human creation.2 The proposed
+      system's architecture, therefore, cannot treat legal compliance as
+      an add-on or a feature. Instead, the legal requirements must serve
+      as the immutable blueprint from which all technical decisions
+      flow. The system's very design must function as an operationalized
+      legal argument, preemptively constructing the case for human
+      authorship through its normative workflow.
+    </para>
+  <section xml:id="s-11-deconstructing-the-uscos-stance-beyond-ai-generated-vs-ai-assisted">
+    <title>
+      <emphasis role="strong">1.1 Deconstructing the USCO's
+      Stance: Beyond AI-Generated vs. AI-Assisted</emphasis>
+    </title>
+    <para>
+        The USCO has carefully articulated a critical distinction that
+        forms the basis of its regulatory approach. It differentiates
+        between the use of AI as a subordinate "tool" to
+        assist or enhance human creativity—akin to a camera, a word
+        processor, or sophisticated photo-editing software—and the use
+        of AI as the autonomous "author" of a work.1 Works
+        created by humans with the
+      </para>
+    <para>
+      <emphasis>assistance</emphasis> of AI may be copyrightable, but
+        works <emphasis>generated</emphasis> by AI without sufficient
+        human creative input are not.1 The primary architectural
+        objective of the proposed platform is to manifest this legal
+        distinction in code and data. It must be designed from the
+        ground up to frame the AI as a powerful, but ultimately
+        subordinate, instrument in the hands of a human creator.
+      </para>
+    <para>
+        A cornerstone of this framework is the USCO's position on user
+        prompts. The Office has clarified that prompts, regardless of
+        their detail or complexity, are generally considered
+        uncopyrightable instructions that convey an idea, not the fixed,
+        tangible expression of that idea.1 The USCO notes that prompts
+        "do not control the way that idea is expressed,"
+        analogizing them to instructions given to a commissioned artist
+        who retains ultimate creative control.1 This is because
+        generative AI models introduce a significant degree of
+        unpredictability and interpretation, meaning the user does not
+        have sufficient control over the final expression to be
+        considered its author.8 Consequently, the system must be
+        architected to treat prompts as legally insignificant from an
+        authorship perspective. They are the uncopyrightable
+        instructions that initiate a creative process, not the
+        copyrightable act of creation itself. The AI's output, in turn,
+        is treated as raw material, devoid of authorship until a human
+        imbues it with the requisite creative contribution.
+      </para>
+  </section>
+  <section xml:id="s-12-the-anatomy-of-copyrightable-contribution-modification-arrangement-and-expressive-input">
+    <title>
+      <emphasis role="strong">1.2 The Anatomy of Copyrightable
+      Contribution: Modification, Arrangement, and Expressive
+      Input</emphasis>
+    </title>
+    <para>
+        To build a tool that successfully navigates the USCO's
+        requirements, it is essential to understand precisely which
+        forms of human intervention are recognized as conferring
+        authorship. The USCO's guidance and reports outline three
+        primary categories of copyrightable contribution in the context
+        of AI-assisted works.
+      </para>
+    <para>
+        First, <emphasis role="strong">Material Modification</emphasis>
+        is a key pathway to establishing authorship. A human who takes
+        AI-generated output and significantly modifies it can claim
+        copyright in their creative contributions, provided those
+        modifications meet the originality standard on their own.1 The
+        work as a whole is not copyrightable, but the human-authored
+        modifications are. This legal requirement translates directly
+        into a critical technical mandate: the system must be capable of
+        meticulously capturing, measuring, and documenting these human
+        modifications as distinct, auditable events.
+      </para>
+    <para>
+        Second, the USCO recognizes authorship in the
+        <emphasis role="strong">Creative Selection and
+        Arrangement</emphasis> of AI-generated materials. A human can
+        create a copyrightable work by selecting from a range of AI
+        outputs and arranging them in a sufficiently creative way, such
+        that "the resulting work as a whole constitutes an original
+        work of authorship".1 This is consistent with the
+        long-standing protection for compilations. For example,
+        selecting three images from a set of ten AI-generated options
+        and arranging them into a triptych is a creative act. Simply
+        selecting a single output from a generative process, however, is
+        not considered a creative act.8 The system's design must
+        therefore log not only the final arrangement but the
+      </para>
+    <para>
+      <emphasis>act of selection</emphasis> itself—recording which
+        assets were chosen from the available pool of AI-generated raw
+        material.
+      </para>
+    <para>
+        Third, the concept of <emphasis role="strong">Expressive
+        Inputs</emphasis> provides a more nuanced route to
+        copyrightability. This applies when a human inputs their own
+        pre-existing, copyrightable work into an AI system and directs
+        the system to modify it. If the human's original expression
+        remains perceptible in the final output, they can claim
+        copyright in that perceptible portion of the work, similar to
+        how an author of a derivative work owns the copyright in their
+        new contributions.1 This necessitates that the system be able to
+        ingest and track the provenance of user-imported assets,
+        distinguishing them from assets generated
+      </para>
+    <para>
+      <emphasis>de novo</emphasis> by the AI.
+      </para>
+  </section>
+  <section xml:id="s-13-from-legal-theory-to-system-architecture-why-copyright-law-dictates-a-provenance-first-design">
+    <title>
+      <emphasis role="strong">1.3 From Legal Theory to System
+      Architecture: Why Copyright Law Dictates a Provenance-First
+      Design</emphasis>
+    </title>
+    <para>
+        The legal framework established by the USCO places a significant
+        evidentiary burden on the copyright applicant. When registering
+        a work containing AI-generated material, the applicant must
+        disclose this fact and provide a brief description of the
+        human-authored contributions, effectively disclaiming the
+        portions generated by AI.1 This disclosure requirement
+        fundamentally invalidates the architecture of traditional
+        creative tools, which are designed to save the final state of a
+        work, not the process of its creation. For a user of a
+        conventional tool, accurately disclaiming AI-generated portions
+        and proving the extent of human modification after the fact is
+        difficult, if not impossible.
+      </para>
+    <para>
+        This legal burden dictates that a compliant system must adopt a
+        "provenance-first" architecture. The proposed tool's
+        design correctly inverts the traditional workflow. Instead of
+        creating content and then attempting to retroactively assemble a
+        legal justification for its copyrightability, the system's
+        normative workflow is engineered to <emphasis>inherently
+        generate the justification</emphasis> as an inseparable
+        byproduct of the creative process. Every legally significant
+        act—every prompt, every AI generation, and, most critically,
+        every human modification, selection, and arrangement—is captured
+        as a discrete, timestamped event in an immutable ledger. This
+        approach transforms the act of creation into the act of evidence
+        generation. The system's primary output is not just the creative
+        work, but the legally defensible proof of its human-authored
+        origins.
+      </para>
+    <para>
+        This leads to a critical realization about the nature of the
+        user interface itself. The proposal to render AI-generated
+        output as read-only and programmatically funnel the user into a
+        mandatory "Modification" or "Curation" mode
+        is a profound design choice. This transforms the UI from a
+        passive canvas into an active compliance mechanism. It does not
+        merely permit users to perform copyrightable actions; it
+        actively prevents them from committing uncopyrightable ones,
+        such as simply generating and exporting raw AI output. This
+        enforced "human-in-the-loop" workflow ensures that any
+        work marked "complete" within the system has, by
+        definition, passed a minimum threshold of human creative
+        intervention that directly aligns with USCO guidance.12 The UI,
+        in this context, becomes a set of regulatory guardrails, guiding
+        the creator toward a legally defensible final product.
+      </para>
+  </section>
+</section>
+  

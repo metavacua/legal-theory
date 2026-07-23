@@ -1,0 +1,2332 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="section-ii-systematic-analysis-of-state-jurisdictions">
+  <title>
+    <emphasis role="strong">Section II: Systematic Analysis of
+    State Jurisdictions</emphasis>
+  </title>
+  <para>
+      The following is a comprehensive state-by-state documentation of
+      the legal frameworks governing sexual consent. This analysis is
+      based on a systematic review of statutory language and legal
+      interpretations from the provided research materials, presented
+      objectively and without commentary.
+    </para>
+  <section xml:id="table-1-comparative-overview-of-state-sexual-consent-laws">
+    <title>
+      <emphasis role="strong">Table 1: Comparative Overview of
+      State Sexual Consent Laws</emphasis>
+    </title>
+    <informaltable>
+      <tgroup cols="4">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                State
+              </entry>
+            <entry>
+                Statutory Definition of Consent
+              </entry>
+            <entry>
+                General Age of Consent
+              </entry>
+            <entry>
+                Key Marital Rape Exemptions/Distinctions
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Alabama**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Alaska**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Arizona**
+              </entry>
+            <entry>
+                No (Hybrid)
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Arkansas**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **California**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                None (previous incapacity exemption repealed)
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Colorado**
+              </entry>
+            <entry>
+                Yes (Consent-Based)
+              </entry>
+            <entry>
+                17
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Connecticut**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Affirmative defense for cohabiting partners
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Delaware**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                Limited exemption for age-based offenses
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Florida**
+              </entry>
+            <entry>
+                Yes (Consent-Based)
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Georgia**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Statutory rape law excludes spouses
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Hawaii**
+              </entry>
+            <entry>
+                Yes (Consent-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Limited exemption for age-based offenses
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Idaho**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                Exemption for age-based offenses
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Illinois**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                17
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Indiana**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Iowa**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Yes (unspecified loophole)
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Kansas**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Exemption for age-based offenses (victim \&lt;14)
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Kentucky**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Louisiana**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                17
+              </entry>
+            <entry>
+                Exemption for age-based offenses
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Maine**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Maryland**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None (previous force exemption repealed)
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Massachusetts**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Michigan**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Exemption for mentally incapacitated spouse
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Minnesota**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Yes (unspecified loophole)
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Mississippi**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Exemption for mentally incapacitated spouse
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Missouri**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                17
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Montana**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Exemptions for incapacity if married
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Nebraska**
+              </entry>
+            <entry>
+                No (Hybrid)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Nevada**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Exemption for non-forcible assault
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **New Hampshire**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **New Jersey**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **New Mexico**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                17
+              </entry>
+            <entry>
+                Exemption for age-based offenses
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **New York**
+              </entry>
+            <entry>
+                No (Hybrid)
+              </entry>
+            <entry>
+                17
+              </entry>
+            <entry>
+                Exemption for incapacity (disability/age); custody
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **North Carolina**
+              </entry>
+            <entry>
+                Yes (Consent-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **North Dakota**
+              </entry>
+            <entry>
+                No
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Ohio**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Yes (unspecified loophole, likely incapacity)
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Oklahoma**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Yes (unspecified loophole)
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Oregon**
+              </entry>
+            <entry>
+                No
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Pennsylvania**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Rhode Island**
+              </entry>
+            <entry>
+                No
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Yes (unspecified loophole)
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **South Carolina**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                Higher force standard; lesser penalty; time limit
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **South Dakota**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Tennessee**
+              </entry>
+            <entry>
+                No (Hybrid)
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Texas**
+              </entry>
+            <entry>
+                Yes (Ambiguous)
+              </entry>
+            <entry>
+                17
+              </entry>
+            <entry>
+                Exemption for age-based offenses
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Utah**
+              </entry>
+            <entry>
+                No
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Vermont**
+              </entry>
+            <entry>
+                No
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Virginia**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                Deferred prosecution option for spousal rape
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Washington**
+              </entry>
+            <entry>
+                Yes (Affirmative)
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **West Virginia**
+              </entry>
+            <entry>
+                No
+              </entry>
+            <entry>
+                16
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Wisconsin**
+              </entry>
+            <entry>
+                No
+              </entry>
+            <entry>
+                18
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Wyoming**
+              </entry>
+            <entry>
+                No (Coercion-Based)
+              </entry>
+            <entry>
+                17/18
+              </entry>
+            <entry>
+                None specified
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+  <section xml:id="state-by-state-entries">
+    <title>
+      <emphasis role="strong">State-by-State
+      Entries</emphasis>
+    </title>
+    <section xml:id="alabama">
+      <title>
+        <emphasis role="strong">Alabama</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Alabama law does not provide a direct
+              statutory definition of "consent." Instead, its
+              legal framework is coercion-based, defining a "lack
+              of consent" as resulting from "forcible
+              compulsion" or the victim "being incapable of
+              consent".8 Case law has interpreted consent to mean
+              "acquiescence or compliance".8 The law permits a
+              defense of implied consent if a defendant can argue an
+              "honest and reasonable belief" that consent was
+              given based on the accuser's conduct.8
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions unique to Alabama.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="alaska">
+      <title>
+        <emphasis role="strong">Alaska</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Alaska statute provides a
+              consent-based, affirmative definition. "Without
+              consent" means the absence of a "freely given,
+              reversible agreement specific to the conduct at
+              issue," where "freely given" means
+              agreement was "positively expressed by word or
+              action".21
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Alaska.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="arizona">
+      <title>
+        <emphasis role="strong">Arizona</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Arizona statute does not define
+              "consent" but defines sexual assault as sexual
+              conduct "without consent of the other person".25
+              The law further specifies that "without consent"
+              includes situations of coercion by force or threat, or
+              when the victim is incapable of consenting due to
+              impairment, a condition that the defendant knew or should
+              have known.26 This creates a hybrid model that focuses on
+              the absence of consent but defines it primarily through
+              coercion and incapacity.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Arizona.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="arkansas">
+      <title>
+        <emphasis role="strong">Arkansas</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Arkansas law does not provide a direct
+              statutory definition of "consent." Its legal
+              framework is coercion-based, with a lack of consent
+              resulting from "forcible compulsion" or the
+              victim's incapacity (e.g., being physically helpless,
+              mentally defective, or mentally incapacitated).27
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Arkansas.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="california">
+      <title>
+        <emphasis role="strong">California</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> California Penal Code § 261.6 provides
+              a clear affirmative consent model, defining consent as
+              "positive cooperation in act or attitude pursuant to
+              the exercise of free will." The law specifies that
+              consent must be affirmative, conscious, and voluntary, and
+              that silence, passivity, or a lack of resistance does not
+              constitute consent.15
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. California
+              law previously contained an exemption where a spouse could
+              not be found guilty of raping a victim who was unable to
+              consent due to a mental or physical disability. This
+              exemption was repealed by Assembly Bill 1171, and the law
+              now requires the same standards for spousal and
+              non-spousal rape.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="colorado">
+      <title>
+        <emphasis role="strong">Colorado</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Colorado Revised Statute § 18-3-401
+              provides a consent-based definition, stating that consent
+              means "cooperation in act or attitude pursuant to an
+              exercise of free will and with knowledge of the nature of
+              the act." The statute clarifies that a prior
+              relationship does not constitute consent and submission
+              under fear is not consent.32
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              statute notes that a crime can occur if a victim submits
+              erroneously believing the actor is their spouse, but it
+              does not provide a general marital exemption.32 The
+              provided materials do not identify other specific
+              statutory exemptions for Colorado.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 17.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="connecticut">
+      <title>
+        <emphasis role="strong">Connecticut</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Connecticut law does not provide a
+              direct statutory definition of "consent." Its
+              legal framework is coercion-based, defining a lack of
+              consent as existing where the accused compels the victim
+              by use or threat of force, or where the victim is mentally
+              incapacitated or physically helpless.33
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However,
+              the law provides an affirmative defense for certain sexual
+              crimes if the defendant and alleged victim were
+              "living together by mutual consent in a relationship
+              of cohabitation, regardless of marriage" at the time
+              of the offense.33 This creates a significant legal
+              distinction for cohabiting partners, including spouses.
+              The state is also listed as one of 12 with a marital rape
+              loophole.34
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="delaware">
+      <title>
+        <emphasis role="strong">Delaware</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Delaware law does not provide a direct
+              statutory definition of "consent." The legal
+              framework for adult sexual assault is primarily
+              coercion-based, criminalizing acts where a victim is
+              compelled to submit by force or threat.21 The statutes are
+              heavily structured around age-based offenses and
+              incapacity.35
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. A narrow
+              marital exemption exists in the statutory rape law, where
+              marriage is a defense if the victim is 16 or 17 and the
+              defendant is 30 or older.35 The provided materials do not
+              identify broader statutory exemptions.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="florida">
+      <title>
+        <emphasis role="strong">Florida</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Florida Statute § 794.011 provides a
+              consent-based definition, stating that consent is
+              "intelligent, knowing, and voluntary consent and does
+              not include coerced submission." The law explicitly
+              clarifies that a failure to offer physical resistance does
+              not constitute consent.36
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Florida.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="georgia">
+      <title>
+        <emphasis role="strong">Georgia</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Georgia. The
+              statutory rape law (Georgia Code § 16-6-3) is based on the
+              victim's age, not their consent.38 This indicates a
+              coercion-based model for other sexual offenses.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              statutory rape law explicitly applies to sexual
+              intercourse with a person who is "not his or her
+              spouse," but this provision is specific to underage
+              victims.38 The provided materials do not identify broader
+              statutory exemptions for adult spouses.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="hawaii">
+      <title>
+        <emphasis role="strong">Hawaii</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Hawaii's laws operate on a
+              consent-based model. The statutes are framed around
+              nonconsensual sexual conduct, with "compulsion"
+              defined as the "absence of consent" or a
+              threat.39
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              statutory rape provision for minors between 14 and 16
+              includes an exception if the offender is married to the
+              minor, implying marriage can be a defense in this specific
+              age-based context.39 The provided materials do not
+              identify broader statutory exemptions for adult spouses.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="idaho">
+      <title>
+        <emphasis role="strong">Idaho</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Idaho law does not specifically define
+              "consent." Its rape statute (Idaho Statutes §
+              18-6101) is coercion-based, listing circumstances under
+              which penetration is a crime, including when the victim is
+              incapable of giving legal consent, resistance is overcome
+              by force, or the victim is unconscious or intoxicated.40
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However,
+              the statutory rape provisions for victims under 16 or
+              between 16-17 explicitly state they do not apply if
+              "the victim is lawfully married to the
+              perpetrator".40 This creates a clear marital
+              exemption for age-based offenses. Idaho is also listed
+              among the 12 states with a marital rape loophole.34
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="illinois">
+      <title>
+        <emphasis role="strong">Illinois</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Illinois law (720 ILCS 5/11-1.70)
+              provides an affirmative consent model, defining consent as
+              "a freely given agreement to the act of sexual
+              penetration or sexual conduct in question." The
+              statute specifies that lack of resistance due to force or
+              threat does not constitute consent and that consent can be
+              withdrawn at any time.42
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Illinois.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 17.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="indiana">
+      <title>
+        <emphasis role="strong">Indiana</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Indiana. The law
+              cited (Indiana Code 35-42-4-9) pertains to sexual
+              misconduct with a minor and is based on age, not consent,
+              indicating a likely coercion-based model for other sexual
+              offenses.43
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Indiana.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="iowa">
+      <title>
+        <emphasis role="strong">Iowa</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> While the state code is not provided
+              directly, a university policy based on Iowa law reflects
+              an affirmative consent model, defining consent as
+              "clear, knowing, and voluntary" and
+              "active, not passive".44
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. Iowa is
+              listed among the 12 states with a marital rape loophole.34
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="kansas">
+      <title>
+        <emphasis role="strong">Kansas</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Kansas law does not specifically
+              define "consent." Its rape statute (K.S.A.
+              21-5503) is coercion-based, criminalizing intercourse
+              where the victim "does not consent" under
+              circumstances of force, fear, or incapacity.9
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However,
+              the law provides a defense to the rape or sodomy of a
+              child under 14 if "the child was married to the
+              accused at the time of the offense".9 This is a clear
+              marital exemption for specific age-based offenses.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="kentucky">
+      <title>
+        <emphasis role="strong">Kentucky</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Kentucky. The sexual
+              abuse statute (KRS § 510.110) is coercion-based,
+              criminalizing sexual contact by "forcible
+              compulsion" or with a person "incapable of
+              consent".45
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Kentucky.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="louisiana">
+      <title>
+        <emphasis role="strong">Louisiana</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Louisiana law does not define
+              "consent." Its legal framework is
+              coercion-based, defining sex crimes based on circumstances
+              where the victim's resistance is overcome by force or
+              threats, or where the victim is incapacitated or
+              underage.11
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However,
+              it is a defense to sexual battery with a child under 15 or
+              carnal knowledge of a juvenile that "the actor is the
+              child's spouse".11 This is a clear marital exemption
+              for age-based offenses.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 17.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="maine">
+      <title>
+        <emphasis role="strong">Maine</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Maine law provides an affirmative
+              consent model, defining consent as "a word or action
+              by a person that indicates a freely given
+              agreement".46 The law also emphasizes that consent
+              should be voluntary, ongoing, informed, and
+              enthusiastic.47
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Maine.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="maryland">
+      <title>
+        <emphasis role="strong">Maryland</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Maryland. The rape
+              statute (MD. CRIM LAW § 3-303) is coercion-based,
+              criminalizing intercourse by "force, or the threat of
+              force, without the consent of the other".12
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. Maryland's
+              "spousal defense," which previously required
+              proof of force if the spouses were living together, was
+              repealed in 2023.34
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="massachusetts">
+      <title>
+        <emphasis role="strong">Massachusetts</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Massachusetts law does not
+              specifically define "consent." Its legal
+              framework is coercion-based, with the standard being
+              whether the accused compels the victim to submit "by
+              force and against his or her will, or compels such person
+              to submit by threat of bodily injury".10
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Massachusetts.1 The state has no
+              "Romeo and Juliet" law for close-in-age
+              exemptions.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="michigan">
+      <title>
+        <emphasis role="strong">Michigan</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Michigan, indicating
+              a likely coercion-based model.50
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However,
+              Michigan law (Section 750.520l) contains a significant
+              loophole: it explicitly exempts from prosecution
+              situations where the criminality of a sexual act is based
+              solely on a spouse being "mentally incapable, or
+              mentally incapacitated".1 This creates a legally
+              permissible scenario for a husband to have non-consensual
+              sex with his incapacitated wife, an act that would be
+              criminal if committed by a non-spouse.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="minnesota">
+      <title>
+        <emphasis role="strong">Minnesota</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Minnesota law (MN Stat. § 609.341)
+              provides an affirmative consent model, defining consent as
+              "words or overt actions by a person indicating a
+              freely given present agreement to perform a particular
+              sexual act with another".51
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. Minnesota
+              is listed among the 12 states with a marital rape
+              loophole.34
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="mississippi">
+      <title>
+        <emphasis role="strong">Mississippi</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Mississippi. The law
+              cited (Mississippi Code § 97-3-65) focuses on
+              "forcible sexual intercourse" and statutory
+              rape, indicating a coercion-based model.53
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However,
+              similar to Michigan, Mississippi law provides an exemption
+              for sex with a "mentally incapacitated" spouse.
+              A husband can only be convicted of sexual battery of a
+              spouse with whom he is living if he uses "forcible
+              penetration against the victim's will," which
+              explicitly excludes cases where the victim is
+              incapacitated and force is not used.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="missouri">
+      <title>
+        <emphasis role="strong">Missouri</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Missouri law provides an affirmative
+              consent model, defining consent as a "clear, knowing,
+              and voluntary agreement to engage in sexual
+              activity." It must be an affirmative agreement, and
+              silence or passivity does not constitute consent.54
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Missouri.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 17.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="montana">
+      <title>
+        <emphasis role="strong">Montana</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Montana law (MCA 45-5-501) provides an
+              affirmative consent model, defining consent as "words
+              or overt actions indicating a freely given agreement to
+              have sexual intercourse or sexual contact".55
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However,
+              the statute contains several exemptions to the
+              "incapable of consent" provisions if the
+              individuals are married. For instance, provisions
+              criminalizing sex between a psychotherapy client and
+              provider, or a student and school employee, do not apply
+              if the parties are married.55
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="nebraska">
+      <title>
+        <emphasis role="strong">Nebraska</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Nebraska law does not define
+              "consent" but defines "without
+              consent" as occurring through force or coercion, or
+              if the victim verbally or through conduct expresses a lack
+              of consent.57 The law specifies that physical resistance
+              is not required, creating a hybrid model.58
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Nebraska.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="nevada">
+      <title>
+        <emphasis role="strong">Nevada</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Nevada. The law is
+              coercion-based, criminalizing penetration "against
+              the will of the victim" or when the victim is
+              incapable of resisting or understanding.59
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However,
+              Nevada law (NRS 200.373) states that marriage is not a
+              defense if the assault was committed by force or threat of
+              force.49 This implies that for non-forcible sexual
+              assault, such as with an incapacitated victim, marriage
+              may serve as a defense. Nevada is listed among the 12
+              states with a marital rape loophole.34
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="new-hampshire">
+      <title>
+        <emphasis role="strong">New Hampshire</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for New Hampshire. The
+              law is coercion-based, defining sexual assault as engaging
+              in sexual contact or penetration "without their
+              consent" under circumstances involving force,
+              helplessness, or incapacity.60
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for New Hampshire.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="new-jersey">
+      <title>
+        <emphasis role="strong">New Jersey</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> New Jersey law provides an affirmative
+              consent model, defining consent as an "affirmative,
+              conscious, and voluntary agreement to engage in specific
+              sexual activity." It cannot be assumed from silence
+              or lack of resistance.61
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for New Jersey.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="new-mexico">
+      <title>
+        <emphasis role="strong">New Mexico</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> New Mexico law is coercion-based. The
+              provided materials state that "absence of consent is
+              not an element of the crime of criminal sexual
+              penetration" in the state.62 The laws are structured
+              around age and incapacity.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However,
+              New Mexico provides a marital exemption for statutory
+              rape, allowing consensual sex between a married minor and
+              their spouse.63
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 17.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="new-york">
+      <title>
+        <emphasis role="strong">New York</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> New York Penal Law § 130.05 has a
+              hybrid model. "Lack of consent" results from
+              forcible compulsion or incapacity. However, for lesser
+              offenses, it can be inferred from "expressly or
+              impliedly acquiesce in the actor's conduct," which
+              allows a defendant to argue consent was implied by
+              behavior.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However,
+              the law provides a defense to some sex crimes if the
+              defendant is married to the victim and the crime is based
+              on a lack of consent due to a mental disability or age.30
+              There are also exemptions for employees of correctional or
+              care facilities if they are married to the person in
+              custody.64
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 17.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="north-carolina">
+      <title>
+        <emphasis role="strong">North Carolina</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> North Carolina law provides a
+              consent-based definition, stating that an act
+              "against the will of the other person" is one
+              done "without the consent of the other
+              person".67
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The law
+              explicitly states that a person may be prosecuted
+              "whether or not the victim is the person's legal
+              spouse".67
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="north-dakota">
+      <title>
+        <emphasis role="strong">North Dakota</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for North Dakota.68
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for North Dakota.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="ohio">
+      <title>
+        <emphasis role="strong">Ohio</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Ohio. The rape
+              statute is coercion-based, structured around force,
+              threat, or the victim's incapacity.69
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The law
+              explicitly states it is not a defense to forcible rape
+              that the parties were married.69 However, Ohio is listed
+              among the 12 states with a marital rape loophole,
+              suggesting exemptions may exist for non-forcible acts,
+              such as with an incapacitated spouse.34
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="oklahoma">
+      <title>
+        <emphasis role="strong">Oklahoma</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Oklahoma law provides an affirmative
+              consent model, defining consent as an "affirmative,
+              unambiguous and voluntary agreement to engage in a
+              specific sexual activity" that can be revoked at any
+              time. It cannot be inferred from silence or a prior
+              relationship.71
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime, and the
+              statute explicitly applies "within or without the
+              bonds of matrimony".72 However, Oklahoma is listed
+              among the 12 states with a marital rape loophole.34
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="oregon">
+      <title>
+        <emphasis role="strong">Oregon</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Oregon.73
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Oregon.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="pennsylvania">
+      <title>
+        <emphasis role="strong">Pennsylvania</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Pennsylvania. The
+              laws are structured around age and power imbalances
+              (institutional sexual assault), where consent is deemed
+              impossible, indicating a coercion-based model for other
+              offenses.74
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Pennsylvania.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="rhode-island">
+      <title>
+        <emphasis role="strong">Rhode Island</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Rhode Island.75
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. Rhode
+              Island is listed among the 12 states with a marital rape
+              loophole.34
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="south-carolina">
+      <title>
+        <emphasis role="strong">South Carolina</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for South Carolina. The
+              laws are coercion-based, structured around force and
+              incapacity.76
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime, but South
+              Carolina's laws create significant distinctions.
+              "Spousal sexual battery" requires
+              "aggravated force," a higher standard than for
+              non-spousal rape. The maximum penalty is 10 years,
+              compared to 30 years for non-spousal rape. A 30-day
+              reporting time limit applies if the couple lives
+              together.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="south-dakota">
+      <title>
+        <emphasis role="strong">South Dakota</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for South Dakota. The
+              rape statute is coercion-based, defining the crime based
+              on force, coercion, threats, or the victim's incapacity.77
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for South Dakota.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="tennessee">
+      <title>
+        <emphasis role="strong">Tennessee</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Tennessee. The rape
+              statute operates on a hybrid model, criminalizing
+              penetration "without the consent of the victim"
+              when the defendant knows or should know consent was
+              absent, or when force is used or the victim is
+              incapacitated.78
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Tennessee.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="texas">
+      <title>
+        <emphasis role="strong">Texas</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Texas Penal Code § 1.07 provides an
+              ambiguous model, defining consent as "assent in fact,
+              whether express or apparent." However, consent is not
+              effective if induced by force, threat, or fraud, or given
+              by a person known to be unable to make reasonable
+              decisions due to youth, mental defect, or intoxication.79
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. An
+              affirmative defense exists for the sexual assault of a
+              child if "the actor was the spouse of the child at
+              the time of the offense".79
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 17.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="utah">
+      <title>
+        <emphasis role="strong">Utah</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Utah.80
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Utah.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="vermont">
+      <title>
+        <emphasis role="strong">Vermont</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Vermont.81
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Vermont.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="virginia">
+      <title>
+        <emphasis role="strong">Virginia</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Virginia. The rape
+              statute is coercion-based, criminalizing intercourse
+              "against the complaining witness's will, by force,
+              threat or intimidation" or through incapacity.82
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. However, a
+              court has the option to defer prosecution and waive
+              penalties for spousal rape if the defendant completes
+              counseling and the victim agrees. This option is not
+              available for non-spousal rape and can pressure a victim
+              into a lesser outcome.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="washington">
+      <title>
+        <emphasis role="strong">Washington</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> Washington law (RCW 9A.44.010)
+              provides an affirmative consent model, defining consent as
+              "actual words or conduct indicating freely given
+              agreement to have sexual intercourse or sexual
+              contact".83
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Washington.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="west-virginia">
+      <title>
+        <emphasis role="strong">West Virginia</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for West Virginia.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for West Virginia.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 16.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="wisconsin">
+      <title>
+        <emphasis role="strong">Wisconsin</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Wisconsin.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Wisconsin.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 18.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="wyoming">
+      <title>
+        <emphasis role="strong">Wyoming</emphasis>
+      </title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Statutory Definition of
+              Consent:</emphasis> The provided materials do not contain
+              a statutory definition of consent for Wyoming.84 The
+              sexual assault statute is coercion-based, structured
+              around force, confinement, threats, or the victim's
+              helplessness or incapacity.84
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Marital Rape
+              Exemptions:</emphasis> Marital rape is a crime. The
+              provided materials do not identify specific statutory
+              exemptions for Wyoming.1
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Age of Consent:</emphasis> 17 or
+              18, depending on the source.3
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </section>
+</section>
+  

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-iii-ip-contracting-across-network-topologies">
+  <title>
+    <emphasis role="strong">Part III: IP Contracting Across Network
+  Topologies</emphasis>
+  </title>
+  <para>
+    The structure of the network significantly influences the
+    contractual dynamics and the associated legal risks.
+  </para>
+  <section xml:id="a-the-server-clientplatform-economy-centralized-control">
+    <title>
+      <emphasis role="strong">A. The Server-Client/Platform Economy
+    (Centralized Control)</emphasis>
+    </title>
+    <para>
+      In centralized topologies (Google, Meta, Patreon), the platform
+      acts as the central node, dictating terms through adhesive ToS and
+      exercising control through architecture and algorithms.
+    </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Algorithmic Control and the
+          "Algorithmic Editor":</emphasis> Platforms exert
+          control not just through explicit policies but through
+          "soft" control (UX design, gamification) and
+          "hard" control (content moderation). AI moderation
+          systems function as an "Algorithmic Editor,"
+          exercising pervasive creative control over user output. This
+          mechanized direction strengthens the argument for an
+          employment relationship (Prong A).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Cascading Misclassification and Joint
+          Liability:</emphasis> Platforms often deputize users as
+          moderators, creating a <emphasis>de facto</emphasis>
+          managerial class. If users are workers, moderators are
+          uncompensated managers, implicating the platform as a joint
+          employer. Furthermore, third-party payment processors, whose
+          Acceptable Use Policies dictate what content can be monetized,
+          exercise indirect control, potentially making them joint
+          employers liable for labor violations.
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="b-peer-to-peer-p2p-and-collaborative-models-decentralized">
+    <title>
+      <emphasis role="strong">B. Peer-to-Peer (P2P) and
+    Collaborative Models (Decentralized)</emphasis>
+    </title>
+    <para>
+      P2P and collaborative networks operate on different contractual
+      principles, emphasizing mutual aid and the creation of a digital
+      commons.
+    </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The FOSS Ecosystem:</emphasis> The
+          Free and Open Source Software (FOSS) ecosystem relies on
+          sophisticated manipulation of copyright law (Copyleft) to
+          enforce freedom rather than restriction. Voluntary, unpaid
+          contributions are legally structured as gifts or contributions
+          to a community project, governed by licenses (GPL, MIT) and
+          contributor agreements (CLA, DCO). This model operates largely
+          outside the service-for-hire paradigm.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Creative Commons:</emphasis> CC
+          licenses provide standardized frameworks for sharing IP as a
+          public good, allowing creators to contribute their work with
+          minimal administrative burden while retaining ownership.
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="c-hybrid-structures">
+    <title>
+      <emphasis role="strong">C. Hybrid
+    Structures</emphasis>
+    </title>
+    <para>
+      Hybrid models attempt to blend the centralized control of
+      platforms with the autonomy of P2P networks.
+    </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Open Core and Dual
+          Licensing:</emphasis> Companies offer a "core" FOSS
+          product while selling a proprietary "enterprise"
+          version or offering dual licensing (e.g., GPL for free use,
+          commercial license for proprietary integration). This balances
+          community contribution with a commercial service model.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Cooperatives:</emphasis> Artist or
+          developer cooperatives provide a structure where creators are
+          co-owners of a collective enterprise. This model preserves
+          individual IP rights and creative autonomy while providing
+          shared economic opportunity outside the traditional service
+          model.
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+</section>
+  

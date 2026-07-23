@@ -1,0 +1,516 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="conclusion">
+  <title>
+    <emphasis role="strong">Conclusion</emphasis>
+  </title>
+  <para>
+      The legal definition of a human experiment is not a simple
+      dictionary entry but a complex, multi-layered architecture of
+      ethical principles, legal tests, and institutional interpretation.
+      Its foundations lie in the moral reckonings that followed
+      historical atrocities, leading to the establishment of universal
+      principles—Respect for Persons, Beneficence, and
+      Justice—articulated most clearly in the Belmont Report. These
+      principles were translated into U.S. law through the Common Rule
+      (45 CFR 46), which establishes a determinative two-part test: an
+      activity must be both "research" (a systematic
+      investigation for generalizable knowledge) and involve a
+      "human subject" (through interaction, intervention, or
+      the use of identifiable private information) to fall under federal
+      oversight.
+    </para>
+  <para>
+      This framework, administered by Institutional Review Boards, has
+      proven robust and adaptable for traditional biomedical and
+      behavioral research. It provides a structure for balancing the
+      pursuit of knowledge with the paramount duty to protect the rights
+      and welfare of participants. Furthermore, international
+      guidelines, particularly from CIOMS, have enriched this framework
+      by introducing critical considerations of global health equity,
+      community engagement, and responsiveness to the needs of
+      low-resource settings, urging a "compliance-plus"
+      ethical standard for multinational research.
+    </para>
+  <para>
+      However, this report concludes that the established legal and
+      ethical architecture is facing an unprecedented stress test from
+      the realities of the digital age. The core concepts of the Common
+      Rule—predicated on an analog, transactional model of research—do
+      not map cleanly onto the world of big data, social media, and
+      artificial intelligence.
+    </para>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+          The proliferation of large, linkable datasets challenges the
+          very meaning of "de-identified," blurring the line
+          between human subjects research and unregulated data analysis.
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+          The nature of online communication creates a deep conflict
+          between the technical publicness of data and individuals'
+          reasonable expectations of privacy, leaving IRBs without a
+          clear consensus.
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+          The deployment of AI introduces novel forms of intervention
+          and raises group-level ethical concerns about bias and
+          fairness that the individual-focused Common Rule is
+          ill-equipped to address.
+        </para>
+    </listitem>
+  </itemizedlist>
+  <para>
+      The result is a growing chasm between the letter of the law and
+      the ethical demands of contemporary science. The legal definition
+      of a human experiment is becoming increasingly strained,
+      ambiguous, and subject to inconsistent interpretation. In the
+      absence of comprehensive regulatory reform tailored to the digital
+      age, the burden of navigating this uncertainty falls heavily upon
+      the shoulders of individual IRBs and investigators. They are
+      increasingly forced to look past the literal text of the
+      regulations and back to the foundational principles of the Belmont
+      Report to guide their decisions. While this reliance on first
+      principles demonstrates the enduring power of the ethical
+      framework, it also signals a critical weakness in the current
+      legal structure. The protection of human subjects in the 21st
+      century will require a new generation of laws and guidelines that
+      can speak the language of algorithms, networks, and data at scale,
+      ensuring that the hard-won lessons of the past are not lost on the
+      frontier of the future.
+    </para>
+  <section xml:id="works-cited">
+    <title>
+      <emphasis role="strong">Works cited</emphasis>
+    </title>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+            Read the Belmont Report | HHS.gov, accessed September 13,
+            2025,
+            <link xlink:href="https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/read-the-belmont-report/index.html">https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/read-the-belmont-report/index.html</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Research Ethics - StatPearls - NCBI Bookshelf, accessed
+            September 13, 2025,
+            <link xlink:href="https://www.ncbi.nlm.nih.gov/books/NBK459281/">https://www.ncbi.nlm.nih.gov/books/NBK459281/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Research Ethics Timeline | National Institute of
+            Environmental Health Sciences, accessed September 13, 2025,
+            <link xlink:href="https://www.niehs.nih.gov/research/resources/bioethics/timeline">https://www.niehs.nih.gov/research/resources/bioethics/timeline</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Nuremberg Code - UNC Research, accessed September 13, 2025,
+            <link xlink:href="https://research.unc.edu/human-research-ethics/resources/ccm3_019064/">https://research.unc.edu/human-research-ethics/resources/ccm3_019064/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            The Nuremberg Code | Holocaust Encyclopedia, accessed
+            September 13, 2025,
+            <link xlink:href="https://encyclopedia.ushmm.org/content/en/article/the-nuremberg-code">https://encyclopedia.ushmm.org/content/en/article/the-nuremberg-code</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Human research protections - American Psychological
+            Association, accessed September 13, 2025,
+            <link xlink:href="https://www.apa.org/research-practice/conduct-research/human">https://www.apa.org/research-practice/conduct-research/human</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            WMA Declaration of Helsinki – Ethical Principles for Medical
+            ..., accessed September 13, 2025,
+            <link xlink:href="https://www.wma.net/policies-post/wma-declaration-of-helsinki/">https://www.wma.net/policies-post/wma-declaration-of-helsinki/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Guidelines for human subject research - Wikipedia, accessed
+            September 13, 2025,
+            <link xlink:href="https://en.wikipedia.org/wiki/Guidelines_for_human_subject_research">https://en.wikipedia.org/wiki/Guidelines_for_human_subject_research</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            2-3 Declaration of Helsinki (pdf) - Wayne State research,
+            accessed September 13, 2025,
+            <link xlink:href="https://research.wayne.edu/irb/pdf/2-3-declaration-of-helsinki.pdf">https://research.wayne.edu/irb/pdf/2-3-declaration-of-helsinki.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            WORLD MEDICAL ASSOCIATION DECLARATION OF HELSINKI Ethical
+            Principles for Medical Research Involving Human Subjects,
+            accessed September 13, 2025,
+            <link xlink:href="https://ijwph.ir/files/site1/files/helsinki_statement.pdf">https://ijwph.ir/files/site1/files/helsinki_statement.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Human Subjects Research | PLOS One, accessed September 13,
+            2025,
+            <link xlink:href="https://journals.plos.org/plosone/s/human-subjects-research">https://journals.plos.org/plosone/s/human-subjects-research</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            The Belmont Report: Ethical Principles and Guidelines for
+            the Protection of Human Subjects of Research - UNT Digital
+            Library, accessed September 13, 2025,
+            <link xlink:href="https://digital.library.unt.edu/ark:/67531/metadc1213679/">https://digital.library.unt.edu/ark:/67531/metadc1213679/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Belmont Report – Human Research Protection Program, accessed
+            September 13, 2025,
+            <link xlink:href="https://irb.wisc.edu/regulatory-information/belmont-report/">https://irb.wisc.edu/regulatory-information/belmont-report/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Ethics and Behavioral and Social Sciences Research - OBSSR,
+            accessed September 13, 2025,
+            <link xlink:href="https://obssr.od.nih.gov/news-and-events/news/directors-spotlight/ethics-and-behavioral-and-social-sciences-research">https://obssr.od.nih.gov/news-and-events/news/directors-spotlight/ethics-and-behavioral-and-social-sciences-research</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Office for Human Research Protections - Wikipedia, accessed
+            September 13, 2025,
+            <link xlink:href="https://en.wikipedia.org/wiki/Office_for_Human_Research_Protections">https://en.wikipedia.org/wiki/Office_for_Human_Research_Protections</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Revised Common Rule (Human Subject Regulations) - FIU
+            Research, accessed September 13, 2025,
+            <link xlink:href="https://research.fiu.edu/irb/revised-common-rule/">https://research.fiu.edu/irb/revised-common-rule/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            45 CFR 46 - HHS.gov, accessed September 13, 2025,
+            <link xlink:href="https://www.hhs.gov/ohrp/regulations-and-policy/regulations/45-cfr-46/index.html">https://www.hhs.gov/ohrp/regulations-and-policy/regulations/45-cfr-46/index.html</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            OHRP E-Learning Program - Lesson 2 - WHAT IS HUMAN SUBJECTS
+            RESEARCH?, HHS Office for Human Research Protections -
+            HHS.gov, accessed September 13, 2025,
+            <link xlink:href="https://www.hhs.gov/ohrp/sites/default/files/OHRP-HHS-Learning-Module-Lesson2.pdf">https://www.hhs.gov/ohrp/sites/default/files/OHRP-HHS-Learning-Module-Lesson2.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            About Human Subjects Research | US EPA, accessed September
+            13, 2025,
+            <link xlink:href="https://www.epa.gov/scientific-leadership/about-human-subjects-research">https://www.epa.gov/scientific-leadership/about-human-subjects-research</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Defining Research with Human Subjects | Duke Research ...,
+            accessed September 13, 2025,
+            <link xlink:href="https://research.duke.edu/resource/defining-research-human-subjects/">https://research.duke.edu/resource/defining-research-human-subjects/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Guidance Human Subjects Research (HSR) Determination - Icahn
+            School of Medicine at Mount Sinai, accessed September 13,
+            2025,
+            <link xlink:href="https://icahn.mssm.edu/files/ISMMS/Assets/Research/PPHS/HSR%20Determination%20Guidance%20Document%20082919.pdf">https://icahn.mssm.edu/files/ISMMS/Assets/Research/PPHS/HSR%20Determination%20Guidance%20Document%20082919.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Comparison of FDA and HHS Human Subject Protection
+            Regulations, accessed September 13, 2025,
+            <link xlink:href="https://www.fda.gov/science-research/good-clinical-practice-educational-materials/comparison-fda-and-hhs-human-subject-protection-regulations">https://www.fda.gov/science-research/good-clinical-practice-educational-materials/comparison-fda-and-hhs-human-subject-protection-regulations</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Definition of Human Subjects Research | Grants &amp;
+            Funding, accessed September 13, 2025,
+            <link xlink:href="https://grants.nih.gov/policy-and-compliance/policy-topics/human-subjects/research">https://grants.nih.gov/policy-and-compliance/policy-topics/human-subjects/research</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Exempt Review - Institutional Review Board (IRB) Office -
+            Northwestern University, accessed September 13, 2025,
+            <link xlink:href="https://irb.northwestern.edu/submitting-to-the-irb/types-of-reviews/exempt-review.html">https://irb.northwestern.edu/submitting-to-the-irb/types-of-reviews/exempt-review.html</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Human Subjects Considerations for Social Media Research,
+            accessed September 13, 2025,
+            <link xlink:href="https://cancercontrol.cancer.gov/sites/default/files/2020-06/human-subjects-considerations-for-social-media-research.pdf">https://cancercontrol.cancer.gov/sites/default/files/2020-06/human-subjects-considerations-for-social-media-research.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Lesson 3: What are IRBs? | HHS.gov, accessed September 13,
+            2025,
+            <link xlink:href="https://www.hhs.gov/ohrp/education-and-outreach/online-education/human-research-protection-training/lesson-3-what-are-irbs/index.html">https://www.hhs.gov/ohrp/education-and-outreach/online-education/human-research-protection-training/lesson-3-what-are-irbs/index.html</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Institutional Review Boards: Purpose and Challenges - PMC -
+            PubMed Central, accessed September 13, 2025,
+            <link xlink:href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4631034/">https://pmc.ncbi.nlm.nih.gov/articles/PMC4631034/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            What Best Describes the Purpose of IRB: 5 Key Functions in
+            2024 - Infonetica, accessed September 13, 2025,
+            <link xlink:href="https://www.infonetica.net/articles/what-best-describes-the-purpose-of-the-irb">https://www.infonetica.net/articles/what-best-describes-the-purpose-of-the-irb</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            45 CFR Part 46 -- Protection of Human Subjects - eCFR,
+            accessed September 13, 2025,
+            <link xlink:href="https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-46">https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-46</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Protection of Human Subjects in Research | Agency for
+            Healthcare ..., accessed September 13, 2025,
+            <link xlink:href="https://www.ahrq.gov/funding/process/grant-app-basics/hsubjects.html">https://www.ahrq.gov/funding/process/grant-app-basics/hsubjects.html</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Office for Human Research Protections (OHRP) Trainings,
+            accessed September 13, 2025,
+            <link xlink:href="https://ictr.johnshopkins.edu/education-training/seminars-courses/office-for-human-research-protections-ohrp-trainings/">https://ictr.johnshopkins.edu/education-training/seminars-courses/office-for-human-research-protections-ohrp-trainings/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            What does the term “exempt” actually mean in human subjects
+            ..., accessed September 13, 2025,
+            <link xlink:href="https://www.research.ucsb.edu/news/human-subjects-research-integrity/what-does-term-exempt-actually-mean-human-subjects-research">https://www.research.ucsb.edu/news/human-subjects-research-integrity/what-does-term-exempt-actually-mean-human-subjects-research</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Bioethics - CIOMS - council for international organizations
+            of medical sciences, accessed September 13, 2025,
+            <link xlink:href="https://cioms.ch/bioethics/">https://cioms.ch/bioethics/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            International Ethical Guidelines for Health-related Research
+            Involving Humans - NCBI, accessed September 13, 2025,
+            <link xlink:href="https://www.ncbi.nlm.nih.gov/books/NBK614410">https://www.ncbi.nlm.nih.gov/books/NBK614410</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            2016 International ethical guidelines for health-related
+            research involving humans - CIOMS, accessed September 13,
+            2025,
+            <link xlink:href="https://cioms.ch/publications/product/international-ethical-guidelines-for-health-related-research-involving-humans/">https://cioms.ch/publications/product/international-ethical-guidelines-for-health-related-research-involving-humans/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            International Ethical Guidelines for Biomedical Research
+            Involving Human Subjects, accessed September 13, 2025,
+            <link xlink:href="https://cioms.ch/wp-content/uploads/2016/08/International_Ethical_Guidelines_for_Biomedical_Research_Involving_Human_Subjects.pdf">https://cioms.ch/wp-content/uploads/2016/08/International_Ethical_Guidelines_for_Biomedical_Research_Involving_Human_Subjects.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Preface - International Ethical Guidelines for
+            Health-related Research Involving Humans, accessed September
+            13, 2025,
+            <link xlink:href="https://www.ncbi.nlm.nih.gov/books/NBK614408/">https://www.ncbi.nlm.nih.gov/books/NBK614408/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            International Ethical Guidelines for Health-related Research
+            ..., accessed September 13, 2025,
+            <link xlink:href="https://cioms.ch/wp-content/uploads/2017/01/WEB-CIOMS-EthicalGuidelines.pdf">https://cioms.ch/wp-content/uploads/2017/01/WEB-CIOMS-EthicalGuidelines.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            The 2016 CIOMS guidelines and public-health research ethics
+            - SciSpace, accessed September 13, 2025,
+            <link xlink:href="https://scispace.com/pdf/the-2016-cioms-guidelines-and-public-health-research-ethics-jkg9cst2yy.pdf">https://scispace.com/pdf/the-2016-cioms-guidelines-and-public-health-research-ethics-jkg9cst2yy.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Social, Behavioral, and Education Research (SBER) - Harvard
+            Catalyst, accessed September 13, 2025,
+            <link xlink:href="https://catalyst.harvard.edu/regulatory/sber/">https://catalyst.harvard.edu/regulatory/sber/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Human Subjects Research (HSR) - CITI Program, accessed
+            September 13, 2025,
+            <link xlink:href="https://about.citiprogram.org/series/human-subjects-research-hsr/">https://about.citiprogram.org/series/human-subjects-research-hsr/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Social and Behavioral Research | Human Research Protection
+            ..., accessed September 13, 2025,
+            <link xlink:href="https://irb.ucsf.edu/social-and-behavioral-research">https://irb.ucsf.edu/social-and-behavioral-research</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            15 Famous Experiments and Case Studies in Psychology (2025)
+            - Helpful Professor, accessed September 13, 2025,
+            <link xlink:href="https://helpfulprofessor.com/psychology-experiments-and-case-studies/">https://helpfulprofessor.com/psychology-experiments-and-case-studies/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Ethical Considerations in Big Data Analytics | OxJournal,
+            accessed September 13, 2025,
+            <link xlink:href="https://www.oxjournal.org/ethical-considerations-in-big-data-analytics/">https://www.oxjournal.org/ethical-considerations-in-big-data-analytics/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Big Data, Biomedical Research, and Ethics Review: New ...,
+            accessed September 13, 2025,
+            <link xlink:href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7814666/">https://pmc.ncbi.nlm.nih.gov/articles/PMC7814666/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Toward an Ethical Framework for the Text Mining of Social
+            Media for Health Research: A Systematic Review - PMC,
+            accessed September 13, 2025,
+            <link xlink:href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8521805/">https://pmc.ncbi.nlm.nih.gov/articles/PMC8521805/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Internet and Social Media Research - University of Arizona,
+            accessed September 13, 2025,
+            <link xlink:href="https://research.arizona.edu/sites/default/files/Social%20Media%20and%20Research%20v2022-05%20NEW.pdf">https://research.arizona.edu/sites/default/files/Social%20Media%20and%20Research%20v2022-05%20NEW.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Guidance on Research using Social Networking Sites - College
+            of Charleston, accessed September 13, 2025,
+            <link xlink:href="https://charleston.edu/research-grants-admin/human-research-protections/irb-standard-operating-procedures/sns-guidance.php">https://charleston.edu/research-grants-admin/human-research-protections/irb-standard-operating-procedures/sns-guidance.php</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Ethical Challenges and Considerations for IRB Review of
+            Social Media Research, accessed September 13, 2025,
+            <link xlink:href="https://about.citiprogram.org/blog/ethical-challenges-and-considerations-for-irb-review-of-social-media-research/">https://about.citiprogram.org/blog/ethical-challenges-and-considerations-for-irb-review-of-social-media-research/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Use of Social Networking Sites or Mobile Devices for Human
+            Participant Research, accessed September 13, 2025,
+            <link xlink:href="https://researchservices.cornell.edu/sites/default/files/2019-05/IRB%20Policy%2020.pdf">https://researchservices.cornell.edu/sites/default/files/2019-05/IRB%20Policy%2020.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            On the Ethics of Using Social Media Data for Health
+            Research, accessed September 13, 2025,
+            <link xlink:href="https://nlmdirector.nlm.nih.gov/2019/06/25/on-the-ethics-of-using-social-media-data-for-health-research/">https://nlmdirector.nlm.nih.gov/2019/06/25/on-the-ethics-of-using-social-media-data-for-health-research/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Distinguishing Public vs. Private Online Groups for Research
+            Recruitment Page 1 of 7, accessed September 13, 2025,
+            <link xlink:href="https://www.une.edu/pdfs/irb-guidance-distinguishing-public-vs-private-online-groups-research-recruitment">https://www.une.edu/pdfs/irb-guidance-distinguishing-public-vs-private-online-groups-research-recruitment</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Human Participants in AI Research: Ethics and Transparency
+            in Practice - arXiv, accessed September 13, 2025,
+            <link xlink:href="https://arxiv.org/html/2311.01254v3">https://arxiv.org/html/2311.01254v3</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Regulating Artificial Intelligence: Developments And
+            Challenges, accessed September 13, 2025,
+            <link xlink:href="https://www.ijpsjournal.com/article/Regulating+Artificial+Intelligence+Developments+And+Challenges">https://www.ijpsjournal.com/article/Regulating+Artificial+Intelligence+Developments+And+Challenges</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <link xlink:href="http://www.hhs.gov">www.hhs.gov</link>,
+            accessed September 13, 2025,
+            <link xlink:href="https://www.hhs.gov/ohrp/sachrp-committee/recommendations/irb-considerations-use-artificial-intelligence-human-subjects-research/index.html#:~:text=The%20Common%20Rule%20definition%20of%20human%20subject%20most%20relevant%20to,or%20student)%20conducting%20research%3A%20%E2%80%A6">https://www.hhs.gov/ohrp/sachrp-committee/recommendations/irb-considerations-use-artificial-intelligence-human-subjects-research/index.html#:~:text=The%20Common%20Rule%20definition%20of%20human%20subject%20most%20relevant%20to,or%20student)%20conducting%20research%3A%20%E2%80%A6</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Social science researchers use AI to simulate human subjects
+            | Stanford Report, accessed September 13, 2025,
+            <link xlink:href="https://news.stanford.edu/stories/2025/07/ai-social-science-research-simulated-human-subjects">https://news.stanford.edu/stories/2025/07/ai-social-science-research-simulated-human-subjects</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            What is AI Ethics? | IBM, accessed September 13, 2025,
+            <link xlink:href="https://www.ibm.com/think/topics/ai-ethics">https://www.ibm.com/think/topics/ai-ethics</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Code of Ethics - ACM, accessed September 13, 2025,
+            <link xlink:href="https://www.acm.org/code-of-ethics">https://www.acm.org/code-of-ethics</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Methods to Guide Ethical Research and Design - IEEE
+            Standards Association, accessed September 13, 2025,
+            <link xlink:href="https://standards.ieee.org/wp-content/uploads/import/documents/other/ead1e_methods.pdf">https://standards.ieee.org/wp-content/uploads/import/documents/other/ead1e_methods.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Ethical Guideline for Use of AI and ML Algorithm in Decision
+            Making - IJARIIT, accessed September 13, 2025,
+            <link xlink:href="https://www.ijariit.com/manuscripts/v9i5/V9I5-1173.pdf">https://www.ijariit.com/manuscripts/v9i5/V9I5-1173.pdf</link>
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+</section>

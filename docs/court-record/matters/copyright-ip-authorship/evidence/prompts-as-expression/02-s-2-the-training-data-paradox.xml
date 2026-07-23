@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="s-2-the-training-data-paradox">
+  <title>
+    <emphasis role="strong">2. The Training Data
+    Paradox</emphasis>
+  </title>
+  <para>
+      The USCO's position on prompts becomes even more tenuous when
+      viewed alongside the parallel legal debate over the use of
+      copyrighted materials in AI training datasets. Copyright holders
+      argue that the scraping and copying of their works to train models
+      is mass infringement, while AI developers counter that this is a
+      "transformative" fair use because the models are
+      learning statistical patterns, not the expressive content itself.5
+    </para>
+  <para>
+      The USCO's emerging guidance on this issue creates a logical
+      contradiction. In its May 2025 report, the Office suggests that
+      training AI models is <emphasis>not</emphasis> always fair use,
+      particularly when the AI's output could harm the market for or
+      substitute the original works it was trained on.7 This implies
+      that the ingestion and processing of training data
+    </para>
+  <para>
+    <emphasis>does</emphasis> implicate the expressive, copyrightable
+      elements of the source material.
+    </para>
+  <para>
+      Herein lies the paradox: The USCO's position requires believing
+      two contradictory things simultaneously.
+    </para>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">On Input (Training):</emphasis> An AI
+          model's ingestion of a copyrighted book is considered a
+          reproduction of its creative <emphasis>expression</emphasis>,
+          which may constitute infringement.
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">On Output (Prompts):</emphasis> A
+          human's detailed instructions to that same model are
+          considered a mere <emphasis>idea</emphasis>, and the resulting
+          output is not a product of human expression because the AI
+          made the final choices.
+        </para>
+    </listitem>
+  </itemizedlist>
+  <para>
+      This is an inconsistent and unsustainable legal posture. The
+      generative AI model is a complex process that transforms
+      expressive input (training data) into expressive output (the
+      generated work). The USCO cannot logically argue that the front
+      end of this process involves copyrightable expression while the
+      back end, initiated by a human's specific and creative
+      instructions, does not. This inconsistency appears to be an
+      attempt to penalize AI developers for their training methods while
+      simultaneously denying copyright protection, and thus economic
+      incentive, to the human creators who use these tools.9
+    </para>
+</section>
+  

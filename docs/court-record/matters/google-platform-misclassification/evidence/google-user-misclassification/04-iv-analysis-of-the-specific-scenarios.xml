@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="iv-analysis-of-the-specific-scenarios">
+  <title>
+    <emphasis role="strong">IV. Analysis of the Specific
+  Scenarios</emphasis>
+  </title>
+  <para>
+    We now revisit the scenarios presented, applying this refined
+    framework.
+  </para>
+  <section xml:id="scenario-1-if-i-perform-a-specific-act-eg-vrp-and-they-never-pay-out">
+    <title>
+      <emphasis role="strong">Scenario 1: "If I perform a
+    specific act (e.g., VRP), and they never pay
+    out?"</emphasis>
+    </title>
+    <para>
+      If performance is completed but the reward is denied, there are
+      two pathways for recourse:
+    </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Contractual Claim (Promissory
+          Estoppel):</emphasis> Even if the VRP grants Google "sole
+          discretion," this must be exercised in good faith.
+          Furthermore, under the doctrine of promissory estoppel
+          (<emphasis>Drennan</emphasis>), if the researcher
+          detrimentally relied on Google's promise by expending
+          significant labor, the promise may be enforced to avoid
+          injustice (Section 1.4).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Employment Claim (Wage
+          Theft):</emphasis> If the relationship is deemed employment
+          under the retroactive ABC test, the failure to pay constitutes
+          wage theft. The VRP structure, which only compensates for
+          results, violates the California Labor Code requirement to pay
+          for "all hours worked." The worker would be entitled
+          to back wages (including minimum wage and overtime) for all
+          time spent on the labor, plus penalties.
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="scenario-2-i-perform-an-act-but-dont-report-it-because-i-am-an-employee">
+    <title>
+      <emphasis role="strong">Scenario 2: "I perform an act
+    but don't report it... because I am an
+    Employee?"</emphasis>
+    </title>
+    <para>
+      If the relationship is retroactively determined to be employment,
+      Google bears all the burdens of an employer (wages, taxes,
+      compliance). The IP dynamic also shifts:
+    </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Work Made for Hire:</emphasis> As an
+          employee, the intellectual property generated (the
+          vulnerability, the feedback) within the scope of employment
+          automatically belongs to the employer (Google) from the moment
+          of creation.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Wages Owed:</emphasis> The employee is
+          still entitled to wages for the labor expended to generate
+          that work product.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Breach of Duty:</emphasis>
+          Intentionally withholding the employer's IP (failing to report
+          the discovery) would constitute a breach of the employee's
+          duty of loyalty. However, this does not negate the employer's
+          obligation to pay wages for the work performed.
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+</section>
+  

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="s-2-third-party-vendor-service-agreement">
+  <title>
+    <emphasis role="strong">2. Third-Party Vendor Service
+    Agreement</emphasis>
+  </title>
+  <para>
+      This contract is the primary tool for providing members with
+      essential services without giving them cash.
+    </para>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">Purpose:</emphasis> To provide a
+          member with a necessary service (e.g., legal representation,
+          car repair, therapeutic services) by having a third party pay
+          the service provider directly.
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Parties Involved:</emphasis>
+      </para>
+    </listitem>
+  </itemizedlist>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+          The Member/Client receiving the service
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+          The Service Provider (e.g., law firm, mechanic, therapist)
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+          The Funder/Payer (e.g., the ecosystem's non-profit arm or an
+          external philanthropic partner)
+        </para>
+    </listitem>
+  </itemizedlist>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">Core Legal Mechanism:</emphasis> A
+          <emphasis role="strong">direct, third-party vendor
+          payment</emphasis>. The funder pays the service provider's
+          invoice directly. For legal services, this is structured as a
+          <emphasis role="strong">tripartite fee agreement</emphasis> to
+          comply with professional conduct rules.
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">How it Preserves Benefits:</emphasis>
+          A payment made by a third party to a vendor for a service that
+          is <emphasis role="strong">not food or shelter</emphasis> is
+          explicitly excluded from the definition of income by SSI and
+          is not counted as income by CalFresh or Medi-Cal. This is
+          considered a universal "safe harbor."
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Primary Use Case:</emphasis> The
+          default method for solving a member's crisis that requires a
+          professional or commercial service they cannot afford.
+        </para>
+    </listitem>
+  </itemizedlist>
+</section>
+  

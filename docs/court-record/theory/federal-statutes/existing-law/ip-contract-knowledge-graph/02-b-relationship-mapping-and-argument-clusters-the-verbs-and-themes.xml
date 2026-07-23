@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="b-relationship-mapping-and-argument-clusters-the-verbs-and-themes">
+  <title>
+    <emphasis role="strong">B. Relationship Mapping and Argument
+  Clusters (The "Verbs" and
+  "Themes")</emphasis>
+  </title>
+  <para>
+    The power of the KG lies in defining how these entities and concepts
+    interact (the relationships) and organizing them into thematic
+    clusters that represent the core arguments of the corpus.
+  </para>
+  <section xml:id="s-1-relationships-edges">
+    <title>
+      <emphasis role="strong">1. Relationships
+    (Edges)</emphasis>
+    </title>
+    <para>
+      These define the logical connections and arguments within the
+      corpus.
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Causal Relationships:</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          TRIGGERS (e.g., Service Relationship TRIGGERS ABC Test).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          CAUSES_FAILURE_OF (e.g., Algorithmic Control CAUSES_FAILURE_OF
+          Prong A).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          CREATES_RISK (e.g., WFH Agreement CREATES_RISK Statutory
+          Employment in CA).
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Governance Relationships:</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          GOVERNED_BY (e.g., Platform-User Relationship GOVERNED_BY
+          ToS).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          EXEMPTS_FROM (e.g., AB 2257 Fine Artist Exemption EXEMPTS_FROM
+          ABC Test).
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Mitigation Relationships:</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          MITIGATES (e.g., Option-to-Purchase Agreement MITIGATES
+          Service Nexus Risk).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          REQUIRES (e.g., Fine Artist Exemption REQUIRES Business
+          License).
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="s-2-core-argument-clusters-the-meta-document-structure">
+    <title>
+      <emphasis role="strong">2. Core Argument Clusters (The
+    Meta-Document Structure)</emphasis>
+    </title>
+    <para>
+      The KG organizes the entities and relationships into high-level
+      thematic clusters, forming the navigable structure of the
+      meta-document.
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Cluster 1: The Misclassification
+          Engine:</emphasis> Focuses on how platform models trigger
+          labor laws.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Cluster 2: Systemic
+          Vulnerabilities:</emphasis> Details the specific failure
+          points in common business models (Hobbyist Dilemma, Service
+          Nexus, WFH Trap).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Cluster 3: Compliant Architectures
+          (The Playbook):</emphasis> Outlines the constructive models
+          for compliant engagement (Executive Author LLC, MSA/SOW
+          Framework).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Cluster 4: Strategic IP Management
+          &amp; Financialization:</emphasis> Details mechanisms for
+          acquiring, scaling, and monetizing IP (Option-to-Purchase,
+          Transmedia Funnel, IP Securitization).
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</section>
+  

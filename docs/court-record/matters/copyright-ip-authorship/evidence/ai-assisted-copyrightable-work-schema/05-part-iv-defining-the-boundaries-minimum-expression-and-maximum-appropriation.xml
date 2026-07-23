@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-iv-defining-the-boundaries-minimum-expression-and-maximum-appropriation">
+  <title>
+    <emphasis role="strong">Part IV: Defining the Boundaries:
+    Minimum Expression and Maximum Appropriation</emphasis>
+  </title>
+  <para>
+      To be practically useful, an AI-assisted creation tool must
+      provide clear guidance on the legal boundaries of creation. This
+      requires formalizing two critical thresholds: the minimum amount
+      of human creativity required to generate a copyrightable work, and
+      the maximum amount of another's work that can be appropriated
+      without triggering infringement. These boundaries are defined by
+      the doctrines of originality and <emphasis>de minimis</emphasis>
+      use, respectively.
+    </para>
+  <section xml:id="minimum-copyrightable-expression-the-modicum-of-creativity-standard">
+    <title>
+      <emphasis role="strong">Minimum Copyrightable Expression:
+      The "Modicum of Creativity" Standard</emphasis>
+    </title>
+    <para>
+        For a work to be eligible for copyright protection, it must be
+        an "original work of authorship".22 The legal standard
+        for originality consists of two distinct requirements:
+      </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Independent Creation:</emphasis> The
+            work must be independently created by the author, meaning it
+            cannot be copied from another work.40
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">A Modicum of Creativity:</emphasis>
+            The work must possess "at least a modicum of
+            creativity".22 The Supreme Court has described this as
+            requiring a "spark" of creativity, emphasizing
+            that the bar is intentionally set very low.41
+          </para>
+      </listitem>
+    </orderedlist>
+    <para>
+        This low threshold is balanced by the fundamental principle of
+        the idea-expression dichotomy: copyright protects the expression
+        of an idea, but never the idea, procedure, process, system,
+        concept, or discovery itself.22 This principle leads to several
+        specific categories of material that are deemed to lack the
+        requisite creativity and are therefore uncopyrightable. These
+        include:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            Names, titles, short phrases, and slogans.22
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Familiar symbols or designs.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Mere variations of typographic ornamentation, lettering, or
+            coloring.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Mere listings of ingredients or contents.41
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        For an AI-assisted work, this means that the human contribution
+        must rise above these excluded categories. A human author who
+        simply provides a title, a short phrase, or a basic instruction
+        to an AI will not have contributed sufficient original
+        expression to be considered an author of the output. However, a
+        human who creatively selects and arranges AI-generated
+        paragraphs into an original narrative, or who materially
+        modifies an AI-generated image with their own artistic choices,
+        will likely have contributed the necessary "modicum of
+        creativity" to claim copyright in their contributions.
+      </para>
+  </section>
+  <section xml:id="maximum-sampleable-work-the-de-minimis-doctrine">
+    <title>
+      <emphasis role="strong">Maximum Sampleable Work: The De
+      Minimis Doctrine</emphasis>
+    </title>
+    <para>
+        At the other end of the spectrum is the question of
+        appropriation. The <emphasis>de minimis</emphasis> doctrine,
+        from the Latin maxim <emphasis>de minimis non curat
+        lex</emphasis> ("the law does not concern itself with
+        trifles"), provides that a technical act of copying may be
+        so trivial or insignificant that it does not rise to the level
+        of a legally actionable infringement.42 This doctrine is
+        distinct from fair use, though it is related to the third fair
+        use factor (amount and substantiality). A finding of
+      </para>
+    <para>
+      <emphasis>de minimis</emphasis> use means no infringement has
+        occurred in the first place.
+      </para>
+    <para>
+        Courts typically apply a two-part test to determine if a use is
+        <emphasis>de minimis</emphasis>:
+      </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Quantitative Analysis:</emphasis>
+            This considers the raw amount of the original work that was
+            copied. Examples of uses found to be quantitatively small
+            include a pinball machine appearing in the background of a
+            movie for a few seconds or fleeting, out-of-focus
+            illustrations.42
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Qualitative Analysis:</emphasis>
+            This is often the more important inquiry. It asks whether
+            the copied portion, regardless of its size, is qualitatively
+            significant or constitutes the "heart" of the
+            original work.45 A key element of this analysis in many
+            circuits is whether an "average audience would
+            recognize the appropriation".45 If the copied element
+            is not recognizable to an ordinary observer, the use is more
+            likely to be considered <emphasis>de minimis</emphasis>.
+          </para>
+      </listitem>
+    </orderedlist>
+    <para>
+        The application of this doctrine is most contentious and
+        fragmented in the area of digital music sampling, where a
+        significant circuit split creates different legal standards
+        across the country.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The 6th Circuit's Bright-Line
+            Rule:</emphasis> In <emphasis>Bridgeport Music, Inc. v.
+            Dimension Films</emphasis>, the Sixth Circuit Court of
+            Appeals established a strict, bright-line rule for sound
+            recordings. The court held that any digital sampling of a
+            copyrighted sound recording, no matter how brief or altered,
+            constitutes infringement. The court's blunt directive was:
+            "Get a license or do not sample".39 Under this
+            standard, the maximum sampleable amount of a sound recording
+            without a license is effectively zero.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">The 9th Circuit's Qualitative
+            Approach:</emphasis> In contrast, the Ninth Circuit, in
+            cases like <emphasis>VMG Salsoul, LLC v. Ciccone</emphasis>,
+            has adopted a qualitative approach consistent with the
+            "average audience" test. The court held that a
+            fleeting, 0.23-second sample of a horn hit was <emphasis>de
+            minimis</emphasis> because it was not recognizable to the
+            ordinary listener.45 This standard allows for the
+            possibility of legally permissible, unlicensed sampling of
+            sound recordings, provided the use is truly trivial in both
+            quantity and quality.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        This circuit split means that any tool providing guidance on
+        sampling must account for jurisdictional variance. A
+        conservative approach would advise users to treat any digital
+        sample of a sound recording as requiring a license, while a more
+        permissive, risk-tolerant approach could incorporate the Ninth
+        Circuit's recognizability test.
+      </para>
+  </section>
+  <section xml:id="table-2-guidelines-for-minimum-expression-and-de-minimis-use">
+    <title>
+      <emphasis role="strong">Table 2: Guidelines for Minimum
+      Expression and De Minimis Use</emphasis>
+    </title>
+    <para>
+        This table translates the legal thresholds for originality and
+        <emphasis>de minimis</emphasis> use into practical rules and
+        risk assessments that can be implemented within a creative
+        tool's user interface and internal logic.
+      </para>
+    <informaltable>
+      <tgroup cols="5">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                Guideline Category
+              </entry>
+            <entry>
+                Rule / Test
+              </entry>
+            <entry>
+                Tool Implementation / User Guidance
+              </entry>
+            <entry>
+                Risk Level
+              </entry>
+            <entry>
+                Relevant Sources
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Minimum Expression**
+              </entry>
+            <entry>
+                Is the human contribution more than a short phrase,
+                name, title, or simple geometric shape?
+              </entry>
+            <entry>
+                "Your contribution '\[text\]' is likely too brief
+                to be protected by copyright on its own. To secure
+                copyright, consider elaborating on this idea or
+                combining it with other creative elements."
+              </entry>
+            <entry>
+                N/A (Not Copyrightable)
+              </entry>
+            <entry>
+                22
+              </entry>
+          </row>
+          <row>
+            <entry>
+              </entry>
+            <entry>
+                Does the human contribution involve creative selection,
+                coordination, or arrangement of elements?
+              </entry>
+            <entry>
+                "By selecting and arranging these 5 AI-generated
+                images into a unique sequence, you have likely created a
+                new, copyrightable compilation. Your copyright protects
+                the arrangement, not the individual images."
+              </entry>
+            <entry>
+                Low
+              </entry>
+            <entry>
+                16
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **De Minimis Use (Visual)**
+              </entry>
+            <entry>
+                Is the sampled visual work fleeting (e.g., \&lt; 3
+                seconds), out of focus, and not central to the new
+                work's theme or narrative?
+              </entry>
+            <entry>
+                "The background image appears for less than 3
+                seconds and is not the focus of the scene. The risk of
+                an infringement claim is likely low under the *de
+                minimis* doctrine."
+              </entry>
+            <entry>
+                Low
+              </entry>
+            <entry>
+                42
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **De Minimis Use (Audio - Conservative / 6th Circuit
+                Rule)**
+              </entry>
+            <entry>
+                Is any part of a copyrighted *sound recording* being
+                digitally sampled without a license?
+              </entry>
+            <entry>
+                "**HIGH RISK WARNING:** You are digitally sampling
+                a sound recording. In some jurisdictions, any unlicensed
+                sampling, regardless of length, is considered copyright
+                infringement. A license is strongly recommended."
+              </entry>
+            <entry>
+                High
+              </entry>
+            <entry>
+                39
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **De Minimis Use (Audio - Permissive / 9th Circuit
+                Rule)**
+              </entry>
+            <entry>
+                Is the sampled audio quantitatively and qualitatively
+                insignificant? Would an average listener recognize its
+                source?
+              </entry>
+            <entry>
+                "**MODERATE RISK:** The sampled audio is less than
+                one second and has been significantly altered. It is
+                unlikely to be recognizable to an average listener.
+                While this may be considered *de minimis* use in some
+                jurisdictions, a risk of legal challenge remains."
+              </entry>
+            <entry>
+                Moderate
+              </entry>
+            <entry>
+                39
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+</section>
+  

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-iii-the-central-conflict-ai-training-derivative-works-and-copyright">
+  <title>
+    <emphasis role="strong">Part III: The Central Conflict: AI
+    Training, Derivative Works, and Copyright</emphasis>
+  </title>
+  <para>
+      The project operates at the epicenter of the most contentious and
+      unsettled legal questions in modern technology law. The legal
+      status of every key component—the training data's influence, the
+      AI model itself, and the code it generates—is ambiguous and
+      subject to conflicting interpretations. This creates a state of
+      legal uncertainty where every action is a calculated risk based on
+      predicting how future courts will resolve these foundational
+      issues.
+    </para>
+  <section xml:id="ai-model-training-and-the-unsettled-definition-of-a-derivative-work">
+    <title>
+      <emphasis role="strong">AI Model Training and the Unsettled
+      Definition of a 'Derivative Work'</emphasis>
+    </title>
+    <para>
+        The core legal question is whether training an AI on
+        GPL-licensed code causes the AI model, its weights, or its
+        subsequent output to be considered a "derivative work"
+        under copyright law.31 There is currently no definitive legal
+        precedent, and two diametrically opposed arguments dominate the
+        discourse.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The Argument for
+            Infringement:</emphasis> This position, championed by the
+            FSF and SFC, holds that training is a form of adaptation and
+            the resulting model is a compressed, transformed version of
+            the training data. Therefore, the model itself is a
+            derivative work and must comply with the licenses of its
+            training inputs.22 If the model was trained on GPL code, it
+            becomes a GPL-covered work.22 This is the legal basis for
+            the "poison pill" scenario.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">The Argument Against
+            Infringement:</emphasis> This position, advanced by AI
+            developers and their advocates, argues that training is a
+            "fair use" of copyrighted material.34 They draw
+            analogies to how a human learns by reading many books or how
+            a search engine copies and indexes the entire web to provide
+            a search service—activities that courts have generally found
+            to be transformative and non-infringing.34
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        This issue is the subject of multiple high-profile lawsuits
+        (e.g., <emphasis>Doe v. GitHub</emphasis>), and the legal
+        landscape remains a high-risk minefield until the courts provide
+        clear rulings.21
+      </para>
+  </section>
+  <section xml:id="copyrightability-and-contribution-of-ai-generated-code">
+    <title>
+      <emphasis role="strong">Copyrightability and Contribution
+      of AI-Generated Code</emphasis>
+    </title>
+    <para>
+        The second major area of legal ambiguity concerns the copyright
+        status of the code that Jules generates.
+      </para>
+    <section xml:id="the-human-authorship-mandate">
+      <title>
+        <emphasis role="strong">The Human Authorship
+        Mandate</emphasis>
+      </title>
+      <para>
+          Current U.S. copyright law is unequivocal: a work must have a
+          human author to be eligible for copyright protection.37 This
+          principle was recently and definitively affirmed in
+          <emphasis>Thaler v. Perlmutter</emphasis>, where a federal
+          court ruled that an artwork "autonomously created by a
+          computer algorithm" could not be copyrighted.38 The U.S.
+          Copyright Office has followed this with guidance stating that
+          works created with the <emphasis>assistance</emphasis> of AI
+          can be copyrighted, but only to the extent of the human's
+          creative contribution through modification, selection, or
+          arrangement.41 A user's prompt alone is generally not
+          considered sufficient creative input to claim authorship of
+          the output.43
+        </para>
+    </section>
+    <section xml:id="the-copyleft-hole-gpl-and-public-domain-code">
+      <title>
+        <emphasis role="strong">The 'Copyleft Hole': GPL and
+        Public Domain Code</emphasis>
+      </title>
+      <para>
+          The direct implication of the human authorship mandate is that
+          any code generated <emphasis>solely</emphasis> by Jules,
+          without sufficient human creative intervention, is not
+          copyrightable and immediately enters the public domain.44 This
+          creates a critical and often misunderstood interaction with
+          the GPL.
+        </para>
+      <para>
+          The GPL is a copyright license; it functions by leveraging the
+          rights granted by copyright law to enforce its terms. If a
+          piece of code has no underlying copyright (i.e., it is in the
+          public domain), the GPL has no legal power over it. This means
+          that if Jules generates a function and commits that purely
+          AI-generated, non-copyrightable code to the GPL-licensed
+          SynthPlayground repository, that specific piece of code is
+          <emphasis>not actually covered by the GPL</emphasis>. Anyone
+          could extract that specific function and legally use it in a
+          proprietary, closed-source project without violating the GPL,
+          because that code was never subject to copyright in the first
+          place. This creates a "hole" in the viral copyleft
+          protection that was intended to apply to the entire project,
+          partially undermining the chosen licensing strategy.
+        </para>
+    </section>
+  </section>
+</section>
+  

@@ -1,0 +1,1354 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="part-iv-a-prudent-inventors-guide-to-ip-in-modern-securities-markets">
+  <title>
+    <emphasis role="strong">Part IV: A Prudent Inventor’s Guide
+    to IP in Modern Securities Markets</emphasis>
+  </title>
+  <para>
+      For an entrepreneur, financial institution, or technologist
+      seeking to create a new securities market, product, or platform
+      today, the historical and legal landscape provides a clear, if
+      complex, strategic playbook. Success requires moving beyond the
+      outdated notion of patenting a financial idea and instead
+      embracing a sophisticated, multi-layered IP strategy that aligns
+      with the realities of modern law.
+    </para>
+  <section xml:id="section-41-the-patentability-gauntlet-what-can-be-patented-today">
+    <title>
+      <emphasis role="strong">Section 4.1: The Patentability
+      Gauntlet: What Can Be Patented Today?</emphasis>
+    </title>
+    <para>
+        The single most important legal constraint for a financial
+        innovator is the patent eligibility framework established by the
+        Supreme Court in <emphasis>Alice Corp. v. CLS Bank
+        International</emphasis>. Navigating this gauntlet requires a
+        precise understanding of what is off-limits and where a narrow
+        path to patentability may still exist.
+      </para>
+    <section xml:id="what-cannot-be-patented">
+      <title>
+        <emphasis role="strong">What Cannot Be
+        Patented</emphasis>
+      </title>
+      <para>
+          Based on current jurisprudence, the following categories of
+          financial innovation are almost certainly unpatentable in the
+          United States:
+        </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Core Financial
+              Instruments:</emphasis> A new type of stock, bond, or
+              other basic security is an unpatentable abstract idea. A
+              novel structure for a debt instrument or a new class of
+              preferred stock would be classified as a "method of
+              organizing human activity" or a "fundamental
+              economic practice," placing it squarely in the
+              category of patent-ineligible subject matter.108
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="strong">Pure Business Methods and
+              Mathematical Algorithms:</emphasis> A method for hedging
+              risk, a new formula for pricing an option, a set of rules
+              for conducting an auction, or a strategy for portfolio
+              allocation are considered abstract ideas or mathematical
+              concepts.108 They cannot be patented on their own, even if
+              they are novel and non-obvious. The fact that the method
+              is performed on a computer, without more, does not make it
+              patentable.51
+            </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="what-might-be-patentable-the-technical-improvement-safe-harbor">
+      <title>
+        <emphasis role="strong">What</emphasis>
+        <emphasis>
+          <emphasis role="strong">Might</emphasis>
+        </emphasis>
+        <emphasis role="strong">Be Patentable: The "Technical
+        Improvement" Safe Harbor</emphasis>
+      </title>
+      <para>
+          A financial innovation may be patentable only if it can be
+          framed as a specific and concrete
+          <emphasis role="strong">technical solution to a technical
+          problem</emphasis>. The invention must improve the functioning
+          of the computer or network technology itself, rather than
+          simply using technology as a tool to execute an economic
+          idea.12
+        </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Focus on Technical
+              Improvement:</emphasis> A patentable invention might
+              involve:
+            </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+              A novel software architecture or data structure that
+              reduces server latency or memory consumption in an
+              electronic trading system.2
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              A new cryptographic method or security protocol that makes
+              online financial transactions more secure.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              A specific graphical user interface (GUI) that enables a
+              trader to view and process complex market data more
+              quickly and with fewer errors.113
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              An AI-driven system that improves the performance of the
+              computer network itself, for example, by optimizing data
+              routing or compressing data in a novel way.
+            </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            <emphasis role="strong">Drafting Patent Claims:</emphasis>
+              To survive the <emphasis>Alice</emphasis> test, patent
+              claims must be carefully drafted to be grounded in
+              technology. They should:
+            </para>
+        </listitem>
+      </itemizedlist>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+              Recite specific, non-generic computer components and their
+              interaction.
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Detail the steps that achieve the technical improvement,
+              avoiding purely functional or result-oriented language
+              (e.g., instead of claiming "mitigating risk,"
+              claim "a method for encrypting and transmitting order
+              data between nodes that reduces transmission time by 30%
+              by using a specific, novel compression algorithm").12
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              The patent application's specification should tell a story
+              of technological innovation, emphasizing how the invention
+              improves the underlying computing machinery, not just how
+              it facilitates a business outcome.47
+            </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+          Examples of patented financial technologies include specific
+          electronic trading systems 1, methods for pricing complex
+          derivatives that rely on a unique computational process 10,
+          and automated clearing and settlement systems. These are
+          patents on the
+        </para>
+      <para>
+        <emphasis>machinery</emphasis> of the market, not the economic
+          theories that underpin it.
+        </para>
+    </section>
+  </section>
+  <section xml:id="section-42-a-multi-layered-ip-strategy">
+    <title>
+      <emphasis role="strong">Section 4.2: A Multi-Layered IP
+      Strategy</emphasis>
+    </title>
+    <para>
+        Given the narrow path for patents, a robust IP strategy for a
+        new securities market must be diversified, leveraging all forms
+        of intellectual property to protect different aspects of the
+        business.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The Core Asset: The Strategic Choice
+            Between Patent and Trade Secret</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            For a novel trading algorithm, a quantitative model, or a
+            proprietary risk-management strategy, the default and
+            overwhelmingly preferred method of protection is
+            <emphasis role="strong">trade secret</emphasis>.90 This
+            avoids the public disclosure required by the patent system,
+            which would destroy the strategy's value. It provides
+            potentially perpetual protection as long as secrecy is
+            maintained.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            A <emphasis role="strong">patent</emphasis> should only be
+            considered for a core technological process if it meets
+            several criteria: (1) it is a genuine technical invention
+            that survives the <emphasis>Alice</emphasis> test; (2) its
+            use by a competitor could be detected from the outside
+            (e.g., through analysis of their platform's performance or
+            features); and (3) the value of a 20-year legal monopoly
+            outweighs the significant cost and risk of disclosing the
+            invention to the public.118
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The Expression Layer: Leveraging
+            Copyright</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            All proprietary software, including backend systems, trading
+            interfaces, and mobile applications, should be protected by
+            <emphasis role="strong">copyright</emphasis>. The copyright
+            arises automatically upon creation, but formal registration
+            with the U.S. Copyright Office is a prerequisite for filing
+            an infringement lawsuit and enables the recovery of
+            statutory damages and attorney's fees.69
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            The unique "look and feel" of a graphical user
+            interface can be copyrighted as an artistic work.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            All original written content, including market analysis,
+            research reports, white papers, and marketing materials,
+            should be copyrighted to prevent unauthorized reproduction
+            and distribution.75
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            If the venture involves creating a proprietary database,
+            care should be taken to ensure the selection and arrangement
+            of the data are sufficiently creative to qualify for a
+            compilation copyright, even though the underlying data
+            itself is not protected.71
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The Brand Layer: Building a
+            Defensible Identity with Trademarks</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+            This is a non-negotiable, critical step. A new market's most
+            durable asset may be its brand. A thorough
+            <emphasis role="strong">trademark clearance
+            search</emphasis> must be conducted for the proposed company
+            name, platform names, logos, and any slogans to ensure they
+            do not infringe on existing marks.85
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Upon clearing the marks, <emphasis role="strong">federal
+            trademark applications</emphasis> should be filed
+            immediately with the USPTO to secure nationwide rights. In
+            the financial industry, where trust and reputation are
+            paramount, a strong, legally defensible brand is an
+            invaluable piece of intellectual property.81
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="section-43-essential-knowledge-for-a-new-market-architect">
+    <title>
+      <emphasis role="strong">Section 4.3: Essential Knowledge
+      for a New Market Architect</emphasis>
+    </title>
+    <para>
+        Beyond securing one's own IP, a modern market architect must
+        navigate the existing IP landscape and implement rigorous
+        internal controls to manage risk.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Freedom to Operate (FTO)
+            Analysis:</emphasis> Before launching any new technology
+            platform, it is prudent and often necessary to conduct a
+            freedom-to-operate analysis. This involves searching for
+            existing patents held by others to ensure that the new
+            system does not inadvertently infringe on a competitor's
+            patented technology.4 An FTO analysis can identify potential
+            "landmines" and allow the innovator to either
+            design around the existing patent, attempt to invalidate it,
+            or seek a license, thereby avoiding costly infringement
+            litigation down the road. Patent searches can be conducted
+            through public databases like the USPTO's Patent Public
+            Search, Google Patents, and WIPO's PATENTSCOPE.119
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Data Licensing and
+            Contracts:</emphasis> Since raw market data is not protected
+            by copyright, access to it is governed almost exclusively by
+            <emphasis role="strong">contracts and licensing
+            agreements</emphasis>.73 A new market venture will need to
+            license inbound data feeds from established exchanges or
+            data vendors. In turn, it will generate its own data, which
+            it will then license to its users. These data license
+            agreements are a critical part of the business model and are
+            the primary legal mechanism for controlling the use and
+            distribution of valuable, time-sensitive information.74
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">A Fortress of Secrecy: Protecting
+            Trade Secrets:</emphasis> As established, trade secrets are
+            likely to be the venture's most valuable IP. Protecting them
+            is a continuous operational requirement, not a one-time
+            legal filing. A comprehensive protection program is
+            essential:
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Contractual Safeguards:</emphasis>
+            All employees, contractors, and business partners must sign
+            robust <emphasis role="strong">non-disclosure agreements
+            (NDAs)</emphasis> tailored to the specifics of the financial
+            industry.86 Where legally enforceable, non-compete and
+            non-solicitation clauses should be used for key personnel
+            who have access to core strategies.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Technical and Physical
+            Security:</emphasis> Implement stringent cybersecurity
+            measures, including multi-factor authentication, data
+            encryption, access controls based on the principle of least
+            privilege, and continuous network monitoring to detect and
+            prevent unauthorized access or exfiltration of data.129
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Third-Party and AI Risk
+            Management:</emphasis> Any vendor or partner with access to
+            trade secrets must be bound by contracts that explicitly
+            limit the use of that information and prohibit its use for
+            unauthorized purposes, such as feeding it into third-party
+            Large Language Models (LLMs) for training.91
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="conclusion-the-future-of-financial-ip">
+    <title>
+      <emphasis role="strong">Conclusion: The Future of Financial
+      IP</emphasis>
+    </title>
+    <para>
+        The intellectual property history of securities is a story of
+        evolution, adaptation, and the law's struggle to keep pace with
+        innovation. The foundational instruments of finance emerged from
+        a world governed by contract and remain in the public domain, a
+        necessary condition for the functioning of capital markets. The
+        modern era, however, has seen the rise of a sophisticated IP
+        ecosystem built around the technology, expressions, and brands
+        of financial institutions. The legal landscape has been defined
+        by a judicially-driven experiment with patenting financial
+        methods, an experiment that has largely concluded with a return
+        to the principle that patent protection is reserved for concrete
+        technological advancements.
+      </para>
+    <para>
+        For the innovator standing at the threshold of creating a new
+        securities market today, the strategic implications are
+        profound. The focus must shift from seeking a single, powerful
+        patent on a financial concept to building a multi-layered
+        fortress of intellectual property. This fortress is built with
+        the bricks of <emphasis role="strong">trade secret</emphasis>
+        law to protect the invaluable core algorithms; reinforced with
+        the steel of <emphasis role="strong">patent</emphasis> law for
+        specific, tangible technological machinery; decorated with the
+        creative expressions of
+        <emphasis role="strong">copyright</emphasis> for software and
+        content; and branded with the trusted banner of
+        <emphasis role="strong">trademark</emphasis> law.
+      </para>
+    <para>
+        The rise of artificial intelligence and decentralized finance
+        will only accelerate these trends. AI will generate ever more
+        complex and valuable trading models, making trade secret
+        protection even more critical. Decentralized systems will
+        challenge traditional notions of control and branding. In this
+        dynamic future, the most successful financial innovators will be
+        those who understand this complex IP landscape not as a set of
+        legal hurdles, but as a toolkit for building a defensible,
+        valuable, and enduring enterprise.
+      </para>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              Copyright, Trademark &amp; Patent Information - Cboe
+              Global Markets, accessed June 27, 2025,
+              <link xlink:href="https://www.cboe.com/copyright/">https://www.cboe.com/copyright/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Reduction of computational resources of an ... - Justia
+              Patents, accessed June 27, 2025,
+              <link xlink:href="https://patents.justia.com/patent/12190381">https://patents.justia.com/patent/12190381</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              US8165952B2 - Electronic trading system - Google Patents,
+              accessed June 27, 2025,
+              <link xlink:href="https://patents.google.com/patent/US8165952B2/en">https://patents.google.com/patent/US8165952B2/en</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Structured Products: Financial Engineering - Patent
+              Pending, accessed June 27, 2025,
+              <link xlink:href="https://files.klgates.com/files/publication/8587fa2d-bf16-4437-9fab-4cdca21416e7/preview/publicationattachment/4a989676-0e21-44c4-830e-03812d813fd2/glazier_spa_article.pdf">https://files.klgates.com/files/publication/8587fa2d-bf16-4437-9fab-4cdca21416e7/preview/publicationattachment/4a989676-0e21-44c4-830e-03812d813fd2/glazier_spa_article.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              S&amp;P Dow Jones Indices Wins Intellectual Property
+              Dispute - PR Newswire, accessed June 27, 2025,
+              <link xlink:href="https://www.prnewswire.com/news-releases/sp-dow-jones-indices-wins-intellectual-property-dispute-207228151.html">https://www.prnewswire.com/news-releases/sp-dow-jones-indices-wins-intellectual-property-dispute-207228151.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Trade Secret: Definition, Examples, Laws, Vs. Patent -
+              Investopedia, accessed June 27, 2025,
+              <link xlink:href="https://www.investopedia.com/terms/t/trade-secret.asp">https://www.investopedia.com/terms/t/trade-secret.asp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              NYSE Guide, Regulation, Rule 0., New York Stock Exchange,
+              Regulation of the Exchange and its Member Organizations,
+              accessed June 28, 2025,
+              <link xlink:href="https://www.nyse.com/publicdocs/nyse/regulation/nyse/NYSE_Rules.pdf">https://www.nyse.com/publicdocs/nyse/regulation/nyse/NYSE_Rules.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Custom Stock Certificate Design | Personalized &amp;
+              Framed - GiveAshare.com, accessed June 28, 2025,
+              <link xlink:href="https://www.giveashare.com/custom-stock-certificate-design">https://www.giveashare.com/custom-stock-certificate-design</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Greater Flexibility for Investors via Multiple Fund Share
+              Classes, accessed June 27, 2025,
+              <link xlink:href="https://www.ici.org/system/files/2025-04/25-etf-share-class.pdf">https://www.ici.org/system/files/2025-04/25-etf-share-class.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              US20100241554A1 - Method and system for pricing financial
+              ..., accessed June 27, 2025,
+              <link xlink:href="https://patents.google.com/patent/US20100241554A1/en">https://patents.google.com/patent/US20100241554A1/en</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Software patent - Wikipedia, accessed June 27, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Software_patent">https://en.wikipedia.org/wiki/Software_patent</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Evolution of Stock Exchanges - Investopedia, accessed
+              June 27, 2025,
+              <link xlink:href="https://www.investopedia.com/articles/07/stock-exchange-history.asp">https://www.investopedia.com/articles/07/stock-exchange-history.asp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              History of the stock market - City Index, accessed June
+              27, 2025,
+              <link xlink:href="https://www.cityindex.com/en-uk/news-and-analysis/history-of-stock-markets/">https://www.cityindex.com/en-uk/news-and-analysis/history-of-stock-markets/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Dutch East India Company - Wikipedia, accessed June 27,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Dutch_East_India_Company">https://en.wikipedia.org/wiki/Dutch_East_India_Company</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              securities law history | Wex - Legal Information
+              Institute, accessed June 27, 2025,
+              <link xlink:href="https://www.law.cornell.edu/wex/securities_law_history">https://www.law.cornell.edu/wex/securities_law_history</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Laws That Govern the Securities Industry |
+              Investor.gov, accessed June 27, 2025,
+              <link xlink:href="https://www.investor.gov/introduction-investing/investing-basics/role-sec/laws-govern-securities-industry">https://www.investor.gov/introduction-investing/investing-basics/role-sec/laws-govern-securities-industry</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              State Street Bank &amp; Trust Co. v. Signature Financial
+              Group, Inc. - Wikipedia, accessed June 27, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/State_Street_Bank_%26_Trust_Co._v._Signature_Financial_Group,_Inc.">https://en.wikipedia.org/wiki/State_Street_Bank_%26_Trust_Co._v._Signature_Financial_Group,_Inc.</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Status of Business Method Patents | Carlton Fields,
+              accessed June 27, 2025,
+              <link xlink:href="https://www.carltonfields.com/insights/expect-focus/2015/the-status-of-business-method-patents">https://www.carltonfields.com/insights/expect-focus/2015/the-status-of-business-method-patents</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Stock exchange - Wikipedia, accessed June 27, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Stock_exchange">https://en.wikipedia.org/wiki/Stock_exchange</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Bond Market and Debt Securities: An Overview -
+              Investopedia, accessed June 27, 2025,
+              <link xlink:href="https://www.investopedia.com/terms/b/bondmarket.asp">https://www.investopedia.com/terms/b/bondmarket.asp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What Was the First Company to Issue Stock? - Investopedia,
+              accessed June 27, 2025,
+              <link xlink:href="https://www.investopedia.com/ask/answers/08/first-company-issue-stock-dutch-east-india.asp">https://www.investopedia.com/ask/answers/08/first-company-issue-stock-dutch-east-india.asp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              History of Stock Market: Everything to Know How it All
+              Started - Strike, accessed June 27, 2025,
+              <link xlink:href="https://www.strike.money/stock-market/history">https://www.strike.money/stock-market/history</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Stocks Part 2: History | Practical Money Skills, accessed
+              June 27, 2025,
+              <link xlink:href="https://www.practicalmoneyskills.com/en/resources/economy_101/stocks_history.html">https://www.practicalmoneyskills.com/en/resources/economy_101/stocks_history.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Limitations of Software Patents: Alice Corp. v. CLS
+              Bank International – JHULR, accessed June 27, 2025,
+              <link xlink:href="https://jhulr.org/2019/11/07/the-limitations-of-software-patents/">https://jhulr.org/2019/11/07/the-limitations-of-software-patents/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What kind of information can qualify as a trade secret? -
+              MoloLamken LLP, accessed June 27, 2025,
+              <link xlink:href="https://www.mololamken.com/knowledge-what-kind-of-information">https://www.mololamken.com/knowledge-what-kind-of-information</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Can You Patent an Algorithm in 2025? Essential Facts You
+              Need to Know, accessed June 27, 2025,
+              <link xlink:href="https://arapackelaw.com/patents/ai/can-you-patent-an-algorithm/">https://arapackelaw.com/patents/ai/can-you-patent-an-algorithm/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              en.wikipedia.org, accessed June 27, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Bond_market#:~:text=The%20first%20known%20bond%20in,was%20often%20the%20currency%20priced.">https://en.wikipedia.org/wiki/Bond_market#:~:text=The%20first%20known%20bond%20in,was%20often%20the%20currency%20priced.</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The World's First Stock Exchange, accessed June 27, 2025,
+              <link xlink:href="https://www.worldsfirststockexchange.com/">https://www.worldsfirststockexchange.com/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              en.wikipedia.org, accessed June 27, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Stock#:~:text=Soon%20afterwards%2C%20in%201602%2C%20the,Europeans%20to%20work%20in%20Asia.">https://en.wikipedia.org/wiki/Stock#:~:text=Soon%20afterwards%2C%20in%201602%2C%20the,Europeans%20to%20work%20in%20Asia.</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <link xlink:href="http://www.investopedia.com">www.investopedia.com</link>,
+              accessed June 27, 2025,
+              <link xlink:href="https://www.investopedia.com/ask/answers/08/first-company-issue-stock-dutch-east-india.asp#:~:text=The%20Dutch%20East%20India%20Co,history's%20first%20stock%20market%20crash.">https://www.investopedia.com/ask/answers/08/first-company-issue-stock-dutch-east-india.asp#:~:text=The%20Dutch%20East%20India%20Co,history's%20first%20stock%20market%20crash.</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <link xlink:href="http://www.investopedia.com">www.investopedia.com</link>,
+              accessed June 27, 2025,
+              <link xlink:href="https://www.investopedia.com/terms/a/aex.asp#:~:text=Founded%20in%201602%2C%20along%20with,to%20profit%20in%20this%20commerce.">https://www.investopedia.com/terms/a/aex.asp#:~:text=Founded%20in%201602%2C%20along%20with,to%20profit%20in%20this%20commerce.</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Amsterdam Stock Exchange (AEX) .AS: Meaning, How It Works
+              - Investopedia, accessed June 27, 2025,
+              <link xlink:href="https://www.investopedia.com/terms/a/aex.asp">https://www.investopedia.com/terms/a/aex.asp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Stock Certificate: Definition and History - Investopedia,
+              accessed June 28, 2025,
+              <link xlink:href="https://www.investopedia.com/terms/s/stockcertificate.asp">https://www.investopedia.com/terms/s/stockcertificate.asp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Stock Certificates - Special Collections &amp; University
+              Archives, accessed June 28, 2025,
+              <link xlink:href="http://scua.library.umass.edu/stock-certificates/">http://scua.library.umass.edu/stock-certificates/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Issue Stock with Style: How to Pick the Right Stock
+              Certificate Template - ExhibitIndexes.com, accessed June
+              28, 2025,
+              <link xlink:href="https://www.exhibitindexes.com/blog/issue-stock-with-style-how-to-pick-the-right-stock-certificate-template/">https://www.exhibitindexes.com/blog/issue-stock-with-style-how-to-pick-the-right-stock-certificate-template/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Terms of Use Please read the following terms and
+              conditions carefully before continuing to use this Web
+              site or access informati - ICE, accessed June 28, 2025,
+              <link xlink:href="https://www.ice.com/publicdocs/nyse/NYSE_Online_Tools_Terms_of_Use.pdf">https://www.ice.com/publicdocs/nyse/NYSE_Online_Tools_Terms_of_Use.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Corporate Charter: Definition, Purpose, and Legal
+              Requirements - Investopedia, accessed June 28, 2025,
+              <link xlink:href="https://www.investopedia.com/terms/c/corporatecharter.asp">https://www.investopedia.com/terms/c/corporatecharter.asp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Corporate Charter | UpCounsel 2025, accessed June 28,
+              2025,
+              <link xlink:href="https://www.upcounsel.com/corporate-charter">https://www.upcounsel.com/corporate-charter</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Terms and Conditions - NASDAQ, accessed June 27, 2025,
+              <link xlink:href="https://www.nasdaq.net/publicpages/tandc.aspx">https://www.nasdaq.net/publicpages/tandc.aspx</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              NYSE AMERICAN Trademark | Trademarkia, accessed June 27,
+              2025,
+              <link xlink:href="https://www.trademarkia.com/nyse-american-87327363">https://www.trademarkia.com/nyse-american-87327363</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Technology FAQ and Best Practices: Equities - NYSE,
+              accessed June 28, 2025,
+              <link xlink:href="https://www.nyse.com/publicdocs/nyse/markets/nyse/NYSE_Group_Equities_Technology_FAQ.pdf">https://www.nyse.com/publicdocs/nyse/markets/nyse/NYSE_Group_Equities_Technology_FAQ.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Intercontinental Exchange Announces Results from 2025
+              Annual Meeting of Stockholders, accessed June 28, 2025,
+              <link xlink:href="https://www.businesswire.com/news/home/20250520221396/en/Intercontinental-Exchange-Announces-Results-from-2025-Annual-Meeting-of-Stockholders">https://www.businesswire.com/news/home/20250520221396/en/Intercontinental-Exchange-Announces-Results-from-2025-Annual-Meeting-of-Stockholders</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Ticker Symbols &amp; Trademarks - Altacit Global, accessed
+              June 27, 2025,
+              <link xlink:href="https://www.altacit.com/resources/trademark/ticker-symbols-trademarks/">https://www.altacit.com/resources/trademark/ticker-symbols-trademarks/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Securities law: Key aspects and terms - Thomson Reuters
+              Legal Solutions, accessed June 27, 2025,
+              <link xlink:href="https://legal.thomsonreuters.com/blog/securities-law/">https://legal.thomsonreuters.com/blog/securities-law/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Business Method Patents, accessed June 27, 2025,
+              <link xlink:href="https://www.strategicpatentlaw.com/patentability/business-method-patents/">https://www.strategicpatentlaw.com/patentability/business-method-patents/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              State Street Bank &amp; Trust Co. v. Signature Financial
+              Group, Inc. - Digital Commons @ Georgia Law, accessed June
+              27, 2025,
+              <link xlink:href="https://digitalcommons.law.uga.edu/cgi/viewcontent.cgi?referer&amp;httpsredir=1&amp;article=1175&amp;context=jipl">
+              <link xlink:href="https://digitalcommons.law.uga.edu/cgi/viewcontent.cgi?referer=">https://digitalcommons.law.uga.edu/cgi/viewcontent.cgi?referer=</link>&amp;httpsredir=1&amp;article=1175&amp;context=jipl</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Method Madness: Patenting Financial Inventions After
+              'State Street Bank' - Fenwick, accessed June 27, 2025,
+              <link xlink:href="https://assets.fenwick.com/legacy/FenwickDocuments/Method_Madness.pdf">https://assets.fenwick.com/legacy/FenwickDocuments/Method_Madness.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              State Street Bank &amp; Trust Co. v. Signature Financial
+              Group - Law.Cornell.Edu, accessed June 27, 2025,
+              <link xlink:href="https://www.law.cornell.edu/patent/comments/96_1327.htm">https://www.law.cornell.edu/patent/comments/96_1327.htm</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              State Street Bank &amp; Trust Co. v. Signature Financial
+              Group, Inc., 149 F.3d 1368 (Fed. Cir. 1998) - Justia Law,
+              accessed June 27, 2025,
+              <link xlink:href="https://law.justia.com/cases/federal/appellate-courts/F3/149/1368/560460/">https://law.justia.com/cases/federal/appellate-courts/F3/149/1368/560460/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              State Street Bank v. Signature Fin. Group - Case Brief
+              Summary for Law School Success, accessed June 27, 2025,
+              <link xlink:href="https://studicata.com/case-brief/case/state-street-bank-v-signature-fin-group">https://studicata.com/case-brief/case/state-street-bank-v-signature-fin-group</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Alice Corp. v. CLS Bank International - Wikipedia,
+              accessed June 27, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Alice_Corp._v._CLS_Bank_International">https://en.wikipedia.org/wiki/Alice_Corp._v._CLS_Bank_International</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Alice v. CLS Bank: United States Supreme Court Establishes
+              ... - WIPO, accessed June 27, 2025,
+              <link xlink:href="https://www.wipo.int/web/wipo-magazine/articles/alice-v-cls-bank-united-states-supreme-court-establishes-general-patentability-test-38916">https://www.wipo.int/web/wipo-magazine/articles/alice-v-cls-bank-united-states-supreme-court-establishes-general-patentability-test-38916</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Tracking the Evolving Abstract Idea Doctrine: How Courts
+              Have Applied the Two-Part Test for Computer-Implemented
+              Inventions post-Alice | Insights | Venable LLP, accessed
+              June 27, 2025,
+              <link xlink:href="https://www.venable.com/insights/publications/2015/03/tracking-the-evolving-abstract-idea-doctrine-how-c">https://www.venable.com/insights/publications/2015/03/tracking-the-evolving-abstract-idea-doctrine-how-c</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Main Categories of Abstract Ideas in Patent Law - BlueIron
+              IP, accessed June 27, 2025,
+              <link xlink:href="https://blueironip.com/ufaqs/what-are-the-main-categories-of-abstract-ideas/">https://blueironip.com/ufaqs/what-are-the-main-categories-of-abstract-ideas/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What are examples of 'certain methods of organizing human
+              activity' that are considered abstract ideas? - BlueIron
+              IP, accessed June 27, 2025,
+              <link xlink:href="https://blueironip.com/ufaqs/what-are-examples-of-certain-methods-of-organizing-human-activity-that-are-considered-abstract-ideas-2/">https://blueironip.com/ufaqs/what-are-examples-of-certain-methods-of-organizing-human-activity-that-are-considered-abstract-ideas-2/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Dancing with Abstract Ideas: Patent Eligibility in 2025 -
+              JD Supra, accessed June 27, 2025,
+              <link xlink:href="https://www.jdsupra.com/legalnews/dancing-with-abstract-ideas-patent-3527367/">https://www.jdsupra.com/legalnews/dancing-with-abstract-ideas-patent-3527367/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Comments on proposed guidance on abstract ideas and laws
+              of nature - USPTO, accessed June 27, 2025,
+              <link xlink:href="https://www.uspto.gov/sites/default/files/documents/eligiblity2019comments_f_Klemens_2019jan25.pdf">https://www.uspto.gov/sites/default/files/documents/eligiblity2019comments_f_Klemens_2019jan25.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Nasdaq Patents Key Insights &amp; Stats, accessed June 28,
+              2025,
+              <link xlink:href="https://insights.greyb.com/nasdaq-patents/">https://insights.greyb.com/nasdaq-patents/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              PTAB Institutes CBM Review on Nasdaq Patents Challenged by
+              MIAX - IPWatchdog.com, accessed June 28, 2025,
+              <link xlink:href="https://ipwatchdog.com/2018/10/16/ptab-institutes-cbm-review-nasdaq-patents-miax/id=102273/">https://ipwatchdog.com/2018/10/16/ptab-institutes-cbm-review-nasdaq-patents-miax/id=102273/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              US7246093B1 - Automated exchange for trading derivative
+              securities - Google Patents, accessed June 28, 2025,
+              <link xlink:href="https://patents.google.com/patent/US7246093B1/en">https://patents.google.com/patent/US7246093B1/en</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              US7921051B2 - Security-based order processing technique -
+              Google Patents, accessed June 28, 2025,
+              <link xlink:href="https://patents.google.com/patent/US7921051B2/en">https://patents.google.com/patent/US7921051B2/en</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Reed Smith delivers big win for MIAX | News, accessed June
+              28, 2025,
+              <link xlink:href="https://www.reedsmith.com/en/news/2019/10/reed-smith-delivers-big-win-for-miax">https://www.reedsmith.com/en/news/2019/10/reed-smith-delivers-big-win-for-miax</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Nasdaq Finalizes Rollout of AI Order Type - Markets Media,
+              accessed June 28, 2025,
+              <link xlink:href="https://www.marketsmedia.com/nasdaq-finalizes-rollout-of-ai-order-type/">https://www.marketsmedia.com/nasdaq-finalizes-rollout-of-ai-order-type/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Driving Innovation and Creativity through Nasdaq's Patent
+              Program, accessed June 28, 2025,
+              <link xlink:href="https://www.nasdaq.com/articles/driving-innovation-and-creativity-through-nasdaqs-patent-program-2020-12-18">https://www.nasdaq.com/articles/driving-innovation-and-creativity-through-nasdaqs-patent-program-2020-12-18</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Everything You Need to Know about Dynamic M-ELO, the First
+              Exchange AI-powered Order Type | Nasdaq, accessed June 28,
+              2025,
+              <link xlink:href="https://www.nasdaq.com/newsroom/dynamic-m-elo-ai-powered-order-type">https://www.nasdaq.com/newsroom/dynamic-m-elo-ai-powered-order-type</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Rise of ETF Share Classes of Mutual Funds | J.P.
+              Morgan, accessed June 27, 2025,
+              <link xlink:href="https://www.jpmorgan.com/content/dam/jpm/cib/documents/the-rise-of-etf-share-classes-of-mutual-funds.pdf">https://www.jpmorgan.com/content/dam/jpm/cib/documents/the-rise-of-etf-share-classes-of-mutual-funds.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Investment Lawyer - Chapman and Cutler LLP, accessed
+              June 27, 2025,
+              <link xlink:href="https://www.chapman.com/media/publication/15122_IL-0224-Coyle-Pershkow-Warren.pdf">https://www.chapman.com/media/publication/15122_IL-0224-Coyle-Pershkow-Warren.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Lessons Learned - ETF Conversions - Brown Brothers
+              Harriman, accessed June 27, 2025,
+              <link xlink:href="https://www.bbh.com/content/dam/bbh/external/www/investor-services/insights/mutual-funds-to-etf-conversions/Mutual%20Fund%20to%20ETF%20Conversions.pdf">https://www.bbh.com/content/dam/bbh/external/www/investor-services/insights/mutual-funds-to-etf-conversions/Mutual%20Fund%20to%20ETF%20Conversions.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright - WIPO, accessed June 27, 2025,
+              <link xlink:href="https://www.wipo.int/en/web/copyright">https://www.wipo.int/en/web/copyright</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is Copyright?, accessed June 28, 2025,
+              <link xlink:href="https://www.copyright.gov/what-is-copyright/">https://www.copyright.gov/what-is-copyright/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright for Data | Emory Libraries, accessed June 27,
+              2025,
+              <link xlink:href="https://libraries.emory.edu/research/copyright/copyright-data">https://libraries.emory.edu/research/copyright/copyright-data</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Closing Prices and Other Stock Exchange Data: Copyright
+              and Competition Law Issues, accessed June 28, 2025,
+              <link xlink:href="https://www.exchange-data.com/closing-prices-and-other-stock-exchange-data-copyright-and-competition-law-issues/">https://www.exchange-data.com/closing-prices-and-other-stock-exchange-data-copyright-and-competition-law-issues/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Market Data Copyright Protections - The National Law
+              Review, accessed June 27, 2025,
+              <link xlink:href="https://natlawreview.com/article/us-copyright-protections-market-data">https://natlawreview.com/article/us-copyright-protections-market-data</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Market Index Licensing - A Review Of U.S. Law - Bortstein
+              Legal Group, accessed June 27, 2025,
+              <link xlink:href="https://www.blegalgroup.com/market-index-licensing-a-review-of-u-s-law/">https://www.blegalgroup.com/market-index-licensing-a-review-of-u-s-law/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Law for Business People: A Handy Guide |
+              Articles ..., accessed June 27, 2025,
+              <link xlink:href="https://www.finnegan.com/en/insights/articles/copyright-law-for-business-people-a-handy-guide.html">https://www.finnegan.com/en/insights/articles/copyright-law-for-business-people-a-handy-guide.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Understanding Intellectual Property Securities - Computer
+              Packages Inc. -CPI, accessed June 27, 2025,
+              <link xlink:href="https://www.computerpackages.com/understanding-intellectual-property-securities/">https://www.computerpackages.com/understanding-intellectual-property-securities/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Navigating Copyright and AI in Financial Services | CCC,
+              accessed June 27, 2025,
+              <link xlink:href="https://www.copyright.com/blog/navigating-copyright-and-ai-in-financial-services/">https://www.copyright.com/blog/navigating-copyright-and-ai-in-financial-services/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How AI is reshaping copyright law and what it means for
+              the news industry - Reuters Institute, accessed June 27,
+              2025,
+              <link xlink:href="https://reutersinstitute.politics.ox.ac.uk/news/how-ai-reshaping-copyright-law-and-what-it-means-news-industry">https://reutersinstitute.politics.ox.ac.uk/news/how-ai-reshaping-copyright-law-and-what-it-means-news-industry</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Website admits copyright, "hot news" violations,
+              accessed June 27, 2025,
+              <link xlink:href="https://www.rcfp.org/website-admits-copyright-hot-news-violations/">https://www.rcfp.org/website-admits-copyright-hot-news-violations/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Advanced Copyright Issues in News Reporting, accessed June
+              27, 2025,
+              <link xlink:href="https://www.numberanalytics.com/blog/advanced-copyright-issues-in-news-reporting">https://www.numberanalytics.com/blog/advanced-copyright-issues-in-news-reporting</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Trademark, patent, or copyright - USPTO, accessed June 28,
+              2025,
+              <link xlink:href="https://www.uspto.gov/trademarks/basics/trademark-patent-copyright">https://www.uspto.gov/trademarks/basics/trademark-patent-copyright</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Legal Disclaimers | S&amp;P Dow Jones Indices - S&amp;P
+              Global, accessed June 27, 2025,
+              <link xlink:href="https://www.spglobal.com/spdji/en/disclaimers/">https://www.spglobal.com/spdji/en/disclaimers/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright, Trademarks and Disclaimers - NASDAQ Datastore,
+              accessed June 27, 2025,
+              <link xlink:href="https://datastore.nasdaq.com/copyright.aspx">https://datastore.nasdaq.com/copyright.aspx</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              S&amp;P Dow Jones Indices Wins Intellectual Property
+              Dispute - May 13, 2013 - Press Releases, accessed June 27,
+              2025,
+              <link xlink:href="https://press.spglobal.com/2013-05-13-S-P-Dow-Jones-Indices-Wins-Intellectual-Property-Dispute">https://press.spglobal.com/2013-05-13-S-P-Dow-Jones-Indices-Wins-Intellectual-Property-Dispute</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Stock Tickers, Trademarks And The Potential For Conflict -
+              Skadden, accessed June 27, 2025,
+              <link xlink:href="https://www.skadden.com/-/media/files/publications/2017/12/stocktickerstrademarksandthepotentialforconflict.pdf">https://www.skadden.com/-/media/files/publications/2017/12/stocktickerstrademarksandthepotentialforconflict.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Trade Secrets - WIPO, accessed June 27, 2025,
+              <link xlink:href="https://www.wipo.int/en/web/trade-secrets">https://www.wipo.int/en/web/trade-secrets</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Leveraging and Protecting Trade Secrets in the 21st
+              Century - Financial Poise, accessed June 27, 2025,
+              <link xlink:href="https://www.financialpoise.com/leveraging-and-protecting-trade-secrets-in-the-21st-century/">https://www.financialpoise.com/leveraging-and-protecting-trade-secrets-in-the-21st-century/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Strategies And Secrets of High Frequency Trading (HFT)
+              Firms - Investopedia, accessed June 27, 2025,
+              <link xlink:href="https://www.investopedia.com/articles/active-trading/092114/strategies-and-secrets-high-frequency-trading-hft-firms.asp">https://www.investopedia.com/articles/active-trading/092114/strategies-and-secrets-high-frequency-trading-hft-firms.asp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Trade Secret Litigation | IP Litigation | Services and
+              Industries - Sidley Austin LLP, accessed June 27, 2025,
+              <link xlink:href="https://www.sidley.com/en/services/intellectual-property-litigation/trade-secret-litigation">https://www.sidley.com/en/services/intellectual-property-litigation/trade-secret-litigation</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Patents vs Trade Secrets - Oury Clark, accessed June 27,
+              2025,
+              <link xlink:href="https://www.ouryclark.com/resources/quick-guide/patents-vs-trade-secrets/">https://www.ouryclark.com/resources/quick-guide/patents-vs-trade-secrets/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Trade Secret Protection in the Age of Large Language
+              Models: Risks, Reasonable Measures, and Legal Remedies -
+              Ocean Tomo, accessed June 27, 2025,
+              <link xlink:href="https://oceantomo.com/insights/trade-secret-protection-in-the-age-of-large-language-models-risks-reasonable-measures-and-legal-remedies/">https://oceantomo.com/insights/trade-secret-protection-in-the-age-of-large-language-models-risks-reasonable-measures-and-legal-remedies/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What's Known about Jim Simons and Renaissance
+              Technologies' Strategies - TrendSpider, accessed June 27,
+              2025,
+              <link xlink:href="https://trendspider.com/learning-center/whats-known-about-jim-simons-and-renaissance-technologies-strategies/">https://trendspider.com/learning-center/whats-known-about-jim-simons-and-renaissance-technologies-strategies/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Renaissance Technologies: The Complete History and
+              Strategy - Acquired Podcast, accessed June 27, 2025,
+              <link xlink:href="https://www.acquired.fm/episodes/renaissance-technologies">https://www.acquired.fm/episodes/renaissance-technologies</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Renaissance Technologies - Wikipedia, accessed June 27,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Renaissance_Technologies">https://en.wikipedia.org/wiki/Renaissance_Technologies</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Former Goldman Sachs Computer Programmer Sentenced in
+              Manhattan Federal Court to 97 Months in Prison for
+              Stealing Firm's Trade Secrets - FBI, accessed June 27,
+              2025,
+              <link xlink:href="https://www.fbi.gov/newyork/press-releases/2011/former-goldman-sachs-computer-programmer-sentenced-in-manhattan-federal-court-to-97-months-in-prison-for-stealing-firm2019s-trade-secrets">https://www.fbi.gov/newyork/press-releases/2011/former-goldman-sachs-computer-programmer-sentenced-in-manhattan-federal-court-to-97-months-in-prison-for-stealing-firm2019s-trade-secrets</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Court Rules That Source Code Theft Was Not a Crime - The
+              Syverson Law Firm, accessed June 27, 2025,
+              <link xlink:href="https://www.syversonlaw.com/articles/court-rules-that-source-code-theft-was-not-a-crime/">https://www.syversonlaw.com/articles/court-rules-that-source-code-theft-was-not-a-crime/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Verdict Reversed in Goldman HFT Code Theft Case -
+              WatersTechnology.com, accessed June 27, 2025,
+              <link xlink:href="https://www.waterstechnology.com/regulation/2167334/verdict-reversed-in-goldman-hft-code-theft-case">https://www.waterstechnology.com/regulation/2167334/verdict-reversed-in-goldman-hft-code-theft-case</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Goldman Sachs programmer has HFT code theft conviction
+              overturned - Finextra Research, accessed June 27, 2025,
+              <link xlink:href="https://www.finextra.com/newsarticle/27570/goldman-sachs-programmer-has-hft-code-theft-conviction-overturned">https://www.finextra.com/newsarticle/27570/goldman-sachs-programmer-has-hft-code-theft-conviction-overturned</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Goldman Ex-Trader Convicted of Code Theft | Courthouse
+              News Service, accessed June 27, 2025,
+              <link xlink:href="https://www.courthousenews.com/goldman-ex-trader-convicted-of-code-theft/">https://www.courthousenews.com/goldman-ex-trader-convicted-of-code-theft/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Jane Street and Millennium settle dispute over alleged
+              trading strategy theft - Hedgeweek, accessed June 27,
+              2025,
+              <link xlink:href="https://www.hedgeweek.com/jane-street-and-millennium-settle-dispute-over-alleged-trading-strategy-theft/">https://www.hedgeweek.com/jane-street-and-millennium-settle-dispute-over-alleged-trading-strategy-theft/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Jane Street-Millennium Trade Secrets Fight Ends in
+              Settlement - Claims Journal, accessed June 27, 2025,
+              <link xlink:href="https://www.claimsjournal.com/news/national/2024/12/09/327780.htm">https://www.claimsjournal.com/news/national/2024/12/09/327780.htm</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Jane Street, Millennium end India options trade secrets
+              case - The Economic Times, accessed June 27, 2025,
+              <link xlink:href="https://m.economictimes.com/markets/stocks/news/jane-street-millennium-end-india-options-trade-secrets-case/articleshow/116028015.cms">https://m.economictimes.com/markets/stocks/news/jane-street-millennium-end-india-options-trade-secrets-case/articleshow/116028015.cms</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              SEC Enforcement Action Against Two Sigma: Lessons in
+              Compliance and Technology Risks, accessed June 27, 2025,
+              <link xlink:href="https://arootah.com/blog/hedge-fund-and-family-office/sec-enforcement-action-against-two-sigma/">https://arootah.com/blog/hedge-fund-and-family-office/sec-enforcement-action-against-two-sigma/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              SEC Charges Two Sigma for Failing to Address Known
+              Vulnerabilities in its Investment Models, accessed June
+              27, 2025,
+              <link xlink:href="https://www.sec.gov/newsroom/press-releases/2025-15">https://www.sec.gov/newsroom/press-releases/2025-15</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Two Sigma fined US$90m by SEC over trading model scandal,
+              accessed June 27, 2025,
+              <link xlink:href="https://www.globaltrading.net/two-sigma-fined-90m-by-sec-over-trading-model-scandal/">https://www.globaltrading.net/two-sigma-fined-90m-by-sec-over-trading-model-scandal/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              TRADE SECRET LITIGATION AND ENFORCEMENT - Latham &amp;
+              Watkins LLP, accessed June 27, 2025,
+              <link xlink:href="https://www.lw.com/people/admin/upload/SiteAttachments/CD_REPRINT_JULY23_HotTopic_Latham.pdf">https://www.lw.com/people/admin/upload/SiteAttachments/CD_REPRINT_JULY23_HotTopic_Latham.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Practical Q&amp;A | Struggling with Trade Secret
+              Protection and Employee Management? A Guide to Risk
+              Control and Rights Enforcement - Rouse, accessed June 27,
+              2025,
+              <link xlink:href="https://rouse.com/insights/news/2025/practical-q-a-struggling-with-trade-secret-protection-and-employee-management-a-guide-to-risk-control-and-rights-enforcement">https://rouse.com/insights/news/2025/practical-q-a-struggling-with-trade-secret-protection-and-employee-management-a-guide-to-risk-control-and-rights-enforcement</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What cannot be patented? | DexPatent, accessed June 27,
+              2025,
+              <link xlink:href="https://dexpatent.com/patent-guide/what-cannot-be-patented/">https://dexpatent.com/patent-guide/what-cannot-be-patented/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What cannot be patented? - Patent- och
+              registreringsverket, accessed June 27, 2025,
+              <link xlink:href="https://www.prv.se/en/patents/the-advanced-patent-guide/examples-of-what-patents-cost/what-cannot-be-patented/">https://www.prv.se/en/patents/the-advanced-patent-guide/examples-of-what-patents-cost/what-cannot-be-patented/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What Can and Can't Be Patented? | Emerson Thomson Bennett,
+              accessed June 27, 2025,
+              <link xlink:href="https://www.etblaw.com/what-can-and-can-t-be-patented/">https://www.etblaw.com/what-can-and-can-t-be-patented/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Can You Patent an Algorithm? - Goldstein Patent Law |
+              Patent and Trademark Experts for Individuals, Start-ups
+              and Entrepreneurs, accessed June 27, 2025,
+              <link xlink:href="https://www.goldsteinpatentlaw.com/can-you-patent-algorithm/">https://www.goldsteinpatentlaw.com/can-you-patent-algorithm/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Can You Patent an Algorithm?, accessed June 27, 2025,
+              <link xlink:href="https://patentlawyer.io/can-you-patent-an-algorithm/">https://patentlawyer.io/can-you-patent-an-algorithm/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Trading Technologies International v. IBG LLC, 921 F. 3d
+              1084 - BitLaw, accessed June 27, 2025,
+              <link xlink:href="https://www.bitlaw.com/source/cases/patent/Trading-Tech-1.html">https://www.bitlaw.com/source/cases/patent/Trading-Tech-1.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is an Abstract Idea, Anyway? - Patent Docs, accessed
+              June 27, 2025,
+              <link xlink:href="https://www.patentdocs.org/2020/03/what-is-an-abstract-idea-anyway.html">https://www.patentdocs.org/2020/03/what-is-an-abstract-idea-anyway.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Patent Breakthrough: SEC-Compliant Blockchain Platform
+              Enables Direct Stock Trading, accessed June 27, 2025,
+              <link xlink:href="https://www.stocktitan.net/news/BEGI/patented-groundbreaking-blockchain-for-public-companies-black-star-kas2sfbt1452.html">https://www.stocktitan.net/news/BEGI/patented-groundbreaking-blockchain-for-public-companies-black-star-kas2sfbt1452.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Patent Your Algorithm: Steps and Requirements Explained -
+              AngelSchool.vc, accessed June 27, 2025,
+              <link xlink:href="https://www.angelschool.vc/blog/can-you-patent-an-algorithm-you-created-from-scratch">https://www.angelschool.vc/blog/can-you-patent-an-algorithm-you-created-from-scratch</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Trade Secret Economics And Value - Licensing Executives
+              Society International, accessed June 27, 2025,
+              <link xlink:href="https://lesi.org/article-of-the-month/trade-secret-economics-and-value/">https://lesi.org/article-of-the-month/trade-secret-economics-and-value/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Trade secrets / regulatory data protection - USPTO,
+              accessed June 27, 2025,
+              <link xlink:href="https://www.uspto.gov/ip-policy/trade-secret-policy">https://www.uspto.gov/ip-policy/trade-secret-policy</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Search for patents - USPTO, accessed June 27, 2025,
+              <link xlink:href="https://www.uspto.gov/patents/search">https://www.uspto.gov/patents/search</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Patent Public Search - USPTO, accessed June 27, 2025,
+              <link xlink:href="https://www.uspto.gov/patents/search/patent-public-search">https://www.uspto.gov/patents/search/patent-public-search</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              PCT – The International Patent System - WIPO, accessed
+              June 27, 2025,
+              <link xlink:href="https://www.wipo.int/en/web/pct-system">https://www.wipo.int/en/web/pct-system</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              PATENTSCOPE - WIPO, accessed June 27, 2025,
+              <link xlink:href="https://www.wipo.int/en/web/patentscope">https://www.wipo.int/en/web/patentscope</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Google Patents, accessed June 27, 2025,
+              <link xlink:href="https://patents.google.com/">https://patents.google.com/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              United States Patent and Trademark Office, accessed June
+              27, 2025,
+              <link xlink:href="https://www.uspto.gov/">https://www.uspto.gov/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Patent Public Search Basic - USPTO, accessed June 27,
+              2025,
+              <link xlink:href="https://ppubs.uspto.gov/pubwebapp/static/pages/ppubsbasic.html">https://ppubs.uspto.gov/pubwebapp/static/pages/ppubsbasic.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Search our trademark database - USPTO, accessed June 27,
+              2025,
+              <link xlink:href="https://www.uspto.gov/trademarks/search">https://www.uspto.gov/trademarks/search</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Google Patents Advanced Search, accessed June 27, 2025,
+              <link xlink:href="https://www.google.com/advanced_patent_search">https://www.google.com/advanced_patent_search</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Dow Jones &amp; Company, Inc., Plaintiff-appellant, v.
+              International Securities Exchange, Inc., and Options
+              Clearing Corporation, Defendant-appellees.the Mcgraw-hill
+              Companies, Inc., Plaintiff-appellant, v. International
+              Securities Exchange, Inc., Defendant-appellee.docket No.
+              05-4812-cv.docket No. 05-4972-cv, 451 F.3d 295 (2d Cir.
+              2006) - Justia Law, accessed June 27, 2025,
+              <link xlink:href="https://law.justia.com/cases/federal/appellate-courts/F3/451/295/627285/">https://law.justia.com/cases/federal/appellate-courts/F3/451/295/627285/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Compliance for Financial Technology Platforms: A
+              Primer | ScoreDetect Blog, accessed June 27, 2025,
+              <link xlink:href="https://www.scoredetect.com/blog/posts/copyright-compliance-for-financial-technology-platforms-a-primer">https://www.scoredetect.com/blog/posts/copyright-compliance-for-financial-technology-platforms-a-primer</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Regulatory Notice 21-18 | FINRA.org, accessed June 27,
+              2025,
+              <link xlink:href="https://www.finra.org/rules-guidance/notices/21-18">https://www.finra.org/rules-guidance/notices/21-18</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

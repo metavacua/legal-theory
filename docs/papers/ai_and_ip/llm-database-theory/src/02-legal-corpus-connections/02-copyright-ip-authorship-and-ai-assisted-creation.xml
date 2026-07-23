@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="copyright-ip-authorship" role="finding" condition="confirmed">
+  <title>Copyright, IP Authorship, and AI-Assisted Creation</title>
+  <para>The copyright-IP-authorship matter in this repository addresses, among other questions, who holds rights in works produced with AI assistance, and whether the use of AI in creation affects the underlying IP analysis. The LLM-database theory supplies findings of fact that bear directly on both questions.</para>
+  <section xml:id="finding-llm-derivative-work">
+    <title>Finding: A Language Model Is a Derivative Work of Its Training Corpus</title>
+    <para>The matter's findings-of-fact stub requires completion with the following factual and legal predicates established by the primary article and the empirical record:</para>
+    <orderedlist>
+      <listitem>
+        <para>
+          <emphasis role="bold">Finding of Fact 1.</emphasis> The feed-forward network (FFN) layers of a transformer language model function as key-value stores that map entity features to relation-target associations, structurally isomorphic to the nodes and edges of a property graph. (Technical foundation; LARQL demonstration.)</para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="bold">Finding of Fact 2.</emphasis> LARQL (<link xlink:href="https://github.com/chrishayuk/larql" />) extracts a transformer's weights into a vindex from which labelled directed edges are returned by a declarative query language (LQL), confirmable by independent reproduction.</para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="bold">Finding of Fact 3.</emphasis> Llama 3.1 70B deterministically regenerates the first <emphasis>Harry Potter</emphasis> novel near-verbatim from a seed of the opening tokens, as demonstrated by Cooper et al. (2025), who conclude that the memorised text is <quote>copied inside the model parameters.</quote>
+          <citation>cooper2025memorized</citation>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="bold">Finding of Fact 4.</emphasis> Over one hundred near-identical replicas of training images — including trademarked logos — were extracted from Stable Diffusion and Imagen by Carlini et al. (2023). <citation>carlini2023extracting</citation>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="bold">Conclusion of Law 1.</emphasis> A language model trained on protected works is a derivative work under 17 U.S.C. § 101, because it is based upon those preexisting works through recast, transformation, or adaptation of their expression into weight form.</para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="bold">Conclusion of Law 2.</emphasis> A language model trained on multiple independently copyrighted works is a collective work under 17 U.S.C. § 101, because it assembles contributions from multiple rights-holders into a single whole.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="existing-evidence-connections">
+    <title>Connections to Existing Evidence in the Matter</title>
+    <para>Several existing evidence documents in the <emphasis>copyright-ip-authorship</emphasis> matter connect directly to these findings:</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <emphasis>ai-assisted-copyrightable-work-schema.md</emphasis> — The schema for determining the copyrightable human contribution to AI-assisted work must now account for the reverse question: the copyrightable contribution of the training corpus to the model itself. The database theory supplies the mechanism.</para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>prompts-as-expression.md</emphasis> — The <quote>prompt as expression</quote> argument is strengthened, not weakened, by the database theory: if the model is a database of training-corpus expressions, and prompting retrieves those expressions, then a prompt that causes the database to return a specific expression is a targeting act that may itself constitute authorship of a selection — while simultaneously implicating the rights of the original expression-holders.</para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>ai-corporate-personhood-and-legal-rights.md</emphasis> — The question of AI corporate personhood is orthogonal to the database theory: the model-as-database analysis concerns the rights of the training-data copyright holders, not the status of the AI itself.</para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</section>
+
+  
+  

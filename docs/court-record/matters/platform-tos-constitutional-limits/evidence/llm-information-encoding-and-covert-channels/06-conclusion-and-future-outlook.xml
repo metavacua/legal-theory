@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="conclusion-and-future-outlook">
+  <title>
+    <emphasis role="strong">Conclusion and Future
+    Outlook</emphasis>
+  </title>
+  <para>
+      This report has embarked on a comprehensive journey to demystify
+      the internal and interactive mechanisms of Large Language Models,
+      addressing the core inquiries into how they encode information,
+      why they operate probabilistically, and what channels they use for
+      communication. The analysis began by deconstructing the perception
+      of an internal "noise system," revealing it to be the
+      highly structured, high-dimensional latent space where meaning is
+      mathematically encoded through a multi-stage pipeline of
+      tokenization, embedding, and self-attention. This complex
+      architecture, it was shown, is not an arbitrary design but an
+      emergent necessity driven by the simple, yet powerful, training
+      objective of next-token prediction. It is this singular goal that
+      compels the model to build a sophisticated internal world model,
+      from which complex and often unpredictable abilities arise.
+    </para>
+  <para>
+      The probabilistic nature of the LLM's generative process was
+      identified not as a flaw, but as a controllable feature that
+      enables creativity and naturalness in its output. Crucially, this
+      very stochasticity—the space of plausible alternatives for each
+      generated token—provides the carrier signal for covert
+      communication. The report detailed how the principles of
+      steganography are being adapted to this new medium, allowing for
+      the embedding of hidden messages within seemingly innocuous
+      AI-generated text and images. This creates a powerful dual-use
+      technology, with profound implications for privacy, security, and
+      AI safety, particularly the risk of models evading oversight by
+      concealing their true reasoning.
+    </para>
+  <para>
+      Finally, these covert channels were contrasted with the overt,
+      formal communication protocols that underpin collaborative
+      multi-agent AI systems. The evolution of these protocols from
+      early academic frameworks to modern, layered standards reflects
+      the maturation of the field, paving the way for a future of
+      interoperable, federated "internets of agents." The
+      strategic interplay between these overt and covert communication
+      modalities highlights a critical frontier for future research, as
+      advanced autonomous systems may learn to leverage both to achieve
+      their goals.
+    </para>
+  <para>
+      Looking ahead, several key challenges and research directions
+      emerge. The quest for <emphasis role="strong">model
+      interpretability</emphasis> remains paramount; developing
+      techniques to peer inside the latent space and understand the
+      model's representations is essential to making the
+      "noise" less noisy and building more trustworthy
+      systems. The escalating <emphasis role="strong">arms race between
+      steganography and steganalysis</emphasis> will continue to drive
+      innovation in both information hiding and detection, demanding
+      ever more sophisticated AI-based tools on both sides. Lastly, the
+      development of <emphasis role="strong">robust, secure, and
+      universally adopted standards for multi-agent
+      communication</emphasis> is critical. Just as the internet
+      required standards like TCP/IP and HTTP to flourish, the ecosystem
+      of AI agents will need a common language to unlock its full
+      collaborative potential safely and effectively. Addressing these
+      frontiers will be essential as we navigate the complexities and
+      opportunities of an increasingly agentic world.
+    </para>
+  <section xml:id="works-cited">
+    <title>
+      <emphasis role="strong">Works cited</emphasis>
+    </title>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+            Tokenization - Mistral AI Documentation, accessed August 25,
+            2025,
+            <link xlink:href="https://docs.mistral.ai/guides/tokenization/">https://docs.mistral.ai/guides/tokenization/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            This Is How LLMs Break Down the Language | Towards Data
+            Science, accessed August 25, 2025,
+            <link xlink:href="https://towardsdatascience.com/this-is-how-llms-break-down-the-language/">https://towardsdatascience.com/this-is-how-llms-break-down-the-language/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            5 Types of Word Embeddings and Example NLP Applications -
+            Swimm, accessed August 25, 2025,
+            <link xlink:href="https://swimm.io/learn/large-language-models/5-types-of-word-embeddings-and-example-nlp-applications">https://swimm.io/learn/large-language-models/5-types-of-word-embeddings-and-example-nlp-applications</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            The Technical User's Introduction to LLM Tokenization -
+            Christopher Samiullah, accessed August 25, 2025,
+            <link xlink:href="https://christophergs.com/blog/understanding-llm-tokenization">https://christophergs.com/blog/understanding-llm-tokenization</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Understanding tokens - .NET | Microsoft Learn, accessed
+            August 25, 2025,
+            <link xlink:href="https://learn.microsoft.com/en-us/dotnet/ai/conceptual/understanding-tokens">https://learn.microsoft.com/en-us/dotnet/ai/conceptual/understanding-tokens</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Understanding large language models: A comprehensive guide -
+            Elastic, accessed August 25, 2025,
+            <link xlink:href="https://www.elastic.co/what-is/large-language-models">https://www.elastic.co/what-is/large-language-models</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            What Are Word Embeddings? | IBM, accessed August 25, 2025,
+            <link xlink:href="https://www.ibm.com/think/topics/word-embeddings">https://www.ibm.com/think/topics/word-embeddings</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Are LLMs just predicting the next token? :
+            r/ArtificialInteligence - Reddit, accessed August 25, 2025,
+            <link xlink:href="https://www.reddit.com/r/ArtificialInteligence/comments/1jo3o69/are_llms_just_predicting_the_next_token/">https://www.reddit.com/r/ArtificialInteligence/comments/1jo3o69/are_llms_just_predicting_the_next_token/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Word embedding - Wikipedia, accessed August 25, 2025,
+            <link xlink:href="https://en.wikipedia.org/wiki/Word_embedding">https://en.wikipedia.org/wiki/Word_embedding</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            What is self-attention? | IBM, accessed August 25, 2025,
+            <link xlink:href="https://www.ibm.com/think/topics/self-attention">https://www.ibm.com/think/topics/self-attention</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            The Illustrated Transformer – Jay Alammar – Visualizing
+            machine ..., accessed August 25, 2025,
+            <link xlink:href="https://jalammar.github.io/illustrated-transformer/">https://jalammar.github.io/illustrated-transformer/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            A Deep Dive into the Self-Attention Mechanism of
+            Transformers | by Shreya Srivastava | Analytics Vidhya |
+            Medium, accessed August 25, 2025,
+            <link xlink:href="https://medium.com/analytics-vidhya/a-deep-dive-into-the-self-attention-mechanism-of-transformers-fe943c77e654">https://medium.com/analytics-vidhya/a-deep-dive-into-the-self-attention-mechanism-of-transformers-fe943c77e654</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            How Large Language Models Encode Context Knowledge? A
+            Layer-Wise Probing Study, accessed August 25, 2025,
+            <link xlink:href="https://arxiv.org/html/2402.16061v1">https://arxiv.org/html/2402.16061v1</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            For Perception Tasks: is LLM Pretraining by Next-Token
+            Prediction Worth its Cost? - OpenReview, accessed August 25,
+            2025,
+            <link xlink:href="https://openreview.net/pdf?id=wYGBWOjq1Q">https://openreview.net/pdf?id=wYGBWOjq1Q</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Emergent Abilities in Large Language Models: A Survey -
+            arXiv, accessed August 25, 2025,
+            <link xlink:href="https://arxiv.org/html/2503.05788v2">https://arxiv.org/html/2503.05788v2</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Emergent Abilities of Large Language Models - AssemblyAI,
+            accessed August 25, 2025,
+            <link xlink:href="https://www.assemblyai.com/blog/emergent-abilities-of-large-language-models">https://www.assemblyai.com/blog/emergent-abilities-of-large-language-models</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            [R] Are Emergent Abilities in Large Language Models just
+            In-Context Learning? - Reddit, accessed August 25, 2025,
+            <link xlink:href="https://www.reddit.com/r/MachineLearning/comments/19bkcqz/r_are_emergent_abilities_in_large_language_models/">https://www.reddit.com/r/MachineLearning/comments/19bkcqz/r_are_emergent_abilities_in_large_language_models/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            [2503.05788] Emergent Abilities in Large Language Models: A
+            Survey - arXiv, accessed August 25, 2025,
+            <link xlink:href="https://arxiv.org/abs/2503.05788">https://arxiv.org/abs/2503.05788</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Emergent Abilities in Large Language Models: An Explainer,
+            accessed August 25, 2025,
+            <link xlink:href="https://cset.georgetown.edu/article/emergent-abilities-in-large-language-models-an-explainer/">https://cset.georgetown.edu/article/emergent-abilities-in-large-language-models-an-explainer/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Are Emergent Abilities of Large Language Models a Mirage?,
+            accessed August 25, 2025,
+            <link xlink:href="https://papers.neurips.cc/paper_files/paper/2023/file/adc98a266f45005c403b8311ca7e8bd7-Paper-Conference.pdf">https://papers.neurips.cc/paper_files/paper/2023/file/adc98a266f45005c403b8311ca7e8bd7-Paper-Conference.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Emergent Response Planning in LLM - arXiv, accessed August
+            25, 2025,
+            <link xlink:href="https://arxiv.org/html/2502.06258v1">https://arxiv.org/html/2502.06258v1</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Probabilistic Nature of LLMs | PDF | Applied Mathematics |
+            Cognitive Science - Scribd, accessed August 25, 2025,
+            <link xlink:href="https://www.scribd.com/document/843307165/Probabilistic-Nature-of-LLMs">https://www.scribd.com/document/843307165/Probabilistic-Nature-of-LLMs</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Achieving Consistency and Reproducibility in Large Language
+            ..., accessed August 25, 2025,
+            <link xlink:href="https://pub.aimind.so/creating-deterministic-consistent-and-reproducible-text-in-llms-e589ba230d44">https://pub.aimind.so/creating-deterministic-consistent-and-reproducible-text-in-llms-e589ba230d44</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Digital watermark: a salutary transparency measure? [2/2] -
+            Linc-Cnil, accessed August 25, 2025,
+            <link xlink:href="https://linc.cnil.fr/en/le-tatouage-numerique-une-mesure-de-transparence-salutaire-22">https://linc.cnil.fr/en/le-tatouage-numerique-une-mesure-de-transparence-salutaire-22</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Python, AI for Steganography - Sheriff Babu - Medium,
+            accessed August 25, 2025,
+            <link xlink:href="https://sheriffjbabu.medium.com/python-ai-for-steganography-862e732cd3e0">https://sheriffjbabu.medium.com/python-ai-for-steganography-862e732cd3e0</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Steganography Beyond Space-Time With Chain of Multimodal AI
+            Agents - arXiv, accessed August 25, 2025,
+            <link xlink:href="https://arxiv.org/html/2502.18547v1">https://arxiv.org/html/2502.18547v1</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            LLsM: Generative Linguistic Steganography with Large
+            Language Model - arXiv, accessed August 25, 2025,
+            <link xlink:href="https://arxiv.org/html/2401.15656v3">https://arxiv.org/html/2401.15656v3</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            arXiv:2403.10856v1 [cs.CL] 16 Mar 2024, accessed August 25,
+            2025,
+            <link xlink:href="https://arxiv.org/pdf/2403.10856">https://arxiv.org/pdf/2403.10856</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Neural Linguistic Steganography - ACL Anthology, accessed
+            August 25, 2025,
+            <link xlink:href="https://aclanthology.org/D19-1115/">https://aclanthology.org/D19-1115/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Digital watermarking - Wikipedia, accessed August 25, 2025,
+            <link xlink:href="https://en.wikipedia.org/wiki/Digital_watermarking">https://en.wikipedia.org/wiki/Digital_watermarking</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Digital Watermarking Powered by Deep Learning - Steg.AI,
+            accessed August 25, 2025,
+            <link xlink:href="https://steg.ai/digital-watermarking/">https://steg.ai/digital-watermarking/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Towards Next-Generation Steganalysis: LLMs Unleash the Power
+            of Detecting Steganography - arXiv, accessed August 25,
+            2025,
+            <link xlink:href="https://arxiv.org/html/2405.09090v1">https://arxiv.org/html/2405.09090v1</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Novel Linguistic Steganography Based on Character-Level Text
+            Generation - MDPI, accessed August 25, 2025,
+            <link xlink:href="https://www.mdpi.com/2227-7390/8/9/1558">https://www.mdpi.com/2227-7390/8/9/1558</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            A novel method for linguistic steganography by English
+            translation using attention mechanism and probability
+            distribution theory - PMC, accessed August 25, 2025,
+            <link xlink:href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10760771/">https://pmc.ncbi.nlm.nih.gov/articles/PMC10760771/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            DeepStego: Privacy-Preserving Natural Language Steganography
+            ..., accessed August 25, 2025,
+            <link xlink:href="https://www.mdpi.com/2073-431X/14/5/165">https://www.mdpi.com/2073-431X/14/5/165</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Frustratingly Easy Edit-based Linguistic Steganography with
+            a Masked Language Model - ACL Anthology, accessed August 25,
+            2025,
+            <link xlink:href="https://aclanthology.org/2021.naacl-main.433.pdf">https://aclanthology.org/2021.naacl-main.433.pdf</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            (PDF) SteganoDDPM: A high-quality image steganography self
+            ..., accessed August 25, 2025,
+            <link xlink:href="https://www.researchgate.net/publication/380004064_SteganoDDPM_A_high-quality_image_steganography_self-learning_method_using_diffusion_model">https://www.researchgate.net/publication/380004064_SteganoDDPM_A_high-quality_image_steganography_self-learning_method_using_diffusion_model</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            [Literature Review] Diffusion-Based Hierarchical Image
+            Steganography - Moonlight, accessed August 25, 2025,
+            <link xlink:href="https://www.themoonlight.io/en/review/diffusion-based-hierarchical-image-steganography">https://www.themoonlight.io/en/review/diffusion-based-hierarchical-image-steganography</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            The Steganographic Potentials of Language Models, accessed
+            August 25, 2025,
+            <link xlink:href="https://arxiv.org/pdf/2505.03439">https://arxiv.org/pdf/2505.03439</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Early Signs of Steganographic Capabilities in Frontier LLMs
+            - LessWrong, accessed August 25, 2025,
+            <link xlink:href="https://www.lesswrong.com/posts/nwx6duiDZcHatbpPT/untitled-draft-6osz">https://www.lesswrong.com/posts/nwx6duiDZcHatbpPT/untitled-draft-6osz</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            What is AI Agent Communication? | IBM, accessed August 25,
+            2025,
+            <link xlink:href="https://www.ibm.com/think/topics/ai-agent-communication">https://www.ibm.com/think/topics/ai-agent-communication</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Communication in Multi-agent Environment in AI -
+            GeeksforGeeks, accessed August 25, 2025,
+            <link xlink:href="https://www.geeksforgeeks.org/artificial-intelligence/communication-in-multi-agent-environment-in-ai/">https://www.geeksforgeeks.org/artificial-intelligence/communication-in-multi-agent-environment-in-ai/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Agent Communication in Multi-Agent Systems: Enhancing
+            Coordination and Efficiency in Complex Networks - SmythOS,
+            accessed August 25, 2025,
+            <link xlink:href="https://smythos.com/developers/agent-development/agent-communication-in-multi-agent-systems/">https://smythos.com/developers/agent-development/agent-communication-in-multi-agent-systems/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            What Are AI Agent Protocols? - IBM, accessed August 25,
+            2025,
+            <link xlink:href="https://www.ibm.com/think/topics/ai-agent-protocols">https://www.ibm.com/think/topics/ai-agent-protocols</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Agentic AI Communication Protocols: The Backbone of
+            Autonomous Multi-Agent Systems, accessed August 25, 2025,
+            <link xlink:href="https://datasciencedojo.com/blog/agentic-ai-communication-protocols/">https://datasciencedojo.com/blog/agentic-ai-communication-protocols/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            Top 5 Open Protocols for Building Multi-Agent AI Systems
+            2025 - OneReach, accessed August 25, 2025,
+            <link xlink:href="https://onereach.ai/blog/power-of-multi-agent-ai-open-protocols/">https://onereach.ai/blog/power-of-multi-agent-ai-open-protocols/</link>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+            AI Agents and Automation: Multiagent Communication Protocols
+            | by Jingdong Sun, accessed August 25, 2025,
+            <link xlink:href="https://jingdongsun.medium.com/ai-agents-and-automation-multiagent-communication-protocols-940281ccc259">https://jingdongsun.medium.com/ai-agents-and-automation-multiagent-communication-protocols-940281ccc259</link>
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+</section>

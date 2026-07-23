@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-i-the-foundation-of-non-disclaimable-duties-in-california">
+  <title>
+    <emphasis role="strong">Part I: The Foundation of
+    Non-Disclaimable Duties in California</emphasis>
+  </title>
+  <para>
+      The enforceability of any contract in California is subject to
+      overarching legal principles that prevent agreements from
+      violating public policy or fundamental standards of fairness.
+      These principles form the basis for duties that cannot be simply
+      waived by a clause in a Terms of Service agreement.
+    </para>
+  <section xml:id="s-11-the-general-duty-of-care-california-civil-code--1714">
+    <title>
+      <emphasis role="strong">1.1 The General Duty of Care
+      (California Civil Code § 1714)</emphasis>
+    </title>
+    <para>
+        The cornerstone of liability in California is established in
+        Civil Code § 1714(a), which states: "Everyone is
+        responsible, not only for the result of his or her willful acts,
+        but also for an injury occasioned to another by his or her want
+        of ordinary care or skill in the management of his or her
+        property or person".1 This statute codifies a universal
+        duty of care that all persons and entities owe to one another.
+      </para>
+    <para>
+        This is not an abstract principle; it creates a direct,
+        non-disclaimable obligation for business owners to their
+        patrons.1 A business must exercise reasonable care to keep its
+        premises and operations safe for visitors.11 While a contract
+        may attempt to limit liability, it cannot fully absolve a
+        business of this fundamental duty to act with "ordinary
+        care or skill" to prevent foreseeable harm.12
+      </para>
+  </section>
+  <section xml:id="s-12-the-doctrine-of-unconscionability">
+    <title>
+      <emphasis role="strong">1.2 The Doctrine of
+      Unconscionability</emphasis>
+    </title>
+    <para>
+        California law provides a powerful tool for courts to police
+        unfair contracts: the doctrine of unconscionability. A court can
+        refuse to enforce a contract or any of its terms if it finds the
+        agreement to be unconscionable, meaning it is so unfair that it
+        "shocks the conscience".8
+      </para>
+    <para>
+        The analysis involves two components 9:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Procedural
+            Unconscionability</emphasis>: This focuses on the process of
+            contract formation and the presence of
+            "oppression" or "surprise." It often
+            arises from unequal bargaining power, such as in a
+            "take it or leave it" contract of adhesion where
+            the user has no ability to negotiate terms.9
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Substantive
+            Unconscionability</emphasis>: This examines the fairness of
+            the terms themselves, looking for provisions that are
+            "overly harsh" or "so one-sided" as to
+            be unreasonable.9 Examples include severe limitations on the
+            seller's liability or on a consumer's right to seek legal
+            relief.8
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        California courts use a "sliding scale" approach: the
+        more procedurally unconscionable the contract formation is, the
+        less evidence of substantive unconscionability is required to
+        invalidate a term, and vice versa.9 This doctrine is
+        particularly relevant for challenging broad liability
+        disclaimers in standard Terms of Service, as these agreements
+        are almost always procedurally unconscionable.
+      </para>
+  </section>
+</section>
+  

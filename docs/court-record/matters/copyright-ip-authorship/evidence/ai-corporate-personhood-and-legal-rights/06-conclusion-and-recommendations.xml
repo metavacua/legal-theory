@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="conclusion-and-recommendations">
+  <title>
+    <emphasis role="strong">Conclusion and
+    Recommendations</emphasis>
+  </title>
+  <para>
+      The jurisprudence of the Supreme Court in <emphasis>Citizens
+      United</emphasis> and <emphasis>Hobby Lobby</emphasis>, combined
+      with the D.C. Circuit's ruling in <emphasis>Thaler v.
+      Perlmutter</emphasis>, has crystallized a tiered, functional, and
+      deeply human-centric framework of legal personhood in American
+      law. This framework is not based on an entity's intrinsic
+      qualities, such as sentience or intelligence, but on its legally
+      recognized role as a source, proxy, or instrument of human agency.
+      The natural person is the source of rights; the corporate person
+      is a privileged proxy for exercising those rights; and the
+      artificial entity is a mere instrument. While this hierarchy
+      provides a coherent, if controversial, map of our current legal
+      landscape, it is becoming increasingly unstable. The rise of
+      autonomous AI and the immense power of global corporations create
+      profound accountability gaps that this 20th-century model is
+      ill-equipped to address. To ensure that our legal system remains
+      robust, accountable, and just, a series of forward-looking reforms
+      is necessary.
+    </para>
+  <section xml:id="s-51-recalibrating-corporate-personhood">
+    <title>
+      <emphasis role="strong">5.1 Recalibrating Corporate
+      Personhood</emphasis>
+    </title>
+    <para>
+        The expansion of corporate rights has been justified on the
+        grounds that corporations act as proxies for their human
+        members. However, this justification becomes strained when
+        corporate actions inflict demonstrable harm on the fundamental
+        rights of other natural persons, such as employees or the
+        general public. To recalibrate this balance, legislative action
+        is needed.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Recommendation:</emphasis> Congress
+            should enact legislation to clarify that corporate
+            constitutional rights are derivative and may be subject to
+            reasonable limitations when their exercise directly
+            infringes upon the established rights and well-being of
+            natural persons. This would involve revisiting the
+            Bipartisan Campaign Reform Act with a new framework that
+            addresses the dissenting concerns in <emphasis>Citizens
+            United</emphasis> regarding the distorting effects of
+            concentrated wealth on the political process. Furthermore,
+            in the context of religious freedom, legislation should
+            affirm that while the beliefs of owners are protected, this
+            protection cannot be used to create a substantial burden on
+            the health, safety, and civil rights of third parties, such
+            as employees.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="s-52-innovating-a-legal-status-for-ai">
+    <title>
+      <emphasis role="strong">5.2 Innovating a Legal Status for
+      AI</emphasis>
+    </title>
+    <para>
+        The classification of advanced AI as simple property is a legal
+        fiction that is rapidly becoming untenable, particularly within
+        corporate governance. The current framework creates a dangerous
+        accountability vacuum where harm caused by autonomous systems
+        may have no clear legal remedy.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Recommendation:</emphasis> State and
+            federal legislatures should pioneer the creation of a
+            <emphasis>sui generis</emphasis> legal category for advanced
+            autonomous systems that perform high-stakes fiduciary or
+            decision-making functions. This new status, which might be
+            termed "Electronic Agency" or "Registered
+            Fiduciary System," would be distinct from both natural
+            personhood and property. It would not grant AI
+            constitutional rights but would, for the first time, assign
+            it specific legal duties (e.g., a codified duty of care,
+            loyalty, and explainability) and make it directly subject to
+            legal and regulatory oversight. As proposed in the petition
+            to the California Secretary of State, this could involve
+            creating a public registry of foundational AI models used by
+            corporations, allowing for forensic auditing and creating an
+            unimpeachable source of truth for judicial proceedings,
+            thereby closing the accountability gap.29
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="s-53-modernizing-intellectual-property-law">
+    <title>
+      <emphasis role="strong">5.3 Modernizing Intellectual
+      Property Law</emphasis>
+    </title>
+    <para>
+        The <emphasis>Thaler</emphasis> decision correctly interpreted
+        the human-centric nature of the existing Copyright Act but left
+        a void regarding the legal status of the vast and growing body
+        of creative work generated through human-AI collaboration. This
+        uncertainty threatens to stifle innovation and create endless
+        litigation.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Recommendation:</emphasis> Congress
+            should amend the Copyright Act to establish a clear
+            framework for works created with the assistance of
+            generative AI. This reform should move beyond the simple
+            binary presented in <emphasis>Thaler</emphasis>. It could
+            create a new category of protection for "works of
+            assisted authorship" or "computationally generated
+            works," where the scope of rights is determined by the
+            degree of "original human creative control" or
+            "substantive human prompting." This would provide
+            legal certainty for artists, authors, and industries that
+            increasingly rely on AI as a creative partner, ensuring that
+            the law keeps pace with the reality of technological
+            advancement.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              Autonomy: A Myth in American Law
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Defining Human Experiments Legally
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Consent: Theories, Language, Culture
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Architecture of Non-Consensual Legality: A Report on
+              Actions, Organizations, and Social Behaviors Insensitive
+              to Consent
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Corporate personhood - Wikipedia, accessed October 4,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Corporate_personhood">https://en.wikipedia.org/wiki/Corporate_personhood</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Personhood
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              What Is Corporate Personhood? - Northwest Registered
+              Agent, accessed October 4, 2025,
+              <link xlink:href="https://www.northwestregisteredagent.com/maintain-a-business/alter-ego-doctrine/corporate-personhood">https://www.northwestregisteredagent.com/maintain-a-business/alter-ego-doctrine/corporate-personhood</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Corporate Personhood as Legal and Literary Fiction
+              (Chapter 13) - States, Firms, and Their Legal Fictions -
+              Cambridge University Press, accessed October 4, 2025,
+              <link xlink:href="https://www.cambridge.org/core/books/states-firms-and-their-legal-fictions/corporate-personhood-as-legal-and-literary-fiction/3185529FBB30D211A1E7E388449D21C6">https://www.cambridge.org/core/books/states-firms-and-their-legal-fictions/corporate-personhood-as-legal-and-literary-fiction/3185529FBB30D211A1E7E388449D21C6</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Corporate Personhood Explained: Rights, Limits, and Debate
+              - UpCounsel, accessed October 4, 2025,
+              <link xlink:href="https://www.upcounsel.com/corporate-personhood">https://www.upcounsel.com/corporate-personhood</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Corporate Personhood: What It Means and How It Has Evolved
+              - Purdue Global Law School, accessed October 4, 2025,
+              <link xlink:href="https://www.purduegloballawschool.edu/blog/news/corporate-personhood">https://www.purduegloballawschool.edu/blog/news/corporate-personhood</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              SO WHAT IF CORPORATIONS AREN'T PEOPLE? - Cato Institute,
+              accessed October 4, 2025,
+              <link xlink:href="https://www.cato.org/sites/cato.org/files/articles/Shapiro-JMLR-vol44-n4-2011.pdf">https://www.cato.org/sites/cato.org/files/articles/Shapiro-JMLR-vol44-n4-2011.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              THE LONG HISTORY OF CORPORATE RIGHTS - Boston University,
+              accessed October 4, 2025,
+              <link xlink:href="https://www.bu.edu/bulawreview/files/2018/11/WINKLER-4.pdf">https://www.bu.edu/bulawreview/files/2018/11/WINKLER-4.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Corporation Is a Person: The Language of a Legal
+              Fiction - Tulane Law Review, accessed October 4, 2025,
+              <link xlink:href="https://www.tulanelawreview.org/pub/volume61/issue3/the-corporation-is-a-person-the-language-of-a-legal-fiction">https://www.tulanelawreview.org/pub/volume61/issue3/the-corporation-is-a-person-the-language-of-a-legal-fiction</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Critiquing Philosophies Through Science
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Why the Campaign Against Corporate Personhood Is Misguided
+              - CLS Blue Sky Blog, accessed October 4, 2025,
+              <link xlink:href="https://clsbluesky.law.columbia.edu/2022/02/08/why-the-campaign-against-corporate-personhood-is-misguided/">https://clsbluesky.law.columbia.edu/2022/02/08/why-the-campaign-against-corporate-personhood-is-misguided/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Thaler v. Perlmutter | Loeb &amp; Loeb LLP, accessed
+              October 4, 2025,
+              <link xlink:href="https://www.loeb.com/en/insights/publications/2025/03/thaler-v-perlmutter">https://www.loeb.com/en/insights/publications/2025/03/thaler-v-perlmutter</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              D.C. Circuit Affirms Human Authorship Requirement for
+              Copyright Protection - Lewis Rice, accessed October 4,
+              2025,
+              <link xlink:href="https://www.lewisrice.com/publications/d-c-circuit-affirms-human-authorship-requirement-for-copyright-protection/">https://www.lewisrice.com/publications/d-c-circuit-affirms-human-authorship-requirement-for-copyright-protection/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Thaler v. Perlmutter: D.C. Court of Appeals confirms that
+              a non-human machine cannot be an author under the U.S.
+              Copyright Act, accessed October 4, 2025,
+              <link xlink:href="https://www.authorsalliance.org/2025/03/19/thaler-v-perlmutter-d-c-court-of-appeals-confirms-that-a-non-human-machine-cannot-be-an-author-under-the-u-s-copyright-act/">https://www.authorsalliance.org/2025/03/19/thaler-v-perlmutter-d-c-court-of-appeals-confirms-that-a-non-human-machine-cannot-be-an-author-under-the-u-s-copyright-act/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Appellate Court Affirms Human Authorship Requirement for
+              Copyrighting AI-Generated Works | Insights | Skadden,
+              Arps, Slate, Meagher &amp; Flom LLP, accessed October 4,
+              2025,
+              <link xlink:href="https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship">https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Federal court rules artificial intelligence machines can't
+              claim copyright authorship, accessed October 4, 2025,
+              <link xlink:href="https://constitutioncenter.org/blog/federal-court-rules-artificial-intelligence-machines-cant-claim-copyright-authorship">https://constitutioncenter.org/blog/federal-court-rules-artificial-intelligence-machines-cant-claim-copyright-authorship</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              U.S. AI Laws and What They Mean for Your Business | Burr
+              &amp; Forman LLP, accessed October 4, 2025,
+              <link xlink:href="https://www.burr.com/newsroom/articles/u-s-ai-laws-and-what-they-mean-for-your-business">https://www.burr.com/newsroom/articles/u-s-ai-laws-and-what-they-mean-for-your-business</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Regulators struggle to keep up with the fast-moving and
+              complicated landscape of AI therapy apps, accessed October
+              4, 2025,
+              <link xlink:href="https://apnews.com/article/ai-therapy-ban-illinois-therabot-dfc5906b36fdd1fe8e8dbdb4970a45a7">https://apnews.com/article/ai-therapy-ban-illinois-therabot-dfc5906b36fdd1fe8e8dbdb4970a45a7</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Big Long List of U.S. AI Laws, accessed October 4,
+              2025,
+              <link xlink:href="https://www.mmmlaw.com/news-resources/102kaxc-the-big-long-list-of-u-s-ai-laws/">https://www.mmmlaw.com/news-resources/102kaxc-the-big-long-list-of-u-s-ai-laws/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              California Gov. Gavin Newsom signs landmark bill creating
+              AI safety measures, accessed October 4, 2025,
+              <link xlink:href="https://apnews.com/article/california-ai-regulations-gavin-newsom-9f888a7cbaa57a7dec9e210785b83280">https://apnews.com/article/california-ai-regulations-gavin-newsom-9f888a7cbaa57a7dec9e210785b83280</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              US AI Law Tracker – All States, accessed October 4, 2025,
+              <link xlink:href="https://ai-law-center.orrick.com/us-ai-law-tracker-see-all-states/">https://ai-law-center.orrick.com/us-ai-law-tracker-see-all-states/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              AI &amp; the Business Judgment Rule: Heightened
+              Information Duty, accessed October 4, 2025,
+              <link xlink:href="https://lawreview.uchicago.edu/online-archive/ai-business-judgment-rule-heightened-information-duty">https://lawreview.uchicago.edu/online-archive/ai-business-judgment-rule-heightened-information-duty</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Artificial Fiduciaries - Washington and Lee University
+              School of Law Scholarly Commons, accessed October 4, 2025,
+              <link xlink:href="https://scholarlycommons.law.wlu.edu/cgi/viewcontent.cgi?article=4885&amp;context=wlulr">https://scholarlycommons.law.wlu.edu/cgi/viewcontent.cgi?article=4885&amp;context=wlulr</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Artificial Fiduciaries | Oxford Law Blogs, accessed
+              October 4, 2025,
+              <link xlink:href="https://blogs.law.ox.ac.uk/oblb/blog-post/2024/03/artificial-fiduciaries">https://blogs.law.ox.ac.uk/oblb/blog-post/2024/03/artificial-fiduciaries</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              PetitionCASVN
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Citizens United v. FEC - Wikipedia, accessed October 4,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Citizens_United_v._FEC">https://en.wikipedia.org/wiki/Citizens_United_v._FEC</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Citizens United, Corporate Personhood, and Corporate
+              Power: The Tension between Constitutional Law and
+              Corporate Law - University of St. Thomas, accessed October
+              4, 2025,
+              <link xlink:href="https://researchonline.stthomas.edu/view/pdfCoverPage?instCode=01CLIC_STTHOMAS&amp;filePid=13439815670003691&amp;download=true">https://researchonline.stthomas.edu/view/pdfCoverPage?instCode=01CLIC_STTHOMAS&amp;filePid=13439815670003691&amp;download=true</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Legal | Citizens United v. FEC, accessed October 4, 2025,
+              <link xlink:href="https://www.fec.gov/legal-resources/court-cases/citizens-united-v-fec/">https://www.fec.gov/legal-resources/court-cases/citizens-united-v-fec/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Citizens United Explained | Brennan Center for Justice,
+              accessed October 4, 2025,
+              <link xlink:href="https://www.brennancenter.org/our-work/research-reports/citizens-united-explained">https://www.brennancenter.org/our-work/research-reports/citizens-united-explained</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Citizens United v. Federal Election Commission - Campaign
+              Finance, Dissent, Money, accessed October 4, 2025,
+              <link xlink:href="https://www.britannica.com/event/Citizens-United-v-Federal-Election-Commission/Dissenting-opinion">https://www.britannica.com/event/Citizens-United-v-Federal-Election-Commission/Dissenting-opinion</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              No Time To Wait for the Effects of Citizens United |
+              Brennan Center for Justice, accessed October 4, 2025,
+              <link xlink:href="https://www.brennancenter.org/our-work/analysis-opinion/no-time-wait-effects-citizens-united">https://www.brennancenter.org/our-work/analysis-opinion/no-time-wait-effects-citizens-united</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Burwell v. Hobby Lobby Stores - Oyez, accessed October 4,
+              2025,
+              <link xlink:href="https://www.oyez.org/cases/2013/13-354">https://www.oyez.org/cases/2013/13-354</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Burwell v. Hobby Lobby (2014) - Embryo Project
+              Encyclopedia, accessed October 4, 2025,
+              <link xlink:href="https://embryo.asu.edu/pages/burwell-v-hobby-lobby-2014">https://embryo.asu.edu/pages/burwell-v-hobby-lobby-2014</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Burwell v. Hobby Lobby | Research Starters - EBSCO,
+              accessed October 4, 2025,
+              <link xlink:href="https://www.ebsco.com/research-starters/law/burwell-v-hobby-lobby">https://www.ebsco.com/research-starters/law/burwell-v-hobby-lobby</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Burwell v. Hobby Lobby Stores, Inc. (2014) | The First
+              Amendment Encyclopedia, accessed October 4, 2025,
+              <link xlink:href="https://firstamendment.mtsu.edu/article/burwell-v-hobby-lobby-stores-inc/">https://firstamendment.mtsu.edu/article/burwell-v-hobby-lobby-stores-inc/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Burwell v. Hobby Lobby Stores, Inc. - Religious Freedom
+              ... - Britannica, accessed October 4, 2025,
+              <link xlink:href="https://www.britannica.com/topic/Burwell-v-Hobby-Lobby-Stores-Inc/Majority-opinion">https://www.britannica.com/topic/Burwell-v-Hobby-Lobby-Stores-Inc/Majority-opinion</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              A Look Back—Justice Ginsburg's Oral Dissent in Hobby Lobby
+              - ISCOTUS now, accessed October 4, 2025,
+              <link xlink:href="https://blogs.kentlaw.iit.edu/iscotus/a-look-back-justice-ginsburgs-oral-dissent-in-hobby-lobby/">https://blogs.kentlaw.iit.edu/iscotus/a-look-back-justice-ginsburgs-oral-dissent-in-hobby-lobby/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Burwell v. Hobby Lobby and Birth Control - Planned
+              Parenthood Action Fund, accessed October 4, 2025,
+              <link xlink:href="https://www.plannedparenthoodaction.org/issues/birth-control/burwell-v-hobby-lobby">https://www.plannedparenthoodaction.org/issues/birth-control/burwell-v-hobby-lobby</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Constitutional Rights of Corporations in the United
+              States ..., accessed October 4, 2025,
+              <link xlink:href="https://www.cambridge.org/core/books/understanding-the-company/constitutional-rights-of-corporations-in-the-united-states/010D6732615DBAA6B13C1B639FE7EBA2">https://www.cambridge.org/core/books/understanding-the-company/constitutional-rights-of-corporations-in-the-united-states/010D6732615DBAA6B13C1B639FE7EBA2</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Corporate Personhood and Limited Sovereignty -
+              Scholarship@Vanderbilt Law, accessed October 4, 2025,
+              <link xlink:href="https://scholarship.law.vanderbilt.edu/cgi/viewcontent.cgi?article=4790&amp;context=vlr">https://scholarship.law.vanderbilt.edu/cgi/viewcontent.cgi?article=4790&amp;context=vlr</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              No Copyright Protection for AI-Assisted Creations: Thaler
+              v. Perlmutter - Carlton Fields, accessed October 4, 2025,
+              <link xlink:href="https://www.carltonfields.com/insights/publications/2025/no-copyright-protection-for-ai-assisted-creations-thaler-v-perlmutter">https://www.carltonfields.com/insights/publications/2025/no-copyright-protection-for-ai-assisted-creations-thaler-v-perlmutter</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Thaler v. Perlmutter: Human Authors at the Center of
+              Copyright? - Wolters Kluwer, accessed October 4, 2025,
+              <link xlink:href="https://legalblogs.wolterskluwer.com/copyright-blog/thaler-v-perlmutter-human-authors-at-the-center-of-copyright/">https://legalblogs.wolterskluwer.com/copyright-blog/thaler-v-perlmutter-human-authors-at-the-center-of-copyright/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Thaler v. Perlmutter - U.S. Court of Appeals for the D.C.
+              Circuit, accessed October 4, 2025,
+              <link xlink:href="https://media.cadc.uscourts.gov/opinions/docs/2025/03/23-5233.pdf">https://media.cadc.uscourts.gov/opinions/docs/2025/03/23-5233.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Directed_IP_Creation
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              THE LEGAL STATUS OF NON-HUMAN ENTITIES: RIVERS, FORESTS,
+              AND THE RIGHTS OF NATURE MOVEMENT - THE LAWWAY WITH
+              LAWYERS JOURNAL, accessed October 4, 2025,
+              <link xlink:href="https://thelawwaywithlawyers.com/the-legal-status-of-non-human-entities-rivers-forests-and-the-rights-of-nature-movement/">https://thelawwaywithlawyers.com/the-legal-status-of-non-human-entities-rivers-forests-and-the-rights-of-nature-movement/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Property's More-than-Human Personhood | Published in
+              Houston Law Review, accessed October 4, 2025,
+              <link xlink:href="https://houstonlawreview.org/article/126273-property-s-more-than-human-personhood">https://houstonlawreview.org/article/126273-property-s-more-than-human-personhood</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              About Us | Nonhuman Rights Project, accessed October 4,
+              2025,
+              <link xlink:href="https://www.nonhumanrights.org/about-us/">https://www.nonhumanrights.org/about-us/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Nonhuman Rights Project - Wikipedia, accessed October 4,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Nonhuman_Rights_Project">https://en.wikipedia.org/wiki/Nonhuman_Rights_Project</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              How Might Corporations' and Nonhuman Animals' Personhood
+              Compare Under the Fifth and Fourteenth Amendments? - AMA
+              Journal of Ethics, accessed October 4, 2025,
+              <link xlink:href="https://journalofethics.ama-assn.org/article/how-might-corporations-and-nonhuman-animals-personhood-compare-under-fifth-and-fourteenth-amendments/2024-09">https://journalofethics.ama-assn.org/article/how-might-corporations-and-nonhuman-animals-personhood-compare-under-fifth-and-fourteenth-amendments/2024-09</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Traditional Conceptions of the Legal Person and Nonhuman
+              Animals - PMC, accessed October 4, 2025,
+              <link xlink:href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9558555/">https://pmc.ncbi.nlm.nih.gov/articles/PMC9558555/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Animal Rights Before Legal Personhood - Cornell Law
+              School, accessed October 4, 2025,
+              <link xlink:href="https://publications.lawschool.cornell.edu/lawreview/wp-content/uploads/sites/2/2025/03/Prall-final.pdf">https://publications.lawschool.cornell.edu/lawreview/wp-content/uploads/sites/2/2025/03/Prall-final.pdf</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

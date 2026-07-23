@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-ii-the-first-amendment-collision---editorial-discretion-vs-state-regulation">
+  <title>
+    <emphasis role="strong">Part II: The First Amendment
+    Collision - Editorial Discretion vs. State
+    Regulation</emphasis>
+  </title>
+  <para>
+      The broad immunity granted by Section 230 fostered an environment
+      where online platforms could develop and enforce their own content
+      moderation policies without fear of being held liable as
+      publishers. This, in turn, has given rise to the central
+      constitutional conflict of the modern internet: the clash between
+      the First Amendment rights of these private platforms to curate
+      their content and the attempts by state governments to regulate
+      that curation.
+    </para>
+  <section xml:id="section-21-content-moderation-as-constitutionally-protected-expressive-conduct">
+    <title>
+      <emphasis role="strong">Section 2.1: Content Moderation as
+      Constitutionally Protected Expressive Conduct</emphasis>
+    </title>
+    <para>
+        The foundational principle undergirding the platforms' defense
+        against state regulation is the First Amendment's protection of
+        editorial discretion.11 The Supreme Court has long held that the
+        act of publishing is an expressive activity. This includes not
+        only the creation of original speech but also the selection,
+        arrangement, and presentation of speech created by others. This
+        right of editorial judgment protects a private entity's freedom
+        to decide what speech to publish, what to prioritize, and what
+        to remove.
+      </para>
+    <para>
+        Crucially, this protection extends to the right
+        <emphasis>not</emphasis> to speak. The government generally
+        cannot force a private actor to host or disseminate a message
+        with which it disagrees.28 This principle of "compelled
+        speech" is the core constitutional shield that social media
+        platforms now wield against state laws that seek to dictate
+        their content moderation policies.
+      </para>
+  </section>
+  <section xml:id="section-22-the-netchoice-and-moody-revolution">
+    <title>
+      <emphasis role="strong">Section 2.2: The</emphasis>
+      <emphasis>
+        <emphasis role="strong">NetChoice</emphasis>
+      </emphasis>
+      <emphasis role="strong">and</emphasis>
+      <emphasis>
+        <emphasis role="strong">Moody</emphasis>
+      </emphasis>
+      <emphasis role="strong">Revolution</emphasis>
+    </title>
+    <para>
+        This constitutional conflict came to a head in a pair of cases
+        challenging state laws in Texas and Florida. These laws, Texas's
+        H.B. 20 and Florida's S.B. 7072, were enacted in response to
+        allegations of anti-conservative bias and sought to prohibit
+        large social media platforms from engaging in what the states
+        termed "viewpoint-based censorship".30 The laws
+        created a direct clash between the states' asserted power to
+        ensure open discourse and the platforms' asserted First
+        Amendment right to moderate their own sites.
+      </para>
+    <para>
+        The legal battle produced starkly conflicting rulings from the
+        federal circuit courts. In <emphasis>Moody v.
+        NetChoice</emphasis>, the Eleventh Circuit enjoined Florida's
+        law, holding that it likely violated the First Amendment by
+        restricting the platforms' exercise of "editorial
+        judgment".33 In
+      </para>
+    <para>
+      <emphasis>NetChoice v. Paxton</emphasis>, the Fifth Circuit
+        reached the opposite conclusion, upholding the Texas law. The
+        court reasoned that platforms do not possess a
+        "freewheeling" First Amendment right to censor what
+        people say and that their content moderation activities
+        constituted regulable "conduct," not protected
+        "speech".29
+      </para>
+    <para>
+        In a unanimous 2024 ruling, the Supreme Court resolved this
+        circuit split, fundamentally reshaping the legal landscape.
+        Justice Elena Kagan's majority opinion did not decide the
+        ultimate constitutionality of the laws but instead established
+        the controlling legal principles for how such challenges must be
+        analyzed. The Court's key holdings were twofold:
+      </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Content Moderation is Expressive
+            Activity:</emphasis> The Court decisively rejected the Fifth
+            Circuit's reasoning and affirmed that content moderation is
+            a form of expressive conduct protected by the First
+            Amendment. Justice Kagan wrote that when a private entity
+            engages in expressive activity, including "compiling
+            and curating others' speech," government interference
+            with that activity implicates the First Amendment.28 The
+            Court explicitly stated that these principles "likely
+            apply to the content moderation practices of social media
+            platforms like Facebook's News Feed," providing a
+            strong signal that the core functions of these platforms are
+            constitutionally protected.28
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">A High Bar for Facial
+            Challenges:</emphasis> Despite this substantive victory for
+            the platforms, the Court vacated and remanded both cases on
+            procedural grounds. It held that the lower courts had failed
+            to conduct a proper analysis of a
+            <emphasis>facial</emphasis> challenge to the laws.29 A
+            facial challenge, which seeks to invalidate a law in its
+            entirety, is "disfavored" and requires the
+            challenger to show that "a substantial number of [the
+            law's] applications are unconstitutional" when measured
+            against its legitimate applications.29 The Court found that
+            the laws applied to a wide range of services beyond just
+            curated news feeds—such as direct messaging, email, and
+            e-commerce—some of which may not involve the same level of
+            editorial discretion.36 This procedural ruling effectively
+            shifts the legal battleground from broad facial challenges
+            to more fact-intensive, "as-applied" challenges,
+            where courts will have to analyze the constitutionality of
+            the laws as they apply to specific platform functions one by
+            one.35
+          </para>
+      </listitem>
+    </orderedlist>
+    <para>
+        This outcome represents a procedural victory for the states but
+        a substantive one for the platforms. While the laws were not
+        struck down, the Court's strong language affirming content
+        moderation as protected expression provides a clear roadmap for
+        how lower courts should analyze future as-applied challenges.
+        This makes it highly probable that the core provisions of these
+        state laws, as they apply to services like curated news feeds
+        and recommendation algorithms, will ultimately be found
+        unconstitutional.
+      </para>
+  </section>
+  <section xml:id="section-23-the-specter-of-viewpoint-discrimination">
+    <title>
+      <emphasis role="strong">Section 2.3: The Specter of
+      Viewpoint Discrimination</emphasis>
+    </title>
+    <para>
+        A central argument against the Texas and Florida laws is that
+        they represent an unconstitutional form of viewpoint
+        discrimination by the government itself. The First Amendment is
+        particularly hostile to laws that regulate speech based on its
+        message or perspective.38 Viewpoint discrimination occurs when
+        the government does not just regulate a subject matter but
+        targets "particular views taken by speakers on a
+        subject" for disfavored treatment.38 The Supreme Court has
+        called this an "egregious form of content
+        discrimination" that is presumptively unconstitutional.38
+      </para>
+    <para>
+        The legislative history and stated purpose of the Texas and
+        Florida laws reveal a clear intent to protect conservative
+        viewpoints from what lawmakers perceived as biased moderation by
+        "Big Tech".33 By enacting laws that prohibit platforms
+        from removing content based on viewpoint, the states are not
+        acting as neutral arbiters of a forum; they are actively taking
+        sides in a political debate. They are using their regulatory
+        power to compel private speakers (the platforms) to host and
+        disseminate messages that align with the government's preferred
+        ideology. This attempt to engineer a "balanced"
+        marketplace of ideas by forcing private actors to carry speech
+        they would otherwise reject is a form of government-mandated
+        viewpoint expression that runs directly counter to core First
+        Amendment principles.
+      </para>
+    <para>
+        The following table distills the conflicting legal reasoning of
+        the Fifth and Eleventh Circuits and summarizes the key legal
+        principles established by the Supreme Court's dispositive ruling
+        in the consolidated <emphasis>NetChoice</emphasis> and
+        <emphasis>Moody</emphasis> cases.
+      </para>
+    <informaltable>
+      <tgroup cols="4">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                Legal Question
+              </entry>
+            <entry>
+                Eleventh Circuit Holding (*Moody*)
+              </entry>
+            <entry>
+                Fifth Circuit Holding (*Paxton*)
+              </entry>
+            <entry>
+                Supreme Court Resolution
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Is content moderation "speech"?**
+              </entry>
+            <entry>
+                Yes, it is an exercise of "editorial judgment"
+                protected by the First Amendment.
+              </entry>
+            <entry>
+                No, it is "conduct" and a form of
+                "censorship" not protected by the First
+                Amendment.
+              </entry>
+            <entry>
+                Yes, curating third-party speech is an expressive
+                activity that implicates the First Amendment.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Are platforms "common carriers"?**
+              </entry>
+            <entry>
+                No, they are not passive conduits and exercise editorial
+                judgment.
+              </entry>
+            <entry>
+                Yes, they are the modern equivalent of common carriers
+                and can be subject to non-discrimination duties.
+              </entry>
+            <entry>
+                The Court did not resolve this question, focusing
+                instead on the expressive nature of the platforms'
+                activities.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Is the law viewpoint discrimination?**
+              </entry>
+            <entry>
+                Yes, the law was motivated by a desire to favor
+                conservative viewpoints.
+              </entry>
+            <entry>
+                No, the law is a viewpoint-neutral regulation aimed at
+                protecting speech.
+              </entry>
+            <entry>
+                The Court noted that the laws aim to alter the speech
+                displayed, reflecting state disapproval of current
+                moderation, which implicates the First Amendment.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Final Outcome**
+              </entry>
+            <entry>
+                Preliminary injunction against the law upheld.
+              </entry>
+            <entry>
+                Preliminary injunction against the law reversed.
+              </entry>
+            <entry>
+                Both judgments vacated and remanded for a proper facial
+                challenge analysis, focusing on as-applied contexts.
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+</section>
+  

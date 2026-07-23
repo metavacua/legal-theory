@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-iii-re-characterizing-the-platform---the-public-square-and-common-carrier-theories">
+  <title>
+    <emphasis role="strong">Part III: Re-characterizing the
+    Platform - The "Public Square" and "Common
+    Carrier" Theories</emphasis>
+  </title>
+  <para>
+      To justify state regulation of private platforms, proponents of
+      laws like those in Texas and Florida have advanced legal theories
+      designed to re-characterize these entities as something other than
+      purely private speakers. The goal of these arguments is to
+      circumvent the First Amendment's state action doctrine, which
+      holds that constitutional speech protections apply to government
+      action, not the decisions of private companies. If a platform can
+      be legally redefined as a quasi-public entity, it can be subjected
+      to regulations that would otherwise be unconstitutional.
+    </para>
+  <section xml:id="section-31-the-modern-public-square-analogy">
+    <title>
+      <emphasis role="strong">Section 3.1: The "Modern
+      Public Square" Analogy</emphasis>
+    </title>
+    <para>
+        A common rhetorical and legal argument is that dominant social
+        media platforms have become the "modern public square"
+        and should therefore be treated as public forums, bound by First
+        Amendment constraints against content discrimination.5 This
+        analogy gained prominence after the Supreme Court, in
+      </para>
+    <para>
+      <emphasis>Packingham v. North Carolina</emphasis>, used the
+        phrase to describe the internet's importance for civic
+        discourse.
+      </para>
+    <para>
+        However, this argument is legally tenuous. While the Court has
+        used the "public square" metaphor to emphasize the
+        internet's role in speech, it has explicitly rejected the legal
+        conclusion that private ownership of a forum for public speech
+        transforms that entity into a state actor.8 In
+      </para>
+    <para>
+      <emphasis>Manhattan Community Access Corp. v.
+        Halleck</emphasis>, the Court held that "merely hosting
+        speech by others is not a traditional, exclusive public function
+        and does not alone transform private entities into state actors
+        subject to First Amendment constraints." The operation of a
+        social media platform, no matter how large or influential, is
+        not a power traditionally and exclusively reserved to the state.
+        Therefore, under current doctrine, platforms remain private
+        actors whose editorial decisions are protected
+        <emphasis>by</emphasis> the First Amendment, not constrained by
+        it.7
+      </para>
+  </section>
+  <section xml:id="section-32-the-common-carrier-doctrine">
+    <title>
+      <emphasis role="strong">Section 3.2: The Common Carrier
+      Doctrine</emphasis>
+    </title>
+    <para>
+        A more legally sophisticated argument for regulating platforms
+        is the common carrier doctrine. Historically, this doctrine has
+        been applied to essential services that hold themselves out to
+        the public, such as telegraphs, railroads, and telephone
+        companies, subjecting them to duties of non-discrimination and
+        open access.27 The theory, most notably advanced by Justice
+        Clarence Thomas in a series of statements and concurrences, is
+        that some digital platforms have achieved a level of market
+        dominance and public necessity that makes them
+        "sufficiently akin to common carriers".2 If so, they
+        could be regulated to ensure they carry all lawful content
+        without discrimination, much like a phone company must connect
+        calls regardless of the speakers' viewpoints. The Fifth Circuit
+        explicitly adopted this reasoning in its
+      </para>
+    <para>
+      <emphasis>Paxton</emphasis> decision, finding that social media
+        platforms are communications firms that hold themselves out to
+        serve the public and have an "effective monopoly" over
+        their niche, justifying their regulation as common carriers.30
+      </para>
+    <para>
+        The counterarguments to this theory are substantial. First,
+        platforms are not passive conduits like telephone lines; they
+        are active curators of speech, constantly making editorial
+        decisions about what to feature, prioritize, and recommend.33
+        This active curation distinguishes them from traditional
+        utilities. Second, the common carrier doctrine historically
+        applied to the
+      </para>
+    <para>
+      <emphasis>transmission</emphasis> of information from point A to
+        point B, not to the <emphasis>publication and
+        arrangement</emphasis> of content for a mass audience. Applying
+        this doctrine to platforms would represent a significant
+        expansion of its traditional scope.
+      </para>
+  </section>
+  <section xml:id="section-33-constitutional-counterarguments---compelled-speech">
+    <title>
+      <emphasis role="strong">Section 3.3: Constitutional
+      Counterarguments - Compelled Speech</emphasis>
+    </title>
+    <para>
+        Even if a court were to accept the common carrier analogy,
+        imposing "must-carry" obligations on platforms would
+        face a powerful First Amendment challenge under the compelled
+        speech doctrine.28 The Supreme Court has repeatedly struck down
+        laws that force private speakers to carry messages they wish to
+        exclude.
+      </para>
+    <para>
+        In <emphasis>Miami Herald Publishing Co. v. Tornillo</emphasis>,
+        the Court invalidated a Florida law that required newspapers to
+        grant political candidates a "right of reply" to
+        critical editorials, holding that any choice of material to be
+        printed constitutes the exercise of editorial judgment, and the
+        government cannot compel a newspaper to publish that which it
+        believes should not be published.33 Similarly, in
+      </para>
+    <para>
+      <emphasis>Hurley v. Irish-American Gay, Lesbian and Bisexual
+        Group of Boston</emphasis>, the Court ruled that parade
+        organizers could not be forced to include a group whose message
+        they did not wish to convey, as this would "alter the
+        expressive content of the[ ] parade".29 These cases stand
+        for the core principle that the state cannot commandeer a
+        private expressive enterprise to broadcast the government's
+        preferred messages. A law forcing a social media platform to
+        host all viewpoints would directly contravene this principle by
+        altering the expressive compilation of speech that the platform
+        chooses to present to its users.28
+      </para>
+  </section>
+</section>
+  

@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-ii-a-pattern-of-arbitrary-and-discriminatory-enforcement">
+  <title>
+    <emphasis role="strong">Part II: A Pattern of Arbitrary and
+    Discriminatory Enforcement</emphasis>
+  </title>
+  <para>
+      The discretionary power codified in payment processor AUPs is not
+      a theoretical risk; it is actively and systematically wielded to
+      enforce a specific moral ordering of commerce. An analysis of
+      enforcement patterns reveals that these policies are not applied
+      as neutral, risk-based tools. Instead, they are used to target and
+      suppress specific categories of legal content and the communities
+      that create them, particularly those related to adult content and
+      LGBTQ+ expression. This pattern of discriminatory enforcement
+      provides the factual basis for legal challenges under California's
+      robust civil rights laws.
+    </para>
+  <section xml:id="s-21-the-moral-ordering-of-high-risk-commerce-gambling-vs-adult-content">
+    <title>
+      <emphasis role="strong">2.1 The Moral Ordering of
+      "High-Risk" Commerce: Gambling vs. Adult
+      Content</emphasis>
+    </title>
+    <para>
+        The pretextual nature of the processors' "risk
+        management" justification is most clearly revealed by
+        contrasting their treatment of two different
+        "high-risk" industries: online gambling and adult
+        content. Both industries are associated with elevated risks of
+        chargebacks, fraud, and legal complexities.28 However, their
+        treatment by major processors is starkly different.
+      </para>
+    <para>
+        PayPal's AUP, for example, explicitly allows for transactions
+        related to online gambling, sports betting, and games of skill,
+        provided the merchant obtains "pre-approval" and
+        operates in a jurisdiction where the activity is legal.14
+        Similarly, Stripe's policies contemplate the possibility of
+        supporting gambling-related businesses, subject to review.5 This
+        demonstrates a capacity for nuanced, risk-based underwriting,
+        where the processor can assess a merchant's specific business
+        model and legal compliance.
+      </para>
+    <para>
+        In stark contrast, these same processors often impose blanket
+        prohibitions on legal adult content. Stripe's policy, for
+        instance, broadly bans "pornography and other sexually
+        explicit materials (including literature, imagery, and other
+        media)".5 This is not a risk-based assessment but a
+        content-based moral judgment. The differential treatment cannot
+        be explained by risk alone; it reveals an underlying corporate
+        value system—a "moral ordering of sexuality"—where one
+        form of "vice" is deemed a manageable business risk
+        while another is prohibited on moral grounds.24 This
+        inconsistency undermines the claim that these AUPs are
+        legitimate, non-discriminatory business tools and instead
+        exposes them as instruments for enforcing a particular corporate
+        morality.
+      </para>
+  </section>
+  <section xml:id="s-22-targeting-the-margins-the-de-platforming-of-sex-workers-and-lgbtq-creators">
+    <title>
+      <emphasis role="strong">2.2 Targeting the Margins: The
+      De-platforming of Sex Workers and LGBTQ+
+      Creators</emphasis>
+    </title>
+    <para>
+        The real-world impact of this moral ordering falls
+        disproportionately on marginalized communities. Extensive
+        research documents a pattern of "financial
+        discrimination" where sex workers and creators in the legal
+        adult industry are systematically de-platformed and denied
+        access to basic financial services essential for their
+        livelihood and safety.19
+      </para>
+    <para>
+        This discriminatory enforcement extends to LGBTQ+ creators,
+        whose work is often miscategorized as "sexually
+        explicit" or "obscene" even when it is not. In
+        several high-profile cases, pressure from payment processors has
+        led platforms like Steam and Itch.io to de-index or remove not
+        just the specific content targeted by activist campaigns, but a
+        wide swath of adult-themed and LGBTQ+ games, books, and comics.6
+        In some instances, creators have been de-platformed for entirely
+        non-explicit LGBTQ+ content due to erroneous interpretations of
+        vague AUPs by processor support staff, highlighting the inherent
+        danger of such policies.37 This pattern of over-enforcement and
+        collateral censorship demonstrates that the primary harm of
+        these policies is borne by creators whose expression falls
+        outside of a narrow, normative mainstream.
+      </para>
+    <para>
+        The following table provides a sample of documented cases of
+        de-platforming and financial censorship targeting creators of
+        adult and LGBTQ+ content.
+      </para>
+    <informaltable>
+      <tgroup cols="6">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                Creator / Business Type
+              </entry>
+            <entry>
+                Platform(s)
+              </entry>
+            <entry>
+                Payment Processor(s)
+              </entry>
+            <entry>
+                Date of Action
+              </entry>
+            <entry>
+                Summary of Action &amp; Stated Reason
+              </entry>
+            <entry>
+                Source(s)
+              </entry>
+          </row>
+          <row>
+            <entry>
+                Adult Game Developers
+              </entry>
+            <entry>
+                Itch.io, Steam
+              </entry>
+            <entry>
+                Stripe, Visa, Mastercard
+              </entry>
+            <entry>
+                2025
+              </entry>
+            <entry>
+                Widespread de-indexing and removal of NSFW games
+                following pressure from an anti-porn lobby group.
+              </entry>
+            <entry>
+                6
+              </entry>
+          </row>
+          <row>
+            <entry>
+                LGBTQ+ Comic Artist (Koahri)
+              </entry>
+            <entry>
+                Patreon
+              </entry>
+            <entry>
+                N/A (Platform Action)
+              </entry>
+            <entry>
+                2025
+              </entry>
+            <entry>
+                Patreon account terminated due to alleged off-platform
+                violations of Visa/Mastercard morality standards.
+              </entry>
+            <entry>
+                39
+              </entry>
+          </row>
+          <row>
+            <entry>
+                Sex Workers &amp; Adult Professionals
+              </entry>
+            <entry>
+                Various
+              </entry>
+            <entry>
+                PayPal, Venmo, National Banks
+              </entry>
+            <entry>
+                Ongoing
+              </entry>
+            <entry>
+                Systemic account closures and denial of services, often
+                with vague or no explanation.
+              </entry>
+            <entry>
+                19
+              </entry>
+          </row>
+          <row>
+            <entry>
+                Trans Authors &amp; Queer Creators
+              </entry>
+            <entry>
+                Itch.io
+              </entry>
+            <entry>
+                N/A (Platform Action)
+              </entry>
+            <entry>
+                2025
+              </entry>
+            <entry>
+                Removal of queer romance and trans-authored books as
+                part of a broader adult content purge.
+              </entry>
+            <entry>
+                36
+              </entry>
+          </row>
+          <row>
+            <entry>
+                LGBTQ+ Content Creators
+              </entry>
+            <entry>
+                N/A
+              </entry>
+            <entry>
+                Stripe
+              </entry>
+            <entry>
+                2025
+              </entry>
+            <entry>
+                Stripe support staff wrongly informed users that all
+                LGBTQ+ content, explicit or not, was prohibited. Stripe
+                later apologized.
+              </entry>
+            <entry>
+                37
+              </entry>
+          </row>
+          <row>
+            <entry>
+                Freelancer (NSFW Game Developer)
+              </entry>
+            <entry>
+                N/A
+              </entry>
+            <entry>
+                PayPal
+              </entry>
+            <entry>
+                2025
+              </entry>
+            <entry>
+                Account terminated and funds seized with no specific
+                reason given, isolating the creator from the freelance
+                economy.
+              </entry>
+            <entry>
+                20
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <para>
+        This enforcement regime creates a discriminatory feedback loop.
+        By de-platforming creators from marginalized communities,
+        processors force them into more precarious financial channels or
+        offline work, which increases their real-world vulnerability.26
+        This heightened vulnerability can then be cited as evidence of
+        their "high-risk" nature, justifying further financial
+        exclusion. The policy, therefore, manufactures the very
+        conditions it purports to be protecting against, trapping these
+        communities in a cycle of systemic marginalization.
+      </para>
+  </section>
+</section>
+  

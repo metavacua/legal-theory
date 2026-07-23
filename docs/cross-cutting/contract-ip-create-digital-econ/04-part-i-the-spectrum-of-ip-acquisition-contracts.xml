@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-i-the-spectrum-of-ip-acquisition-contracts">
+  <title>
+    <emphasis role="strong">Part I: The Spectrum of IP Acquisition
+  Contracts</emphasis>
+  </title>
+  <para>
+    The acquisition of IP rights exists on a spectrum, ranging from
+    complete transfer of ownership to limited permissions for use.
+  </para>
+  <section xml:id="a-full-assignment-and-the-work-made-for-hire-doctrine">
+    <title>
+      <emphasis role="strong">A. Full Assignment and the Work Made
+    for Hire Doctrine</emphasis>
+    </title>
+    <para>
+      The most complete transfer of IP occurs through an outright
+      assignment (purchase) or via the "Work Made for Hire"
+      doctrine under U.S. copyright law. In an employment relationship,
+      IP created within the scope of employment automatically belongs to
+      the employer from inception. This model offers the acquirer
+      maximum control but carries the full burden of employment
+      responsibilities.
+    </para>
+  </section>
+  <section xml:id="b-licensing-and-leasing-exclusive-vs-non-exclusive">
+    <title>
+      <emphasis role="strong">B. Licensing and Leasing (Exclusive
+    vs. Non-Exclusive)</emphasis>
+    </title>
+    <para>
+      Licensing allows the creator to retain ownership while granting
+      specific rights to the licensee. This can be exclusive or
+      non-exclusive. The standard model for "free" digital
+      platforms (Meta, X, Google) relies on users granting a
+      "perpetual, worldwide, non-exclusive, royalty-free,
+      transferable, and sublicensable license" to their content in
+      exchange for access to the service. This model is increasingly
+      vulnerable to re-characterization as a contract for services for
+      remuneration.
+    </para>
+  </section>
+  <section xml:id="c-unilateral-contracts-and-the-service-nexus">
+    <title>
+      <emphasis role="strong">C. Unilateral Contracts and the
+    "Service Nexus"</emphasis>
+    </title>
+    <para>
+      Platforms often use unilateral contracts, such as Vulnerability
+      Reward Programs (VRPs), offering a reward for the performance of a
+      specific act (e.g., finding a bug). While framed as the purchase
+      of a result, California law holds that such offers become
+      irrevocable once the offeree begins substantial performance
+      (Restatement (Second) of Contracts § 45). This creates a
+      "Service Nexus," linking the payment obligation directly
+      to the ongoing labor, making the relationship resemble a service
+      agreement.
+    </para>
+  </section>
+  <section xml:id="d-option-agreements-and-service-free-acquisition">
+    <title>
+      <emphasis role="strong">D. Option Agreements and
+    "Service-Free" Acquisition</emphasis>
+    </title>
+    <para>
+      An alternative model is the Option Agreement, which involves the
+      present sale of an exclusive right (the option) to purchase a
+      future asset. The buyer pays an option fee for the creator's
+      promise that <emphasis>if</emphasis> they create the work, they
+      will sell it exclusively to the buyer. This model attempts to
+      sever the link between payment and labor, framing the transaction
+      as the purchase of a right, not a service. However, its viability
+      depends heavily on the independent business status of the creator.
+    </para>
+  </section>
+</section>
+  

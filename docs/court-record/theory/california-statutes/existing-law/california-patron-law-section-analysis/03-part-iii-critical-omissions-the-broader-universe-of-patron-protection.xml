@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-iii-critical-omissions--the-broader-universe-of-patron-protection">
+  <title>
+    <emphasis role="strong">Part III: Critical Omissions – The
+    Broader Universe of Patron Protection</emphasis>
+  </title>
+  <para>
+      A truly exhaustive analysis of "patron law" must extend
+      beyond the literal term to encompass the foundational statutes
+      that protect individuals in functionally identical roles. The law
+      frequently uses terms like "customer,"
+      "guest," or "client" to define these
+      relationships. Omitting these statutes leaves significant gaps in
+      any compilation of patron rights, particularly in the areas of
+      civil rights, data privacy, and professional services.
+    </para>
+  <section xml:id="table-2-functionally-equivalent-terminology-in-california-law">
+    <title>
+      <emphasis role="strong">Table 2: Functionally Equivalent
+      Terminology in California Law</emphasis>
+    </title>
+    <para>
+        The following table provides a framework for understanding the
+        key legal terms that are functionally equivalent to
+        "patron," defining the scope of the analysis in this
+        section.
+      </para>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                Term
+              </entry>
+            <entry>
+                Primary Governing Statute(s)
+              </entry>
+            <entry>
+                Summary of the Legal Context/Relationship
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **All Persons**
+              </entry>
+            <entry>
+                Civil Code § 51 (Unruh Civil Rights Act)
+              </entry>
+            <entry>
+                Establishes the foundational right of all individuals to
+                full and equal access to services and accommodations in
+                all business establishments, regardless of protected
+                characteristics. This is the baseline for all patron,
+                customer, guest, and client relationships.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Customer**
+              </entry>
+            <entry>
+                Civil Code § 1798.80 et seq. (Customer Records); Civil
+                Code § 1798.140 (CCPA/CPRA); Business &amp; Professions
+                Code § 13300 (Point-of-Sale)
+              </entry>
+            <entry>
+                Defines an individual in a transactional or data-centric
+                relationship with a business. Protections focus on data
+                privacy, security of personal information, and financial
+                fairness in commercial exchanges.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Guest**
+              </entry>
+            <entry>
+                Civil Code § 1865 (Hotels); Civil Code § 798.34
+                (Mobilehome Parks); Health &amp; Safety Code § 113893
+                (Restricted Food Service)
+              </entry>
+            <entry>
+                Defines a specialized patron relationship centered on
+                lodging and hospitality. Laws govern rights of
+                occupancy, eviction procedures, and fees, balancing
+                operator rights with the temporary residential status of
+                the individual.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Client**
+              </entry>
+            <entry>
+                Business &amp; Professions Code § 6068 (Attorneys);
+                Business &amp; Professions Code § 5063.3 (Accountants)
+              </entry>
+            <entry>
+                Defines a relationship with a licensed professional,
+                imposing a fiduciary duty—the highest standard of care.
+                This includes strict obligations of confidentiality,
+                loyalty, and acting in the client's best interest.
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+  <section xml:id="section-31-the-unruh-civil-rights-act-the-cornerstone-of-all-patron-rights">
+    <title>
+      <emphasis role="strong">Section 3.1: The Unruh Civil Rights
+      Act: The Cornerstone of All Patron Rights</emphasis>
+    </title>
+    <para>
+        The most significant conceptual omission from the original
+        document is the <emphasis role="strong">Unruh Civil Rights Act,
+        Civil Code § 51</emphasis>.6 This statute is arguably the single
+        most important "patron law" in California. It provides
+        that "All persons within the jurisdiction of this state are
+        free and equal, and no matter what their sex, race, color,
+        religion, ancestry, national origin, disability, medical
+        condition, genetic information, marital status, sexual
+        orientation, citizenship, primary language, or immigration
+        status are entitled to the full and equal accommodations,
+        advantages, facilities, privileges, or services in all business
+        establishments of every kind whatsoever".7
+      </para>
+    <para>
+        The Unruh Act functions as a foundational "operating
+        system" upon which all other specific patron-related
+        regulations run. The statutes compiled in the original document
+        detail specific rules of conduct and safety—such as requiring
+        Responsible Beverage Service training for bar staff or mandating
+        safety equipment at wave pools.1 The Unruh Act, however, governs
+        the prerequisite for those interactions: the right of equal
+        access in the first place. It establishes that whatever rules a
+        business has for its patrons, those rules must be applied
+        equally and without discrimination. For example, a transit
+        agency's rules of conduct for patrons, established under Penal
+        Code § 640, cannot be used as a pretext to unlawfully
+        discriminate against a rider based on a protected characteristic
+        listed in Civil Code § 51.
+      </para>
+    <para>
+        The practical importance of the Unruh Act is evident in
+        litigation, particularly concerning disability access. A
+        violation of the federal Americans with Disabilities Act (ADA)
+        also constitutes a violation of the Unruh Act, providing a
+        powerful enforcement mechanism for ensuring public
+        accommodations are accessible.6 The legislature has even created
+        specific procedural rules for "high-frequency
+        litigants" who file numerous lawsuits under the act,
+        acknowledging its central role in private enforcement of civil
+        rights for persons with disabilities.19 The omission of the
+        Unruh Act is therefore not just a missing statute; it is a
+        missing foundational concept. Without it, the compilation is a
+        list of disparate rules. With it, the compilation becomes an
+        interconnected system of rights and duties grounded in the
+        state's core civil rights protections.
+      </para>
+  </section>
+  <section xml:id="section-32-the-customer-as-patron--protections-in-commerce-and-data-privacy">
+    <title>
+      <emphasis role="strong">Section 3.2: The
+      "Customer" as Patron – Protections in Commerce and Data
+      Privacy</emphasis>
+    </title>
+    <para>
+        In modern legal drafting, the term "customer" is often
+        used to define a relationship functionally identical to that of
+        a patron, particularly in contexts involving commercial
+        transactions and data privacy. The distinction in terminology
+        often reflects an evolution in the nature of the interaction,
+        from a physical, place-based relationship to a transactional,
+        data-driven one.
+      </para>
+    <para>
+        The law has adapted its lexicon as the economy has shifted.
+        While "patron" remains prevalent in laws concerning
+        physical venues like libraries, pools, and bars,
+        "customer" has become the preferred term for the
+        modern consumer whose interaction with a business creates a data
+        trail. Key statutes in this area include:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The Customer Records Act (Civil Code
+            § 1798.80 et seq.):</emphasis> This law defines a
+            "customer" as an individual who provides personal
+            information to a business to purchase a product or obtain a
+            service.9 It mandates that businesses take reasonable steps
+            to destroy customer records containing personal information
+            when they are no longer needed, protecting individuals from
+            identity theft and other harms related to data
+            mismanagement.21
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">The California Consumer Privacy Act
+            (CCPA), as amended by the California Privacy Rights Act
+            (CPRA) (Civil Code § 1798.140 et seq.):</emphasis> This
+            landmark legislation grants "consumers"—a term
+            used interchangeably with customer—unprecedented control
+            over their personal information. It provides the right to
+            know what data is being collected, the right to have it
+            deleted, and the right to opt-out of its sale or sharing.8
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Point-of-Sale Systems (Business and
+            Professions Code § 13300):</emphasis> This statute protects
+            a "customer" at checkout by requiring that
+            point-of-sale systems conspicuously display the price of
+            each item and any surcharges before payment is required,
+            ensuring transactional fairness and transparency.22
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        A complete compilation of "patron law" in the 21st
+        century must include these "customer" laws. To exclude
+        them is to ignore the entire digital and transactional sphere of
+        the patron-business relationship, where some of the most
+        significant rights and risks now lie. The right of a library
+        patron to have their borrowing history kept private under
+        Government Code § 7927.105 is the direct analog to the right of
+        an online customer to have their browsing and purchase history
+        protected under the CCPA.
+      </para>
+  </section>
+  <section xml:id="section-33-the-guest-as-patron--rights-and-regulations-in-lodging">
+    <title>
+      <emphasis role="strong">Section 3.3: The "Guest"
+      as Patron – Rights and Regulations in Lodging</emphasis>
+    </title>
+    <para>
+        The term "guest" is a legal term of art designed to
+        regulate the specific relationship between an individual and a
+        lodging establishment. This status represents a hybrid state,
+        somewhere between a transient "patron" of a retail
+        store and a more permanent "tenant" under a lease,
+        triggering a unique set of laws that balance the property rights
+        of the operator with the occupancy rights of the individual.
+      </para>
+    <para>
+        The law uses "guest" to distinguish this relationship
+        from that of a tenant, who is afforded much greater protection
+        against eviction under landlord-tenant law. Key statutes
+        include:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Civil Code § 1865:</emphasis> This
+            statute defines a "guest" in the context of
+            hotels, motels, and other transient lodging.10 It explicitly
+            grants an innkeeper the right to evict a guest who refuses
+            to depart at the agreed-upon checkout time, a streamlined
+            process that would be illegal if applied to a tenant in a
+            residential apartment. This section carefully carves out a
+            specific set of rules for the unique nature of the
+            hospitality industry.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Civil Code § 798.34:</emphasis> This
+            law regulates the rights of a mobilehome park homeowner to
+            have "guests." It sets limits on fees that can be
+            charged for guests and establishes that a guest has no
+            rights of tenancy in the park, reinforcing the distinction
+            between a temporary visitor and a resident.24
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Health and Safety Code §
+            113893:</emphasis> In defining a "restricted food
+            service facility" (like a bed and breakfast), the law
+            specifies that the predominant relationship between the
+            occupants and the permitholder is that of "innkeeper
+            and guest".26
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        The legal category of "guest" is a crucial component
+        of the broader landscape of patron rights. It addresses the
+        specific legal questions that arise from short-term commercial
+        lodging, providing a framework that protects both the business
+        operator's need for operational flexibility and the guest's
+        right to safe and fair accommodation.
+      </para>
+  </section>
+  <section xml:id="section-34-the-client-as-patron--the-height-of-duty-of-care">
+    <title>
+      <emphasis role="strong">Section 3.4: The "Client"
+      as Patron – The Height of Duty of Care</emphasis>
+    </title>
+    <para>
+        The shift in terminology from "patron" or
+        "customer" to "client" signifies a critical
+        legal transition from a standard of <emphasis>reasonable
+        care</emphasis> to a <emphasis>fiduciary duty</emphasis>. This
+        is the highest standard of care recognized by law, imposing
+        affirmative obligations of loyalty, trust, and confidentiality
+        that go far beyond the duties owed in a typical commercial
+        transaction. The "client" relationship represents the
+        apex of patron protection.
+      </para>
+    <para>
+        This heightened duty is necessary because of the inherent power
+        imbalance and the special trust placed in licensed professionals
+        like attorneys and accountants. Whereas a business owes a patron
+        a duty not to be negligent (e.g., to maintain a safe floor), a
+        professional owes a client a duty to act in that client's best
+        interest, even at a cost to themselves. Key statutes codifying
+        this relationship include:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Business and Professions Code §
+            6068:</emphasis> This statute outlines the fundamental
+            duties of an attorney. Critically, § 6068(e)(1) requires an
+            attorney "To maintain inviolate the confidence, and at
+            every peril to himself or herself to preserve the secrets,
+            of his or her client".12 This standard is far more
+            stringent than the confidentiality owed to a library patron,
+            which is subject to court orders and federal law exceptions.
+            The statute also requires attorneys to keep clients
+            reasonably informed and respond to status inquiries.12
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Business and Professions Code §
+            6148:</emphasis> This section mandates written fee
+            agreements for legal services when the total expense to a
+            client is expected to exceed $1,000, ensuring transparency
+            and preventing disputes.27
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Business and Professions Code §
+            5063.3:</emphasis> This law establishes a similar duty of
+            confidentiality for licensed accountants, prohibiting them
+            from disclosing confidential client information without
+            written permission, except under specific legal
+            circumstances like a court-ordered subpoena.13
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        Patron law exists on a spectrum of duties owed by the service
+        provider. The term "client" denotes the far end of
+        that spectrum, where the law provides maximum protection. An
+        exhaustive compilation of patron protections must include this
+        highest tier to be complete, as it represents the ultimate
+        expression of the law's interest in safeguarding an individual
+        who places their trust and sensitive affairs in the hands of a
+        service provider.
+      </para>
+  </section>
+</section>
+  

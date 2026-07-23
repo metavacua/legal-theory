@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-iii-structuring-the-safe-and-unsafe-membership-securities">
+  <title>
+    <emphasis role="strong">Part III: Structuring the
+    "Safe" and "Unsafe" Membership
+    Securities</emphasis>
+  </title>
+  <para>
+      This section provides the detailed design of the two distinct
+      security classes, which lie at the heart of this proposal. Each
+      class is engineered to serve a different purpose and appeal to a
+      different type of investor.
+    </para>
+  <section xml:id="section-7-the-safe-membership-class-class-s">
+    <title>
+      <emphasis role="strong">Section 7: The "Safe"
+      Membership Class (Class S)</emphasis>
+    </title>
+    <para>
+        The Class S security is designed for stability, long-term
+        investment, and the preservation of the cooperative's core
+        identity and tax advantages. It represents a proprietary
+        interest in the cooperative, entitling the holder to a pro-rata
+        share of patronage distributions based on their own patronage
+        activity. The architecture of Class S securities is fortified by
+        several protective mechanisms embedded within the bylaws to
+        safeguard the cooperative's Subchapter T status.
+      </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Mandatory Patronage for Voting
+            Rights:</emphasis> As previously detailed, the bylaws will
+            unequivocally state that only holders of Class S securities
+            who are also active patrons, and who have been formally
+            accepted by the board, can become Voting Members. This
+            ensures that the governance of the cooperative remains in
+            the hands of those who actively use its services.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Corporate Right of First Refusal
+            (ROFR):</emphasis> The cooperative will retain a ROFR on any
+            proposed transfer of Class S securities to a third party.29
+            This is a powerful control mechanism. If a Class S holder
+            wishes to sell their securities, they must first offer them
+            to the cooperative on the same terms as the third-party
+            offer. This allows the cooperative to prevent large blocks
+            of securities from accumulating in the hands of non-patrons
+            or potentially hostile entities, thereby preserving the
+            patron-focused ownership structure.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Active Patron Requirement for
+            Continued Membership:</emphasis> Voting rights are not
+            permanent. The bylaws will stipulate that to maintain their
+            status as a Voting Member, an individual must remain an
+            active patron. Failure to meet a defined minimum patronage
+            threshold over a specified period (e.g., two consecutive
+            fiscal years) will automatically revert their status from a
+            "Voting Member" to a non-voting "Security
+            Holder".27 This ensures that the voting body remains
+            composed of current, engaged users.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Supermajority Vote for Fundamental
+            Changes:</emphasis> Any proposed amendment to the Articles
+            of Incorporation or bylaws that could endanger the
+            cooperative's Subchapter T status will require an
+            exceptionally high supermajority vote (e.g., 75% or 80%) of
+            all Voting Members. This would apply to changes to the
+            "one member, one vote" rule, the definition of
+            patronage, or the formula for patronage distribution.
+          </para>
+      </listitem>
+    </orderedlist>
+    <para>
+        The offering documents for Class S securities will prominently
+        feature these protective measures as a key benefit, appealing to
+        investors—including member-patrons and impact investors—who
+        value the stability, democratic principles, and tax advantages
+        of the cooperative model.
+      </para>
+  </section>
+  <section xml:id="section-8-the-unsafe-membership-class-class-u">
+    <title>
+      <emphasis role="strong">Section 8: The "Unsafe"
+      Membership Class (Class U)</emphasis>
+    </title>
+    <para>
+        The Class U security is a novel, high-risk, high-reward
+        financial instrument. It is designed to be freely tradable on
+        the open market without a corporate ROFR and can be acquired and
+        held by any person or entity, regardless of their patronage
+        status. Holders of Class U securities are entitled to the same
+        economic rights to patronage dividends as Class S holders (if
+        they are patrons), but the security itself is intentionally
+        exposed to risks that could trigger a fundamental change in the
+        cooperative's corporate and tax structure.
+      </para>
+    <para>
+        These risks are not unforeseen liabilities; they are designed
+        features of the security that will be explicitly defined in the
+        bylaws and prominently disclosed in all offering documents.
+      </para>
+    <para>
+        Defining the Trigger Events for Transmutation:
+      </para>
+    <para>
+        The bylaws will define specific, measurable events related to
+        the trading and ownership of Class U securities that will
+        constitute a "Cooperative Status Review Event."
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Trigger 1: Non-Patron Ownership
+            Concentration:</emphasis> "If, at the close of any two
+            consecutive fiscal quarters, the total number of outstanding
+            Class U securities held by non-patron Security Holders
+            exceeds sixty percent (60%) of all outstanding Class U
+            securities, this shall constitute a 'Cooperative Status
+            Review Event'."
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Trigger 2: Shift to Non-Patronage
+            Income:</emphasis> "If, for any single fiscal year, the
+            cooperative's gross revenue derived from non-patronage
+            sources exceeds fifty percent (50%) of its total gross
+            revenue, this shall constitute a 'Cooperative Status Review
+            Event'." This trigger directly links the trading of the
+            security to the operational requirements of Subchapter T.17
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Trigger 3: High Trading Velocity
+            (Optional advanced trigger):</emphasis> "If the average
+            daily trading volume of Class U securities over any ninety
+            (90) day period exceeds five percent (5%) of the total
+            outstanding Class U securities, indicating a prevalence of
+            short-term speculation over long-term investment, this shall
+            constitute a 'Cooperative Status Review Event'."
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        The Consequence of a Trigger Event:
+      </para>
+    <para>
+        The bylaws will clearly state the non-discretionary outcome of a
+        "Cooperative Status Review Event." The most direct
+        approach is Automatic Transmutation: upon the official
+        certification of a trigger event by the board, the pre-existing
+        obligation to distribute patronage dividends under Subchapter T
+        is automatically terminated for the subsequent fiscal year. The
+        cooperative would then be obligated to file its federal and
+        state income taxes as a standard C-corporation, losing the
+        patronage dividend deduction. A secondary, less automatic
+        approach would be a Mandatory Membership Vote, where a trigger
+        event requires the board to call a special meeting to vote on
+        formally converting the entity to a general stock corporation.
+      </para>
+    <para>
+        Disclosure and Risk Factors:
+      </para>
+    <para>
+        The prospectus for Class U securities will contain an extensive
+        and "plain English" risk factors section.33 It will
+        state, in no uncertain terms, that the security is designed with
+        these features. A sample disclosure might read:
+      </para>
+    <para>
+        "This security is intentionally designed with mechanisms
+        that may lead to the termination of the company's status as a
+        cooperative and its favorable tax treatment under Subchapter T.
+        Investors must be aware that certain trading patterns and
+        ownership concentrations, including those of other investors
+        over whom they have no control, can trigger this transmutation.
+        AN INVESTMENT IN CLASS U SECURITIES CARRIES THE INHERENT AND
+        INTENTIONAL RISK OF CORPORATE TRANSMUTATION, WHICH WOULD
+        FUNDAMENTALLY ALTER THE NATURE OF THIS INVESTMENT.".35
+      </para>
+    <para>
+        This "Unsafe" security is more than just a risky
+        stock; it is a tool for financial engineering. It would likely
+        appeal to sophisticated investors, such as hedge funds or
+        activist investors, who understand and may even seek to profit
+        from the transmutation event. For example, a C-corporation may
+        be a more attractive acquisition target than a cooperative,
+        potentially allowing investors to realize a return through a
+        sale of the company at a premium. The Class U security thus
+        creates a pre-defined pathway for the cooperative's evolution,
+        driven by market forces that are explicitly acknowledged in its
+        legal DNA from inception.
+      </para>
+  </section>
+  <section xml:id="table-3-comparison-of-safe-class-s-and-unsafe-class-u-membership-securities">
+    <title>
+      <emphasis role="strong">Table 3: Comparison of 'Safe'
+      (Class S) and 'Unsafe' (Class U) Membership
+      Securities</emphasis>
+    </title>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                Feature
+              </entry>
+            <entry>
+                Class S ("Safe")
+              </entry>
+            <entry>
+                Class U ("Unsafe")
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Tradability**
+              </entry>
+            <entry>
+                Fully Tradable
+              </entry>
+            <entry>
+                Fully Tradable
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Voting Rights**
+              </entry>
+            <entry>
+                None inherent in the security. Requires separate
+                admission as a "Voting Member" based on active
+                patronage.
+              </entry>
+            <entry>
+                None. Holders of Class U securities are ineligible to
+                become Voting Members.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Corporate ROFR**
+              </entry>
+            <entry>
+                Yes. The cooperative retains a Right of First Refusal on
+                all transfers to third parties.
+              </entry>
+            <entry>
+                No. Securities are freely transferable without
+                cooperative pre-approval.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Subchapter T Risk**
+              </entry>
+            <entry>
+                Low. Protected by multiple bylaw provisions, including
+                ROFR, active patron requirements, and supermajority vote
+                rules.
+              </entry>
+            <entry>
+                High. Intentionally exposed via explicitly defined
+                triggers based on non-patron ownership and non-patronage
+                revenue.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Key Risk Disclosure**
+              </entry>
+            <entry>
+                Risks associated with a cooperative business model;
+                reliance on democratic control and patronage benefits.
+              </entry>
+            <entry>
+                Explicit risk of involuntary transmutation into a
+                C-corporation, triggered by market activity, leading to
+                loss of Subchapter T tax status.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Ideal Investor Profile**
+              </entry>
+            <entry>
+                Long-term member-patrons, employees, community
+                stakeholders, and impact investors seeking stable,
+                mission-aligned returns.
+              </entry>
+            <entry>
+                Sophisticated and speculative investors, hedge funds,
+                and other entities comfortable with event-driven
+                strategies and high-risk/high-reward profiles.
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+</section>
+  

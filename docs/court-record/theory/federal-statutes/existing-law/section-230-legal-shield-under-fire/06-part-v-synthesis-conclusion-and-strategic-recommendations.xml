@@ -1,0 +1,716 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="part-v-synthesis-conclusion-and-strategic-recommendations">
+  <title>
+    <emphasis role="strong">Part V: Synthesis, Conclusion, and
+    Strategic Recommendations</emphasis>
+  </title>
+  <para>
+      The legal and constitutional landscape surrounding Section 230 is
+      defined by a series of complex and often paradoxical tensions. The
+      statute, designed to foster a free and open internet, has instead
+      become a catalyst for profound constitutional conflicts over the
+      nature of speech, property, and power in the digital age.
+      Synthesizing the preceding analysis reveals the core dynamics of
+      this conflict and points toward the future trajectory of platform
+      regulation.
+    </para>
+  <section xml:id="section-51-the-unconstitutionality-paradox">
+    <title>
+      <emphasis role="strong">Section 5.1: The
+      Unconstitutionality Paradox</emphasis>
+    </title>
+    <para>
+        The central paradox of the Section 230 debate is this: while the
+        federal statute itself is likely constitutional, state laws
+        designed to counteract its effects by regulating platform
+        content moderation are themselves likely
+        <emphasis>unconstitutional</emphasis>. The First Amendment, as
+        interpreted by the Supreme Court, protects the editorial
+        discretion of private platforms. State laws that attempt to
+        compel these platforms to host speech against their will,
+        particularly when motivated by viewpoint-based considerations,
+        are an infringement on this protected expressive activity.
+        Therefore, Section 230 is not, in itself, unconstitutional;
+        rather, it is a <emphasis>catalyst</emphasis> for constitutional
+        conflict, having created a class of powerful private speakers
+        whose subsequent exercise of their First Amendment rights is now
+        being challenged by state governments.
+      </para>
+  </section>
+  <section xml:id="section-52-the-future-of-platform-regulation-after-netchoice">
+    <title>
+      <emphasis role="strong">Section 5.2: The Future of Platform
+      Regulation After</emphasis>
+      <emphasis>
+        <emphasis role="strong">NetChoice</emphasis>
+      </emphasis>
+    </title>
+    <para>
+        The Supreme Court's landmark ruling in <emphasis>Moody v.
+        NetChoice</emphasis> and <emphasis>NetChoice v.
+        Paxton</emphasis> has set the course for the next phase of
+        platform regulation. By setting a high bar for facial challenges
+        while strongly affirming that content moderation is expressive
+        conduct, the Court has shifted the legal battleground. The
+        future will likely see less emphasis on broad, sweeping attempts
+        to invalidate state laws in their entirety and more on targeted,
+        "as-applied" litigation.35 These cases will force
+        courts to conduct a granular analysis of specific platform
+        functions, grappling with difficult questions about which
+        activities—from curated news feeds and recommendation algorithms
+        to direct messaging and e-commerce listings—constitute protected
+        expression and which might be subject to regulation as
+        non-expressive conduct.
+      </para>
+    <para>
+        In the legislative arena, the constitutional constraints
+        clarified by the Court will likely push lawmakers away from
+        content-based mandates. Instead, reform efforts may coalesce
+        around process- and transparency-oriented proposals, such as the
+        Platform Accountability and Consumer Transparency (PACT) Act.
+        Such legislation seeks to condition Section 230 immunity not on
+        the substance of moderation decisions, but on requirements for
+        platforms to provide clear terms of service, implement fair and
+        transparent appeals processes, and report on their moderation
+        activities.52 This approach represents a potential middle ground
+        that respects the platforms' editorial rights while increasing
+        their accountability to users.
+      </para>
+  </section>
+  <section xml:id="section-53-strategic-considerations-for-stakeholders">
+    <title>
+      <emphasis role="strong">Section 5.3: Strategic
+      Considerations for Stakeholders</emphasis>
+    </title>
+    <para>
+        The evolving legal landscape presents distinct strategic
+        imperatives for the key actors involved in the Section 230
+        debate.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">For Policymakers:</emphasis> The
+            <emphasis>NetChoice</emphasis> decision serves as a clear
+            constitutional warning. Future legislative efforts to
+            regulate platforms should pivot away from attempts to
+            control protected <emphasis>expression</emphasis> (i.e.,
+            content moderation decisions) and focus instead on
+            regulating unprotected <emphasis>conduct</emphasis>. More
+            constitutionally durable avenues for regulation include
+            strengthening consumer protection laws, enhancing data
+            privacy requirements, and applying antitrust principles to
+            address the market power of dominant platforms. The PACT
+            Act's model of conditioning immunity on procedural
+            transparency, rather than content mandates, offers a more
+            viable path forward.54
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">For Platforms:</emphasis> The
+            primary legal strategy must now be twofold. First, platforms
+            must prepare for a new wave of as-applied First Amendment
+            litigation by developing a robust factual and legal record
+            to defend the expressive nature of their various services
+            and functions. Second, they must address the significant
+            latent risk posed by the worker misclassification theory.
+            This requires a thorough review of their relationships with
+            volunteer moderators and other user contributors,
+            particularly in states with stringent labor laws like
+            California, to mitigate the risk of a legal
+            re-characterization that could undermine their Section 230
+            protections.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">For Civil Liberties
+            Advocates:</emphasis> The current legal environment requires
+            a continued nuanced and sophisticated approach.
+            Organizations like the ACLU have defended Section 230 as a
+            vital shield for user speech and a bulwark against
+            government censorship, while simultaneously challenging
+            platform business practices that lead to unlawful
+            discrimination.55 This dual strategy remains the most
+            effective path. It involves defending the core immunity for
+            hosting third-party speech against unconstitutional state
+            intrusion while supporting targeted regulations aimed at
+            harmful platform conduct—such as discriminatory ad-targeting
+            or anticompetitive behavior—that falls outside the scope of
+            protected editorial expression.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        The following table provides a capstone summary and strategic
+        overview of the major legal theories analyzed in this report,
+        evaluating their core arguments, primary hurdles, and future
+        viability.
+      </para>
+    <informaltable>
+      <tgroup cols="5">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                Legal Theory
+              </entry>
+            <entry>
+                Core Argument
+              </entry>
+            <entry>
+                Key Proponent(s)/Case
+              </entry>
+            <entry>
+                Primary Hurdle/Counterargument
+              </entry>
+            <entry>
+                Strategic Outlook
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **First Amendment (State Regulation of Moderation)**
+              </entry>
+            <entry>
+                State "must-carry" laws violate platforms'
+                First Amendment right to editorial discretion.
+              </entry>
+            <entry>
+                *NetChoice*, *Moody*, *Miami Herald*
+              </entry>
+            <entry>
+                States argue platforms are not speakers but are engaging
+                in regulable "censorship."
+              </entry>
+            <entry>
+                Strong. The Supreme Court has affirmed moderation is
+                expressive conduct, making as-applied challenges to
+                these state laws highly likely to succeed.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Common Carrier Doctrine**
+              </entry>
+            <entry>
+                Dominant platforms are essential public utilities and
+                should be subject to non-discrimination duties.
+              </entry>
+            <entry>
+                Justice Clarence Thomas; Fifth Circuit in *Paxton*
+              </entry>
+            <entry>
+                Platforms are active curators, not passive conduits;
+                imposing this status would be unconstitutional compelled
+                speech.
+              </entry>
+            <entry>
+                Weak. The Supreme Court's focus on the expressive nature
+                of platforms in *NetChoice* makes a broad application of
+                this doctrine unlikely.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Public Square Doctrine**
+              </entry>
+            <entry>
+                Platforms are the "modern public square" and
+                should be bound by First Amendment rules.
+              </entry>
+            <entry>
+                Popular rhetoric; some state legislative arguments.
+              </entry>
+            <entry>
+                The state action doctrine; private entities are not
+                bound by the First Amendment. The Supreme Court rejected
+                this legal theory in *Halleck*.
+              </entry>
+            <entry>
+                Very Weak. This theory has been largely foreclosed by
+                Supreme Court precedent.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Fifth Amendment Takings Clause**
+              </entry>
+            <entry>
+                State "must-carry" laws constitute a
+                regulatory taking of a platform's private digital
+                property for public use.
+              </entry>
+            <entry>
+                Scholarly legal theory.
+              </entry>
+            <entry>
+                Novelty of the argument; courts may be reluctant to
+                extend takings jurisprudence to this digital context.
+              </entry>
+            <entry>
+                Untested but plausible. Offers a novel alternative to
+                First Amendment claims that could gain traction in
+                future litigation.
+              </entry>
+          </row>
+          <row>
+            <entry>
+                **Statutory Misclassification**
+              </entry>
+            <entry>
+                Platforms' use of volunteer moderators makes them active
+                managers, factually dissolving the predicate for Section
+                230 immunity.
+              </entry>
+            <entry>
+                California labor law ("ABC Test"); emerging
+                legal theory.
+              </entry>
+            <entry>
+                Requires a court to accept the re-characterization of
+                moderators as employees/agents; applicability varies by
+                state law.
+              </entry>
+            <entry>
+                High-risk, high-reward. A potentially disruptive
+                "bottom-up" attack that could circumvent the
+                constitutional debate entirely in key jurisdictions.
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              "Chap. L. Rev." by Madeleine Dobson - Chapman
+              University Digital Commons, accessed September 13, 2025,
+              <link xlink:href="https://digitalcommons.chapman.edu/chapman-law-review/vol25/iss1/7/">https://digitalcommons.chapman.edu/chapman-law-review/vol25/iss1/7/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              "Failed Analogies: Justice Thomas's Concurrence in
+              Biden v. Knight Firs" by Sarah S. Seo, accessed
+              September 13, 2025,
+              <link xlink:href="https://ir.lawnet.fordham.edu/iplj/vol32/iss4/5/">https://ir.lawnet.fordham.edu/iplj/vol32/iss4/5/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Competition and Content Moderation: How Section 230
+              Enables Increased Tech Marketplace Entry - Cato Institute,
+              accessed September 13, 2025,
+              <link xlink:href="https://www.cato.org/sites/cato.org/files/2022-01/policy-analysis-922.pdf">https://www.cato.org/sites/cato.org/files/2022-01/policy-analysis-922.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Section 230 - Wikipedia, accessed September 13, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Section_230">https://en.wikipedia.org/wiki/Section_230</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Social Media: The New Public Square? - The Free Speech
+              Project - Georgetown University, accessed September 13,
+              2025,
+              <link xlink:href="https://freespeechproject.georgetown.edu/social-media-the-new-public-square/">https://freespeechproject.georgetown.edu/social-media-the-new-public-square/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The First Amendment Meets the Virtual Public Square -
+              Journal of Free Speech Law, accessed September 13, 2025,
+              <link xlink:href="https://www.journaloffreespeechlaw.org/stanger.pdf">https://www.journaloffreespeechlaw.org/stanger.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The First Amendment Meets the Virtual Public Square |
+              Daedalus - MIT Press Direct, accessed September 13, 2025,
+              <link xlink:href="https://direct.mit.edu/daed/article/153/3/187/123999/The-First-Amendment-Meets-the-Virtual-Public">https://direct.mit.edu/daed/article/153/3/187/123999/The-First-Amendment-Meets-the-Virtual-Public</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Forum: Beyond the Public Square ... - The Yale Law
+              Journal, accessed September 13, 2025,
+              <link xlink:href="https://www.yalelawjournal.org/forum/beyond-the-public-square-imagining-digital-democracy">https://www.yalelawjournal.org/forum/beyond-the-public-square-imagining-digital-democracy</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Page 89 TITLE 47—TELECOMMUNICATIONS § 230 and shall order
+              a common carrier to modify any such policy or procedure
+              that the Co - GovInfo, accessed September 13, 2025,
+              <link xlink:href="https://www.govinfo.gov/link/uscode/47/230">https://www.govinfo.gov/link/uscode/47/230</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              47 U.S. Code § 230 - Protection for private blocking and
+              screening of offensive material, accessed September 13,
+              2025,
+              <link xlink:href="https://www.law.cornell.edu/uscode/text/47/230">https://www.law.cornell.edu/uscode/text/47/230</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Your guide to Section 230, the law that safeguards free
+              speech on the internet, accessed September 13, 2025,
+              <link xlink:href="https://www.thefire.org/news/your-guide-section-230-law-safeguards-free-speech-internet">https://www.thefire.org/news/your-guide-section-230-law-safeguards-free-speech-internet</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Section 230: An Overview | Congress.gov, accessed
+              September 13, 2025,
+              <link xlink:href="https://www.congress.gov/crs-product/R46751">https://www.congress.gov/crs-product/R46751</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              1462 - Section 230, Communications Decency Act - Thompson
+              Coburn LLP, accessed September 13, 2025,
+              <link xlink:href="https://www.thompsoncoburn.com/wp-content/uploads/2024/11/sectopm-230-e.pdf">https://www.thompsoncoburn.com/wp-content/uploads/2024/11/sectopm-230-e.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Overview of Section 230: What It Is, Why It Was Created,
+              and What It Has Achieved - Information Technology and
+              Innovation Foundation (ITIF), accessed September 13, 2025,
+              <link xlink:href="https://itif.org/publications/2021/02/22/overview-section-230-what-it-why-it-was-created-and-what-it-has-achieved/">https://itif.org/publications/2021/02/22/overview-section-230-what-it-why-it-was-created-and-what-it-has-achieved/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What you should know about Section 230, the rule that
+              shaped today's internet - PBS, accessed September 13,
+              2025,
+              <link xlink:href="https://www.pbs.org/newshour/politics/what-you-should-know-about-section-230-the-rule-that-shaped-todays-internet">https://www.pbs.org/newshour/politics/what-you-should-know-about-section-230-the-rule-that-shaped-todays-internet</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Interpreting the ambiguities of Section 230 - Brookings
+              Institution, accessed September 13, 2025,
+              <link xlink:href="https://www.brookings.edu/articles/interpreting-the-ambiguities-of-section-230/">https://www.brookings.edu/articles/interpreting-the-ambiguities-of-section-230/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Test of Time: Section 230 of the Communications
+              Decency Act Turns 20 | Media Law Monitor | Davis Wright
+              Tremaine, accessed September 13, 2025,
+              <link xlink:href="https://www.dwt.com/blogs/media-law-monitor/2016/08/the-test-of-time-section-230-of-the-communications">https://www.dwt.com/blogs/media-law-monitor/2016/08/the-test-of-time-section-230-of-the-communications</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <link xlink:href="http://www.congress.gov">www.congress.gov</link>,
+              accessed September 13, 2025,
+              <link xlink:href="https://www.congress.gov/crs-product/R46751#:~:text=The%20CDA's%20new%20Section%20230,liability%20in%20certain%20limited%20contexts.">https://www.congress.gov/crs-product/R46751#:~:text=The%20CDA's%20new%20Section%20230,liability%20in%20certain%20limited%20contexts.</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Section 230 | Electronic Frontier Foundation, accessed
+              September 13, 2025,
+              <link xlink:href="https://www.eff.org/issues/cda230">https://www.eff.org/issues/cda230</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Section 230: A Brief Overview | Congress.gov, accessed
+              September 13, 2025,
+              <link xlink:href="https://www.congress.gov/crs-product/IF12584">https://www.congress.gov/crs-product/IF12584</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Section 230 as First Amendment Rule - Harvard Law Review,
+              accessed September 13, 2025,
+              <link xlink:href="https://harvardlawreview.org/print/vol-131/section-230-as-first-amendment-rule/">https://harvardlawreview.org/print/vol-131/section-230-as-first-amendment-rule/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fair Housing Council of San Fernando Valley v.
+              Roommates.com, LLC - Wikipedia, accessed September 13,
+              2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Fair_Housing_Council_of_San_Fernando_Valley_v._Roommates.com,_LLC">https://en.wikipedia.org/wiki/Fair_Housing_Council_of_San_Fernando_Valley_v._Roommates.com,_LLC</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fair Housing Council of San Fernando Valley v.
+              Roommates.com: The Ninth Circuit Court of Appeals
+              Announces a New Legal Test for - Davis Wright Tremaine,
+              accessed September 13, 2025,
+              <link xlink:href="https://www.dwt.com/insights/2008/06/fair-housing-council-of-san-fernando-valley-v-room">https://www.dwt.com/insights/2008/06/fair-housing-council-of-san-fernando-valley-v-room</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Revisiting Roommates.com - Berkeley Technology Law
+              Journal, accessed September 13, 2025,
+              <link xlink:href="https://btlj.org/wp-content/uploads/2023/01/0009-36-3-Hans_Web.pdf">https://btlj.org/wp-content/uploads/2023/01/0009-36-3-Hans_Web.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              FAIR HOUSING COUNCIL v. ROOMMATES.COM - Ninth Circuit,
+              accessed September 13, 2025,
+              <link xlink:href="https://cdn.ca9.uscourts.gov/datastore/opinions/2008/04/02/0456916.pdf">https://cdn.ca9.uscourts.gov/datastore/opinions/2008/04/02/0456916.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fair Housing Council of San Fernando Valley v.
+              Roommate.com | ACLU of Northern CA, accessed September 13,
+              2025,
+              <link xlink:href="https://www.aclunc.org/our-work/legal-docket/fair-housing-council-san-fernando-valley-v-roommatecom">https://www.aclunc.org/our-work/legal-docket/fair-housing-council-san-fernando-valley-v-roommatecom</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Section 230- Are Online Platforms Publishers,
+              Distributors, or Neither?, accessed September 13, 2025,
+              <link xlink:href="https://bipartisanpolicy.org/blog/section-230-online-platforms/">https://bipartisanpolicy.org/blog/section-230-online-platforms/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Moody v. NetChoice, LLC | 603 U.S. ___ (2024) | Justia
+              U.S. Supreme Court Center, accessed September 13, 2025,
+              <link xlink:href="https://supreme.justia.com/cases/federal/us/603/22-277/">https://supreme.justia.com/cases/federal/us/603/22-277/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Moody v. NetChoice, LLC: The Supreme Court Addresses
+              Facial Challenges to State Social Media Laws |
+              Congress.gov, accessed September 13, 2025,
+              <link xlink:href="https://www.congress.gov/crs-product/LSB11224">https://www.congress.gov/crs-product/LSB11224</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Netchoice v. Paxton - Global ... - Global Freedom of
+              Expression, accessed September 13, 2025,
+              <link xlink:href="https://globalfreedomofexpression.columbia.edu/cases/netchoice-v-paxton/">https://globalfreedomofexpression.columbia.edu/cases/netchoice-v-paxton/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              NetChoice, LLC v. Paxton - Oyez, accessed September 13,
+              2025,
+              <link xlink:href="https://www.oyez.org/cases/2023/22-555">https://www.oyez.org/cases/2023/22-555</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              NetChoice, LLC v. Paxton | Supreme Court Bulletin | US Law
+              | LII / Legal Information Institute, accessed September
+              13, 2025,
+              <link xlink:href="https://www.law.cornell.edu/supct/cert/22-555">https://www.law.cornell.edu/supct/cert/22-555</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Moody v. NetChoice, LLC | Supreme Court Bulletin | US Law
+              | LII ..., accessed September 13, 2025,
+              <link xlink:href="https://www.law.cornell.edu/supct/cert/22-277">https://www.law.cornell.edu/supct/cert/22-277</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Moody v. NetChoice, LLC | Oyez, accessed September 13,
+              2025,
+              <link xlink:href="https://www.oyez.org/cases/2023/22-277">https://www.oyez.org/cases/2023/22-277</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Online speech showdown: Six takeaways from Moody v.
+              NetChoice - Hogan Lovells, accessed September 13, 2025,
+              <link xlink:href="https://www.hoganlovells.com/en/publications/online-speech-showdown-six-takeaways-from-moody-v-netchoice">https://www.hoganlovells.com/en/publications/online-speech-showdown-six-takeaways-from-moody-v-netchoice</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              NetChoice, LLC - United States Court of Appeals for the
+              Fifth Circuit, accessed September 13, 2025,
+              <link xlink:href="https://www.ca5.uscourts.gov/opinions/pub/21/21-51178-CV1.pdf">https://www.ca5.uscourts.gov/opinions/pub/21/21-51178-CV1.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              NetChoice, LLC v. Paxton - Ballotpedia, accessed September
+              13, 2025,
+              <link xlink:href="https://ballotpedia.org/NetChoice,_LLC_v._Paxton">https://ballotpedia.org/NetChoice,_LLC_v._Paxton</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Viewpoint Discrimination | The First Amendment
+              Encyclopedia - Free Speech Center, accessed September 13,
+              2025,
+              <link xlink:href="https://firstamendment.mtsu.edu/article/viewpoint-discrimination/">https://firstamendment.mtsu.edu/article/viewpoint-discrimination/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              SCOTUS Decision Could Limit Censorship by Social Media
+              Platforms - Frost Brown Todd, accessed September 13, 2025,
+              <link xlink:href="https://frostbrowntodd.com/scotus-decision-could-limit-censorship-by-social-media-platforms/">https://frostbrowntodd.com/scotus-decision-could-limit-censorship-by-social-media-platforms/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Bargaining for Free Speech: Common Carriage, Network
+              Neutrality ..., accessed September 13, 2025,
+              <link xlink:href="https://yjolt.org/sites/default/files/bargaining_for_free_speech_22_yale_j.l._tech._391_2020.pdf">https://yjolt.org/sites/default/files/bargaining_for_free_speech_22_yale_j.l._tech._391_2020.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Supreme Court takes up Section 230 | Brookings,
+              accessed September 13, 2025,
+              <link xlink:href="https://www.brookings.edu/articles/the-supreme-court-takes-up-section-230/">https://www.brookings.edu/articles/the-supreme-court-takes-up-section-230/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Clarence Thomas Learned Nothing From The Mess He Helped
+              Create Regarding Section 230, Blogs Ignorantly About 230
+              Yet Again - Above the Law, accessed September 13, 2025,
+              <link xlink:href="https://abovethelaw.com/2024/07/clarence-thomas-learned-nothing-from-the-mess-he-helped-create-regarding-section-230-blogs-ignorantly-about-230-yet-again/">https://abovethelaw.com/2024/07/clarence-thomas-learned-nothing-from-the-mess-he-helped-create-regarding-section-230-blogs-ignorantly-about-230-yet-again/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              "Background Principles" and the General Law of
+              Property - Harvard Law Review, accessed September 13,
+              2025,
+              <link xlink:href="https://harvardlawreview.org/print/vol-138/background-principles-and-the-general-law-of-property/">https://harvardlawreview.org/print/vol-138/background-principles-and-the-general-law-of-property/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              When “Takings” Happen to Good People: The Fifth Amendment
+              Takings Clause and the Issue of Distributional Justice -
+              SMU, accessed September 13, 2025,
+              <link xlink:href="https://www.smu.edu/-/media/Site/Provost/Ethics/OC-Cover-PDFs/02090-Gaba-FA.pdf">https://www.smu.edu/-/media/Site/Provost/Ethics/OC-Cover-PDFs/02090-Gaba-FA.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Takings Clause as a Comparative Right - BYU Law
+              Digital Commons, accessed September 13, 2025,
+              <link xlink:href="https://digitalcommons.law.byu.edu/cgi/viewcontent.cgi?article=1152&amp;context=faculty_scholarship">https://digitalcommons.law.byu.edu/cgi/viewcontent.cgi?article=1152&amp;context=faculty_scholarship</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              "Property" in the Fifth Amendment: A Quest for
+              Common Ground in the Maze of Regulatory Takings -
+              Scholarship@Vanderbilt Law, accessed September 13, 2025,
+              <link xlink:href="https://scholarship.law.vanderbilt.edu/cgi/viewcontent.cgi?article=2343&amp;context=vlr">https://scholarship.law.vanderbilt.edu/cgi/viewcontent.cgi?article=2343&amp;context=vlr</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Original Understanding of the Takings Clause -
+              Scholarship @ GEORGETOWN LAW, accessed September 13, 2025,
+              <link xlink:href="https://scholarship.law.georgetown.edu/cgi/viewcontent.cgi?article=1001&amp;context=gelpi_papers">https://scholarship.law.georgetown.edu/cgi/viewcontent.cgi?article=1001&amp;context=gelpi_papers</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Big Differences for Small Governments: Local Governments
+              and the Takings Clause - NYU Law Review, accessed
+              September 13, 2025,
+              <link xlink:href="https://nyulawreview.org/wp-content/uploads/2018/08/NYULawReview-81-5-Serkin.pdf">https://nyulawreview.org/wp-content/uploads/2018/08/NYULawReview-81-5-Serkin.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Section 230's Challenge to Civil Rights and Civil
+              Liberties | Knight First Amendment Institute, accessed
+              September 13, 2025,
+              <link xlink:href="https://knightcolumbia.org/content/section-230s-challenge-civil-rights-and-civil-liberties">https://knightcolumbia.org/content/section-230s-challenge-civil-rights-and-civil-liberties</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Section 230: A Juridical History | Stanford Law School,
+              accessed September 13, 2025,
+              <link xlink:href="https://law.stanford.edu/wp-content/uploads/2025/02/A-Juridical-History-of-Section-230.pdf">https://law.stanford.edu/wp-content/uploads/2025/02/A-Juridical-History-of-Section-230.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              California Worker Misclassification Risk Analysis
+            </para>
+        </listitem>
+        <listitem>
+          <para>
+              Section 230 and the Problem of Social Cost -
+              BrooklynWorks, accessed September 13, 2025,
+              <link xlink:href="https://brooklynworks.brooklaw.edu/cgi/viewcontent.cgi?article=1616&amp;context=jlp">https://brooklynworks.brooklaw.edu/cgi/viewcontent.cgi?article=1616&amp;context=jlp</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Back to the future for Section 230 reform - Brookings
+              Institution, accessed September 13, 2025,
+              <link xlink:href="https://www.brookings.edu/articles/back-to-the-future-for-section-230-reform/">https://www.brookings.edu/articles/back-to-the-future-for-section-230-reform/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Schatz, Thune Reintroduce Legislation To Update Section
+              230, Strengthen Rules, Transparency On Online Content
+              Moderation, Hold Internet Companies Accountable For
+              Moderation Practices, accessed September 13, 2025,
+              <link xlink:href="https://www.schatz.senate.gov/news/press-releases/schatz-thune-reintroduce-legislation-to-update-section-230-strengthen-rules-transparency-on-online-content-moderation-hold-internet-companies-accountable-for-moderation-practices">https://www.schatz.senate.gov/news/press-releases/schatz-thune-reintroduce-legislation-to-update-section-230-strengthen-rules-transparency-on-online-content-moderation-hold-internet-companies-accountable-for-moderation-practices</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Is This the End of the Internet As We Know It? | American
+              Civil Liberties Union, accessed September 13, 2025,
+              <link xlink:href="https://www.aclu.org/news/free-speech/section-230-is-this-the-end-of-the-internet-as-we-know-it">https://www.aclu.org/news/free-speech/section-230-is-this-the-end-of-the-internet-as-we-know-it</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              ACLU Warns of Harm to Free Speech Online if Congress
+              Dismantles Section 230, accessed September 13, 2025,
+              <link xlink:href="https://www.aclu.org/press-releases/aclu-warns-of-harm-to-free-speech-online-if-congress-dismantles-section-230">https://www.aclu.org/press-releases/aclu-warns-of-harm-to-free-speech-online-if-congress-dismantles-section-230</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Google v. Gonzalez LLC | American Civil Liberties Union,
+              accessed September 13, 2025,
+              <link xlink:href="https://www.aclu.org/cases/google-v-gonzalez-llc">https://www.aclu.org/cases/google-v-gonzalez-llc</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="s-1-introduction-separating-data-from-program-in-large-language-models">
+  <title>
+    <emphasis role="strong">1. Introduction: Separating Data from
+    Program in Large Language Models</emphasis>
+  </title>
+  <para>
+      The remarkable capabilities of Large Language Models (LLMs) stem
+      from a complex interplay between their architectural design, the
+      algorithms that govern their learning, and the vast quantities of
+      data upon which they are trained. This report focuses on a
+      critical, yet often intertwined, aspect of LLM analysis: the
+      "data portion." The central premise is to explore
+      methodologies for comparing LLMs by isolating the impact of their
+      data, particularly when their underlying "program" – the
+      model architecture and core operational parameters – is held
+      constant. This endeavor necessitates a conceptual separation of
+      data and program, a distinction that becomes clearer if LLMs are
+      not treated as homoiconic systems.
+    </para>
+  <section xml:id="s-11-the-concept-of-homoiconicity-and-its-relevance-to-llms">
+    <title>
+      <emphasis role="strong">1.1. The Concept of Homoiconicity
+      and Its Relevance to LLMs</emphasis>
+    </title>
+    <para>
+        Homoiconicity, a term originating from programming language
+        theory, describes a property where a language's code and data
+        share the same structural representation.1 The canonical example
+        is Lisp, where code is represented as lists, which are also the
+        language's primary data structure. This equivalence facilitates
+        powerful metaprogramming capabilities, as code can be
+        manipulated as easily as data.1
+      </para>
+    <para>
+        However, the application of "homoiconicity" to LLMs is
+        not straightforward and often debated. While LLMs process and
+        generate text (data), and their behavior is encoded in
+        parameters (analogous to a program), the internal and external
+        representations are typically distinct. For instance, the
+        textual input data is vastly different from the numerical weight
+        matrices that constitute the "program." Calvin Mooers,
+        who coined the term, defined it as the external and internal
+        forms of the language being the same.2 This strict definition
+        rarely applies to contemporary LLMs. Critiques of the term
+        highlight the confusion surrounding its various interpretations,
+        such as "code as data" being too broad or the
+        erroneous comparison of program structure to syntax.2 It is
+        often more precise to discuss specific properties, such as the
+        ease of parsing or the nature of internal representations,
+        rather than relying on the ambiguous label of homoiconicity.2
+      </para>
+    <para>
+        For the purpose of this analysis, LLMs are generally considered
+        non-homoiconic in the strict sense. This distinction is crucial
+        because it supports the conceptual separability of the
+        "program" (the model's architecture, its pre-trained
+        weights representing learned knowledge and capabilities) and the
+        "data" (the specific datasets used for further
+        fine-tuning or instruction tuning that adapt or specialize the
+        pre-existing program). This separation allows for investigations
+        into how varying the data portion, while keeping the program
+        constant, affects LLM performance and behavior.
+      </para>
+  </section>
+  <section xml:id="s-12-the-challenge-of-instruction-data-separation-in-llms">
+    <title>
+      <emphasis role="strong">1.2. The Challenge of
+      Instruction-Data Separation in LLMs</emphasis>
+    </title>
+    <para>
+        A significant challenge in analyzing the data aspect of LLMs is
+        their inherent difficulty in explicitly separating instructions
+        from the data they are meant to process.3 Instruction-tuned
+        LLMs, for example, are trained to follow commands, but they can
+        be vulnerable to manipulations like indirect prompt injections,
+        where data intended for processing is misinterpreted as an
+        instruction.3 This lack of clear demarcation complicates the
+        study of how a "data portion" influences an LLM, as
+        the model's interpretation of that data can be confounded by its
+        tendency to execute parts of it.
+      </para>
+    <para>
+        Research has introduced formal measures and empirical
+        benchmarks, such as the SEP dataset, to quantify this
+        phenomenon.3 The empirical separation score (sepc(g)) measures
+        how often a model processes a "probe" string as data
+        versus executing it as an instruction.3 Studies using this
+        framework have revealed that current LLMs, regardless of size or
+        purported capability, generally fail to achieve high
+        instruction-data separation.3 For instance, even advanced models
+        like GPT-4 have shown low separation scores in naive setups, and
+        mitigation techniques like prompt engineering or fine-tuning
+        often either fail to substantially improve separation or come at
+        the cost of reduced model utility.3 An interesting observation
+        is that smaller models sometimes exhibit higher separation,
+        potentially because they lack the capacity for task
+        superposition that allows larger models to attempt to execute
+        both the main task and the probe instruction.4
+      </para>
+    <para>
+        This inherent blending of instruction and data within the LLM's
+        processing paradigm means that when comparing different
+        "data portions" (e.g., fine-tuning datasets), the
+        "program" (the base LLM) might not treat these data
+        portions purely as passive information. Instead, it might
+        interpret embedded instructions or cues differently across
+        datasets, influencing its behavior in ways that are not solely
+        attributable to the factual content of the data. This
+        underscores the complexity of isolating the pure impact of a
+        data portion. If the model cannot reliably distinguish between
+        what it should <emphasis>do</emphasis> and what it should
+        <emphasis>process</emphasis>, then the "data portion"
+        is not merely data but a mix of data and implicit (or explicit)
+        instructions. This necessitates careful consideration in
+        experimental design and interpretation when comparing LLMs based
+        on their data inputs.
+      </para>
+  </section>
+</section>
+  

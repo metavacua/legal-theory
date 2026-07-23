@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-i-the-foundational-framework-for-human-subjects-research">
+  <title>
+    <emphasis role="strong">Part I: The Foundational Framework
+    for Human Subjects Research</emphasis>
+  </title>
+  <para>
+      To comprehend what is legally excluded from the definition of a
+      human experiment, one must first master the precise legal and
+      ethical architecture that defines what is included. The entire
+      U.S. system of human subjects protection rests on a foundational
+      distinction between activities intended to benefit an individual
+      and those intended to create general knowledge. This distinction,
+      first articulated as an ethical principle, was subsequently
+      codified into a specific, two-part legal test. An activity is only
+      subject to federal oversight if it meets the regulatory
+      definitions of both "research" and "involving human
+      subjects." Failure to meet either criterion places the
+      activity outside the jurisdiction of the Common Rule.
+    </para>
+  <section xml:id="section-11-ethical-bedrock-the-belmont-reports-distinction-between-practice-and-research">
+    <title>
+      <emphasis role="strong">Section 1.1: Ethical Bedrock: The
+      Belmont Report's Distinction Between Practice and
+      Research</emphasis>
+    </title>
+    <para>
+        The regulatory system governing human experimentation is built
+        upon a fundamental ethical distinction articulated in the
+        Belmont Report: the difference in purpose between
+        "practice" and "research".4 This distinction
+        serves as the first and most critical filter for determining
+        whether an activity requires formal oversight. The report was
+        commissioned by the U.S. Congress in the wake of profound
+        ethical failures, most notably the horrific experiments
+        conducted by Nazi physicians, which were adjudicated at the
+        Nuremberg War Crime Trials, and the deceptive, decades-long
+        Tuskegee Syphilis Study in the United States.4 This historical
+        context is paramount; it demonstrates that the regulations were
+        designed specifically to prevent the exploitation of individuals
+        in the pursuit of scientific knowledge.6
+      </para>
+    <para>
+        The Belmont Report defines "practice" as
+        "interventions that are designed solely to enhance the
+        well-being of an individual patient or client and that have a
+        reasonable expectation of success".4 The purpose of medical
+        or behavioral practice is to provide diagnosis, treatment, or
+        therapy to particular individuals. In contrast,
+        "research" is defined as "an activity designed to
+        test an hypothesis, permit conclusions to be drawn, and thereby
+        to develop or contribute to generalizable knowledge".4 The
+        key elements separating the two are systematic design and the
+        explicit goal of generalizability—producing knowledge that can
+        be applied beyond the specific individuals studied.5
+      </para>
+    <para>
+        The report acknowledges that this boundary can be ambiguous,
+        particularly when research is designed to evaluate a therapy.4
+        In such cases, it establishes a precautionary principle:
+        "if there is any element of research in an activity, that
+        activity should undergo review for the protection of human
+        subjects".4 This entire framework is justified by three
+        core ethical principles derived from extensive deliberation:
+      </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Respect for Persons:</emphasis> This
+            principle asserts that individuals should be treated as
+            autonomous agents and that persons with diminished autonomy
+            are entitled to protection. It forms the basis for the
+            requirement of informed consent, ensuring individuals can
+            choose what shall or shall not happen to them.5
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Beneficence:</emphasis> This
+            principle entails an obligation to protect individuals from
+            harm and to maximize possible benefits while minimizing
+            potential risks. It requires a careful assessment of the
+            risks and benefits of any proposed research.5
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Justice:</emphasis> This principle
+            concerns the fair distribution of the burdens and benefits
+            of research. It demands that the selection of research
+            subjects be equitable and not based on convenience or the
+            exploitation of vulnerable populations.5
+          </para>
+      </listitem>
+    </orderedlist>
+    <para>
+        The structure of the Belmont Report's framework implicitly
+        prioritizes the well-being of the individual over the abstract
+        pursuit of knowledge. By defining "practice" as the
+        default state of human interaction and "research" as
+        the special category requiring justification and oversight, it
+        establishes a powerful ethical and legal presumption. The logic
+        proceeds as follows: the report first separates
+        "practice," which is tied to direct, individual
+        benefit, from "research," which is tied to the
+        abstract goal of creating "generalizable knowledge".4
+        The entire system of oversight, including Institutional Review
+        Boards (IRBs) and formal consent processes, is triggered only
+        when an activity crosses the threshold into the
+        "research" category.4 Consequently, the framework
+        creates a default assumption that human interactions are
+        non-experimental. An actor, such as a scientist or institution,
+        bears the burden of proof to justify classifying an activity as
+        "research," which in turn subjects them to a rigorous
+        regulatory regime. This structure reveals a deep-seated ethical
+        orientation toward protecting the individual from being used
+        merely as a means to an end, a direct response to the historical
+        abuses that motivated the report's creation.
+      </para>
+  </section>
+  <section xml:id="section-12-codifying-the-framework-the-common-rules-definitions">
+    <title>
+      <emphasis role="strong">Section 1.2: Codifying the
+      Framework: The Common Rule's Definitions</emphasis>
+    </title>
+    <para>
+        The ethical principles of the Belmont Report are translated into
+        binding legal definitions within the Common Rule at 45 CFR 46.3
+        Under this regulation, an activity is legally
+      </para>
+    <para>
+      <emphasis>not</emphasis> a human experiment if it fails to meet
+        a specific, two-part test: it must be classified as
+        "research" AND it must "involve human
+        subjects." An activity that does not satisfy both of these
+        criteria falls outside the scope of the regulation and does not
+        require IRB oversight.10
+      </para>
+    <para>
+        First, the Common Rule legally defines
+        <emphasis role="strong">research</emphasis> as "a
+        systematic investigation, including research development,
+        testing, and evaluation, designed to develop or contribute to
+        generalizable knowledge".11 This definition directly
+        codifies the concept from the Belmont Report. The operative
+        terms are "systematic," which implies a preconceived
+        plan or formal protocol, and "generalizable
+        knowledge," which refers to the intent to apply the
+        findings beyond the specific individuals or internal program
+        from which the data were collected.12
+      </para>
+    <para>
+        Second, the activity must involve <emphasis role="strong">human
+        subjects</emphasis>. The regulation defines a human subject as a
+        "living individual about whom an investigator...conducting
+        research" obtains either:
+      </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+            Information or biospecimens through
+            <emphasis role="strong">intervention or
+            interaction</emphasis> with the individual, and uses,
+            studies, or analyzes the information or biospecimens; or
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            Obtains, uses, studies, analyzes, or generates
+            <emphasis role="strong">identifiable private
+            information</emphasis> or
+            <emphasis role="strong">identifiable
+            biospecimens</emphasis>.14
+          </para>
+      </listitem>
+    </orderedlist>
+    <para>
+        The terms within this definition are themselves precisely
+        defined. An "intervention" includes both physical
+        procedures (e.g., drawing blood) and "manipulations of the
+        subject or the subject's environment that are performed for
+        research purposes".11 An "interaction" refers to
+        communication or interpersonal contact between the investigator
+        and the subject.11 The concept of "private
+        information" is especially critical. It includes
+        information about behavior that occurs in a context where an
+        individual has a reasonable expectation of privacy, as well as
+        information provided for specific purposes with the expectation
+        that it will not be made public, such as a medical record.11 For
+        this information to trigger the regulation, it must be
+        "identifiable," meaning the identity of the subject
+        "is or may readily be ascertained by the investigator or
+        associated with the information".11 This "readily
+        ascertainable" standard is context-dependent and differs
+        from more rigid standards like the HIPAA Privacy Rule's list of
+        18 identifiers.15 Under the Common Rule, even a combination of
+        non-direct identifiers could make an individual's identity
+        readily ascertainable, particularly in a small sample size.15
+      </para>
+    <para>
+        A crucial element of the "human subject" definition is
+        the explicit requirement that the individual be
+        <emphasis role="strong">living</emphasis>.10 Research that
+        involves only information or biospecimens from deceased
+        individuals is, by this definition, not considered human
+        subjects research under the Common Rule and is therefore not
+        subject to its requirements.10 While other regulations, such as
+        HIPAA, may still protect a decedent's health information for a
+        period of time, the Common Rule's oversight function ceases upon
+        the individual's death.20
+      </para>
+    <para>
+        This two-pronged definition of a "human subject"
+        creates two distinct pathways by which an activity can fall
+        outside the scope of regulation, revealing a focus on
+        informational risk. The first part of the definition centers on
+        direct intervention or interaction, while the second part
+        centers on the use of identifiable private information.11 This
+        structure means an investigator could directly interact with
+        people, but if no identifiable private information is collected
+        or recorded, the participants would not legally be considered
+        "human subjects." For example, conducting an anonymous
+        public opinion poll where no names, contact details, or unique
+        demographic clusters are recorded would constitute an
+        "interaction," but it would not involve "human
+        subjects" as defined by the rule. Conversely, an activity
+        can be regulated even if there is no interaction whatsoever. A
+        researcher who analyzes an existing database of identifiable
+        medical records without ever meeting the patients has had no
+        "interaction," but because the activity involves the
+        use of "identifiable private information," the
+        individuals in the database are legally "human
+        subjects," and the activity requires full IRB review.10
+        This bifurcation demonstrates that the regulation is less
+        concerned with the mere act of interaction and more profoundly
+        concerned with the potential for harm stemming from the
+        collection and use of an individual's private, identifiable
+        data. The primary trigger for oversight is the risk of privacy
+        invasion, reputational damage, or other harms that can arise
+        when an individual's identity is linked to sensitive
+        information. This focus on informational risk is particularly
+        consequential in the digital age.
+      </para>
+    <section xml:id="table-1-foundational-definitions-in-us-human-subjects-regulation">
+      <title>
+        <emphasis role="strong">Table 1: Foundational Definitions
+        in U.S. Human Subjects Regulation</emphasis>
+      </title>
+      <informaltable>
+        <tgroup cols="4">
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <colspec align="center" />
+          <tbody>
+            <row>
+              <entry>
+                  Term
+                </entry>
+              <entry>
+                  Source
+                </entry>
+              <entry>
+                  Core Criteria
+                </entry>
+              <entry>
+                  Key Implication
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Research**
+                </entry>
+              <entry>
+                  45 CFR 46.102(l)
+                </entry>
+              <entry>
+                  Systematic investigation + designed to produce
+                  generalizable knowledge.
+                </entry>
+              <entry>
+                  Defines the activity's purpose as knowledge creation,
+                  triggering potential oversight.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Human Subject**
+                </entry>
+              <entry>
+                  45 CFR 46.102(e)
+                </entry>
+              <entry>
+                  Living individual + (intervention/interaction OR
+                  identifiable private information).
+                </entry>
+              <entry>
+                  Defines who is being studied, triggering protections
+                  if both "research" and "human
+                  subject" criteria are met.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Practice**
+                </entry>
+              <entry>
+                  Belmont Report
+                </entry>
+              <entry>
+                  Designed solely for the well-being of a specific
+                  individual + reasonable expectation of success.
+                </entry>
+              <entry>
+                  Defines the activity as individual-focused therapy or
+                  care, placing it outside research regulations.
+                </entry>
+            </row>
+            <row>
+              <entry>
+                  **Quality Improvement**
+                </entry>
+              <entry>
+                  OHRP Guidance
+                </entry>
+              <entry>
+                  Systematic, data-guided activities + designed for
+                  internal program/service improvement.
+                </entry>
+              <entry>
+                  Defines the activity as an internal operational
+                  matter, generally placing it outside research
+                  regulations.
+                </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+  </section>
+</section>
+  

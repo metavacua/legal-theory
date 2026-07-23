@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="conclusions-of-law">
+  <title>Conclusions of Law</title>
+  <orderedlist numeration="arabic" spacing="compact">
+    <listitem>
+      <para>
+          [First numbered conclusion — flows from named FOF findings,
+          cites authority.]
+        </para>
+    </listitem>
+  </orderedlist>
+</section>

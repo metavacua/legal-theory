@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-iv-intermediary-control-and-the-specter-of-joint-employer-liability">
+  <title>
+    <emphasis role="strong">Part IV: Intermediary Control and the
+    Specter of Joint Employer Liability</emphasis>
+  </title>
+  <para>
+      The analysis of control under Prong A extends beyond Google's
+      direct actions. A critical secondary layer of control is exerted
+      by third-party financial intermediaries, primarily payment
+      processors, whose own content and compliance policies create a
+      "censorship regime" that dictates the terms of creative
+      production for any user wishing to monetize their labor. This
+      creates a complex web of dependency and control that could
+      potentially extend liability beyond Google to these third-party
+      partners under the doctrine of joint employment.
+    </para>
+  <section xml:id="s-41-the-financial-censorship-regime-how-payment-processors-regulate-online-content">
+    <title>
+      <emphasis role="strong">4.1 The "Financial Censorship
+      Regime": How Payment Processors Regulate Online
+      Content</emphasis>
+    </title>
+    <para>
+        The ability of users to monetize their intellectual labor on
+        platforms like Google Play or YouTube is entirely dependent on
+        access to payment processing services. In practice, this market
+        is a duopoly dominated by Visa and Mastercard, which gives them
+        and the processors that use their networks (like Stripe and
+        PayPal) immense power to dictate acceptable online content.45
+        These financial gatekeepers impose their own Acceptable Use
+        Policies, which often prohibit broad and vaguely defined
+        categories of content that are otherwise legal.45
+      </para>
+    <para>
+        For example, policies may ban transactions related to
+        "obscene" or "certain sexually oriented
+        materials," "hate or harmful products," or any
+        activity that, in the processor's opinion, might cause
+        "brand-damaging" or reputational risk.45 These
+        restrictions are often enforced due to pressure from activist
+        groups and a general risk aversion to controversial
+        industries.50 The result is a system where platforms are forced
+        to de-platform or delist creators of legal content, such as
+        certain types of adult-oriented games or literature, to avoid
+        being cut off from the financial system.53 This creates a de
+        facto censorship regime where financial intermediaries, not
+        public law, set the boundaries for acceptable creative
+        expression.51
+      </para>
+  </section>
+  <section xml:id="s-42-content-policies-as-a-mechanism-of-control-under-prong-a">
+    <title>
+      <emphasis role="strong">4.2 Content Policies as a Mechanism
+      of Control Under Prong A</emphasis>
+    </title>
+    <para>
+        This external system of financial censorship constitutes a
+        powerful form of indirect control over the user's labor,
+        directly implicating Prong A of the ABC test.55 When a platform
+        like Google requires its developers to use an approved Payment
+        Processor to receive funds, it contractually binds those
+        developers to the processor's entire compliance and content
+        moderation regime.32
+      </para>
+    <para>
+        This control is not merely a post-publication penalty (like
+        demonetization) but a form of <emphasis>ex ante</emphasis>
+        control that forces creators to self-censor their work from
+        inception to ensure it will be monetizable.53 By setting the
+        rules for what can be sold, payment processors dictate the
+        subject matter, style, and substance of the user's creative
+        output. This represents significant direction and control over
+        the "manner and means" of performing the work.55
+        Google, by integrating with and enforcing the rules of these
+        processors, effectively acts as an agent of this control, making
+        the processor's restrictions part of the conditions of labor on
+        its platform.57
+      </para>
+  </section>
+  <section xml:id="s-43-the-doctrine-of-joint-employer-liability-in-california">
+    <title>
+      <emphasis role="strong">4.3 The Doctrine of Joint Employer
+      Liability in California</emphasis>
+    </title>
+    <para>
+        In a "fissured workplace," where a company outsources
+        certain functions, more than one entity may be held legally
+        responsible as an employer.58 California's joint employer
+        doctrine is particularly broad. Under the test established in
+      </para>
+    <para>
+      <emphasis>Martinez v. Combs</emphasis>, an entity is an employer
+        if it does any one of the following: (1) exercises control over
+        wages, hours, or working conditions; (2) suffers or permits a
+        person to work; or (3) engages the person, creating a common law
+        employment relationship.60
+      </para>
+    <para>
+        Crucially, this control can be indirect.61 A company may be
+        found to be a joint employer if it "exercises enough
+        control over the intermediary entity to indirectly dictate the
+        wages, hours, or working conditions of the employee".62
+        This framework is designed to prevent companies from evading
+        labor laws by subcontracting core employment functions to other
+        entities.58
+      </para>
+  </section>
+  <section xml:id="s-44-the-case-for-the-payment-processor-as-a-joint-employer">
+    <title>
+      <emphasis role="strong">4.4 The Case for the Payment
+      Processor as a Joint Employer</emphasis>
+    </title>
+    <para>
+        Applying California's joint employer doctrine to the
+        relationship between a user, Google, and a payment processor
+        reveals a plausible, albeit novel, argument for liability.
+      </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <emphasis role="strong">Control Over Working
+            Conditions:</emphasis> The processor's Acceptable Use Policy
+            functions as a set of work rules. By prohibiting the sale of
+            certain types of legal content, the processor indirectly
+            controls the <emphasis>conditions</emphasis> of the user's
+            creative labor, dictating what can and cannot be produced
+            for the platform's marketplace.45 This is a form of indirect
+            supervision over the substance of the work.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Control Over Wages and Method of
+            Payment:</emphasis> While Google may set the revenue share,
+            the payment processor holds the ultimate power to permit or
+            deny the transaction. By de-platforming a user or an entire
+            category of content, the processor exercises a complete veto
+            over the user's ability to receive remuneration.63 This
+            constitutes significant control over the "method of
+            payment," a key factor in both the California and
+            federal tests for employment.64
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Economic Dependency and the Fissured
+            Relationship:</emphasis> The user is economically dependent
+            on both the platform (Google) and the payment processor to
+            monetize their labor. Google acts as the intermediary
+            employer, but it has outsourced the critical functions of
+            payment and content compliance to the processor. This
+            creates a vertical joint employment scenario, where the
+            processor is a "potential joint employer" because
+            its actions are essential to the employment relationship.66
+            The processor is "acting... in the interest of an
+            employer [Google] in relation to an employee [the
+            user]" by enforcing a compliance regime that protects
+            the entire ecosystem from financial and reputational risk.64
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        While a payment processor would argue it is merely a third-party
+        service provider, its role has evolved beyond simple transaction
+        processing into active governance of platform content. This deep
+        integration into the business model, combined with the power to
+        dictate the terms of monetization, creates a strong argument
+        that it functions as a joint employer under California's
+        expansive and functional approach to labor law.
+      </para>
+  </section>
+</section>
+  

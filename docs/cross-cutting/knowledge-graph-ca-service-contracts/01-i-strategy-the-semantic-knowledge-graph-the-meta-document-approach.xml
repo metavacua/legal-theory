@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="i-strategy-the-semantic-knowledge-graph-the-meta-document-approach">
+  <title>
+    <emphasis role="strong">I. Strategy: The Semantic Knowledge
+  Graph (The Meta-Document Approach)</emphasis>
+  </title>
+  <para>
+    To achieve comprehensive semantic coverage and expand access, the
+    strategy must shift from document-centric storage to a
+    concept-centric Knowledge Graph (KG). This "meta-document"
+    approach abstracts arguments, legal frameworks, and case studies
+    from their original syntactic containers.
+  </para>
+  <section xml:id="a-the-conceptual-ontology">
+    <title>
+      <emphasis role="strong">A. The Conceptual
+    Ontology</emphasis>
+    </title>
+    <para>
+      The foundation of the KG is a robust ontology defining the
+      entities and relationships within the corpus.
+    </para>
+    <para>
+      <emphasis role="strong">1. Core Entities:</emphasis>
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Actors:</emphasis> Creator, User,
+          Hobbyist, Professional Contractor, Patron (Client), Moderator
+          (Manager), FOSS Contributor.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Hiring Entities/Platforms:</emphasis>
+          Platform (Social Media, Crowdfunding, AI Company), Foundation
+          (FOSS), Corporation, Cooperative.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Legal Instruments:</emphasis> Terms of
+          Service (ToS), Unilateral Contract, Bilateral Contract,
+          Contributor License Agreement (CLA), DCO, Grant Agreement.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">IP Types:</emphasis> UGC, AI Training
+          Data (RLHF), Commissioned Work, Vulnerability Report, Code
+          Contribution.
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+      <emphasis role="strong">2. Legal Frameworks and
+      Doctrines:</emphasis>
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The Tests:</emphasis> ABC Test (Prongs
+          A, B, C), Predominant Factor Test (Service vs. Good).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Key Statutes/Cases:</emphasis>
+          <emphasis>Dynamex</emphasis>, AB5,
+          <emphasis>Vazquez</emphasis> (Retroactivity),
+          <emphasis>Drennan</emphasis> (Promissory
+          Estoppel/Irrevocability).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Doctrines:</emphasis> Work Made for
+          Hire, Copyleft.
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+      <emphasis role="strong">3. Core Concepts:</emphasis>
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Control and Direction (External
+          Direction):</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis>Soft Control:</emphasis> UX Design, Gamification
+          (e.g., Google Local Guides).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>Hard Control:</emphasis> Content moderation
+          policies, Community Standards.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>Algorithmic Control:</emphasis> Amplification,
+          suppression, AI moderation ("The Algorithmic
+          Editor").
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Remuneration:</emphasis> Defining it
+          beyond currency (access, perks, visibility) and distinguishing
+          it from mere consideration.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Systemic Vulnerabilities:</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The Hobbyist Dilemma:</emphasis> The
+          critical vulnerability; the legal impossibility of a hobbyist
+          satisfying Prong C.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">The Service Nexus:</emphasis> How
+          unilateral contracts for labor become irrevocable upon
+          performance, linking payment to the labor itself.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Cascading
+          Misclassification:</emphasis> Volunteer moderators acting as
+          uncompensated managers.
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+      <emphasis role="strong">4. Economic Models:</emphasis>
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">High-Risk Models:</emphasis> UGC
+          platforms, directed crowdfunding commissions, gamified data
+          collection, VRPs (analyzed for risk).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Compliant/Alternative
+          Models:</emphasis> FOSS (voluntary contributions), Grants,
+          Cooperatives, Pure Patronage (mutual aid without specific
+          direction).
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="b-implementation-and-access">
+    <title>
+      <emphasis role="strong">B. Implementation and
+    Access</emphasis>
+    </title>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Argument Atomization and
+          Tagging:</emphasis> Break down documents into discrete
+          arguments or claims and tag them according to the ontology.
+          Utilize Natural Language Processing (NLP) to assist in
+          extraction.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Relationship Mapping (The
+          Graph):</emphasis> Define the connections (e.g., Algorithmic
+          Control --[causes failure of]--&gt; Prong A; Hobbyist
+          --[cannot satisfy]--&gt; Prong C).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Dynamic Synthesis (The
+          Meta-Document):</emphasis> The access point should be an
+          interface that allows users to query concepts. The system
+          should synthesize answers by traversing the knowledge graph,
+          creating dynamic meta-documents tailored to the query (e.g.,
+          "Analyze the risk of Patreon commission tiers using the
+          ABC test").
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Visualization:</emphasis> Provide
+          visual maps of the KG to explore connections and argument
+          structures.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</section>
+  

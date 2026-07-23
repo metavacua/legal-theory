@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-i-the-problem-illustrated---a-case-study-in-crisis">
+  <title>Part I: The Problem Illustrated - A Case Study in
+    Crisis</title>
+  <para>
+      To understand the necessity of a new support model, it is
+      essential to first examine how existing systems fail in a
+      real-world crisis. The following case study, based on a tenant
+      lockout in Chico, California, provides a stark illustration of the
+      cascading failures that leave vulnerable individuals—and those
+      dependent on them—in peril.
+    </para>
+  <section xml:id="case-study-the-tenant-lockout">
+    <title>Case Study: The Tenant Lockout</title>
+    <para>
+        A tenant in Chico, who relies on government benefits, has
+        misplaced the keys to their apartment. Inside are their pets,
+        one of which requires a medically controlled diet and is at
+        immediate risk. The apartment door is fitted with a "5th
+        generation" high-security smart lock that is key-based
+        only, with no keypad.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">System Failure 1: The Landlord &amp;
+            Property Management.</emphasis> The tenant's first call is
+            to the property management's after-hours emergency line.
+            They are met with a "marketing spiel" and an
+            explicit refusal to help. The entity that installed the
+            high-security lock, and is the only party with a master key,
+            has abdicated its responsibility to provide emergency
+            access.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">System Failure 2: The Private
+            Market.</emphasis> A licensed locksmith is called. The
+            locksmith confirms the lock is unpickable and that
+            destructive entry is the only option, an expensive and
+            damaging last resort. The private market solution is
+            insufficient for the technology deployed.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">System Failure 3: Public Emergency
+            Services.</emphasis> The tenant is told that local Animal
+            Control is largely unresponsive. Calls to them and the Chico
+            Police Department are initially framed as a civil lockout, a
+            low-priority issue authorities are reluctant to engage with.
+            The tenant is forced to reframe the issue as an "animal
+            welfare emergency" to compel a response.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">System Failure 4: The Financial
+            Barrier to Legal Recourse.</emphasis> To force the landlord
+            to act, the tenant needs legal assistance. However, as a
+            person on a fixed income, they cannot afford to hire an
+            attorney. Any attempt by a third party to simply give them
+            cash for legal fees would risk reducing or eliminating their
+            essential government benefits.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        This case study reveals a web of systemic gaps. The landlord is
+        unaccountable, the private market is inadequate, public services
+        are difficult to mobilize, and the legal system is financially
+        inaccessible. The tenant is left isolated and without recourse,
+        while their pets' lives hang in the balance. It is precisely
+        this type of multi-faceted crisis that the proposed integrated
+        ecosystem is designed to solve.
+      </para>
+  </section>
+</section>
+  

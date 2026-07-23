@@ -1,0 +1,511 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="conclusion-and-recommendations">
+  <title>
+    <emphasis role="strong">Conclusion and
+    Recommendations</emphasis>
+  </title>
+  <section xml:id="summary-of-findings">
+    <title>
+      <emphasis role="strong">Summary of
+      Findings</emphasis>
+    </title>
+    <para>
+        The legal framework for copyright in the United States, when
+        confronted with generative AI, has demonstrated a powerful
+        adherence to its foundational principles. The analysis confirms
+        that human authorship is the absolute and indispensable
+        prerequisite for copyright protection. The USCO and federal
+        courts have consistently held that works generated autonomously
+        by machines are not copyrightable. For hybrid works created
+        through human-AI collaboration, copyrightability is not
+        determined by the user's initial idea or prompt, but rather by
+        the quantum of creative control the human exercises over the
+        final expressive output. Legally cognizable contributions are
+        found in the post-generation acts of creative selection,
+        arrangement, and material modification of AI-generated content.
+      </para>
+    <para>
+        Simultaneously, the doctrines governing the use of pre-existing
+        works have been clarified and sharpened. The Supreme Court's
+        decision in <emphasis>Andy Warhol Foundation v.
+        Goldsmith</emphasis> has narrowed the scope of transformative
+        fair use for commercial works, shifting the focus from aesthetic
+        change to the ultimate purpose of the use. This places many
+        common "in the style of" AI generations on precarious
+        legal ground if they compete in the same market as the original
+        works. Finally, the <emphasis>de minimis</emphasis> doctrine
+        provides a narrow safe harbor for truly trivial copying, but a
+        significant circuit split in music sampling cases highlights the
+        jurisdictional risks inherent in appropriation.
+      </para>
+  </section>
+  <section xml:id="strategic-recommendations-for-implementation">
+    <title>
+      <emphasis role="strong">Strategic Recommendations for
+      Implementation</emphasis>
+    </title>
+    <para>
+        Based on these findings, the following strategic recommendations
+        are provided for the successful development and deployment of an
+        AI-assisted creative tool that is both powerful for users and
+        legally robust.
+      </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Adopt a Provenance-Led
+            Architecture:</emphasis> The tool's core architecture must
+            be built around the proposed ledger-style data schema. This
+            is not an optional feature but a foundational requirement.
+            An immutable and auditable record of the entire creative
+            process is the only reliable way to generate the evidence
+            needed to support a claim of human authorship and to
+            accurately assess copyright risks.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Implement a Dynamic Risk Analysis
+            Engine:</emphasis> The tool should leverage the data
+            captured in the schema to power a real-time analysis engine.
+            This engine should continuously calculate and display the
+            HumanAuthorshipScore and FairUseRiskScore to the user. This
+            transforms the tool from a simple content generator into an
+            intelligent co-pilot that provides active, legally-informed
+            feedback, guiding creators toward copyrightable outcomes and
+            away from high-risk activities.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Educate Users Through an Interactive
+            Interface:</emphasis> The user interface should be designed
+            to make the underlying legal principles transparent and
+            understandable. Using the guidelines from Table 2, the tool
+            should provide clear, context-sensitive warnings and
+            explanations. For example, when a user attempts to digitally
+            sample a sound recording, a pop-up should explain the high
+            risk associated with this action under the 6th Circuit's
+            <emphasis>Bridgeport</emphasis> rule. This educational
+            component empowers users to make informed decisions about
+            their creative choices.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Prepare for Jurisdictional
+            Variance:</emphasis> While this report focuses on U.S. law,
+            the global nature of digital content creation necessitates a
+            multi-jurisdictional approach. The schema's Jurisdiction
+            field is a crucial first step. The product roadmap should
+            include the development of separate rule sets for other
+            major legal regimes, such as the European Union and the
+            United Kingdom, to provide accurate guidance to a global
+            user base.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Monitor Legal and Technological
+            Evolution:</emphasis> The intersection of AI and copyright
+            is one of the most dynamic areas of law. The company must
+            dedicate legal and technical resources to continuously
+            monitor new case law, evolving administrative guidance from
+            the USCO, and significant advancements in AI technology. The
+            logic of the risk analysis engine and the parameters of the
+            data schema (such as the AIControllabilityScore) must be
+            updated regularly to reflect the changing landscape,
+            ensuring the tool remains relevant and reliable.
+          </para>
+      </listitem>
+    </orderedlist>
+    <section xml:id="works-cited">
+      <title>
+        <emphasis role="strong">Works cited</emphasis>
+      </title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+              Who Owns the Output? Bridging Law and Technology in LLMs
+              Attribution - arXiv, accessed October 3, 2025,
+              <link xlink:href="https://arxiv.org/html/2504.01032v1">https://arxiv.org/html/2504.01032v1</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Authorship in AI-Generated Works: Exploring Originality in
+              Text Prompts and AI Outputs Through Philosophical
+              Foundations of Copyright and Collage Protection Francesca
+              Mazzi - ATRIP, accessed October 3, 2025,
+              <link xlink:href="https://atrip.org/wp-content/uploads/2024/05/3rd-place-revised.pdf">https://atrip.org/wp-content/uploads/2024/05/3rd-place-revised.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright and Generative AI | The Regulatory Review,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.theregreview.org/2025/06/07/seminar-copyright-and-generative-ai/">https://www.theregreview.org/2025/06/07/seminar-copyright-and-generative-ai/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Artificial Intelligence Impacts on Copyright Law - RAND,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.rand.org/pubs/perspectives/PEA3243-1.html">https://www.rand.org/pubs/perspectives/PEA3243-1.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Developing a Coherent National Strategy: Artificial
+              Intelligence (AI) and Copyright Law, accessed October 3,
+              2025,
+              <link xlink:href="https://businesslawreview.uchicago.edu/online-archive/developing-coherent-national-strategy-artificial-intelligence-ai-and-copyright-law">https://businesslawreview.uchicago.edu/online-archive/developing-coherent-national-strategy-artificial-intelligence-ai-and-copyright-law</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              DOES TRAINING AI VIOLATE COPYRIGHT LAW?, accessed October
+              3, 2025,
+              <link xlink:href="https://btlj.org/wp-content/uploads/2023/02/0003-36-4Quang.pdf">https://btlj.org/wp-content/uploads/2023/02/0003-36-4Quang.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf">https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyrightability of AI-Generated Works, accessed October
+              3, 2025,
+              <link xlink:href="https://copyrightalliance.org/copyright-ai-generated-works/">https://copyrightalliance.org/copyright-ai-generated-works/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Registration Guidance: Works ... - Federal
+              Register, accessed October 3, 2025,
+              <link xlink:href="https://www.federalregister.gov/documents/2023/03/16/2023-05321/copyright-registration-guidance-works-containing-material-generated-by-artificial-intelligence">https://www.federalregister.gov/documents/2023/03/16/2023-05321/copyright-registration-guidance-works-containing-material-generated-by-artificial-intelligence</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Law in the Age of AI: Navigating Authorship,
+              Infringement, and Creative Rights - New York State Bar
+              Association, accessed October 3, 2025,
+              <link xlink:href="https://nysba.org/copyright-law-in-the-age-of-ai-navigating-authorship-infringement-and-creative-rights/">https://nysba.org/copyright-law-in-the-age-of-ai-navigating-authorship-infringement-and-creative-rights/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Generative Artificial Intelligence and Copyright Law -
+              Congress.gov, accessed October 3, 2025,
+              <link xlink:href="https://www.congress.gov/crs-product/LSB10922">https://www.congress.gov/crs-product/LSB10922</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Appellate Court Affirms Human Authorship Requirement for
+              Copyrighting AI-Generated Works | Insights | Skadden,
+              Arps, Slate, Meagher &amp; Flom LLP, accessed October 3,
+              2025,
+              <link xlink:href="https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship">https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              D.C. Circuit Affirms Human Authorship Requirement for
+              Copyright Protection - Lewis Rice, accessed October 3,
+              2025,
+              <link xlink:href="https://www.lewisrice.com/publications/d-c-circuit-affirms-human-authorship-requirement-for-copyright-protection/">https://www.lewisrice.com/publications/d-c-circuit-affirms-human-authorship-requirement-for-copyright-protection/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Office Releases Part 2 of Artificial
+              Intelligence Report, accessed October 3, 2025,
+              <link xlink:href="https://www.copyright.gov/newsnet/2025/1060.html">https://www.copyright.gov/newsnet/2025/1060.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright and Artificial Intelligence | U.S. Copyright
+              Office, accessed October 3, 2025,
+              <link xlink:href="https://www.copyright.gov/ai/">https://www.copyright.gov/ai/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              U.S. Copyright Office issues report on copyrightability of
+              AI assisted and generated works, accessed October 3, 2025,
+              <link xlink:href="https://www.hoganlovells.com/en/publications/us-copyright-office-issues-report-on-copyrightability-of-ai-assisted-and-generated-works">https://www.hoganlovells.com/en/publications/us-copyright-office-issues-report-on-copyrightability-of-ai-assisted-and-generated-works</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Office Releases Part 2 of Artificial
+              Intelligence Report - Library of Congress, accessed
+              October 3, 2025,
+              <link xlink:href="https://newsroom.loc.gov/news/copyright-office-releases-part-2-of-artificial-intelligence-report/s/f3959c36-d616-498d-b8f9-67641fd18bab">https://newsroom.loc.gov/news/copyright-office-releases-part-2-of-artificial-intelligence-report/s/f3959c36-d616-498d-b8f9-67641fd18bab</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              AI, Copyright, and the Law: The Ongoing Battle Over
+              Intellectual Property Rights - USC, accessed October 3,
+              2025,
+              <link xlink:href="https://sites.usc.edu/iptls/2025/02/04/ai-copyright-and-the-law-the-ongoing-battle-over-intellectual-property-rights/">https://sites.usc.edu/iptls/2025/02/04/ai-copyright-and-the-law-the-ongoing-battle-over-intellectual-property-rights/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Infringement &amp; Litigation: 15 Famous Cases
+              Analyzed | Abounaja IP, accessed October 3, 2025,
+              <link xlink:href="https://abounaja.com/index.php/blog/copyright-infringement-cases">https://abounaja.com/index.php/blog/copyright-infringement-cases</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyrightability of AI Outputs: U.S. Copyright Office
+              Analyzes Human Authorship Requirement | Insights | Jones
+              Day, accessed October 3, 2025,
+              <link xlink:href="https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement">https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Offices Rules AI-Works from Text Not Protected -
+              The National Law Review, accessed October 3, 2025,
+              <link xlink:href="https://natlawreview.com/article/copyright-office-says-ai-generated-works-based-text-prompts-are-not-protected">https://natlawreview.com/article/copyright-office-says-ai-generated-works-based-text-prompts-are-not-protected</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Basics - Copyright Information, accessed October
+              3, 2025,
+              <link xlink:href="https://copyright.psu.edu/copyright-basics/">https://copyright.psu.edu/copyright-basics/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyrights Supreme Court Cases, accessed October 3, 2025,
+              <link xlink:href="https://supreme.justia.com/cases-by-topic/copyrights/">https://supreme.justia.com/cases-by-topic/copyrights/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Navigating Fair Use: A Journey Through Recent Case Law - |
+              Ohio State University Libraries, accessed October 3, 2025,
+              <link xlink:href="https://library.osu.edu/news/navigating-fair-use-a-journey-through-recent-case-law">https://library.osu.edu/news/navigating-fair-use-a-journey-through-recent-case-law</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fair Use Defense to Copyright Infringement Lawsuits |
+              Intellectual Property Law Center, accessed October 3,
+              2025,
+              <link xlink:href="https://www.justia.com/intellectual-property/copyright/fair-use/">https://www.justia.com/intellectual-property/copyright/fair-use/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              17 U.S. Code § 107 - Limitations on exclusive rights: Fair
+              use - Legal Information Institute, accessed October 3,
+              2025,
+              <link xlink:href="https://www.law.cornell.edu/uscode/text/17/107">https://www.law.cornell.edu/uscode/text/17/107</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Court Issues First Decision on AI and Fair Use | Alerts
+              and Articles | Insights | Ballard Spahr, accessed October
+              3, 2025,
+              <link xlink:href="https://www.ballardspahr.com/insights/alerts-and-articles/2025/02/court-issues-first-decision-on-ai-and-fair-use">https://www.ballardspahr.com/insights/alerts-and-articles/2025/02/court-issues-first-decision-on-ai-and-fair-use</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fair Use: What Is Transformative? - Nolo, accessed October
+              3, 2025,
+              <link xlink:href="https://www.nolo.com/legal-encyclopedia/fair-use-what-transformative.html">https://www.nolo.com/legal-encyclopedia/fair-use-what-transformative.html</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              First of its Kind Decision Finds AI Training is Not Fair
+              Use - Copyright Alliance, accessed October 3, 2025,
+              <link xlink:href="https://copyrightalliance.org/ai-training-not-fair-use/">https://copyrightalliance.org/ai-training-not-fair-use/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Office Weighs In on AI Training and Fair Use,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.skadden.com/insights/publications/2025/05/copyright-office-report">https://www.skadden.com/insights/publications/2025/05/copyright-office-report</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Transformative use - Wikipedia, accessed October 3, 2025,
+              <link xlink:href="https://en.wikipedia.org/wiki/Transformative_use">https://en.wikipedia.org/wiki/Transformative_use</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Artificial Intelligence and Transformative Use After
+              Warhol, accessed October 3, 2025,
+              <link xlink:href="https://scholarlycommons.law.wlu.edu/wlulr-online/vol81/iss1/2/">https://scholarlycommons.law.wlu.edu/wlulr-online/vol81/iss1/2/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              "LIMITS OF ALGORITHMIC FAIR USE" by Jacob
+              Alhadeff, Cooper Cuene et al., accessed October 3, 2025,
+              <link xlink:href="https://digitalcommons.law.uw.edu/wjlta/vol19/iss1/1/">https://digitalcommons.law.uw.edu/wjlta/vol19/iss1/1/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fair Use and AI Training: Two Recent Decisions Highlight
+              the Complexity of This Issue, accessed October 3, 2025,
+              <link xlink:href="https://www.skadden.com/insights/publications/2025/07/fair-use-and-ai-training">https://www.skadden.com/insights/publications/2025/07/fair-use-and-ai-training</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Two U.S. Courts Address Fair Use in Generative AI Training
+              Cases | Insights | Jones Day, accessed October 3, 2025,
+              <link xlink:href="https://www.jonesday.com/en/insights/2025/06/two-us-courts-address-fair-use-in-genai-training-cases">https://www.jonesday.com/en/insights/2025/06/two-us-courts-address-fair-use-in-genai-training-cases</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Training Generative AI Models on Copyrighted Works Is Fair
+              Use, accessed October 3, 2025,
+              <link xlink:href="https://www.arl.org/blog/training-generative-ai-models-on-copyrighted-works-is-fair-use/">https://www.arl.org/blog/training-generative-ai-models-on-copyrighted-works-is-fair-use/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright Implications and Legal Responses to AI Training:
+              A Chinese Perspective - MDPI, accessed October 3, 2025,
+              <link xlink:href="https://www.mdpi.com/2075-471X/14/4/43">https://www.mdpi.com/2075-471X/14/4/43</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Foundation Models and Fair Use - Journal Article -
+              Stanford Law School, accessed October 3, 2025,
+              <link xlink:href="https://law.stanford.edu/publications/foundation-models-and-fair-use/">https://law.stanford.edu/publications/foundation-models-and-fair-use/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The Song Remains the Same: A Review of the Legalities of
+              Music ..., accessed October 3, 2025,
+              <link xlink:href="https://www.wipo.int/web/wipo-magazine/articles/the-song-remains-the-same-a-review-of-the-legalities-of-music-sampling-37091">https://www.wipo.int/web/wipo-magazine/articles/the-song-remains-the-same-a-review-of-the-legalities-of-music-sampling-37091</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Requirements for Copyright Protection, accessed October 3,
+              2025,
+              <link xlink:href="https://copyrightalliance.org/education/copyright-law-explained/copyright-basics/requirements-for-copyright-protection/">https://copyrightalliance.org/education/copyright-law-explained/copyright-basics/requirements-for-copyright-protection/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              What is Copyright?, accessed October 3, 2025,
+              <link xlink:href="https://www.copyright.gov/what-is-copyright/">https://www.copyright.gov/what-is-copyright/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The De Minimis Doctrine: When Is Copying Too Trivial? -
+              Lutzker ..., accessed October 3, 2025,
+              <link xlink:href="https://www.lutzker.com/the-de-minimis-doctrine-when-is-copying-too-trivial/">https://www.lutzker.com/the-de-minimis-doctrine-when-is-copying-too-trivial/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              De Minimis &amp; Copyright Infringement : Where To Draw
+              The Line? - IP and Legal Filings, accessed October 3,
+              2025,
+              <link xlink:href="https://www.ipandlegalfilings.com/de-minimis-copyright-infringement-where-to-draw-the-line/">https://www.ipandlegalfilings.com/de-minimis-copyright-infringement-where-to-draw-the-line/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              De Minimis Use - Entertainment Law - USLegal, accessed
+              October 3, 2025,
+              <link xlink:href="https://entertainmentlaw.uslegal.com/intellectual-property/copyright/de-minimis-use/">https://entertainmentlaw.uslegal.com/intellectual-property/copyright/de-minimis-use/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              The deminimis defense to copyright infringement
+              Introduction - Vondran Legal, accessed October 3, 2025,
+              <link xlink:href="https://www.vondranlegal.com/the-deminimis-defense-to-copyright-infringement-introduction">https://www.vondranlegal.com/the-deminimis-defense-to-copyright-infringement-introduction</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              De Minimis Copyright Infringement in Music - Talks On Law,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.talksonlaw.com/blog/a-split-on-de-minimis-copyright-infringement-in-music">https://www.talksonlaw.com/blog/a-split-on-de-minimis-copyright-infringement-in-music</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Fair Use and an Attribution-Oriented Approach to Music
+              Sampling - Yale Law School Legal Scholarship Repository,
+              accessed October 3, 2025,
+              <link xlink:href="https://openyls.law.yale.edu/bitstreams/25470cc8-3ce6-4f37-ba69-38704d4b30ad/download">https://openyls.law.yale.edu/bitstreams/25470cc8-3ce6-4f37-ba69-38704d4b30ad/download</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Introduction to Metadata: Rights Metadata Made Simple,
+              accessed October 3, 2025,
+              <link xlink:href="https://www.getty.edu/publications/intrometadata/rights-metadata/">https://www.getty.edu/publications/intrometadata/rights-metadata/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Copyright's critical mess: music metadata - Wolters
+              Kluwer, accessed October 3, 2025,
+              <link xlink:href="https://legalblogs.wolterskluwer.com/copyright-blog/copyrights-critical-mess-music-metadata/">https://legalblogs.wolterskluwer.com/copyright-blog/copyrights-critical-mess-music-metadata/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Photo Metadata IPTC, accessed October 3, 2025,
+              <link xlink:href="https://iptc.org/standards/photo-metadata/">https://iptc.org/standards/photo-metadata/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              C2PA | Verifying Media Content Sources, accessed October
+              3, 2025,
+              <link xlink:href="https://c2pa.org/">https://c2pa.org/</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              Provenance Research - Denver Art Museum, accessed October
+              3, 2025,
+              <link xlink:href="https://www.denverartmuseum.org/en/provenance-research">https://www.denverartmuseum.org/en/provenance-research</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+              ACM Policy on Authorship, accessed October 3, 2025,
+              <link xlink:href="https://www.acm.org/publications/policies/new-acm-policy-on-authorship">https://www.acm.org/publications/policies/new-acm-policy-on-authorship</link>
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</section>

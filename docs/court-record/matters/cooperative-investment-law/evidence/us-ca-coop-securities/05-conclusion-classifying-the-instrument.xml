@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="conclusion-classifying-the-instrument">
+  <title>
+    <emphasis role="strong">Conclusion: Classifying the
+  Instrument</emphasis>
+  </title>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">Non-Security Instrument:</emphasis> An
+        instrument that fails to be classified as a security under the
+        appropriate <emphasis>Reves</emphasis> or
+        <emphasis>Howey</emphasis> test.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Non-Subchapter-T Security:</emphasis> An
+        instrument classified as a security that fails the Cooperative
+        Compliance Test, creating a conflict with the cooperative's
+        legal and tax status.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Subchapter T Security:</emphasis> An
+        instrument that is legally a security but is so deeply
+        integrated with the principles of cooperative compliance that it
+        functions safely within the Subchapter T framework.
+      </para>
+    </listitem>
+  </itemizedlist>
+</section>

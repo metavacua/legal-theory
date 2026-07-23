@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="scenario-1-if-i-perform-a-specific-act-and-they-never-pay-out">
+  <title>
+    <emphasis role="strong">Scenario 1: "If I perform a
+  specific act, and they never pay out?"</emphasis>
+  </title>
+  <para>
+    You complete the performance required by the unilateral offer (e.g.,
+    find and report a qualifying vulnerability according to the strict
+    rules of a VRP), but the reward is denied.
+  </para>
+  <para>
+    In theory, acceptance by performance completes the contract, and the
+    offeror is obligated to provide the consideration. However, the
+    analysis hinges on the enforceability of the contract terms.
+  </para>
+  <section xml:id="the-challenge-of-sole-discretion">
+    <title>
+      <emphasis role="strong">The Challenge of "Sole
+    Discretion"</emphasis>
+    </title>
+    <para>
+      Companies universally include language in VRPs stating that the
+      decision to issue a reward, the amount, and the validity of the
+      submission are at their "sole discretion." This is
+      intended to manage the program and avoid disputes.
+    </para>
+  </section>
+  <section xml:id="arguments-to-compel-payment">
+    <title>
+      <emphasis role="strong">Arguments to Compel
+    Payment</emphasis>
+    </title>
+    <para>
+      If payment is denied despite a valid submission, several legal
+      arguments could be utilized:
+    </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Breach of Contract and Good
+          Faith:</emphasis> Contract law generally implies a covenant of
+          good faith and fair dealing. Even "sole discretion"
+          cannot typically be exercised arbitrarily, irrationally, or in
+          bad faith. If a researcher can demonstrate they objectively
+          met all published criteria, denying the reward could be argued
+          as a bad-faith breach.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Promissory Estoppel:</emphasis> As you
+          noted, this can substitute for consideration or overcome a
+          weak contract. If Google makes a promise (the VRP structure),
+          and a researcher reasonably relies on that promise to their
+          detriment (expending significant time, skill, and resources),
+          the promise may be enforced to avoid injustice. Google
+          receives a significant benefit (valuable IP and improved
+          security) by inducing this labor.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Illusory Promise:</emphasis> If the
+          discretion is so absolute that the company is never actually
+          bound to pay, the promise of a reward might be deemed
+          "illusory," meaning no contract existed in the first
+          place. In such a case, the researcher might seek compensation
+          based on the fair market value of the IP transferred (quantum
+          meruit).
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+</section>
+  

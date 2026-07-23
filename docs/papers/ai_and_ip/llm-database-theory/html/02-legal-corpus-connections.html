@@ -110,7 +110,6 @@
 </head>
 <body>
 <nav class="site-nav"><a href="/legal-theory/">legal-theory</a> · <a href="/legal-theory/index.html">Index</a></nav>
-
   <header class="doc-header"><h1>Language Models Are Databases: A Technical and Legal Position Paper on LLMs and Intellectual Property</h1>
 <p class="byline">
         By Ian D.L.N. McLean — 2026-07-01</p>
@@ -119,192 +118,173 @@
   </div></header>
   
   
-
-  
   <section id="preamble">
-    <h2>Purpose of This Article</h2>
-
-    <p>This article maps the LLM-database theory developed in the primary article (<a href="#llm-database-theory"></a>) to the specific matters, theories, and evidence already present in the <em>metavacua/legal-theory</em> repository. It serves two functions: first, to show that the database theory is not a standalone novelty but coheres with and reinforces existing arguments in the corpus; second, to identify findings of fact that the primary article supports and that should be incorporated into the relevant matters' findings documents.</p>
-  </section>
-
-  
+  <h2>Purpose of This Article</h2>
+  <p>This article maps the LLM-database theory developed in the primary article (<a href="#llm-database-theory"></a>) to the specific matters, theories, and evidence already present in the <em>metavacua/legal-theory</em> repository. It serves two functions: first, to show that the database theory is not a standalone novelty but coheres with and reinforces existing arguments in the corpus; second, to identify findings of fact that the primary article supports and that should be incorporated into the relevant matters' findings documents.</p>
+</section>
   <section id="copyright-ip-authorship" data-condition="confirmed"><span class="finding-badge">Confirmed</span>
-    <h2>Copyright, IP Authorship, and AI-Assisted Creation</h2>
-
-    <p>The copyright-IP-authorship matter in this repository addresses, among other questions, who holds rights in works produced with AI assistance, and whether the use of AI in creation affects the underlying IP analysis. The LLM-database theory supplies findings of fact that bear directly on both questions.</p>
-
-    <section id="finding-llm-derivative-work">
-      <h3>Finding: A Language Model Is a Derivative Work of Its Training Corpus</h3>
-
-      <p>The matter's findings-of-fact stub requires completion with the following factual and legal predicates established by the primary article and the empirical record:</p>
-
-      <ol>
-        <li>
-          <p><strong>Finding of Fact 1.</strong> The feed-forward network (FFN) layers of a transformer language model function as key-value stores that map entity features to relation-target associations, structurally isomorphic to the nodes and edges of a property graph. (Technical foundation; LARQL demonstration.)</p>
-        </li>
-        <li>
-          <p><strong>Finding of Fact 2.</strong> LARQL (<a href="https://github.com/chrishayuk/larql"></a>) extracts a transformer's weights into a vindex from which labelled directed edges are returned by a declarative query language (LQL), confirmable by independent reproduction.</p>
-        </li>
-        <li>
-          <p><strong>Finding of Fact 3.</strong> Llama 3.1 70B deterministically regenerates the first <em>Harry Potter</em> novel near-verbatim from a seed of the opening tokens, as demonstrated by Cooper et al. (2025), who conclude that the memorised text is <q>copied inside the model parameters.</q> <cite>[cooper2025memorized]</cite></p>
-        </li>
-        <li>
-          <p><strong>Finding of Fact 4.</strong> Over one hundred near-identical replicas of training images — including trademarked logos — were extracted from Stable Diffusion and Imagen by Carlini et al. (2023). <cite>[carlini2023extracting]</cite></p>
-        </li>
-        <li>
-          <p><strong>Conclusion of Law 1.</strong> A language model trained on protected works is a derivative work under 17 U.S.C. § 101, because it is based upon those preexisting works through recast, transformation, or adaptation of their expression into weight form.</p>
-        </li>
-        <li>
-          <p><strong>Conclusion of Law 2.</strong> A language model trained on multiple independently copyrighted works is a collective work under 17 U.S.C. § 101, because it assembles contributions from multiple rights-holders into a single whole.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="existing-evidence-connections">
-      <h3>Connections to Existing Evidence in the Matter</h3>
-
-      <p>Several existing evidence documents in the <em>copyright-ip-authorship</em> matter connect directly to these findings:</p>
-
-      <ul>
-        <li>
-          <p><em>ai-assisted-copyrightable-work-schema.md</em> — The schema for determining the copyrightable human contribution to AI-assisted work must now account for the reverse question: the copyrightable contribution of the training corpus to the model itself. The database theory supplies the mechanism.</p>
-        </li>
-        <li>
-          <p><em>prompts-as-expression.md</em> — The <q>prompt as expression</q> argument is strengthened, not weakened, by the database theory: if the model is a database of training-corpus expressions, and prompting retrieves those expressions, then a prompt that causes the database to return a specific expression is a targeting act that may itself constitute authorship of a selection — while simultaneously implicating the rights of the original expression-holders.</p>
-        </li>
-        <li>
-          <p><em>ai-corporate-personhood-and-legal-rights.md</em> — The question of AI corporate personhood is orthogonal to the database theory: the model-as-database analysis concerns the rights of the training-data copyright holders, not the status of the AI itself.</p>
-        </li>
-      </ul>
-    </section>
-  </section>
-
-  
-  <section id="platform-tos-constitutional-limits" data-condition="confirmed-with-caveats"><span class="finding-badge">Confirmed, with caveats</span>
-    <h2>Platform ToS and Constitutional Limits</h2>
-
-    <p>The platform-ToS-constitutional-limits matter addresses, in part, whether and how platform policies that restrict AI use interact with First Amendment protections. The LLM-database theory directly informs the characterisation of AI model outputs as a form of speech or expression.</p>
-
-    <section id="llm-output-as-database-retrieval">
-      <h3>Model Output as Database Retrieval, Not Speech</h3>
-
-      <p>If a language model's forward pass is a KNN graph walk over a property graph of training-corpus entries, then the model's output when queried for known content is database retrieval, not original speech. The First Amendment analysis applicable to database retrieval differs from the analysis applicable to original expression: databases may be compelled to disclose or exclude entries; the selection and arrangement of database entries may itself be speech, but the entries themselves carry the rights of their authors.</p>
-
-      <p>This connects directly to two evidence documents in the matter:</p>
-
-      <ul>
-        <li>
-          <p><em>llm-data-vs-program.md</em> in this repository analyses the data-versus-program distinction in LLMs. The database theory resolves the ambiguity that document identifies: the model is not a pure program (an instruction set with no data content) nor pure data (a static dataset without processing capability). It is both simultaneously — a database whose retrieval engine and data store are encoded in the same weight tensor.</p>
-        </li>
-        <li>
-          <p><em>llm-information-encoding-and-covert-channels.md</em> documents the latent-space encoding of information in LLM weights and the existence of covert channels through that encoding. The database theory provides the formal structure that the covert-channels analysis presupposes: the latent space is a graph database, the covert channel is a steganographic embedding within the graph's edge-weight encoding, and the legal analysis of such a channel should be that of database-embedded covert communication rather than generative expression. <cite>[mclean2025encoding]</cite></p>
-        </li>
-      </ul>
-
-      <p><strong>Caveat:</strong> The First Amendment implications of characterising AI output as database retrieval rather than speech are contested. Some courts and commentators have analogised AI outputs to editorial selection — a speech act. The database theory does not resolve that question in all cases; it resolves it specifically in the case of outputs that are demonstrably retrieved from training-data content (memorisation), while leaving open the question of outputs that are genuinely compositional rather than reproductive.</p>
-    </section>
-  </section>
-
-  
-  <section id="agpl-derivative-works" data-condition="confirmed"><span class="finding-badge">Confirmed</span>
-    <h2>GPL/AGPL and Derivative Works: Application to Model Weights</h2>
-
-    <p>The existing evidence document <em>agpl-ai-training-and-code-licensing.md</em> analyses the legal argument that training an AI model on GPL-licensed code makes the model a derivative work, triggering the GPL's copyleft obligation to release the model's source (including weights) under the GPL. <cite>[mclean2025agpl]</cite></p>
-
-    <p>The database theory supplies the missing technical premise for that argument:</p>
-
+  <h2>Copyright, IP Authorship, and AI-Assisted Creation</h2>
+  <p>The copyright-IP-authorship matter in this repository addresses, among other questions, who holds rights in works produced with AI assistance, and whether the use of AI in creation affects the underlying IP analysis. The LLM-database theory supplies findings of fact that bear directly on both questions.</p>
+  <section id="finding-llm-derivative-work">
+    <h3>Finding: A Language Model Is a Derivative Work of Its Training Corpus</h3>
+    <p>The matter's findings-of-fact stub requires completion with the following factual and legal predicates established by the primary article and the empirical record:</p>
     <ol>
       <li>
-        <p>GPL-licensed code, when used as training data, is encoded into the model's weights as knowledge-graph edges (entity → relation → target triples derived from the code's structure, APIs, and semantics).</p>
+        <p>
+          <strong>Finding of Fact 1.</strong> The feed-forward network (FFN) layers of a transformer language model function as key-value stores that map entity features to relation-target associations, structurally isomorphic to the nodes and edges of a property graph. (Technical foundation; LARQL demonstration.)</p>
       </li>
       <li>
-        <p>Those edges are retrievable by LARQL (and foreseeable successors), confirming that the GPL-licensed content is present in the weights in a form that qualifies as <q>copying</q> under the GPL's definition.</p>
+        <p>
+          <strong>Finding of Fact 2.</strong> LARQL (<a href="https://github.com/chrishayuk/larql"></a>) extracts a transformer's weights into a vindex from which labelled directed edges are returned by a declarative query language (LQL), confirmable by independent reproduction.</p>
       </li>
       <li>
-        <p>The FSF/SFC position — that training an AI on GPL-licensed code makes the resulting model a derivative work — is therefore technically grounded: the model weights contain a transformed copy of the GPL-licensed code, adapted into weight form, which satisfies the definition of a derivative work (<q>recast, transformed, or adapted</q>) under both copyright law and the GPL's own definition of a modified work.</p>
+        <p>
+          <strong>Finding of Fact 3.</strong> Llama 3.1 70B deterministically regenerates the first <em>Harry Potter</em> novel near-verbatim from a seed of the opening tokens, as demonstrated by Cooper et al. (2025), who conclude that the memorised text is <q>copied inside the model parameters.</q>
+          <cite>[cooper2025memorized]</cite>
+        </p>
       </li>
       <li>
-        <p>The consequence is the <q>poison pill</q> identified in the evidence document: a model trained on GPL-licensed code is arguably obligated to release its weights under the GPL, converting billions of dollars of proprietary AI investment into free software.</p>
+        <p>
+          <strong>Finding of Fact 4.</strong> Over one hundred near-identical replicas of training images — including trademarked logos — were extracted from Stable Diffusion and Imagen by Carlini et al. (2023). <cite>[carlini2023extracting]</cite>
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Conclusion of Law 1.</strong> A language model trained on protected works is a derivative work under 17 U.S.C. § 101, because it is based upon those preexisting works through recast, transformation, or adaptation of their expression into weight form.</p>
+      </li>
+      <li>
+        <p>
+          <strong>Conclusion of Law 2.</strong> A language model trained on multiple independently copyrighted works is a collective work under 17 U.S.C. § 101, because it assembles contributions from multiple rights-holders into a single whole.</p>
       </li>
     </ol>
-
-    <p>This finding is relevant to the broader copyright-IP-authorship matter and to the platform-ToS matter (insofar as platform terms that prohibit GPL-licensed training data are attempts to avoid triggering this consequence).</p>
   </section>
-
-  
-  <section id="knowledge-graph-contracts" data-condition="confirmed-with-caveats"><span class="finding-badge">Confirmed, with caveats</span>
-    <h2>Knowledge Graph, IP Contracts, and the LLM-Database Theory</h2>
-
-    <p>The cross-cutting document <em>knowledge-graph-ca-service-contracts.md</em> and the evidence document <em>ip-contract-knowledge-graph.md</em> develop an ontology of IP actors, assets, legal instruments, and doctrines structured as a knowledge graph. <cite>[mclean2025categorical]</cite></p>
-
-    <p>The LLM-database theory creates a direct technical connection between that ontology and the structure of the model weights: the knowledge graph ontology developed in the IP-contract analysis is formally the same type of structure as the knowledge graph embedded in the model's FFN layers. This means:</p>
-
+  <section id="existing-evidence-connections">
+    <h3>Connections to Existing Evidence in the Matter</h3>
+    <p>Several existing evidence documents in the <em>copyright-ip-authorship</em> matter connect directly to these findings:</p>
     <ul>
       <li>
-        <p>LARQL-class tools can, in principle, be used to audit model weights against an IP-contract knowledge graph — to ask, for a given model, which of the graph's IP-asset nodes (specific books, articles, code repositories, images) are present in the model's weight graph, and with what fidelity.</p>
+        <p>
+          <em>ai-assisted-copyrightable-work-schema.md</em> — The schema for determining the copyrightable human contribution to AI-assisted work must now account for the reverse question: the copyrightable contribution of the training corpus to the model itself. The database theory supplies the mechanism.</p>
       </li>
       <li>
-        <p>Discovery requests in IP litigation can be structured as graph queries against the model's vindex, rather than as black-box prompting exercises, enabling more precise identification of which training-corpus works are present and in what form.</p>
+        <p>
+          <em>prompts-as-expression.md</em> — The <q>prompt as expression</q> argument is strengthened, not weakened, by the database theory: if the model is a database of training-corpus expressions, and prompting retrieves those expressions, then a prompt that causes the database to return a specific expression is a targeting act that may itself constitute authorship of a selection — while simultaneously implicating the rights of the original expression-holders.</p>
+      </li>
+      <li>
+        <p>
+          <em>ai-corporate-personhood-and-legal-rights.md</em> — The question of AI corporate personhood is orthogonal to the database theory: the model-as-database analysis concerns the rights of the training-data copyright holders, not the status of the AI itself.</p>
       </li>
     </ul>
-
-    <p><strong>Caveat:</strong> LARQL as of 2026-07-01 operates at the level of general semantic knowledge (entity–relation–target triples for factual propositions). Its ability to identify specific literary works, images, or code files as the source of specific weight entries is still developing. The technical capacity to perform source attribution at the level required by IP litigation (identifying that a specific 32-token excerpt of Harry Potter is the source of a specific cluster of weight features) is not yet demonstrated. This gap is an open research question, not a refutation of the basic database theory.</p>
   </section>
-
-  
+</section>
+  <section id="platform-tos-constitutional-limits" data-condition="confirmed-with-caveats"><span class="finding-badge">Confirmed, with caveats</span>
+  <h2>Platform ToS and Constitutional Limits</h2>
+  <p>The platform-ToS-constitutional-limits matter addresses, in part, whether and how platform policies that restrict AI use interact with First Amendment protections. The LLM-database theory directly informs the characterisation of AI model outputs as a form of speech or expression.</p>
+  <section id="llm-output-as-database-retrieval">
+    <h3>Model Output as Database Retrieval, Not Speech</h3>
+    <p>If a language model's forward pass is a KNN graph walk over a property graph of training-corpus entries, then the model's output when queried for known content is database retrieval, not original speech. The First Amendment analysis applicable to database retrieval differs from the analysis applicable to original expression: databases may be compelled to disclose or exclude entries; the selection and arrangement of database entries may itself be speech, but the entries themselves carry the rights of their authors.</p>
+    <p>This connects directly to two evidence documents in the matter:</p>
+    <ul>
+      <li>
+        <p>
+          <em>llm-data-vs-program.md</em> in this repository analyses the data-versus-program distinction in LLMs. The database theory resolves the ambiguity that document identifies: the model is not a pure program (an instruction set with no data content) nor pure data (a static dataset without processing capability). It is both simultaneously — a database whose retrieval engine and data store are encoded in the same weight tensor.</p>
+      </li>
+      <li>
+        <p>
+          <em>llm-information-encoding-and-covert-channels.md</em> documents the latent-space encoding of information in LLM weights and the existence of covert channels through that encoding. The database theory provides the formal structure that the covert-channels analysis presupposes: the latent space is a graph database, the covert channel is a steganographic embedding within the graph's edge-weight encoding, and the legal analysis of such a channel should be that of database-embedded covert communication rather than generative expression. <cite>[mclean2025encoding]</cite>
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Caveat:</strong> The First Amendment implications of characterising AI output as database retrieval rather than speech are contested. Some courts and commentators have analogised AI outputs to editorial selection — a speech act. The database theory does not resolve that question in all cases; it resolves it specifically in the case of outputs that are demonstrably retrieved from training-data content (memorisation), while leaving open the question of outputs that are genuinely compositional rather than reproductive.</p>
+  </section>
+</section>
+  <section id="agpl-derivative-works" data-condition="confirmed"><span class="finding-badge">Confirmed</span>
+  <h2>GPL/AGPL and Derivative Works: Application to Model Weights</h2>
+  <p>The existing evidence document <em>agpl-ai-training-and-code-licensing.md</em> analyses the legal argument that training an AI model on GPL-licensed code makes the model a derivative work, triggering the GPL's copyleft obligation to release the model's source (including weights) under the GPL. <cite>[mclean2025agpl]</cite>
+  </p>
+  <p>The database theory supplies the missing technical premise for that argument:</p>
+  <ol>
+    <li>
+      <p>GPL-licensed code, when used as training data, is encoded into the model's weights as knowledge-graph edges (entity → relation → target triples derived from the code's structure, APIs, and semantics).</p>
+    </li>
+    <li>
+      <p>Those edges are retrievable by LARQL (and foreseeable successors), confirming that the GPL-licensed content is present in the weights in a form that qualifies as <q>copying</q> under the GPL's definition.</p>
+    </li>
+    <li>
+      <p>The FSF/SFC position — that training an AI on GPL-licensed code makes the resulting model a derivative work — is therefore technically grounded: the model weights contain a transformed copy of the GPL-licensed code, adapted into weight form, which satisfies the definition of a derivative work (<q>recast, transformed, or adapted</q>) under both copyright law and the GPL's own definition of a modified work.</p>
+    </li>
+    <li>
+      <p>The consequence is the <q>poison pill</q> identified in the evidence document: a model trained on GPL-licensed code is arguably obligated to release its weights under the GPL, converting billions of dollars of proprietary AI investment into free software.</p>
+    </li>
+  </ol>
+  <p>This finding is relevant to the broader copyright-IP-authorship matter and to the platform-ToS matter (insofar as platform terms that prohibit GPL-licensed training data are attempts to avoid triggering this consequence).</p>
+</section>
+  <section id="knowledge-graph-contracts" data-condition="confirmed-with-caveats"><span class="finding-badge">Confirmed, with caveats</span>
+  <h2>Knowledge Graph, IP Contracts, and the LLM-Database Theory</h2>
+  <p>The cross-cutting document <em>knowledge-graph-ca-service-contracts.md</em> and the evidence document <em>ip-contract-knowledge-graph.md</em> develop an ontology of IP actors, assets, legal instruments, and doctrines structured as a knowledge graph. <cite>[mclean2025categorical]</cite>
+  </p>
+  <p>The LLM-database theory creates a direct technical connection between that ontology and the structure of the model weights: the knowledge graph ontology developed in the IP-contract analysis is formally the same type of structure as the knowledge graph embedded in the model's FFN layers. This means:</p>
+  <ul>
+    <li>
+      <p>LARQL-class tools can, in principle, be used to audit model weights against an IP-contract knowledge graph — to ask, for a given model, which of the graph's IP-asset nodes (specific books, articles, code repositories, images) are present in the model's weight graph, and with what fidelity.</p>
+    </li>
+    <li>
+      <p>Discovery requests in IP litigation can be structured as graph queries against the model's vindex, rather than as black-box prompting exercises, enabling more precise identification of which training-corpus works are present and in what form.</p>
+    </li>
+  </ul>
+  <p>
+    <strong>Caveat:</strong> LARQL as of 2026-07-01 operates at the level of general semantic knowledge (entity–relation–target triples for factual propositions). Its ability to identify specific literary works, images, or code files as the source of specific weight entries is still developing. The technical capacity to perform source attribution at the level required by IP litigation (identifying that a specific 32-token excerpt of Harry Potter is the source of a specific cluster of weight features) is not yet demonstrated. This gap is an open research question, not a refutation of the basic database theory.</p>
+</section>
   <section id="findings-stub-implications">
-    <h2>Implications for Outstanding Findings Stubs</h2>
-
-    <p>The copyright-ip-authorship matter's findings document is currently a stub in FRCP Rule 52 format awaiting completion. The following findings of fact, drawn from the primary article and the memorisation evidence, are ready for incorporation:</p>
-
-    <figure><figcaption>Proposed Findings of Fact for copyright-ip-authorship Matter</figcaption><table>
-        
-        
-        
-        <thead>
-          <tr>
-            <th>FOF #</th>
-            <th>Proposed Finding</th>
-            <th>Supporting Evidence</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>FOF-AI-1</td>
-            <td>The FFN layers of a transformer LLM function as key-value stores structurally isomorphic to a property graph.</td>
-            <td>LARQL demonstration; Self-Attention as Parametric Endofunctor (arXiv:2501.02931)</td>
-          </tr>
-          <tr>
-            <td>FOF-AI-2</td>
-            <td>LARQL v0.x returns labelled directed edges from a transformer's weights via declarative LQL queries, without retraining or structural modification.</td>
-            <td>github.com/chrishayuk/larql; YouTube demonstration</td>
-          </tr>
-          <tr>
-            <td>FOF-AI-3</td>
-            <td>Llama 3.1 70B regenerates the first Harry Potter novel near-verbatim from a seed of the opening tokens.</td>
-            <td>Cooper et al. 2025 (arXiv:2505.12546)</td>
-          </tr>
-          <tr>
-            <td>FOF-AI-4</td>
-            <td>Over 100 near-identical training images, including trademarked logos, were extracted from Stable Diffusion and Imagen.</td>
-            <td>Carlini et al. 2023 (arXiv:2301.13188)</td>
-          </tr>
-          <tr>
-            <td>FOF-AI-5</td>
-            <td>A measurable share of ostensibly novel diffusion-model image outputs are near-exact copies of training images.</td>
-            <td>Somepalli et al. 2023 (CVPR 2023)</td>
-          </tr>
-          <tr>
-            <td>FOF-AI-6</td>
-            <td>OpenAI and Google stated to the U.S. Copyright Office that their models store no copies of training data — only numbers.</td>
-            <td>Admissions compilation (arXiv:2603.20957)</td>
-          </tr>
-        </tbody>
-      </table></figure>
-
-    <p>Conclusions of law flowing from FOF-AI-1 through FOF-AI-6: an LLM trained on protected works is (a) a derivative work, (b) a collective work, and (c) a database as defined under applicable database-right regimes; distributing it distributes copies; the fair-use affirmative defence is undermined by the memorisation record.</p>
-  </section>
-
+  <h2>Implications for Outstanding Findings Stubs</h2>
+  <p>The copyright-ip-authorship matter's findings document is currently a stub in FRCP Rule 52 format awaiting completion. The following findings of fact, drawn from the primary article and the memorisation evidence, are ready for incorporation:</p>
+  <figure><figcaption>Proposed Findings of Fact for copyright-ip-authorship Matter</figcaption><table>
+      
+      
+      
+      <thead>
+        <tr>
+          <th>FOF #</th>
+          <th>Proposed Finding</th>
+          <th>Supporting Evidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>FOF-AI-1</td>
+          <td>The FFN layers of a transformer LLM function as key-value stores structurally isomorphic to a property graph.</td>
+          <td>LARQL demonstration; Self-Attention as Parametric Endofunctor (arXiv:2501.02931)</td>
+        </tr>
+        <tr>
+          <td>FOF-AI-2</td>
+          <td>LARQL v0.x returns labelled directed edges from a transformer's weights via declarative LQL queries, without retraining or structural modification.</td>
+          <td>github.com/chrishayuk/larql; YouTube demonstration</td>
+        </tr>
+        <tr>
+          <td>FOF-AI-3</td>
+          <td>Llama 3.1 70B regenerates the first Harry Potter novel near-verbatim from a seed of the opening tokens.</td>
+          <td>Cooper et al. 2025 (arXiv:2505.12546)</td>
+        </tr>
+        <tr>
+          <td>FOF-AI-4</td>
+          <td>Over 100 near-identical training images, including trademarked logos, were extracted from Stable Diffusion and Imagen.</td>
+          <td>Carlini et al. 2023 (arXiv:2301.13188)</td>
+        </tr>
+        <tr>
+          <td>FOF-AI-5</td>
+          <td>A measurable share of ostensibly novel diffusion-model image outputs are near-exact copies of training images.</td>
+          <td>Somepalli et al. 2023 (CVPR 2023)</td>
+        </tr>
+        <tr>
+          <td>FOF-AI-6</td>
+          <td>OpenAI and Google stated to the U.S. Copyright Office that their models store no copies of training data — only numbers.</td>
+          <td>Admissions compilation (arXiv:2603.20957)</td>
+        </tr>
+      </tbody>
+    </table></figure>
+  <p>Conclusions of law flowing from FOF-AI-1 through FOF-AI-6: an LLM trained on protected works is (a) a derivative work, (b) a collective work, and (c) a database as defined under applicable database-right regimes; distributing it distributes copies; the fair-use affirmative defence is undermined by the memorisation record.</p>
+</section>
 <footer><p>Copyright © 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This document publishes general legal analysis and does not constitute legal advice.</p></footer>
 </body>
 </html>

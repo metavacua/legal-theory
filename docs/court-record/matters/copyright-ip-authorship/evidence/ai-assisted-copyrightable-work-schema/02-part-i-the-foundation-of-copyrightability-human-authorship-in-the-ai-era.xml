@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-i-the-foundation-of-copyrightability-human-authorship-in-the-ai-era">
+  <title>
+    <emphasis role="strong">Part I: The Foundation of
+    Copyrightability: Human Authorship in the AI Era</emphasis>
+  </title>
+  <para>
+      The legal system's response to the advent of generative AI has not
+      been to invent new legal paradigms, but rather to mount a vigorous
+      defense of its most foundational principle: that copyright is an
+      exclusively human right. This reaction is not merely an
+      interpretation of statutory text but a reaffirmation of the
+      constitutional, economic, and philosophical underpinnings of
+      American intellectual property law. The consistent position of the
+      legislature, the courts, and the primary administrative body for
+      copyright is that for a work to be protected, it must originate
+      from a human mind.
+    </para>
+  <section xml:id="the-constitutional-and-statutory-mandate-for-a-human-author">
+    <title>
+      <emphasis role="strong">The Constitutional and Statutory
+      Mandate for a Human Author</emphasis>
+    </title>
+    <para>
+        The requirement for human authorship is deeply rooted in the
+        U.S. Constitution and the subsequent statutes enacted under its
+        authority. The Copyright Clause grants Congress the power to
+        "secur[e] for limited Times to Authors... the exclusive
+        Right to their respective Writings".7 The Supreme Court's
+        earliest interpretations of this clause established a direct
+        link between the concepts of "author" and "human
+        intellect." In the seminal 1884 case
+      </para>
+    <para>
+      <emphasis>Burrow-Giles Lithographic Co. v. Sarony</emphasis>,
+        the Court confronted the question of whether a photograph—a work
+        created with the aid of a machine—could be copyrighted. It
+        concluded that it could, but only insofar as the photograph was
+        a representation of the photographer's "original
+        intellectual conceptions".8 The Court defined an
+        "author" as "he to whom anything owes its origin;
+        originator; maker," consistently framing the role in human
+        terms as a product of a person's "genius or
+        intellect".9
+      </para>
+    <para>
+        This foundational understanding has been carried forward into
+        modern copyright law. The Copyright Act of 1976, which governs
+        current law, provides protection for "original works of
+        authorship".11 While the Act does not explicitly define
+        "author" to mean "human," the entire
+        structure of the law—with its provisions on duration based on
+        the author's life, termination rights, and
+        inheritance—presupposes a human creator.12 The USCO and federal
+        courts have consistently interpreted this statutory silence not
+        as an ambiguity, but as an implicit adoption of the
+        long-standing, human-centric understanding established in cases
+        like
+      </para>
+    <para>
+      <emphasis>Burrow-Giles</emphasis>.12 The legal system's reaction
+        to generative AI, therefore, can be understood as a robust
+        "doctrinal immune response." Faced with a novel
+        technological entity capable of producing expressive works, the
+        system has not mutated but has instead reinforced its core
+        identity, vigorously reasserting the human authorship doctrine
+        to defend the philosophical and economic purpose of copyright
+        law: to provide incentives for human creativity.8 This strong,
+        defensive posture suggests that any future arguments for machine
+        authorship will face immense doctrinal resistance. The path to
+        copyrightability for works made with AI lies not in supplanting
+        the human, but in meticulously documenting the human's role as
+        the master of the AI tool.
+      </para>
+  </section>
+  <section xml:id="the-uscos-modern-stance-a-rejection-of-machine-authorship">
+    <title>
+      <emphasis role="strong">The USCO's Modern Stance: A
+      Rejection of Machine Authorship</emphasis>
+    </title>
+    <para>
+        In response to the rapid development of generative AI, the U.S.
+        Copyright Office launched a broad initiative in 2023 to study
+        its implications.14 The resulting multi-part report,
+        particularly Part 2 on the Copyrightability of AI-Generated
+        Works, represents the definitive administrative position on the
+        matter. The Office's primary conclusion is that "existing
+        principles of copyright law are flexible enough to apply to this
+        new technology".14 This statement signals a clear policy
+        preference for applying established legal doctrines rather than
+        seeking new legislation to create sui generis rights for
+        AI-generated material.
+      </para>
+    <para>
+        The core of the USCO's guidance is its finding that copyright
+        can protect AI-generated outputs "only where a human author
+        has determined sufficient expressive elements".14 This
+        principle is the central pivot upon which all subsequent
+        analysis turns. The Office explicitly rejects the notion that a
+        machine can be an author, stating that extending protection to
+        material whose expression is determined by a machine would
+        "undermine rather than further the constitutional goals of
+        copyright".14 To enforce this principle, the USCO has
+        issued registration guidance that imposes a duty on applicants
+        to disclose the inclusion of AI-generated content in any
+        submitted work. Applicants must provide a clear explanation of
+        the human author's contributions and disclaim any copyright in
+        the portions of the work that were "generated by AI".8
+        This procedural mandate is not merely administrative; it
+        transforms the human/machine distinction into a material fact
+        that is legally essential for a valid copyright registration.
+      </para>
+    <para>
+        While the United States has solidified its human-only stance,
+        this position is not universal. Other jurisdictions have shown
+        greater flexibility, creating a potential for significant
+        friction in the global digital marketplace. The United Kingdom,
+        for example, explicitly recognizes
+        "computer-generated" works in its copyright statute,
+        assigning authorship to "the person by whom the
+        arrangements necessary for the creation of the work are
+        undertaken".10 Similarly, a court in China has granted
+        copyright protection to an AI-generated image, reasoning that
+        the user's intellectual investment in the prompt and selection
+        process was sufficient to constitute authorship.18 This
+        divergence in legal philosophy will inevitably lead to differing
+        outcomes for identical creative processes. A work generated
+        through a specific workflow in the U.S. may be relegated to the
+        public domain, while the same work created via the same process
+        in the U.K. or China could be protected intellectual property.
+        This fragmentation complicates international licensing,
+        enforcement, and investment for any platform operating on a
+        global scale and underscores the need for any copyright-aware
+        tool to be designed with jurisdictional adaptability in mind.3
+      </para>
+  </section>
+  <section xml:id="judicial-affirmation-the-thaler-v-perlmutter-line-of-cases">
+    <title>
+      <emphasis role="strong">Judicial Affirmation: The Thaler v.
+      Perlmutter Line of Cases</emphasis>
+    </title>
+    <para>
+        The USCO's administrative position has been unequivocally
+        affirmed by the federal judiciary. The landmark case in this
+        area is <emphasis>Thaler v. Perlmutter</emphasis>, in which
+        computer scientist Stephen Thaler sought to register a copyright
+        for an image he claimed was created "autonomously" by
+        his AI system, the "Creativity Machine".10 The USCO
+        refused registration, and Thaler sued.
+      </para>
+    <para>
+        In August 2023, the U.S. District Court for the District of
+        Columbia granted summary judgment to the Copyright Office,
+        holding that "human authorship is an essential part of a
+        valid copyright claim".7 The D.C. Circuit Court of Appeals
+        affirmed this decision in March 2025, providing a thorough
+        analysis that solidifies the human authorship requirement in
+        U.S. law.12 The court's reasoning was twofold. First, it found
+        that the text of the Copyright Act, "taken as a
+        whole," makes clear that authors must be human.12 Second,
+        and perhaps more importantly, the court addressed the underlying
+        policy rationale for copyright. It dismissed Thaler's argument
+        that denying copyright to AI works would disincentivize
+        creativity, noting that the human authorship requirement still
+        incentivizes humans to create works
+      </para>
+    <para>
+      <emphasis>with the assistance</emphasis> of AI.12 The court
+        pointed out that machines, unlike humans, do not respond to the
+        economic incentives that copyright provides, and therefore,
+        extending protection to them would not serve the constitutional
+        purpose of promoting "the Progress of Science and useful
+        Arts".8
+      </para>
+    <para>
+        This ruling places AI-generated works in the same legal category
+        as other works created by non-human actors. Courts have
+        previously rejected copyright claims for a book purportedly
+        dictated by a "non-human spiritual being" and for
+        photographs taken by a monkey in the famous "monkey
+        selfie" case, <emphasis>Naruto v. Slater</emphasis>.7 The
+      </para>
+    <para>
+      <emphasis>Thaler</emphasis> decision confirms that AI, for all
+        its sophistication, is viewed by the law as another non-human
+        agent incapable of authorship. The legal question is therefore
+        no longer <emphasis>whether</emphasis> a human is required, but
+        <emphasis>what level</emphasis> of human involvement is
+        sufficient to claim authorship of a work that incorporates
+        AI-generated material.
+      </para>
+  </section>
+</section>
+  

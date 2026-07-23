@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="s-4-bona-fide-loan-agreement">
+  <title>
+    <emphasis role="strong">4. Bona Fide Loan
+    Agreement</emphasis>
+  </title>
+  <para>
+      This is a specialized tool to be used with caution and only as a
+      last resort.
+    </para>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">Purpose:</emphasis> To provide a
+          member with a direct cash loan for an emergency in a manner
+          that is not counted as income.
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Parties Involved:</emphasis>
+      </para>
+    </listitem>
+  </itemizedlist>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+          The Borrower (the member)
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+          The Lender (e.g., the ecosystem's non-profit arm or credit
+          union)
+        </para>
+    </listitem>
+  </itemizedlist>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">Core Legal Mechanism:</emphasis> A
+          legally enforceable, <emphasis role="strong">bona fide loan
+          agreement</emphasis>. To be considered "bona fide"
+          by the Social Security Administration and other agencies, the
+          contract must be in writing and clearly state the loan amount,
+          a credible repayment schedule, and an acknowledgment from both
+          parties that the funds are to be repaid.
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">How it Preserves Benefits:</emphasis>
+          The principal of a properly documented loan is not counted as
+          income. However, it carries significant risk: any cash from
+          the loan that is not spent within the same calendar month it
+          is received becomes a countable
+          <emphasis role="strong">resource</emphasis>, which can
+          jeopardize benefits.
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">Primary Use Case:</emphasis> Reserved
+          for small, short-term emergencies where a direct third-party
+          vendor payment is impossible or impractical. Its use should be
+          an exception due to the administrative burden and compliance
+          risk.
+        </para>
+    </listitem>
+  </itemizedlist>
+</section>
+  

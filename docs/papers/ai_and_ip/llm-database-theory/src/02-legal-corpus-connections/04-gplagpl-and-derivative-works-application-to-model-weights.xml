@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="agpl-derivative-works" role="finding" condition="confirmed">
+  <title>GPL/AGPL and Derivative Works: Application to Model Weights</title>
+  <para>The existing evidence document <emphasis>agpl-ai-training-and-code-licensing.md</emphasis> analyses the legal argument that training an AI model on GPL-licensed code makes the model a derivative work, triggering the GPL's copyleft obligation to release the model's source (including weights) under the GPL. <citation>mclean2025agpl</citation>
+  </para>
+  <para>The database theory supplies the missing technical premise for that argument:</para>
+  <orderedlist>
+    <listitem>
+      <para>GPL-licensed code, when used as training data, is encoded into the model's weights as knowledge-graph edges (entity → relation → target triples derived from the code's structure, APIs, and semantics).</para>
+    </listitem>
+    <listitem>
+      <para>Those edges are retrievable by LARQL (and foreseeable successors), confirming that the GPL-licensed content is present in the weights in a form that qualifies as <quote>copying</quote> under the GPL's definition.</para>
+    </listitem>
+    <listitem>
+      <para>The FSF/SFC position — that training an AI on GPL-licensed code makes the resulting model a derivative work — is therefore technically grounded: the model weights contain a transformed copy of the GPL-licensed code, adapted into weight form, which satisfies the definition of a derivative work (<quote>recast, transformed, or adapted</quote>) under both copyright law and the GPL's own definition of a modified work.</para>
+    </listitem>
+    <listitem>
+      <para>The consequence is the <quote>poison pill</quote> identified in the evidence document: a model trained on GPL-licensed code is arguably obligated to release its weights under the GPL, converting billions of dollars of proprietary AI investment into free software.</para>
+    </listitem>
+  </orderedlist>
+  <para>This finding is relevant to the broader copyright-IP-authorship matter and to the platform-ToS matter (insofar as platform terms that prohibit GPL-licensed training data are attempts to avoid triggering this consequence).</para>
+</section>
+
+  
+  

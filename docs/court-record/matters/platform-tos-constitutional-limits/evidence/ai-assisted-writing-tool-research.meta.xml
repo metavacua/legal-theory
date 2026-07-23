@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/">
+<info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
   <dc:title>The Scribe: An Architectural Blueprint for a Next-Generation Creative Writing Platform</dc:title>
-  <dc:creator>Ian D.L.N. McLean</dc:creator>
-  <dc:publisher>metavacua/legal-theory (GitHub)</dc:publisher>
-  <dc:type>Article</dc:type>
-  <dc:language>en</dc:language>
-  <dc:rights>CC BY-SA 4.0</dc:rights>
-  <authorgroup>
-    <author>
-      <personname>
-        <firstname>Ian</firstname>
-        <othername role="middle">D.L.N.</othername>
-        <surname>McLean</surname>
-      </personname>
-      <email>metavacua@gmail.com</email>
-    </author>
-  </authorgroup>
-  <legalnotice>
-    <para>Copyright &#169; 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This document publishes general legal analysis and does not constitute legal advice.</para>
-  </legalnotice>
+  <xi:include href="../../../../common/shared-metadata.xml" />
 </info>

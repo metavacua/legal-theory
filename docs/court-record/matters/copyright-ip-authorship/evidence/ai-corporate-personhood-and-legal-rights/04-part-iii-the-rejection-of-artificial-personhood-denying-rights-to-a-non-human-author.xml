@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-iii-the-rejection-of-artificial-personhood-denying-rights-to-a-non-human-author">
+  <title>
+    <emphasis role="strong">Part III: The Rejection of Artificial
+    Personhood: Denying Rights to a Non-Human Author</emphasis>
+  </title>
+  <para>
+      In stark contrast to the expanding rights of the corporate person,
+      the legal status of artificial intelligence remains firmly rooted
+      in the category of property. The 2025 decision in <emphasis>Thaler
+      v. Perlmutter</emphasis> serves as the definitive judicial
+      statement on this matter, rejecting the notion of AI authorship
+      and, by extension, any claim to legal personhood for artificial
+      entities. The court's reasoning, grounded in a deeply
+      human-centric interpretation of the Copyright Act, reveals the
+      fundamental barrier that AI faces in the American legal system: it
+      is not, and cannot be seen as, a proxy for human agency in the
+      same way a corporation can.
+    </para>
+  <section xml:id="s-31-thaler-v-perlmutter-the-statutory-mandate-for-a-human-author">
+    <title>
+      <emphasis role="strong">3.1</emphasis>
+      <emphasis>
+        <emphasis role="strong">Thaler v.
+      Perlmutter</emphasis>
+      </emphasis>**: The Statutory Mandate for a
+      Human Author**</title>
+    <para>
+        In <emphasis>Thaler v. Perlmutter</emphasis>, computer scientist
+        Stephen Thaler sought to register a copyright for a visual
+        artwork titled "A Recent Entrance to Paradise." In his
+        application, he listed the author as the "Creativity
+        Machine," an AI system he had developed, and claimed that
+        the work was "autonomously created" without human
+        input.17 The U.S. Copyright Office denied the application based
+        on its long-standing policy that copyright protection extends
+        only to works created by human beings.16
+      </para>
+    <para>
+        Upon appeal, the D.C. Circuit Court unanimously affirmed the
+        Copyright Office's decision, engaging in a rigorous textual
+        analysis of the Copyright Act of 1976.16 The court's central
+        holding was that the statute, taken as a whole, unambiguously
+        presupposes a human author.16 While the Act does not explicitly
+        define "author," the court found that numerous
+        provisions would be rendered nonsensical if a non-human could
+        qualify. The specific statutory language the court relied on
+        included 47:
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Duration of Copyright:</emphasis>
+            The standard copyright term is calculated based on the
+            <emphasis role="strong">"life of the
+            author"</emphasis> plus 70 years. The court noted that
+            machines do not have "lives" in any legally or
+            biologically cognizable sense.16
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Termination and
+            Inheritance:</emphasis> The Act's provisions for terminating
+            copyright transfers after an author's death refer to the
+            author's <emphasis role="strong">"widow or
+            widower," "children,"</emphasis> and
+            <emphasis role="strong">"grandchildren."</emphasis>
+            The court observed that machines do not have family members
+            or heirs.16
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Attributes of Natural
+            Persons:</emphasis> Other provisions refer to an author's
+            <emphasis role="strong">"nationality or
+            domicile,"</emphasis> concepts that apply only to
+            natural persons.16
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Legal Capacity:</emphasis> The Act
+            requires a written and
+            <emphasis role="strong">signed</emphasis> instrument for the
+            transfer of copyright ownership. The court reasoned that
+            machines lack the legal capacity to provide an
+            authenticating signature.19
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        The court's conclusion was stark and unequivocal: "Machines
+        do not have property, traditional human lifespans, family
+        members, domiciles, nationalities, <emphasis>mentes
+        reae</emphasis>, or signatures".16 Therefore, reading the
+        Copyright Act to require human authorship is the only
+        interpretation that comports with the statute's text, structure,
+        and design. The court deliberately avoided the broader
+        constitutional questions about authorship and declined to
+        address whether Thaler himself could be considered the author by
+        virtue of creating and operating the AI, as Thaler had
+        strategically waived that argument in his filings to force a
+        direct ruling on the AI's status.17
+      </para>
+  </section>
+  <section xml:id="s-32-the-legal-status-of-ai-as-a-directed-hand">
+    <title>
+      <emphasis role="strong">3.2 The Legal Status of AI as a
+      "Directed Hand"</emphasis>
+    </title>
+    <para>
+        The <emphasis>Thaler</emphasis> ruling solidifies the legal
+        status of AI as a highly sophisticated tool, an instrument
+        wielded by a human, rather than an autonomous agent with its own
+        legal standing. This aligns with the legal theory that "all
+        externally directed intellectual property creation is an act of
+        service".48 When a human uses an AI to generate a work, the
+        human is the one providing the creative service of authorship,
+        and the AI is the "directed hand" or instrument
+        through which that service is performed. The court's refusal to
+        see the "Creativity Machine" as an author reinforces
+        its status as property, not an agent.
+      </para>
+    <para>
+        This stands in direct contrast to the "work made for
+        hire" doctrine, which is often applied in the corporate
+        context. In a work-for-hire scenario, a human author creates a
+        work, and the copyright ownership is immediately vested in the
+        employer, a corporate person.20 This is a transfer of rights
+        from one legal person (the human) to another (the corporation).
+        In
+      </para>
+    <para>
+      <emphasis>Thaler</emphasis>, the court's finding was more
+        fundamental: because the author was not human, no copyright ever
+        came into existence in the first place. There was no initial
+        right to be transferred.16
+      </para>
+    <para>
+        This distinction illuminates the central thesis that reconciles
+        the disparate outcomes in <emphasis>Thaler</emphasis>,
+        <emphasis>Citizens United</emphasis>, and <emphasis>Hobby
+        Lobby</emphasis>. The courts confer rights upon non-human
+        entities only when those entities are perceived as a direct
+        proxy for the exercise of the rights of their human
+        constituents. This "Proxy Principle" is the decisive
+        factor.
+      </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+            In <emphasis>Citizens United</emphasis>, the Supreme Court
+            granted speech rights because it viewed the corporation as
+            an "association of citizens," a vehicle for their
+            collective expression.10 The right was seen as derivative of
+            the members' rights.
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+            In <emphasis>Hobby Lobby</emphasis>, the Court granted a
+            religious exemption because it saw the corporation as a
+            means for its owners to achieve their "desired
+            ends," a conduit for their personal religious
+            exercise.36 The right was derivative of the owners' rights.
+          </para>
+        <para>
+            In both instances, the legal fiction of the corporation was
+            treated as a transparent vessel through which the Court
+            could see and protect the rights of the human actors behind
+            it.
+          </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+        In <emphasis>Thaler</emphasis>, the plaintiff made the
+        strategic—and legally fatal—decision to list the
+        "Creativity Machine" as the <emphasis>sole
+        author</emphasis>, explicitly emphasizing its autonomy and the
+        absence of "traditional human authorship".17 He
+        presented the AI not as a proxy for his own creativity, but as
+        an independent creator. Faced with a purely non-human entity
+        claiming a right for itself, the court looked to the
+        human-centric text of the Copyright Act and found no human agent
+        from whom a right could be derived. The "Proxy
+        Principle" failed because there was no human principal to
+        represent. The inescapable conclusion is that in current
+        American jurisprudence, legal personhood and its attendant
+        rights are not granted based on an entity's functional
+        capabilities—such as intelligence, creativity, or autonomy—but
+        on its legally recognized role as a stand-in for human agency
+        and interests.
+      </para>
+  </section>
+</section>
+  

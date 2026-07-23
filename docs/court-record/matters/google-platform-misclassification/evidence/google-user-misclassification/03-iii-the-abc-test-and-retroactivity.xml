@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="iii-the-abc-test-and-retroactivity">
+  <title>
+    <emphasis role="strong">III. The ABC Test and
+  Retroactivity</emphasis>
+  </title>
+  <para>
+    Since the interactions are service contracts, the ABC Test applies.
+    Crucially, following the California Supreme Court’s decision in
+    <emphasis>Vazquez v. Jan-Pro</emphasis>, the ABC test (established
+    in <emphasis>Dynamex</emphasis> and codified in AB5) applies
+    <emphasis role="strong">retroactively</emphasis> to past conduct.
+    Google must prove all three prongs to classify the worker as an
+    independent contractor.
+  </para>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+        <emphasis role="strong">(A) Free from Control:</emphasis> Google
+        exerts significant control by defining strict VRP rules,
+        structuring AI feedback mechanisms, and directing UGC behavior
+        through gamification (e.g., Local Guides).
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">(B) Outside the Usual Course of
+        Business:</emphasis> This is a major hurdle. Security research,
+        quality assurance, data collection, and AI training are integral
+        to Google's core business operations.
+      </para>
+    </listitem>
+  </itemizedlist>
+  <section xml:id="c-the-decisive-hobbyist-dilemma">
+    <title>
+      <emphasis role="strong">(C) The Decisive "Hobbyist
+    Dilemma"</emphasis>
+    </title>
+    <para>
+      Prong C requires the worker to be "customarily engaged in an
+      independently established trade, occupation, or business"
+      (Section 5.2). The analysis identifies this as the "single
+      greatest vulnerability" (Section 5.3).
+    </para>
+    <para>
+      A "hobby" is legally defined as an activity
+      <emphasis>not</emphasis> conducted in a businesslike manner or for
+      profit (Section 5.1). It is "logically impossible" for a
+      hobbyist to satisfy Prong C (Section 5.2). The vast majority of
+      users providing UGC or AI feedback, and many VRP participants, are
+      not operating independent businesses dedicated to these specific
+      services.
+    </para>
+    <para>
+      <emphasis role="strong">Conclusion:</emphasis> Because Google
+      likely fails Prongs B and C, the statutory presumption mandates
+      the classification of these individuals as employees.
+    </para>
+  </section>
+</section>
+  

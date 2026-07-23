@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="the-shift-in-california-law-and-retroactivity">
+  <title>
+    <emphasis role="strong">The Shift in California Law and
+  Retroactivity</emphasis>
+  </title>
+  <para>
+    The "recent changes" primarily refer to the California
+    Supreme Court’s decision in <emphasis>Dynamex Operations West, Inc.
+    v. Superior Court</emphasis> (2018) and the subsequent codification
+    of that decision into Assembly Bill 5 (AB5) (effective 2020). These
+    established the "ABC Test" for determining employment
+    status for the purposes of California Wage Orders.
+  </para>
+  <section xml:id="the-abc-test">
+    <title>
+      <emphasis role="strong">The ABC Test</emphasis>
+    </title>
+    <para>
+      The ABC Test is significantly stricter than the previous standard
+      (the multi-factor <emphasis>Borello</emphasis> test). It presumes
+      a worker is an employee unless the hiring entity can prove
+      <emphasis>all three</emphasis> of the following:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <emphasis role="strong">(A)</emphasis> The worker is free from
+          the control and direction of the hiring entity in connection
+          with the performance of the work.1
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">(B)</emphasis> The worker performs
+          work that is **outside the usual course of the hiring entity’s
+          business.**<emphasis role="strong">23</emphasis>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">(<emphasis role="strong">
+              <emphasis role="strong">4</emphasis>
+            </emphasis>C)</emphasis>
+          The worker is customarily engaged in an independently
+          established trade, occupation, or business of the same
+          na5ture.
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>
+      Prong B is often insurmountable for technology platforms. It is
+      difficult to argue that security research (VRPs), AI training data
+      (LLM feedback), or quality assurance are "outside the usual
+      course" of Google's business.
+    </para>
+  </section>
+  <section xml:id="retroactivity">
+    <title>
+      <emphasis role="strong">Retroactivity</emphasis>
+    </title>
+    <para>
+      You noted the agreements were prior to these changes. The crucial
+      legal point is whether the ABC Test applies to work performed
+      before 2018.
+    </para>
+    <para>
+      <emphasis role="strong">Yes.</emphasis> The California Supreme
+      Court ruled in <emphasis>Vazquez v. Jan-Pro Franchising
+      International, Inc.</emphasis> (2021) that the
+      <emphasis>Dynamex</emphasis> decision (and thus the ABC test)
+      <emphasis role="strong">applies retroactively</emphasis> to claims
+      under California Wage Orders that were not yet final.
+    </para>
+    <para>
+      This means that even if the labor was performed when the more
+      lenient <emphasis>Borello</emphasis> standard was prevalent, the
+      relationship may now be judged by the stricter ABC Test, provided
+      the statute of limitations has not expired. This significantly
+      strengthens the argument for misclassification regarding past
+      conduct.
+    </para>
+  </section>
+</section>
+  

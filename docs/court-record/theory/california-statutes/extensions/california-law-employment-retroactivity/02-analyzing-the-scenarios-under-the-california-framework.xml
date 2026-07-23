@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="analyzing-the-scenarios-under-the-california-framework">
+  <title>
+    <emphasis role="strong">Analyzing the Scenarios Under the
+  California Framework</emphasis>
+  </title>
+  <para>
+    If the ABC test is applied retroactively and determines that you
+    (and others in similar situations) have been employees this entire
+    time, the scenarios presented are viewed very differently.
+  </para>
+  <section xml:id="scenario-1-if-i-perform-a-specific-act-and-they-never-pay-out">
+    <title>
+      <emphasis role="strong">Scenario 1: "If I perform a
+    specific act, and they never pay out?"</emphasis>
+    </title>
+    <para>
+      If you find and report a qualifying vulnerability according to the
+      VRP rules, but the reward is denied, and you are deemed an
+      employee:
+    </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Wage Claims Supersede Contract
+          Claims:</emphasis> The issue is no longer merely a breach of
+          the VRP contract or a dispute over "sole
+          discretion." If you are an employee, the relationship is
+          governed by the California Labor Code.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Compensation for All Hours
+          Worked:</emphasis> California employees must be paid for all
+          hours worked (including minimum wage and overtime), regardless
+          of whether a specific task was successful or accepted by the
+          employer. The VRP model, which pays only for results, is
+          incompatible with these requirements.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Wage Theft:</emphasis> You would be
+          entitled to back pay for the time spent researching, testing,
+          and reporting. Failure to pay these wages constitutes wage
+          theft, which carries significant penalties, interest, and
+          potential liquidated damages under California law. The
+          "reward" itself might be recharacterized as an
+          earned bonus or commission, which also cannot be arbitrarily
+          withheld.
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="scenario-2-i-perform-an-act-but-dont-report-it-because-i-am-an-employee">
+    <title>
+      <emphasis role="strong">Scenario 2: "I perform an act
+    but don't report it... because I am an
+    Employee?"</emphasis>
+    </title>
+    <para>
+      If you are deemed an employee, Google indeed bears all the burdens
+      of an employer (taxes, insurance, wage obligations, expense
+      reimbursement). However, the dynamic regarding the intellectual
+      property and your obligations also changes fundamentally.
+    </para>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">IP Ownership (Work Made for
+          Hire):</emphasis> When you are an employee, the intellectual
+          property you generate within the scope of your employment
+          automatically belongs to the employer. The vulnerability
+          discovery, the detailed AI feedback, or the QA analysis is
+          Google's property from the moment of creation. You are not
+          discovering <emphasis>your</emphasis> IP to sell back to them;
+          you are discovering <emphasis>their</emphasis> IP while
+          working for them.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Wages Owed for Labor:</emphasis> You
+          are still entitled to wages for the time and skilled labor
+          expended to generate the work product, regardless of whether
+          you delivered it.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Breach of Employee Duty:</emphasis>
+          While the employer owes you wages for the work done,
+          intentionally failing to report the discovery (failing to turn
+          over the employer's IP) would constitute a serious breach of
+          your duties as an employee (e.g., duty of loyalty). This could
+          be grounds for termination and potential legal action by the
+          employer, but it does not negate their obligation to pay you
+          for the labor already performed.
+        </para>
+      </listitem>
+    </orderedlist>
+  </section>
+</section>
+  

@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="ii-federal-income-taxation-the-boundary-of-obligation">
+  <title>
+    <emphasis role="strong">II. Federal Income Taxation: The
+    Boundary of Obligation</emphasis>
+  </title>
+  <para>
+      At the federal level, the primary administrative burden for most
+      individuals is the income tax. The conditions for exemption from
+      this system are defined by a combination of explicit statutory
+      thresholds and the implicit realities of the IRS's enforcement
+      strategy.
+    </para>
+  <section xml:id="a-de-jure-exemptions-statutory-filing-thresholds">
+    <title>
+      <emphasis role="strong">A. De Jure Exemptions: Statutory
+      Filing Thresholds</emphasis>
+    </title>
+    <para>
+        The legal obligation to file a federal income tax return is
+        primarily determined by an individual's gross income relative to
+        their standard deduction. The standard deduction is a specific
+        dollar amount that reduces the amount of income on which a
+        person is taxed, effectively creating a zero-tax bracket for
+        income below that level.22 According to IRS Publication 501, an
+        individual must file a return if their gross income—meaning all
+        income received in the form of money, goods, property, and
+        services that is not tax-exempt—exceeds the sum of their
+        standard deduction and any additional deductions for age (65 or
+        older) or blindness.25
+      </para>
+    <para>
+        These thresholds are adjusted annually for inflation and vary by
+        filing status, creating a clear, legally defined boundary for
+        the filing obligation.
+      </para>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry>
+                Filing Status
+              </entry>
+            <entry>
+                Age (at end of 2024)
+              </entry>
+            <entry>
+                Gross Income Filing Threshold
+              </entry>
+          </row>
+          <row>
+            <entry>
+                Single
+              </entry>
+            <entry>
+                Under 65
+              </entry>
+            <entry>
+                $14,600
+              </entry>
+          </row>
+          <row>
+            <entry>
+              </entry>
+            <entry>
+                65 or older
+              </entry>
+            <entry>
+                $16,550
+              </entry>
+          </row>
+          <row>
+            <entry>
+                Head of Household
+              </entry>
+            <entry>
+                Under 65
+              </entry>
+            <entry>
+                $21,900
+              </entry>
+          </row>
+          <row>
+            <entry>
+              </entry>
+            <entry>
+                65 or older
+              </entry>
+            <entry>
+                $23,850
+              </entry>
+          </row>
+          <row>
+            <entry>
+                Married Filing Jointly
+              </entry>
+            <entry>
+                Under 65 (both spouses)
+              </entry>
+            <entry>
+                $29,200
+              </entry>
+          </row>
+          <row>
+            <entry>
+              </entry>
+            <entry>
+                65 or older (one spouse)
+              </entry>
+            <entry>
+                $30,750
+              </entry>
+          </row>
+          <row>
+            <entry>
+              </entry>
+            <entry>
+                65 or older (both spouses)
+              </entry>
+            <entry>
+                $32,300
+              </entry>
+          </row>
+          <row>
+            <entry>
+                Married Filing Separately
+              </entry>
+            <entry>
+                Any age
+              </entry>
+            <entry>
+                $5
+              </entry>
+          </row>
+          <row>
+            <entry>
+                Qualifying Surviving Spouse
+              </entry>
+            <entry>
+                Under 65
+              </entry>
+            <entry>
+                $29,200
+              </entry>
+          </row>
+          <row>
+            <entry>
+              </entry>
+            <entry>
+                65 or older
+              </entry>
+            <entry>
+                $30,750
+              </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <para>
+        Source: Internal Revenue Service 26
+      </para>
+    <para>
+        A notable anomaly in this structure is the filing threshold of
+        just $5 for individuals who are married and file separately.25
+        This is not a
+      </para>
+    <para>
+      <emphasis>de minimis</emphasis> rule but an anti-abuse
+        provision. It is designed to prevent a married couple from
+        gaining a tax advantage by having one spouse itemize deductions
+        (e.g., mortgage interest, state taxes) while the other claims
+        the full standard deduction. If one spouse itemizes, the other
+        is required to file a return for nearly any amount of income and
+        cannot claim the standard deduction.23
+      </para>
+    <para>
+        The rules for dependents are necessarily more complex to prevent
+        high-income individuals from shifting income to their children
+        to avoid taxation. For 2024, a dependent must file a return if
+        their unearned income (such as interest or dividends) was over
+        $1,300, their earned income (from a job) was over $14,600, or
+        their gross income was more than the larger of $1,300 or their
+        earned income (up to $14,150) plus $450.23
+      </para>
+  </section>
+  <section xml:id="b-the-self-employment-threshold-a-low-bar-for-commercial-activity">
+    <title>
+      <emphasis role="strong">B. The Self-Employment Threshold: A
+      Low Bar for Commercial Activity</emphasis>
+    </title>
+    <para>
+        A distinct and significantly lower filing threshold applies to
+        self-employment income. An individual is required to file a tax
+        return if they have net earnings from self-employment of $400 or
+        more.25 This rule applies even if the individual's total gross
+        income is well below the standard deduction thresholds.
+      </para>
+    <para>
+        The rationale for this low threshold is not primarily the
+        collection of income tax. Rather, it is to ensure that
+        self-employed individuals, who do not have taxes withheld by an
+        employer, contribute to the Social Security and Medicare systems
+        through the self-employment tax.25 This reflects a distinct
+        governmental interest that is separate from general revenue
+        collection, thus justifying a much lower
+      </para>
+    <para>
+      <emphasis>de minimis</emphasis> standard for triggering a filing
+        obligation. It marks the point at which an individual's economic
+        activity is seen as participating in the broader social
+        insurance framework.
+      </para>
+  </section>
+  <section xml:id="c-de-facto-exemptions-the-realities-of-irs-enforcement">
+    <title>
+      <emphasis role="strong">C. De Facto Exemptions: The
+      Realities of IRS Enforcement</emphasis>
+    </title>
+    <para>
+        While the statutory thresholds define the legal duty to file,
+        the practical likelihood of enforcement for non-filers with low
+        income is shaped by the IRS's strategic priorities and resource
+        limitations. This creates a <emphasis>de facto</emphasis> zone
+        of non-enforcement that extends well beyond the <emphasis>de
+        jure</emphasis> filing thresholds.
+      </para>
+    <para>
+        The concept of the "tax gap"—the difference between
+        taxes owed and taxes paid on time—is central to understanding
+        IRS priorities. While studies show that tax noncompliance
+        <emphasis>rates</emphasis> are highest among the lowest-income
+        taxpayers (often due to confusion surrounding complex refundable
+        credits), the overwhelming dollar value of the tax gap is
+        attributable to high-income individuals and businesses
+        underreporting income from opaque sources like partnerships and
+        sole proprietorships.30 The gross tax gap is estimated to be
+        hundreds of billions of dollars annually, with the majority
+        stemming from this underreporting by the wealthy.32
+      </para>
+    <para>
+        In response to this reality and enabled by new funding from the
+        Inflation Reduction Act, the IRS and the Treasury Department
+        have explicitly reoriented their enforcement strategy. The
+        stated policy is to focus new resources on taxpayers with
+        incomes above $400,000, large corporations, and complex
+        partnerships, while ensuring that audit rates for those earning
+        less than $400,000 do not increase relative to historical
+        levels.35 The agency has launched highly publicized initiatives
+        to pursue high-income non-filers, including sending compliance
+        letters to over 125,000 individuals with incomes over $400,000
+        who failed to file, with 25,000 of those earning over $1
+        million.38
+      </para>
+    <para>
+        This strategic shift is a direct response to years of criticism
+        from oversight bodies like the Treasury Inspector General for
+        Tax Administration (TIGTA), whose reports have consistently
+        documented the IRS's failure to pursue billions in unpaid taxes
+        from high-income non-filers due to a lack of resources.39
+        Conspicuously absent from recent IRS announcements and TIGTA
+        reports are any similar large-scale enforcement initiatives
+        targeting low-income non-filers.42
+      </para>
+    <para>
+        The IRS's audit selection process further reinforces this
+        dynamic. Most returns are selected for audit by an automated
+        computer system that assigns a Discriminant Information Function
+        (DIF) score based on statistical deviations from the norm.45
+        While low-income returns claiming the Earned Income Tax Credit
+        (EITC) are audited at a high rate, these are typically
+        less-intrusive "correspondence audits" conducted by
+        mail to verify eligibility.47 The far more resource-intensive
+        "field audits," which involve in-person interviews,
+        are reserved for more complex cases with higher potential tax
+        liabilities.45
+      </para>
+    <para>
+        This combination of high statutory filing thresholds and an
+        enforcement apparatus now laser-focused on high-dollar
+        noncompliance creates a practical safe harbor for individuals
+        whose income falls into a specific gap. Consider a single
+        individual under 65 who earns $15,000 from a part-time job.
+        Legally, they are required to file a tax return because their
+        income exceeds the $14,600 threshold.28 However, after applying
+        the standard deduction, their taxable income would be only $400,
+        resulting in a federal income tax liability of approximately
+        $40. Given that IRS enforcement priorities are explicitly
+        directed at taxpayers with incomes over $400,000 and TIGTA's
+        oversight is focused on the agency's pursuit of billions in
+        unpaid taxes from the wealthy, the probability of the IRS
+        expending the resources necessary to identify and pursue this
+        individual's non-filing is vanishingly small. The cost of
+        enforcement—sending notices, processing a potential substitute
+        return, and managing the case—would far exceed the $40 in
+        potential tax recovery. This creates a
+      </para>
+    <para>
+      <emphasis>de facto</emphasis> zone of non-enforcement driven
+        purely by the economics of tax administration, effectively
+        raising the practical filing threshold.
+      </para>
+  </section>
+</section>
+  

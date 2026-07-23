@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="introduction-navigating-copyright-in-the-age-of-generative-ai">
+  <title>
+    <emphasis role="strong">Introduction: Navigating Copyright in
+    the Age of Generative AI</emphasis>
+  </title>
+  <section xml:id="problem-statement">
+    <title>
+      <emphasis role="strong">Problem
+      Statement</emphasis>
+    </title>
+    <para>
+        The proliferation of sophisticated generative artificial
+        intelligence (AI) tools has created a critical legal and
+        technical ambiguity at the heart of creative industries. Systems
+        capable of producing text, images, and music that are
+        aesthetically indistinguishable from human-created works
+        challenge the foundational principles of intellectual property
+        law.1 The central challenge is to delineate the boundary between
+        a human-authored, AI-assisted work eligible for copyright
+        protection and a machine-generated work that falls into the
+        public domain. This ambiguity poses significant risks for
+        creators, who need clarity on the protectability of their
+        efforts; for technology platforms, which must manage liability
+        and define terms of service; and for investors, who require a
+        stable legal framework to assess the value of AI-driven
+        enterprises.4 Without a clear, operational framework, innovation
+        may be stifled by legal uncertainty, and the economic incentives
+        that copyright is designed to foster may be undermined.3
+      </para>
+  </section>
+  <section xml:id="reports-objective-and-scope">
+    <title>
+      <emphasis role="strong">Report's Objective and
+      Scope</emphasis>
+    </title>
+    <para>
+        This report provides a comprehensive, expert-level analysis of
+        the legal doctrines governing AI-assisted works and related
+        creative practices like sampling and remixing. Its primary
+        objective is to translate these complex legal standards into a
+        formalized data schema and a set of logical conditions. This
+        framework is designed to be directly implemented within an
+        AI-assisted creative tool to guide users, assess
+        copyrightability in real-time, and manage intellectual property
+        risk. The scope of this analysis is centered on United States
+        copyright law, synthesizing the latest guidance from the U.S.
+        Copyright Office (USCO), seminal and recent federal court
+        decisions, and established legal doctrines of fair use,
+        transformative use, and <emphasis>de minimis</emphasis> copying.
+        The report culminates in a unified data model that provides a
+        technical blueprint for a system of "Copyright
+        Provenance," enabling an auditable and legally-grounded
+        approach to modern creation.
+      </para>
+  </section>
+  <section xml:id="methodology">
+    <title>
+      <emphasis role="strong">Methodology</emphasis>
+    </title>
+    <para>
+        The analysis synthesizes the latest guidance from the U.S.
+        Copyright Office (USCO), seminal and recent federal court
+        decisions, established legal doctrines of fair use and
+        transformative use, and existing technical standards for data
+        provenance. The report builds from foundational legal principles
+        to concrete, actionable guidelines and a unified data model. It
+        examines the USCO's multi-part report on AI, key judicial
+        precedents including <emphasis>Thaler v. Perlmutter</emphasis>
+        and <emphasis>Andy Warhol Foundation v. Goldsmith</emphasis>,
+        and the statutory framework of the Copyright Act. By
+        deconstructing these legal sources into their constituent
+        logical parts, the report constructs a schema capable of
+        capturing the legally significant events in the lifecycle of a
+        creative work, from initial prompt to final human modification.
+        This approach bridges the gap between abstract legal theory and
+        concrete technical implementation, providing a robust foundation
+        for the development of legally-compliant creative tools.
+      </para>
+  </section>
+</section>
+  

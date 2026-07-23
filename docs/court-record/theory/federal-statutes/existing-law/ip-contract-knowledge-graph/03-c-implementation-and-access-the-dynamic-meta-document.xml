@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="c-implementation-and-access-the-dynamic-meta-document">
+  <title>
+    <emphasis role="strong">C. Implementation and Access: The
+  Dynamic Meta-Document</emphasis>
+  </title>
+  <para>
+    The implementation strategy focuses on transforming the static
+    corpus into this dynamic structure and providing intuitive access.
+  </para>
+  <section xml:id="s-1-ingestion-and-enrichment">
+    <title>
+      <emphasis role="strong">1. Ingestion and
+    Enrichment</emphasis>
+    </title>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Argument Atomization:</emphasis>
+          Documents are processed to identify discrete claims,
+          definitions, evidence, and counter-arguments. This moves
+          beyond simple keyword tagging to identifying the logical
+          structure of the text.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">NLP Assistance and
+          Curation:</emphasis> Utilize Natural Language Processing (NLP)
+          tools for entity recognition and relationship extraction,
+          followed by expert curation to ensure the logical integrity of
+          the arguments is captured and mapped according to the
+          ontology.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Graph Database Storage:</emphasis> The
+          structured data (entities and relationships) is stored in a
+          graph database, optimized for traversing complex connections.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="s-2-access-and-synthesis-the-user-experience">
+    <title>
+      <emphasis role="strong">2. Access and Synthesis (The User
+    Experience)</emphasis>
+    </title>
+    <para>
+      The strategy shifts access from retrieving static documents to
+      dynamically synthesizing knowledge based on the user's query.
+    </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Concept-Based Querying:</emphasis> The
+          primary interface allows users to ask complex, conceptual
+          questions rather than search for keywords.
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis>Example Query:</emphasis> "Analyze the
+          compliance risks of using a Work-for-Hire agreement with a
+          hobbyist artist in California."
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Dynamic Synthesis:</emphasis> The
+          system does not retrieve a pre-written document. Instead, it
+          traverses the knowledge graph, identifying all relevant nodes
+          and edges related to the query.
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis>KG Traversal Example:</emphasis> For the query
+          above, the system traverses: [WFH Agreement] -&gt; [Triggers
+          Statutory Employment (CA)]. It also traverses: [Hobbyist]
+          -&gt; [Inherently Fails Prong C].
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">The Meta-Document Output:</emphasis>
+          The system synthesizes this traversed information into a
+          coherent, structured response—a dynamically generated
+          "meta-document" tailored to the query, citing the
+          underlying logic and source concepts.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Visualization and Gap
+          Analysis:</emphasis> Provide interactive visualizations of the
+          KG. This allows users to explore the connections between
+          concepts visually and identify gaps in the knowledge base or
+          weaknesses in the arguments.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</section>

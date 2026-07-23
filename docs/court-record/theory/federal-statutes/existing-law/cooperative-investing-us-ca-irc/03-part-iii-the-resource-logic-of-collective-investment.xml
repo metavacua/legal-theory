@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-iii-the-resource-logic-of-collective-investment">
+  <title>
+    <emphasis role="strong">Part III: The Resource Logic of
+    Collective Investment</emphasis>
+  </title>
+  <para>
+      The economic engine of the Investor Cooperative can be formally
+      and precisely modeled using the tools of resource-sensitive logic.
+      This provides a rigorous, auditable grammar for the flow of
+      capital, ensuring that the cooperative's operations adhere to its
+      constitutional principles of fairness and proportionality.
+    </para>
+  <itemizedlist spacing="compact">
+    <listitem>
+      <para>
+          Capital as a Typed Resource: A member's capital contribution
+          is a linear resource. An investment of $10,000 is a resource,
+          $C_{10k}, that can be used exactly once. $C_{10k}
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+          Investment as a Transformation: The act of investment is a
+          linear implication (⊸) that consumes the capital resource and
+          transforms it into a new set of resources: the asset itself
+          and the associated risk. $C_{10k} ⊸ (PortfolioShare_A ⊗
+          Risk_A)
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+          Returns as a Production Process: The financial return is
+          another transformation that consumes the asset and produces
+          the original principal plus a new surplus resource.
+          PortfolioShare_A ⊸ ($C_{10k} ⊗ Surplus_A)
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+          Distribution as a Just Transformation: The distribution of the
+          surplus is the final step. The cooperative's democratic
+          process defines the rule for this transformation. A simple
+          rule might be: Surplus_A ⊸ (ManagementFee ⊗ NetReturn_A)
+        </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis role="strong">The Power of Relevance
+          Logic:</emphasis> The use of <emphasis role="strong">relevance
+          logic</emphasis> is critical here. It provides a formal
+          guarantee that the NetReturn_A paid to a member is
+          <emphasis>relevantly</emphasis> and causally derived from
+          their initial contribution ($C_{10k}) and its subsequent
+          transformations. It makes it logically impossible to justify
+          distributing NetReturn_A to someone who did not make the
+          initial contribution, thus providing a formal, provable basis
+          for a desert-based system of justice.
+        </para>
+    </listitem>
+  </itemizedlist>
+  <para>
+      This logical framework makes the cooperative's financial
+      operations transparent and auditable in a way that goes beyond
+      traditional accounting. It allows members to verify that the
+      economic "grammar" of their constitution is being
+      followed correctly.
+    </para>
+</section>
+  

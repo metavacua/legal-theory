@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="part-ii-the-public-markets-listing--trading-rules">
+  <title>
+    <emphasis role="strong">Part II: The Public Markets: Listing
+    &amp; Trading Rules</emphasis>
+  </title>
+  <para>
+      A cooperative seeking to list its investor-class securities must
+      comply with the specific rules of its chosen trading venue. The
+      requirements of the three main U.S. markets—the NYSE, NASDAQ, and
+      OTC Markets—vary significantly in terms of financial thresholds
+      and corporate governance mandates.
+    </para>
+  <section xml:id="section-21-new-york-stock-exchange-nyse">
+    <title>
+      <emphasis role="strong">Section 2.1: New York Stock
+      Exchange (NYSE)</emphasis>
+    </title>
+    <para>
+        The NYSE is the world's largest stock exchange and has the most
+        stringent listing requirements.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Listing Standards:</emphasis> To
+            list on the NYSE, a company must meet demanding standards
+            for financial size and public share distribution. This
+            includes minimums for the number of public shareholders, the
+            market value of publicly-held shares, and at least one of
+            several financial tests related to earnings, cash flow, or
+            revenue.24
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Corporate Governance:</emphasis> The
+            NYSE Listed Company Manual, particularly Section 303A,
+            outlines extensive corporate governance rules. These include
+            requirements for a majority-independent board of directors,
+            fully independent audit, compensation, and nominating
+            committees, and the adoption of comprehensive corporate
+            governance guidelines and a code of conduct.9 Companies
+            listing in conjunction with an IPO are granted transition
+            periods to phase in these requirements.9
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Dual-Class Shares:</emphasis>
+            Historically, the NYSE banned dual-class voting structures
+            but reversed this policy in the 1980s due to competition
+            from other exchanges.10 Today, the NYSE permits companies to
+            list with dual-class share structures, which is essential
+            for the hybrid cooperative model.10 However, once listed, a
+            company cannot take actions that would disparately reduce
+            the voting rights of an existing class of stock.27
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="section-22-the-nasdaq-stock-market">
+    <title>
+      <emphasis role="strong">Section 2.2: The NASDAQ Stock
+      Market</emphasis>
+    </title>
+    <para>
+        The NASDAQ is the second-largest exchange and is known for its
+        technology-focused listings. It offers three tiers with
+        escalating requirements: the NASDAQ Capital Market, the NASDAQ
+        Global Market, and the NASDAQ Global Select Market.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Listing Standards:</emphasis> Each
+            NASDAQ tier has its own set of initial and continued listing
+            requirements, including minimum bid price, number of
+            publicly held shares, market value of public float, and
+            shareholder equity.7 The Global Select Market has the most
+            rigorous standards, comparable to the NYSE.7
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Corporate Governance:</emphasis> The
+            NASDAQ Rule 5600 Series governs corporate governance.30 Like
+            the NYSE, it mandates a majority-independent board and
+            independent audit, compensation, and nomination
+            committees.31 It also requires shareholder approval for
+            certain stock issuances and the adoption of a code of
+            conduct.28
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Dual-Class Shares and
+            Cooperatives:</emphasis> NASDAQ's Voting Rights Rule (Rule
+            5640) generally permits dual-class structures at the time of
+            an IPO.11 This makes it a viable venue for a hybrid
+            cooperative. Significantly, NASDAQ Listing Rule 5615(a)(2)
+            provides an explicit exemption for "Cooperatives"
+            from the corporate governance rules related to board
+            independence and independent committees, recognizing their
+            unique member-driven governance structure.33 This exemption
+            could provide substantial flexibility for a listed hybrid
+            cooperative.
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="section-23-otc-markets-group">
+    <title>
+      <emphasis role="strong">Section 2.3: OTC Markets
+      Group</emphasis>
+    </title>
+    <para>
+        The OTC Markets provide an alternative to a formal exchange
+        listing and are organized into three tiers based on the quality
+        and quantity of information the companies provide.
+      </para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Market Tiers:</emphasis>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">OTCQX® Best Market:</emphasis> This
+            is the highest tier. Companies must meet stringent financial
+            standards, be current in their disclosure, and undergo a
+            qualitative review. They are explicitly forbidden from being
+            penny stocks or shell companies.12
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">OTCQB® Venture Market:</emphasis>
+            This is the middle tier for entrepreneurial and
+            development-stage companies. Companies must be current in
+            their reporting, have a minimum bid price of $0.01, and
+            undergo an annual verification and management certification
+            process.35
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Pink® Open Market:</emphasis> This
+            tier has no financial standards or disclosure requirements.
+            It is an open marketplace for brokers to trade a wide
+            spectrum of securities.12
+          </para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          <emphasis role="strong">Corporate Governance:</emphasis> The
+            OTCQX and OTCQB markets have corporate governance
+            requirements for companies using their "Alternative
+            Reporting Standard." These rules require at least two
+            independent directors and an audit committee with a majority
+            of independent directors, though these are less prescriptive
+            than NYSE or NASDAQ rules.12
+          </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis role="strong">Suitability for
+            Cooperatives:</emphasis> The OTC markets, particularly OTCQX
+            or OTCQB, could serve as a more accessible entry point for a
+            hybrid cooperative's Class B shares, with lower financial
+            thresholds and less burdensome governance rules than the
+            major exchanges.8
+          </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="section-24-finras-role">
+    <title>
+      <emphasis role="strong">Section 2.4: FINRA's
+      Role</emphasis>
+    </title>
+    <para>
+        The Financial Industry Regulatory Authority (FINRA) is a
+        self-regulatory organization that oversees broker-dealers in the
+        United States. Its role is not to approve the issuance of
+        securities but to regulate their trading and the conduct of its
+        member firms.38 For a cooperative security trading on the OTC
+        markets, FINRA rules would govern how brokers handle and report
+        trades (Rule 6600 series) and would prohibit manipulative
+        practices like trading ahead of customer orders (Rule 5320).39
+        FINRA also has the authority to halt trading in an OTC security
+        under extraordinary circumstances to protect investors.41
+      </para>
+  </section>
+</section>
+  
