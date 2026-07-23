@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="works-cited">
+  <title><emphasis role="strong">Works cited</emphasis></title>
+  <orderedlist numeration="arabic" spacing="compact">
+    <listitem><para>Systemic_Misclassification</para></listitem>
+    <listitem><para>
+        California Civil Code § 1550 (2024) - Justia Law, accessed
+        September 19, 2025,
+        <link xlink:href="https://law.justia.com/codes/california/code-civ/division-3/part-2/title-1/chapter-1/section-1550/">https://law.justia.com/codes/california/code-civ/division-3/part-2/title-1/chapter-1/section-1550/</link>
+    </para></listitem>
+    <listitem><para>
+      Before-text
+      <link xlink:href="https://example.com/x">https://example.com/x</link>
+      after-text
+    </para></listitem>
+  </orderedlist>
+</section>

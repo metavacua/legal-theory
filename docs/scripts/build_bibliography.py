@@ -55,3 +55,40 @@ def build_backlink_map(root_dir):
             backlinks[frag] = rel_html
             stack.extend(parse_xincludes(frag))
     return backlinks
+
+
+WORKS_CITED_ID = "works-cited"
+
+
+def _para_title_text(para):
+    """Full text of a <para>, excluding a nested <link>'s own inner text
+    (which just repeats the URL) but keeping text before/after it."""
+    parts = [para.text or ""]
+    for child in para:
+        if child.tag != f"{{{DB_NS}}}link":
+            parts.append(element_full_text(child))
+        parts.append(child.tail or "")
+    return " ".join(" ".join(parts).split())
+
+
+def _listitem_text_and_link(li):
+    para = li.find(f"{{{DB_NS}}}para")
+    if para is None:
+        return "", None
+    link_el = para.find(f"{{{DB_NS}}}link")
+    href = link_el.get(f"{{{XLINK_NS}}}href") if link_el is not None else None
+    return _para_title_text(para), href
+
+
+def extract_works_cited(xml_path):
+    """[(text, href), ...] for every works-cited listitem in xml_path."""
+    root = ET.parse(xml_path).getroot()
+    entries = []
+    for section in root.iter(f"{{{DB_NS}}}section"):
+        if section.get(f"{{{XML_NS}}}id") != WORKS_CITED_ID:
+            continue
+        for li in section.iter(f"{{{DB_NS}}}listitem"):
+            text, href = _listitem_text_and_link(li)
+            if text:
+                entries.append((text, href))
+    return entries

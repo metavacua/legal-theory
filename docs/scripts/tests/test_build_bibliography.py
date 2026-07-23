@@ -22,5 +22,25 @@ class TestBuildBacklinkMap(unittest.TestCase):
         self.assertTrue(backlinks[shell_b].endswith("backlink_corpus/shell-b.html"))
 
 
+class TestExtractWorksCited(unittest.TestCase):
+    def test_extracts_text_and_link_skips_garbled_no_link_entry_correctly(self):
+        from build_bibliography import extract_works_cited
+        entries = extract_works_cited(FIXTURES / "works_cited_sample.xml")
+        self.assertEqual(len(entries), 3)
+        self.assertEqual(entries[0], ("Systemic_Misclassification", None))
+        self.assertIn("California Civil Code § 1550 (2024) - Justia Law", entries[1][0])
+        self.assertEqual(
+            entries[1][1],
+            "https://law.justia.com/codes/california/code-civ/division-3/part-2/title-1/chapter-1/section-1550/",
+        )
+
+    def test_link_inner_text_excluded_but_surrounding_text_kept(self):
+        from build_bibliography import extract_works_cited
+        entries = extract_works_cited(FIXTURES / "works_cited_sample.xml")
+        text, href = entries[2]
+        self.assertEqual(text, "Before-text after-text")
+        self.assertEqual(href, "https://example.com/x")
+
+
 if __name__ == "__main__":
     unittest.main()
