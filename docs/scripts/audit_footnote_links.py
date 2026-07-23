@@ -12,7 +12,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_bibliography import (  # noqa: E402
     DB_NS, XI_NS, XLINK_NS, XML_NS,
     REPO_ROOT, parse_xincludes, build_backlink_map, extract_works_cited,
-    CODE_ABBREVIATIONS,
 )
 
 
@@ -41,13 +40,10 @@ def document_content_files(shell_path):
 # footnote marker's "." always follows a word, punctuation mark, or
 # closing tag boundary, never another digit, so this generalizes to any
 # statute abbreviation or rule-label wording, not just the ones named in
-# CODE_ABBREVIATIONS or the fixed Rule/Section/Article word list.
+# CODE_ABBREVIATIONS or the fixed Rule/Section/Article word list. (See
+# _is_excluded_context below for why a keyword-based fallback on top of
+# this rule was tried and removed.)
 _FOOTNOTE_MARKER_RE = re.compile(r"\.(\d{1,3})(?=[\s]|$)")
-_LABEL_EXCLUSION_RE = re.compile(r"\b(?:Rule|Section|Article)\s*$", re.IGNORECASE)
-_CODE_NAME_EXCLUSION_RE = re.compile(
-    r"(?:§|" + "|".join(re.escape(k) for k in CODE_ABBREVIATIONS) + r")\s*$",
-    re.IGNORECASE,
-)
 
 
 @dataclass
@@ -66,15 +62,17 @@ def _is_excluded_context(preceding_text):
     before the marker's "." is itself a digit, the "." is splitting a
     decimal number (e.g. "6751.1", "2.3"), not terminating a sentence a
     footnote is glued to. This alone covers pincites and rule labels
-    regardless of the specific code name or label word used. The
-    Rule/Section/Article word list and CODE_ABBREVIATIONS lookback are
-    kept as a defensive fallback for the (rarer) case where the label or
-    code name sits immediately before the marker with no digit between.
+    regardless of the specific code name or label word used, and does
+    not depend on the word immediately preceding the marker -- a bare
+    keyword lookback (e.g. "Rule"/"Section"/"Article" or a code-name
+    abbreviation with no digit between it and the marker) was tried and
+    removed: it fired on ordinary prose uses of those words (e.g. "the
+    Common Rule.44", a named federal regulation, not a numbering label)
+    and silently dropped real footnotes, with no confirmed corpus
+    instance it uniquely caught beyond what this digit-adjacency rule
+    already handles.
     """
-    if preceding_text and preceding_text[-1].isdigit():
-        return True
-    tail = preceding_text[-40:]
-    return bool(_LABEL_EXCLUSION_RE.search(tail) or _CODE_NAME_EXCLUSION_RE.search(tail))
+    return bool(preceding_text and preceding_text[-1].isdigit())
 
 
 def _element_body_text(el):

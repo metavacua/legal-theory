@@ -28,6 +28,16 @@ class TestFindCandidates(unittest.TestCase):
         candidates = find_candidates(FIXTURES / "candidates_sample.xml")
         self.assertIn("Dynamex", candidates[0].context)
 
+    def test_ordinary_prose_use_of_rule_word_is_not_mistaken_for_a_label(self):
+        # Adversarial: "the Common Rule" is a real named federal
+        # regulation (45 CFR 46), not a numbering-label reference like
+        # "Rule 2.3" -- the word "Rule" alone immediately before a
+        # footnote marker must not exclude a real footnote.
+        from audit_footnote_links import find_candidates
+        candidates = find_candidates(FIXTURES / "rule_word_sample.xml")
+        numbers = [c.number for c in candidates]
+        self.assertEqual(numbers, [44])
+
 
 if __name__ == "__main__":
     unittest.main()
