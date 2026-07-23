@@ -7,11 +7,9 @@
   <dc:creator>Ian D.L.N. McLean (authored); Claude Sonnet 4.6 (research assistant, 2026-07-01)</dc:creator>
   <dc:subject>large language models; graph databases; intellectual property; copyright; LARQL; mechanistic interpretability; derivative works; collective works; database law; GDPR; transformer architecture; knowledge graphs</dc:subject>
   <dc:description>A transformer's weights constitute a queryable graph database of the works it was built from. Chris Hay's LARQL (Lazarus Query Language) supplies the query interface that reads those entries back—entities, relations, directed edges—and writes them into ordinary model files unchanged. Arithmetic storage is still storage; the machine-perceptibility test for fixation predates modern AI and fits without strain. A model that regenerates Harry Potter near-verbatim or renders Superman on demand contains those works, and the settled law of copies, compilations, and distribution is the law that governs it. This paper establishes the technical isomorphism, assembles the empirical memorisation record, and draws the legal conclusions that follow directly from both.</dc:description>
-  <dc:publisher>metavacua/legal-theory (GitHub)</dc:publisher>
   <dc:date>2026-07-01</dc:date>
   <dc:type>ScholarlyArticle</dc:type>
-  <dc:language>en</dc:language>
-  <dc:rights>CC BY-SA 4.0</dc:rights>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../common/shared-metadata.xml"/>
 
   <bibliomisc role="schema-org-jsonld"><![CDATA[
 {
