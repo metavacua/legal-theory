@@ -173,7 +173,7 @@ _STATUTE_RE = re.compile(
     r"(?P<code>" + "|".join(re.escape(k) for k in CODE_ABBREVIATIONS) + r")\s*§\s*(?P<section>[\d.]+)",
     re.IGNORECASE,
 )
-_USC_RE = re.compile(r"(?P<title>\d+)\s*U\.S\.C\.\s*§+\s*(?P<section>[\w.-]+)")
+_USC_RE = re.compile(r"(?P<title>\d+)\s*U\.S\.C\.\s*§+\s*(?P<section>[\w.-]+(?:,\s*[\w.-]+)*)")
 _YEAR_RE = re.compile(r"\((\d{4})\)")
 
 
@@ -199,4 +199,5 @@ def classify_statute(text):
 def format_statute_bluebook(parsed):
     """Bluebook-style citation string for a classify_statute() result."""
     year = parsed["year"] or "[year unknown]"
-    return f"{parsed['abbrev']} § {parsed['section']} ({year})."
+    mark = "§§" if "," in parsed["section"] else "§"
+    return f"{parsed['abbrev']} {mark} {parsed['section']} ({year})."

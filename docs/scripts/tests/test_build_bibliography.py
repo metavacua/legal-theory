@@ -136,6 +136,11 @@ class TestClassifyStatute(unittest.TestCase):
         from build_bibliography import classify_statute
         self.assertIsNone(classify_statute("California Civil Code generally"))
 
+    def test_multi_section_usc_citation_not_truncated(self):
+        from build_bibliography import classify_statute
+        parsed = classify_statute("17 U.S.C. §§ 101, 106")
+        self.assertEqual(parsed["section"], "101, 106")
+
 
 class TestFormatStatuteBluebook(unittest.TestCase):
     def test_formats_with_known_year(self):
@@ -147,6 +152,11 @@ class TestFormatStatuteBluebook(unittest.TestCase):
         from build_bibliography import format_statute_bluebook
         parsed = {"type": "statute", "abbrev": "17 U.S.C.", "section": "101", "year": None}
         self.assertEqual(format_statute_bluebook(parsed), "17 U.S.C. § 101 ([year unknown]).")
+
+    def test_multi_section_uses_double_section_mark(self):
+        from build_bibliography import format_statute_bluebook
+        parsed = {"type": "statute", "abbrev": "17 U.S.C.", "section": "101, 106", "year": None}
+        self.assertEqual(format_statute_bluebook(parsed), "17 U.S.C. §§ 101, 106 ([year unknown]).")
 
 
 if __name__ == "__main__":
