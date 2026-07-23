@@ -13,8 +13,12 @@ from urllib.parse import urlsplit, urlunsplit
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from convert_to_docbook import (  # noqa: E402
     DB_NS, XI_NS, XLINK_NS, XML_NS, DC_NS,
-    REPO_ROOT, element_full_text, validate, build_html,
+    REPO_ROOT, element_full_text, validate, build_html, write_metadata,
 )
+
+
+def _normalize_ws(s):
+    return " ".join(s.split())
 
 
 def parse_xincludes(xml_path):
@@ -71,7 +75,7 @@ def _para_title_text(para):
         if child.tag != f"{{{DB_NS}}}link":
             parts.append(element_full_text(child))
         parts.append(child.tail or "")
-    return " ".join(" ".join(parts).split())
+    return _normalize_ws(" ".join(parts))
 
 
 def _listitem_text_and_link(li):
@@ -150,7 +154,7 @@ def extract_access_date(text):
 def strip_access_date(text):
     """text with any "accessed ..." clause removed and surrounding
     punctuation/whitespace trimmed."""
-    return " ".join(ACCESSED_RE.sub(" ", text).split())
+    return _normalize_ws(ACCESSED_RE.sub(" ", text))
 
 
 CODE_ABBREVIATIONS = {
@@ -216,10 +220,14 @@ _REPORTER_RE = re.compile(
 )
 
 
+def _hostname(href):
+    return urlsplit(href).netloc.lower() if href else None
+
+
 def _looks_like_case_domain(href):
-    if not href:
+    host = _hostname(href)
+    if not host:
         return False
-    host = urlsplit(href).netloc.lower()
     return any(host == d or host.endswith("." + d) for d in CASE_LAW_DOMAINS)
 
 
@@ -266,9 +274,9 @@ KNOWN_PUBLISHERS = {
 
 
 def _guess_publisher(href):
-    if not href:
+    host = _hostname(href)
+    if not host:
         return None
-    host = urlsplit(href).netloc.lower()
     if host.startswith("www."):
         host = host[4:]
     return KNOWN_PUBLISHERS.get(host, host)
@@ -344,7 +352,7 @@ def parse_bibtex(path):
         fields = {}
         for fm in _BIB_FIELD_NAME_RE.finditer(body):
             value_raw, _ = _read_balanced(body, fm.end() - 1)
-            value = " ".join(_strip_inner_braces(value_raw).split())
+            value = _normalize_ws(_strip_inner_braces(value_raw))
             if value:
                 fields[fm.group("name").lower()] = value
 
@@ -417,7 +425,7 @@ class BibliographyEntry:
 def _dedup_key(display_text, href):
     if href:
         return "url:" + normalize_url(href)
-    return "text:" + " ".join(display_text.lower().split())
+    return "text:" + _normalize_ws(display_text.lower())
 
 
 def dedupe(classified):
@@ -451,8 +459,9 @@ def verify_invariants(raw_entries, appendix_entries, legal_entries, secondary_en
     nothing was actually lost."""
     violations = []
 
+    all_entries = legal_entries + secondary_entries
     appendix_set = set(appendix_entries)
-    output_keys = {e.dedup_key for e in legal_entries + secondary_entries}
+    output_keys = {e.dedup_key for e in all_entries}
     for raw in raw_entries:
         section, display = classify_and_format(raw)
         if section == "appendix":
@@ -466,14 +475,14 @@ def verify_invariants(raw_entries, appendix_entries, legal_entries, secondary_en
             violations.append(f"legal entry missing § or v. marker: {e.display!r}")
 
     seen_urls = {}
-    for e in legal_entries + secondary_entries:
+    for e in all_entries:
         for token in re.findall(r"https?://\S+", e.display):
             key = normalize_url(token.rstrip(".\"'"))
             if key in seen_urls and seen_urls[key] != e.display:
                 violations.append(f"duplicate normalized URL survived dedup: {key}")
             seen_urls[key] = e.display
 
-    for e in legal_entries + secondary_entries:
+    for e in all_entries:
         for html in e.citing_htmls:
             if not (Path(repo_root) / html).is_file():
                 violations.append(f"dangling backlink, file does not exist: {html}")
@@ -489,17 +498,28 @@ def relative_html_link(repo_relative_html):
     return "../" + repo_relative_html[len("docs/"):]
 
 
+def _listitem_xml(display_text, secondary_xml):
+    """secondary_xml is a pre-built XML fragment for the second <para> --
+    it may contain raw markup (e.g. <link> elements) and must already be
+    properly escaped/constructed by the caller, not re-escaped here."""
+    return (
+        "    <listitem>\n"
+        f"      <para>{xml_escape(display_text)}</para>\n"
+        f"      <para>{secondary_xml}</para>\n"
+        "    </listitem>\n"
+    )
+
+
 def _entry_listitem_xml(entry):
     links = "; ".join(
         f'<link xlink:href="{xml_escape(relative_html_link(h))}">{xml_escape(h)}</link>'
         for h in sorted(entry.citing_htmls)
     )
-    return (
-        "    <listitem>\n"
-        f"      <para>{xml_escape(entry.display)}</para>\n"
-        f"      <para>Cited in: {links}</para>\n"
-        "    </listitem>\n"
-    )
+    return _listitem_xml(entry.display, f"Cited in: {links}")
+
+
+def _appendix_listitem_xml(text, source_file):
+    return _listitem_xml(text, f"Source: {xml_escape(source_file)}")
 
 
 def _section_xml(title, xml_id, entries):
@@ -524,11 +544,8 @@ METHODOLOGY_PARA = (
 )
 
 
-def emit_docbook(legal_entries, secondary_entries, appendix_texts):
-    appendix_items = "".join(
-        f"    <listitem>\n      <para>{xml_escape(t)}</para>\n    </listitem>\n"
-        for t in appendix_texts
-    )
+def emit_docbook(legal_entries, secondary_entries, appendix_entries):
+    appendix_items = "".join(_appendix_listitem_xml(text, source_file) for text, source_file in appendix_entries)
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<article xmlns="http://docbook.org/ns/docbook" '
@@ -554,14 +571,7 @@ def emit_docbook(legal_entries, secondary_entries, appendix_texts):
 
 
 def write_meta_xml(path):
-    Path(path).write_text(
-        '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">\n'
-        "  <dc:title>Consolidated References &amp; Bibliography</dc:title>\n"
-        '  <xi:include href="../common/shared-metadata.xml" />\n'
-        "</info>\n",
-        encoding="utf-8",
-    )
+    write_metadata(path, "Consolidated References & Bibliography")
 
 
 PAPER_ROOT = REPO_ROOT / "docs" / "papers" / "ai_and_ip" / "llm-database-theory"
@@ -602,7 +612,8 @@ def main(argv=None):
     bib_citation_backlinks = _bib_citation_backlinks()
 
     classified = [(*classify_and_format(r), r) for r in raw_entries]
-    appendix_texts = [display for section, display, r in classified if section == "appendix"]
+    appendix_entries = [(display, r.source_file) for section, display, r in classified if section == "appendix"]
+    appendix_display_texts = [text for text, _ in appendix_entries]
 
     bib_classified = []
     for entry in bib_entries:
@@ -621,7 +632,7 @@ def main(argv=None):
     legal = dedupe([c for c in classified + bib_classified if c[0] == "legal"])
     secondary = dedupe([c for c in classified + bib_classified if c[0] == "secondary"])
 
-    violations = verify_invariants(raw_entries, appendix_texts, legal, secondary, REPO_ROOT)
+    violations = verify_invariants(raw_entries, appendix_display_texts, legal, secondary, REPO_ROOT)
     if violations:
         print("INVARIANT VIOLATIONS -- refusing to write output:", file=sys.stderr)
         for v in violations:
@@ -630,7 +641,7 @@ def main(argv=None):
 
     xml_path = out_dir / "references.xml"
     meta_path = out_dir / "references.meta.xml"
-    xml_path.write_text(emit_docbook(legal, secondary, appendix_texts), encoding="utf-8")
+    xml_path.write_text(emit_docbook(legal, secondary, appendix_entries), encoding="utf-8")
     write_meta_xml(meta_path)
 
     errors = validate(xml_path)
@@ -641,7 +652,7 @@ def main(argv=None):
         return 1
     build_html(xml_path, xml_path.with_suffix(".html"))
 
-    print(f"OK: {len(legal)} legal, {len(secondary)} secondary, {len(appendix_texts)} appendix entries")
+    print(f"OK: {len(legal)} legal, {len(secondary)} secondary, {len(appendix_entries)} appendix entries")
     return 0
 
 

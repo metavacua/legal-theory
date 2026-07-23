@@ -485,7 +485,7 @@ class TestEmitDocbook(unittest.TestCase):
                                      citing_htmls=["docs/a.html"], dedup_key="k1")]
         secondary = [BibliographyEntry(section="secondary", display='Justia. "X." Accessed 1. https://justia.com/x',
                                          citing_htmls=["docs/b.html"], dedup_key="k2")]
-        xml_text = emit_docbook(legal, secondary, ["Garbled Entry"])
+        xml_text = emit_docbook(legal, secondary, [("Garbled Entry", "docs/some/source.xml")])
 
         self.assertIn('xml:id="legal-citations"', xml_text)
         self.assertIn('xml:id="academic-secondary-sources"', xml_text)
@@ -493,6 +493,7 @@ class TestEmitDocbook(unittest.TestCase):
         self.assertIn("Marvin v. Marvin", xml_text)
         self.assertIn('xlink:href="../a.html"', xml_text)
         self.assertIn("Garbled Entry", xml_text)
+        self.assertIn("Source: docs/some/source.xml", xml_text)
 
     def test_emitted_xml_is_well_formed(self):
         import xml.etree.ElementTree as ET
@@ -507,7 +508,7 @@ class TestEmitDocbook(unittest.TestCase):
         self.assertIn('version="5.2"', xml_text)
 
     def test_bib_citation_backlinks_resolve_to_real_existing_html_files(self):
-        from build_bibliography import _bib_citation_backlinks, PAPER_ROOT
+        from build_bibliography import _bib_citation_backlinks
         backlinks = _bib_citation_backlinks()
         self.assertGreater(len(backlinks), 0)
         for key, html in backlinks.items():
@@ -528,7 +529,8 @@ class TestEndToEndIntegration(unittest.TestCase):
         self.assertEqual(len(raw_entries), 4)
 
         classified = [(*classify_and_format(r), r) for r in raw_entries]
-        appendix_texts = [d for s, d, r in classified if s == "appendix"]
+        appendix_entries = [(d, r.source_file) for s, d, r in classified if s == "appendix"]
+        appendix_texts = [text for text, _ in appendix_entries]
         legal = dedupe([c for c in classified if c[0] == "legal"])
         secondary = dedupe([c for c in classified if c[0] == "secondary"])
 
@@ -539,12 +541,13 @@ class TestEndToEndIntegration(unittest.TestCase):
         violations = verify_invariants(raw_entries, appendix_texts, legal, secondary, REPO_ROOT)
         self.assertEqual(violations, [])
 
-        xml_text = emit_docbook(legal, secondary, appendix_texts)
+        xml_text = emit_docbook(legal, secondary, appendix_entries)
         ET.fromstring(xml_text)  # well-formed
         self.assertIn("Cal. Civ. Code § 1550", xml_text)
         self.assertIn("Dynamex Operations West, Inc. v. Superior Court", xml_text)
         self.assertIn("[reporter citation unknown]", xml_text)
         self.assertIn("Systemic_Misclassification", xml_text)
+        self.assertIn(f"Source: {appendix_entries[0][1]}", xml_text)
 
     def test_real_bibliography_bib_parses_and_classifies_without_exceptions(self):
         # Runs Tasks 10-11 against the ACTUAL repo file, not a fixture --
