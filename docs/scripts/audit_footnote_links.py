@@ -3,6 +3,7 @@ against their candidate works-cited entries. Writes a report; never
 modifies a corpus document. See
 docs/superpowers/specs/2026-07-23-footnote-citation-audit-design.md."""
 
+import html.parser
 import re
 import sys
 from dataclasses import dataclass
@@ -116,6 +117,74 @@ def locate_works_cited(content_files):
         if entries:
             return entries
     return []
+
+
+class _HeadingTextCollector(html.parser.HTMLParser):
+    """Splits an HTML document's text into heading_text (everything
+    inside an <h1>-<h6> element) and body_text (everything else),
+    for is_inside_heading's second, HTML-side signal.
+
+    Deviation from the Task 4 brief's literal sample code: the brief's
+    version has no notion of <script>/<style> content and feeds every
+    handle_data() call -- including raw CSS/JS -- into body_text. Every
+    built HTML file sampled from the corpus (docs/cross-cutting and
+    docs/court-record/matters) embeds an inline <style> block, and that
+    CSS routinely contains decimal-looking substrings (e.g.
+    "padding: 1.1rem;"). Confirmed on
+    docs/cross-cutting/valuing-human-life-economically.html: the CSS
+    rule "padding: 1.1rem 1.3rem;" makes "1.1" a false hit in body_text,
+    even though "1.1" is also the real heading number for section 1.1
+    ("<h3><em>1.1 The Value of a Statistical Life ...</em></h3>") --
+    the brief's is_inside_heading(path, "1.1") returns False
+    (in_heading=True but in_body=True too, so `in_heading and not
+    in_body` fails) on real data, exactly backwards. This is a
+    corpus-wide defect, not a one-off: every sampled file has a <style>
+    block. Fixed here by tracking a skip_depth for <script>/<style> and
+    dropping their handle_data() entirely (added to neither list),
+    rather than special-casing CSS unit suffixes or the specific "rem"
+    string, since script/script-like content is never real prose in
+    this pipeline's inputs.
+    """
+
+    _HEADING_TAGS = ("h1", "h2", "h3", "h4", "h5", "h6")
+    _SKIP_TAGS = ("script", "style")
+
+    def __init__(self):
+        super().__init__()
+        self.heading_depth = 0
+        self.skip_depth = 0
+        self.heading_text = []
+        self.body_text = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in self._HEADING_TAGS:
+            self.heading_depth += 1
+        elif tag in self._SKIP_TAGS:
+            self.skip_depth += 1
+
+    def handle_endtag(self, tag):
+        if tag in self._HEADING_TAGS:
+            self.heading_depth = max(0, self.heading_depth - 1)
+        elif tag in self._SKIP_TAGS:
+            self.skip_depth = max(0, self.skip_depth - 1)
+
+    def handle_data(self, data):
+        if self.skip_depth > 0:
+            return
+        (self.heading_text if self.heading_depth > 0 else self.body_text).append(data)
+
+
+def is_inside_heading(html_path, marker_text):
+    """True if marker_text appears only inside an <h1>-<h6> element in
+    the built HTML at html_path, False if it appears in body text (or
+    both, or neither) -- a second, independently-derived signal that a
+    candidate is real body content rather than a section-heading number
+    the XML-side <title> exclusion should already have caught."""
+    parser = _HeadingTextCollector()
+    parser.feed(Path(html_path).read_text(encoding="utf-8"))
+    in_heading = marker_text in "".join(parser.heading_text)
+    in_body = marker_text in "".join(parser.body_text)
+    return in_heading and not in_body
 
 
 def is_degenerate(entries, max_footnote):

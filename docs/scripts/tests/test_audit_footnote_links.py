@@ -65,5 +65,15 @@ class TestIsDegenerate(unittest.TestCase):
         self.assertFalse(is_degenerate(entries, max_footnote=10))
 
 
+class TestIsInsideHeading(unittest.TestCase):
+    def test_body_paragraph_marker_is_not_inside_a_heading(self):
+        from audit_footnote_links import is_inside_heading
+        self.assertFalse(is_inside_heading(FIXTURES / "html_check" / "doc.html", ".4"))
+
+    def test_heading_number_is_inside_a_heading(self):
+        from audit_footnote_links import is_inside_heading
+        self.assertTrue(is_inside_heading(FIXTURES / "html_check" / "doc.html", "2.1"))
+
+
 if __name__ == "__main__":
     unittest.main()
