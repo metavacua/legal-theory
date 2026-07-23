@@ -11,3 +11,5 @@ relative_links:
   enabled: true
   collections: false
 markdown: kramdown
+exclude:
+  - papers/ai_and_ip/llm-database-theory/scratch/
