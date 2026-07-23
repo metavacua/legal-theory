@@ -348,6 +348,25 @@ class TestClassifyBibEntry(unittest.TestCase):
         self.assertIn("[reporter citation unknown]", display)
         self.assertIn("2025", display)
 
+    def test_latex_double_section_escape_converted_and_routed_to_statute_branch(self):
+        from build_bibliography import classify_bib_entry
+        entry = {"key": "copyright1976fixation", "entry_type": "misc",
+                  "fields": {"title": "Copyright Act of 1976, 17 U.S.C. \\S\\S 101, 106", "year": "1976"}}
+        section, display = classify_bib_entry(entry)
+        self.assertEqual(section, "legal")
+        self.assertIn("§§ 101, 106", display)
+        self.assertNotIn("\\S", display)
+        self.assertNotIn("[reporter citation unknown]", display)
+
+    def test_latex_single_section_escape_converted(self):
+        from build_bibliography import classify_bib_entry
+        entry = {"key": "gdpr2016", "entry_type": "misc",
+                  "fields": {"title": "GDPR Article \\S 17", "year": "2016"}}
+        section, display = classify_bib_entry(entry)
+        self.assertEqual(section, "legal")
+        self.assertIn("§ 17", display)
+        self.assertNotIn("\\S", display)
+
 
 if __name__ == "__main__":
     unittest.main()

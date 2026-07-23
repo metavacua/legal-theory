@@ -371,6 +371,7 @@ SELF_CITATION_HTML = {
 def _format_bib_legal(entry):
     f = entry["fields"]
     title = f.get("title", "[title unknown]")
+    title = title.replace("\\S\\S", "§§").replace("\\S", "§")
     if all(k in f for k in ("volume", "journal", "pages")):
         year = f.get("year", "[year unknown]")
         return f"{title}, {f['volume']} {f['journal']} {f['pages']} ({year})."
