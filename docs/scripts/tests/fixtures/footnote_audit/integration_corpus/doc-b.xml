@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xml:id="doc-b" xml:lang="en">
+  <title>Doc B</title>
+  <section xml:id="body"><title>Body</title><para>First.1 second.1 third.1</para></section>
+  <section xml:id="works-cited">
+    <title>Works cited</title>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem><para>Bare Fake Entry</para></listitem>
+    </orderedlist>
+  </section>
+</article>

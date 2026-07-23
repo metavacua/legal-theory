@@ -323,5 +323,30 @@ class TestMain(unittest.TestCase):
         out_path.unlink()
 
 
+class TestEndToEndIntegration(unittest.TestCase):
+    def test_full_pipeline_produces_the_expected_confidence_distribution(self):
+        from audit_footnote_links import main
+        import csv
+        out_path = FIXTURES / "integration_report.csv"
+        exit_code = main(["--corpus-root", str(FIXTURES / "integration_corpus"), "--out", str(out_path)])
+        self.assertEqual(exit_code, 0)
+
+        with open(out_path, newline="", encoding="utf-8") as f:
+            rows = list(csv.DictReader(f))
+
+        doc_a_rows = [r for r in rows if "doc-a" in r["file"]]
+        doc_b_rows = [r for r in rows if "doc-b" in r["file"]]
+
+        self.assertEqual(len(doc_a_rows), 1)
+        self.assertEqual(doc_a_rows[0]["confidence_tier"], "High")
+
+        self.assertEqual(len(doc_b_rows), 3)
+        for r in doc_b_rows:
+            self.assertEqual(r["confidence_tier"], "Needs manual triage")
+            self.assertIn("degenerate_bibliography", r["flags"])
+
+        out_path.unlink()
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xml:id="doc-a" xml:lang="en">
+  <title>Doc A</title>
+  <section xml:id="body"><title>Body</title><para>Cited text.1 here.</para></section>
+  <section xml:id="works-cited">
+    <title>Works cited</title>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem><para>Only Source <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/only">https://example.com/only</link></para></listitem>
+    </orderedlist>
+  </section>
+</article>
