@@ -440,6 +440,15 @@ class TestVerifyInvariants(unittest.TestCase):
         violations = verify_invariants([], [], [], [bad], REPO_ROOT)
         self.assertTrue(any("does-not-exist.html" in v for v in violations))
 
+    def test_eu_directive_and_regulation_citations_satisfy_legal_marker_check(self):
+        from build_bibliography import verify_invariants, BibliographyEntry
+        entries = [
+            BibliographyEntry(section="legal", display="Regulation (EU) 2016/679 -- GDPR (2016).", citing_htmls=["docs/papers/ai_and_ip/llm-database-theory/html/01-llm-database-theory.html"], dedup_key="k1"),
+            BibliographyEntry(section="legal", display="Directive 96/9/EC on the Legal Protection of Databases (1996).", citing_htmls=["docs/papers/ai_and_ip/llm-database-theory/html/01-llm-database-theory.html"], dedup_key="k2"),
+        ]
+        violations = verify_invariants([], [], entries, [], REPO_ROOT)
+        self.assertEqual(violations, [])
+
 
 class TestEmitDocbook(unittest.TestCase):
     def test_relative_html_link_from_bibliography_dir(self):
@@ -470,6 +479,19 @@ class TestEmitDocbook(unittest.TestCase):
         legal = [BibliographyEntry(section="legal", display="A & B v. C.", citing_htmls=["docs/a.html"], dedup_key="k1")]
         xml_text = emit_docbook(legal, [], [])
         ET.fromstring(xml_text)  # raises ParseError if malformed — must not raise
+
+    def test_emitted_article_root_carries_required_docbook_version_attribute(self):
+        from build_bibliography import emit_docbook
+        xml_text = emit_docbook([], [], [])
+        self.assertIn('version="5.2"', xml_text)
+
+    def test_bib_citation_backlinks_resolve_to_real_existing_html_files(self):
+        from build_bibliography import _bib_citation_backlinks, PAPER_ROOT
+        backlinks = _bib_citation_backlinks()
+        self.assertGreater(len(backlinks), 0)
+        for key, html in backlinks.items():
+            html_path = REPO_ROOT / html
+            self.assertTrue(html_path.is_file(), f"{key} -> {html} does not exist on disk")
 
 
 if __name__ == "__main__":

@@ -462,7 +462,7 @@ def verify_invariants(raw_entries, appendix_entries, legal_entries, secondary_en
             violations.append(f"raw entry lost (missing from {section}): {raw.text!r}")
 
     for e in legal_entries:
-        if "§" not in e.display and " v. " not in e.display:
+        if not any(marker in e.display for marker in ("§", " v. ", "Directive", "Regulation")):
             violations.append(f"legal entry missing § or v. marker: {e.display!r}")
 
     seen_urls = {}
@@ -534,7 +534,7 @@ def emit_docbook(legal_entries, secondary_entries, appendix_texts):
         '<article xmlns="http://docbook.org/ns/docbook" '
         'xmlns:xlink="http://www.w3.org/1999/xlink" '
         'xmlns:xi="http://www.w3.org/2001/XInclude" '
-        'xml:id="references" xml:lang="en">\n'
+        'version="5.2" xml:id="references" xml:lang="en">\n'
         '  <xi:include href="references.meta.xml"/>\n'
         "  <title>Consolidated References &amp; Bibliography</title>\n"
         '  <section xml:id="methodology">\n'
@@ -564,26 +564,32 @@ def write_meta_xml(path):
     )
 
 
-PAPER_SRC = REPO_ROOT / "docs" / "papers" / "ai_and_ip" / "llm-database-theory" / "src"
-PAPER_FALLBACK_HTML = "docs/papers/ai_and_ip/llm-database-theory/generated/01-llm-database-theory.html"
+PAPER_ROOT = REPO_ROOT / "docs" / "papers" / "ai_and_ip" / "llm-database-theory"
+PAPER_SRC = PAPER_ROOT / "src"
+PAPER_FALLBACK_HTML = "docs/papers/ai_and_ip/llm-database-theory/html/01-llm-database-theory.html"
 _CITATION_KEY_RE = re.compile(r"<citation>([\w.-]+)</citation>")
 
 
 def _bib_citation_backlinks():
     """dict[str, str]: bibliography.bib key -> repo-relative .html of the
-    paper article (01-llm-database-theory.html or
-    02-legal-corpus-connections.html) whose fragments actually contain
-    <citation>KEY</citation> -- resolved via the same xi:include backlink
-    mechanism used for the rest of the corpus (build_backlink_map), so this
-    points at the paper's REAL built page, not a guessed default."""
-    paper_backlinks = build_backlink_map(PAPER_SRC)
+    paper article (html/01-llm-database-theory.html or
+    html/02-legal-corpus-connections.html) whose src/ fragments actually
+    contain <citation>KEY</citation>. Reuses build_backlink_map(PAPER_SRC)
+    only to determine which shell (by filename stem) each fragment
+    belongs to -- the paper's real built HTML lives in a sibling html/
+    directory, not alongside src/, so the shell-html path
+    build_backlink_map computes is used only for its stem, not taken
+    literally."""
+    src_backlinks = build_backlink_map(PAPER_SRC)
     key_to_html = {}
     for xml_path in sorted(PAPER_SRC.rglob("*.xml")):
-        html = paper_backlinks.get(xml_path.resolve())
-        if html is None:
+        shell_html_guess = src_backlinks.get(xml_path.resolve())
+        if shell_html_guess is None:
             continue
+        stem = Path(shell_html_guess).stem
+        real_html = f"docs/papers/ai_and_ip/llm-database-theory/html/{stem}.html"
         for key in _CITATION_KEY_RE.findall(xml_path.read_text(encoding="utf-8")):
-            key_to_html.setdefault(key, html)
+            key_to_html.setdefault(key, real_html)
     return key_to_html
 
 
