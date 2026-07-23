@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="candidates-sample">
+  <title>2.1 A Section Title That Looks Like a Footnote</title>
+  <para>A real citation to <emphasis>Dynamex Operations West, Inc. v. Superior Court</emphasis>.4 follows here.</para>
+  <para>A pincite to Family Code § 6751.1 must not be mistaken for a footnote.</para>
+  <para>See Rule 2.3 for the procedural requirement, which is not a footnote either.</para>
+  <para>A second real footnote appears here.12 and continues.</para>
+</section>

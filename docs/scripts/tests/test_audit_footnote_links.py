@@ -16,5 +16,18 @@ class TestDocumentContentFiles(unittest.TestCase):
         self.assertEqual(names, ["shell.xml", "01-frag-a.xml", "frag-a-nested.xml", "02-frag-b.xml"])
 
 
+class TestFindCandidates(unittest.TestCase):
+    def test_finds_real_footnotes_only_not_title_pincite_or_rule_label(self):
+        from audit_footnote_links import find_candidates
+        candidates = find_candidates(FIXTURES / "candidates_sample.xml")
+        numbers = [c.number for c in candidates]
+        self.assertEqual(numbers, [4, 12])
+
+    def test_context_captures_text_around_the_marker(self):
+        from audit_footnote_links import find_candidates
+        candidates = find_candidates(FIXTURES / "candidates_sample.xml")
+        self.assertIn("Dynamex", candidates[0].context)
+
+
 if __name__ == "__main__":
     unittest.main()
