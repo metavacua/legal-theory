@@ -7,6 +7,7 @@ import sys
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from convert_to_docbook import (  # noqa: E402
@@ -119,3 +120,15 @@ def extract_all_raw_entries(corpus_root, exclude_dirs):
         for text, href in extract_works_cited(xml_path):
             entries.append(RawEntry(text=text, href=href, citing_html=html, source_file=source_file))
     return entries
+
+
+def normalize_url(url):
+    """Dedup key for a URL: lowercase scheme/host, strip trailing slash
+    from the path. Path case and "www." prefix are preserved as-is since
+    they can be semantically significant (case-sensitive paths, or
+    www vs. bare host being genuinely different sites)."""
+    parts = urlsplit(url.strip())
+    scheme = parts.scheme.lower()
+    netloc = parts.netloc.lower()
+    path = parts.path.rstrip("/")
+    return urlunsplit((scheme, netloc, path, parts.query, parts.fragment))

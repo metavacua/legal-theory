@@ -55,5 +55,34 @@ class TestExtractAllRawEntries(unittest.TestCase):
         self.assertTrue(entry.source_file.endswith("doc-one/01-works-cited.xml"))
 
 
+class TestNormalizeUrl(unittest.TestCase):
+    def test_strips_trailing_slash(self):
+        from build_bibliography import normalize_url
+        self.assertEqual(normalize_url("https://onellp.com/"), "https://onellp.com")
+
+    def test_lowercases_scheme_and_host_but_not_path(self):
+        from build_bibliography import normalize_url
+        self.assertEqual(
+            normalize_url("HTTPS://Justia.COM/Codes/CA-Civ-1550"),
+            "https://justia.com/Codes/CA-Civ-1550",
+        )
+
+    def test_preserves_www_prefix_as_is(self):
+        # Adversarial: two DIFFERENT hosts (www vs bare) must NOT collide —
+        # normalizing away "www." would incorrectly merge them.
+        from build_bibliography import normalize_url
+        self.assertNotEqual(
+            normalize_url("https://www.jmbm.com/entertainment.html"),
+            normalize_url("https://jmbm.com/entertainment.html"),
+        )
+
+    def test_trailing_slash_and_case_variant_dedup_to_same_key(self):
+        from build_bibliography import normalize_url
+        self.assertEqual(
+            normalize_url("https://Justia.com/x/"),
+            normalize_url("https://justia.com/x"),
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
