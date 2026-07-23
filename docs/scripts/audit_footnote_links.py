@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_bibliography import (  # noqa: E402
+from build_bibliography import (  # noqa: E402,F401
     DB_NS, XI_NS, XLINK_NS, XML_NS,
     REPO_ROOT, parse_xincludes, build_backlink_map, extract_works_cited,
 )
@@ -185,6 +185,86 @@ def is_inside_heading(html_path, marker_text):
     in_heading = marker_text in "".join(parser.heading_text)
     in_body = marker_text in "".join(parser.body_text)
     return in_heading and not in_body
+
+
+def _marker_collides_with_heading(html_path, marker_text):
+    """True if marker_text appears anywhere inside an <h1>-<h6> element
+    in the built HTML at html_path, regardless of whether it ALSO
+    appears in body text.
+
+    Deviation from the Task 5 brief's literal Step 4 sample, which
+    reuses is_inside_heading (Task 4) directly as this flag's
+    condition. is_inside_heading requires marker_text to appear
+    EXCLUSIVELY in a heading ("in_heading and not in_body") -- correct
+    for its own purpose (a safety-net check that a "candidate" is
+    actually nothing but a heading number that slipped past the
+    XML-side <title> exclusion). But every genuine footnote candidate
+    reaching this function was found by find_candidates() IN body XML
+    content, so its rendered HTML representation will essentially
+    always also appear in the HTML body -- meaning is_inside_heading's
+    "not in_body" condition can structurally never be satisfied for a
+    real candidate that also happens to collide with an unrelated
+    heading elsewhere. Confirmed directly:
+    is_inside_heading(full_doc_collision/shell.html, ".9") returns
+    False even though ".9" plainly appears in the fixture's <h2>,
+    because the same real footnote's ".9" also appears in the <p> body
+    -- which is exactly the adversarial scenario the brief's own
+    full_doc_collision fixture and test_heading_collision_is_flagged_
+    not_dropped test are designed to exercise. Reusing is_inside_heading
+    literally therefore makes Candidate.heading_collision permanently
+    dead code: it could never fire on any real candidate, silently
+    defeating the very fix (flag-not-drop) this task exists to
+    implement. Fixed by adding this separate, deliberately looser
+    "appears anywhere in a heading" signal -- reusing the existing
+    _HeadingTextCollector rather than duplicating its HTML-parsing
+    logic -- and using it (not is_inside_heading) as the
+    heading_collision trigger in audit_document. is_inside_heading
+    itself is left untouched; Task 4's own tests still exercise its
+    original, stricter semantics unchanged."""
+    parser = _HeadingTextCollector()
+    parser.feed(Path(html_path).read_text(encoding="utf-8"))
+    return marker_text in "".join(parser.heading_text)
+
+
+@dataclass
+class DocumentAudit:
+    shell_html: str                 # repo-relative .html of the shell
+    candidates: list                # list[Candidate], in document order, across all content files
+    works_cited: list               # list[tuple[str, str | None]]
+    degenerate: bool
+
+
+def audit_document(shell_path, backlinks):
+    """Walk the whole document rooted at shell_path (Task 1), collect
+    candidates from every content file (Task 2), cross-check each
+    against the shell's own built HTML and FLAG -- never drop -- any
+    candidate whose marker text also appears in a heading there via
+    Candidate.heading_collision (see _marker_collides_with_heading for
+    why this is not literally is_inside_heading), locate works-cited
+    (Task 3), and compute degeneracy (Task 3)."""
+    shell_path = Path(shell_path)
+    shell_html = backlinks.get(shell_path.resolve())
+    html_path = REPO_ROOT / shell_html if shell_html else None
+
+    content_files = document_content_files(shell_path)
+    candidates = []
+    for f in content_files:
+        for c in find_candidates(f):
+            marker_text = f".{c.number}"
+            if html_path and html_path.is_file() and _marker_collides_with_heading(html_path, marker_text):
+                c.heading_collision = True
+            candidates.append(c)
+
+    works_cited = locate_works_cited(content_files)
+    max_footnote = max((c.number for c in candidates), default=0)
+    degenerate = is_degenerate(works_cited, max_footnote)
+
+    return DocumentAudit(
+        shell_html=shell_html or "",
+        candidates=candidates,
+        works_cited=works_cited,
+        degenerate=degenerate,
+    )
 
 
 def is_degenerate(entries, max_footnote):

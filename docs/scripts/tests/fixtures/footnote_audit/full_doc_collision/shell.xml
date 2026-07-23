@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xml:id="full-doc-collision" xml:lang="en">
+  <title>Full Doc Collision</title>
+  <section xml:id="body">
+    <title>Body</title>
+    <para>Real citation text.9 follows, and elsewhere a table cell reads "Item 9".</para>
+  </section>
+  <section xml:id="works-cited">
+    <title>Works cited</title>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem><para>Filler</para></listitem>
+      <listitem><para>Filler</para></listitem>
+      <listitem><para>Filler</para></listitem>
+      <listitem><para>Filler</para></listitem>
+      <listitem><para>Filler</para></listitem>
+      <listitem><para>Filler</para></listitem>
+      <listitem><para>Filler</para></listitem>
+      <listitem><para>Filler</para></listitem>
+      <listitem><para>Ninth Source <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/nine">https://example.com/nine</link></para></listitem>
+    </orderedlist>
+  </section>
+</article>

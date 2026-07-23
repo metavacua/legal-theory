@@ -75,5 +75,36 @@ class TestIsInsideHeading(unittest.TestCase):
         self.assertTrue(is_inside_heading(FIXTURES / "html_check" / "doc.html", "2.1"))
 
 
+class TestAuditDocument(unittest.TestCase):
+    def test_audits_a_full_document_end_to_end(self):
+        from audit_footnote_links import audit_document, build_backlink_map
+        root = FIXTURES / "full_doc"
+        shell = root / "shell.xml"
+        backlinks = build_backlink_map(root)
+        result = audit_document(shell, backlinks)
+
+        self.assertEqual(len(result.candidates), 1)
+        self.assertEqual(result.candidates[0].number, 4)
+        self.assertEqual(len(result.works_cited), 4)
+        self.assertFalse(result.degenerate)
+        self.assertTrue(result.shell_html.endswith("full_doc/shell.html"))
+
+    def test_heading_collision_is_flagged_not_dropped(self):
+        # Adversarial: the marker text also happens to appear inside an
+        # unrelated heading. It must survive into audit.candidates with
+        # heading_collision=True -- NOT silently disappear. A dropped
+        # candidate is invisible to the human reviewer, which is a worse
+        # failure than a flagged one per this plan's own Global Constraints.
+        from audit_footnote_links import audit_document, build_backlink_map
+        root = FIXTURES / "full_doc_collision"
+        shell = root / "shell.xml"
+        backlinks = build_backlink_map(root)
+        result = audit_document(shell, backlinks)
+
+        self.assertEqual(len(result.candidates), 1)
+        self.assertEqual(result.candidates[0].number, 9)
+        self.assertTrue(result.candidates[0].heading_collision)
+
+
 if __name__ == "__main__":
     unittest.main()
