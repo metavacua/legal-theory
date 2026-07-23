@@ -234,7 +234,8 @@ def classify_case(text, href):
     if not m:
         return None
     name = f"{m.group('plaintiff').strip()} v. {m.group('defendant').strip()}"
-    rep_m = _REPORTER_RE.search(text)
+    tail = text[m.end():].lstrip(" ,.")
+    rep_m = _REPORTER_RE.match(tail)
     if rep_m:
         return {
             "type": "case", "name": name, "complete": True,

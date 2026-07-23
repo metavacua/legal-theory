@@ -192,6 +192,17 @@ class TestClassifyCase(unittest.TestCase):
         from build_bibliography import classify_case
         self.assertIsNone(classify_case("Restatement (Second) of Contracts § 45", href=None))
 
+    def test_unrelated_reporter_citation_elsewhere_in_text_does_not_corroborate(self):
+        from build_bibliography import classify_case
+        text = ("Consent v. Coercion in Platform Contracts, discussing the reasoning in "
+                "Smith (1990) 5 F.3d 100 for support.")
+        self.assertIsNone(classify_case(text, href=None))
+
+    def test_second_unrelated_case_citation_does_not_corroborate_the_first(self):
+        from build_bibliography import classify_case
+        text = "Consent v. Coercion in Platform Contracts (citing Marvin v. Marvin (1976) 18 Cal. 3d 660)"
+        self.assertIsNone(classify_case(text, href=None))
+
 
 class TestFormatCaseBluebook(unittest.TestCase):
     def test_formats_complete_citation(self):
