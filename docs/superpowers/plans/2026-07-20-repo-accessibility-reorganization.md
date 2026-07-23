@@ -356,3 +356,68 @@ link-format convention, not a real link) and 0 mismatched anchors. No fixes need
 - **Spec coverage:** "accessibility and visibility... in the deployed web page index" → Tasks 1, 3, 4, 5. "...and in the github readme" → Task 2. Both explicitly requested surfaces are covered.
 - **No placeholders:** all steps have literal file content, exact commands, and expected output.
 - **Not touched:** court-record evidence files are neither moved nor renamed anywhere in Tasks 1–5 (Task 6 explicitly defers this behind a confirmation gate, per Global Constraints).
+
+## Continuation log — everything since Iter 4 (this section keeps the plan current; the work below went far beyond this document's original 6 tasks)
+
+This plan's Tasks 1–4 shipped the navigation/index/README rewrite and landing-page sweep. Task 5
+(Pages + merge) and Task 6 (evidence dedup) were left gated on user confirmation. What actually
+happened after that confirmation, in order, spans several dedicated specs/plans of its own — this
+section is the index of record, not a duplicate of their detail:
+
+- **Pages deployed** (Task 5 confirmed): GitHub Pages enabled via Actions (`actions/jekyll-build-pages`
+  + `actions/deploy-pages`), deploying from this feature branch (`claude/llm-database-theory-codification`)
+  per explicit user preference, without merging to `main` first. Live at
+  `https://metavacua.github.io/legal-theory/`.
+- **Full DocBook 5.2 corpus migration** — every Markdown document in the corpus (70 evidence + 5
+  `findings.md` + 20 theory + 8 cross-cutting + 8 wip + 6 proposals = 117 documents) converted to
+  validated, schema-checked DocBook 5.2 XML and built to HTML5, matter-by-matter with user
+  confirmation at each boundary. Full detail, including the markup-quality taxonomy the tool
+  encountered (5 defect classes) and the conversion tool's own TDD history:
+  [2026-07-21-docbook-corpus-migration-design.md](../specs/2026-07-21-docbook-corpus-migration-design.md),
+  [2026-07-21-source-markdown-quality-taxonomy.md](../specs/2026-07-21-source-markdown-quality-taxonomy.md).
+- **README.md and docs/index.md brought current** after that migration — accurate document counts,
+  a prominent link to the live site (the index had drifted to describe the live site as still
+  "pending" after it was actually live), every link updated from `.md` to its built `.html`.
+- **Site-wide UX/accessibility fixes** applied directly to the DocBook→HTML5 XSLT
+  (`docs/xsl/html5.xsl`): every built page gained a small "← Index" navigation link back to the
+  site root (previously a dead end reachable only via the browser back button), and finding-status
+  sections (confirmed/confirmed-with-caveats/split) gained a text badge alongside their existing
+  color-coding (previously color was the *only* signal, which fails for colorblind readers and
+  is invisible to screen readers).
+- **GitHub repo metadata**: `topics` were already set (see Iter 4 above); the repo's homepage/
+  "Website" field (shown at the top of every GitHub repo page, separate from `topics`) was empty
+  and is now set to the live Pages URL.
+- **CI generalized**: `.github/workflows/build-corpus.yml` added to validate (`xmllint`/`jing`)
+  and rebuild (`xsltproc`) the whole corpus on every relevant push, rather than the pre-existing
+  `build-papers.yml` only ever covering the flagship paper.
+- **Corpus atomization**: every one of the 117 corpus documents plus the flagship paper's 2
+  articles was decomposed from one monolithic XML file into a thin "shell" file plus one fragment
+  file per top-level section (via XInclude) — the largest document had been ~18.4k words in a
+  single file, unwieldy for both human and LLM-agent editing. Metadata boilerplate, previously
+  duplicated byte-for-byte across all 117 `.meta.xml` files, was deduplicated into one shared
+  file. Executed as its own 15-task subagent-driven-development plan with a fresh implementer +
+  independent reviewer per task; caught and fixed 3 real defects along the way (a critical bug
+  where the splitter silently dropped a document's metadata reference, a title-extraction bug
+  found and fixed twice via systematic debugging, and a CI regression the final whole-branch
+  review caught before it ever reached production). Full detail:
+  [2026-07-22-corpus-atomization-design.md](../specs/2026-07-22-corpus-atomization-design.md),
+  [2026-07-22-corpus-atomization-plan.md](2026-07-22-corpus-atomization-plan.md) (the plan's own
+  completion log has the exact commit-by-commit account).
+- **Search-engine discoverability**: no `sitemap.xml` existed for the deployed site — search
+  engines had no structured way to discover the corpus's 117+ document pages beyond following
+  in-site links. Added `jekyll-sitemap` (GitHub Pages' supported plugin) to `docs/_config.yml`;
+  also excluded two internal session/provenance notes files
+  (`papers/ai_and_ip/llm-database-theory/scratch/*.md`) that were being built and served publicly
+  despite never being referenced from the curated index — they no longer appear in the sitemap
+  or resolve to a public page.
+- **Task 6 (evidence draft-lineage consolidation) remains explicitly deferred** — the draft/
+  revision clusters catalogued in the "Current-state findings" section above were never touched;
+  every draft and its corresponding final/revision were converted to DocBook independently, with
+  no consolidation, per this plan's original Global Constraints. This is the one item from the
+  original 6-task scope that is still genuinely open, should a future session want to pick it up.
+
+**Current state, in one sentence:** the two originally-requested surfaces (deployed web page
+index, GitHub README) are live, accurate, fully linked, navigable, accessible, and
+search-engine-discoverable, and the underlying corpus is now structured for efficient ongoing
+maintenance — the reorganization this plan set out to do is complete except for the deliberately
+deferred draft-consolidation pass.
