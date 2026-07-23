@@ -220,5 +220,33 @@ class TestFormatCaseBluebook(unittest.TestCase):
         )
 
 
+class TestFormatSecondaryChicago(unittest.TestCase):
+    def test_known_publisher_with_access_date(self):
+        from build_bibliography import format_secondary_chicago
+        text = "California Civil Code § 1550 (2024) - Justia Law, accessed September 19, 2025,"
+        result = format_secondary_chicago(text, "https://law.justia.com/codes/x")
+        self.assertIn("Justia", result)
+        self.assertIn("Accessed September 19, 2025", result)
+        self.assertIn("https://law.justia.com/codes/x", result)
+
+    def test_unknown_publisher_falls_back_to_bare_host_not_unknown_marker(self):
+        # Adversarial: a host with no entry in KNOWN_PUBLISHERS still yields a
+        # real, visible identifier (the host itself) rather than
+        # "[author unknown]" — that marker is reserved for when there is truly
+        # no href at all, per the no-fabrication policy's "denote empty, don't
+        # omit" rule applied honestly (the host IS visible information).
+        from build_bibliography import format_secondary_chicago
+        result = format_secondary_chicago("Entertainment", "https://www.jmbm.com/entertainment.html")
+        self.assertIn("jmbm.com", result)
+        self.assertNotIn("[author unknown]", result)
+
+    def test_no_href_and_no_access_date_marks_both_unknown(self):
+        from build_bibliography import format_secondary_chicago
+        result = format_secondary_chicago("Some Title With No Link", None)
+        self.assertIn("[author unknown]", result)
+        self.assertIn("[access date unknown]", result)
+        self.assertIn("[no url]", result)
+
+
 if __name__ == "__main__":
     unittest.main()

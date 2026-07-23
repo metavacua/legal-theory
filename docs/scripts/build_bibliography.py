@@ -254,3 +254,30 @@ def format_case_bluebook(parsed):
     if parsed["complete"]:
         return f"{parsed['name']}, {parsed['volume']} {parsed['reporter']} {parsed['page']} ({parsed['year']})."
     return f"{parsed['name']}, [reporter citation unknown]."
+
+
+KNOWN_PUBLISHERS = {
+    "justia.com": "Justia", "law.justia.com": "Justia",
+    "findlaw.com": "FindLaw", "codes.findlaw.com": "FindLaw",
+    "casetext.com": "Casetext", "casemine.com": "CaseMine",
+    "courtlistener.com": "CourtListener", "en.wikipedia.org": "Wikipedia",
+    "law.cornell.edu": "Cornell Legal Information Institute",
+}
+
+
+def _guess_publisher(href):
+    if not href:
+        return None
+    host = urlsplit(href).netloc.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    return KNOWN_PUBLISHERS.get(host, host)
+
+
+def format_secondary_chicago(text, href):
+    publisher = _guess_publisher(href) or "[author unknown]"
+    access_date = extract_access_date(text)
+    title = strip_access_date(text) or "[title unknown]"
+    date_str = f"Accessed {access_date}." if access_date else "[access date unknown]."
+    url_str = href if href else "[no url]"
+    return f'{publisher}. "{title}." {date_str} {url_str}'
