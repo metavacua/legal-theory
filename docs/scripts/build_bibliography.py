@@ -201,3 +201,55 @@ def format_statute_bluebook(parsed):
     year = parsed["year"] or "[year unknown]"
     mark = "§§" if "," in parsed["section"] else "§"
     return f"{parsed['abbrev']} {mark} {parsed['section']} ({year})."
+
+
+CASE_LAW_DOMAINS = {"courtlistener.com", "casetext.com", "casemine.com", "law.justia.com", "scholar.google.com"}
+_CASE_RE = re.compile(
+    r"(?P<plaintiff>[A-Z][\w.,'&-]*(?:\s+[A-Z][\w.,'&-]*){0,6})\s+v\.\s+"
+    r"(?P<defendant>[A-Z][\w.,'&-]*(?:\s+[A-Z][\w.,'&-]*){0,6})"
+)
+_REPORTER_ABBREVS = ["Cal. 3d", "Cal.3d", "F.2d", "F. 2d", "F.3d", "F. 3d", "U.S.", "P.2d", "P. 2d"]
+_REPORTER_RE = re.compile(
+    r"\((?P<year>\d{4})\)\s*(?P<volume>\d+)\s+(?P<reporter>"
+    + "|".join(re.escape(r) for r in _REPORTER_ABBREVS)
+    + r")\.?\s*(?P<page>\d+)"
+)
+
+
+def _looks_like_case_domain(href):
+    if not href:
+        return False
+    host = urlsplit(href).netloc.lower()
+    return any(host == d or host.endswith("." + d) for d in CASE_LAW_DOMAINS)
+
+
+def classify_case(text, href):
+    """dict(type='case', name, complete, ...) if text contains a " v. "
+    case-name pattern AND that pattern is corroborated by either a full
+    reporter citation in the same text or a known case-law-aggregator
+    URL, else None. A bare " v. " match with neither signal is NOT
+    classified as a case (avoids false positives on essay titles like
+    "Privacy v. Transparency in Legal Practice")."""
+    m = _CASE_RE.search(text)
+    if not m:
+        return None
+    name = f"{m.group('plaintiff').strip()} v. {m.group('defendant').strip()}"
+    rep_m = _REPORTER_RE.search(text)
+    if rep_m:
+        return {
+            "type": "case", "name": name, "complete": True,
+            "year": rep_m.group("year"), "volume": rep_m.group("volume"),
+            "reporter": rep_m.group("reporter"), "page": rep_m.group("page"),
+        }
+    if _looks_like_case_domain(href):
+        return {"type": "case", "name": name, "complete": False}
+    return None
+
+
+def format_case_bluebook(parsed):
+    """Bluebook-style citation string for a classify_case() result. Falls
+    back to a "[reporter citation unknown]" marker when the case data is
+    only partial (name corroborated by domain but no reporter found)."""
+    if parsed["complete"]:
+        return f"{parsed['name']}, {parsed['volume']} {parsed['reporter']} {parsed['page']} ({parsed['year']})."
+    return f"{parsed['name']}, [reporter citation unknown]."

@@ -159,5 +159,55 @@ class TestFormatStatuteBluebook(unittest.TestCase):
         self.assertEqual(format_statute_bluebook(parsed), "17 U.S.C. §§ 101, 106 ([year unknown]).")
 
 
+class TestClassifyCase(unittest.TestCase):
+    def test_full_reporter_citation_gives_complete_bluebook_data(self):
+        from build_bibliography import classify_case
+        parsed = classify_case("Marvin v. Marvin (1976) 18 Cal. 3d 660.", href=None)
+        self.assertEqual(parsed["name"], "Marvin v. Marvin")
+        self.assertTrue(parsed["complete"])
+        self.assertEqual(parsed["year"], "1976")
+        self.assertEqual(parsed["volume"], "18")
+        self.assertEqual(parsed["page"], "660")
+
+    def test_courtlistener_url_without_reporter_gives_partial_case(self):
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "Dynamex Operations West, Inc. v. Superior Court",
+            href="https://www.courtlistener.com/opinion/dynamex/",
+        )
+        self.assertEqual(parsed["name"], "Dynamex Operations West, Inc. v. Superior Court")
+        self.assertFalse(parsed["complete"])
+
+    def test_essay_title_with_v_but_no_reporter_and_no_case_domain_is_not_a_case(self):
+        # Adversarial: exactly the false-positive shape the design doc warns
+        # about — title-case "X v. Y", no reporter, no case-law-aggregator URL.
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "Privacy v. Transparency in Legal Practice",
+            href="https://somelawfirmblog.example.com/privacy-vs-transparency",
+        )
+        self.assertIsNone(parsed)
+
+    def test_no_v_pattern_returns_none(self):
+        from build_bibliography import classify_case
+        self.assertIsNone(classify_case("Restatement (Second) of Contracts § 45", href=None))
+
+
+class TestFormatCaseBluebook(unittest.TestCase):
+    def test_formats_complete_citation(self):
+        from build_bibliography import format_case_bluebook
+        parsed = {"type": "case", "name": "Marvin v. Marvin", "complete": True,
+                  "year": "1976", "volume": "18", "reporter": "Cal. 3d", "page": "660"}
+        self.assertEqual(format_case_bluebook(parsed), "Marvin v. Marvin, 18 Cal. 3d 660 (1976).")
+
+    def test_formats_partial_citation_with_flag(self):
+        from build_bibliography import format_case_bluebook
+        parsed = {"type": "case", "name": "Dynamex Operations West, Inc. v. Superior Court", "complete": False}
+        self.assertEqual(
+            format_case_bluebook(parsed),
+            "Dynamex Operations West, Inc. v. Superior Court, [reporter citation unknown].",
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
