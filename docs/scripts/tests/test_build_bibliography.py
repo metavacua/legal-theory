@@ -221,6 +221,19 @@ class TestFormatCaseBluebook(unittest.TestCase):
             "Dynamex Operations West, Inc. v. Superior Court, [reporter citation unknown].",
         )
 
+    def test_trailing_comma_in_captured_party_name_does_not_produce_double_comma(self):
+        from build_bibliography import classify_case, format_case_bluebook
+        parsed = classify_case("Langford v. United States,", href="https://www.courtlistener.com/opinion/x/")
+        display = format_case_bluebook(parsed)
+        self.assertNotIn(",,", display)
+        self.assertEqual(display, "Langford v. United States, [reporter citation unknown].")
+
+    def test_trailing_comma_after_abbreviation_period_strips_comma_not_period(self):
+        from build_bibliography import classify_case, format_case_bluebook
+        parsed = classify_case("Trust Co. v. Signature Financial Group, Inc.,", href="https://www.courtlistener.com/opinion/x/")
+        self.assertTrue(parsed["name"].endswith("Inc."))
+        self.assertFalse(parsed["name"].endswith(",,"))
+
 
 class TestFormatSecondaryChicago(unittest.TestCase):
     def test_known_publisher_with_access_date(self):
@@ -401,6 +414,14 @@ class TestDedupe(unittest.TestCase):
         result = dedupe(classified)
         self.assertEqual(len(result), 1)
         self.assertEqual(sorted(result[0].citing_htmls), ["docs/a.html", "docs/b.html"])
+
+    def test_bib_entry_with_url_field_uses_url_based_dedup_key(self):
+        from build_bibliography import RawEntry, _dedup_key
+        raw_with_url = RawEntry(text="somebibkey", href="https://arxiv.org/abs/1234.5678",
+                                  citing_html="docs/papers/ai_and_ip/llm-database-theory/html/01-llm-database-theory.html",
+                                  source_file="docs/papers/ai_and_ip/llm-database-theory/src/bibliography.bib")
+        key = _dedup_key("Some Author. 2024. \"Title.\" https://arxiv.org/abs/1234.5678", raw_with_url.href)
+        self.assertTrue(key.startswith("url:"))
 
 
 class TestVerifyInvariants(unittest.TestCase):

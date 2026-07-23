@@ -233,7 +233,7 @@ def classify_case(text, href):
     m = _CASE_RE.search(text)
     if not m:
         return None
-    name = f"{m.group('plaintiff').strip()} v. {m.group('defendant').strip()}"
+    name = f"{m.group('plaintiff').strip(' ,;')} v. {m.group('defendant').strip(' ,;')}"
     tail = text[m.end():].lstrip(" ,.")
     rep_m = _REPORTER_RE.match(tail)
     if rep_m:
@@ -615,7 +615,7 @@ def main(argv=None):
             SELF_CITATION_HTML.get(entry["key"])
             or bib_citation_backlinks.get(entry["key"], PAPER_FALLBACK_HTML)
         )
-        raw = RawEntry(text=entry["key"], href=None, citing_html=html, source_file="docs/papers/ai_and_ip/llm-database-theory/src/bibliography.bib")
+        raw = RawEntry(text=entry["key"], href=entry["fields"].get("url"), citing_html=html, source_file="docs/papers/ai_and_ip/llm-database-theory/src/bibliography.bib")
         bib_classified.append((section, display, raw))
 
     legal = dedupe([c for c in classified + bib_classified if c[0] == "legal"])
