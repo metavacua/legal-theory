@@ -3,6 +3,10 @@ title: "legal-theory"
 description: "Findings of fact and legal theory — labor, cooperative investment, and expression law in California and federal jurisdiction."
 plugins:
   - jekyll-relative-links
+  - jekyll-sitemap
+
+url: "https://metavacua.github.io"
+baseurl: "/legal-theory"
 relative_links:
   enabled: true
   collections: false
