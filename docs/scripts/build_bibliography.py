@@ -135,7 +135,9 @@ def normalize_url(url):
     return urlunsplit((scheme, netloc, path, parts.query, parts.fragment))
 
 
-ACCESSED_RE = re.compile(r",?\s*accessed\s+([A-Za-z]+\s+\d{1,2},\s*\d{4})", re.IGNORECASE)
+ACCESSED_RE = re.compile(
+    r",?\s*(?<![\w-])accessed\s+([A-Za-z]+\s+\d{1,2},\s*\d{4}),?", re.IGNORECASE
+)
 
 
 def extract_access_date(text):
@@ -148,4 +150,4 @@ def extract_access_date(text):
 def strip_access_date(text):
     """text with any "accessed ..." clause removed and surrounding
     punctuation/whitespace trimmed."""
-    return ACCESSED_RE.sub("", text).strip(" ,.")
+    return " ".join(ACCESSED_RE.sub(" ", text).split())

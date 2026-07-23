@@ -99,6 +99,16 @@ class TestAccessDate(unittest.TestCase):
         text = "Justia Law, accessed September 19, 2025,"
         self.assertEqual(strip_access_date(text), "Justia Law")
 
+    def test_strip_preserves_unrelated_trailing_punctuation_when_clause_is_mid_string(self):
+        from build_bibliography import strip_access_date
+        text = "Cal. Civ. Code § 1550, accessed September 19, 2025, additional note."
+        self.assertEqual(strip_access_date(text), "Cal. Civ. Code § 1550 additional note.")
+
+    def test_does_not_match_accessed_inside_a_compound_word(self):
+        from build_bibliography import strip_access_date
+        text = "First accessed January 1, 2020, then re-accessed September 19, 2025,"
+        self.assertEqual(strip_access_date(text), "First then re-accessed September 19, 2025,")
+
 
 if __name__ == "__main__":
     unittest.main()
