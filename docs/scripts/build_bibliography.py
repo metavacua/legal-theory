@@ -151,3 +151,52 @@ def strip_access_date(text):
     """text with any "accessed ..." clause removed and surrounding
     punctuation/whitespace trimmed."""
     return " ".join(ACCESSED_RE.sub(" ", text).split())
+
+
+CODE_ABBREVIATIONS = {
+    "corporations code": "Cal. Corp. Code",
+    "corp. code": "Cal. Corp. Code",
+    "civil code": "Cal. Civ. Code",
+    "civ. code": "Cal. Civ. Code",
+    "penal code": "Cal. Penal Code",
+    "business and professions code": "Cal. Bus. & Prof. Code",
+    "revenue and taxation code": "Cal. Rev. & Tax. Code",
+    "government code": "Cal. Gov't Code",
+    "family code": "Cal. Fam. Code",
+    "food and agricultural code": "Cal. Food & Agric. Code",
+    "public utilities code": "Cal. Pub. Util. Code",
+    "code of civil procedure": "Cal. Civ. Proc. Code",
+    "streets and highways code": "Cal. Sts. & High. Code",
+    "labor code": "Cal. Lab. Code",
+}
+_STATUTE_RE = re.compile(
+    r"(?P<code>" + "|".join(re.escape(k) for k in CODE_ABBREVIATIONS) + r")\s*§\s*(?P<section>[\d.]+)",
+    re.IGNORECASE,
+)
+_USC_RE = re.compile(r"(?P<title>\d+)\s*U\.S\.C\.\s*§+\s*(?P<section>[\w.-]+)")
+_YEAR_RE = re.compile(r"\((\d{4})\)")
+
+
+def classify_statute(text):
+    """dict(type='statute', abbrev, section, year) if text names a known
+    statute (a code in CODE_ABBREVIATIONS or a U.S.C. title) with a
+    section symbol, else None. Never guesses at unrecognized
+    abbreviations."""
+    m = _STATUTE_RE.search(text)
+    if m:
+        abbrev = CODE_ABBREVIATIONS[m.group("code").lower()]
+        section = m.group("section")
+    else:
+        m = _USC_RE.search(text)
+        if not m:
+            return None
+        abbrev = f"{m.group('title')} U.S.C."
+        section = m.group("section")
+    year_m = _YEAR_RE.search(text)
+    return {"type": "statute", "abbrev": abbrev, "section": section, "year": year_m.group(1) if year_m else None}
+
+
+def format_statute_bluebook(parsed):
+    """Bluebook-style citation string for a classify_statute() result."""
+    year = parsed["year"] or "[year unknown]"
+    return f"{parsed['abbrev']} § {parsed['section']} ({year})."

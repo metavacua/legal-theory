@@ -110,5 +110,44 @@ class TestAccessDate(unittest.TestCase):
         self.assertEqual(strip_access_date(text), "First then re-accessed September 19, 2025,")
 
 
+class TestClassifyStatute(unittest.TestCase):
+    def test_classifies_known_code_with_year(self):
+        from build_bibliography import classify_statute
+        parsed = classify_statute("California Civil Code § 1550 (2024) - Justia Law")
+        self.assertEqual(parsed["abbrev"], "Cal. Civ. Code")
+        self.assertEqual(parsed["section"], "1550")
+        self.assertEqual(parsed["year"], "2024")
+
+    def test_classifies_usc(self):
+        from build_bibliography import classify_statute
+        parsed = classify_statute("17 U.S.C. § 101")
+        self.assertEqual(parsed["abbrev"], "17 U.S.C.")
+        self.assertEqual(parsed["section"], "101")
+        self.assertIsNone(parsed["year"])
+
+    def test_unrecognized_abbreviation_returns_none_not_a_guess(self):
+        # Adversarial: "CORP §" is a real corpus abbreviation form NOT in the
+        # lookup table. Must fall through cleanly (None), not crash, not
+        # silently guess "Corporations Code".
+        from build_bibliography import classify_statute
+        self.assertIsNone(classify_statute("Under CORP § 202 the articles..."))
+
+    def test_no_section_symbol_returns_none(self):
+        from build_bibliography import classify_statute
+        self.assertIsNone(classify_statute("California Civil Code generally"))
+
+
+class TestFormatStatuteBluebook(unittest.TestCase):
+    def test_formats_with_known_year(self):
+        from build_bibliography import format_statute_bluebook
+        parsed = {"type": "statute", "abbrev": "Cal. Civ. Code", "section": "1550", "year": "2024"}
+        self.assertEqual(format_statute_bluebook(parsed), "Cal. Civ. Code § 1550 (2024).")
+
+    def test_formats_with_unknown_year_marker(self):
+        from build_bibliography import format_statute_bluebook
+        parsed = {"type": "statute", "abbrev": "17 U.S.C.", "section": "101", "year": None}
+        self.assertEqual(format_statute_bluebook(parsed), "17 U.S.C. § 101 ([year unknown]).")
+
+
 if __name__ == "__main__":
     unittest.main()
