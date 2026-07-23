@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="works-cited">
+  <title>Works cited</title>
+  <orderedlist numeration="arabic" spacing="compact">
+    <listitem><para>First Source <link xlink:href="https://example.com/1">https://example.com/1</link></para></listitem>
+    <listitem><para>Second Source, No Link</para></listitem>
+    <listitem><para>Third Source <link xlink:href="https://example.com/3">https://example.com/3</link></para></listitem>
+    <listitem><para>Fourth Source <link xlink:href="https://example.com/4">https://example.com/4</link></para></listitem>
+    <listitem><para>Fifth Source <link xlink:href="https://example.com/5">https://example.com/5</link></para></listitem>
+    <listitem><para>Sixth Source <link xlink:href="https://example.com/6">https://example.com/6</link></para></listitem>
+    <listitem><para>Seventh Source <link xlink:href="https://example.com/7">https://example.com/7</link></para></listitem>
+    <listitem><para>Eighth Source <link xlink:href="https://example.com/8">https://example.com/8</link></para></listitem>
+    <listitem><para>Ninth Source <link xlink:href="https://example.com/9">https://example.com/9</link></para></listitem>
+    <listitem><para>Tenth Source <link xlink:href="https://example.com/10">https://example.com/10</link></para></listitem>
+    <listitem><para>Eleventh Source <link xlink:href="https://example.com/11">https://example.com/11</link></para></listitem>
+  </orderedlist>
+</section>

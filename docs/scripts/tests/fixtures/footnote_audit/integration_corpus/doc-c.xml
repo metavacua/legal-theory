@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="doc-c" xml:lang="en">
+  <title>Doc C</title>
+  <xi:include href="doc-c/01-body.xml"/>
+  <xi:include href="doc-c/02-works-cited.xml"/>
+</article>

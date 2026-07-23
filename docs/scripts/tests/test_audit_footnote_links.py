@@ -324,6 +324,27 @@ class TestMain(unittest.TestCase):
 
 
 class TestEndToEndIntegration(unittest.TestCase):
+    """Runs the real main() CLI (not audit_document() directly) against
+    fixture corpora under fixtures/footnote_audit/integration_corpus/,
+    to exercise the whole Task 1-8 pipeline as a user would invoke it.
+
+    Scope, as of the Task 10 review fix: doc-a/doc-b (below) cover a
+    clean High-confidence single-file document and a degenerate
+    single-file document, but both are single files with no
+    xi:include -- document_content_files/locate_works_cited's
+    cross-fragment assembly (works-cited living in a DIFFERENT file
+    from the body) was never exercised through main(), only at the
+    lower-level audit_document() unit-test layer (TestAuditDocument
+    above). Nor were a genuine Medium (linkless entry) row or a
+    restart-detected row -- including the compound
+    restart_detected AND no_link_corroboration "Needs manual triage"
+    rule -- ever produced via main(). doc-c below (a multi-fragment
+    document) closes those gaps, and test_real_corpus_runs_without_exceptions
+    adds the one test in this suite that runs the actual pipeline
+    against the real corpus rather than a synthetic fixture, mirroring
+    build_bibliography.py's own
+    test_real_bibliography_bib_parses_and_classifies_without_exceptions."""
+
     def test_full_pipeline_produces_the_expected_confidence_distribution(self):
         from audit_footnote_links import main
         import csv
@@ -345,6 +366,83 @@ class TestEndToEndIntegration(unittest.TestCase):
             self.assertEqual(r["confidence_tier"], "Needs manual triage")
             self.assertIn("degenerate_bibliography", r["flags"])
 
+        out_path.unlink()
+
+    def test_cross_fragment_document_exercises_medium_and_restart_tiers_via_main(self):
+        # doc-c is a shell whose body lives in one xi:include fragment
+        # (doc-c/01-body.xml) and whose works-cited section lives in a
+        # SEPARATE xi:include fragment (doc-c/02-works-cited.xml) -- unlike
+        # doc-a/doc-b (single-file documents), this is the only fixture in
+        # this class that exercises document_content_files/
+        # locate_works_cited's cross-file assembly through the real main()
+        # CLI, rather than only at the audit_document() unit-test layer.
+        #
+        # The footnote sequence in the body fragment is (1, 2, 3, 22, 2, 2,
+        # 2): an early clean run, then a climb to 22 and a drop to 2 that
+        # STAYS at 2 for three subsequent markers -- Task 6's confirmed
+        # restart shape (drop >= _RESTART_DROP_THRESHOLD=20, landing at/below
+        # _RESTART_LOW_CEILING=10, sustained for _RESTART_RUN_LENGTH=3
+        # markers). The works-cited fragment's entry for footnote 2 ("Second
+        # Source, No Link") has no <link>, so the FIRST "2" (index 1, before
+        # any restart is detectable) earns a genuine Medium row on
+        # no_link_corroboration alone; the three "2"s after the restart earn
+        # restart_detected (and, since they resolve to the same linkless
+        # entry, also exercise the compound Needs-manual-triage rule).
+        from audit_footnote_links import main
+        import csv
+        out_path = FIXTURES / "integration_report_multi.csv"
+        exit_code = main(["--corpus-root", str(FIXTURES / "integration_corpus"), "--out", str(out_path)])
+        self.assertEqual(exit_code, 0)
+
+        with open(out_path, newline="", encoding="utf-8") as f:
+            rows = list(csv.DictReader(f))
+
+        doc_c_rows = [r for r in rows if "doc-c" in r["file"]]
+        self.assertTrue(doc_c_rows, "doc-c should have produced at least one row")
+
+        medium_no_link_rows = [
+            r for r in doc_c_rows
+            if r["confidence_tier"] == "Medium" and "no_link_corroboration" in r["flags"]
+        ]
+        self.assertTrue(
+            medium_no_link_rows,
+            "expected at least one genuine Medium row with no_link_corroboration",
+        )
+
+        restart_rows = [r for r in doc_c_rows if "restart_detected" in r["flags"]]
+        self.assertTrue(restart_rows, "expected at least one restart_detected row")
+
+        # Cross-file assembly proof: the works-cited entries live in a
+        # fragment separate from the body. If locate_works_cited's
+        # cross-file search were broken (e.g. it only ever looked at the
+        # shell or the body fragment), works_cited would resolve to []
+        # and every doc-c row would show an empty matched_works_cited_entry
+        # and an exceeds_length flag instead of a real match.
+        matched_entries = [r["matched_works_cited_entry"] for r in doc_c_rows if r["matched_works_cited_entry"]]
+        self.assertTrue(
+            matched_entries,
+            "expected at least one doc-c row matched against the fragment's works-cited entries",
+        )
+        self.assertTrue(any("Source" in e for e in matched_entries))
+
+        out_path.unlink()
+
+    def test_real_corpus_runs_without_exceptions(self):
+        # Mirrors build_bibliography.py's own
+        # test_real_bibliography_bib_parses_and_classifies_without_exceptions:
+        # runs the actual pipeline against the real corpus (docs/, with the
+        # default exclude dirs), not a synthetic fixture -- the one test in
+        # this suite that would catch a real-file-shape regression no
+        # fixture happens to test. Structural assertions only (exit code,
+        # output file exists and is non-empty): exact tier counts will
+        # drift as the corpus grows, so they are not asserted here.
+        from audit_footnote_links import main, REPO_ROOT
+        out_path = FIXTURES / "real_corpus_report.csv"
+        exit_code = main(["--corpus-root", str(REPO_ROOT / "docs"), "--out", str(out_path)])
+        self.assertEqual(exit_code, 0)
+        self.assertTrue(out_path.is_file())
+        content = out_path.read_text(encoding="utf-8")
+        self.assertTrue(len(content.strip()) > 0)
         out_path.unlink()
 
 
