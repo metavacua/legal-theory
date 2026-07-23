@@ -42,5 +42,18 @@ class TestExtractWorksCited(unittest.TestCase):
         self.assertEqual(href, "https://example.com/x")
 
 
+class TestExtractAllRawEntries(unittest.TestCase):
+    def test_extracts_from_fragment_and_skips_excluded_dir(self):
+        from build_bibliography import extract_all_raw_entries
+        root = FIXTURES / "mini_corpus"
+        entries = extract_all_raw_entries(root, exclude_dirs={"excluded"})
+
+        self.assertEqual(len(entries), 1)
+        entry = entries[0]
+        self.assertEqual(entry.href, "https://example.com/a")
+        self.assertTrue(entry.citing_html.endswith("mini_corpus/doc-one.html"))
+        self.assertTrue(entry.source_file.endswith("doc-one/01-works-cited.xml"))
+
+
 if __name__ == "__main__":
     unittest.main()

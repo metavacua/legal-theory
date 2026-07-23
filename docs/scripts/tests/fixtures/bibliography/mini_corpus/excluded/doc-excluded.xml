@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xml:id="doc-excluded" xml:lang="en">
+  <title>Doc Excluded</title>
+  <section xml:id="works-cited">
+    <title>Works cited</title>
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem><para>Should never appear <link xlink:href="https://example.com/never">https://example.com/never</link></para></listitem>
+    </orderedlist>
+  </section>
+</article>

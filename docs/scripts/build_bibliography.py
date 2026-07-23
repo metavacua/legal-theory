@@ -5,6 +5,7 @@ docs/superpowers/specs/2026-07-23-consolidated-bibliography-design.md."""
 
 import sys
 import xml.etree.ElementTree as ET
+from dataclasses import dataclass
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -91,4 +92,30 @@ def extract_works_cited(xml_path):
             text, href = _listitem_text_and_link(li)
             if text:
                 entries.append((text, href))
+    return entries
+
+
+@dataclass
+class RawEntry:
+    text: str
+    href: str | None
+    citing_html: str       # repo-relative .html of the citing shell
+    source_file: str       # repo-relative .xml the entry was extracted from (for the Appendix)
+
+
+def extract_all_raw_entries(corpus_root, exclude_dirs):
+    """[RawEntry, ...] for every works-cited listitem across corpus_root,
+    skipping any file under a directory named in exclude_dirs."""
+    corpus_root = Path(corpus_root)
+    backlinks = build_backlink_map(corpus_root)
+    entries = []
+    for xml_path in sorted(corpus_root.rglob("*.xml")):
+        if any(part in exclude_dirs for part in xml_path.relative_to(corpus_root).parts):
+            continue
+        html = backlinks.get(xml_path.resolve())
+        if html is None:
+            continue  # not part of any shell's xi:include graph
+        source_file = xml_path.resolve().relative_to(REPO_ROOT).as_posix()
+        for text, href in extract_works_cited(xml_path):
+            entries.append(RawEntry(text=text, href=href, citing_html=html, source_file=source_file))
     return entries
