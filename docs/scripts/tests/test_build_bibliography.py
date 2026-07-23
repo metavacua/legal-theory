@@ -312,5 +312,42 @@ class TestParseBibtex(unittest.TestCase):
         self.assertNotIn("author", entries[1]["fields"])
 
 
+class TestClassifyBibEntry(unittest.TestCase):
+    def test_case_type_bib_entry_routes_to_legal(self):
+        from build_bibliography import classify_bib_entry
+        entry = {"key": "litchfield1984", "entry_type": "article",
+                  "fields": {"title": "Litchfield v. Spielberg", "year": "1984",
+                             "volume": "736", "pages": "1352", "journal": "F.2d"}}
+        section, display = classify_bib_entry(entry)
+        self.assertEqual(section, "legal")
+        self.assertIn("Litchfield v. Spielberg", display)
+        self.assertIn("736 F.2d 1352 (1984)", display)
+
+    def test_academic_bib_entry_routes_to_secondary_chicago_style(self):
+        from build_bibliography import classify_bib_entry
+        entry = {"key": "geva2021ffn", "entry_type": "inproceedings",
+                  "fields": {"author": "Geva, Mor and Schuster, Roei and Berant, Jonathan and Levy, Omer",
+                             "title": "Transformer Feed-Forward Layers Are Key-Value Memories",
+                             "year": "2021", "booktitle": "EMNLP 2021"}}
+        section, display = classify_bib_entry(entry)
+        self.assertEqual(section, "secondary")
+        self.assertIn("Geva, Mor", display)
+        self.assertIn("2021", display)
+        self.assertIn("Transformer Feed-Forward Layers Are Key-Value Memories", display)
+
+    def test_missing_reporter_on_legal_entry_marked_unknown_not_omitted(self):
+        # Adversarial: bartz_anthropic2025-shaped entry has no
+        # volume/journal/pages (real bib: ongoing litigation, no reporter
+        # cite exists yet) -- must be flagged in the output text, not
+        # silently dropped or guessed.
+        from build_bibliography import classify_bib_entry
+        entry = {"key": "bartz_anthropic2025", "entry_type": "misc",
+                  "fields": {"title": "Bartz v. Anthropic", "year": "2025"}}
+        section, display = classify_bib_entry(entry)
+        self.assertEqual(section, "legal")  # LEGAL_BIB_KEYS override
+        self.assertIn("[reporter citation unknown]", display)
+        self.assertIn("2025", display)
+
+
 if __name__ == "__main__":
     unittest.main()

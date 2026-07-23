@@ -354,3 +354,52 @@ def parse_bibtex(path):
             "fields": fields,
         })
     return entries
+
+
+LEGAL_BIB_KEYS = frozenset({
+    "gema_openai2025", "garcia_characterai2025", "bartz_anthropic2025",
+    "kadrey_meta2025", "litchfield1984", "copyright1976fixation",
+    "gdpr2016", "ccpa2018", "eu_database_directive1996", "eu_pld2024",
+})
+SELF_CITATION_HTML = {
+    "mclean2025categorical": "docs/court-record/theory/federal-constitutional/extensions/llms-as-categorical-systems.html",
+    "mclean2025encoding": "docs/court-record/matters/platform-tos-constitutional-limits/evidence/llm-information-encoding-and-covert-channels.html",
+    "mclean2025agpl": "docs/court-record/theory/federal-statutes/extensions/agpl-ai-training-and-code-licensing.html",
+}
+
+
+def _format_bib_legal(entry):
+    f = entry["fields"]
+    title = f.get("title", "[title unknown]")
+    if all(k in f for k in ("volume", "journal", "pages")):
+        year = f.get("year", "[year unknown]")
+        return f"{title}, {f['volume']} {f['journal']} {f['pages']} ({year})."
+    if "section" in f or "§" in title:
+        return f"{title} ({f.get('year', '[year unknown]')})."
+    return f"{title}, [reporter citation unknown] ({f.get('year', '[year unknown]')})."
+
+
+def _format_bib_academic(entry):
+    f = entry["fields"]
+    author = f.get("author") or "[author unknown]"
+    year = f.get("year", "[year unknown]")
+    title = f.get("title", "[title unknown]")
+    venue = f.get("booktitle") or f.get("journal") or f.get("institution") or f.get("howpublished")
+    url = f.get("url")
+    if entry["key"] in SELF_CITATION_HTML:
+        url = SELF_CITATION_HTML[entry["key"]]
+    tail = f" {venue}." if venue else ""
+    url_str = f" {url}" if url else ""
+    return f'{author}. {year}. "{title}."{tail}{url_str}'
+
+
+def classify_bib_entry(entry):
+    """(section, display_text) for a parse_bibtex() entry dict. section
+    is "legal" for anything in LEGAL_BIB_KEYS (Bluebook-ish citation,
+    falling back to "[reporter citation unknown]" rather than omitting
+    or guessing when volume/journal/pages are absent), else "secondary"
+    (Chicago-author-date-ish citation, substituting a repo-relative
+    built .html for self-citations in SELF_CITATION_HTML)."""
+    if entry["key"] in LEGAL_BIB_KEYS:
+        return "legal", _format_bib_legal(entry)
+    return "secondary", _format_bib_academic(entry)
