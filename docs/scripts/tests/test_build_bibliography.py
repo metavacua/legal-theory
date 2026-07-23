@@ -4,6 +4,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from build_bibliography import REPO_ROOT  # noqa: E402
+
 FIXTURES = Path(__file__).resolve().parent / "fixtures" / "bibliography"
 
 
@@ -399,6 +401,44 @@ class TestDedupe(unittest.TestCase):
         result = dedupe(classified)
         self.assertEqual(len(result), 1)
         self.assertEqual(sorted(result[0].citing_htmls), ["docs/a.html", "docs/b.html"])
+
+
+class TestVerifyInvariants(unittest.TestCase):
+    def _entry(self, section, display, htmls):
+        from build_bibliography import BibliographyEntry
+        return BibliographyEntry(section=section, display=display, citing_htmls=htmls,
+                                   dedup_key=f"k:{display}")
+
+    def test_no_entry_lost_passes_when_counts_reconcile(self):
+        from build_bibliography import verify_invariants, RawEntry
+        raw = [RawEntry(text="t", href=None, citing_html="docs/a.html", source_file="docs/a.xml")]
+        appendix = ["t"]
+        self.assertEqual(verify_invariants(raw, appendix, [], [], REPO_ROOT), [])
+
+    def test_entry_lost_is_flagged(self):
+        from build_bibliography import verify_invariants, RawEntry
+        raw = [RawEntry(text="t", href=None, citing_html="docs/a.html", source_file="docs/a.xml")]
+        violations = verify_invariants(raw, [], [], [], REPO_ROOT)
+        self.assertTrue(any("lost" in v for v in violations))
+
+    def test_legal_entry_missing_section_or_v_is_flagged(self):
+        from build_bibliography import verify_invariants
+        bad = self._entry("legal", "Some Non-Citation Text.", ["docs/a.html"])
+        violations = verify_invariants([], [], [bad], [], REPO_ROOT)
+        self.assertTrue(any("missing" in v.lower() for v in violations))
+
+    def test_duplicate_normalized_url_across_entries_is_flagged(self):
+        from build_bibliography import verify_invariants
+        e1 = self._entry("secondary", 'X. "A." Accessed 1. https://justia.com/x', ["docs/a.html"])
+        e2 = self._entry("secondary", 'Y. "B." Accessed 1. https://justia.com/x/', ["docs/b.html"])
+        violations = verify_invariants([], [], [], [e1, e2], REPO_ROOT)
+        self.assertTrue(any("duplicate" in v.lower() for v in violations))
+
+    def test_dangling_backlink_is_flagged(self):
+        from build_bibliography import verify_invariants
+        bad = self._entry("secondary", 'X. "A." Accessed 1. https://x.com', ["docs/does-not-exist.html"])
+        violations = verify_invariants([], [], [], [bad], REPO_ROOT)
+        self.assertTrue(any("does-not-exist.html" in v for v in violations))
 
 
 if __name__ == "__main__":

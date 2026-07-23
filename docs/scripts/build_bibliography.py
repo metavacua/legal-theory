@@ -436,3 +436,46 @@ def dedupe(classified):
         if raw.citing_html not in entry.citing_htmls:
             entry.citing_htmls.append(raw.citing_html)
     return [by_key[k] for k in order]
+
+
+def verify_invariants(raw_entries, appendix_entries, legal_entries, secondary_entries, repo_root):
+    """[violation message, ...] — empty means all self-check invariants
+    hold. "No entry lost" is checked by re-deriving each raw entry's
+    expected classification via classify_and_format and confirming it is
+    actually present in the output, rather than comparing raw/output
+    counts: dedupe() legitimately collapses multiple raw entries from the
+    same citing document into one citing_htmls slot, and legal_entries /
+    secondary_entries also contain bibliography.bib-derived entries with
+    no corresponding raw_entries at all, so a naive count could look
+    right while a real entry silently vanished, or look wrong while
+    nothing was actually lost."""
+    violations = []
+
+    appendix_set = set(appendix_entries)
+    output_keys = {e.dedup_key for e in legal_entries + secondary_entries}
+    for raw in raw_entries:
+        section, display = classify_and_format(raw)
+        if section == "appendix":
+            if display not in appendix_set:
+                violations.append(f"raw entry lost (missing from appendix): {raw.text!r}")
+        elif _dedup_key(display, raw.href) not in output_keys:
+            violations.append(f"raw entry lost (missing from {section}): {raw.text!r}")
+
+    for e in legal_entries:
+        if "§" not in e.display and " v. " not in e.display:
+            violations.append(f"legal entry missing § or v. marker: {e.display!r}")
+
+    seen_urls = {}
+    for e in legal_entries + secondary_entries:
+        for token in re.findall(r"https?://\S+", e.display):
+            key = normalize_url(token.rstrip(".\"'"))
+            if key in seen_urls and seen_urls[key] != e.display:
+                violations.append(f"duplicate normalized URL survived dedup: {key}")
+            seen_urls[key] = e.display
+
+    for e in legal_entries + secondary_entries:
+        for html in e.citing_htmls:
+            if not (Path(repo_root) / html).is_file():
+                violations.append(f"dangling backlink, file does not exist: {html}")
+
+    return violations
