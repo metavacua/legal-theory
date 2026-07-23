@@ -404,3 +404,35 @@ def classify_bib_entry(entry):
     if entry["key"] in LEGAL_BIB_KEYS:
         return "legal", _format_bib_legal(entry)
     return "secondary", _format_bib_academic(entry)
+
+
+@dataclass
+class BibliographyEntry:
+    section: str
+    display: str
+    citing_htmls: list
+    dedup_key: str
+
+
+def _dedup_key(display_text, href):
+    if href:
+        return "url:" + normalize_url(href)
+    return "text:" + " ".join(display_text.lower().split())
+
+
+def dedupe(classified):
+    """[BibliographyEntry, ...] merging (section, display_text, raw_entry)
+    triples that share a dedup key (normalized URL if present, else
+    normalized display text), unioning citing_htmls and keeping the
+    first-seen display text/section, in file-walk order."""
+    by_key = {}
+    order = []
+    for section, display, raw in classified:
+        key = _dedup_key(display, raw.href)
+        if key not in by_key:
+            by_key[key] = BibliographyEntry(section=section, display=display, citing_htmls=[], dedup_key=key)
+            order.append(key)
+        entry = by_key[key]
+        if raw.citing_html not in entry.citing_htmls:
+            entry.citing_htmls.append(raw.citing_html)
+    return [by_key[k] for k in order]

@@ -368,5 +368,38 @@ class TestClassifyBibEntry(unittest.TestCase):
         self.assertNotIn("\\S", display)
 
 
+class TestDedupe(unittest.TestCase):
+    def test_merges_entries_with_same_normalized_url_keeping_first_seen_title(self):
+        from build_bibliography import dedupe, RawEntry
+        raw1 = RawEntry(text="t1", href="https://Justia.com/x/", citing_html="docs/a.html", source_file="docs/a.xml")
+        raw2 = RawEntry(text="t2", href="https://justia.com/x", citing_html="docs/b.html", source_file="docs/b.xml")
+        classified = [("secondary", "First Title.", raw1), ("secondary", "Second Title.", raw2)]
+
+        result = dedupe(classified)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0].display, "First Title.")
+        self.assertEqual(sorted(result[0].citing_htmls), ["docs/a.html", "docs/b.html"])
+
+    def test_distinct_urls_stay_separate(self):
+        from build_bibliography import dedupe, RawEntry
+        raw1 = RawEntry(text="t1", href="https://a.example.com", citing_html="docs/a.html", source_file="docs/a.xml")
+        raw2 = RawEntry(text="t2", href="https://b.example.com", citing_html="docs/b.html", source_file="docs/b.xml")
+        classified = [("secondary", "A.", raw1), ("secondary", "B.", raw2)]
+        self.assertEqual(len(dedupe(classified)), 2)
+
+    def test_urlless_entries_dedup_by_normalized_display_text(self):
+        # Adversarial: two bib-entry-derived legal citations with no href at
+        # all (e.g. two case entries) must still dedup correctly on their
+        # citation string, not silently treated as always-distinct.
+        from build_bibliography import dedupe, RawEntry
+        raw1 = RawEntry(text="orig1", href=None, citing_html="docs/a.html", source_file="docs/a.xml")
+        raw2 = RawEntry(text="orig2", href=None, citing_html="docs/b.html", source_file="docs/b.xml")
+        classified = [("legal", "Bartz v. Anthropic, [reporter citation unknown] (2025).", raw1),
+                      ("legal", "Bartz v. Anthropic, [reporter citation unknown] (2025).", raw2)]
+        result = dedupe(classified)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(sorted(result[0].citing_htmls), ["docs/a.html", "docs/b.html"])
+
+
 if __name__ == "__main__":
     unittest.main()
