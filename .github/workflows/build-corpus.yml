@@ -34,7 +34,7 @@ jobs:
             xmllint --noout --xinclude "$xml"
             jing -c docs/schema/docbook-corpus.rnc "$xml"
             xsltproc --xinclude docs/xsl/html5.xsl "$xml" > "${xml%.xml}.html"
-          done < <(find docs -name '*.xml' -not -path '*/scratch/*' -not -path 'docs/papers/*' | sort)
+          done < <(find docs -name '*.xml' -not -path '*/scratch/*' -not -path 'docs/papers/*' -not -path 'docs/scripts/*' | sort)
 
       - name: Commit rebuilt HTML if changed
         run: |
