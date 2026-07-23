@@ -277,3 +277,26 @@ def is_degenerate(entries, max_footnote):
     if not linked:
         return True
     return len(entries) < max(1, max_footnote // 2)
+
+
+_RESTART_DROP_THRESHOLD = 20   # preceding value must exceed the dip by at least this much
+_RESTART_LOW_CEILING = 10      # the dip value itself must be at or below this
+_RESTART_RUN_LENGTH = 3        # at least this many subsequent values must also stay low
+
+
+def detect_restart_index(numbers):
+    """Detect the index in a document-order candidate-number sequence
+    where footnote numbering restarts mid-document: a drop from a high
+    value to a low one that STAYS low for several subsequent markers,
+    as opposed to a single-value dip consistent with ordinary
+    out-of-order reuse of a low footnote number. Returns the index of
+    the first low value in that sustained drop, or None if no such
+    restart is present."""
+    for i in range(1, len(numbers)):
+        prev, cur = numbers[i - 1], numbers[i]
+        if cur > _RESTART_LOW_CEILING or prev - cur < _RESTART_DROP_THRESHOLD:
+            continue
+        window = numbers[i:i + _RESTART_RUN_LENGTH]
+        if len(window) == _RESTART_RUN_LENGTH and all(n <= _RESTART_LOW_CEILING * 2 for n in window):
+            return i
+    return None

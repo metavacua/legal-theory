@@ -106,5 +106,35 @@ class TestAuditDocument(unittest.TestCase):
         self.assertTrue(result.candidates[0].heading_collision)
 
 
+class TestDetectRestartIndex(unittest.TestCase):
+    def test_no_restart_in_a_monotonic_sequence(self):
+        from audit_footnote_links import detect_restart_index
+        self.assertIsNone(detect_restart_index([1, 2, 3, 4, 158, 226, 244, 245, 246, 267]))
+
+    def test_detects_a_real_restart_confirmed_shape(self):
+        # Matches the confirmed real case: climbs to 267, then drops to
+        # low integers and stays low for several subsequent markers.
+        from audit_footnote_links import detect_restart_index
+        numbers = [158, 226, 244, 245, 246, 267, 2, 2, 1, 3, 3, 3, 3, 3, 4, 4, 7, 3, 2, 3]
+        idx = detect_restart_index(numbers)
+        self.assertIsNotNone(idx)
+        self.assertEqual(idx, 6)  # the first "2" after 267
+
+    def test_heavy_reuse_of_low_numbers_is_not_mistaken_for_a_restart(self):
+        # Adversarial: footnote "1" reused 9 times is normal (confirmed
+        # real corpus behavior), not a restart -- there is no preceding
+        # HIGH value for it to have dropped from.
+        from audit_footnote_links import detect_restart_index
+        numbers = [1, 1, 1, 7, 1, 1, 18, 18, 18, 18, 18, 18, 25, 30, 1, 1]
+        self.assertIsNone(detect_restart_index(numbers))
+
+    def test_single_low_outlier_amid_a_high_run_is_not_a_restart(self):
+        # A single dip (ordinary out-of-order reuse) must not trigger --
+        # only a drop that STAYS low for multiple subsequent markers does.
+        from audit_footnote_links import detect_restart_index
+        numbers = [100, 101, 102, 3, 103, 104, 105]
+        self.assertIsNone(detect_restart_index(numbers))
+
+
 if __name__ == "__main__":
     unittest.main()
