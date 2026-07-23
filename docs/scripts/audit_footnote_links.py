@@ -55,6 +55,7 @@ class Candidate:
     number: int
     context: str        # up to ~80 chars of body text immediately around the marker
     heading_collision: bool = False
+    source_file: str = ""  # stable identifier of the content file this candidate came from
 
 
 # The unified "compound identifier tail" signal shared by
@@ -314,6 +315,7 @@ def audit_document(shell_path, backlinks):
             marker_text = f".{c.number}"
             if html_path and html_path.is_file() and _marker_collides_with_heading(html_path, marker_text):
                 c.heading_collision = True
+            c.source_file = str(f)
             candidates.append(c)
 
     works_cited = locate_works_cited(content_files)
@@ -393,7 +395,28 @@ def score_document(audit):
     unchanged from the brief's sample.
     """
     numbers = [c.number for c in audit.candidates]
-    restart_idx = detect_restart_index(numbers)
+
+    # Restart detection runs per fragment (design spec Section 6), not per
+    # document -- concatenating all fragments before detection can mask
+    # a genuine restart if a LATER, unrelated fragment's own numbering
+    # happens to climb back near the pre-drop value, even though the
+    # restart was real and fully confined to its own fragment. Group
+    # candidates into contiguous runs by source_file (they are already
+    # appended in file order by audit_document) and run
+    # detect_restart_index independently on each fragment's own
+    # sub-sequence, then map any detected local restart index back to
+    # the global row positions.
+    restart_flags = [False] * len(audit.candidates)
+    start = 0
+    for i in range(1, len(audit.candidates) + 1):
+        at_boundary = i == len(audit.candidates) or audit.candidates[i].source_file != audit.candidates[start].source_file
+        if at_boundary:
+            fragment_numbers = numbers[start:i]
+            local_idx = detect_restart_index(fragment_numbers)
+            if local_idx is not None:
+                for j in range(start + local_idx, i):
+                    restart_flags[j] = True
+            start = i
 
     rows = []
     for i, c in enumerate(audit.candidates):
@@ -407,7 +430,7 @@ def score_document(audit):
 
         if audit.degenerate:
             flags.append("degenerate_bibliography")
-        if restart_idx is not None and i >= restart_idx:
+        if restart_flags[i]:
             flags.append("restart_detected")
         if entry_text is not None and not entry_url:
             flags.append("no_link_corroboration")

@@ -325,6 +325,38 @@ class TestScoreDocument(unittest.TestCase):
         for r in compound_rows:
             self.assertEqual(r.confidence, "Needs manual triage")
 
+    def test_restart_confined_to_one_fragment_is_detected_despite_a_later_fragment_climbing_back(self):
+        # Reproduces the real bug: a genuine restart entirely within
+        # "fragment-a" must be detected even though "fragment-b" (a
+        # separate, later fragment) climbs back near fragment-a's
+        # pre-drop value -- the old per-document check would wrongly
+        # treat fragment-b's climb as proof fragment-a's dip wasn't a
+        # real restart.
+        from audit_footnote_links import score_document, DocumentAudit, Candidate
+        candidates = (
+            [Candidate(number=n, context="ctx", source_file="fragment-a") for n in [200, 210, 220, 2, 2, 2]]
+            + [Candidate(number=n, context="ctx", source_file="fragment-b") for n in [221, 222, 223]]
+        )
+        works_cited = [(f"Source {i}", f"https://example.com/{i}") for i in range(1, 231)]
+        audit = DocumentAudit(shell_html="docs/x.html", candidates=candidates, works_cited=works_cited, degenerate=False)
+        rows = score_document(audit)
+        restart_rows = [r for r in rows if "restart_detected" in r.flags]
+        self.assertEqual(len(restart_rows), 3)  # the three "2"s in fragment-a
+        for r in restart_rows:
+            self.assertEqual(r.candidate.number, 2)
+
+    def test_no_source_file_set_falls_back_to_whole_sequence_behavior(self):
+        # Backward compatibility: existing tests/callers that don't set
+        # source_file (all default "") must behave exactly as before --
+        # one group spanning the whole candidate list.
+        from audit_footnote_links import score_document, DocumentAudit, Candidate
+        works_cited = [(f"Source {i}", f"https://example.com/{i}") for i in range(1, 6)]
+        candidates = [Candidate(number=n, context="ctx") for n in [1, 2, 3, 100, 1, 1, 1]]
+        audit = DocumentAudit(shell_html="docs/x.html", candidates=candidates, works_cited=works_cited, degenerate=False)
+        rows = score_document(audit)
+        restart_flagged = [r for r in rows if "restart_detected" in r.flags]
+        self.assertTrue(restart_flagged)
+
 
 class TestWriteReport(unittest.TestCase):
     def test_writes_expected_csv_columns_and_deterministic_order(self):

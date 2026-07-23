@@ -10,9 +10,24 @@ Each row is a candidate footnote-number marker matched positionally to a works-c
 a confidence tier (`High` / `Medium` / `Needs manual triage`) and a `flags` column explaining why.
 Regenerate with `python3 docs/scripts/audit_footnote_links.py` any time the corpus changes.
 
-**Current run:** 7,667 candidates — 6,129 High, 1,025 Medium, 513 Needs manual triage — across 95
-documents. Verified against real content by a full human-review pass (all 40 `restart_detected`
-rows, 30 `High`, 20 `Medium`, and a stratified 30-row sample of `Needs manual triage`).
+**Current run:** 7,667 candidates — 6,105 High, 1,025 Medium, 537 Needs manual triage — across 95
+documents. The original 6,129/1,025/513 split was verified against real content by a full
+human-review pass (all 40 `restart_detected` rows as they stood then, 30 `High`, 20 `Medium`, and
+a stratified 30-row sample of `Needs manual triage`), before a critical whole-branch-review fix
+(per-fragment restart detection — restart detection now runs independently on each fragment file
+rather than on the whole document's concatenated candidate sequence, per design spec §6; see
+`.superpowers/sdd/task-11-report.md`) corrected `restart_detected` from 40 rows across 6 documents
+to 88 rows across 11 documents. Most notably, `the-architecture-of-non-consensual-legality.html`
+had a genuine restart entirely confined to one fragment that the prior whole-document check missed
+completely (0 `restart_detected` rows) because a *later, unrelated* fragment's own numbering
+happened to climb back near the pre-drop value — 14 candidates that should have been `Medium`
+shipped as confidently-wrong `High` rows. The fix moved 24 candidates out of `High` net
+corpus-wide (14 of them in this document alone); the rest of the corpus's `Medium`/`Needs manual
+triage` counts also shifted (some rows moved the other way, into or out of `Needs manual triage`,
+as previously-merged fragments were re-scored independently) — see the fix report for the full
+per-document before/after breakdown. These changes are the direct, verified-correct effect of the
+fix (confirmed via new regression tests plus a re-run of the full test suite); they have not been
+independently re-reviewed row-by-row by a human beyond that automated verification.
 
 **Two known, honestly-labeled data-quality caveats found during that review** (corpus defects the
 audit correctly surfaces, not audit bugs — see design spec §9, "explicitly sequenced follow-on
