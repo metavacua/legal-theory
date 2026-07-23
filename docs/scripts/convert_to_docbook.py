@@ -2,6 +2,7 @@
 
 import difflib
 import re
+import shutil
 import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -11,6 +12,7 @@ DB_NS = "http://docbook.org/ns/docbook"
 XI_NS = "http://www.w3.org/2001/XInclude"
 XLINK_NS = "http://www.w3.org/1999/xlink"
 XML_NS = "http://www.w3.org/XML/1998/namespace"
+DC_NS = "http://purl.org/dc/terms/"
 ET.register_namespace("", DB_NS)
 ET.register_namespace("xi", XI_NS)
 ET.register_namespace("xlink", XLINK_NS)
@@ -114,6 +116,18 @@ def sanitize_xml_ids(article):
             el.set(xml_id_attr, f"s-{value}")
 
 
+def write_xml(element, path):
+    tree = ET.ElementTree(element)
+    ET.indent(tree, space="  ")
+    tree.write(path, encoding="unicode", xml_declaration=True)
+
+
+def _cleanup_fragments(xml_path):
+    frag_dir = xml_path.parent / xml_path.stem
+    if frag_dir.is_dir():
+        shutil.rmtree(frag_dir)
+
+
 def split_into_fragments(article, out_dir, stem):
     sections = [c for c in article if c.tag == f"{{{DB_NS}}}section"]
     if not sections:
@@ -135,9 +149,7 @@ def split_into_fragments(article, out_dir, stem):
         frag_name = f"{i:02d}-{slug}.xml"
         frag_path = frag_dir / frag_name
 
-        frag_tree = ET.ElementTree(section)
-        ET.indent(frag_tree, space="  ")
-        frag_tree.write(frag_path, encoding="unicode", xml_declaration=True)
+        write_xml(section, frag_path)
 
         idx = list(article).index(section)
         xi_include = ET.Element(f"{{{XI_NS}}}include")
@@ -229,9 +241,11 @@ def _is_ignorable_word_run(words):
 
 
 def _word_level_diff(orig_words, roundtrip_words):
-    # Shared by content_preservation_diff() and its own test suite, so
-    # a change to the ignore rule or the opcode-filtering logic can't
-    # silently drift out of sync between production and test.
+    # Shared by content_preservation_diff(), its own test suite, and
+    # atomize_existing_document.py (which calls it directly to diff
+    # before/after plain-text renders), so a change to the ignore rule
+    # or the opcode-filtering logic can't silently drift out of sync
+    # across any of those callers.
     matcher = difflib.SequenceMatcher(None, orig_words, roundtrip_words)
     changed = []
     for tag, i1, i2, j1, j2 in matcher.get_opcodes():
@@ -332,9 +346,7 @@ def convert(md_path, out_dir):
     write_metadata(out_dir / meta_name, title)
     split_into_fragments(article, out_dir, md_path.stem)
 
-    tree = ET.ElementTree(article)
-    ET.indent(tree, space="  ")
-    tree.write(xml_path, encoding="unicode", xml_declaration=True)
+    write_xml(article, xml_path)
 
     errors = validate(xml_path)
 
@@ -342,6 +354,8 @@ def convert(md_path, out_dir):
     if not errors:
         build_html(xml_path, html_path)
         content_diff = content_preservation_diff(md_path, xml_path, title, unwrapped)
+    else:
+        _cleanup_fragments(xml_path)
 
     return ConversionResult(
         xml_path=xml_path, html_path=html_path,

@@ -469,7 +469,6 @@ class TestConvertEndToEnd(unittest.TestCase):
         self.out_dir.mkdir(exist_ok=True)
 
     def tearDown(self):
-        import shutil
         for f in self.out_dir.iterdir():
             if f.is_dir():
                 shutil.rmtree(f)
@@ -512,6 +511,18 @@ class TestConvertEndToEnd(unittest.TestCase):
         from convert_to_docbook import convert
         result = convert(self.fixtures / "numbered_headings.md", self.out_dir)
         self.assertEqual(result.errors, [])
+
+    def test_convert_cleans_up_fragments_on_validation_failure(self):
+        # split_into_fragments() writes fragment files to disk before
+        # validate() ever runs. If validation then fails, those fragment
+        # files must not be left orphaned on disk for a shell that's
+        # being reported as failed.
+        from convert_to_docbook import convert
+        with mock.patch("convert_to_docbook.validate", return_value=["forced failure"]):
+            result = convert(self.fixtures / "multi_section.md", self.out_dir)
+        self.assertEqual(result.errors, ["forced failure"])
+        frag_dir = self.out_dir / "multi_section"
+        self.assertFalse(frag_dir.exists())
 
     def test_convert_reports_clean_error_for_malformed_pandoc_output(self):
         # Root-caused on a real corpus document

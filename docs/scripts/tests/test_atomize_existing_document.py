@@ -6,6 +6,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from convert_to_docbook import DC_NS
+
 
 class TestAtomizeExistingDocument(unittest.TestCase):
     def setUp(self):
@@ -72,8 +74,7 @@ class TestAtomizeExistingDocument(unittest.TestCase):
         # element (a dc:date not present in shared-metadata.xml), and
         # confirm the guard refuses to touch anything at all.
         meta_root = ET.parse(self.meta_path).getroot()
-        ns = "{http://purl.org/dc/terms/}"
-        date_el = ET.SubElement(meta_root, f"{ns}date")
+        date_el = ET.SubElement(meta_root, f"{{{DC_NS}}}date")
         date_el.text = "2020-01-01"
         tree = ET.ElementTree(meta_root)
         tree.write(self.meta_path, encoding="unicode", xml_declaration=True)
