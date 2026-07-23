@@ -26,11 +26,15 @@ jobs:
         run: |
           set -euo pipefail
           while IFS= read -r xml; do
+            root_element="$(xmllint --xpath 'name(/*)' "$xml" 2>/dev/null || true)"
+            if [ "$root_element" != "article" ]; then
+              continue
+            fi
             echo "== $xml =="
             xmllint --noout --xinclude "$xml"
             jing -c docs/schema/docbook-corpus.rnc "$xml"
             xsltproc --xinclude docs/xsl/html5.xsl "$xml" > "${xml%.xml}.html"
-          done < <(find docs -name '*.xml' -not -name '*.meta.xml' -not -path 'docs/papers/*' -not -path '*/scratch/*' | sort)
+          done < <(find docs -name '*.xml' -not -path '*/scratch/*' | sort)
 
       - name: Commit rebuilt HTML if changed
         run: |
