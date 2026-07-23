@@ -218,6 +218,14 @@ _REPORTER_RE = re.compile(
     + "|".join(re.escape(r) for r in _REPORTER_ABBREVS)
     + r")\.?\s*(?P<page>\d+)"
 )
+_PROCEDURAL_ROLE_RE = re.compile(
+    r",?\s*(?:Plaintiff|Defendant|Appellant|Appellee|Respondent|Petitioner)(?:-\w+)?\.?,?\s*$",
+    re.IGNORECASE,
+)
+
+
+def _strip_procedural_role(name):
+    return _PROCEDURAL_ROLE_RE.sub("", name).strip(" ,;")
 
 
 def _hostname(href):
@@ -241,7 +249,7 @@ def classify_case(text, href):
     m = _CASE_RE.search(text)
     if not m:
         return None
-    name = f"{m.group('plaintiff').strip(' ,;')} v. {m.group('defendant').strip(' ,;')}"
+    name = f"{_strip_procedural_role(m.group('plaintiff'))} v. {_strip_procedural_role(m.group('defendant'))}"
     tail = text[m.end():].lstrip(" ,.")
     rep_m = _REPORTER_RE.match(tail)
     if rep_m:
@@ -490,6 +498,29 @@ def verify_invariants(raw_entries, appendix_entries, legal_entries, secondary_en
     return violations
 
 
+def verify_bib_coverage(bib_entries, bib_classified, legal_entries, secondary_entries):
+    """Every bibliography.bib entry's own dedup key must survive into the
+    final output *with its own display text intact* -- catches a silent
+    dedup collision between two distinct bib entries (e.g. two
+    self-citations sharing a raw source URL) before it ships, the same way
+    verify_invariants re-derives corpus raw entries instead of trusting a
+    count. Checking mere key-presence is not enough: when two distinct bib
+    entries collide on the same dedup key, dedupe() keeps whichever
+    display text was first-seen, so the key is trivially "present" for
+    both entries even though the loser's own display text -- its actual
+    content -- silently vanished. So each entry's re-derived key must map
+    to a surviving entry whose display text is its own, not some other
+    entry's."""
+    output_by_key = {e.dedup_key: e for e in legal_entries + secondary_entries}
+    violations = []
+    for entry, (section, display, raw) in zip(bib_entries, bib_classified):
+        key = _dedup_key(display, raw.href)
+        survivor = output_by_key.get(key)
+        if survivor is None or survivor.display != display:
+            violations.append(f"bib entry lost to dedup collision: {entry['key']!r}")
+    return violations
+
+
 from xml.sax.saxutils import escape as xml_escape
 
 
@@ -626,13 +657,15 @@ def main(argv=None):
             SELF_CITATION_HTML.get(entry["key"])
             or bib_citation_backlinks.get(entry["key"], PAPER_FALLBACK_HTML)
         )
-        raw = RawEntry(text=entry["key"], href=entry["fields"].get("url"), citing_html=html, source_file="docs/papers/ai_and_ip/llm-database-theory/src/bibliography.bib")
+        href = SELF_CITATION_HTML.get(entry["key"]) or entry["fields"].get("url")
+        raw = RawEntry(text=entry["key"], href=href, citing_html=html, source_file="docs/papers/ai_and_ip/llm-database-theory/src/bibliography.bib")
         bib_classified.append((section, display, raw))
 
     legal = dedupe([c for c in classified + bib_classified if c[0] == "legal"])
     secondary = dedupe([c for c in classified + bib_classified if c[0] == "secondary"])
 
     violations = verify_invariants(raw_entries, appendix_display_texts, legal, secondary, REPO_ROOT)
+    violations += verify_bib_coverage(bib_entries, bib_classified, legal, secondary)
     if violations:
         print("INVARIANT VIOLATIONS -- refusing to write output:", file=sys.stderr)
         for v in violations:

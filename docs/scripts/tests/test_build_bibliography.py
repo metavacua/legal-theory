@@ -205,6 +205,16 @@ class TestClassifyCase(unittest.TestCase):
         text = "Consent v. Coercion in Platform Contracts (citing Marvin v. Marvin (1976) 18 Cal. 3d 660)"
         self.assertIsNone(classify_case(text, href=None))
 
+    def test_procedural_role_label_stripped_from_captured_party_name(self):
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "State Street Bank & Trust Company, Inc., Plaintiff-appellant v. International Securities Exchange, Inc.",
+            href="https://www.courtlistener.com/opinion/x/",
+        )
+        self.assertIsNotNone(parsed)
+        self.assertNotIn("Plaintiff", parsed["name"])
+        self.assertNotIn("appellant", parsed["name"])
+
 
 class TestFormatCaseBluebook(unittest.TestCase):
     def test_formats_complete_citation(self):
@@ -423,6 +433,17 @@ class TestDedupe(unittest.TestCase):
         key = _dedup_key("Some Author. 2024. \"Title.\" https://arxiv.org/abs/1234.5678", raw_with_url.href)
         self.assertTrue(key.startswith("url:"))
 
+    def test_self_citation_dedup_uses_per_document_url_not_shared_raw_url(self):
+        # Two self-citation-shaped bib entries sharing the same raw URL
+        # must NOT collapse into one dedup key once each is given its
+        # own SELF_CITATION_HTML-substituted href.
+        from build_bibliography import SELF_CITATION_HTML, _dedup_key
+        keys = list(SELF_CITATION_HTML.keys())
+        self.assertGreaterEqual(len(keys), 2)
+        href1 = SELF_CITATION_HTML[keys[0]]
+        href2 = SELF_CITATION_HTML[keys[1]]
+        self.assertNotEqual(_dedup_key("display text", href1), _dedup_key("display text", href2))
+
 
 class TestVerifyInvariants(unittest.TestCase):
     def _entry(self, section, display, htmls):
@@ -469,6 +490,20 @@ class TestVerifyInvariants(unittest.TestCase):
         ]
         violations = verify_invariants([], [], entries, [], REPO_ROOT)
         self.assertEqual(violations, [])
+
+
+class TestVerifyBibCoverage(unittest.TestCase):
+    def test_verify_bib_coverage_flags_a_dedup_collision(self):
+        from build_bibliography import verify_bib_coverage, RawEntry, BibliographyEntry
+        bib_entries = [{"key": "keyA", "fields": {}}, {"key": "keyB", "fields": {}}]
+        raw_a = RawEntry(text="keyA", href="https://shared.example.com", citing_html="docs/x.html", source_file="src.bib")
+        raw_b = RawEntry(text="keyB", href="https://shared.example.com", citing_html="docs/y.html", source_file="src.bib")
+        bib_classified = [("secondary", "Display A", raw_a), ("secondary", "Display B", raw_b)]
+        # Simulate what dedupe() would actually do: both share a dedup key,
+        # so only the first survives into the output.
+        surviving = [BibliographyEntry(section="secondary", display="Display A", citing_htmls=["docs/x.html", "docs/y.html"], dedup_key="url:https://shared.example.com")]
+        violations = verify_bib_coverage(bib_entries, bib_classified, [], surviving)
+        self.assertTrue(any("keyB" in v for v in violations))
 
 
 class TestEmitDocbook(unittest.TestCase):
