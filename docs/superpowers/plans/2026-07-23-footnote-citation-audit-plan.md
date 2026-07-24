@@ -1425,3 +1425,4 @@ git commit -m "feat: run the footnote-citation audit against the real corpus"
   that any mechanical rewrite based on this report's "High" rows is a **separate, not-yet-designed
   project** (per the design's §9 explicit out-of-scope) — this audit's job ends at producing a
   trustworthy report, not acting on it.
+{% endraw %}
