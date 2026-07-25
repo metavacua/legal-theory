@@ -664,5 +664,58 @@ class TestMainCLI(unittest.TestCase):
         self.assertIn("no such file", fake_stderr.getvalue())
 
 
+class TestWriteMetadataDcterms(unittest.TestCase):
+    def test_derive_subject_from_matter_path(self):
+        from convert_to_docbook import derive_subject, REPO_ROOT
+        path = REPO_ROOT / "docs" / "court-record" / "matters" / "cooperative-investment-law" / "findings.meta.xml"
+        self.assertEqual(derive_subject(path), "legal matter: cooperative investment law")
+
+    def test_derive_subject_from_theory_path(self):
+        from convert_to_docbook import derive_subject, REPO_ROOT
+        path = (REPO_ROOT / "docs" / "court-record" / "theory" / "federal-constitutional"
+                / "extensions" / "example.meta.xml")
+        self.assertEqual(derive_subject(path), "legal theory: federal constitutional -- extensions")
+
+    def test_derive_subject_from_cross_cutting_path(self):
+        from convert_to_docbook import derive_subject, REPO_ROOT
+        path = REPO_ROOT / "docs" / "cross-cutting" / "patron-as-client.meta.xml"
+        self.assertEqual(derive_subject(path), "cross-cutting analysis")
+
+    def test_derive_identifier_is_a_github_blob_url(self):
+        from convert_to_docbook import derive_identifier, REPO_ROOT
+        path = REPO_ROOT / "docs" / "wip" / "jpa-and-city-cooperatives.meta.xml"
+        self.assertEqual(
+            derive_identifier(path),
+            "https://github.com/metavacua/legal-theory/blob/main/docs/wip/jpa-and-city-cooperatives.xml",
+        )
+
+    def test_write_metadata_adds_dcterms_fields(self):
+        from convert_to_docbook import write_metadata, REPO_ROOT, DC_NS
+        out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
+        self.addCleanup(shutil.rmtree, out_dir)
+        meta_path = out_dir / "sample.meta.xml"
+        write_metadata(meta_path, "Sample Title")
+
+        root = ET.parse(meta_path).getroot()
+        self.assertEqual(root.find(f"{{{DC_NS}}}title").text, "Sample Title")
+        self.assertEqual(root.find(f"{{{DC_NS}}}subject").text, "work in progress")
+        self.assertRegex(root.find(f"{{{DC_NS}}}date").text, r"^\d{4}-\d{2}-\d{2}$")
+        self.assertTrue(
+            root.find(f"{{{DC_NS}}}identifier").text.startswith(
+                "https://github.com/metavacua/legal-theory/blob/main/"
+            )
+        )
+
+    def test_write_metadata_accepts_explicit_subject_override(self):
+        from convert_to_docbook import write_metadata, REPO_ROOT, DC_NS
+        out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
+        self.addCleanup(shutil.rmtree, out_dir)
+        meta_path = out_dir / "sample.meta.xml"
+        write_metadata(meta_path, "Sample Title", subject="a custom subject")
+
+        root = ET.parse(meta_path).getroot()
+        self.assertEqual(root.find(f"{{{DC_NS}}}subject").text, "a custom subject")
+
+
 if __name__ == "__main__":
     unittest.main()

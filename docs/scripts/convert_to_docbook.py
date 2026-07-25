@@ -5,6 +5,7 @@ import re
 import shutil
 import subprocess
 import xml.etree.ElementTree as ET
+from datetime import date as _date
 from pathlib import Path
 from xml.sax.saxutils import escape as xml_escape
 
@@ -29,6 +30,72 @@ def element_full_text(el):
     has .text == None or whitespace-only, silently losing the real title
     text if read the naive way."""
     return "".join(el.itertext()).strip() if el is not None else ""
+
+
+GITHUB_REPO_URL = "https://github.com/metavacua/legal-theory"
+
+
+def _content_path_for_meta(meta_path):
+    """The sibling content .xml a .meta.xml file describes -- strips the
+    ".meta" segment from the stem (patron-as-client.meta.xml ->
+    patron-as-client.xml), falling back to meta_path itself for a file
+    that doesn't follow that convention (e.g. a bare .xml passed in
+    directly by a caller)."""
+    meta_path = Path(meta_path)
+    name = meta_path.name
+    if name.endswith(".meta.xml"):
+        return meta_path.parent / (name[: -len(".meta.xml")] + ".xml")
+    return meta_path
+
+
+def derive_date(meta_path):
+    """dcterms:date value (YYYY-MM-DD): the author date of the most
+    recent commit touching this document's content file, via git --
+    the actual date the document's substance last changed, not today's
+    date. Falls back to today (UTC) only when git has no history for the
+    path yet (a brand-new, not-yet-committed file)."""
+    content_path = _content_path_for_meta(meta_path)
+    result = subprocess.run(
+        ["git", "-C", str(REPO_ROOT), "log", "-1", "--format=%aI", "--", str(content_path)],
+        capture_output=True, text=True,
+    )
+    iso = result.stdout.strip()
+    return iso[:10] if iso else _date.today().isoformat()
+
+
+def derive_identifier(meta_path):
+    """dcterms:identifier value: a GitHub blob permalink (on main) to the
+    document's content file -- the same repo docs/common/shared-metadata.xml
+    already names in dc:publisher, so this is a real, resolvable external
+    URI rather than a locally-invented URN."""
+    content_path = _content_path_for_meta(meta_path)
+    rel = content_path.resolve().relative_to(REPO_ROOT).as_posix()
+    return f"{GITHUB_REPO_URL}/blob/main/{rel}"
+
+
+def derive_subject(meta_path):
+    """dcterms:subject value: a coarse phrase derived from the document's
+    corpus location, not a manual per-document topic reclassification.
+    Documents under court-record/matters/<matter> or
+    court-record/theory/<branch>/<posture> get a subject built from those
+    path segments; everything else maps by top-level docs/ subdirectory."""
+    def humanize(segment):
+        return segment.replace("-", " ")
+
+    rel_parts = Path(meta_path).resolve().relative_to(REPO_ROOT / "docs").parts
+    if rel_parts[:2] == ("court-record", "matters"):
+        return f"legal matter: {humanize(rel_parts[2])}"
+    if rel_parts[:2] == ("court-record", "theory"):
+        return f"legal theory: {humanize(rel_parts[2])} -- {humanize(rel_parts[3])}"
+    if rel_parts[0] == "proposals":
+        return f"{humanize(rel_parts[1])} proposal"
+    if rel_parts[0] == "cross-cutting":
+        return "cross-cutting analysis"
+    if rel_parts[0] == "wip":
+        return "work in progress"
+    if rel_parts[0] == "bibliography":
+        return "bibliography"
+    return humanize(rel_parts[0])
 
 
 def slugify(text):
@@ -173,16 +240,22 @@ def split_into_fragments(article, out_dir, stem):
     return True
 
 
-def write_metadata(meta_path, title):
+def write_metadata(meta_path, title, subject=None):
     meta_path = Path(meta_path)
     docs_dir = (REPO_ROOT / "docs").resolve()
     meta_dir = meta_path.resolve().parent
     depth = len(meta_dir.relative_to(docs_dir).parts)
     shared_href = "../" * depth + "common/shared-metadata.xml"
     escaped_title = xml_escape(title)
+    resolved_subject = subject if subject is not None else derive_subject(meta_path)
+    date = derive_date(meta_path)
+    identifier = derive_identifier(meta_path)
     content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="{XI_NS}">
   <dc:title>{escaped_title}</dc:title>
+  <dc:date>{date}</dc:date>
+  <dc:identifier>{xml_escape(identifier)}</dc:identifier>
+  <dc:subject>{xml_escape(resolved_subject)}</dc:subject>
   <xi:include href="{shared_href}" />
 </info>
 """

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
   <dc:title>Latent Space and Covert Channels: A Deep Dive into Information Encoding and Communication in Large Language Models</dc:title>
+  <dc:date>2026-07-22</dc:date>
+  <dc:identifier>https://github.com/metavacua/legal-theory/blob/main/docs/court-record/matters/platform-tos-constitutional-limits/evidence/llm-information-encoding-and-covert-channels.xml</dc:identifier>
+  <dc:subject>legal matter: platform tos constitutional limits</dc:subject>
   <xi:include href="../../../../common/shared-metadata.xml" />
 </info>
