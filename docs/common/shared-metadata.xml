@@ -2,9 +2,10 @@
 <shared xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/">
   <dc:creator>Ian D.L.N. McLean</dc:creator>
   <dc:publisher>metavacua/legal-theory (GitHub)</dc:publisher>
-  <dc:type>Article</dc:type>
+  <dc:type>Text</dc:type>
   <dc:language>en</dc:language>
   <dc:rights>CC BY-SA 4.0</dc:rights>
+  <dc:license>https://spdx.org/licenses/CC-BY-SA-4.0</dc:license>
   <authorgroup>
     <author>
       <personname>
@@ -13,6 +14,7 @@
         <surname>McLean</surname>
       </personname>
       <email>metavacua@gmail.com</email>
+      <uri>https://github.com/metavacua</uri>
     </author>
   </authorgroup>
   <legalnotice>

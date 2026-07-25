@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="llm-database-legal-corpus" xml:lang="en">
-  <xi:include href="00-metadata.xml" />
+  <xi:include href="02-legal-corpus-connections.meta.xml" />
   <title>Legal Corpus Connections</title>
   <subtitle>How the LLM-Database Theory Connects to Existing Matters in This Repository</subtitle>
   <xi:include href="02-legal-corpus-connections/01-purpose-of-this-article.xml" />

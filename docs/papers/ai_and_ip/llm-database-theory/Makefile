@@ -2,10 +2,11 @@ SRCS      := $(wildcard src/0*.xml)
 HTML_OUTS := $(patsubst src/%.xml,generated/%.html,$(SRCS))
 TEX_OUTS  := $(patsubst src/%.xml,generated/%.tex,$(SRCS))
 PDF_OUTS  := $(patsubst src/%.xml,generated/%.pdf,$(SRCS))
-# 00-metadata.xml is an XInclude fragment (<db:info>, XIncluded into each
-# article's <db:info> slot) — it has no <db:article> root, so it isn't a
-# standalone document custom.rnc's `start` pattern can validate.
-ARTICLES  := $(filter-out src/00-metadata.xml,$(SRCS))
+# *.meta.xml files are XInclude fragments (<db:info>, XIncluded into each
+# article's <db:info> slot) — they have no <db:article> root, so they
+# aren't standalone documents docbook-corpus.rnc's `start` pattern can
+# validate against the article shape.
+ARTICLES  := $(filter-out %.meta.xml,$(SRCS))
 
 .PHONY: all html latex pdf validate clean
 
