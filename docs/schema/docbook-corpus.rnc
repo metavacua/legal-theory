@@ -13,7 +13,10 @@
 # Note: This schema is additive — it does NOT replace the full DocBook 5.2 schema.
 # Run xmllint --relaxng separately to validate against the full DocBook grammar.
 
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
 namespace db     = "http://docbook.org/ns/docbook"
+namespace dc     = "http://purl.org/dc/terms/"
 namespace xi     = "http://www.w3.org/2001/XInclude"
 namespace xlink  = "http://www.w3.org/1999/xlink"
 namespace local  = ""
@@ -48,6 +51,53 @@ finding-section =
     block-content+
   }
 
+# Required DCTERMS (http://purl.org/dc/terms/) fields on a document's
+# <info> root. This validates a *.meta.xml file directly (its own root
+# element is <info>) -- not <info> nested inside <db:article>, because in
+# every real article that slot holds a literal, unresolved
+# <xi:include href="....meta.xml"/> when jing runs (jing is invoked
+# WITHOUT --xinclude throughout this pipeline), never a literal <info>.
+# So info-element is a top-level `start` alternative alongside
+# article-pattern, exercised by running jing directly against each
+# *.meta.xml file (Task 4 wires this into CI/Makefile) -- not by
+# validating articles. dc:creator/publisher/type/language/rights/
+# license/authorgroup/legalnotice live inside the file *.meta.xml itself
+# xi:includes and are validated separately, against shared-metadata-file
+# below, not here.
+info-element =
+  element db:info {
+    attribute xml:base { text }?,
+    attribute xml:lang { text }?,
+    (element dc:title      { text } &
+     element dc:date       { xsd:date } &
+     element dc:identifier { xsd:anyURI } &
+     element dc:subject    { text } &
+     (element xi:include    { any } | shared-metadata-file)? &
+     (element dc:description { text })? &
+     (element db:bibliomisc { any })* &
+     (element db:abstract { any })?)
+  }
+
+# docs/common/shared-metadata.xml's own root shape -- validated directly
+# (jing -c docbook-corpus.rnc docs/common/shared-metadata.xml), not as
+# part of any article. dc:type is fixed to the DCMI Type Vocabulary
+# (http://purl.org/dc/dcmitype/) term "Text": the Schema.org @type
+# distinguishing a scholarly article from a findings memo belongs in the
+# JSON-LD block, not here.
+shared-metadata-file =
+  element db:shared {
+    attribute xml:base { text }?,
+    attribute xml:lang { text }?,
+    (element dc:creator   { text } &
+     element dc:publisher { text } &
+     element dc:type      { "Text" } &
+     element dc:language  { xsd:language } &
+     element dc:rights    { text } &
+     element dc:license   { xsd:anyURI } &
+     element db:authorgroup { any } &
+     element db:legalnotice { any })
+  }
+
 # Top-level article structure (relaxed — defers to DocBook 5.2 RNG for full validation)
 start =
   element db:article {
@@ -55,12 +105,14 @@ start =
     attribute xml:id    { xsd:NCName }?,
     attribute xml:lang  { xsd:language }?,
     ( element xi:include { attribute href { xsd:anyURI } }
-    | element db:info   { any }
+    | info-element
     | element db:title  { text }
     | element db:subtitle { text }
     | block-content
     )*
   }
+  | info-element
+  | shared-metadata-file
 
 # Catch-all for unvalidated content (DocBook 5.2 handles this)
 any = (element * { any } | attribute * { text } | text)*
