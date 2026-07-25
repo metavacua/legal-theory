@@ -72,7 +72,7 @@ info-element =
      element dc:date       { xsd:date } &
      element dc:identifier { xsd:anyURI } &
      element dc:subject    { text } &
-     (element xi:include    { any } | shared-metadata-file)? &
+     (element xi:include { attribute href { xsd:anyURI } } | shared-metadata-file) &
      (element dc:description { text })? &
      (element db:bibliomisc { any })* &
      (element db:abstract { any })?)
