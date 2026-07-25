@@ -6,7 +6,7 @@
 
 **Architecture:** The corpus already uses the right namespace for Dublin Core (`http://purl.org/dc/terms/`, i.e. DCTERMS, not the older simple-DC namespace) via `docs/common/shared-metadata.xml`, xi:included into every document's `.meta.xml`. This plan (1) completes the DCTERMS field set corpus-wide and fixes a live metadata-duplication bug in the paper, (2) tightens `docs/schema/docbook-corpus.rnc` to actually enforce what it currently lets through via an `any` wildcard, (3) closes a CI gap where the paper is never schema-validated, (4) generates Schema.org JSON-LD mechanically from DCTERMS fields instead of hand-duplicating it, and (5) adds three genuinely new external-standard outputs (SPDX license IDs, CSL-JSON bibliography export, SPAR citation-typing graph, PROV-O provenance) that the corpus doesn't have today.
 
-**Tech Stack:** RELAX NG Compact (schema), XSLT 1.0 (`docs/xsl/html5.xsl`), Python 3 stdlib (`xml.etree.ElementTree`, `unittest`, `json`, `subprocess`), `jing`, `xmllint`, `git` (for `dcterms:date` derivation) — no new runtime dependencies are introduced; every addition is a schema/vocabulary choice, not a library.
+**Tech Stack:** RELAX NG Compact (schema), XSLT 1.0 (`docs/xsl/html5.xsl`), Python 3 (`unittest`, `json`, `subprocess`, and `lxml.etree` — adopted in Tasks 7/11, installed via `apt`, replacing stdlib `xml.etree.ElementTree` as the one shared AST library across `docs/scripts/*.py`), `jing`, `xmllint`, `git` (for `dcterms:date` derivation).
 
 ## Global Constraints
 
