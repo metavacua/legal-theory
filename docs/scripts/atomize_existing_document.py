@@ -12,6 +12,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from convert_to_docbook import (
+    DB_NS,
     DC_NS,
     REPO_ROOT,
     _cleanup_fragments,
@@ -43,7 +44,8 @@ def _meta_matches_shared_shape(meta_root):
     never be pointed at) would otherwise be silently corrupted with no
     error and no diff."""
     non_title_words = "".join(
-        "".join(c.itertext()) for c in meta_root if c.tag != f"{{{DC_NS}}}title"
+        "".join(c.itertext()) for c in meta_root
+        if c.tag not in (f"{{{DB_NS}}}title", f"{{{DC_NS}}}title")
     ).split()
 
     shared_path = REPO_ROOT / "docs" / "common" / "shared-metadata.xml"
@@ -71,7 +73,7 @@ def atomize_existing_document(xml_path, meta_path):
     try:
         before_plain = render_docbook_plain(xml_path)
 
-        title_el = meta_root.find(f"{{{DC_NS}}}title")
+        title_el = meta_root.find(f"{{{DB_NS}}}title")
         title = element_full_text(title_el)
 
         tree = ET.parse(xml_path)

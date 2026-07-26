@@ -89,17 +89,21 @@ class TestPandocAndWrapping(unittest.TestCase):
         )
 
     def test_wrap_single_section_unwraps_and_reports_true(self):
-        from convert_to_docbook import pandoc_to_docbook_fragment, wrap_fragment
+        from convert_to_docbook import pandoc_to_docbook_fragment, wrap_fragment, XI_NS
         fragment = pandoc_to_docbook_fragment(self.fixtures / "flat.md")
         article, unwrapped = wrap_fragment(fragment, "flat", "A Flat Document", "flat.meta.xml")
         self.assertTrue(unwrapped)
         self.assertEqual(article.tag, f"{DB_NS}article")
-        # The wrapping <section>'s own title must not survive as a
-        # duplicate — only the article's <title> carries it.
+        # The wrapping <section>'s own title must not survive as a direct
+        # article child — the title now lives inside <info> (from
+        # write_metadata()), not as a sibling <title> after xi:include.
         child_tags = [c.tag for c in article]
         self.assertEqual(child_tags.count(f"{DB_NS}section"), 0)
         self.assertIn(f"{DB_NS}para", child_tags)
-        self.assertEqual(child_tags.count(f"{DB_NS}title"), 1)
+        self.assertEqual(child_tags.count(f"{DB_NS}title"), 0)
+        # The xi:include to the metadata file must still be present.
+        includes = [c for c in article if c.tag == f"{{{XI_NS}}}include"]
+        self.assertEqual(len(includes), 1)
 
     def test_wrap_multi_section_keeps_all_and_reports_false(self):
         from convert_to_docbook import pandoc_to_docbook_fragment, wrap_fragment
@@ -826,6 +830,27 @@ class TestFetchDocbookSchema(unittest.TestCase):
         path2 = fetch_docbook_schema()
         self.assertEqual(path, path2)
         self.assertEqual(path.stat().st_mtime, mtime_before)
+
+
+class TestWrapFragmentNoSiblingTitle(unittest.TestCase):
+    def setUp(self):
+        self.fixtures = Path(__file__).resolve().parent / "fixtures"
+
+    def test_article_has_no_direct_title_child(self):
+        from convert_to_docbook import pandoc_to_docbook_fragment, wrap_fragment, DB_NS
+        fragment = pandoc_to_docbook_fragment(self.fixtures / "flat.md")
+        article, _ = wrap_fragment(fragment, "flat", "A Flat Document", "flat.meta.xml")
+        direct_titles = [c for c in article if c.tag == f"{{{DB_NS}}}title"]
+        self.assertEqual(direct_titles, [])
+
+    def test_article_still_has_xi_include_and_body_content(self):
+        from convert_to_docbook import pandoc_to_docbook_fragment, wrap_fragment, DB_NS, XI_NS
+        fragment = pandoc_to_docbook_fragment(self.fixtures / "flat.md")
+        article, _ = wrap_fragment(fragment, "flat", "A Flat Document", "flat.meta.xml")
+        includes = [c for c in article if c.tag == f"{{{XI_NS}}}include"]
+        self.assertEqual(len(includes), 1)
+        self.assertEqual(includes[0].get("href"), "flat.meta.xml")
+        self.assertTrue(any(c.tag == f"{{{DB_NS}}}para" for c in article))
 
 
 if __name__ == "__main__":

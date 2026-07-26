@@ -166,9 +166,6 @@ def wrap_fragment(fragment, xml_id, title, metadata_href):
     xi_include = ET.SubElement(article, f"{{{XI_NS}}}include")
     xi_include.set("href", metadata_href)
 
-    title_el = ET.SubElement(article, f"{{{DB_NS}}}title")
-    title_el.text = title
-
     # A single top-level <section> whose own <title> just duplicates
     # the article title we already set: unwrap it so its children
     # become the article's direct children, matching the flatter
