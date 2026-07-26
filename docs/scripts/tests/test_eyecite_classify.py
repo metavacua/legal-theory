@@ -4,7 +4,21 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+try:
+    import eyecite  # noqa: F401
+    EYECITE_AVAILABLE = True
+except ImportError:
+    EYECITE_AVAILABLE = False
 
+SKIP_REASON = (
+    "eyecite is not installed under this interpreter -- it lives only "
+    "in the dedicated .venv-eyecite/ virtualenv, not the bare system "
+    "python3 every other script/test in this repo runs under. Run this "
+    "test file with .venv-eyecite/bin/python3 to exercise it."
+)
+
+
+@unittest.skipUnless(EYECITE_AVAILABLE, SKIP_REASON)
 class TestClassifyCitationText(unittest.TestCase):
     def test_full_case_citation_resolves_as_case(self):
         from eyecite_classify import classify_citation_text
