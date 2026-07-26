@@ -37,6 +37,7 @@ _EXPECTED_META_TAGS = frozenset({
     f"{{{DB_NS}}}pubdate",
     f"{{{DB_NS}}}biblioid",
     f"{{{DB_NS}}}subjectset",
+    f"{{{DB_NS}}}publisher",
     f"{{{DC_NS}}}type",
     f"{{{XI_NS}}}include",
 })

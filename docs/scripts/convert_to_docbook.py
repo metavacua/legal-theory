@@ -253,6 +253,7 @@ def write_metadata(meta_path, title, subject=None):
   <pubdate>{date}</pubdate>
   <biblioid class="uri">{xml_escape(identifier)}</biblioid>
   <subjectset><subject><subjectterm>{xml_escape(resolved_subject)}</subjectterm></subject></subjectset>
+  <publisher><publishername>metavacua/legal-theory (GitHub)</publishername></publisher>
   <dc:type>Text</dc:type>
   <xi:include href="{prefix}authorgroup.xml" />
   <xi:include href="{prefix}legalnotice.xml" />

@@ -1,10 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Legal Corpus Connections: How the LLM-Database Theory Connects to Existing Matters in This Repository</title>
   <subtitle>How the LLM-Database Theory Connects to Existing Matters in This Repository</subtitle>
   <pubdate>2026-07-25</pubdate>
   <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/papers/ai_and_ip/llm-database-theory/src/02-legal-corpus-connections.xml</biblioid>
-  <subjectset><subject><subjectterm>papers</subjectterm></subject></subjectset>
+  <subjectset>
+    <subject>
+      <subjectterm>papers</subjectterm>
+    </subject>
+  </subjectset>
+  <publisher>
+    <publishername>metavacua/legal-theory (GitHub)</publishername>
+  </publisher>
   <dc:type>Text</dc:type>
   <xi:include href="../../../../common/authorgroup.xml" />
   <xi:include href="../../../../common/legalnotice.xml" />

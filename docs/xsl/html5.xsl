@@ -39,6 +39,7 @@
         <meta name="DC.creator"     content="{concat(db:info//db:authorgroup/db:author/db:personname/db:firstname, ' ', db:info//db:authorgroup/db:author/db:personname/db:othername, ' ', db:info//db:authorgroup/db:author/db:personname/db:surname)}"/>
         <meta name="DC.subject"     content="{db:info//db:subjectterm}"/>
         <meta name="DC.date"        content="{db:info/db:pubdate}"/>
+        <meta name="DC.publisher"   content="{db:info/db:publisher/db:publishername}"/>
         <meta name="DC.type"        content="{db:info/dc:type}"/>
         <meta name="DC.language"    content="{/db:article/@xml:lang}"/>
         <meta name="DC.rights"      content="{db:info//db:legalnotice}"/>

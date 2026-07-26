@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The New Corporate Person: AI, Accountability, and the Case for a Public Registry in California</title>
-  <pubdate>2026-07-22</pubdate>
+  <pubdate>2026-07-25</pubdate>
   <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/proposals/executive/agencies/california/secretary-of-state/improving-ai-accountability-petition-arguments.xml</biblioid>
   <subjectset><subject><subjectterm>executive proposal</subjectterm></subject></subjectset>
+  <publisher><publishername>metavacua/legal-theory (GitHub)</publishername></publisher>
   <dc:type>Text</dc:type>
   <xi:include href="../../../../../common/authorgroup.xml" />
   <xi:include href="../../../../../common/legalnotice.xml" />

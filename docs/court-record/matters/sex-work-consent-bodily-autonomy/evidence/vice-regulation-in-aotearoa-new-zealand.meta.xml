@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Progressive Facade and the Punitive Reality of Vice Regulation in Aotearoa New Zealand</title>
-  <pubdate>2026-07-22</pubdate>
+  <pubdate>2026-07-25</pubdate>
   <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/vice-regulation-in-aotearoa-new-zealand.xml</biblioid>
   <subjectset><subject><subjectterm>legal matter: sex work consent bodily autonomy</subjectterm></subject></subjectset>
+  <publisher><publishername>metavacua/legal-theory (GitHub)</publishername></publisher>
   <dc:type>Text</dc:type>
   <xi:include href="../../../../common/authorgroup.xml" />
   <xi:include href="../../../../common/legalnotice.xml" />

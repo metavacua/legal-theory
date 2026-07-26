@@ -787,6 +787,18 @@ class TestWriteMetadataNativeShape(unittest.TestCase):
         self.assertTrue(any(h.endswith("common/authorgroup.xml") for h in hrefs))
         self.assertTrue(any(h.endswith("common/legalnotice.xml") for h in hrefs))
 
+    def test_emits_native_publisher(self):
+        from convert_to_docbook import write_metadata, REPO_ROOT, DB_NS
+        out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
+        self.addCleanup(shutil.rmtree, out_dir)
+        meta_path = out_dir / "sample.meta.xml"
+        write_metadata(meta_path, "Sample Title")
+
+        root = ET.parse(meta_path).getroot()
+        publishername = root.find(f"{{{DB_NS}}}publisher/{{{DB_NS}}}publishername")
+        self.assertIsNotNone(publishername)
+        self.assertEqual(publishername.text, "metavacua/legal-theory (GitHub)")
+
     def test_full_resolved_document_validates_against_real_docbook_5_2(self):
         from convert_to_docbook import write_metadata, fetch_docbook_schema, REPO_ROOT
         out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
