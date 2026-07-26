@@ -59,8 +59,8 @@ class TestAtomizeExistingDocument(unittest.TestCase):
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title><emphasis role="strong">Styled Title</emphasis></title>
   <dc:type>Text</dc:type>
-  <xi:include href="../../../common/authorgroup.xml" />
-  <xi:include href="../../../common/legalnotice.xml" />
+  <xi:include href="../../../../common/authorgroup.xml" />
+  <xi:include href="../../../../common/legalnotice.xml" />
 </info>
 """
         self.meta_path.write_text(styled_meta, encoding="utf-8")
@@ -175,7 +175,7 @@ class TestMetaMatchesSharedShape(unittest.TestCase):
         meta_path = self.tmp_dir / "doc.meta.xml"
         write_metadata(meta_path, "A Real Document Title")
         meta_root = ET.parse(meta_path).getroot()
-        self.assertTrue(_meta_matches_shared_shape(meta_root))
+        self.assertTrue(_meta_matches_shared_shape(meta_root, meta_path))
 
     def test_accepts_a_subset_of_the_known_fields(self):
         # A document that hasn't yet been regenerated with every field
@@ -190,14 +190,14 @@ class TestMetaMatchesSharedShape(unittest.TestCase):
 <info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="{XI_NS}">
   <title>Minimal Document</title>
   <dc:type>Text</dc:type>
-  <xi:include href="../../../common/authorgroup.xml" />
-  <xi:include href="../../../common/legalnotice.xml" />
+  <xi:include href="../../../../common/authorgroup.xml" />
+  <xi:include href="../../../../common/legalnotice.xml" />
 </info>
 """
         meta_path = self.tmp_dir / "minimal.meta.xml"
         meta_path.write_text(minimal, encoding="utf-8")
         meta_root = ET.parse(meta_path).getroot()
-        self.assertTrue(_meta_matches_shared_shape(meta_root))
+        self.assertTrue(_meta_matches_shared_shape(meta_root, meta_path))
 
     def test_refuses_a_hand_authored_abstract(self):
         # The refuse case: an element write_metadata() has no way to
@@ -211,7 +211,7 @@ class TestMetaMatchesSharedShape(unittest.TestCase):
         meta_root = ET.parse(meta_path).getroot()
         abstract_el = ET.SubElement(meta_root, f"{{{DB_NS}}}abstract")
         abstract_el.text = "Hand-authored summary write_metadata() cannot produce."
-        self.assertFalse(_meta_matches_shared_shape(meta_root))
+        self.assertFalse(_meta_matches_shared_shape(meta_root, meta_path))
 
     def test_refuses_an_inlined_legalnotice_instead_of_xi_include(self):
         # A document-specific <legalnotice> inlined directly, rather than
@@ -225,7 +225,7 @@ class TestMetaMatchesSharedShape(unittest.TestCase):
         meta_root = ET.parse(meta_path).getroot()
         notice_el = ET.SubElement(meta_root, f"{{{DB_NS}}}legalnotice")
         notice_el.text = "A document-specific notice, not the shared boilerplate."
-        self.assertFalse(_meta_matches_shared_shape(meta_root))
+        self.assertFalse(_meta_matches_shared_shape(meta_root, meta_path))
 
     def test_refuses_an_xi_include_pointing_elsewhere(self):
         # A third xi:include target write_metadata() never produces (e.g.
@@ -239,7 +239,55 @@ class TestMetaMatchesSharedShape(unittest.TestCase):
         meta_root = ET.parse(meta_path).getroot()
         rogue = ET.SubElement(meta_root, f"{{{XI_NS}}}include")
         rogue.set("href", "../../../common/some-other-shared-file.xml")
-        self.assertFalse(_meta_matches_shared_shape(meta_root))
+        self.assertFalse(_meta_matches_shared_shape(meta_root, meta_path))
+
+    def test_refuses_zero_title_children(self):
+        # A meta_root with no <title> at all (but otherwise valid
+        # xi:includes) must be refused. Left unguarded, the caller's
+        # meta_root.find(title) downstream returns None,
+        # element_full_text(None) returns "", and write_metadata() would
+        # silently regenerate the document with an EMPTY title -- no
+        # error, no diff (title isn't covered by the content-preservation
+        # diff).
+        from atomize_existing_document import _meta_matches_shared_shape
+
+        meta_path = self.tmp_dir / "no-title.meta.xml"
+        write_metadata(meta_path, "A Document About To Lose Its Title")
+        meta_root = ET.parse(meta_path).getroot()
+        title_el = meta_root.find(f"{{{DB_NS}}}title")
+        meta_root.remove(title_el)
+        self.assertFalse(_meta_matches_shared_shape(meta_root, meta_path))
+
+    def test_refuses_two_title_children(self):
+        # A meta_root with two <title> children must also be refused --
+        # every child tag is individually "known", so the old per-tag-only
+        # check waved this through, and the caller's .find() would
+        # silently discard the second one.
+        from atomize_existing_document import _meta_matches_shared_shape
+
+        meta_path = self.tmp_dir / "two-titles.meta.xml"
+        write_metadata(meta_path, "A Document With A Duplicate Title")
+        meta_root = ET.parse(meta_path).getroot()
+        extra_title = ET.SubElement(meta_root, f"{{{DB_NS}}}title")
+        extra_title.text = "A Second, Conflicting Title"
+        self.assertFalse(_meta_matches_shared_shape(meta_root, meta_path))
+
+    def test_refuses_an_xi_include_with_same_suffix_different_prefix(self):
+        # An href that ends with the right suffix but is rooted somewhere
+        # else entirely (e.g. a sibling "evil" directory instead of the
+        # real docs/common/) must be refused. A suffix-only check would
+        # wrongly accept this; only resolving the href relative to the
+        # .meta.xml's own directory and comparing against the real file
+        # catches it.
+        from atomize_existing_document import _meta_matches_shared_shape
+
+        meta_path = self.tmp_dir / "path-traversal.meta.xml"
+        write_metadata(meta_path, "A Document With A Spoofed Include Path")
+        meta_root = ET.parse(meta_path).getroot()
+        for xi_include in meta_root.findall(f"{{{XI_NS}}}include"):
+            if xi_include.get("href", "").endswith("authorgroup.xml"):
+                xi_include.set("href", "../evil/common/authorgroup.xml")
+        self.assertFalse(_meta_matches_shared_shape(meta_root, meta_path))
 
 
 if __name__ == "__main__":
