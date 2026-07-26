@@ -6,13 +6,11 @@ on:
     paths:
       - 'docs/**/*.xml'
       - 'docs/xsl/**'
-      - '!docs/papers/**'
   pull_request:
     branches: [main, claude/llm-database-theory-codification]
     paths:
       - 'docs/**/*.xml'
       - 'docs/xsl/**'
-      - '!docs/papers/**'
   workflow_dispatch: {}
 
 permissions:
@@ -44,7 +42,7 @@ jobs:
             jing -c .cache/docbook-5.2/docbookxi.rnc "$xml"
             python3 docs/scripts/check_dcterms_completeness.py "$xml"
             xsltproc --xinclude docs/xsl/html5.xsl "$xml" > "${xml%.xml}.html"
-          done < <(find docs -name '*.xml' -not -path '*/scratch/*' -not -path 'docs/papers/*' -not -path 'docs/scripts/*' | sort)
+          done < <(find docs -name '*.xml' -not -path '*/scratch/*' -not -path 'docs/scripts/*' | sort)
 
       # pull_request events check out a detached, synthetic merge ref (not
       # the PR's actual branch) -- there is nothing sensible to push to, and

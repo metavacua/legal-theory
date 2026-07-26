@@ -428,7 +428,7 @@ class TestDedupe(unittest.TestCase):
     def test_bib_entry_with_url_field_uses_url_based_dedup_key(self):
         from build_bibliography import RawEntry, _dedup_key
         raw_with_url = RawEntry(text="somebibkey", href="https://arxiv.org/abs/1234.5678",
-                                  citing_html="docs/papers/ai_and_ip/llm-database-theory/html/01-llm-database-theory.html",
+                                  citing_html="docs/papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory.html",
                                   source_file="docs/papers/ai_and_ip/llm-database-theory/src/bibliography.bib")
         key = _dedup_key("Some Author. 2024. \"Title.\" https://arxiv.org/abs/1234.5678", raw_with_url.href)
         self.assertTrue(key.startswith("url:"))
@@ -504,8 +504,8 @@ class TestVerifyInvariants(unittest.TestCase):
     def test_eu_directive_and_regulation_citations_satisfy_legal_marker_check(self):
         from build_bibliography import verify_invariants, BibliographyEntry
         entries = [
-            BibliographyEntry(section="legal", display="Regulation (EU) 2016/679 -- GDPR (2016).", citing_htmls=["docs/papers/ai_and_ip/llm-database-theory/html/01-llm-database-theory.html"], dedup_key="k1"),
-            BibliographyEntry(section="legal", display="Directive 96/9/EC on the Legal Protection of Databases (1996).", citing_htmls=["docs/papers/ai_and_ip/llm-database-theory/html/01-llm-database-theory.html"], dedup_key="k2"),
+            BibliographyEntry(section="legal", display="Regulation (EU) 2016/679 -- GDPR (2016).", citing_htmls=["docs/papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory.html"], dedup_key="k1"),
+            BibliographyEntry(section="legal", display="Directive 96/9/EC on the Legal Protection of Databases (1996).", citing_htmls=["docs/papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory.html"], dedup_key="k2"),
         ]
         violations = verify_invariants([], [], entries, [], REPO_ROOT)
         self.assertEqual(violations, [])

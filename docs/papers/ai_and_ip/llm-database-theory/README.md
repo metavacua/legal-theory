@@ -40,6 +40,18 @@ Transformer language models are **graph databases** in a technically precise, le
 
 ## Build
 
+This paper is validated and built to HTML by the same uniform pipeline as
+every other document in the corpus -- see
+`.github/workflows/build-corpus.yml` (real DocBook 5.2 RELAX NG via `jing`,
+this project's DCTERMS completeness policy check, then `xsltproc
+docs/xsl/html5.xsl`, writing `src/01-llm-database-theory.html` next to its
+source, same as any other document). There is nothing paper-specific to
+validate or build to HTML; running the corpus pipeline against `src/*.xml`
+manually reproduces it locally.
+
+This directory's own `Makefile` only covers the one thing that genuinely
+is unique to this document: LaTeX/PDF output.
+
 ### Prerequisites
 
 ```bash
@@ -52,9 +64,6 @@ brew install libxml2 libxslt pandoc
 # Note: pandoc is required by docs/scripts/convert_to_docbook.py (the
 # Markdown-to-DocBook conversion tool), not by this paper's own build.
 
-# Optional: RELAX NG validation
-# Download jing from https://relaxng.org/jclark/jing.html
-
 # Optional: PDF output
 sudo apt-get install texlive-full   # or texlive-latex-recommended
 ```
@@ -62,14 +71,6 @@ sudo apt-get install texlive-full   # or texlive-latex-recommended
 ### Commands
 
 ```bash
-# Validate XML (well-formedness + XInclude resolution)
-make validate
-
-# Generate HTML5
-make html
-# → generated/01-llm-database-theory.html
-# → generated/02-legal-corpus-connections.html
-
 # Generate LaTeX
 make latex
 # → generated/01-llm-database-theory.tex
@@ -78,11 +79,8 @@ make latex
 # Generate PDF (requires pdflatex)
 make pdf
 
-# All targets
-make all
-
-# Open primary article in browser
-make open-html
+# Open primary article's LaTeX source
+make open-latex
 ```
 
 ---

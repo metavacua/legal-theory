@@ -617,30 +617,26 @@ def write_meta_xml(path):
 
 PAPER_ROOT = REPO_ROOT / "docs" / "papers" / "ai_and_ip" / "llm-database-theory"
 PAPER_SRC = PAPER_ROOT / "src"
-PAPER_FALLBACK_HTML = "docs/papers/ai_and_ip/llm-database-theory/html/01-llm-database-theory.html"
+PAPER_FALLBACK_HTML = "docs/papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory.html"
 _CITATION_KEY_RE = re.compile(r"<citation>([\w.-]+)</citation>")
 
 
 def _bib_citation_backlinks():
     """dict[str, str]: bibliography.bib key -> repo-relative .html of the
-    paper article (html/01-llm-database-theory.html or
-    html/02-legal-corpus-connections.html) whose src/ fragments actually
-    contain <citation>KEY</citation>. Reuses build_backlink_map(PAPER_SRC)
-    only to determine which shell (by filename stem) each fragment
-    belongs to -- the paper's real built HTML lives in a sibling html/
-    directory, not alongside src/, so the shell-html path
-    build_backlink_map computes is used only for its stem, not taken
-    literally."""
+    paper article (src/01-llm-database-theory.html or
+    src/02-legal-corpus-connections.html) whose src/ fragments actually
+    contain <citation>KEY</citation>. The paper is built by the same
+    uniform corpus pipeline as every other document -- its HTML lives
+    alongside its .xml source, so build_backlink_map's own computed path
+    is the real, correct path, not just a stem to reconstruct from."""
     src_backlinks = build_backlink_map(PAPER_SRC)
     key_to_html = {}
     for xml_path in sorted(PAPER_SRC.rglob("*.xml")):
-        shell_html_guess = src_backlinks.get(xml_path.resolve())
-        if shell_html_guess is None:
+        shell_html = src_backlinks.get(xml_path.resolve())
+        if shell_html is None:
             continue
-        stem = Path(shell_html_guess).stem
-        real_html = f"docs/papers/ai_and_ip/llm-database-theory/html/{stem}.html"
         for key in _CITATION_KEY_RE.findall(xml_path.read_text(encoding="utf-8")):
-            key_to_html.setdefault(key, real_html)
+            key_to_html.setdefault(key, shell_html)
     return key_to_html
 
 
