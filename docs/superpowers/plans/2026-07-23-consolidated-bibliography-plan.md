@@ -3,6 +3,18 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
+> **Superseded in part, 2026-07-26.** This plan (already executed; it produced the current
+> `docs/scripts/build_bibliography.py`) built its extraction/classification/emission pipeline
+> around the corpus's informal `works-cited`/`<listitem>` convention as a permanent, repeatedly-
+> rescanned input and, for the generated output, a deliberately-reused non-standard shape (see
+> the corresponding design doc's 2026-07-26 note). The corrected direction converts every one of
+> those ~5,482 entries to real, `xml:id`-tagged DocBook `<biblioentry>` markup at its source
+> document and retires the informal convention, rather than building tooling that adapts to it
+> indefinitely. This plan's per-file extraction/classification logic (Tasks 2-13) remains a
+> useful reference for that one-time conversion's own future plan; its emission target (Task 14)
+> does not carry forward as designed. See `docs/scripts/measure_citation_conformance.py` for the
+> standard-tooling measurement that quantifies the gap this plan's output left unaddressed.
+
 **Goal:** Build `docs/scripts/build_bibliography.py`, a repeatable generator that extracts every
 corpus "works cited" entry (~5,488 links across ~89 files) and the paper's 28-entry
 `bibliography.bib`, deduplicates them, elevates them to Bluebook (legal sources) or Chicago

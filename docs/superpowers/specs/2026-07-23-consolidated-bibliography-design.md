@@ -1,5 +1,20 @@
 # Consolidated References & Bibliography: Design
 
+> **REVISED 2026-07-26, superseded in part.** This design's §4 and §5 chose to *keep* the
+> corpus's informal `<section xml:id="works-cited"><orderedlist><listitem>` convention — as
+> both the permanent input this script re-scans and, in §4, explicitly as the new consolidated
+> bibliography's *own* output shape ("the exact markup pattern every existing works-cited
+> section already uses... zero XSL or schema changes needed"). That was building the
+> standardization apparatus *around* the non-standard convention rather than converting it. The
+> corrected direction, set 2026-07-26: every one of the corpus's citations becomes a real,
+> individually `xml:id`-tagged `<biblioentry>`/`<bibliomixed>` at the *source* document, not a
+> generic `<listitem>` a script re-interprets on every run; the informal `works-cited` convention
+> is retired, not accommodated. This is a large, separate project (5,482 entries across 88
+> documents, confirmed by direct count) getting its own design/plan pass — this note flags where
+> the old plan diverges from that direction, it does not replace it. See
+> `docs/scripts/measure_citation_conformance.py` for the standard-tooling-based measurement this
+> correction produced, used to quantify the gap this design left unaddressed.
+
 ## 1. Motivation
 
 The corpus has **no structured bibliography anywhere**. A repo-wide survey (method in §2) found
@@ -75,6 +90,12 @@ Zero XSL or schema changes needed: the body uses only `<section>`, `<orderedlist
 works-cited section already uses and `html5.xsl` already renders correctly. `build-corpus.yml`'s
 existing `find` picks up any article-rooted XML under `docs/` automatically.
 
+> **Superseded 2026-07-26:** "zero XSL or schema changes needed" was treated as a design virtue
+> here; it is actually the tell that this output reuses the non-standard convention instead of
+> DocBook's own `<bibliography>`/`<biblioentry>`/`<bibliomixed>` vocabulary. The corrected design
+> uses the real elements, which do need schema/XSLT support (see Task 7 of the ontology plan,
+> itself now also flagged for correction below).
+
 Four sections, in order:
 
 1. **Front matter** — scope/methodology (condensed §1-2) plus the citation-policy statement
@@ -99,6 +120,15 @@ correctly backlinks to its *owning shell article's* `.html`, not the fragment it
 have no independent build output).
 
 ## 5. Extraction, classification, and elevation
+
+> **Superseded 2026-07-26:** this section treats the informal `works-cited` convention as a
+> stable, permanent input to be re-scanned and re-classified indefinitely (heuristically, with
+> regexes tuned against false positives) — i.e., the standardization apparatus adapting itself to
+> the non-standard source, forever. The corrected direction converts each of these 5,482 entries
+> into a real, structured `<biblioentry>` once, at its source document, so there is nothing left
+> for a heuristic classifier to keep re-interpreting. The extraction/classification logic below
+> remains useful as the *one-time migration tool* that performs that conversion — its output
+> destination changes from "a generated side document" to "the source document itself."
 
 **Extract:** walk `docs/` (excluding `docs/papers/**`, `docs/scripts/**`) for `works-cited`
 sections; separately parse `bibliography.bib` in full. For each works-cited `<listitem>`, capture
@@ -182,3 +212,9 @@ layout used by `test_convert_to_docbook.py`).
 4. **Normalize the citation-abbreviation diversity** documented in the survey (e.g. `Corp. Code §`
    vs `Corporations Code §` vs `CORP §` for the same code) as a corpus-wide style pass, independent
    of the bibliography itself.
+5. **(Added 2026-07-26, supersedes the framing above.)** Items 3-4 only ever proposed source-level
+   fixes for the entries that failed to classify at all. The corrected scope is broader: convert
+   *every* works-cited `<listitem>` across all 88 documents into a real, `xml:id`-tagged
+   `<biblioentry>`/`<bibliomixed>` at its source document, and retire the informal `works-cited`
+   convention entirely once that's done — not just the garbled remainder. Its own design/plan
+   pass, per the 2026-07-26 correction note at the top of this document.

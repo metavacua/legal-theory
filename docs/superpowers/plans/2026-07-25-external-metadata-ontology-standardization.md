@@ -1125,6 +1125,17 @@ Verified, not deferred: `grep -rl "<citation>" docs --include="*.xml"` shows `<c
 
 Scope note, stated plainly: this task does not add per-source-document `arcrole` tagging to each of the 119 corpus documents' own works-cited `<link>` elements (only the one, single, generated `references.xml` this task produces) — that would mean mutating up to 119 content files, a much larger undertaking distinct from fixing this generated document and the paper's citation mechanism.
 
+> **Superseded 2026-07-26.** This scope note is exactly the "adapt around the non-standard part"
+> pattern flagged for correction: it fixes the one generated output document while deliberately
+> leaving the 88 source documents' own informal `works-cited` sections untouched and still the
+> permanent input this task's emission logic reads from. The corrected direction (see
+> `docs/superpowers/specs/2026-07-23-consolidated-bibliography-design.md`'s 2026-07-26 note) is
+> to convert those source documents' citations to real `<biblioentry>` markup directly, at which
+> point a separately-generated, separately-scanned `references.xml` mirroring them is no longer
+> the right shape for this problem either -- that consolidated view should be produced *from* the
+> now-standard source citations, not from a parallel heuristic re-extraction of them. This task as
+> written is superseded by that larger, separately-planned project, not merely narrow in scope.
+
 - [ ] **Step 1: Confirm the schema gap and the escaping bug, directly**
 
 ```bash
