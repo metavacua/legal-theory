@@ -25,13 +25,14 @@ Transformer language models are **graph databases** in a technically precise, le
 
 | File | Content |
 |---|---|
-| `src/00-metadata.xml` | Dublin Core + Schema.org metadata (XIncluded by all articles) |
+| `src/01-llm-database-theory.meta.xml` | This article's own native DocBook metadata (title/pubdate/biblioid/subjectset), XIncluding shared `authorgroup.xml`/`legalnotice.xml` |
+| `src/02-legal-corpus-connections.meta.xml` | Same, for the connections article |
 | `src/01-llm-database-theory.xml` | Primary DocBook 5.2 article (10 sections) |
 | `src/02-legal-corpus-connections.xml` | Connections to matters in this repo; proposed FOFs |
 | `src/bibliography.bib` | 14 BibTeX entries |
 | `../../../xsl/html5.xsl` | DocBook → HTML5 (with DC meta tags + Schema.org JSON-LD) |
 | `../../../xsl/latex.xsl` | DocBook → LaTeX (pdflatex-compilable) |
-| `../../../schema/docbook-corpus.rnc` | RELAX NG compact schema (finding-section constraints) |
+| (real DocBook 5.2 RELAX NG, fetched from OASIS at build time) | Structural validation — see `docs/scripts/convert_to_docbook.py`'s `fetch_docbook_schema()` |
 | `scratch/formulas.md` | Math correspondences, LARQL↔SQL table, memorisation rates |
 | `scratch/notes.md` | Session provenance, citation gaps, open questions |
 

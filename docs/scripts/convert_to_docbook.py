@@ -65,9 +65,9 @@ def derive_date(meta_path):
 
 def derive_identifier(meta_path):
     """dcterms:identifier value: a GitHub blob permalink (on main) to the
-    document's content file -- the same repo docs/common/shared-metadata.xml
-    already names in dc:publisher, so this is a real, resolvable external
-    URI rather than a locally-invented URN."""
+    document's content file -- a real, resolvable external URI rather
+    than a locally-invented URN, using the same metavacua/legal-theory
+    GitHub repo every document in this corpus lives in."""
     content_path = _content_path_for_meta(meta_path)
     rel = content_path.resolve().relative_to(REPO_ROOT).as_posix()
     return f"{GITHUB_REPO_URL}/blob/main/{rel}"
