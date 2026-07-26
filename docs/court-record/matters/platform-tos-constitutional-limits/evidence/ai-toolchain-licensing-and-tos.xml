@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="ai-toolchain-licensing-and-tos" xml:lang="en">
   <xi:include href="ai-toolchain-licensing-and-tos.meta.xml" />
-  <title>An Analysis of an Introspective Toolchain for the Jules Coding Agent: Technical Framework and Legal Diligence</title>
   <xi:include href="ai-toolchain-licensing-and-tos/01-executive-summary.xml" />
   <xi:include href="ai-toolchain-licensing-and-tos/02-part-i-technical-framework-for-an-introspective-ai-toolchain.xml" />
   <xi:include href="ai-toolchain-licensing-and-tos/03-part-ii-legal-and-licensing-due-diligence.xml" />

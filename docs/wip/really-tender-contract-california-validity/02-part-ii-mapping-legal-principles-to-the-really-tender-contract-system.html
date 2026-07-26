@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<section id="part-ii-mapping-legal-principles-to-the-really-tender-contract-system">
+  <h2>
+    <em>Part II: Mapping Legal Principles to
+    the "Really Tender Contract" System</em>
+  </h2>
+  <p>
+      This part of the report transitions from abstract legal theory to
+      a concrete, operational model tailored for the "Really Tender
+      Contract" system. It provides a direct translation of the
+      legal doctrines articulated in Part I into the user's specified
+      architecture of Players, Game Configuration, Game State, and
+      contract types. The goal is to create a clear, logical, and
+      legally sound blueprint for the system's core functionality,
+      defining its components in legal terms and modeling the entire
+      contract lifecycle as a series of discrete, rule-governed state
+      transitions.
+    </p>
+  <section id="section-4-system-entities-and-states-a-legal-technical-lexicon">
+    <h3>
+      <em>Section 4: System Entities and
+      States: A Legal-Technical Lexicon</em>
+    </h3>
+    <p>
+        To build a legally sound system, its core components must have
+        precise legal analogues. This section formally defines the
+        user's system entities, creating an explicit and unambiguous
+        mapping between the technical architecture and the corresponding
+        legal reality.
+      </p>
+    <ul>
+      <li>
+        <p>
+          <em>4.1 Player:</em> In legal
+            terms, a Player is a
+            <em>Party</em> to the contract.
+            The Player is the fundamental entity that can enter into,
+            perform, and be bound by an agreement. Each Player object
+            within the system must therefore contain attributes that
+            correspond directly to the legal requirements for
+            contractual capacity as discussed in Section 1.1. These
+            essential attributes include:
+          </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+            player_id: A unique system identifier.
+          </p>
+      </li>
+      <li>
+        <p>
+            legal_name: The full legal name of the individual or entity.
+          </p>
+      </li>
+      <li>
+        <p>
+            age: To determine status as a minor or adult.
+          </p>
+      </li>
+      <li>
+        <p>
+            capacity_status: An enumerated type representing the
+            Player's legal capacity (e.g., ADULT_SOUND_MIND, MINOR,
+            UNSOUND_MIND_VOIDABLE, CORPORATION_GOOD_STANDING). This
+            attribute is critical for determining the voidability and
+            enforceability of any contract the Player enters.6
+          </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+          <em>4.2 Game Configuration:</em>
+            The Game Configuration process maps directly to the
+            negotiation and definition of the
+            <em>Subject Matter and Essential
+            Terms</em> of the proposed contract. This is the
+            digital equivalent of the bargaining process where the
+            parties establish the substance of their agreement. A valid
+            configuration must define all elements necessary for a court
+            to ascertain the parties' obligations. These include:
+          </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+            parties: A list of player_ids linking to the Player objects
+            involved.
+          </p>
+      </li>
+      <li>
+        <p>
+            subject_matter: A clear and definite description of the
+            contract's purpose and the object of the agreement.12
+          </p>
+      </li>
+      <li>
+        <p>
+            consideration_A: A precise definition of the value (act,
+            promise, or item) that Player A will provide to Player B.29
+          </p>
+      </li>
+      <li>
+        <p>
+            consideration_B: A precise definition of the value that
+            Player B will provide to Player A.
+          </p>
+      </li>
+      <li>
+        <p>
+            performance_terms: Any specific timelines, deadlines,
+            conditions, or deliverables required for performance.5
+          </p>
+      </li>
+      <li>
+        <p>
+            is_modifiable: A boolean flag that maps directly to the
+            user's "living vs. irrevocable contract"
+            requirement.
+          </p>
+      </li>
+    </ul>
+    <p>
+        Before an offer can be generated, the system's validation engine
+        must check the completed Game Configuration against two key
+        legal doctrines from Part I: the "Lawful Object"
+        pillar (Section 1.3) to ensure the contract's purpose is not
+        illegal or against public policy, and the Statute of Frauds
+        (Section 2.1) to determine if a written agreement is legally
+        required.
+      </p>
+    <ul>
+      <li>
+        <p>
+          <em>4.3 Game State:</em> The Game
+            State is a critical system attribute that represents the
+            current <em>Legal Status</em> of
+            the contractual relationship between the Players. This is
+            not a static property but a dynamic one that changes in
+            response to specific, legally significant actions taken by
+            the Players. The lifecycle of a contract is modeled as a
+            sequence of these states. The primary states must include:
+          </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+            NULL: No contractual relationship or pending offer exists.
+          </p>
+      </li>
+      <li>
+        <p>
+            NEGOTIATING: Parties are in the process of defining the Game
+            Configuration.
+          </p>
+      </li>
+      <li>
+        <p>
+            OFFER_PENDING: One party has made a formal offer, and the
+            other party now has the power of acceptance.
+          </p>
+      </li>
+      <li>
+        <p>
+            CONTRACT_FORMED: The offer has been accepted unequivocally,
+            creating a legally binding agreement.
+          </p>
+      </li>
+      <li>
+        <p>
+            PERFORMING: The parties are in the process of fulfilling
+            their respective obligations under the contract.
+          </p>
+      </li>
+      <li>
+        <p>
+            BREACHED: One party has alleged that the other has failed to
+            perform their obligations.
+          </p>
+      </li>
+      <li>
+        <p>
+            MODIFICATION_PENDING: A proposal to alter the terms of a
+            "living" contract has been made and is awaiting
+            acceptance.
+          </p>
+      </li>
+      <li>
+        <p>
+            TERMINATED_PERFORMANCE: All obligations have been fully
+            performed by all parties.
+          </p>
+      </li>
+      <li>
+        <p>
+            TERMINATED_AGREEMENT: The contract has been terminated by
+            mutual consent before full performance.
+          </p>
+      </li>
+      <li>
+        <p>
+            RESCINDED: The contract has been extinguished through a
+            valid act of rescission, restoring the parties to their
+            pre-contract positions.
+          </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+          <em>4.4 Living vs. Irrevocable
+            Contract:</em> This distinction, specified by the
+            user, is controlled by the is_modifiable flag set during the
+            Game Configuration and the inclusion of a modification
+            clause in the contract's terms.
+          </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+            A <em>"Living"
+            Contract</em> (is_modifiable = TRUE) is one that
+            explicitly permits future modification according to a
+            predefined process, as detailed in Section 5.3. This allows
+            the agreement to adapt to changing circumstances without
+            requiring termination and reformation.
+          </p>
+      </li>
+      <li>
+        <p>
+            An <em>"Irrevocable"
+            Contract</em> (is_modifiable = FALSE) is one that does
+            not contain a provision for amendment. Any change to such a
+            contract would be a more complex legal undertaking,
+            requiring either a new contract that supersedes the old one
+            (a novation, see Section 5.4) or a formal mutual agreement
+            to terminate the existing contract and create a new one from
+            scratch.
+          </p>
+      </li>
+    </ul>
+  </section>
+  <section id="section-5-the-contract-lifecycle-a-state-based-model">
+    <h3>
+      <em>Section 5: The Contract Lifecycle:
+      A State-Based Model</em>
+    </h3>
+    <p>
+        The lifecycle of a contract, from initial negotiation to final
+        discharge, can be effectively modeled as a finite state machine.
+        In this model, the Game State represents the current legal
+        status, and specific Player actions trigger transitions between
+        these states. This approach provides a rigorous, logical
+        framework for the system's core engine, ensuring that its
+        behavior mirrors the legally mandated sequence of events in
+        contract law.
+      </p>
+    <section id="s-51-formation-sequence-offer-counter-offer-acceptance-rejection">
+      <h4>
+        <em>5.1 Formation Sequence (Offer,
+        Counter-Offer, Acceptance, Rejection)</em>
+      </h4>
+      <p>
+          The formation of a contract is a precise sequence of events.
+          An offer creates a power of acceptance in the offeree, which
+          can be terminated by several means.62
+        </p>
+      <ul>
+        <li>
+          <p>
+            <em>Data Points:</em> An offer
+              can be revoked by the offeror at any time before
+              acceptance is communicated.4 A rejection or a
+              counter-offer by the offeree immediately terminates the
+              original offer, extinguishing the power of acceptance.12
+              Acceptance must be a "mirror image" of the
+              offer; any deviation constitutes a counter-offer.17
+            </p>
+        </li>
+        <li>
+          <p>
+            <em>State Transitions:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+              MakeOffer(Player A -&gt; Player B): This action takes a
+              validated Game Configuration and presents it to Player B.
+              The system transitions from NEGOTIATING to OFFER_PENDING.
+              The state now reflects that Player B holds the power of
+              acceptance.
+            </p>
+        </li>
+        <li>
+          <p>
+              AcceptOffer(Player B): If Player B agrees to all terms
+              without modification, this action transitions the state
+              from OFFER_PENDING to CONTRACT_FORMED. A binding agreement
+              now exists.
+            </p>
+        </li>
+        <li>
+          <p>
+              RejectOffer(Player B): An explicit refusal by Player B.
+              This action terminates the offer and transitions the state
+              from OFFER_PENDING back to NULL.
+            </p>
+        </li>
+        <li>
+          <p>
+              RevokeOffer(Player A): Player A withdraws the offer before
+              Player B has accepted. This action terminates the offer
+              and transitions the state from OFFER_PENDING back to NULL.
+            </p>
+        </li>
+        <li>
+          <p>
+              MakeCounterOffer(Player B -&gt; Player A): Player B
+              responds with modified terms. This action functions as a
+              rejection of A's original offer and the creation of a new
+              offer. The system terminates the original offer and
+              transitions the state to OFFER_PENDING, but now Player A
+              holds the power of acceptance for B's new terms.
+            </p>
+        </li>
+      </ul>
+      <p>
+          A key nuance in California law is the "waiver
+          theory" regarding late acceptances. An acceptance
+          communicated after an offer's stated deadline is technically a
+          counter-offer. However, the original offeror can choose to
+          accept this late acceptance through their words or conduct,
+          effectively "waiving" the untimeliness and forming a
+          contract.66 The system should model this. If an
+        </p>
+      <p>
+          AcceptOffer action occurs after the offer's
+          expiration_timestamp, the system should not simply reject it.
+          Instead, it could transition to a unique state like
+          LATE_ACCEPTANCE_PENDING_WAIVER, which would then prompt the
+          original offeror to either confirm their acceptance of the
+          late tender or reject it.
+        </p>
+    </section>
+    <section id="s-52-performance-and-breach">
+      <h4>
+        <em>5.2 Performance and
+        Breach</em>
+      </h4>
+      <p>
+          Once a contract is formed, the parties have a legal duty to
+          perform their respective obligations.22 Failure to do so
+          without a valid excuse constitutes a breach of contract.20
+        </p>
+      <ul>
+        <li>
+          <p>
+            <em>State Transitions:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+              BeginPerformance(Player A/B): This action signifies that
+              one or both parties have started to fulfill their
+              contractual duties. It transitions the state from
+              CONTRACT_FORMED to PERFORMING.
+            </p>
+        </li>
+        <li>
+          <p>
+              CompletePerformance(Both Players): When all parties have
+              fully and satisfactorily completed all their obligations,
+              this action transitions the state from PERFORMING to
+              TERMINATED_PERFORMANCE. The contract is discharged.
+            </p>
+        </li>
+        <li>
+          <p>
+              AllegeBreach(Player A -&gt; Player B): If Player A
+              believes Player B has failed to perform, Player A can take
+              this action. This transitions the state from PERFORMING to
+              BREACHED. This state change would pause other contractual
+              actions and trigger an internal dispute resolution module,
+              where evidence of performance or non-performance could be
+              presented.
+            </p>
+        </li>
+      </ul>
+    </section>
+    <section id="s-53-modification-of-a-living-contract">
+      <h4>
+        <em>5.3 Modification of a
+        "Living" Contract</em>
+      </h4>
+      <p>
+          For contracts designated as "living" (is_modifiable
+          = TRUE), the system must provide a mechanism for amendment
+          that complies with California law.
+        </p>
+      <ul>
+        <li>
+          <p>
+            <em>Data Points:</em> California
+              Civil Code § 1698 governs the modification of written
+              contracts. A written contract can be modified by another
+              contract in writing.67 It may also be modified by an oral
+              agreement, but only under specific conditions: (1) the
+              oral agreement is supported by <em>new
+              consideration</em>, and the contract as modified
+              does not fall under the Statute of Frauds; or (2) the oral
+              agreement has been "executed" (fully performed)
+              by the parties.67
+            </p>
+        </li>
+        <li>
+          <p>
+            <em>State Transitions:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+              ProposeModification(Player A): This action can only be
+              initiated from the PERFORMING state if the contract is
+              "living." The proposing Player must define the
+              proposed changes and, crucially, specify the
+              <em>new consideration</em> that
+              both parties will exchange for the modification. This
+              transitions the state to MODIFICATION_PENDING.
+            </p>
+        </li>
+        <li>
+          <p>
+              AcceptModification(Player B): If Player B agrees to the
+              proposed changes and the new consideration, this action
+              transitions the state from MODIFICATION_PENDING back to
+              PERFORMING, but now under the newly amended terms.
+            </p>
+        </li>
+        <li>
+          <p>
+              RejectModification(Player B): If Player B rejects the
+              proposal, the state transitions from MODIFICATION_PENDING
+              back to PERFORMING under the original, unmodified terms.
+            </p>
+        </li>
+      </ul>
+      <p>
+          The requirement for new consideration is a critical
+          gatekeeping function for the system. It prevents one-sided
+          modifications where one Player attempts to impose new duties
+          on the other without offering anything of value in return.
+          Such a modification would be legally unenforceable as a
+          gratuitous promise.
+        </p>
+    </section>
+    <section id="s-54-termination-rescission-and-novation">
+      <h4>
+        <em>5.4 Termination, Rescission, and
+        Novation</em>
+      </h4>
+      <p>
+          The end of a contract's life can occur in several ways, each
+          with a distinct legal meaning and consequence.
+        </p>
+      <ul>
+        <li>
+          <p>
+            <em>Data Points:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Termination:</em> This is
+              the lawful end of a contract. It can occur upon full
+              performance (TERMINATED_PERFORMANCE) 70, by the mutual
+              agreement of the parties ( TERMINATED_AGREEMENT) 70, or as
+              a remedy for a material breach.70 Contracts with no
+              specified duration are generally terminable at will by
+              either party after a reasonable time and with reasonable
+              notice.72
+            </p>
+        </li>
+        <li>
+          <p>
+            <em>Rescission:</em> This is a
+              remedy that "extinguishes" the contract,
+              treating it as if it never existed.54 It is available for
+              the vitiating factors discussed in Section 3 (fraud,
+              duress, etc.) and for a material failure of
+              consideration.54 The rescinding party must act promptly
+              upon discovering the grounds for rescission and must
+              restore (or offer to restore) any benefits received under
+              the contract.56
+            </p>
+        </li>
+        <li>
+          <p>
+            <em>Novation:</em> This is the
+              substitution of a new obligation or a new party for an
+              existing one, done with the intent to extinguish the old
+              contract.75 Novation is itself a contract and requires the
+              consent of all original parties, plus any new parties
+              being substituted in.75
+            </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>State Transitions:</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+              ProposeTermination(Player A) followed by
+              AcceptTermination(Player B): This sequence, initiated from
+              the PERFORMING state, transitions the state to
+              TERMINATED_AGREEMENT.
+            </p>
+        </li>
+        <li>
+          <p>
+              InvokeRescission(Player A): This powerful action, a
+              primary function of the X-Card, can be taken from the
+              CONTRACT_FORMED or PERFORMING states. It immediately
+              transitions the state to RESCINDED and triggers the
+              process of restoring the parties to their pre-contract
+              positions.
+            </p>
+        </li>
+        <li>
+          <p>
+              ProposeNovation(All Parties): This complex action requires
+              the consent of all involved parties. It effectively
+              transitions the old contract's state to NULL (as it is
+              extinguished) and simultaneously initiates the formation
+              sequence for a new contract, which, upon acceptance, would
+              enter the CONTRACT_FORMED state.
+            </p>
+        </li>
+      </ul>
+      
+        <table>
+          
+          <tbody>
+            <tr>
+              <td>
+                  **Table 2: Contract State Transition Matrix
+                  (Simplified Example)**
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  **Current State**
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  NULL
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  OFFER\_PENDING
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  OFFER\_PENDING
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  OFFER\_PENDING
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  CONTRACT\_FORMED
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  PERFORMING
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  PERFORMING
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  PERFORMING
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      
+      <p>
+          This state transition matrix serves as a clear, logical
+          blueprint for the system's core engine. By mapping each
+          legally significant action to a specific change in the Game
+          State, it provides an unambiguous specification for the
+          system's behavior. This ensures that the system's workflow
+          directly mirrors the legally required sequences of contract
+          law, preventing invalid state transitions (e.g., a transition
+          from NULL directly to BREACHED) and ensuring the logical and
+          legal integrity of the contracts it manages.
+        </p>
+    </section>
+  </section>
+  <section id="section-6-the-x-card-as-a-dynamic-consent-and-rescission-mechanism">
+    <h3>
+      <em>Section 6: The "X-Card"
+      as a Dynamic Consent and Rescission Mechanism</em>
+    </h3>
+    <p>
+        The "X-Card" is the most innovative feature of the
+        "Really Tender Contract" system. To be legally sound,
+        it cannot function as a simple, arbitrary "cancel
+        button." Instead, it must be implemented as a
+        sophisticated, context-sensitive tool that abstracts and
+        operationalizes several distinct legal rights related to
+        consent, withdrawal, and fairness. This section synthesizes the
+        research on rejection, vitiating factors, and rescission to
+        provide a robust model for this feature. The legal effect of
+        invoking the X-Card must depend entirely on the Game State at
+        the moment of its use.
+      </p>
+    <section id="s-61-context-dependent-functionality">
+      <h4>
+        <em>6.1 Context-Dependent
+        Functionality</em>
+      </h4>
+      <p>
+          The power and legal meaning of the X-Card shift based on the
+          contract's lifecycle stage.
+        </p>
+      <ul>
+        <li>
+          <p>
+            <em>Invocation During Pre-Contractual
+              Stages (NEGOTIATING or OFFER_PENDING):</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Legal Analogue:</em> When
+              invoked before a contract is formed, the X-Card is legally
+              equivalent to a
+              <em>Rejection</em> of a pending
+              offer or a withdrawal from negotiations. An offer creates
+              a power of acceptance in the offeree, but this power is
+              terminated by an act of rejection.36 A rejection is an
+              unequivocal refusal that "kills" the offer,
+              meaning the offeree cannot later change their mind and
+              accept it.36
+            </p>
+        </li>
+        <li>
+          <p>
+            <em>System Implementation:</em>
+              If a Player invokes the X-Card while the Game State is
+              OFFER_PENDING, the system should treat this as a
+              RejectOffer action. The pending offer is terminated, and
+              the Game State reverts to NULL. No reason needs to be
+              provided by the Player, as they are under no obligation to
+              accept an offer. This provides a simple, clear, and
+              legally sound "out" during the formation phase.
+            </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Invocation During Post-Contractual
+              Stages (CONTRACT_FORMED or PERFORMING):</em>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Legal Analogue:</em> Once a
+              contract is formed, a unilateral withdrawal is no longer a
+              simple rejection; it is an attempt to undo a binding
+              agreement. In this context, invoking the X-Card is an act
+              of <em>Rescission</em> or an
+              assertion of a defense to formation. Rescission is the
+              legal remedy for contracts entered into without free and
+              real consent.54 It is only available on specific legal
+              grounds.55
+            </p>
+        </li>
+        <li>
+          <p>
+            <em>System Implementation:</em>
+              When a Player invokes the X-Card from a CONTRACT_FORMED or
+              PERFORMING state, the system must prompt them to select a
+              reason for their action. This is not merely for data
+              collection; it is to establish the potential legal basis
+              for rescission. The user-friendly reasons presented to the
+              Player must be mapped directly to the legal doctrines that
+              vitiate consent:
+            </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <em>Player selects: "I felt
+              pressured/coerced."</em> The system maps this
+              to a claim of <em>Duress or Undue
+              Influence</em>.4
+            </p>
+        </li>
+        <li>
+          <p>
+            <em>Player selects: "I was
+              misled/lied to."</em> The system maps this to a
+              claim of <em>Fraud or
+              Misrepresentation</em>.4
+            </p>
+        </li>
+        <li>
+          <p>
+            <em>Player selects: "The terms
+              are shockingly unfair."</em> The system maps
+              this to a claim of
+              <em>Unconscionability</em>.58
+            </p>
+        </li>
+        <li>
+          <p>
+            <em>Player selects: "The other
+              party is not holding up their end."</em> The
+              system maps this to a material
+              <em>Failure of
+              Consideration</em>.54
+            </p>
+        </li>
+        <li>
+          <p>
+            <em>Player selects: "This
+              agreement is against the public interest."</em>
+              The system maps this to a claim that the contract is void
+              as against <em>Public
+              Policy</em>.23
+            </p>
+        </li>
+      </ul>
+      <p>
+          This mapping is the critical translation layer that gives the
+          X-Card its legal weight. Upon invocation post-formation, the
+          system logs the action and the asserted legal basis (e.g.,
+          InvokeRescission(Player_B, reason=DURESS)). The Game State
+          then transitions to RESCISSION_PENDING. This does not
+          automatically validate the claim but initiates a dispute
+          resolution process within the system. The burden then shifts
+          to the invoking Player to substantiate their claim, and the
+          other Player is given an opportunity to respond. If the claim
+          is validated (either by agreement or through a dispute
+          resolution outcome), the state moves to RESCINDED, and the
+          system guides the parties through the process of restoring any
+          consideration exchanged.
+        </p>
+      
+        <table>
+          
+          <tbody>
+            <tr>
+              <td>
+                  **Table 3: Mapping the "X-Card" to
+                  California Legal Doctrines**
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  **Game State at Invocation**
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  OFFER\_PENDING
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  CONTRACT\_FORMED
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  CONTRACT\_FORMED
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  PERFORMING
+                </td>
+            </tr>
+            <tr>
+              <td>
+                  PERFORMING
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      
+      <p>
+          This table provides the functional specification for the
+          X-Card, offering a clear, rule-based decision tree for its
+          implementation. It ensures that the system handles this
+          powerful feature not as a blunt instrument, but as a nuanced
+          tool that triggers the correct legal pathway based on the
+          specific context of the interaction. This approach makes the
+          system's response legally coherent and defensible, fulfilling
+          the user's requirement to base the rules on the innate
+          characteristics of the X-Card and the requirements for an
+          enforceable contract.
+        </p>
+    </section>
+  </section>
+</section>

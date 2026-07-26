@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="open-research-ai-pro-tos-analysis" xml:lang="en">
   <xi:include href="open-research-ai-pro-tos-analysis.meta.xml" />
-  <title>An Analysis of Open Deep Research Implementations for a Personal Introspection Toolchain and an Examination of Google AI Services Licensing Compatibility</title>
   <xi:include href="open-research-ai-pro-tos-analysis/01-part-i-the-technological-foundation-for-a-personal-introspection-engine.xml" />
   <xi:include href="open-research-ai-pro-tos-analysis/02-part-ii-legal-compliance-analysis-navigating-the-terms-of-service.xml" />
   <xi:include href="open-research-ai-pro-tos-analysis/03-part-iii-synthesis-and-strategic-recommendations.xml" />

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <dc:title>Consolidated References &amp; Bibliography</dc:title>
-  <dc:date>2026-07-22</dc:date>
-  <dc:identifier>https://github.com/metavacua/legal-theory/blob/main/docs/bibliography/references.xml</dc:identifier>
-  <dc:subject>bibliography</dc:subject>
-  <xi:include href="../common/shared-metadata.xml" />
+  <title>Consolidated References &amp; Bibliography</title>
+  <pubdate>2026-07-22</pubdate>
+  <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/bibliography/references.xml</biblioid>
+  <subjectset><subject><subjectterm>bibliography</subjectterm></subject></subjectset>
+  <dc:type>Text</dc:type>
+  <xi:include href="../common/authorgroup.xml" />
+  <xi:include href="../common/legalnotice.xml" />
 </info>

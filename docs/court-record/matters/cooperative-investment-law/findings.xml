@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="findings" xml:lang="en">
   <xi:include href="findings.meta.xml" />
-  <title>Findings of Fact and Conclusions of Law</title>
   <xi:include href="findings/01-matter-cooperative-investment-law-and-patron-securities.xml" />
   <xi:include href="findings/02-findings-of-fact.xml" />
   <xi:include href="findings/03-conclusions-of-law.xml" />

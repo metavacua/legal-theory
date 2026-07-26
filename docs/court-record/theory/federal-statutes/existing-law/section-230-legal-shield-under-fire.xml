@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="section-230-legal-shield-under-fire" xml:lang="en">
   <xi:include href="section-230-legal-shield-under-fire.meta.xml" />
-  <title>The Constitutional Paradox of Section 230: A Legal Analysis of Intermediary Immunity and the Digital Public Sphere</title>
   <xi:include href="section-230-legal-shield-under-fire/01-introduction-the-twenty-six-words-that-shaped-the-internet-and-the-constitutional-challenges-they-provoke.xml" />
   <xi:include href="section-230-legal-shield-under-fire/02-part-i-the-statutory-and-juridical-architecture-of-intermediary-immunity.xml" />
   <xi:include href="section-230-legal-shield-under-fire/03-part-ii-the-first-amendment-collision---editorial-discretion-vs-state-regulation.xml" />

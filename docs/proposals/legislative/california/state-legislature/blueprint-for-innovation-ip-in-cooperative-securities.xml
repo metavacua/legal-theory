@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="blueprint-for-innovation-ip-in-cooperative-securities" xml:lang="en">
   <xi:include href="blueprint-for-innovation-ip-in-cooperative-securities.meta.xml" />
-  <title>Blueprint for Innovation: Securing Intellectual Property in Novel Cooperative Securities</title>
   <xi:include href="blueprint-for-innovation-ip-in-cooperative-securities/01-introduction-from-concept-to-concrete-instrument.xml" />
   <xi:include href="blueprint-for-innovation-ip-in-cooperative-securities/02-section-i-the-legal-instrument-as-copyrightable-expression.xml" />
   <xi:include href="blueprint-for-innovation-ip-in-cooperative-securities/03-section-ii-the-technology-stack-as-patentable-invention.xml" />

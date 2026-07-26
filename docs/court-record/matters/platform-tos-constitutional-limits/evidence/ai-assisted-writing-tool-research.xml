@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="ai-assisted-writing-tool-research" xml:lang="en">
   <xi:include href="ai-assisted-writing-tool-research.meta.xml" />
-  <title>The Scribe: An Architectural Blueprint for a Next-Generation Creative Writing Platform</title>
   <xi:include href="ai-assisted-writing-tool-research/01-the-contemporary-creative-writing-toolset-a-critical-analysis.xml" />
   <xi:include href="ai-assisted-writing-tool-research/02-architecting-the-narrative-core-a-unified-data-model-for-the-scribe.xml" />
   <xi:include href="ai-assisted-writing-tool-research/03-beyond-save-as-implementing-true-version-control-for-storytelling.xml" />

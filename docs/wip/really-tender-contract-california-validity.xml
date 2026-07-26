@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="really-tender-contract-california-validity" xml:lang="en">
   <xi:include href="really-tender-contract-california-validity.meta.xml" />
-  <title>Report on the Legal Framework and Rule Set for the "Really Tender Contract" System</title>
   <xi:include href="really-tender-contract-california-validity/01-part-i-the-legal-architecture-of-an-enforceable-contract-in-california.xml" />
   <xi:include href="really-tender-contract-california-validity/02-part-ii-mapping-legal-principles-to-the-really-tender-contract-system.xml" />
   <xi:include href="really-tender-contract-california-validity/03-part-iii-constructing-witnesses-the-rule-set-in-action.xml" />

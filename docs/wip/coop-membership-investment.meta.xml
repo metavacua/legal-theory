@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <dc:title>Coop Membership Investment — Phase 1: The "Risk Capital" Security</dc:title>
-  <dc:date>2026-07-22</dc:date>
-  <dc:identifier>https://github.com/metavacua/legal-theory/blob/main/docs/wip/coop-membership-investment.xml</dc:identifier>
-  <dc:subject>work in progress</dc:subject>
-  <xi:include href="../common/shared-metadata.xml" />
+  <title>Coop Membership Investment — Phase 1: The "Risk Capital" Security</title>
+  <pubdate>2026-07-22</pubdate>
+  <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/wip/coop-membership-investment.xml</biblioid>
+  <subjectset><subject><subjectterm>work in progress</subjectterm></subject></subjectset>
+  <dc:type>Text</dc:type>
+  <xi:include href="../common/authorgroup.xml" />
+  <xi:include href="../common/legalnotice.xml" />
 </info>

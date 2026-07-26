@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="california-worker-misclassification-risk-analysis" xml:lang="en">
   <xi:include href="california-worker-misclassification-risk-analysis.meta.xml" />
-  <title>The Implicit Workforce: Systemic Misclassification and Fiduciary Risk in the Platform Economy Under California Law</title>
   <xi:include href="california-worker-misclassification-risk-analysis/01-executive-summary.xml" />
   <xi:include href="california-worker-misclassification-risk-analysis/02-part-i-the-paradigm-shift-in-california-worker-classification.xml" />
   <xi:include href="california-worker-misclassification-risk-analysis/03-part-ii-an-ecosystem-at-risk-applying-the-abc-test-to-platform-labor-models.xml" />

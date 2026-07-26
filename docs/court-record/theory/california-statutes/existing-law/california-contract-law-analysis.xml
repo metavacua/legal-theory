@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="california-contract-law-analysis" xml:lang="en">
   <xi:include href="california-contract-law-analysis.meta.xml" />
-  <title>Structuring Service-Free Acquisition of Future Artwork in California: A Legal Analysis and Framework</title>
   <xi:include href="california-contract-law-analysis/01-part-i-foundational-legal-principles-in-california.xml" />
   <xi:include href="california-contract-law-analysis/02-part-ii-characterization-of-the-transaction-under-commercial-and-labor-law.xml" />
   <xi:include href="california-contract-law-analysis/03-part-iii-proposed-service-free-contract-models-and-defensibility-analysis.xml" />

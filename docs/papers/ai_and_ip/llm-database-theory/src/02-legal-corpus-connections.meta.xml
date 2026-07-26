@@ -1,40 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<info xmlns="http://docbook.org/ns/docbook"
-      xmlns:dc="http://purl.org/dc/terms/"
-      xmlns:xi="http://www.w3.org/2001/XInclude">
-
-  <dc:title>Legal Corpus Connections: How the LLM-Database Theory Connects to Existing Matters in This Repository</dc:title>
-  <dc:subject>copyright-ip-authorship; platform-ToS constitutional limits; AGPL derivative works; database-retrieval-vs-speech; GPL poison pill; findings of fact; conclusions of law</dc:subject>
-  <dc:description>Maps the LLM-database theory established in the companion article onto three existing matters in this repository: copyright-ip-authorship (six findings of fact and two conclusions of law ready for stub completion), platform-ToS constitutional limits (the database-retrieval-vs-speech distinction), and AGPL derivative-works (the technical premise underlying the GPL "poison pill" argument as applied to model weights).</dc:description>
-  <dc:date>2026-07-01</dc:date>
-  <dc:identifier>https://github.com/metavacua/legal-theory/blob/main/docs/papers/ai_and_ip/llm-database-theory/src/02-legal-corpus-connections.xml</dc:identifier>
-  <xi:include href="../../../../common/shared-metadata.xml"/>
-
-  <bibliomisc role="schema-org-jsonld"><![CDATA[
-{
-  "@context": "https://schema.org",
-  "@type": "ScholarlyArticle",
-  "name": "Legal Corpus Connections",
-  "headline": "Legal Corpus Connections: How the LLM-Database Theory Connects to Existing Matters in This Repository",
-  "datePublished": "2026-07-01",
-  "inLanguage": "en",
-  "author": {
-    "@type": "Person",
-    "name": "Ian D.L.N. McLean",
-    "email": "metavacua@gmail.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "metavacua/legal-theory",
-    "url": "https://github.com/metavacua/legal-theory"
-  },
-  "keywords": ["copyright-ip-authorship","platform-ToS","constitutional limits","AGPL","derivative works","database law"],
-  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "isPartOf": {
-    "@type": "Collection",
-    "name": "legal-theory: AI and Intellectual Property"
-  }
-}
-  ]]></bibliomisc>
-
+<info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Legal Corpus Connections: How the LLM-Database Theory Connects to Existing Matters in This Repository</title>
+  <pubdate>2026-07-25</pubdate>
+  <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/papers/ai_and_ip/llm-database-theory/src/02-legal-corpus-connections.xml</biblioid>
+  <subjectset><subject><subjectterm>papers</subjectterm></subject></subjectset>
+  <dc:type>Text</dc:type>
+  <xi:include href="../../../../common/authorgroup.xml" />
+  <xi:include href="../../../../common/legalnotice.xml" />
 </info>

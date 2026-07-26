@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="knowledge-graph-ca-service-contracts" xml:lang="en">
   <xi:include href="knowledge-graph-ca-service-contracts.meta.xml" />
-  <title>Knowledge Graph — CA Service Contracts (Semantic Knowledge Graph Strategy)</title>
   <para>
   This analysis outlines a comprehensive strategy for improving context
   access and management of the provided documents, adopting the

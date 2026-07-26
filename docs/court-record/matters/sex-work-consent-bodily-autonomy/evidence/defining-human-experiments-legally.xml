@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="defining-human-experiments-legally" xml:lang="en">
   <xi:include href="defining-human-experiments-legally.meta.xml" />
-  <title>The Legal Architecture of Human Experimentation: A Definitive Analysis of U.S. Regulations and Ethical Imperatives</title>
   <xi:include href="defining-human-experiments-legally/01-part-i-the-ethical-foundations-of-human-research-protections.xml" />
   <xi:include href="defining-human-experiments-legally/02-part-ii-the-us-federal-framework-deconstructing-the-common-rule-45-cfr-46.xml" />
   <xi:include href="defining-human-experiments-legally/03-part-iii-global-perspectives-and-harmonization.xml" />

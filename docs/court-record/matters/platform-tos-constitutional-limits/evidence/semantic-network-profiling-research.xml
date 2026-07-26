@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="semantic-network-profiling-research" xml:lang="en">
   <xi:include href="semantic-network-profiling-research.meta.xml" />
-  <title>Semantic System Profiling: An Architectural Blueprint for Knowledge-Driven Network Automation</title>
   <xi:include href="semantic-network-profiling-research/01-section-1-the-automation-imperative-in-heterogeneous-network-ecosystems.xml" />
   <xi:include href="semantic-network-profiling-research/02-section-2-core-technologies-for-a-machine-understandable-network.xml" />
   <xi:include href="semantic-network-profiling-research/03-section-3-architecture-of-the-semantic-system-profiler-ssp.xml" />

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="legal-framework-for-artistic-commissions" xml:lang="en">
   <xi:include href="legal-framework-for-artistic-commissions.meta.xml" />
-  <title>A Fortified Legal Framework for Artistic Commissions in California: Strategy, Compliance, and Risk Mitigation</title>
   <xi:include href="legal-framework-for-artistic-commissions/01-part-i-foundational-principles-of-contract-law-for-artistic-commissions.xml" />
   <xi:include href="legal-framework-for-artistic-commissions/02-part-ii-a-modular-contract-architecture-the-msa-and-sow.xml" />
   <xi:include href="legal-framework-for-artistic-commissions/03-part-iii-navigating-the-labyrinth-of-california-employment-law.xml" />

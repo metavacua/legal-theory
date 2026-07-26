@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="cooperative-tradeable-securities-research" xml:lang="en">
   <xi:include href="cooperative-tradeable-securities-research.meta.xml" />
-  <title>Structuring a California Cooperative with Tradable Membership Securities: A Legal and Strategic Blueprint</title>
   <xi:include href="cooperative-tradeable-securities-research/01-executive-summary.xml" />
   <xi:include href="cooperative-tradeable-securities-research/02-part-i-foundational-legal-tax-frameworks.xml" />
   <xi:include href="cooperative-tradeable-securities-research/03-part-ii-designing-the-cooperative-entity-and-its-governance.xml" />

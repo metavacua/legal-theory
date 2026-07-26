@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <dc:title>The Laudable Contract: A New Jurisprudence for Licit Sexual Service Agreements</dc:title>
-  <dc:date>2026-07-22</dc:date>
-  <dc:identifier>https://github.com/metavacua/legal-theory/blob/main/docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-laudable-contract-licit-sexual-service-agreements.xml</dc:identifier>
-  <dc:subject>legal matter: sex work consent bodily autonomy</dc:subject>
-  <xi:include href="../../../../common/shared-metadata.xml" />
+  <title>The Laudable Contract: A New Jurisprudence for Licit Sexual Service Agreements</title>
+  <pubdate>2026-07-22</pubdate>
+  <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-laudable-contract-licit-sexual-service-agreements.xml</biblioid>
+  <subjectset><subject><subjectterm>legal matter: sex work consent bodily autonomy</subjectterm></subject></subjectset>
+  <dc:type>Text</dc:type>
+  <xi:include href="../../../../common/authorgroup.xml" />
+  <xi:include href="../../../../common/legalnotice.xml" />
 </info>

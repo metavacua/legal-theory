@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="legal-actions-without-consent-draft" xml:lang="en">
   <xi:include href="legal-actions-without-consent-draft.meta.xml" />
-  <title>The Architecture of Non-Consensual Legality: A Report on Actions, Organizations, and Social Behaviors Insensitive to Consent</title>
   <xi:include href="legal-actions-without-consent-draft/01-introduction-the-consent-paradox-in-a-liberal-society.xml" />
   <xi:include href="legal-actions-without-consent-draft/02-part-i-the-philosophical-and-legal-foundations-of-consent.xml" />
   <xi:include href="legal-actions-without-consent-draft/03-part-ii-the-states-prerogative-legitimate-coercion-and-the-irrelevance-of-consent.xml" />

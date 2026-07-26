@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="ai-assisted-art-tools-for-comics" xml:lang="en">
   <xi:include href="ai-assisted-art-tools-for-comics.meta.xml" />
-  <title>The Creator's Stake: A Report on AI-Assisted Art Tools and Copyright Ownership for the Modern Graphic Novelist</title>
   <xi:include href="ai-assisted-art-tools-for-comics/01-part-i-the-legal-framework-for-creative-ownership-in-the-age-of-ai.xml" />
   <xi:include href="ai-assisted-art-tools-for-comics/02-part-ii-in-depth-analysis-of-professional-graphic-novel-creation-suites.xml" />
   <xi:include href="ai-assisted-art-tools-for-comics/03-part-iii-strategic-recommendations-and-best-practices.xml" />

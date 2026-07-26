@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <dc:title>A Comprehensive Blueprint for an Integrated Community Support Ecosystem</dc:title>
-  <dc:date>2026-07-22</dc:date>
-  <dc:identifier>https://github.com/metavacua/legal-theory/blob/main/docs/court-record/matters/cooperative-investment-law/evidence/community-care-cooperatives.xml</dc:identifier>
-  <dc:subject>legal matter: cooperative investment law</dc:subject>
-  <xi:include href="../../../../common/shared-metadata.xml" />
+  <title>A Comprehensive Blueprint for an Integrated Community Support Ecosystem</title>
+  <pubdate>2026-07-22</pubdate>
+  <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/court-record/matters/cooperative-investment-law/evidence/community-care-cooperatives.xml</biblioid>
+  <subjectset><subject><subjectterm>legal matter: cooperative investment law</subjectterm></subject></subjectset>
+  <dc:type>Text</dc:type>
+  <xi:include href="../../../../common/authorgroup.xml" />
+  <xi:include href="../../../../common/legalnotice.xml" />
 </info>

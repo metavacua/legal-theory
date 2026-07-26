@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="cooperative-securities-in-the-global-marketplace" xml:lang="en">
   <xi:include href="cooperative-securities-in-the-global-marketplace.meta.xml" />
-  <title>Cooperative Securities in the Global Marketplace: A Multi-Jurisdictional Analysis</title>
   <xi:include href="cooperative-securities-in-the-global-marketplace/01-executive-summary.xml" />
   <xi:include href="cooperative-securities-in-the-global-marketplace/02-part-i-the-us-legal-regulatory-framework.xml" />
   <xi:include href="cooperative-securities-in-the-global-marketplace/03-part-ii-the-public-markets-listing-trading-rules.xml" />

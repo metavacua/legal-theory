@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <dc:title>The Nexus of Consent and Consideration: A Legal Framework for Navigating Modern Relationships in California</dc:title>
-  <dc:date>2026-07-22</dc:date>
-  <dc:identifier>https://github.com/metavacua/legal-theory/blob/main/docs/court-record/theory/california-statutes/existing-law/california-sex-contracts-and-consent.xml</dc:identifier>
-  <dc:subject>legal theory: california statutes -- existing law</dc:subject>
-  <xi:include href="../../../../common/shared-metadata.xml" />
+  <title>The Nexus of Consent and Consideration: A Legal Framework for Navigating Modern Relationships in California</title>
+  <pubdate>2026-07-22</pubdate>
+  <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/court-record/theory/california-statutes/existing-law/california-sex-contracts-and-consent.xml</biblioid>
+  <subjectset><subject><subjectterm>legal theory: california statutes -- existing law</subjectterm></subject></subjectset>
+  <dc:type>Text</dc:type>
+  <xi:include href="../../../../common/authorgroup.xml" />
+  <xi:include href="../../../../common/legalnotice.xml" />
 </info>

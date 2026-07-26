@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="llms-as-categorical-systems" xml:lang="en">
   <xi:include href="llms-as-categorical-systems.meta.xml" />
-  <title>Large Language Models as Categories: An Exploration of Internal Logics</title>
   <xi:include href="llms-as-categorical-systems/01-i-introduction-the-convergence-of-large-language-models-and-category-theory.xml" />
   <xi:include href="llms-as-categorical-systems/02-ii-foundational-pillars-llm-architectures-and-categorical-concepts.xml" />
   <xi:include href="llms-as-categorical-systems/03-iii-deconstructing-llms-categorical-interpretations-of-components-and-processes.xml" />

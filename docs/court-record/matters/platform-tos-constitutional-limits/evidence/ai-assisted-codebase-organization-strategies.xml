@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="ai-assisted-codebase-organization-strategies" xml:lang="en">
   <xi:include href="ai-assisted-codebase-organization-strategies.meta.xml" />
-  <title>The Intelligent Monorepo: A Strategic Framework for Consolidating and Automating a Polyglot Codebase with Google Jules</title>
   <xi:include href="ai-assisted-codebase-organization-strategies/01-executive-summary-introduction-from-digital-attic-to-intelligent-asset.xml" />
   <xi:include href="ai-assisted-codebase-organization-strategies/02-i-foundational-strategy-architecting-the-melting-pot-for-ai-driven-management.xml" />
   <xi:include href="ai-assisted-codebase-organization-strategies/03-ii-the-migration-protocol-a-phased-approach-from-digital-attic-to-controlled-repository.xml" />

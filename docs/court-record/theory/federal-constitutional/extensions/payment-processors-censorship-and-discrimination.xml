@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="payment-processors-censorship-and-discrimination" xml:lang="en">
   <xi:include href="payment-processors-censorship-and-discrimination.meta.xml" />
-  <title>The New Gatekeepers: Payment Processor Discretion as a Vector for Censorship and Discriminatory Enforcement Under California Law</title>
   <xi:include href="payment-processors-censorship-and-discrimination/01-part-i-the-architecture-of-control-acceptable-use-policies-as-a-private-regulatory-regime.xml" />
   <xi:include href="payment-processors-censorship-and-discrimination/02-part-ii-a-pattern-of-arbitrary-and-discriminatory-enforcement.xml" />
   <xi:include href="payment-processors-censorship-and-discrimination/03-part-iii-liability-under-californias-unruh-civil-rights-act-denial-of-service-as-arbitrary-discrimination.xml" />

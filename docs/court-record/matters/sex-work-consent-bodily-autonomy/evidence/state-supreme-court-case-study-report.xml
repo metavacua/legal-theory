@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="state-supreme-court-case-study-report" xml:lang="en">
   <xi:include href="state-supreme-court-case-study-report.meta.xml" />
-  <title>The Final Word: A Study of Landmark Jurisprudence in American State Supreme Courts</title>
   <xi:include href="state-supreme-court-case-study-report/01-introduction-the-unseen-laboratories-of-american-law.xml" />
   <xi:include href="state-supreme-court-case-study-report/02-part-i-state-constitutions-as-independent-charters-of-liberty.xml" />
   <xi:include href="state-supreme-court-case-study-report/03-part-ii-the-common-law-engine-state-courts-as-architects-of-modern-tort-and-contract-law.xml" />

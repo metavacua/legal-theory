@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="first-amendment-landmark-cases-research" xml:lang="en">
   <xi:include href="first-amendment-landmark-cases-research.meta.xml" />
-  <title>The First Amendment Canon: An Analytical Compendium of 100 Landmark Cases</title>
   <xi:include href="first-amendment-landmark-cases-research/01-part-i-the-architecture-of-first-amendment-jurisprudence.xml" />
   <xi:include href="first-amendment-landmark-cases-research/02-part-ii-freedom-of-speech.xml" />
   <xi:include href="first-amendment-landmark-cases-research/03-part-iii-freedom-of-the-press.xml" />

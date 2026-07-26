@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="ai-assisted-copyrightable-work-schema" xml:lang="en">
   <xi:include href="ai-assisted-copyrightable-work-schema.meta.xml" />
-  <title>A Formalized Legal and Data Framework for AI-Assisted Copyrightable Works</title>
   <xi:include href="ai-assisted-copyrightable-work-schema/01-introduction-navigating-copyright-in-the-age-of-generative-ai.xml" />
   <xi:include href="ai-assisted-copyrightable-work-schema/02-part-i-the-foundation-of-copyrightability-human-authorship-in-the-ai-era.xml" />
   <xi:include href="ai-assisted-copyrightable-work-schema/03-part-ii-formalizing-the-conditions-for-an-ai-assisted-copyrightable-work.xml" />

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="from-intangible-to-investment-ip-securitization" xml:lang="en">
   <xi:include href="from-intangible-to-investment-ip-securitization.meta.xml" />
-  <title>From Intangible to Investment — IP Securitization: Foundational Concepts</title>
   <xi:include href="from-intangible-to-investment-ip-securitization/01-part-i-foundational-concepts.xml" />
   <xi:include href="from-intangible-to-investment-ip-securitization/02-part-ii-landmark-transactions-and-sectoral-evolution.xml" />
   <xi:include href="from-intangible-to-investment-ip-securitization/03-part-iii-the-regulatory-and-valuation-framework.xml" />

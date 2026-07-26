@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="securitizing-cooperative-membership-voting-rights" xml:lang="en">
   <xi:include href="securitizing-cooperative-membership-voting-rights.meta.xml" />
-  <title>The Membership Security: Structuring a New Asset Class from the Principles of Cooperative Law</title>
   <xi:include href="securitizing-cooperative-membership-voting-rights/01-part-i-the-legal-and-structural-foundation-of-california-cooperatives.xml" />
   <xi:include href="securitizing-cooperative-membership-voting-rights/02-part-ii-the-securities-law-gauntlet-navigating-federal-and-state-regulation.xml" />
   <xi:include href="securitizing-cooperative-membership-voting-rights/03-part-iii-architecting-the-cooperative-membership-security-cms-a-new-asset-class.xml" />

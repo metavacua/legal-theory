@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="llm-data-vs-program" xml:lang="en">
   <xi:include href="llm-data-vs-program.meta.xml" />
-  <title>Isolating the Influence of Data in Large Language Models: A Data-Centric Comparative Analysis</title>
   <xi:include href="llm-data-vs-program/01-s-1-introduction-separating-data-from-program-in-large-language-models.xml" />
   <xi:include href="llm-data-vs-program/02-s-2-characterizing-the-data-portion-of-large-language-models.xml" />
   <xi:include href="llm-data-vs-program/03-s-3-evaluating-performance-and-behavioral-differences-attributable-to-data.xml" />

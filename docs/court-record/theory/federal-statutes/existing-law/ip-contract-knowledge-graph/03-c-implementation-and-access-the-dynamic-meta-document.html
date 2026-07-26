@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<section id="c-implementation-and-access-the-dynamic-meta-document">
+  <h2>
+    <em>C. Implementation and Access: The
+  Dynamic Meta-Document</em>
+  </h2>
+  <p>
+    The implementation strategy focuses on transforming the static
+    corpus into this dynamic structure and providing intuitive access.
+  </p>
+  <section id="s-1-ingestion-and-enrichment">
+    <h3>
+      <em>1. Ingestion and
+    Enrichment</em>
+    </h3>
+    <ul>
+      <li>
+        <p>
+          <em>Argument Atomization:</em>
+          Documents are processed to identify discrete claims,
+          definitions, evidence, and counter-arguments. This moves
+          beyond simple keyword tagging to identifying the logical
+          structure of the text.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>NLP Assistance and
+          Curation:</em> Utilize Natural Language Processing (NLP)
+          tools for entity recognition and relationship extraction,
+          followed by expert curation to ensure the logical integrity of
+          the arguments is captured and mapped according to the
+          ontology.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Graph Database Storage:</em> The
+          structured data (entities and relationships) is stored in a
+          graph database, optimized for traversing complex connections.
+        </p>
+      </li>
+    </ul>
+  </section>
+  <section id="s-2-access-and-synthesis-the-user-experience">
+    <h3>
+      <em>2. Access and Synthesis (The User
+    Experience)</em>
+    </h3>
+    <p>
+      The strategy shifts access from retrieving static documents to
+      dynamically synthesizing knowledge based on the user's query.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <em>Concept-Based Querying:</em> The
+          primary interface allows users to ask complex, conceptual
+          questions rather than search for keywords.
+        </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+          <em>Example Query:</em> "Analyze the
+          compliance risks of using a Work-for-Hire agreement with a
+          hobbyist artist in California."
+        </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+          <em>Dynamic Synthesis:</em> The
+          system does not retrieve a pre-written document. Instead, it
+          traverses the knowledge graph, identifying all relevant nodes
+          and edges related to the query.
+        </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+          <em>KG Traversal Example:</em> For the query
+          above, the system traverses: [WFH Agreement] -&gt; [Triggers
+          Statutory Employment (CA)]. It also traverses: [Hobbyist]
+          -&gt; [Inherently Fails Prong C].
+        </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+          <em>The Meta-Document Output:</em>
+          The system synthesizes this traversed information into a
+          coherent, structured response—a dynamically generated
+          "meta-document" tailored to the query, citing the
+          underlying logic and source concepts.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Visualization and Gap
+          Analysis:</em> Provide interactive visualizations of the
+          KG. This allows users to explore the connections between
+          concepts visually and identify gaps in the knowledge base or
+          weaknesses in the arguments.
+        </p>
+      </li>
+    </ul>
+  </section>
+</section>

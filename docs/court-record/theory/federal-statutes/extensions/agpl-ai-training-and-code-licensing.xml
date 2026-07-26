@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="agpl-ai-training-and-code-licensing" xml:lang="en">
   <xi:include href="agpl-ai-training-and-code-licensing.meta.xml" />
-  <title>An Architectural and Legal Analysis of the SynthPlayground Initiative: A Framework for Agentic Self-Improvement</title>
   <xi:include href="agpl-ai-training-and-code-licensing/01-part-i-a-technical-framework-for-agentic-introspection.xml" />
   <xi:include href="agpl-ai-training-and-code-licensing/02-part-ii-a-forensic-analysis-of-the-governing-legal-frameworks.xml" />
   <xi:include href="agpl-ai-training-and-code-licensing/03-part-iii-the-central-conflict-ai-training-derivative-works-and-copyright.xml" />

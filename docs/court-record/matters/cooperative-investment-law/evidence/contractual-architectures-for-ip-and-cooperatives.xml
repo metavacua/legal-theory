@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="contractual-architectures-for-ip-and-cooperatives" xml:lang="en">
   <xi:include href="contractual-architectures-for-ip-and-cooperatives.meta.xml" />
-  <title>Architecting the Resilient Enterprise: Contractual, Corporate, and Financial Frameworks for the New Economy</title>
   <xi:include href="contractual-architectures-for-ip-and-cooperatives/01-part-i-the-central-fault-line-labor-and-intellectual-property-in-the-digital-economy.xml" />
   <xi:include href="contractual-architectures-for-ip-and-cooperatives/02-part-ii-the-compliant-architecture-mitigating-risk-in-creative-collaboration.xml" />
   <xi:include href="contractual-architectures-for-ip-and-cooperatives/03-part-iii-the-cooperative-solution-foundations-of-a-resilient-alternative.xml" />

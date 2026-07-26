@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="ip-securitization-historical-research" xml:lang="en">
   <xi:include href="ip-securitization-historical-research.meta.xml" />
-  <title>From Intangible to Investment: A Comprehensive History of Intellectual Property Securitization</title>
   <xi:include href="ip-securitization-historical-research/01-part-i-foundations-and-emergence.xml" />
   <xi:include href="ip-securitization-historical-research/02-part-ii-landmark-transactions-and-sectoral-evolution.xml" />
   <xi:include href="ip-securitization-historical-research/03-part-iii-the-regulatory-and-valuation-framework.xml" />
