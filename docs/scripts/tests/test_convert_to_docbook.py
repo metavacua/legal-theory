@@ -290,6 +290,10 @@ class TestSplitIntoFragments(unittest.TestCase):
 
 class TestWriteMetadata(unittest.TestCase):
     def test_write_metadata_produces_well_formed_xincludable_info(self):
+        # Superseded by the native-first shape (Task 2 of the DocBook-native
+        # corpus standardization plan): the resolved xi:includes now point at
+        # docs/common/authorgroup.xml and legalnotice.xml (native DocBook
+        # elements), not the deleted dc:*-only docs/common/shared-metadata.xml.
         from convert_to_docbook import write_metadata
         fixtures = Path(__file__).resolve().parent / "fixtures"
         meta_path = fixtures / "tmp.meta.xml"
@@ -297,24 +301,24 @@ class TestWriteMetadata(unittest.TestCase):
         tree = ET.parse(meta_path)
         root = tree.getroot()
         self.assertEqual(root.tag, f"{DB_NS}info")
-        dc_ns = "{http://purl.org/dc/terms/}"
-        title_el = root.find(f"{dc_ns}title")
+        title_el = root.find(f"{DB_NS}title")
         self.assertEqual(title_el.text, "A Flat Document")
 
         xi_ns = "{http://www.w3.org/2001/XInclude}"
         includes = root.findall(f"{xi_ns}include")
-        self.assertEqual(len(includes), 1)
+        self.assertEqual(len(includes), 2)
 
         resolved = subprocess.run(
             ["xmllint", "--xinclude", str(meta_path)],
             capture_output=True, text=True, check=True,
         ).stdout
         resolved_root = ET.fromstring(resolved)
-        rights_el = resolved_root.find(f".//{dc_ns}rights")
-        self.assertIsNotNone(rights_el)
-        self.assertEqual(rights_el.text, "CC BY-SA 4.0")
-        publisher_el = resolved_root.find(f".//{dc_ns}publisher")
-        self.assertEqual(publisher_el.text, "metavacua/legal-theory (GitHub)")
+        author_el = resolved_root.find(f".//{DB_NS}authorgroup/{DB_NS}author/{DB_NS}personname/{DB_NS}surname")
+        self.assertIsNotNone(author_el)
+        self.assertEqual(author_el.text, "McLean")
+        legalnotice_el = resolved_root.find(f".//{DB_NS}legalnotice")
+        self.assertIsNotNone(legalnotice_el)
+        self.assertIn("CC BY-SA 4.0", "".join(legalnotice_el.itertext()))
 
         meta_path.unlink()
 
@@ -324,8 +328,7 @@ class TestWriteMetadata(unittest.TestCase):
         meta_path = fixtures / "tmp2.meta.xml"
         write_metadata(meta_path, "Torts & Contracts: A < B Comparison")
         tree = ET.parse(meta_path)  # must not raise
-        dc_ns = "{http://purl.org/dc/terms/}"
-        title_el = tree.getroot().find(f"{dc_ns}title")
+        title_el = tree.getroot().find(f"{DB_NS}title")
         self.assertEqual(title_el.text, "Torts & Contracts: A < B Comparison")
         meta_path.unlink()
 
@@ -690,31 +693,118 @@ class TestWriteMetadataDcterms(unittest.TestCase):
         )
 
     def test_write_metadata_adds_dcterms_fields(self):
-        from convert_to_docbook import write_metadata, REPO_ROOT, DC_NS
+        # Native-first shape (Task 2): title/pubdate/biblioid/subjectset are
+        # native DocBook elements; dc:type is the only surviving DCTERMS
+        # extension. subject defaults via derive_subject() when omitted --
+        # "work in progress" is docs/wip's derived subject.
+        from convert_to_docbook import write_metadata, REPO_ROOT, DB_NS, DC_NS
         out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
         self.addCleanup(shutil.rmtree, out_dir)
         meta_path = out_dir / "sample.meta.xml"
         write_metadata(meta_path, "Sample Title")
 
         root = ET.parse(meta_path).getroot()
-        self.assertEqual(root.find(f"{{{DC_NS}}}title").text, "Sample Title")
-        self.assertEqual(root.find(f"{{{DC_NS}}}subject").text, "work in progress")
-        self.assertRegex(root.find(f"{{{DC_NS}}}date").text, r"^\d{4}-\d{2}-\d{2}$")
+        self.assertEqual(root.find(f"{{{DB_NS}}}title").text, "Sample Title")
+        subjectterm = root.find(f"{{{DB_NS}}}subjectset/{{{DB_NS}}}subject/{{{DB_NS}}}subjectterm")
+        self.assertEqual(subjectterm.text, "work in progress")
+        self.assertRegex(root.find(f"{{{DB_NS}}}pubdate").text, r"^\d{4}-\d{2}-\d{2}$")
         self.assertTrue(
-            root.find(f"{{{DC_NS}}}identifier").text.startswith(
+            root.find(f"{{{DB_NS}}}biblioid").text.startswith(
                 "https://github.com/metavacua/legal-theory/blob/main/"
             )
         )
+        self.assertEqual(root.find(f"{{{DC_NS}}}type").text, "Text")
 
     def test_write_metadata_accepts_explicit_subject_override(self):
-        from convert_to_docbook import write_metadata, REPO_ROOT, DC_NS
+        from convert_to_docbook import write_metadata, REPO_ROOT, DB_NS
         out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
         self.addCleanup(shutil.rmtree, out_dir)
         meta_path = out_dir / "sample.meta.xml"
         write_metadata(meta_path, "Sample Title", subject="a custom subject")
 
         root = ET.parse(meta_path).getroot()
-        self.assertEqual(root.find(f"{{{DC_NS}}}subject").text, "a custom subject")
+        subjectterm = root.find(f"{{{DB_NS}}}subjectset/{{{DB_NS}}}subject/{{{DB_NS}}}subjectterm")
+        self.assertEqual(subjectterm.text, "a custom subject")
+
+
+class TestWriteMetadataNativeShape(unittest.TestCase):
+    def test_emits_native_title_inside_info(self):
+        from convert_to_docbook import write_metadata, REPO_ROOT, DB_NS
+        out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
+        self.addCleanup(shutil.rmtree, out_dir)
+        meta_path = out_dir / "sample.meta.xml"
+        write_metadata(meta_path, "Sample Title")
+
+        root = ET.parse(meta_path).getroot()
+        self.assertEqual(root.tag, f"{{{DB_NS}}}info")
+        title_el = root.find(f"{{{DB_NS}}}title")
+        self.assertIsNotNone(title_el)
+        self.assertEqual(title_el.text, "Sample Title")
+
+    def test_emits_native_pubdate_biblioid_subjectset(self):
+        from convert_to_docbook import write_metadata, REPO_ROOT, DB_NS
+        out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
+        self.addCleanup(shutil.rmtree, out_dir)
+        meta_path = out_dir / "sample.meta.xml"
+        write_metadata(meta_path, "Sample Title", subject="work in progress")
+
+        root = ET.parse(meta_path).getroot()
+        self.assertRegex(root.find(f"{{{DB_NS}}}pubdate").text, r"^\d{4}-\d{2}-\d{2}$")
+        biblioid = root.find(f"{{{DB_NS}}}biblioid")
+        self.assertEqual(biblioid.get("class"), "uri")
+        self.assertTrue(biblioid.text.startswith("https://github.com/metavacua/legal-theory/blob/main/"))
+        subjectterm = root.find(f"{{{DB_NS}}}subjectset/{{{DB_NS}}}subject/{{{DB_NS}}}subjectterm")
+        self.assertEqual(subjectterm.text, "work in progress")
+
+    def test_dc_type_is_the_only_remaining_dcterms_element(self):
+        from convert_to_docbook import write_metadata, REPO_ROOT, DB_NS, DC_NS
+        out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
+        self.addCleanup(shutil.rmtree, out_dir)
+        meta_path = out_dir / "sample.meta.xml"
+        write_metadata(meta_path, "Sample Title")
+
+        root = ET.parse(meta_path).getroot()
+        dc_elements = [el for el in root.iter() if el.tag.startswith(f"{{{DC_NS}}}")]
+        self.assertEqual(len(dc_elements), 1)
+        self.assertEqual(dc_elements[0].tag, f"{{{DC_NS}}}type")
+        self.assertEqual(dc_elements[0].text, "Text")
+
+    def test_includes_authorgroup_and_legalnotice(self):
+        from convert_to_docbook import write_metadata, REPO_ROOT, XI_NS
+        out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
+        self.addCleanup(shutil.rmtree, out_dir)
+        meta_path = out_dir / "sample.meta.xml"
+        write_metadata(meta_path, "Sample Title")
+
+        root = ET.parse(meta_path).getroot()
+        includes = root.findall(f"{{{XI_NS}}}include")
+        hrefs = {el.get("href") for el in includes}
+        self.assertEqual(len(includes), 2)
+        self.assertTrue(any(h.endswith("common/authorgroup.xml") for h in hrefs))
+        self.assertTrue(any(h.endswith("common/legalnotice.xml") for h in hrefs))
+
+    def test_full_resolved_document_validates_against_real_docbook_5_2(self):
+        from convert_to_docbook import write_metadata, fetch_docbook_schema, REPO_ROOT
+        out_dir = Path(tempfile.mkdtemp(dir=REPO_ROOT / "docs" / "wip"))
+        self.addCleanup(shutil.rmtree, out_dir)
+        meta_path = out_dir / "sample.meta.xml"
+        write_metadata(meta_path, "Sample Title", subject="work in progress")
+        article_path = out_dir / "sample.xml"
+        article_path.write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<article xmlns="http://docbook.org/ns/docbook" '
+            'xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="s" xml:lang="en">\n'
+            '  <xi:include href="sample.meta.xml"/>\n'
+            '  <para>Body content.</para>\n'
+            '</article>\n',
+            encoding="utf-8",
+        )
+        schema = fetch_docbook_schema()
+        result = subprocess.run(
+            ["jing", "-c", str(schema), str(article_path)],
+            capture_output=True, text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
 
 class TestFetchDocbookSchema(unittest.TestCase):

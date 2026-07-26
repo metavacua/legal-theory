@@ -245,18 +245,20 @@ def write_metadata(meta_path, title, subject=None):
     docs_dir = (REPO_ROOT / "docs").resolve()
     meta_dir = meta_path.resolve().parent
     depth = len(meta_dir.relative_to(docs_dir).parts)
-    shared_href = "../" * depth + "common/shared-metadata.xml"
+    prefix = "../" * depth + "common/"
     escaped_title = xml_escape(title)
     resolved_subject = subject if subject is not None else derive_subject(meta_path)
     date = derive_date(meta_path)
     identifier = derive_identifier(meta_path)
     content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="{XI_NS}">
-  <dc:title>{escaped_title}</dc:title>
-  <dc:date>{date}</dc:date>
-  <dc:identifier>{xml_escape(identifier)}</dc:identifier>
-  <dc:subject>{xml_escape(resolved_subject)}</dc:subject>
-  <xi:include href="{shared_href}" />
+  <title>{escaped_title}</title>
+  <pubdate>{date}</pubdate>
+  <biblioid class="uri">{xml_escape(identifier)}</biblioid>
+  <subjectset><subject><subjectterm>{xml_escape(resolved_subject)}</subjectterm></subject></subjectset>
+  <dc:type>Text</dc:type>
+  <xi:include href="{prefix}authorgroup.xml" />
+  <xi:include href="{prefix}legalnotice.xml" />
 </info>
 """
     meta_path.write_text(content, encoding="utf-8")
