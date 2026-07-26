@@ -133,3 +133,139 @@ class TestCorpusWideConformanceReport(unittest.TestCase):
         report = corpus_wide_report(REPO_ROOT / "docs")
         self.assertEqual(report["total_nonstandard_entries"], 5482)
         self.assertEqual(report["documents_with_nonstandard_entries"], 88)
+
+
+class TestMeasureNumberedCitationPattern(unittest.TestCase):
+    """The Deep-Research-style pattern confirmed 2026-07-26 by direct
+    comparison against the real Google Drive original for
+    llms-as-categorical-systems: a numbered works-cited list plus glued
+    inline markers ("word.N", no space, immediately after a letter -- a
+    real sentence-ending period is never glued to the next character)
+    that correspond positionally to that list. See that document's own
+    fragments for the verified real-world example this fixture logic is
+    built from."""
+
+    def _write(self, content):
+        out_dir = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, out_dir)
+        path = out_dir / "sample.xml"
+        path.write_text(content, encoding="utf-8")
+        return path
+
+    def test_glued_markers_within_list_range_are_plausible(self):
+        from measure_citation_conformance import measure_numbered_citation_pattern
+        path = self._write("""<?xml version="1.0"?>
+<article xmlns="http://docbook.org/ns/docbook" version="5.2" xml:id="t" xml:lang="en">
+  <title>T</title>
+  <para>LLMs process trillions of parameters.1 They also exhibit long-range dependencies.2</para>
+  <section xml:id="works-cited">
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem><para>Entry one</para></listitem>
+      <listitem><para>Entry two</para></listitem>
+    </orderedlist>
+  </section>
+</article>
+""")
+        result = measure_numbered_citation_pattern(path)
+        self.assertEqual(result["works_cited_count"], 2)
+        self.assertEqual(result["plausible_marker_count"], 2)
+        self.assertEqual(result["implausible_marker_count"], 0)
+
+    def test_marker_number_exceeding_list_length_is_implausible(self):
+        from measure_citation_conformance import measure_numbered_citation_pattern
+        path = self._write("""<?xml version="1.0"?>
+<article xmlns="http://docbook.org/ns/docbook" version="5.2" xml:id="t" xml:lang="en">
+  <title>T</title>
+  <para>This cites entry five.5 which does not exist in the list.</para>
+  <section xml:id="works-cited">
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem><para>Only entry</para></listitem>
+    </orderedlist>
+  </section>
+</article>
+""")
+        result = measure_numbered_citation_pattern(path)
+        self.assertEqual(result["works_cited_count"], 1)
+        self.assertEqual(result["plausible_marker_count"], 0)
+        self.assertEqual(result["implausible_marker_count"], 1)
+
+    def test_no_works_cited_list_makes_any_glued_digit_implausible(self):
+        from measure_citation_conformance import measure_numbered_citation_pattern
+        path = self._write("""<?xml version="1.0"?>
+<article xmlns="http://docbook.org/ns/docbook" version="5.2" xml:id="t" xml:lang="en">
+  <title>T</title>
+  <para>A stray glued number.3 with no works-cited section at all.</para>
+</article>
+""")
+        result = measure_numbered_citation_pattern(path)
+        self.assertEqual(result["works_cited_count"], 0)
+        self.assertEqual(result["plausible_marker_count"], 0)
+        self.assertEqual(result["implausible_marker_count"], 1)
+
+    def test_decimal_numbers_are_not_false_positives(self):
+        """A decimal like "3.5 percent" must never match -- the digit
+        before the period, not a letter, is the signal that distinguishes
+        it from a glued citation marker like "parameters.1"."""
+        from measure_citation_conformance import measure_numbered_citation_pattern
+        path = self._write("""<?xml version="1.0"?>
+<article xmlns="http://docbook.org/ns/docbook" version="5.2" xml:id="t" xml:lang="en">
+  <title>T</title>
+  <para>The measurement increased by 3.5 percent over the period.</para>
+  <section xml:id="works-cited">
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem><para>Entry one</para></listitem>
+    </orderedlist>
+  </section>
+</article>
+""")
+        result = measure_numbered_citation_pattern(path)
+        self.assertEqual(result["plausible_marker_count"], 0)
+        self.assertEqual(result["implausible_marker_count"], 0)
+
+    def test_ordinary_sentence_boundary_is_not_a_false_positive(self):
+        """"...end of sentence. New sentence starts..." must never match --
+        a real sentence-ending period is always followed by a space before
+        the next word/number, unlike a glued marker."""
+        from measure_citation_conformance import measure_numbered_citation_pattern
+        path = self._write("""<?xml version="1.0"?>
+<article xmlns="http://docbook.org/ns/docbook" version="5.2" xml:id="t" xml:lang="en">
+  <title>T</title>
+  <para>This is the end of a sentence. 2 people reviewed it afterward.</para>
+  <section xml:id="works-cited">
+    <orderedlist numeration="arabic" spacing="compact">
+      <listitem><para>Entry one</para></listitem>
+      <listitem><para>Entry two</para></listitem>
+    </orderedlist>
+  </section>
+</article>
+""")
+        result = measure_numbered_citation_pattern(path)
+        self.assertEqual(result["plausible_marker_count"], 0)
+        self.assertEqual(result["implausible_marker_count"], 0)
+
+    def test_real_document_confirmed_against_the_drive_original(self):
+        """llms-as-categorical-systems: verified 2026-07-26 by direct
+        comparison against its real Google Drive source -- 82 works-cited
+        entries, full content and order intact through the DocBook
+        conversion, with glued inline markers scattered across all 8 of
+        its atomized fragments referencing that one shared list."""
+        from measure_citation_conformance import REPO_ROOT, measure_numbered_citation_pattern
+        path = (
+            REPO_ROOT / "docs" / "court-record" / "theory" / "federal-constitutional"
+            / "extensions" / "llms-as-categorical-systems.xml"
+        )
+        result = measure_numbered_citation_pattern(path)
+        self.assertEqual(result["works_cited_count"], 82)
+        self.assertGreater(result["plausible_marker_count"], 0)
+
+
+class TestCorpusWideNumberedCitationReport(unittest.TestCase):
+    def test_real_corpus_baseline(self):
+        from measure_citation_conformance import REPO_ROOT, corpus_wide_numbered_citation_report
+        report = corpus_wide_numbered_citation_report(REPO_ROOT / "docs")
+        self.assertIn("documents_with_plausible_numbered_pattern", report)
+        self.assertIn("total_plausible_markers", report)
+        self.assertIn("total_implausible_markers", report)
+        # llms-as-categorical-systems is a real, verified positive -- must
+        # always show up in the corpus-wide sweep, not just the isolated test.
+        self.assertGreaterEqual(report["documents_with_plausible_numbered_pattern"], 1)

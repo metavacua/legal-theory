@@ -12,6 +12,7 @@ measure_citation_conformance() per file as documents get converted, to
 verify -- against real standard tooling, not this project's own opinion
 -- that a document actually flipped from red to green."""
 
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -20,6 +21,17 @@ from xml.etree import ElementTree as ET
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from convert_to_docbook import DB_NS, REPO_ROOT, XML_NS  # noqa: E402
 from build_bibliography import extract_all_raw_entries  # noqa: E402
+
+# A letter immediately followed by a period immediately followed by 1-2
+# digits, immediately followed by whitespace/end -- the signature of a
+# flattened Deep-Research-style footnote marker (e.g. "parameters.1"),
+# confirmed 2026-07-26 against the real Google Drive original for
+# llms-as-categorical-systems. The letter-before-period requirement is
+# what excludes decimal numbers ("3.5 percent" has a digit, not a letter,
+# before the period); the no-space-after-period requirement is what
+# excludes an ordinary sentence boundary ("sentence. Next" always has a
+# space; a glued marker never does).
+_GLUED_MARKER_RE = re.compile(r"[A-Za-z]\.(\d{1,2})(?=\s|$)")
 
 
 def measure_citation_conformance(xml_path):
@@ -110,11 +122,68 @@ def corpus_wide_report(docs_dir):
     }
 
 
+def measure_numbered_citation_pattern(xml_path):
+    """dict describing the Deep-Research-style numbered-citation pattern
+    for one shell article, resolved via xmllint --xinclude: a numbered
+    works-cited list plus glued inline markers ("word.N") that
+    correspond positionally to it. A marker only counts as plausible
+    when the document actually has a works-cited list long enough to
+    contain entry N -- without that, a glued digit is almost certainly
+    unrelated noise, not a citation marker."""
+    xml_path = Path(xml_path)
+    resolved = subprocess.run(
+        ["xmllint", "--xinclude", str(xml_path)],
+        capture_output=True, text=True, check=True,
+    ).stdout
+    root = ET.fromstring(resolved)
+
+    works_cited_count = 0
+    for section in root.iter(f"{{{DB_NS}}}section"):
+        if section.get(f"{{{XML_NS}}}id") == "works-cited":
+            works_cited_count += len(list(section.iter(f"{{{DB_NS}}}listitem")))
+
+    plausible = 0
+    implausible = 0
+    for para in root.iter(f"{{{DB_NS}}}para"):
+        text = "".join(para.itertext())
+        for match in _GLUED_MARKER_RE.finditer(text):
+            n = int(match.group(1))
+            if works_cited_count and 1 <= n <= works_cited_count:
+                plausible += 1
+            else:
+                implausible += 1
+
+    return {
+        "works_cited_count": works_cited_count,
+        "plausible_marker_count": plausible,
+        "implausible_marker_count": implausible,
+    }
+
+
+def corpus_wide_numbered_citation_report(docs_dir):
+    documents_with_plausible = 0
+    total_plausible = 0
+    total_implausible = 0
+    for xml_path in _shell_articles(docs_dir):
+        result = measure_numbered_citation_pattern(xml_path)
+        if result["plausible_marker_count"] > 0:
+            documents_with_plausible += 1
+        total_plausible += result["plausible_marker_count"]
+        total_implausible += result["implausible_marker_count"]
+
+    return {
+        "documents_with_plausible_numbered_pattern": documents_with_plausible,
+        "total_plausible_markers": total_plausible,
+        "total_implausible_markers": total_implausible,
+    }
+
+
 def main(argv=None):
     argv = argv if argv is not None else sys.argv[1:]
     if argv:
         for path in argv:
             print(f"{path}: {measure_citation_conformance(path)}")
+            print(f"{path}: {measure_numbered_citation_pattern(path)}")
         return 0
     report = corpus_wide_report(REPO_ROOT / "docs")
     print(
@@ -125,6 +194,13 @@ def main(argv=None):
     print(
         f"Citation markers: {report['total_resolved_citations']} resolved, "
         f"{report['total_unresolved_citations']} unresolved"
+    )
+    numbered_report = corpus_wide_numbered_citation_report(REPO_ROOT / "docs")
+    print(
+        f"Deep-Research-style numbered citation pattern: "
+        f"{numbered_report['documents_with_plausible_numbered_pattern']} documents, "
+        f"{numbered_report['total_plausible_markers']} plausible markers, "
+        f"{numbered_report['total_implausible_markers']} implausible/unrelated"
     )
     return 0
 
