@@ -4,41 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Language Models Are Databases: A Technical and Legal Position Paper on LLMs and Intellectual Property</title>
-<meta name="DC.title" content="Language Models Are Databases: A Technical and Legal Position Paper on LLMs and Intellectual Property">
-<meta name="DC.creator" content="Ian D.L.N. McLean (authored); Claude Sonnet 4.6 (research assistant, 2026-07-01)">
-<meta name="DC.subject" content="large language models; graph databases; intellectual property; copyright; LARQL; mechanistic interpretability; derivative works; collective works; database law; GDPR; transformer architecture; knowledge graphs">
-<meta name="DC.description" content="A transformer's weights constitute a queryable graph database of the works it was built from. Chris Hay's LARQL (Lazarus Query Language) supplies the query interface that reads those entries back—entities, relations, directed edges—and writes them into ordinary model files unchanged. Arithmetic storage is still storage; the machine-perceptibility test for fixation predates modern AI and fits without strain. A model that regenerates Harry Potter near-verbatim or renders Superman on demand contains those works, and the settled law of copies, compilations, and distribution is the law that governs it. This paper establishes the technical isomorphism, assembles the empirical memorisation record, and draws the legal conclusions that follow directly from both.">
-<meta name="DC.date" content="2026-07-01">
-<meta name="DC.type" content="ScholarlyArticle">
+<title>Legal Corpus Connections: How the LLM-Database Theory Connects to Existing Matters in This Repository</title>
+<meta name="DC.title" content="Legal Corpus Connections: How the LLM-Database Theory Connects to Existing Matters in This Repository">
+<meta name="DC.creator" content="Ian McLean">
+<meta name="DC.subject" content="papers">
+<meta name="DC.date" content="2026-07-25">
+<meta name="DC.type" content="Text">
 <meta name="DC.language" content="en">
-<meta name="DC.rights" content="CC BY-SA 4.0">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ScholarlyArticle",
-  "name": "Language Models Are Databases",
-  "headline": "Language Models Are Databases: A Technical and Legal Position Paper on LLMs and Intellectual Property",
-  "datePublished": "2026-07-01",
-  "inLanguage": "en",
-  "author": {
-    "@type": "Person",
-    "name": "Ian D.L.N. McLean",
-    "email": "metavacua@gmail.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "metavacua/legal-theory",
-    "url": "https://github.com/metavacua/legal-theory"
-  },
-  "keywords": ["large language models","graph databases","intellectual property","copyright","LARQL","derivative works","database law","GDPR"],
-  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "isPartOf": {
-    "@type": "Collection",
-    "name": "legal-theory: AI and Intellectual Property"
-  }
-}
-  </script><style>
+<meta name="DC.rights" content="
+  Copyright © 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This document publishes general legal analysis and does not constitute legal advice.
+">
+<style>
           :root {
             --ink: #101922;
             --ink-soft: #3f4f5c;
@@ -110,14 +86,9 @@
 </head>
 <body>
 <nav class="site-nav"><a href="/legal-theory/">legal-theory</a> · <a href="/legal-theory/index.html">Index</a></nav>
-  <header class="doc-header"><h1>Language Models Are Databases: A Technical and Legal Position Paper on LLMs and Intellectual Property</h1>
+  <header class="doc-header"><h1>Legal Corpus Connections: How the LLM-Database Theory Connects to Existing Matters in This Repository</h1>
 <p class="byline">
-        By Ian D.L.N. McLean — 2026-07-01</p>
-<div class="abstract">
-    <p>A trained language model is a database of the works it was built from. Chris Hay's LARQL (Lazarus Query Language) is an open-source Rust tool that extracts a transformer's weights into a <em>vindex</em>—a vector index—and exposes a query language, LQL, that returns labelled directed edges directly out of the weight tensors. The model's feed-forward network (FFN) layers map isomorphically to knowledge-graph nodes and edges; a forward pass is computationally equivalent to a k-nearest-neighbour graph walk. LARQL further demonstrates that individual edges can be inserted, retrieved, and compiled back into standard model formats without retraining. The storage is arithmetic, but arithmetic storage is still storage: the machine-perceptibility test for copyright fixation covers any form in which a work can be reproduced with the aid of a machine. Peer-reviewed extraction studies confirm that frontier LLMs deterministically regenerate copyrighted books (Cooper et al. 2025) and near-identical training images (Carlini et al. 2023) from their weights. The conclusion that follows is not novel: a model trained on protected works is a derivative work and a collective work; distributing it distributes copies; operating it reproduces them. No new statute is required. Database law and the law of copies, both old and well-settled, reach this case directly.</p>
-  </div></header>
-  
-  
+        By Ian D.L.N. McLean — 2026-07-25</p></header>
   <section id="preamble">
   <h2>Purpose of This Article</h2>
   <p>This article maps the LLM-database theory developed in the primary article (<a href="#llm-database-theory"></a>) to the specific matters, theories, and evidence already present in the <em>metavacua/legal-theory</em> repository. It serves two functions: first, to show that the database theory is not a standalone novelty but coheres with and reinforces existing arguments in the corpus; second, to identify findings of fact that the primary article supports and that should be incorporated into the relevant matters' findings documents.</p>

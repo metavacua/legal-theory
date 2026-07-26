@@ -79,9 +79,9 @@ class TestAtomizeExistingDocument(unittest.TestCase):
         self.assertEqual(title_el.text, "Styled Title")
 
     def test_rolls_back_on_validation_failure(self):
-        # Simulate a corrupt shell by making the schema fail: strip the
-        # xml:id off a section, which docbook-corpus.rnc's finding-section
-        # pattern doesn't apply here, so instead corrupt well-formedness
+        # Simulate a corrupt shell by making the schema fail: rather than
+        # relying on a specific real-DocBook-grammar rejection (fragile --
+        # the exact rule that trips could change), corrupt well-formedness
         # directly to force validate() to fail deterministically.
         original_text = self.xml_path.read_text(encoding="utf-8")
         original_meta_text = self.meta_path.read_text(encoding="utf-8")
@@ -155,10 +155,10 @@ class TestAtomizeExistingDocument(unittest.TestCase):
 class TestMetaMatchesSharedShape(unittest.TestCase):
     """Direct unit coverage of _meta_matches_shared_shape()'s structural
     check, isolated from the full atomize_existing_document() pipeline
-    (which also calls the real jing/docbook-corpus.rnc validate() step --
-    a separate, already-tracked pre-existing gap unrelated to this
-    function; see docs/superpowers/plans -- so these tests exercise the
-    guard function directly rather than going through validate())."""
+    (which also calls the real, fetched DocBook 5.2 validate() step --
+    a separate concern unrelated to this function -- so these tests
+    exercise the guard function directly rather than going through
+    validate())."""
 
     def setUp(self):
         self.tmp_dir = Path(__file__).resolve().parent / "fixtures" / "meta_shape_tmp"

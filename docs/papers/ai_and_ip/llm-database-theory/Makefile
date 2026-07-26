@@ -4,7 +4,7 @@ TEX_OUTS  := $(patsubst src/%.xml,generated/%.tex,$(SRCS))
 PDF_OUTS  := $(patsubst src/%.xml,generated/%.pdf,$(SRCS))
 # *.meta.xml files are XInclude fragments (<db:info>, XIncluded into each
 # article's <db:info> slot) — they have no <db:article> root, so they
-# aren't standalone documents docbook-corpus.rnc's `start` pattern can
+# aren't standalone documents the DocBook 5.2 `start` pattern can
 # validate against the article shape.
 ARTICLES  := $(filter-out %.meta.xml,$(SRCS))
 
@@ -20,10 +20,14 @@ validate: $(SRCS)
 	  echo "    $$f"; \
 	  xmllint --noout --xinclude "$$f"; \
 	done
-	@echo "==> Custom RELAX NG validation"
+	@echo "==> Real DocBook 5.2 RELAX NG validation"
+	@mkdir -p ../../../../.cache/docbook-5.2
+	@test -f ../../../../.cache/docbook-5.2/docbookxi.rnc || \
+	  curl -fsSL -o ../../../../.cache/docbook-5.2/docbookxi.rnc \
+	    https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc
 	@which jing >/dev/null 2>&1 && \
 	  for f in $(ARTICLES); do \
-	    jing -c ../../../schema/docbook-corpus.rnc "$$f" && echo "    OK: $$f" || true; \
+	    jing -c ../../../../.cache/docbook-5.2/docbookxi.rnc "$$f" && echo "    OK: $$f" || true; \
 	  done || echo "    (jing not installed; skipping RELAX NG step)"
 
 # ── HTML5 ────────────────────────────────────────────────────────────────────

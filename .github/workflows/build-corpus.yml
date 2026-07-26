@@ -25,6 +25,10 @@ jobs:
       - name: Validate and rebuild corpus HTML
         run: |
           set -euo pipefail
+          mkdir -p .cache/docbook-5.2
+          test -f .cache/docbook-5.2/docbookxi.rnc || \
+            curl -fsSL -o .cache/docbook-5.2/docbookxi.rnc \
+              https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc
           while IFS= read -r xml; do
             root_element="$(xmllint --xpath 'name(/*)' "$xml" 2>/dev/null || true)"
             if [ "$root_element" != "article" ]; then
@@ -32,7 +36,7 @@ jobs:
             fi
             echo "== $xml =="
             xmllint --noout --xinclude "$xml"
-            jing -c docs/schema/docbook-corpus.rnc "$xml"
+            jing -c .cache/docbook-5.2/docbookxi.rnc "$xml"
             xsltproc --xinclude docs/xsl/html5.xsl "$xml" > "${xml%.xml}.html"
           done < <(find docs -name '*.xml' -not -path '*/scratch/*' -not -path 'docs/papers/*' -not -path 'docs/scripts/*' | sort)
 

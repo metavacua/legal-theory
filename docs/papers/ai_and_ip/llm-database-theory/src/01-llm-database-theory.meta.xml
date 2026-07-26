@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Language Models Are Databases: A Technical and Legal Position Paper on LLMs and Intellectual Property</title>
+  <subtitle>A Technical and Legal Position Paper on LLMs and Intellectual Property</subtitle>
   <pubdate>2026-07-25</pubdate>
   <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory.xml</biblioid>
   <subjectset><subject><subjectterm>papers</subjectterm></subject></subjectset>

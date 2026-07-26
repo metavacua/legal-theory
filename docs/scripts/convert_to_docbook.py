@@ -262,7 +262,6 @@ def write_metadata(meta_path, title, subject=None):
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SCHEMA_PATH = REPO_ROOT / "docs" / "schema" / "docbook-corpus.rnc"
 HTML5_XSL_PATH = REPO_ROOT / "docs" / "xsl" / "html5.xsl"
 
 DOCBOOK_RNC_URL = "https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc"
@@ -296,7 +295,7 @@ def validate(xml_path):
         return errors  # schema validation is meaningless on malformed XML
 
     rng = subprocess.run(
-        ["jing", "-c", str(SCHEMA_PATH), str(xml_path)],
+        ["jing", "-c", str(fetch_docbook_schema()), str(xml_path)],
         capture_output=True, text=True,
     )
     if rng.returncode != 0:

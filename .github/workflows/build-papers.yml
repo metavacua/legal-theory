@@ -17,7 +17,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install DocBook toolchain
-        run: sudo apt-get update && sudo apt-get install -y libxml2-utils xsltproc
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils xsltproc jing
+
+      - name: Validate
+        working-directory: docs/papers/ai_and_ip/llm-database-theory
+        run: make validate
 
       - name: Build HTML
         working-directory: docs/papers/ai_and_ip/llm-database-theory
