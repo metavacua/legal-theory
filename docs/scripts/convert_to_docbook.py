@@ -284,6 +284,35 @@ def fetch_docbook_schema():
     return DOCBOOK_SCHEMA_CACHE
 
 
+def validate_dcterms_completeness(xml_path):
+    """[violation message, ...] for a document (after XInclude resolution)
+    missing any of this project's own required <info> fields: <title>,
+    <pubdate>, <biblioid>, or a dc:type not equal to "Text". DocBook's
+    own grammar correctly has no opinion about any of this -- these are
+    this project's policy, not DocBook's, so they're enforced here in
+    Python rather than forced into RELAX NG or Schematron (both
+    confirmed, elsewhere in this project's tooling, to have real gaps
+    in this environment's jing/xmllint combination)."""
+    resolved = subprocess.run(
+        ["xmllint", "--xinclude", str(xml_path)], capture_output=True, text=True, check=True,
+    ).stdout
+    root = ET.fromstring(resolved)
+    info = root.find(f"{{{DB_NS}}}info")
+    violations = []
+    if info is None:
+        return [f"{xml_path}: missing info"]
+    if info.find(f"{{{DB_NS}}}title") is None:
+        violations.append(f"{xml_path}: missing title")
+    if info.find(f"{{{DB_NS}}}pubdate") is None:
+        violations.append(f"{xml_path}: missing pubdate")
+    if info.find(f"{{{DB_NS}}}biblioid") is None:
+        violations.append(f"{xml_path}: missing biblioid")
+    dc_type = info.find(f"{{{DC_NS}}}type")
+    if dc_type is None or dc_type.text != "Text":
+        violations.append(f"{xml_path}: dc:type must be exactly \"Text\", found {dc_type.text if dc_type is not None else None!r}")
+    return violations
+
+
 def validate(xml_path):
     errors = []
     wf = subprocess.run(
@@ -300,6 +329,8 @@ def validate(xml_path):
     )
     if rng.returncode != 0:
         errors.append(rng.stdout.strip() or rng.stderr.strip())
+
+    errors.extend(validate_dcterms_completeness(xml_path))
     return errors
 
 

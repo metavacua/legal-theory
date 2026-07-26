@@ -853,5 +853,76 @@ class TestWrapFragmentNoSiblingTitle(unittest.TestCase):
         self.assertTrue(any(c.tag == f"{{{DB_NS}}}para" for c in article))
 
 
+class TestValidateDctermsCompleteness(unittest.TestCase):
+    def _write(self, tmp, info_children):
+        path = Path(tmp) / "sample.xml"
+        path.write_text(
+            '<?xml version="1.0"?>\n'
+            '<article xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" version="5.2" xml:id="s" xml:lang="en">\n'
+            f'  <info>{info_children}</info>\n'
+            '  <para>Body.</para>\n'
+            '</article>\n',
+            encoding="utf-8",
+        )
+        return path
+
+    def test_complete_document_has_no_violations(self):
+        from convert_to_docbook import validate_dcterms_completeness
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self._write(
+                tmp,
+                '<title>T</title><pubdate>2026-01-01</pubdate>'
+                '<biblioid class="uri">https://example.com/x</biblioid><dc:type>Text</dc:type>',
+            )
+            self.assertEqual(validate_dcterms_completeness(path), [])
+
+    def test_missing_title_is_flagged(self):
+        from convert_to_docbook import validate_dcterms_completeness
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self._write(
+                tmp,
+                '<pubdate>2026-01-01</pubdate><biblioid class="uri">https://example.com/x</biblioid><dc:type>Text</dc:type>',
+            )
+            violations = validate_dcterms_completeness(path)
+            self.assertEqual(len(violations), 1)
+            self.assertIn("missing title", violations[0])
+
+    def test_missing_pubdate_is_flagged(self):
+        from convert_to_docbook import validate_dcterms_completeness
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self._write(
+                tmp,
+                '<title>T</title><biblioid class="uri">https://example.com/x</biblioid><dc:type>Text</dc:type>',
+            )
+            violations = validate_dcterms_completeness(path)
+            self.assertEqual(len(violations), 1)
+            self.assertIn("missing pubdate", violations[0])
+
+    def test_missing_biblioid_is_flagged(self):
+        from convert_to_docbook import validate_dcterms_completeness
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self._write(tmp, '<title>T</title><pubdate>2026-01-01</pubdate><dc:type>Text</dc:type>')
+            violations = validate_dcterms_completeness(path)
+            self.assertEqual(len(violations), 1)
+            self.assertIn("missing biblioid", violations[0])
+
+    def test_wrong_dc_type_value_is_flagged(self):
+        from convert_to_docbook import validate_dcterms_completeness
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self._write(
+                tmp,
+                '<title>T</title><pubdate>2026-01-01</pubdate>'
+                '<biblioid class="uri">https://example.com/x</biblioid><dc:type>ScholarlyArticle</dc:type>',
+            )
+            violations = validate_dcterms_completeness(path)
+            self.assertEqual(len(violations), 1)
+            self.assertIn("dc:type", violations[0])
+
+    def test_real_corpus_document_has_no_violations(self):
+        from convert_to_docbook import validate_dcterms_completeness, REPO_ROOT
+        path = REPO_ROOT / "docs" / "wip" / "jpa-and-city-cooperatives.xml"
+        self.assertEqual(validate_dcterms_completeness(path), [])
+
+
 if __name__ == "__main__":
     unittest.main()
