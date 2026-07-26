@@ -5,6 +5,10 @@ on:
     branches: [main, claude/llm-database-theory-codification]
     paths:
       - 'docs/papers/**'
+  pull_request:
+    branches: [main, claude/llm-database-theory-codification]
+    paths:
+      - 'docs/papers/**'
   workflow_dispatch: {}
 
 permissions:
@@ -32,7 +36,10 @@ jobs:
           mkdir -p docs/papers/ai_and_ip/llm-database-theory/html
           cp docs/papers/ai_and_ip/llm-database-theory/generated/*.html docs/papers/ai_and_ip/llm-database-theory/html/
 
+      # pull_request events check out a detached, synthetic merge ref -- see
+      # build-corpus.yml for why publishing stays push-only.
       - name: Commit generated HTML
+        if: github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

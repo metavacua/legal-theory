@@ -7,6 +7,12 @@ on:
       - 'docs/**/*.xml'
       - 'docs/xsl/**'
       - '!docs/papers/**'
+  pull_request:
+    branches: [main, claude/llm-database-theory-codification]
+    paths:
+      - 'docs/**/*.xml'
+      - 'docs/xsl/**'
+      - '!docs/papers/**'
   workflow_dispatch: {}
 
 permissions:
@@ -40,7 +46,13 @@ jobs:
             xsltproc --xinclude docs/xsl/html5.xsl "$xml" > "${xml%.xml}.html"
           done < <(find docs -name '*.xml' -not -path '*/scratch/*' -not -path 'docs/papers/*' -not -path 'docs/scripts/*' | sort)
 
+      # pull_request events check out a detached, synthetic merge ref (not
+      # the PR's actual branch) -- there is nothing sensible to push to, and
+      # committing mid-review would be surprising. Publishing the rebuilt
+      # HTML stays a push-to-main/claude/llm-database-theory-codification-only
+      # concern; pull_request runs only validate.
       - name: Commit rebuilt HTML if changed
+        if: github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
