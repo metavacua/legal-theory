@@ -28,17 +28,19 @@
       <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title><xsl:value-of select="db:info/dc:title"/></title>
+        <title><xsl:value-of select="db:info/db:title"/></title>
 
-        <!-- Dublin Core meta tags -->
-        <meta name="DC.title"       content="{db:info/dc:title}"/>
-        <meta name="DC.creator"     content="{db:info//dc:creator}"/>
-        <meta name="DC.subject"     content="{db:info/dc:subject}"/>
-        <meta name="DC.description" content="{db:info/dc:description}"/>
-        <meta name="DC.date"        content="{db:info/dc:date}"/>
-        <meta name="DC.type"        content="{db:info//dc:type}"/>
-        <meta name="DC.language"    content="{db:info//dc:language}"/>
-        <meta name="DC.rights"      content="{db:info//dc:rights}"/>
+        <!-- Dublin Core meta tags (HTML meta-tag names are the DCMI-standard
+             DC.* convention; sourced from native DocBook elements now that
+             dc:* extension elements only remain where DocBook has no native
+             equivalent - see docs/superpowers/specs/2026-07-25-docbook-native-corpus-standardization-design.md) -->
+        <meta name="DC.title"       content="{db:info/db:title}"/>
+        <meta name="DC.creator"     content="{concat(db:info//db:authorgroup/db:author/db:personname/db:firstname, ' ', db:info//db:authorgroup/db:author/db:personname/db:surname)}"/>
+        <meta name="DC.subject"     content="{db:info//db:subjectterm}"/>
+        <meta name="DC.date"        content="{db:info/db:pubdate}"/>
+        <meta name="DC.type"        content="{db:info/dc:type}"/>
+        <meta name="DC.language"    content="{/db:article/@xml:lang}"/>
+        <meta name="DC.rights"      content="{db:info//db:legalnotice}"/>
 
         <!-- Schema.org JSON-LD (extracted from bibliomisc element) -->
         <xsl:if test="db:info/db:bibliomisc[@role='schema-org-jsonld']">
@@ -138,7 +140,7 @@
        ============================================================ -->
   <xsl:template match="db:info">
     <header class="doc-header">
-      <h1><xsl:value-of select="dc:title"/></h1>
+      <h1><xsl:value-of select="db:title"/></h1>
       <p class="byline">
         By <xsl:value-of select=".//db:authorgroup/db:author/db:personname/db:firstname"/>
         <xsl:text> </xsl:text>
@@ -146,7 +148,7 @@
         <xsl:text> </xsl:text>
         <xsl:value-of select=".//db:authorgroup/db:author/db:personname/db:surname"/>
         <xsl:text> — </xsl:text>
-        <xsl:value-of select="dc:date"/>
+        <xsl:value-of select="db:pubdate"/>
       </p>
       <xsl:apply-templates select="db:abstract"/>
     </header>
