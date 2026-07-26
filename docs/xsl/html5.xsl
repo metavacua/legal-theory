@@ -2,7 +2,8 @@
 <!--
   html5.xsl — DocBook 5.2 → HTML5 transform
   Language Models Are Databases (llm-database-theory)
-  Renders Dublin Core meta tags and Schema.org JSON-LD from 00-metadata.xml.
+  Renders Dublin Core meta tags and Schema.org JSON-LD from db:info
+  (native DocBook elements, XIncluded from each document's *.meta.xml).
   Applies CSS colour-coding for finding sections:
     confirmed            → green border
     confirmed-with-caveats → blue border
@@ -35,7 +36,7 @@
              dc:* extension elements only remain where DocBook has no native
              equivalent - see docs/superpowers/specs/2026-07-25-docbook-native-corpus-standardization-design.md) -->
         <meta name="DC.title"       content="{db:info/db:title}"/>
-        <meta name="DC.creator"     content="{concat(db:info//db:authorgroup/db:author/db:personname/db:firstname, ' ', db:info//db:authorgroup/db:author/db:personname/db:surname)}"/>
+        <meta name="DC.creator"     content="{concat(db:info//db:authorgroup/db:author/db:personname/db:firstname, ' ', db:info//db:authorgroup/db:author/db:personname/db:othername, ' ', db:info//db:authorgroup/db:author/db:personname/db:surname)}"/>
         <meta name="DC.subject"     content="{db:info//db:subjectterm}"/>
         <meta name="DC.date"        content="{db:info/db:pubdate}"/>
         <meta name="DC.type"        content="{db:info/dc:type}"/>

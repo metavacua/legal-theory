@@ -25,10 +25,15 @@ validate: $(SRCS)
 	@test -f ../../../../.cache/docbook-5.2/docbookxi.rnc || \
 	  curl -fsSL -o ../../../../.cache/docbook-5.2/docbookxi.rnc \
 	    https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc
-	@which jing >/dev/null 2>&1 && \
+	@if which jing >/dev/null 2>&1; then \
+	  status=0; \
 	  for f in $(ARTICLES); do \
-	    jing -c ../../../../.cache/docbook-5.2/docbookxi.rnc "$$f" && echo "    OK: $$f" || true; \
-	  done || echo "    (jing not installed; skipping RELAX NG step)"
+	    jing -c ../../../../.cache/docbook-5.2/docbookxi.rnc "$$f" && echo "    OK: $$f" || status=1; \
+	  done; \
+	  exit $$status; \
+	else \
+	  echo "    (jing not installed; skipping RELAX NG step)"; \
+	fi
 
 # ── HTML5 ────────────────────────────────────────────────────────────────────
 

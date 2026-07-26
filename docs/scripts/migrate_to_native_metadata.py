@@ -3,10 +3,19 @@
 and docs/superpowers/plans/2026-07-25-docbook-native-corpus-standardization-phase1.md).
 For every corpus .meta.xml: regenerate it through the now-native
 write_metadata(), reading the existing title from wherever it currently
-lives (native <title> if already migrated, else the old dc:title -- so
-this script is safe to re-run). For every corpus content .xml: remove
-the now-invalid sibling <title> element, since the title now lives
-inside <info> (pulled in via the meta.xml's own xi:include)."""
+lives (native <title> if already migrated, else the old dc:title), and
+re-inserting any hand-authored <subtitle> that write_metadata() itself
+does not emit. For every corpus content .xml: remove the now-invalid
+sibling <title> element, since the title now lives inside <info>
+(pulled in via the meta.xml's own xi:include).
+
+Re-running is safe in the sense that it will not corrupt already-migrated
+documents: title and subtitle are read back from the current file and
+carried forward. It is NOT a no-op, though -- <pubdate> is always
+recomputed from the content file's most recent git commit (see
+convert_to_docbook.derive_date()), so re-running after committing this
+script's own output will reflect that later commit date, same as any
+other edit to a tracked file would."""
 
 import sys
 import xml.etree.ElementTree as ET
@@ -14,6 +23,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from convert_to_docbook import REPO_ROOT, DB_NS, DC_NS, element_full_text, write_metadata  # noqa: E402
+
+# convert_to_docbook registers db/xi/xlink at import time; register dc here too
+# so insert_subtitle()'s ET round-trip serializes <dc:type> instead of an
+# auto-generated ns0:type prefix.
+ET.register_namespace("dc", DC_NS)
 
 EXCLUDE_TOP_LEVEL = {"scripts"}
 
@@ -34,6 +48,28 @@ def existing_title(meta_path):
         return element_full_text(native)
     old = root.find(f"{{{DC_NS}}}title")
     return element_full_text(old)
+
+
+def existing_subtitle(meta_path):
+    root = ET.parse(meta_path).getroot()
+    subtitle = root.find(f"{{{DB_NS}}}subtitle")
+    return element_full_text(subtitle) if subtitle is not None else None
+
+
+def insert_subtitle(meta_path, subtitle_text):
+    """write_metadata() does not emit <subtitle> -- it's not part of the
+    generated shape, only a hand-authored addition some documents carry.
+    Re-insert it right after <title>, the position DocBook's <info>
+    content model requires."""
+    tree = ET.parse(meta_path)
+    root = tree.getroot()
+    title_el = root.find(f"{{{DB_NS}}}title")
+    title_index = list(root).index(title_el)
+    subtitle_el = ET.Element(f"{{{DB_NS}}}subtitle")
+    subtitle_el.text = subtitle_text
+    root.insert(title_index + 1, subtitle_el)
+    ET.indent(tree, space="  ")
+    tree.write(meta_path, encoding="unicode", xml_declaration=True)
 
 
 def strip_sibling_title(content_path):
@@ -65,7 +101,10 @@ def main(argv=None):
     stripped_count = 0
     for meta_path in find_corpus_meta_files():
         title = existing_title(meta_path)
+        subtitle = existing_subtitle(meta_path)
         write_metadata(meta_path, title)
+        if subtitle is not None:
+            insert_subtitle(meta_path, subtitle)
         meta_count += 1
 
         content_path = content_path_for_meta(meta_path)

@@ -6,7 +6,6 @@ on:
     paths:
       - 'docs/**/*.xml'
       - 'docs/xsl/**'
-      - 'docs/schema/**'
       - '!docs/papers/**'
   workflow_dispatch: {}
 
