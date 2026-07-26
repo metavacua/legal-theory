@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from convert_to_docbook import DC_NS
+from convert_to_docbook import DB_NS, DC_NS, XI_NS, write_metadata
 
 
 class TestAtomizeExistingDocument(unittest.TestCase):
@@ -150,6 +150,96 @@ class TestAtomizeExistingDocument(unittest.TestCase):
         self.assertEqual(self.xml_path.read_text(encoding="utf-8"), original_text)
         self.assertEqual(self.meta_path.read_text(encoding="utf-8"), original_meta_text)
         self.assertFalse((self.tmp_dir / "patron-as-client").exists())
+
+
+class TestMetaMatchesSharedShape(unittest.TestCase):
+    """Direct unit coverage of _meta_matches_shared_shape()'s structural
+    check, isolated from the full atomize_existing_document() pipeline
+    (which also calls the real jing/docbook-corpus.rnc validate() step --
+    a separate, already-tracked pre-existing gap unrelated to this
+    function; see docs/superpowers/plans -- so these tests exercise the
+    guard function directly rather than going through validate())."""
+
+    def setUp(self):
+        self.tmp_dir = Path(__file__).resolve().parent / "fixtures" / "meta_shape_tmp"
+        self.tmp_dir.mkdir(exist_ok=True)
+
+    def tearDown(self):
+        shutil.rmtree(self.tmp_dir)
+
+    def test_accepts_a_real_write_metadata_generated_file(self):
+        # The pass case: a .meta.xml produced by the real write_metadata()
+        # (not a hand-written approximation of its shape) must be accepted.
+        from atomize_existing_document import _meta_matches_shared_shape
+
+        meta_path = self.tmp_dir / "doc.meta.xml"
+        write_metadata(meta_path, "A Real Document Title")
+        meta_root = ET.parse(meta_path).getroot()
+        self.assertTrue(_meta_matches_shared_shape(meta_root))
+
+    def test_accepts_a_subset_of_the_known_fields(self):
+        # A document that hasn't yet been regenerated with every field
+        # write_metadata() now emits (e.g. only title/dc:type/xi:include,
+        # matching the corpus's current pre-migration shape) is still
+        # safe to overwrite -- every one of its children is still a known,
+        # per-document-varying native field. This is a subset check, not
+        # an exact-shape check.
+        from atomize_existing_document import _meta_matches_shared_shape
+
+        minimal = f"""<?xml version="1.0" encoding="UTF-8"?>
+<info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="{XI_NS}">
+  <title>Minimal Document</title>
+  <dc:type>Text</dc:type>
+  <xi:include href="../../../common/authorgroup.xml" />
+  <xi:include href="../../../common/legalnotice.xml" />
+</info>
+"""
+        meta_path = self.tmp_dir / "minimal.meta.xml"
+        meta_path.write_text(minimal, encoding="utf-8")
+        meta_root = ET.parse(meta_path).getroot()
+        self.assertTrue(_meta_matches_shared_shape(meta_root))
+
+    def test_refuses_a_hand_authored_abstract(self):
+        # The refuse case: an element write_metadata() has no way to
+        # produce (e.g. a hand-authored <abstract>) means this document
+        # has genuinely richer metadata than write_metadata() knows how
+        # to preserve -- must be refused, not silently destroyed.
+        from atomize_existing_document import _meta_matches_shared_shape
+
+        meta_path = self.tmp_dir / "rich.meta.xml"
+        write_metadata(meta_path, "A Document With An Abstract")
+        meta_root = ET.parse(meta_path).getroot()
+        abstract_el = ET.SubElement(meta_root, f"{{{DB_NS}}}abstract")
+        abstract_el.text = "Hand-authored summary write_metadata() cannot produce."
+        self.assertFalse(_meta_matches_shared_shape(meta_root))
+
+    def test_refuses_an_inlined_legalnotice_instead_of_xi_include(self):
+        # A document-specific <legalnotice> inlined directly, rather than
+        # pulled in via the standard xi:include to common/legalnotice.xml,
+        # is exactly the case this guard exists to catch: write_metadata()
+        # would silently replace it with the generic shared notice.
+        from atomize_existing_document import _meta_matches_shared_shape
+
+        meta_path = self.tmp_dir / "inlined.meta.xml"
+        write_metadata(meta_path, "A Document With A Custom Notice")
+        meta_root = ET.parse(meta_path).getroot()
+        notice_el = ET.SubElement(meta_root, f"{{{DB_NS}}}legalnotice")
+        notice_el.text = "A document-specific notice, not the shared boilerplate."
+        self.assertFalse(_meta_matches_shared_shape(meta_root))
+
+    def test_refuses_an_xi_include_pointing_elsewhere(self):
+        # A third xi:include target write_metadata() never produces (e.g.
+        # some other shared file) must not be waved through just because
+        # its tag is xi:include -- the href itself has to be one of the
+        # two known shared-boilerplate targets.
+        from atomize_existing_document import _meta_matches_shared_shape
+
+        meta_path = self.tmp_dir / "rogue-include.meta.xml"
+        write_metadata(meta_path, "A Document With A Rogue Include")
+        meta_root = ET.parse(meta_path).getroot()
+        rogue = ET.SubElement(meta_root, f"{{{XI_NS}}}include")
+        rogue.set("href", "../../../common/some-other-shared-file.xml")
+        self.assertFalse(_meta_matches_shared_shape(meta_root))
 
 
 if __name__ == "__main__":

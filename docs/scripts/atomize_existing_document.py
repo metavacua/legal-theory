@@ -14,7 +14,7 @@ from pathlib import Path
 from convert_to_docbook import (
     DB_NS,
     DC_NS,
-    REPO_ROOT,
+    XI_NS,
     _cleanup_fragments,
     build_html,
     element_full_text,
@@ -26,6 +26,28 @@ from convert_to_docbook import (
     _word_level_diff,
 )
 
+# The direct-child tags write_metadata() (convert_to_docbook.py) is known to
+# emit: five per-document fields (each expected to vary document-to-document,
+# so never compared for equality -- only their *presence as one of these
+# tags* matters) plus xi:include, used twice, to pull in the two shared
+# boilerplate files.
+_EXPECTED_META_TAGS = frozenset({
+    f"{{{DB_NS}}}title",
+    f"{{{DB_NS}}}pubdate",
+    f"{{{DB_NS}}}biblioid",
+    f"{{{DB_NS}}}subjectset",
+    f"{{{DC_NS}}}type",
+    f"{{{XI_NS}}}include",
+})
+
+# xi:include href values write_metadata() is known to emit, matched by
+# suffix since the "../" depth prefix varies with a document's nesting
+# depth under docs/.
+_EXPECTED_INCLUDE_SUFFIXES = (
+    "common/authorgroup.xml",
+    "common/legalnotice.xml",
+)
+
 
 def _rollback(xml_path, meta_path, original_xml_text, original_meta_text):
     xml_path.write_text(original_xml_text, encoding="utf-8")
@@ -34,25 +56,35 @@ def _rollback(xml_path, meta_path, original_xml_text, original_meta_text):
 
 
 def _meta_matches_shared_shape(meta_root):
-    """True if meta_root's non-title content is (word-for-word) the same
-    as docs/common/shared-metadata.xml — i.e. safe for write_metadata() to
-    overwrite without silently destroying document-specific metadata. The
-    content_preservation diff this script otherwise relies on cannot catch
-    this: pandoc's plain-text rendering drops abstract/legalnotice/date/
-    subject/description/JSON-LD entirely, so a document with genuinely
-    richer metadata (e.g. the flagship paper, which this script should
-    never be pointed at) would otherwise be silently corrupted with no
-    error and no diff."""
-    non_title_words = "".join(
-        "".join(c.itertext()) for c in meta_root
-        if c.tag not in (f"{{{DB_NS}}}title", f"{{{DC_NS}}}title")
-    ).split()
+    """True if meta_root's direct children are entirely accounted for by
+    the shape write_metadata() (convert_to_docbook.py) is known to
+    produce -- i.e. safe for write_metadata() to overwrite without
+    silently destroying document-specific metadata. This is a structural
+    check, not a text comparison: meta_root is parsed without XInclude
+    resolution, so its xi:include children are literal, empty elements
+    (the actual shared boilerplate lives in the two external files they
+    point at, not in meta_root itself), and the five per-document fields
+    write_metadata() emits (title/pubdate/biblioid/subjectset/dc:type)
+    are each *expected* to vary document-to-document, so their content is
+    never compared -- only that every direct child is one of those known
+    tags, and that any xi:include targets exactly the two shared files.
 
-    shared_path = REPO_ROOT / "docs" / "common" / "shared-metadata.xml"
-    shared_root = ET.parse(shared_path).getroot()
-    shared_words = "".join("".join(c.itertext()) for c in shared_root).split()
-
-    return non_title_words == shared_words
+    The content_preservation diff this script otherwise relies on cannot
+    catch a violation here: pandoc's plain-text rendering drops
+    abstract/legalnotice/date/subject/description/JSON-LD entirely, so a
+    document with genuinely richer metadata (e.g. a hand-authored
+    <abstract>, a <legalnotice> inlined directly instead of via
+    xi:include, or any other element write_metadata() doesn't know how to
+    produce) would otherwise be silently corrupted with no error and no
+    diff."""
+    for child in meta_root:
+        if child.tag not in _EXPECTED_META_TAGS:
+            return False
+        if child.tag == f"{{{XI_NS}}}include":
+            href = child.get("href", "")
+            if not href.endswith(_EXPECTED_INCLUDE_SUFFIXES):
+                return False
+    return True
 
 
 def atomize_existing_document(xml_path, meta_path):
