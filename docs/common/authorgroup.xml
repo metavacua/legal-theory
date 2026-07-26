@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<authorgroup xmlns="http://docbook.org/ns/docbook">
+  <author>
+    <personname>
+      <firstname>Ian</firstname>
+      <othername role="middle">D.L.N.</othername>
+      <surname>McLean</surname>
+    </personname>
+    <email>metavacua@gmail.com</email>
+    <uri>https://github.com/metavacua</uri>
+  </author>
+</authorgroup>

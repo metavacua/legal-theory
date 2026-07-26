@@ -717,5 +717,26 @@ class TestWriteMetadataDcterms(unittest.TestCase):
         self.assertEqual(root.find(f"{{{DC_NS}}}subject").text, "a custom subject")
 
 
+class TestFetchDocbookSchema(unittest.TestCase):
+    def test_fetches_and_caches_the_real_schema(self):
+        from convert_to_docbook import fetch_docbook_schema, REPO_ROOT
+        cache_path = REPO_ROOT / ".cache" / "docbook-5.2" / "docbookxi.rnc"
+        if cache_path.exists():
+            cache_path.unlink()
+        path = fetch_docbook_schema()
+        self.assertEqual(path, cache_path)
+        self.assertTrue(path.exists())
+        content = path.read_text(encoding="utf-8")
+        self.assertIn("docbook.org/ns/docbook", content)
+
+    def test_second_call_reuses_cache_without_refetching(self):
+        from convert_to_docbook import fetch_docbook_schema
+        path = fetch_docbook_schema()
+        mtime_before = path.stat().st_mtime
+        path2 = fetch_docbook_schema()
+        self.assertEqual(path, path2)
+        self.assertEqual(path.stat().st_mtime, mtime_before)
+
+
 if __name__ == "__main__":
     unittest.main()
