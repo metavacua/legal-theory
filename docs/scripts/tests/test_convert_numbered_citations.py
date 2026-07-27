@@ -215,6 +215,50 @@ class TestConvertMarkersInFragment(unittest.TestCase):
         self.assertEqual(count, 1)
         self.assertIn('list.<biblioref linkend="key-hundred"/>', path.read_text(encoding="utf-8"))
 
+    def test_marker_inside_title_element_is_not_converted(self):
+        """Bug-hunt case: unlike audit_footnote_links.py's
+        find_candidates(), which structurally excludes <title> element
+        text via _element_body_text() (section headings are never real
+        footnote candidates), convert_markers_in_fragment scanned the
+        ENTIRE raw fragment text with no such exclusion, so a heading
+        like "New Approach.5" would get corrupted into
+        "New Approach.<biblioref linkend="key-five"/>" -- reproduced
+        live by a task review, exact case below."""
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0"?>\n'
+            '<section xmlns="http://docbook.org/ns/docbook" xml:id="intro">\n'
+            '  <title>New Approach.5</title>\n'
+            '  <para>Some text.</para>\n'
+            '</section>\n'
+        )
+        count = convert_markers_in_fragment(path, {5: "key-five"})
+        self.assertEqual(count, 0)
+        text = path.read_text(encoding="utf-8")
+        self.assertIn("<title>New Approach.5</title>", text)
+        self.assertNotIn("biblioref", text)
+
+    def test_marker_outside_title_still_converts_when_fragment_also_has_a_title(self):
+        """Companion to test_marker_inside_title_element_is_not_converted
+        -- guards against an overly broad fix that accidentally excludes
+        every marker in a fragment merely because SOME <title> exists
+        somewhere in it. Only the marker actually inside the <title>
+        span must be skipped; the one in the <para> body must still
+        convert."""
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0"?>\n'
+            '<section xmlns="http://docbook.org/ns/docbook" xml:id="intro">\n'
+            '  <title>New Approach.5</title>\n'
+            '  <para>A real citation.5 appears here.</para>\n'
+            '</section>\n'
+        )
+        count = convert_markers_in_fragment(path, {5: "key-five"})
+        self.assertEqual(count, 1)
+        text = path.read_text(encoding="utf-8")
+        self.assertIn("<title>New Approach.5</title>", text)
+        self.assertIn('citation.<biblioref linkend="key-five"/>', text)
+
     def test_marker_after_inline_closing_tag_converts_correctly(self):
         """Checks the brief's stated 'known limitation' about
         <emphasis>word</emphasis>.1 directly: the character immediately

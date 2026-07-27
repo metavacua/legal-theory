@@ -20,6 +20,17 @@ containing) fragment text, which is what this module operates on (it
 needs to preserve surrounding markup for in-place replacement, unlike
 audit_footnote_links.py's own read-only reporting use case).
 
+Also excludes markers inside <title> elements (section headings are
+never real footnote candidates), matching audit_footnote_links.py's
+own _element_body_text() exclusion -- but done here as a raw-text
+span check (_title_spans()) rather than a tree-based one, since this
+module operates on unparsed raw file text and must preserve markup for
+in-place replacement rather than extracting plain text. A task review
+found this exclusion missing from an earlier version and reproduced it
+live: "<title>New Approach.5</title>" with a matching key_map entry
+was corrupted into "<title>New Approach.<biblioref .../></title>";
+confirmed fixed by test_marker_inside_title_element_is_not_converted.
+
 Known limitation, stated plainly: a marker glued directly onto inline-
 formatted text where the closing tag sits BETWEEN the digit run and
 its terminating boundary (not the more common case of a closing tag
@@ -48,6 +59,32 @@ from audit_footnote_links import _is_excluded_context  # noqa: E402
 # False positives (statute pincites, decimals, regulatory codes) are
 # filtered by _is_excluded_context() below, not by this pattern alone.
 _RAW_TEXT_MARKER_RE = re.compile(r"\.(\d{1,3})(?=\s|$|<)")
+
+# Raw-text equivalent of audit_footnote_links.py's tree-based
+# _element_body_text(), which excludes <title> descendant text
+# structurally (section headings are never real footnote candidates).
+# This module operates on unparsed raw file text, not a parsed tree, so
+# it can't reuse that function directly -- instead it locates the
+# character spans of every <title>...</title> element (a fragment can
+# have multiple nested sections, each with its own <title>) and skips
+# any marker match that falls inside one. non-greedy .*? is correct
+# here because <title> elements are never nested inside themselves, so
+# stopping at the first </title> always closes the right one; re.DOTALL
+# covers the (unusual but possible) case of a title's content spanning
+# a newline.
+_TITLE_SPAN_RE = re.compile(r"<title\b[^>]*>.*?</title\s*>", re.DOTALL)
+
+
+def _title_spans(text):
+    """List of (start, end) character offsets in text covering every
+    <title>...</title> element. Confirmed live by
+    test_marker_inside_title_element_is_not_converted (a marker inside
+    one of these spans must be skipped) and
+    test_marker_outside_title_still_converts_when_fragment_also_has_a_title
+    (a marker outside every span, even in a fragment that also contains
+    a <title>, must still convert -- this function must not be used to
+    exclude more than the actual title spans)."""
+    return [m.span() for m in _TITLE_SPAN_RE.finditer(text)]
 
 
 def _listitem_text_and_href(listitem):
@@ -135,9 +172,12 @@ def convert_markers_in_fragment(fragment_path, key_map):
     fragment_path = Path(fragment_path)
     text = fragment_path.read_text(encoding="utf-8")
     converted = 0
+    title_spans = _title_spans(text)
 
     def _replace(match):
         nonlocal converted
+        if any(start <= match.start() < end for start, end in title_spans):
+            return match.group(0)
         preceding = text[: match.start()]
         if _is_excluded_context(preceding):
             return match.group(0)
