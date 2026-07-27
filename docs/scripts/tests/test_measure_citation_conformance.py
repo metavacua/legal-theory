@@ -90,6 +90,53 @@ class TestMeasureCitationConformance(_WritesXmlFixture, unittest.TestCase):
         self.assertEqual(result["unresolved_citations"], 0)
         self.assertEqual(result["standard_entries"], 1)
 
+    def test_biblioref_with_no_matching_biblioentry_is_unresolved(self):
+        from measure_citation_conformance import measure_citation_conformance
+        path = self._write("""<?xml version="1.0"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="t" xml:lang="en">
+  <title>T</title>
+  <para>See <biblioref linkend="ghost2020"/> for details.</para>
+</article>
+""")
+        result = measure_citation_conformance(path)
+        self.assertEqual(result["unresolved_citations"], 1)
+        self.assertEqual(result["resolved_citations"], 0)
+
+    def test_biblioref_matching_a_real_biblioentry_is_resolved(self):
+        from measure_citation_conformance import measure_citation_conformance
+        path = self._write("""<?xml version="1.0"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="t" xml:lang="en">
+  <title>T</title>
+  <para>See <biblioref linkend="smith2020"/> for details.</para>
+  <bibliography>
+    <biblioentry xml:id="smith2020">
+      <abbrev>smith2020</abbrev>
+      <title>A Real Paper</title>
+    </biblioentry>
+  </bibliography>
+</article>
+""")
+        result = measure_citation_conformance(path)
+        self.assertEqual(result["resolved_citations"], 1)
+        self.assertEqual(result["unresolved_citations"], 0)
+        self.assertEqual(result["standard_entries"], 1)
+
+    def test_citation_and_biblioref_counts_combine(self):
+        from measure_citation_conformance import measure_citation_conformance
+        path = self._write("""<?xml version="1.0"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="t" xml:lang="en">
+  <title>T</title>
+  <para>See <citation>smith2020</citation> and <biblioref linkend="jones2021"/> and <biblioref linkend="ghost2020"/>.</para>
+  <bibliography>
+    <biblioentry xml:id="smith2020"><abbrev>smith2020</abbrev><title>A Real Paper</title></biblioentry>
+    <biblioentry xml:id="jones2021"><abbrev>jones2021</abbrev><title>Another Real Paper</title></biblioentry>
+  </bibliography>
+</article>
+""")
+        result = measure_citation_conformance(path)
+        self.assertEqual(result["resolved_citations"], 2)
+        self.assertEqual(result["unresolved_citations"], 1)
+
     def test_conformance_ratio_is_standard_over_standard_plus_nonstandard(self):
         from measure_citation_conformance import measure_citation_conformance
         path = self._write("""<?xml version="1.0"?>

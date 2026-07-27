@@ -68,6 +68,16 @@ def measure_citation_conformance(xml_path):
             resolved_citations += 1
         else:
             unresolved_citations += 1
+    # <biblioref linkend="KEY"/> is the element the citation-standardization
+    # project (2026-07-26) actually emits -- confirmed the correct DocBook
+    # 5.2 element for this purpose (Task 3), unlike <citation>, which
+    # renders as inert bracketed text under the real stylesheets.
+    for biblioref in root.iter(f"{{{DB_NS}}}biblioref"):
+        key = biblioref.get("linkend") or ""
+        if key in standard_ids:
+            resolved_citations += 1
+        else:
+            unresolved_citations += 1
 
     denominator = standard_entries + nonstandard_entries
     conformance_ratio = (standard_entries / denominator) if denominator else None
