@@ -7,7 +7,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 
-class TestMeasureCitationConformance(unittest.TestCase):
+class _WritesXmlFixture:
+    """Shared by test classes below that need a throwaway XML fixture file."""
+
     def _write(self, content):
         out_dir = Path(tempfile.mkdtemp())
         self.addCleanup(shutil.rmtree, out_dir)
@@ -15,6 +17,8 @@ class TestMeasureCitationConformance(unittest.TestCase):
         path.write_text(content, encoding="utf-8")
         return path
 
+
+class TestMeasureCitationConformance(_WritesXmlFixture, unittest.TestCase):
     def test_counts_informal_works_cited_listitems_as_nonstandard(self):
         from measure_citation_conformance import measure_citation_conformance
         path = self._write("""<?xml version="1.0"?>
@@ -138,7 +142,7 @@ class TestCorpusWideConformanceReport(unittest.TestCase):
         self.assertEqual(report["documents_with_nonstandard_entries"], 87)
 
 
-class TestMeasureNumberedCitationPattern(unittest.TestCase):
+class TestMeasureNumberedCitationPattern(_WritesXmlFixture, unittest.TestCase):
     """The Deep-Research-style pattern confirmed 2026-07-26 by direct
     comparison against the real Google Drive original for
     llms-as-categorical-systems: a numbered works-cited list plus glued
@@ -147,13 +151,6 @@ class TestMeasureNumberedCitationPattern(unittest.TestCase):
     that correspond positionally to that list. See that document's own
     fragments for the verified real-world example this fixture logic is
     built from."""
-
-    def _write(self, content):
-        out_dir = Path(tempfile.mkdtemp())
-        self.addCleanup(shutil.rmtree, out_dir)
-        path = out_dir / "sample.xml"
-        path.write_text(content, encoding="utf-8")
-        return path
 
     def test_glued_markers_within_list_range_are_plausible(self):
         from measure_citation_conformance import measure_numbered_citation_pattern
