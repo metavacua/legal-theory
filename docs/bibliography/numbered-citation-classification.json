@@ -1,9 +1,10 @@
 {
   "docs/court-record/matters/cooperative-investment-law/evidence/contractual-architectures-for-ip-and-cooperatives.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 40,
-    "total_rows": 143
+    "total_rows": 143,
+    "verified": "2026-07-26"
   },
   "docs/court-record/matters/cooperative-investment-law/evidence/cooperative-rights-commodification-analysis.html": {
     "category": "A",
@@ -24,10 +25,11 @@
     "total_rows": 58
   },
   "docs/court-record/matters/cooperative-investment-law/evidence/cooperative-securities-novel-financial-instruments.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 67,
-    "total_rows": 157
+    "total_rows": 157,
+    "verified": "2026-07-26"
   },
   "docs/court-record/matters/cooperative-investment-law/evidence/cooperative-tradeable-securities-research.html": {
     "category": "A",
@@ -168,10 +170,11 @@
     "total_rows": 7
   },
   "docs/court-record/matters/google-platform-misclassification/evidence/systemic-misclassification-final.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 39,
-    "total_rows": 88
+    "total_rows": 88,
+    "verified": "2026-07-26"
   },
   "docs/court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-art-tools-for-comics.html": {
     "category": "A",
@@ -198,10 +201,11 @@
     "total_rows": 46
   },
   "docs/court-record/matters/platform-tos-constitutional-limits/evidence/directed-ip-creation.html": {
-    "category": "ambiguous",
+    "category": "B",
     "degenerate_count": 0,
     "high_count": 1,
-    "total_rows": 21
+    "total_rows": 21,
+    "verified": "2026-07-26"
   },
   "docs/court-record/matters/platform-tos-constitutional-limits/evidence/llm-data-vs-program.html": {
     "category": "A",
@@ -234,10 +238,11 @@
     "total_rows": 10
   },
   "docs/court-record/matters/platform-tos-constitutional-limits/evidence/the-unilateral-mandate-social-media-platforms-as-service-contracts.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 10,
-    "total_rows": 20
+    "total_rows": 20,
+    "verified": "2026-07-26"
   },
   "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/autonomy-a-myth-in-american-law.html": {
     "category": "A",
@@ -252,10 +257,11 @@
     "total_rows": 62
   },
   "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/consent-contracts-and-legal-ambiguity.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 14,
-    "total_rows": 101
+    "total_rows": 101,
+    "verified": "2026-07-26"
   },
   "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/consent-theories-language-culture.html": {
     "category": "A",
@@ -300,10 +306,11 @@
     "total_rows": 157
   },
   "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/prostitution-law-obscenity-consent-regulation.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 22,
-    "total_rows": 165
+    "total_rows": 165,
+    "verified": "2026-07-26"
   },
   "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/sex-work-contracts-free-speech-and-law.html": {
     "category": "A",
@@ -330,10 +337,11 @@
     "total_rows": 271
   },
   "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-laudable-contract-licit-sexual-service-agreements.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 9,
-    "total_rows": 54
+    "total_rows": 54,
+    "verified": "2026-07-26"
   },
   "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-nexus-of-consent-and-consideration.html": {
     "category": "A",
@@ -450,10 +458,11 @@
     "total_rows": 69
   },
   "docs/court-record/theory/federal-statutes/extensions/agpl-ai-training-and-code-licensing.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 35,
-    "total_rows": 84
+    "total_rows": 84,
+    "verified": "2026-07-26"
   },
   "docs/cross-cutting/intellectual-property-public-good.html": {
     "category": "A",
@@ -462,10 +471,11 @@
     "total_rows": 27
   },
   "docs/cross-cutting/patron-as-client.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 3,
-    "total_rows": 14
+    "total_rows": 14,
+    "verified": "2026-07-26"
   },
   "docs/cross-cutting/patron-client-non-disclaimable-duties.html": {
     "category": "B",
@@ -504,10 +514,11 @@
     "total_rows": 30
   },
   "docs/proposals/legislative/california/state-legislature/hybrid-cooperative-ipo-framework.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 46,
-    "total_rows": 114
+    "total_rows": 114,
+    "verified": "2026-07-26"
   },
   "docs/proposals/legislative/california/state-legislature/legalizing-sexual-service-contracts.html": {
     "category": "A",
@@ -564,9 +575,10 @@
     "total_rows": 48
   },
   "docs/wip/systemic-misclassification-draft.html": {
-    "category": "ambiguous",
+    "category": "A",
     "degenerate_count": 0,
     "high_count": 20,
-    "total_rows": 67
+    "total_rows": 67,
+    "verified": "2026-07-26"
   }
 }
