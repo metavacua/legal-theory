@@ -8,20 +8,31 @@ from xml.etree import ElementTree as ET
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 
-class TestBuildEntryKeyMap(unittest.TestCase):
-    def test_builds_map_and_writes_one_entry_per_listitem(self):
-        from convert_numbered_citations import build_entry_key_map
+class _EntriesDirSandboxTestCase(unittest.TestCase):
+    """Shared setup for tests that exercise build_entry_key_map: points
+    citation_entry.ENTRIES_DIR -- and convert_numbered_citations's own
+    copy of that same value -- at a fresh temp directory for the
+    duration of the test, restoring both on teardown."""
+
+    def setUp(self):
         import citation_entry
-        out_dir = Path(tempfile.mkdtemp())
-        self.addCleanup(shutil.rmtree, out_dir)
-        original_entries_dir = citation_entry.ENTRIES_DIR
-        citation_entry.ENTRIES_DIR = out_dir / "entries"
-        self.addCleanup(setattr, citation_entry, "ENTRIES_DIR", original_entries_dir)
         import convert_numbered_citations
+        self.out_dir = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.out_dir)
+        original_entries_dir = citation_entry.ENTRIES_DIR
+        citation_entry.ENTRIES_DIR = self.out_dir / "entries"
+        self.addCleanup(setattr, citation_entry, "ENTRIES_DIR", original_entries_dir)
         convert_numbered_citations.ENTRIES_DIR = citation_entry.ENTRIES_DIR
         self.addCleanup(setattr, convert_numbered_citations, "ENTRIES_DIR", original_entries_dir)
+        self.citation_entry = citation_entry
 
-        fragment = out_dir / "fragment.xml"
+
+class TestBuildEntryKeyMap(_EntriesDirSandboxTestCase):
+    def test_builds_map_and_writes_one_entry_per_listitem(self):
+        from convert_numbered_citations import build_entry_key_map
+        citation_entry = self.citation_entry
+
+        fragment = self.out_dir / "fragment.xml"
         fragment.write_text("""<?xml version="1.0"?>
 <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="conclusion">
   <section xml:id="works-cited">
@@ -44,17 +55,8 @@ class TestBuildEntryKeyMap(unittest.TestCase):
         not raise (a ValueError would mean derive_entry_key/content drifted
         between calls, which would be a real bug)."""
         from convert_numbered_citations import build_entry_key_map
-        import citation_entry
-        out_dir = Path(tempfile.mkdtemp())
-        self.addCleanup(shutil.rmtree, out_dir)
-        original_entries_dir = citation_entry.ENTRIES_DIR
-        citation_entry.ENTRIES_DIR = out_dir / "entries"
-        self.addCleanup(setattr, citation_entry, "ENTRIES_DIR", original_entries_dir)
-        import convert_numbered_citations
-        convert_numbered_citations.ENTRIES_DIR = citation_entry.ENTRIES_DIR
-        self.addCleanup(setattr, convert_numbered_citations, "ENTRIES_DIR", original_entries_dir)
 
-        fragment = out_dir / "fragment.xml"
+        fragment = self.out_dir / "fragment.xml"
         fragment.write_text("""<?xml version="1.0"?>
 <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="conclusion">
   <section xml:id="works-cited">
@@ -69,7 +71,7 @@ class TestBuildEntryKeyMap(unittest.TestCase):
         self.assertEqual(first, second)
 
 
-class TestBuildEntryKeyMapCollision(unittest.TestCase):
+class TestBuildEntryKeyMapCollision(_EntriesDirSandboxTestCase):
     def test_two_different_sources_colliding_on_the_same_derived_key_raises(self):
         """Bug-hunt case: derive_entry_key() is not injective (documented
         in citation_entry.write_biblioentry's own docstring) -- two
@@ -85,17 +87,8 @@ class TestBuildEntryKeyMapCollision(unittest.TestCase):
         must propagate, not be silently swallowed by a redundant
         existence pre-check upstream."""
         from convert_numbered_citations import build_entry_key_map
-        import citation_entry
-        out_dir = Path(tempfile.mkdtemp())
-        self.addCleanup(shutil.rmtree, out_dir)
-        original_entries_dir = citation_entry.ENTRIES_DIR
-        citation_entry.ENTRIES_DIR = out_dir / "entries"
-        self.addCleanup(setattr, citation_entry, "ENTRIES_DIR", original_entries_dir)
-        import convert_numbered_citations
-        convert_numbered_citations.ENTRIES_DIR = citation_entry.ENTRIES_DIR
-        self.addCleanup(setattr, convert_numbered_citations, "ENTRIES_DIR", original_entries_dir)
 
-        fragment = out_dir / "fragment.xml"
+        fragment = self.out_dir / "fragment.xml"
         fragment.write_text("""<?xml version="1.0"?>
 <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="conclusion">
   <section xml:id="works-cited">
@@ -333,7 +326,7 @@ class TestRemoveWorksCitedSection(unittest.TestCase):
         self.assertNotIn("works-cited", path.read_text(encoding="utf-8"))
 
 
-class TestBuildEntryKeyMapMultipleWorksCitedSections(unittest.TestCase):
+class TestBuildEntryKeyMapMultipleWorksCitedSections(_EntriesDirSandboxTestCase):
     def test_only_the_first_works_cited_section_is_processed(self):
         """Bug-hunt case: a fragment with duplicate xml:id="works-cited"
         (invalid XML, but ElementTree doesn't enforce uniqueness) must
@@ -342,17 +335,9 @@ class TestBuildEntryKeyMapMultipleWorksCitedSections(unittest.TestCase):
         actual (deliberate) behavior: only the first section found in
         document order is processed."""
         from convert_numbered_citations import build_entry_key_map
-        import citation_entry
-        out_dir = Path(tempfile.mkdtemp())
-        self.addCleanup(shutil.rmtree, out_dir)
-        original_entries_dir = citation_entry.ENTRIES_DIR
-        citation_entry.ENTRIES_DIR = out_dir / "entries"
-        self.addCleanup(setattr, citation_entry, "ENTRIES_DIR", original_entries_dir)
-        import convert_numbered_citations
-        convert_numbered_citations.ENTRIES_DIR = citation_entry.ENTRIES_DIR
-        self.addCleanup(setattr, convert_numbered_citations, "ENTRIES_DIR", original_entries_dir)
+        citation_entry = self.citation_entry
 
-        fragment = out_dir / "fragment.xml"
+        fragment = self.out_dir / "fragment.xml"
         fragment.write_text("""<?xml version="1.0"?>
 <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="root">
   <section xml:id="works-cited">
