@@ -2,7 +2,10 @@ name: Validate & Build DocBook Corpus
 
 on:
   push:
-    branches: [main, claude/llm-database-theory-codification]
+    branches:
+      - main
+      - claude/llm-database-theory-codification
+      - claude/llm-database-theory-codification-sdd-1785019559
     paths:
       - 'docs/**/*.xml'
       - 'docs/xsl/**'
