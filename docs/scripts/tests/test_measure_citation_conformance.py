@@ -126,13 +126,16 @@ class TestCorpusWideConformanceReport(unittest.TestCase):
     def test_real_corpus_produces_the_known_baseline(self):
         """Anchors this measurement against the corpus-wide count independently
         confirmed by direct grep during the 2026-07-26 review: 88 documents
-        carry a works-cited section, 5,482 total informal entries. If this
-        drifts, either the corpus changed (expected, update the baseline) or
+        carried a works-cited section, 5,482 total informal entries. Updated
+        after Task 6's pilot conversion of llms-as-categorical-systems (82
+        entries, the only document that fully lost its works-cited section)
+        dropped the baseline to 87 documents / 5,400 entries. If this drifts
+        again, either the corpus changed (expected, update the baseline) or
         the measurement logic broke (not expected, investigate)."""
         from measure_citation_conformance import REPO_ROOT, corpus_wide_report
         report = corpus_wide_report(REPO_ROOT / "docs")
-        self.assertEqual(report["total_nonstandard_entries"], 5482)
-        self.assertEqual(report["documents_with_nonstandard_entries"], 88)
+        self.assertEqual(report["total_nonstandard_entries"], 5400)
+        self.assertEqual(report["documents_with_nonstandard_entries"], 87)
 
 
 class TestMeasureNumberedCitationPattern(unittest.TestCase):
@@ -245,18 +248,24 @@ class TestMeasureNumberedCitationPattern(unittest.TestCase):
 
     def test_real_document_confirmed_against_the_drive_original(self):
         """llms-as-categorical-systems: verified 2026-07-26 by direct
-        comparison against its real Google Drive source -- 82 works-cited
-        entries, full content and order intact through the DocBook
-        conversion, with glued inline markers scattered across all 8 of
-        its atomized fragments referencing that one shared list."""
+        comparison against its real Google Drive source -- originally 82
+        works-cited entries, full content and order intact through the
+        DocBook conversion, with glued inline markers scattered across all
+        8 of its atomized fragments referencing that one shared list. Task
+        6 (2026-07-26) then pilot-converted this exact document into real
+        <biblioentry>/<biblioref> structure via convert_numbered_citations.py,
+        so the informal works-cited list and its glued markers no longer
+        exist here -- this now guards that the conversion stays converted
+        (RED/GREEN oracle per measure_citation_conformance.py's own
+        docstring), not that the pre-conversion pattern is still present."""
         from measure_citation_conformance import REPO_ROOT, measure_numbered_citation_pattern
         path = (
             REPO_ROOT / "docs" / "court-record" / "theory" / "federal-constitutional"
             / "extensions" / "llms-as-categorical-systems.xml"
         )
         result = measure_numbered_citation_pattern(path)
-        self.assertEqual(result["works_cited_count"], 82)
-        self.assertGreater(result["plausible_marker_count"], 0)
+        self.assertEqual(result["works_cited_count"], 0)
+        self.assertEqual(result["plausible_marker_count"], 0)
 
 
 class TestCorpusWideNumberedCitationReport(unittest.TestCase):

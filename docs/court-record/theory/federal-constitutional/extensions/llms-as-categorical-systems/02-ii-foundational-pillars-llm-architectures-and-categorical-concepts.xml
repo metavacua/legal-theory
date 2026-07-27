@@ -26,7 +26,7 @@
       </para>
     <para>
         The Transformer architecture, introduced by Vaswani et al.
-        (2017), is the bedrock of most modern LLMs.15 Originally
+        (2017), is the bedrock of most modern LLMs.<biblioref linkend="arxiv-170603762v7"/> Originally
         conceived as an encoder-decoder structure for machine
         translation tasks, its components have been adapted into various
         forms.
@@ -37,12 +37,12 @@
         understanding input sequences and generating rich contextual
         representations. They process the entire input sequence
         bidirectionally, allowing each token to attend to all other
-        tokens.20 These models excel at tasks like text classification,
+        tokens.<biblioref linkend="whylabs-understanding-large-language-model-architectures"/> These models excel at tasks like text classification,
         named entity recognition, and extractive question answering.
       </para>
     <para>
         Decoder-only models, like the GPT (Generative Pre-trained
-        Transformer) series, are optimized for text generation.20 They
+        Transformer) series, are optimized for text generation.<biblioref linkend="whylabs-understanding-large-language-model-architectures"/> They
         process text autoregressively, meaning each token is generated
         based on the preceding tokens, making them suitable for tasks
         such as language modeling, open-ended text generation, and
@@ -53,7 +53,7 @@
         T5 (Text-to-Text Transfer Transformer) and the original
         Transformer, utilize both components. The encoder processes the
         input sequence to create a representation, which then conditions
-        the decoder to generate an output sequence.20 These are
+        the decoder to generate an output sequence.<biblioref linkend="whylabs-understanding-large-language-model-architectures"/> These are
         well-suited for tasks like translation, summarization, and
         generative question answering.
       </para>
@@ -65,7 +65,7 @@
         <para>
           <emphasis role="strong">Input Embeddings:</emphasis>
             Converting discrete tokens (words or sub-words) into
-            continuous vector representations.30
+            continuous vector representations.<biblioref linkend="datacamp-how-transformers-work"/>
           </para>
       </listitem>
       <listitem>
@@ -73,7 +73,7 @@
           <emphasis role="strong">Positional Encoding:</emphasis>
             Adding information about the position of tokens in the
             sequence, as the core Transformer architecture does not
-            inherently process order.30
+            inherently process order.<biblioref linkend="datacamp-how-transformers-work"/>
           </para>
       </listitem>
       <listitem>
@@ -81,21 +81,21 @@
           <emphasis role="strong">Attention Mechanisms:</emphasis>
             Primarily self-attention, which allows the model to weigh
             the importance of different parts of the input sequence
-            relative to each other.18
+            relative to each other.<biblioref linkend="arxiv-230207730v4"/>
           </para>
       </listitem>
       <listitem>
         <para>
           <emphasis role="strong">Feed-Forward Networks:</emphasis>
             Position-wise fully connected layers applied independently
-            to each token representation.5
+            to each token representation.<biblioref linkend="en-transformer_deep_learning_architecture"/>
           </para>
       </listitem>
       <listitem>
         <para>
           <emphasis role="strong">Residual Connections and Layer
             Normalization:</emphasis> Techniques to stabilize training
-            and enable deeper networks.15
+            and enable deeper networks.<biblioref linkend="arxiv-170603762v7"/>
           </para>
       </listitem>
     </itemizedlist>
@@ -127,13 +127,13 @@
       </para>
     <para>
         At the heart of the Transformer is the self-attention
-        mechanism.15 It allows the model, when processing a particular
+        mechanism.<biblioref linkend="arxiv-170603762v7"/> It allows the model, when processing a particular
         token, to dynamically assess the relevance of all other tokens
         in the input sequence (within its context window) and
         incorporate this contextual information into the token's
         representation. This is achieved by computing three vectors for
         each input token embedding: Query (Q), Key (K), and Value (V),
-        typically through linear projections of the input embeddings.35
+        typically through linear projections of the input embeddings.<biblioref linkend="geeksforgeeks-transformer-attention-mechanism-in-nlp"/>
       </para>
     <para>
         The attention score between a query token and a key token
@@ -145,7 +145,7 @@
         commonly expressed as:
       </para>
     <para>
-        Attention(Q,K,V)=softmax(dk​​QKT​)V.36
+        Attention(Q,K,V)=softmax(dk​​QKT​)V.<biblioref linkend="machinelearningmastery-the-transformer-attention-mechanism"/>
       </para>
     <para>
       <emphasis role="strong">Multi-Head Attention</emphasis> extends
@@ -153,7 +153,7 @@
         parallel, each with different, learned linear projections for Q,
         K, and V. This allows the model to jointly attend to information
         from different representation subspaces at different
-        positions.15 The outputs of these "heads" are then
+        positions.<biblioref linkend="arxiv-170603762v7"/> The outputs of these "heads" are then
         concatenated and linearly projected to form the final output of
         the multi-head attention layer.
       </para>
@@ -171,12 +171,12 @@
     <para>
         The transformations performed by each layer are defined by
         parameters—primarily weights and biases associated with linear
-        transformations and other operations within the neural network.4
+        transformations and other operations within the neural network.<biblioref linkend="pieces-llm-parameters"/>
         These parameters are learned during the training process. The
         sheer number of these parameters, often in the billions or even
         trillions for state-of-the-art models, is what characterizes
         "large" language models and enables them to store and
-        process vast amounts of information and complex patterns.3
+        process vast amounts of information and complex patterns.<biblioref linkend="arxiv-200514165"/>
       </para>
     <para>
         The concept of parameters defining learned transformations
@@ -194,7 +194,7 @@
         find the one that best performs the desired task. This
         perspective aligns with formalisms like "Backprop as
         Functor," which models the learning process itself in
-        categorical terms.40
+        categorical terms.<biblioref linkend="dspace-learnerspdf"/>
       </para>
     <para>
         4. Autoregressive Generation
@@ -202,7 +202,7 @@
     <para>
         Decoder-based LLMs, and the decoder components of
         encoder-decoder models, generate output sequences (e.g., text,
-        code) in an autoregressive manner.42 This means that each token
+        code) in an autoregressive manner.<biblioref linkend="community-77749"/> This means that each token
         in the output sequence is generated one at a time, and the
         generation of each new token is conditioned on the initial
         prompt (input) and all the tokens generated so far in the
@@ -288,7 +288,7 @@
             <emphasis role="strong">identity morphism</emphasis>
             idA​:A→A. The identity morphism acts as a neutral element for
             composition: for any f:A→B, f∘idA​=f, and for any g:X→A,
-            idA​∘g=g.9
+            idA​∘g=g.<biblioref linkend="ecva-06472pdf"/>
           </para>
       </listitem>
     </itemizedlist>
@@ -297,7 +297,7 @@
       </para>
     <para>
         A functor F:C→D is a map between two categories, C and D, that
-        preserves their essential structure.9 Specifically, a functor
+        preserves their essential structure.<biblioref linkend="ecva-06472pdf"/> Specifically, a functor
         consists of:
       </para>
     <itemizedlist spacing="compact">
@@ -323,9 +323,9 @@
       <listitem>
         <para>
             Preservation of composition: F(g∘f)=F(g)∘F(f) for all
-            composable morphisms f:A→B and g:B→C in C.9 An
+            composable morphisms f:A→B and g:B→C in C.<biblioref linkend="ecva-06472pdf"/> An
             <emphasis role="strong">endofunctor</emphasis> is a functor
-            that maps a category to itself, i.e., F:C→C.49 Endofunctors
+            that maps a category to itself, i.e., F:C→C.<biblioref linkend="researchgate-387767268_self-attention_as_a_parametric_endofunctor_a_categorical_"/> Endofunctors
             are particularly relevant for describing internal
             transformations within a system.
           </para>
@@ -370,12 +370,12 @@
             the monad laws (associativity and unit laws). Monads are
             widely used in computer science to structure programs,
             manage state, and handle operations like I/O or
-            exceptions.53 Monads can often be derived from
+            exceptions.<biblioref linkend="arxiv-250320024v1"/> Monads can often be derived from
             <emphasis role="strong">adjunctions</emphasis> between
-            categories.53 The <emphasis role="strong">Kleisli
+            categories.<biblioref linkend="arxiv-250320024v1"/> The <emphasis role="strong">Kleisli
             category</emphasis> of a monad provides a setting where
             monadic computations (morphisms of the form A→T(B)) can be
-            composed naturally.56
+            composed naturally.<biblioref linkend="ncatlab-markovcategory"/>
           </para>
       </listitem>
     </itemizedlist>
@@ -386,7 +386,7 @@
         A natural transformation α:F⇒G provides a way to map one functor
         F:C→D to another functor G:C→D (where F and G share the same
         domain and codomain categories) in a "natural" or
-        coherent way across all objects of C.10 It consists of a family
+        coherent way across all objects of C.<biblioref linkend="people-aaai2025-tutorial-th18pdf"/> It consists of a family
         of morphisms αX​:F(X)→G(X) for each object X∈Ob(C), such that for
         every morphism f:X→Y in C, the diagram G(f)∘αX​=αY​∘F(f) commutes.
         Natural transformations are essentially "morphisms between

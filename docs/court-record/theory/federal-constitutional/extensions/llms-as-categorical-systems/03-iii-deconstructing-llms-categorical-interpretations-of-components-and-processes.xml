@@ -25,21 +25,21 @@
         applied to input data. Each individual layer within the network
         (e.g., an embedding layer, a feed-forward layer, or even a more
         complex attention layer) can be modeled as a morphism in an
-        appropriate category.58 The objects in such a category would
+        appropriate category.<biblioref linkend="ntrs-categories_of_neural_networkspdf"/> The objects in such a category would
         typically be the data representations themselves. For instance,
         if layers process vectors, the objects could be vector spaces
         (e.g., Rn for various n), and the layers would be functions
         (morphisms) between these spaces. A neural network comprising l
         layers can thus be seen as a sequence of morphisms
         N=(N0​,N1​,…,Nl−1​), where each Ni​:Xi​→Xi+1​ maps representations
-        from one space (or type) Xi​ to another Xi+1​.58 The entire
+        from one space (or type) Xi​ to another Xi+1​.<biblioref linkend="ntrs-categories_of_neural_networkspdf"/> The entire
         network, then, is the result of composing these layer-morphisms:
         Nl−1​∘…∘N1​∘N0​. This compositional view is central to
         understanding how information is progressively transformed.
         Indeed, some research explicitly models neural networks as
         systems where layers and substructures are morphisms,
         facilitating compositional reasoning and hierarchical
-        abstraction.59
+        abstraction.<biblioref linkend="openreview-forumidzm7zqdoazy"/>
       </para>
     <para>
         2. Parameters (Weights and Biases) Defining Morphisms
@@ -47,12 +47,12 @@
     <para>
         The specific transformation performed by a neural network layer
         is determined by its parameters, i.e., its learned weights and
-        biases.4 For example, a simple affine transformation layer is
+        biases.<biblioref linkend="pieces-llm-parameters"/> For example, a simple affine transformation layer is
         defined by a weight matrix W and a bias vector b, performing the
         operation y=Wx+b. In a categorical framework, these parameters
         define the concrete instance of the morphism. This naturally
         leads to the concept of parametric categories or actegories,
-        where morphisms are themselves parameterized.40 A layer type
+        where morphisms are themselves parameterized.<biblioref linkend="dspace-learnerspdf"/> A layer type
         (e.g., "linear layer with input dimension din​ and output
         dimension dout​") can be seen as a template for a class of
         morphisms, and a specific set of learned weights instantiates a
@@ -100,7 +100,7 @@
         contextualized token representations (another object of similar
         type). Some work has explored reformulating attention mechanisms
         as graph operations, highlighting the relational aspect inherent
-        in attention.62 From this perspective, attention mechanisms can
+        in attention.<biblioref linkend="pubs-026108_1_50256873pdf"/> From this perspective, attention mechanisms can
         be seen as mappings that define and strengthen relationships
         (morphisms) within a category of representations.
       </para>
@@ -110,7 +110,7 @@
     <para>
         A more formal and potent interpretation, particularly for the
         linear components of self-attention, comes from recent research
-        framing it as a parametric endofunctor.49
+        framing it as a parametric endofunctor.<biblioref linkend="researchgate-387767268_self-attention_as_a_parametric_endofunctor_a_categorical_"/>
       </para>
     <para>
         An endofunctor is a functor that maps a category to itself. In
@@ -156,7 +156,7 @@
         I(p,−):A→B, one for each parameter choice p∈P. The goal is to
         find a parameter p∗ such that I(p∗,−) best approximates some
         ideal (unknown or target) function f:A→B, based on training
-        examples (a,f(a)).40 In this view, learning is the search for an
+        examples (a,f(a)).<biblioref linkend="dspace-learnerspdf"/> In this view, learning is the search for an
         optimal morphism I(p∗,−) within a category of learnable
         functions.
       </para>
@@ -166,7 +166,7 @@
     <para>
         The seminal work "Backprop as Functor" by Fong,
         Spivak, and Tuyéras provides a categorical formalization of
-        gradient-based learning.40 They define a category called Learn,
+        gradient-based learning.<biblioref linkend="dspace-learnerspdf"/> They define a category called Learn,
         where objects are types (like A,B,C,…) and morphisms from A to B
         are learning algorithms themselves. A learning algorithm is
         characterized by a tuple (P,I,U,R):
@@ -215,7 +215,7 @@
         then applying the functor to get the learning algorithm for the
         composite function. This provides a profound structural insight
         into how backpropagation works through composed systems, like
-        deep neural networks.10
+        deep neural networks.<biblioref linkend="people-aaai2025-tutorial-th18pdf"/>
       </para>
     <para>
         The formalization of self-attention as a parametric endofunctor
@@ -276,7 +276,7 @@
     <para>
         LLM decoders generate text token by token, where each step is
         conditioned on the previously generated tokens and the overall
-        context (prompt).42 This is an inherently sequential and
+        context (prompt).<biblioref linkend="community-77749"/> This is an inherently sequential and
         stateful computational process.
       </para>
     <para>
@@ -285,7 +285,7 @@
     <para>
         In category theory and functional programming, monads are a
         standard way to structure computations that involve sequencing,
-        state, or other contextual effects.51 A monad (T,η,μ) provides:
+        state, or other contextual effects.<biblioref linkend="ncatlab-monad"/> A monad (T,η,μ) provides:
       </para>
     <itemizedlist spacing="compact">
       <listitem>
@@ -320,7 +320,7 @@
         application of self-attention blocks in Transformer
         architectures can be interpreted categorically as forming a free
         monad on the parametric endofunctor F representing the (linear
-        part of the) self-attention block.49
+        part of the) self-attention block.<biblioref linkend="researchgate-387767268_self-attention_as_a_parametric_endofunctor_a_categorical_"/>
       </para>
     <para>
         A free monad TF​ generated by an endofunctor F can be thought of
@@ -364,7 +364,7 @@
         constructed by stacking multiple, often identical, blocks (e.g.,
         encoder blocks or decoder blocks), each of which is itself
         composed of sub-layers like self-attention and feed-forward
-        networks.15 This modularity and hierarchical composition are key
+        networks.<biblioref linkend="arxiv-170603762v7"/> This modularity and hierarchical composition are key
         to their ability to learn complex functions.
       </para>
     <para>
@@ -373,7 +373,7 @@
     <para>
         In category theory, the composition of morphisms is the
         fundamental operation that "glues" the structure
-        together.8 If each layer or functional block of an LLM is viewed
+        together.<biblioref linkend="mlconference-deep-learning-category-theory-developers"/> If each layer or functional block of an LLM is viewed
         as a morphism, then the entire network—or significant parts of
         it—is simply a grand composition of these morphisms. The
         properties of the overall network then depend on the properties

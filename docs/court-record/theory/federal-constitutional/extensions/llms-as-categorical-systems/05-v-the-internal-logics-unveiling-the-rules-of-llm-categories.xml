@@ -20,7 +20,7 @@
     <para>
         Composition is arguably the most fundamental concept in category
         theory: morphisms compose associatively, and complex
-        transformations are built from simpler ones.8 This principle is
+        transformations are built from simpler ones.<biblioref linkend="mlconference-deep-learning-category-theory-developers"/> This principle is
         directly mirrored in LLM architectures.
       </para>
     <itemizedlist spacing="compact">
@@ -30,7 +30,7 @@
             LLMs are deep networks where layers are applied
             sequentially. The output of one layer becomes the input to
             the next. If each layer is a morphism, the entire network is
-            a long composition of these morphisms.58 The
+            a long composition of these morphisms.<biblioref linkend="ntrs-categories_of_neural_networkspdf"/> The
             "logic" here is that complex feature extraction
             and representation transformation are achieved through the
             iterative application of simpler transformations. The
@@ -52,7 +52,7 @@
             are then concatenated (which can be seen as forming a
             product or coproduct depending on the categorical setup) and
             subsequently transformed by another linear projection
-            morphism.31
+            morphism.<biblioref linkend="pelayoarbues-the-illustrated-transformer"/>
           </para>
       </listitem>
     </itemizedlist>
@@ -109,7 +109,7 @@
             express how more specialized or complex concepts are
             constructed from simpler, more abstract ones by
             "gluing" them together along shared sub-concept
-            relationships.59 An LLM might implicitly perform such
+            relationships.<biblioref linkend="openreview-forumidzm7zqdoazy"/> An LLM might implicitly perform such
             colimit-like operations to build up its understanding of
             complex linguistic phenomena from simpler learned patterns.
           </para>
@@ -166,7 +166,7 @@
     <para>
         LLMs are fundamentally probabilistic models. At their output,
         they typically produce a probability distribution over the next
-        possible token in a sequence.2 This inherent stochasticity needs
+        possible token in a sequence.<biblioref linkend="cloudflare-what-is-large-language-model"/> This inherent stochasticity needs
         to be part of any complete "internal logic."
       </para>
     <para>
@@ -181,7 +181,7 @@
             are symmetric monoidal categories equipped with additional
             structure (copy and discard operations) that allows
             morphisms to be interpreted as stochastic processes or
-            conditional probability kernels.56
+            conditional probability kernels.<biblioref linkend="ncatlab-markovcategory"/>
           </para>
       </listitem>
       <listitem>
@@ -194,7 +194,7 @@
             a monad, denoted Kl(D) for a distribution monad D, has the
             same objects as C, but its morphisms A→B are morphisms
             A→D(B) in C—that is, functions that map an input from A to a
-            probability distribution over B.56 Composition in Kl(D)
+            probability distribution over B.<biblioref linkend="ncatlab-markovcategory"/> Composition in Kl(D)
             naturally handles the propagation of probabilities.
           </para>
       </listitem>
@@ -207,7 +207,7 @@
         events. For example, each token generation step in an
         autoregressive LLM could be a morphism in a Kleisli category
         Kl(D), taking the current context (an object) to a distribution
-        over the next token (an object in D(Vocabulary)).57 This
+        over the next token (an object in D(Vocabulary)).<biblioref linkend="group-mmm-semantics-conditioningpdf"/> This
         framework allows for a rigorous treatment of how uncertainty is
         managed and propagated through the model during generation.
       </para>
