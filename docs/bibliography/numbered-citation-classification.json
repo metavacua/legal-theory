@@ -1,0 +1,572 @@
+{
+  "docs/court-record/matters/cooperative-investment-law/evidence/contractual-architectures-for-ip-and-cooperatives.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 40,
+    "total_rows": 143
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/cooperative-rights-commodification-analysis.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 76,
+    "total_rows": 94
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/cooperative-securities-analysis-and-strategy.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 71,
+    "total_rows": 94
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/cooperative-securities-in-the-global-marketplace.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 45,
+    "total_rows": 58
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/cooperative-securities-novel-financial-instruments.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 67,
+    "total_rows": 157
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/cooperative-tradeable-securities-research.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 40,
+    "total_rows": 40
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/cooperatives-politics-and-investible-patronage.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 124,
+    "total_rows": 124
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/from-clay-tablets-to-blockchains-draft.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 18,
+    "total_rows": 18
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/from-clay-tablets-to-blockchains-final.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 129,
+    "total_rows": 129
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/from-intangible-to-investment-ip-securitization.html": {
+    "category": "B",
+    "degenerate_count": 70,
+    "high_count": 0,
+    "total_rows": 70
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/ideal-security-formal-legal-economic.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 128,
+    "total_rows": 133
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/ip-securitization-historical-research.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 131,
+    "total_rows": 131
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/securitizing-cooperative-membership-voting-rights.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 69,
+    "total_rows": 69
+  },
+  "docs/court-record/matters/cooperative-investment-law/evidence/the-membership-security.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 64,
+    "total_rows": 88
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/a-constructive-legal-framework-for-artistic-commissions.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 28,
+    "total_rows": 28
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/ai-assisted-copyright-tool-blueprint.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 40,
+    "total_rows": 40
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/ai-assisted-copyrightable-work-schema.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 75,
+    "total_rows": 75
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/ai-corporate-personhood-and-legal-rights.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 60,
+    "total_rows": 86
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/freelancing-transgressive-art-projects.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 46,
+    "total_rows": 61
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/independent-artist-business-model.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 55,
+    "total_rows": 64
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/ip-creation-service-or-self-expression.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 67,
+    "total_rows": 67
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/legal-framework-for-artistic-commissions.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 74,
+    "total_rows": 86
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/patron-artist-collective-work-structure.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 106,
+    "total_rows": 106
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/prompts-as-expression.html": {
+    "category": "B",
+    "degenerate_count": 18,
+    "high_count": 0,
+    "total_rows": 18
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/sustainable-ip-creation.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 20,
+    "total_rows": 20
+  },
+  "docs/court-record/matters/copyright-ip-authorship/evidence/the-contractual-ecosystem-for-a-modern-artistic-venture.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 6,
+    "total_rows": 6
+  },
+  "docs/court-record/matters/google-platform-misclassification/evidence/california-worker-misclassification-risk-analysis.html": {
+    "category": "B",
+    "degenerate_count": 100,
+    "high_count": 0,
+    "total_rows": 100
+  },
+  "docs/court-record/matters/google-platform-misclassification/evidence/potential-service-contracts-in-google.html": {
+    "category": "B",
+    "degenerate_count": 7,
+    "high_count": 0,
+    "total_rows": 7
+  },
+  "docs/court-record/matters/google-platform-misclassification/evidence/systemic-misclassification-final.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 39,
+    "total_rows": 88
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-art-tools-for-comics.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 117,
+    "total_rows": 117
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-codebase-organization-strategies.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 40,
+    "total_rows": 40
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/ai-assisted-writing-tool-research.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 59,
+    "total_rows": 59
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/ai-toolchain-licensing-and-tos.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 46,
+    "total_rows": 46
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/directed-ip-creation.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 1,
+    "total_rows": 21
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/llm-data-vs-program.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 75,
+    "total_rows": 75
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/llm-information-encoding-and-covert-channels.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 141,
+    "total_rows": 141
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/open-research-ai-pro-tos-analysis.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 66,
+    "total_rows": 66
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/semantic-network-profiling-research.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 82,
+    "total_rows": 85
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/the-algorithmic-editor-ai-moderation-as-creative-control.html": {
+    "category": "B",
+    "degenerate_count": 10,
+    "high_count": 0,
+    "total_rows": 10
+  },
+  "docs/court-record/matters/platform-tos-constitutional-limits/evidence/the-unilateral-mandate-social-media-platforms-as-service-contracts.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 10,
+    "total_rows": 20
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/autonomy-a-myth-in-american-law.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 54,
+    "total_rows": 54
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/bodily-autonomy-legal-research.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 41,
+    "total_rows": 62
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/consent-contracts-and-legal-ambiguity.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 14,
+    "total_rows": 101
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/consent-theories-language-culture.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 180,
+    "total_rows": 180
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/contractual-capacity-for-sexual-services.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 44,
+    "total_rows": 44
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/defining-human-experiments-legally.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 135,
+    "total_rows": 135
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/defining-legal-human-experiments.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 79,
+    "total_rows": 79
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/defining-lewd-acts-and-prostitution-law.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 60,
+    "total_rows": 67
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/kink-sex-work-body-autonomy-research.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 219,
+    "total_rows": 219
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/legal-actions-without-consent-draft.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 157,
+    "total_rows": 157
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/prostitution-law-obscenity-consent-regulation.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 22,
+    "total_rows": 165
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/sex-work-contracts-free-speech-and-law.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 81,
+    "total_rows": 81
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/sex-work-regulation-and-state-surveillance.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 55,
+    "total_rows": 55
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/state-supreme-court-case-study-report.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 58,
+    "total_rows": 58
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-architecture-of-non-consensual-legality.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 257,
+    "total_rows": 271
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-laudable-contract-licit-sexual-service-agreements.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 9,
+    "total_rows": 54
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-nexus-of-consent-and-consideration.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 63,
+    "total_rows": 63
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/the-sovereign-self-bodily-autonomy-kink-sex-work.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 244,
+    "total_rows": 244
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/us-sex-crime-law-analysis.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 92,
+    "total_rows": 142
+  },
+  "docs/court-record/matters/sex-work-consent-bodily-autonomy/evidence/vice-regulation-in-aotearoa-new-zealand.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 80,
+    "total_rows": 80
+  },
+  "docs/court-record/theory/california-statutes/existing-law/california-contract-law-analysis.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 79,
+    "total_rows": 79
+  },
+  "docs/court-record/theory/california-statutes/existing-law/california-patron-law-section-analysis.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 25,
+    "total_rows": 30
+  },
+  "docs/court-record/theory/california-statutes/existing-law/california-sex-contract-consent-standards.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 57,
+    "total_rows": 57
+  },
+  "docs/court-record/theory/california-statutes/existing-law/california-sex-contracts-and-consent.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 80,
+    "total_rows": 80
+  },
+  "docs/court-record/theory/california-statutes/existing-law/minors-operating-businesses-in-california.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 106,
+    "total_rows": 109
+  },
+  "docs/court-record/theory/california-statutes/extensions/california-law-employment-retroactivity.html": {
+    "category": "B",
+    "degenerate_count": 1,
+    "high_count": 0,
+    "total_rows": 1
+  },
+  "docs/court-record/theory/california-statutes/extensions/the-consent-paradox-lawful-non-consensual-interaction.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 62,
+    "total_rows": 123
+  },
+  "docs/court-record/theory/california-statutes/specializations/from-presumption-to-practice-consensual-sexual-relations-ca.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 67,
+    "total_rows": 67
+  },
+  "docs/court-record/theory/federal-constitutional/existing-doctrine/first-amendment-landmark-cases-research.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 209,
+    "total_rows": 209
+  },
+  "docs/court-record/theory/federal-constitutional/existing-doctrine/legal-status-of-bodily-autonomy-post-dobbs.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 25,
+    "total_rows": 46
+  },
+  "docs/court-record/theory/federal-constitutional/extensions/first-amendment-and-prostitution-law.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 69,
+    "total_rows": 69
+  },
+  "docs/court-record/theory/federal-constitutional/extensions/llms-as-categorical-systems.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 78,
+    "total_rows": 78
+  },
+  "docs/court-record/theory/federal-constitutional/extensions/payment-processors-censorship-and-discrimination.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 39,
+    "total_rows": 42
+  },
+  "docs/court-record/theory/federal-statutes/existing-law/patronage-sourced-income.html": {
+    "category": "B",
+    "degenerate_count": 14,
+    "high_count": 0,
+    "total_rows": 14
+  },
+  "docs/court-record/theory/federal-statutes/existing-law/section-230-legal-shield-under-fire.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 62,
+    "total_rows": 69
+  },
+  "docs/court-record/theory/federal-statutes/extensions/agpl-ai-training-and-code-licensing.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 35,
+    "total_rows": 84
+  },
+  "docs/cross-cutting/intellectual-property-public-good.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 27,
+    "total_rows": 27
+  },
+  "docs/cross-cutting/patron-as-client.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 3,
+    "total_rows": 14
+  },
+  "docs/cross-cutting/patron-client-non-disclaimable-duties.html": {
+    "category": "B",
+    "degenerate_count": 28,
+    "high_count": 0,
+    "total_rows": 28
+  },
+  "docs/cross-cutting/tax-and-regulatory-thresholds-explained.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 55,
+    "total_rows": 55
+  },
+  "docs/cross-cutting/the-unwritten-ledger-non-fungible-human-capital.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 104,
+    "total_rows": 104
+  },
+  "docs/cross-cutting/valuing-human-life-economically.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 141,
+    "total_rows": 141
+  },
+  "docs/proposals/executive/agencies/california/secretary-of-state/improving-ai-accountability-petition-arguments.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 123,
+    "total_rows": 143
+  },
+  "docs/proposals/legislative/california/state-legislature/blueprint-for-innovation-ip-in-cooperative-securities.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 30,
+    "total_rows": 30
+  },
+  "docs/proposals/legislative/california/state-legislature/hybrid-cooperative-ipo-framework.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 46,
+    "total_rows": 114
+  },
+  "docs/proposals/legislative/california/state-legislature/legalizing-sexual-service-contracts.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 79,
+    "total_rows": 79
+  },
+  "docs/proposals/legislative/california/state-legislature/regulating-sexual-services-states-role.html": {
+    "category": "B",
+    "degenerate_count": 111,
+    "high_count": 0,
+    "total_rows": 111
+  },
+  "docs/wip/coop-membership-investment.html": {
+    "category": "B",
+    "degenerate_count": 10,
+    "high_count": 0,
+    "total_rows": 10
+  },
+  "docs/wip/critiquing-philosophies-through-science.html": {
+    "category": "B",
+    "degenerate_count": 87,
+    "high_count": 0,
+    "total_rows": 87
+  },
+  "docs/wip/game-design/the-playable-social-contract.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 45,
+    "total_rows": 45
+  },
+  "docs/wip/jpa-and-city-cooperatives.html": {
+    "category": "B",
+    "degenerate_count": 12,
+    "high_count": 0,
+    "total_rows": 12
+  },
+  "docs/wip/managing-inappropriate-patient-behavior-in-therapy.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 72,
+    "total_rows": 84
+  },
+  "docs/wip/really-tender-contract-california-validity.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 120,
+    "total_rows": 120
+  },
+  "docs/wip/spousal-investment-adviser-registration-analysis.html": {
+    "category": "A",
+    "degenerate_count": 0,
+    "high_count": 48,
+    "total_rows": 48
+  },
+  "docs/wip/systemic-misclassification-draft.html": {
+    "category": "ambiguous",
+    "degenerate_count": 0,
+    "high_count": 20,
+    "total_rows": 67
+  }
+}
