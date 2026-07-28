@@ -18,13 +18,13 @@ have their full numbered reference list intact (Category A -- see the design's S
 detection and works-cited location reuse `docs/scripts/audit_footnote_links.py`'s existing,
 already-adversarially-tested logic (`_is_excluded_context`, `locate_works_cited`) rather than
 duplicating it -- discovered 2026-07-26, after this plan's first draft had already built parallel,
-less rigorous detection logic; corrected before any task was executed. Rendering uses the real,
-apt-installable official DocBook XSL stylesheets (`docbook-xsl-ns`) directly for verification
-rather than hand-rolling more custom XSLT in `docs/xsl/html5.xsl` -- confirmed by direct testing to
-render `<bibliography>`/`<biblioentry>` correctly out of the box. Whether `html5.xsl` itself should
-become a `docbook-xsl-ns` customization layer (importing the official stylesheets, overriding only
-this project's genuine customizations -- theming, finding-badges, DC meta tags, JSON-LD) is a real,
-larger question this plan does not attempt to resolve; see the note at the end of Task 3.
+less rigorous detection logic; corrected before any task was executed. Rendering verification uses
+the real, apt-installable official DocBook XSL stylesheets (`docbook-xsl-ns`) directly, confirmed by
+direct testing to render `<bibliography>`/`<biblioentry>` correctly out of the box with zero custom
+XSLT. `docs/xsl/html5.xsl` is a non-standard, hand-rolled renderer and is not exempt from this
+project's standardization mandate; it is not modified in this plan purely for sequencing reasons
+(this plan proves the citation architecture on one document first), and its full replacement by
+`docbook-xsl-ns` is real, scoped work, tracked as Phase 2 of this project.
 
 **Tech Stack:** Python 3 stdlib `xml.etree.ElementTree` (matching every existing script's
 convention -- the corpus has not yet migrated to `lxml` corpus-wide), `eyecite` (Free Law Project,
@@ -56,10 +56,10 @@ via venv), `jing`/`xmllint` (existing), the official `docbook-xsl-ns` package (a
   `prompts-as-expression` `degenerate_bibliography` -- the same Category B finding this project's
   brainstorming re-derived by hand via live Drive comparison. Reuse its detection/location
   functions and its existing report; do not re-derive them.
-- `docbook-xsl-ns` (apt-packaged) is used directly for this plan's rendering verification, not
-  `docs/xsl/html5.xsl` -- standardization takes precedence over preserving this project's own
-  hand-rolled stylesheet's current behavior (explicit 2026-07-26 direction). This plan does not
-  modify `html5.xsl`.
+- `docbook-xsl-ns` (apt-packaged) is used directly for this plan's rendering verification.
+  `docs/xsl/html5.xsl` is non-standard and is not modified in this plan for sequencing reasons only
+  (this plan proves the citation architecture first) -- not because its current behavior is being
+  preserved. Its full replacement by `docbook-xsl-ns` is tracked as Phase 2 of this project.
 - No task in this plan performs a corpus-wide bulk conversion. The only real content conversion in
   this plan is the single, fully-verified pilot document (`llms-as-categorical-systems`). Bulk
   execution across the remaining 87 flat-entry documents and the remaining numbered-citation
@@ -78,7 +78,8 @@ via venv), `jing`/`xmllint` (existing), the official `docbook-xsl-ns` package (a
 - Create `docs/scripts/eyecite_classify.py` -- thin wrapper classifying citation text via eyecite.
 - Create `docs/scripts/tests/test_eyecite_classify.py`.
 - Install `docbook-xsl-ns` (apt) -- the official DocBook XSL stylesheets, used directly for this
-  plan's rendering verification. `docs/xsl/html5.xsl` is not modified by this plan.
+  plan's rendering verification. `docs/xsl/html5.xsl` (non-standard, slated for full replacement by
+  `docbook-xsl-ns` in Phase 2) is not modified in this plan -- sequencing only.
 - Create `docs/scripts/convert_numbered_citations.py` -- the Category-A marker-to-citation
   converter, built on `audit_footnote_links.py`'s existing detection/exclusion logic, not a
   parallel reimplementation.
@@ -437,19 +438,17 @@ git commit -m "feat: add eyecite-based citation classification wrapper (venv-ins
 
 ### Task 3: Verify real bibliography/cross-reference rendering via the official DocBook XSL stylesheets
 
-**Design correction (2026-07-26), stated plainly:** this task originally hand-wrote XSLT templates
-in `docs/xsl/html5.xsl` for `db:bibliography`/`db:biblioentry`, plus a `db:citation`-resolution
-template. Two problems, both found by direct testing before any of that code was written into this
-plan for real: (1) standardization was explicitly directed to take precedence over preserving
-`html5.xsl`'s current hand-rolled behavior -- the official, apt-installable `docbook-xsl-ns`
-package already renders `<bibliography>`/`<biblioentry>` correctly out of the box, confirmed by
-direct testing; writing a second, parallel implementation of the same rendering is exactly the
-pattern this whole project exists to eliminate. (2) `<citation>KEY</citation>` -- what Task 4 was
-going to convert markers into -- is the wrong element regardless of which stylesheet renders it:
-DocBook 5.2 has a purpose-built element for exactly this, `<biblioref linkend="KEY"/>` ("A
-cross-reference to a bibliographic entry"), confirmed by direct testing to render as a real,
-resolved hyperlink via the unmodified official stylesheet, with zero custom XSLT. This task is now
-pure verification -- no file is modified.
+This task verifies that the official, apt-installable `docbook-xsl-ns` package already renders
+`<bibliography>`/`<biblioentry>` correctly out of the box, with zero custom XSLT -- writing a
+second, hand-rolled implementation of the same rendering (which an earlier draft of this task did,
+directly in `docs/xsl/html5.xsl`) is exactly the pattern this whole project exists to eliminate, and
+`html5.xsl` itself is non-standard, not something to extend further. Separately, this task also
+confirmed `<citation>KEY</citation>` -- what Task 4 was going to convert markers into -- is the
+wrong element regardless of which stylesheet renders it: DocBook 5.2 has a purpose-built element for
+exactly this, `<biblioref linkend="KEY"/>` ("A cross-reference to a bibliographic entry"), confirmed
+by direct testing to render as a real, resolved hyperlink via the unmodified official stylesheet.
+This task is pure verification -- no file is modified; replacing `html5.xsl` itself is Phase 2
+scope (see Task 6, Step 9).
 
 **Files:** none modified.
 
@@ -493,15 +492,14 @@ xsltproc --xinclude /usr/share/xml/docbook/stylesheet/docbook-xsl-ns/html/docboo
 ```
 Expected: `VALID`, then output containing `<a href="#smith2020" class="biblioref" title="[smith2020]">smith2020</a>` -- a real, resolved hyperlink from the citation site directly to the bibliography entry, rendered by the unmodified official stylesheet.
 
-- [ ] **Step 3: Note the follow-on question this does not resolve**
+- [ ] **Step 3: `html5.xsl`'s full replacement is Phase 2 scope, not skipped or deferred indefinitely**
 
-`docs/xsl/html5.xsl` still renders this project's own custom theming, finding-badges, DC meta
-tags, and JSON-LD -- none of which `docbook-xsl-ns` produces by default. Whether `html5.xsl`
-itself should become a `docbook-xsl-ns` customization layer (importing the official stylesheet,
-overriding only these genuine customizations) is a real question this plan does not resolve --
-explicitly out of scope here, worth its own design/plan pass. This plan's pilot task renders via
-`docbook-xsl-ns` directly for verification purposes only, which is sufficient to prove the citation
-architecture itself is sound without deciding `html5.xsl`'s own future.
+`docs/xsl/html5.xsl` is confirmed non-standard: it duplicates rendering that `docbook-xsl-ns`
+already does correctly, and lacks support for the new `<bibliography>`/`<biblioref>` structure this
+plan introduces. Retiring it entirely and rendering the corpus via `docbook-xsl-ns` directly is the
+correct end state -- this plan does not do that retirement itself (it is scoped to proving the
+citation architecture on one document), but the retirement is real, identified follow-on work
+(Phase 2), not an open question about whether it should happen.
 
 No commit for this task -- nothing was modified, only installed and verified.
 
@@ -1256,15 +1254,17 @@ print('words only in after:', len(after_words - before_words))
 Expected: total character count is comparable (not a drastic drop indicating lost content); review
 the word-diff output directly for anything that looks like lost, not just reformatted, content.
 
-- [ ] **Step 9: Do not rebuild the corpus's committed HTML for this document in this plan**
+- [ ] **Step 9: This pilot does not rebuild the corpus's committed HTML -- `html5.xsl` itself needs
+  to be retired, not patched to cope with this one document**
 
-`docs/xsl/html5.xsl` does not yet render `db:bibliography`/`db:biblioref` (Task 3's deferred
-follow-on). Rebuilding and committing this document's tracked `.html` via the current, unmodified
-`html5.xsl` would show degraded, unstyled, unlinked bibliography rendering on the live site --
-correct XML, worse HTML, a real regression a reader would see. Leave the tracked `.html` as-is
-(stale relative to the new XML in this one narrow respect: the works-cited section and inline
-markers) until `html5.xsl` itself gains real bibliography support. This is a deliberate, documented
-choice, not an oversight -- confirm it explicitly:
+`docs/xsl/html5.xsl` cannot render `db:bibliography`/`db:biblioref` at all. Rebuilding this
+document's tracked `.html` through it would produce degraded, unstyled, unlinked output -- correct
+XML, broken HTML. That is not a reason to accept `html5.xsl` as permanent: it is confirmation that
+`html5.xsl` needs to be replaced by `docbook-xsl-ns` corpus-wide (Phase 2), not patched document-by-
+document to render the new structure. This pilot leaves the tracked `.html` stale in this one narrow
+respect (works-cited section and inline markers) only because rebuilding the whole corpus's HTML
+output is out of this plan's scope, not because the old renderer is being kept. Confirm the `.html`
+is untouched by this task specifically:
 ```bash
 git status --short docs/court-record/theory/federal-constitutional/extensions/llms-as-categorical-systems.html
 ```
@@ -1341,10 +1341,9 @@ cat >> .superpowers/sdd/progress.md << 'EOF'
 Built and verified end-to-end: standalone biblioentry architecture (Task 1),
 eyecite venv + classification wrapper (Task 2), confirmed the official
 docbook-xsl-ns stylesheets render db:bibliography/biblioentry/biblioref
-correctly with zero custom XSLT (Task 3 -- html5.xsl itself intentionally
-not modified, standardization taking precedence per 2026-07-26 direction;
-whether html5.xsl should become a docbook-xsl-ns customization layer is
-flagged as separate future work), the Category-A numbered-citation converter
+correctly with zero custom XSLT (Task 3 -- html5.xsl is non-standard and
+not modified in this plan for sequencing reasons only; its full retirement
+and replacement by docbook-xsl-ns is Phase 2 scope), the Category-A numbered-citation converter
 built on audit_footnote_links.py's existing detection/exclusion logic rather
 than duplicating it (Task 4), the full numbered-citation-document
 classification manifest derived primarily from the existing
@@ -1386,9 +1385,11 @@ detection/exclusion more rigorously than this plan's first draft (Task 4 rewritt
 not duplicate it); its own pre-generated report already gives most of the Category A/B signal
 (Task 5 rewritten to derive from it, not re-research all ~96 documents by hand); and the official
 `docbook-xsl-ns` stylesheets already render this project's new structure correctly, including a
-better element choice (`<biblioref>`, not `<citation>`) discovered in the course of verifying that
-(Task 3 rewritten from an `html5.xsl` modification to pure verification). All code in the current
-task text was independently re-verified live after each change, not left as originally drafted.
+better element choice (`<biblioref>`, not `<citation>`) discovered in the course of verifying that.
+Task 3 was rewritten from an `html5.xsl` modification to pure verification -- confirming
+`docbook-xsl-ns` renders correctly, not exempting `html5.xsl` from eventual replacement, which
+remains real Phase 2 scope. All code in the current task text was independently re-verified live
+after each change, not left as originally drafted.
 
 **Placeholder scan:** No TBD/TODO; every step has complete, concrete code or an exact command.
 
