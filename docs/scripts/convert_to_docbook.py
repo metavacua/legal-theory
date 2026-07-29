@@ -337,7 +337,7 @@ def validate(xml_path):
 
 def build_html(xml_path, out_path):
     result = subprocess.run(
-        ["xsltproc", "--xinclude", str(HTML5_XSL_PATH), str(xml_path)],
+        ["xsltproc", "--xinclude", "--stringparam", "docbook.css.source", "", str(HTML5_XSL_PATH), str(xml_path)],
         capture_output=True, text=True, check=True,
     )
     Path(out_path).write_text(result.stdout, encoding="utf-8")

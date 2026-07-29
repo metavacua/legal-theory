@@ -438,6 +438,21 @@ class TestValidateAndBuild(unittest.TestCase):
         self.assertIn('href="#smith2020"', content)
         self.assertIn('class="biblioentry"', content)
 
+    def test_build_html_does_not_emit_a_broken_docbook_css_link(self):
+        # xhtml5/docbook.xsl's default "clean HTML" behavior writes a
+        # docbook.css companion file to cwd (not co-located with the
+        # output) and links to it -- a broken stylesheet reference on
+        # every page unless suppressed via docbook.css.source.
+        from convert_to_docbook import build_html
+        xml_path = self._convert_fixture("flat.md", "flat", "A Flat Document")
+        html_path = self.fixtures / "flat.html"
+        stray_css = Path("docbook.css")
+        self.addCleanup(html_path.unlink)
+        build_html(xml_path, html_path)
+        content = html_path.read_text(encoding="utf-8")
+        self.assertNotIn("docbook.css", content)
+        self.assertFalse(stray_css.exists())
+
 
 class TestContentPreservationDiff(unittest.TestCase):
     def setUp(self):
