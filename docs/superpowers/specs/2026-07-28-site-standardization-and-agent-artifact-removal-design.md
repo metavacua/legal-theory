@@ -3,7 +3,7 @@
 ## 1. Motivation
 
 Retiring `html5.xsl` (previous design/plan, complete) fixed how documents render but surfaced a
-deeper split: `docs/index.md` and 16 `README.md` files under `docs/` are still Markdown, rendered
+deeper split: `docs/index.md` and 15 `README.md` files under `docs/` are still Markdown, rendered
 by Jekyll with the `jekyll-theme-cayman` theme -- an entirely separate pipeline from the 120
 DocBook documents it links to, producing a jarring, inconsistent site. Investigating that split
 surfaced four more, confirmed by direct testing, not assumed:
@@ -74,9 +74,9 @@ subject matter or write descriptive prose (e.g. "CA Labor Code ABC test; NLRA...
 text is genuine authored content, not derivable from a document's own metadata, and stays hand-
 authored where it already exists meaningfully (see §2.2).
 
-### 2.2 The 16 `README.md` files -- split by whether they're generatable
+### 2.2 The 15 `README.md` files -- split by whether they're generatable
 
-Direct inspection of all 16 (word counts + content read in full) splits them into two real
+Direct inspection of all 15 (word counts + content read in full) splits them into two real
 categories:
 
 - **Pure-listing stubs (8 files, 7-15 lines each: `cross-cutting/README.md`,
