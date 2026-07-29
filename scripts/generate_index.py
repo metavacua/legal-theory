@@ -27,6 +27,7 @@ CATEGORY_ORDER = [
     ("wip", "Works in Progress"),
     ("papers", "Papers"),
     ("bibliography", "Bibliography"),
+    ("audits", "Audits"),
 ]
 
 

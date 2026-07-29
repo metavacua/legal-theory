@@ -163,4 +163,10 @@
       <listitem><para><link xlink:href="bibliography/references.html" xmlns:xlink="http://www.w3.org/1999/xlink">Consolidated References &amp; Bibliography</link></para></listitem>
     </itemizedlist>
   </section>
+  <section xml:id="audits">
+    <title>Audits</title>
+    <itemizedlist>
+      <listitem><para><link xlink:href="audits/README.html" xmlns:xlink="http://www.w3.org/1999/xlink">Footnote-to-Citation Audit</link></para></listitem>
+    </itemizedlist>
+  </section>
 </article>
