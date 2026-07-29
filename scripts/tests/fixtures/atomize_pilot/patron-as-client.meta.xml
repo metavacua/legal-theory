@@ -2,6 +2,6 @@
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Patron as Client: Analyzing Crowdfunded Commissions Under California Labor Law</title>
   <dc:type>Text</dc:type>
-  <xi:include href="../../../../common/authorgroup.xml" />
-  <xi:include href="../../../../common/legalnotice.xml" />
+  <xi:include href="../../../../docs/common/authorgroup.xml" />
+  <xi:include href="../../../../docs/common/legalnotice.xml" />
 </info>

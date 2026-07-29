@@ -553,7 +553,7 @@ DEFAULT_EXCLUDE_DIRS = {"papers", "scripts", "scratch", "bibliography"}
 
 def main(argv=None):
     """CLI entry point: walk a corpus (default docs/, excluding
-    docs/papers, docs/scripts, docs/scratch, docs/bibliography per the
+    docs/papers, docs/scratch, docs/bibliography per the
     design doc), run the full Task 1-8 pipeline over every shell
     article found, write the §8 CSV report, and print a one-line
     per-tier summary. Never writes to any corpus document -- read-only

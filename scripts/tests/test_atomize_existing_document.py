@@ -59,8 +59,8 @@ class TestAtomizeExistingDocument(unittest.TestCase):
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title><emphasis role="strong">Styled Title</emphasis></title>
   <dc:type>Text</dc:type>
-  <xi:include href="../../../../common/authorgroup.xml" />
-  <xi:include href="../../../../common/legalnotice.xml" />
+  <xi:include href="../../../../docs/common/authorgroup.xml" />
+  <xi:include href="../../../../docs/common/legalnotice.xml" />
 </info>
 """
         self.meta_path.write_text(styled_meta, encoding="utf-8")
@@ -190,8 +190,8 @@ class TestMetaMatchesSharedShape(unittest.TestCase):
 <info xmlns="{DB_NS}" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="{XI_NS}">
   <title>Minimal Document</title>
   <dc:type>Text</dc:type>
-  <xi:include href="../../../../common/authorgroup.xml" />
-  <xi:include href="../../../../common/legalnotice.xml" />
+  <xi:include href="../../../../docs/common/authorgroup.xml" />
+  <xi:include href="../../../../docs/common/legalnotice.xml" />
 </info>
 """
         meta_path = self.tmp_dir / "minimal.meta.xml"

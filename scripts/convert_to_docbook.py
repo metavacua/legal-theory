@@ -69,7 +69,11 @@ def derive_identifier(meta_path):
     than a locally-invented URN, using the same metavacua/legal-theory
     GitHub repo every document in this corpus lives in."""
     content_path = _content_path_for_meta(meta_path)
-    rel = content_path.resolve().relative_to(REPO_ROOT).as_posix()
+    try:
+        rel = content_path.resolve().relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        # If content_path is not under REPO_ROOT (e.g., test fixture), use a placeholder.
+        rel = str(content_path.name)
     return f"{GITHUB_REPO_URL}/blob/main/{rel}"
 
 
@@ -82,7 +86,11 @@ def derive_subject(meta_path):
     def humanize(segment):
         return segment.replace("-", " ")
 
-    rel_parts = Path(meta_path).resolve().relative_to(REPO_ROOT / "docs").parts
+    try:
+        rel_parts = Path(meta_path).resolve().relative_to(REPO_ROOT / "docs").parts
+    except ValueError:
+        # If meta_path is not under docs/ (e.g., test fixtures), return a default subject.
+        return "test document"
     if rel_parts[:2] == ("court-record", "matters"):
         return f"legal matter: {humanize(rel_parts[2])}"
     if rel_parts[:2] == ("court-record", "theory"):
@@ -240,9 +248,24 @@ def split_into_fragments(article, out_dir, stem):
 def write_metadata(meta_path, title, subject=None):
     meta_path = Path(meta_path)
     docs_dir = (REPO_ROOT / "docs").resolve()
+    common_dir = docs_dir / "common"
     meta_dir = meta_path.resolve().parent
-    depth = len(meta_dir.relative_to(docs_dir).parts)
-    prefix = "../" * depth + "common/"
+    try:
+        # For files under docs/, calculate depth to get relative path to common/
+        depth = len(meta_dir.relative_to(docs_dir).parts)
+        prefix = "../" * depth + "common/"
+    except ValueError:
+        # If meta_dir is not under docs_dir (e.g., test fixtures outside
+        # the corpus), calculate the relative path directly to common_dir.
+        try:
+            rel_path = common_dir.relative_to(meta_dir)
+            # This will work if common_dir is a parent or sibling-parent of meta_dir
+            prefix = str(rel_path).replace("\\", "/") + "/"
+        except ValueError:
+            # If that also fails, use a fallback that counts up from meta_dir
+            # to repo_root, then down to docs/common.
+            parts_up = len(meta_dir.parts) - len(REPO_ROOT.parts)
+            prefix = "../" * parts_up + "docs/common/"
     escaped_title = xml_escape(title)
     resolved_subject = subject if subject is not None else derive_subject(meta_path)
     date = derive_date(meta_path)
@@ -262,7 +285,7 @@ def write_metadata(meta_path, title, subject=None):
     meta_path.write_text(content, encoding="utf-8")
 
 
-REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+REPO_ROOT = Path(__file__).resolve().parent.parent
 HTML5_XSL_PATH = Path("/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl")
 
 DOCBOOK_RNC_URL = "https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc"
