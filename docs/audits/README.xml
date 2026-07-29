@@ -13,8 +13,8 @@
   human-review pass (all 40 <code>restart_detected</code> rows as they stood then, 30 <code>High</code>, 20 <code>Medium</code>, and
   a stratified 30-row sample of <code>Needs manual triage</code>), before a critical whole-branch-review fix
   (per-fragment restart detection — restart detection now runs independently on each fragment file
-  rather than on the whole document's concatenated candidate sequence, per design spec §6; see
-  <code>.superpowers/sdd/task-11-report.md</code>) corrected <code>restart_detected</code> from 40 rows across 6 documents
+  rather than on the whole document's concatenated candidate sequence; see git history) corrected
+  <code>restart_detected</code> from 40 rows across 6 documents
   to 88 rows across 11 documents. Most notably, <code>the-architecture-of-non-consensual-legality.html</code>
   had a genuine restart entirely confined to one fragment that the prior whole-document check missed
   completely (0 <code>restart_detected</code> rows) because a <emphasis>later, unrelated</emphasis> fragment's own numbering
@@ -28,8 +28,7 @@
   independently re-reviewed row-by-row by a human beyond that automated verification.</para>
 
   <para><emphasis role="strong">Two known, honestly-labeled data-quality caveats found during that review</emphasis> (corpus defects the
-  audit correctly surfaces, not audit bugs — see design spec §9, "explicitly sequenced follow-on
-  work," for the broader cleanup this belongs to):</para>
+  audit correctly surfaces, not audit bugs):</para>
 
   <orderedlist numeration="arabic">
     <listitem>
@@ -50,5 +49,5 @@
 
   <para><emphasis role="strong">This report identifies candidates for a future footnote-to-citation linking pass — it does not
   perform one.</emphasis> Any mechanical rewrite of the corpus's 446 files based on this report's <code>High</code> rows
-  is a separate, not-yet-designed project (design spec §9).</para>
+  is a separate, not-yet-designed project.</para>
 </article>
