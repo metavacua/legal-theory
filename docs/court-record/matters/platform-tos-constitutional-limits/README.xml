@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="readme" xml:lang="en">
+  <xi:include href="README.meta.xml" />
+
+  <section xml:id="jurisdiction-and-venue">
+    <title>Jurisdiction and Venue</title>
+    <para>Claims arise under the First Amendment (federal constitutional), California Constitution Art. I §2 (state constitutional — speech broader than federal floor), California Business and Professions Code § 17200 (unfair business practices), and federal Section 230 (where platform immunity is being argued against claims here). Federal constitutional claims invoke federal court jurisdiction; state constitutional claims can be heard in CA Superior Court.</para>
+    <para>Constitutional scope: Federal constitutional (1st Amendment limits on automated decision systems); California constitutional (Art. I §2 broader speech protection); federal statutory (Section 230 scope and limits); California statutory (B&amp;P § 17200 unfair practices).</para>
+    <para>Lower courts cannot resolve the federal or state constitutional questions — these must be preserved for appellate review or filed directly in appropriate federal or state courts.</para>
+  </section>
+
+  <section xml:id="parties">
+    <title>Parties</title>
+    <para><emphasis role="strong">Plaintiff:</emphasis> Ian D.L.N. McLean, individually, as member of affected class, and as member of the public.</para>
+    <para><emphasis role="strong">Defendants:</emphasis> [To be specified — platform operators and LLM service providers]</para>
+  </section>
+
+  <section xml:id="statement-of-facts">
+    <title>Statement of Facts</title>
+    <para>See <link xlink:href="findings.html">findings.html</link> FOF section. Supporting evidence in <link xlink:href="evidence/">evidence/</link> (12 documents — see the <link xlink:href="../../../index.html#matters">full index</link>).</para>
+  </section>
+
+  <section xml:id="causes-of-action">
+    <title>Causes of Action</title>
+    <orderedlist numeration="arabic">
+      <listitem><para>First Amendment violation — federal constitutional — federal court</para></listitem>
+      <listitem><para>California Art. I §2 violation — state constitutional — CA Superior Court</para></listitem>
+      <listitem><para>Unfair business practices under B&amp;P § 17200 — CA statutory — CA Superior Court</para></listitem>
+      <listitem><para>Automated decision system without human review — CA statutory — CA Superior Court</para></listitem>
+    </orderedlist>
+  </section>
+
+  <section xml:id="prayer-for-relief">
+    <title>Prayer for Relief</title>
+    <para>[To be specified]</para>
+  </section>
+</article>

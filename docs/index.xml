@@ -37,6 +37,11 @@
       <listitem><para><link xlink:href="court-record/matters/google-platform-misclassification/evidence/google-user-misclassification.html" xmlns:xlink="http://www.w3.org/1999/xlink">Google User Misclassification — The Predominant Factor Test</link></para></listitem>
       <listitem><para><link xlink:href="court-record/matters/platform-tos-constitutional-limits/evidence/llm-data-vs-program.html" xmlns:xlink="http://www.w3.org/1999/xlink">Isolating the Influence of Data in Large Language Models: A Data-Centric Comparative Analysis</link></para></listitem>
       <listitem><para><link xlink:href="court-record/matters/platform-tos-constitutional-limits/evidence/llm-information-encoding-and-covert-channels.html" xmlns:xlink="http://www.w3.org/1999/xlink">Latent Space and Covert Channels: A Deep Dive into Information Encoding and Communication in Large Language Models</link></para></listitem>
+      <listitem><para><link xlink:href="court-record/matters/cooperative-investment-law/README.html" xmlns:xlink="http://www.w3.org/1999/xlink">Matter: Cooperative Investment Law and Patron Securities</link></para></listitem>
+      <listitem><para><link xlink:href="court-record/matters/copyright-ip-authorship/README.html" xmlns:xlink="http://www.w3.org/1999/xlink">Matter: Copyright, IP Authorship, and AI-Assisted Creation</link></para></listitem>
+      <listitem><para><link xlink:href="court-record/matters/google-platform-misclassification/README.html" xmlns:xlink="http://www.w3.org/1999/xlink">Matter: Google Platform Worker Misclassification</link></para></listitem>
+      <listitem><para><link xlink:href="court-record/matters/platform-tos-constitutional-limits/README.html" xmlns:xlink="http://www.w3.org/1999/xlink">Matter: Platform ToS and Constitutional Limits on LLM Expression Controls</link></para></listitem>
+      <listitem><para><link xlink:href="court-record/matters/sex-work-consent-bodily-autonomy/README.html" xmlns:xlink="http://www.w3.org/1999/xlink">Matter: Sex Work, Consent, and Bodily Autonomy</link></para></listitem>
       <listitem><para><link xlink:href="court-record/matters/copyright-ip-authorship/evidence/ai-assisted-copyright-tool-blueprint.html" xmlns:xlink="http://www.w3.org/1999/xlink">Operationalizing Human Authorship: A Legal and Technical Framework for Copyright in the Age of AI</link></para></listitem>
       <listitem><para><link xlink:href="court-record/matters/sex-work-consent-bodily-autonomy/evidence/sex-work-contracts-free-speech-and-law.html" xmlns:xlink="http://www.w3.org/1999/xlink">Pactum de Sexu: Re-Theorizing Sexual Service Contracts as Protected Economic and Expressive Association</link></para></listitem>
       <listitem><para><link xlink:href="court-record/matters/cooperative-investment-law/evidence/ideal-security-formal-legal-economic.html" xmlns:xlink="http://www.w3.org/1999/xlink">Properties of an Ideal Security: A Multidimensional Analysis</link></para></listitem>
@@ -147,6 +152,7 @@
   <section xml:id="papers">
     <title>Papers</title>
     <itemizedlist>
+      <listitem><para><link xlink:href="papers/ai_and_ip/llm-database-theory/README.html" xmlns:xlink="http://www.w3.org/1999/xlink">Language Models Are Databases</link></para></listitem>
       <listitem><para><link xlink:href="papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory.html" xmlns:xlink="http://www.w3.org/1999/xlink">Language Models Are Databases: A Technical and Legal Position Paper on LLMs and Intellectual Property</link></para></listitem>
       <listitem><para><link xlink:href="papers/ai_and_ip/llm-database-theory/src/02-legal-corpus-connections.html" xmlns:xlink="http://www.w3.org/1999/xlink">Legal Corpus Connections: How the LLM-Database Theory Connects to Existing Matters in This Repository</link></para></listitem>
     </itemizedlist>
