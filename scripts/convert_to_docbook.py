@@ -69,11 +69,7 @@ def derive_identifier(meta_path):
     than a locally-invented URN, using the same metavacua/legal-theory
     GitHub repo every document in this corpus lives in."""
     content_path = _content_path_for_meta(meta_path)
-    try:
-        rel = content_path.resolve().relative_to(REPO_ROOT).as_posix()
-    except ValueError:
-        # If content_path is not under REPO_ROOT (e.g., test fixture), use a placeholder.
-        rel = str(content_path.name)
+    rel = content_path.resolve().relative_to(REPO_ROOT).as_posix()
     return f"{GITHUB_REPO_URL}/blob/main/{rel}"
 
 
@@ -256,16 +252,10 @@ def write_metadata(meta_path, title, subject=None):
         prefix = "../" * depth + "common/"
     except ValueError:
         # If meta_dir is not under docs_dir (e.g., test fixtures outside
-        # the corpus), calculate the relative path directly to common_dir.
-        try:
-            rel_path = common_dir.relative_to(meta_dir)
-            # This will work if common_dir is a parent or sibling-parent of meta_dir
-            prefix = str(rel_path).replace("\\", "/") + "/"
-        except ValueError:
-            # If that also fails, use a fallback that counts up from meta_dir
-            # to repo_root, then down to docs/common.
-            parts_up = len(meta_dir.parts) - len(REPO_ROOT.parts)
-            prefix = "../" * parts_up + "docs/common/"
+        # the corpus), fall back to counting up from meta_dir to
+        # repo_root, then down to docs/common.
+        parts_up = len(meta_dir.parts) - len(REPO_ROOT.parts)
+        prefix = "../" * parts_up + "docs/common/"
     escaped_title = xml_escape(title)
     resolved_subject = subject if subject is not None else derive_subject(meta_path)
     date = derive_date(meta_path)

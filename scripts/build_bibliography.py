@@ -535,17 +535,15 @@ from xml.sax.saxutils import escape as xml_escape
 
 
 def relative_html_link(repo_relative_html):
-    # For real corpus documents under docs/, convert to relative link from bibliography.
-    # For test fixtures under scripts/, convert using the same ../path pattern for
-    # consistency, even though test bibliography files won't actually be built.
-    if repo_relative_html.startswith("docs/"):
-        return "../" + repo_relative_html[len("docs/"):]
-    elif repo_relative_html.startswith("scripts/"):
-        # Test fixture path: treat similarly, going up from scripts to root level
-        return "../" + repo_relative_html[len("scripts/"):]
-    else:
-        # Fallback for any other prefix - just add .. to navigate up
-        return "../" + repo_relative_html
+    # Real corpus documents live under docs/; test fixtures live under
+    # scripts/ (scripts/tests/fixtures/...) since the docs/scripts/ ->
+    # scripts/ move. Both are legitimate top-level prefixes for a citing
+    # path, but nothing else is -- a bad path, an absolute path, or a
+    # typo must fail loudly here rather than silently produce a bogus
+    # "../"-prefixed link.
+    assert repo_relative_html.startswith(("docs/", "scripts/")), repo_relative_html
+    _, _, rest = repo_relative_html.partition("/")
+    return "../" + rest
 
 
 def _listitem_xml(display_text, secondary_xml):
