@@ -301,6 +301,7 @@ class TestWriteMetadata(unittest.TestCase):
         from convert_to_docbook import write_metadata
         fixtures = Path(__file__).resolve().parent / "fixtures"
         meta_path = fixtures / "tmp.meta.xml"
+        self.addCleanup(meta_path.unlink)
         write_metadata(meta_path, "A Flat Document")
         tree = ET.parse(meta_path)
         root = tree.getroot()
@@ -324,17 +325,15 @@ class TestWriteMetadata(unittest.TestCase):
         self.assertIsNotNone(legalnotice_el)
         self.assertIn("CC BY-SA 4.0", "".join(legalnotice_el.itertext()))
 
-        meta_path.unlink()
-
     def test_write_metadata_escapes_special_characters_in_title(self):
         from convert_to_docbook import write_metadata
         fixtures = Path(__file__).resolve().parent / "fixtures"
         meta_path = fixtures / "tmp2.meta.xml"
+        self.addCleanup(meta_path.unlink)
         write_metadata(meta_path, "Torts & Contracts: A < B Comparison")
         tree = ET.parse(meta_path)  # must not raise
         title_el = tree.getroot().find(f"{DB_NS}title")
         self.assertEqual(title_el.text, "Torts & Contracts: A < B Comparison")
-        meta_path.unlink()
 
 
 class TestValidateAndBuild(unittest.TestCase):
