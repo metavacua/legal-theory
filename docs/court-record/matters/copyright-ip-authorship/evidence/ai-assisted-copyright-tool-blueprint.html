@@ -1,115 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Operationalizing Human Authorship: A Legal and Technical Framework for Copyright in the Age of AI</title>
-<meta name="DC.title" content="Operationalizing Human Authorship: A Legal and Technical Framework for Copyright in the Age of AI">
-<meta name="DC.creator" content="Ian D.L.N. McLean">
-<meta name="DC.subject" content="legal matter: copyright ip authorship">
-<meta name="DC.date" content="2026-07-25">
-<meta name="DC.publisher" content="metavacua/legal-theory (GitHub)">
-<meta name="DC.type" content="Text">
-<meta name="DC.language" content="en">
-<meta name="DC.rights" content="
-  Copyright © 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This document publishes general legal analysis and does not constitute legal advice.
-">
-<style>
-          :root {
-            --ink: #101922;
-            --ink-soft: #3f4f5c;
-            --rule: #d3dbe3;
-            --surface: #fbfcfd;
-            --amber: #cf7d18;
-            --teal: #0b6169;
-            --green: #1a7a4a;
-            --blue: #0b3d91;
-            --paper: #f5f7f9;
-          }
-          body { font-family: 'Georgia', serif; max-width: 820px; margin: 0 auto;
-                 padding: 2rem 1.5rem; background: var(--paper); color: var(--ink);
-                 font-size: 18px; line-height: 1.65; }
-          h1, h2, h3, h4 { font-family: system-ui, sans-serif; }
-          h1 { font-size: 2.2rem; margin-bottom: 0.25em; }
-          h2 { font-size: 1.55rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3em; }
-          h3 { font-size: 1.2rem; }
-          h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em;
-               color: var(--ink-soft); }
-          pre, code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
-          pre { background: #0b1418; color: #c9d6d3; padding: 1.1rem 1.3rem;
-                border-radius: 6px; overflow-x: auto; }
-          blockquote { border-left: 3px solid var(--teal); margin: 1.5rem 0;
-                       padding: 0.3rem 0 0.3rem 1.2rem; color: var(--ink-soft); }
-          table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; font-size: 0.9rem; }
-          th, td { border: 1px solid var(--rule); padding: 0.5rem 0.8rem; text-align: left; }
-          th { background: var(--surface); font-family: system-ui, sans-serif; }
-          a { color: var(--teal); }
-
-          /* Finding sections */
-          section[data-condition="confirmed"] {
-            border-left: 4px solid var(--green);
-            padding-left: 1.2rem;
-            margin-left: -1.2rem;
-          }
-          section[data-condition="confirmed-with-caveats"] {
-            border-left: 4px solid var(--blue);
-            padding-left: 1.2rem;
-            margin-left: -1.2rem;
-          }
-          section[data-condition="split"] {
-            border-left: 4px solid var(--amber);
-            padding-left: 1.2rem;
-            margin-left: -1.2rem;
-          }
-          .finding-badge {
-            display: inline-block; font-family: system-ui, sans-serif; font-size: 0.7rem;
-            font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;
-            padding: 0.15rem 0.6rem; border-radius: 3px; margin-bottom: 0.6rem;
-            color: #fff;
-          }
-          section[data-condition="confirmed"] .finding-badge { background: var(--green); }
-          section[data-condition="confirmed-with-caveats"] .finding-badge { background: var(--blue); }
-          section[data-condition="split"] .finding-badge { background: var(--amber); }
-
-          nav.site-nav { font-family: system-ui, sans-serif; font-size: 0.85rem;
-                         margin-bottom: 1.5rem; }
-          nav.site-nav a { text-decoration: none; }
-          nav.site-nav a:hover { text-decoration: underline; }
-
-          header.doc-header { margin-bottom: 2.5rem; }
-          .abstract { background: var(--surface); border: 1px solid var(--rule);
-                      border-radius: 6px; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
-          .abstract p:first-child::before { content: "Abstract. "; font-weight: bold; }
-          footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
-                   font-size: 0.8rem; color: var(--ink-soft); }
-        </style>
-</head>
-<body>
-<nav class="site-nav"><a href="/legal-theory/">legal-theory</a> · <a href="/legal-theory/index.html">Index</a></nav>
-  <header class="doc-header"><h1>Operationalizing Human Authorship: A Legal and Technical Framework for Copyright in the Age of AI</h1>
-<p class="byline">
-        By Ian D.L.N. McLean — 2026-07-25</p></header>
-  <section id="i-the-human-authorship-mandate-a-legal-and-architectural-framework-for-ai-assisted-creativity">
-  <h2>
-    <em>I. The Human Authorship Mandate: A
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Operationalizing Human Authorship: A Legal and Technical Framework for Copyright in the Age of AI</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"/></head><body><section xml:lang="en" class="article" id="ai-assisted-copyright-tool-blueprint"><div class="titlepage"><div><div><h1 class="title">Operationalizing Human Authorship: A Legal and Technical Framework for Copyright in the Age of AI</h1></div><div><div class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Ian</span> <span class="othername">D.L.N.</span> <span class="surname">McLean</span></h3><code class="email">&lt;<a class="email" href="mailto:metavacua@gmail.com">metavacua@gmail.com</a>&gt;</code></div></div></div><div><div class="legalnotice" id="id1337"><p>Copyright © 2026 Ian D.L.N. McLean. Licensed under <a class="link" href="https://spdx.org/licenses/CC-BY-SA-4.0" target="_top">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>. This document publishes general legal analysis and does not constitute legal advice.</p></div></div><div><p class="pubdate">2026-07-25</p></div></div><hr/></div><div class="toc"><div class="toc-title">Table of Contents</div><ul class="toc"><li><span class="section"><a href="#i-the-human-authorship-mandate-a-legal-and-architectural-framework-for-ai-assisted-creativity">
+    <span class="strong"><strong>I. The Human Authorship Mandate: A
     Legal and Architectural Framework for AI-Assisted
-    Creativity</em>
-  </h2>
-  <p>
+    Creativity</strong></span>
+  </a></span><ul><li><span class="section"><a href="#s-11-deconstructing-the-uscos-stance-beyond-ai-generated-vs-ai-assisted">
+      <span class="strong"><strong>1.1 Deconstructing the USCO's
+      Stance: Beyond AI-Generated vs. AI-Assisted</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-12-the-anatomy-of-copyrightable-contribution-modification-arrangement-and-expressive-input">
+      <span class="strong"><strong>1.2 The Anatomy of Copyrightable
+      Contribution: Modification, Arrangement, and Expressive
+      Input</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-13-from-legal-theory-to-system-architecture-why-copyright-law-dictates-a-provenance-first-design">
+      <span class="strong"><strong>1.3 From Legal Theory to System
+      Architecture: Why Copyright Law Dictates a Provenance-First
+      Design</strong></span>
+    </a></span></li></ul></li><li><span class="section"><a href="#ii-the-copyright-provenance-ledger-an-immutable-record-of-creative-acts">
+    <span class="strong"><strong>II. The Copyright Provenance Ledger:
+    An Immutable Record of Creative Acts</strong></span>
+  </a></span><ul><li><span class="section"><a href="#s-21-schema-deep-dive-formalizing-the-works-contributors-assets-and-contributions-model">
+      <span class="strong"><strong>2.1 Schema Deep Dive: Formalizing
+      the Works, Contributors, Assets, and Contributions
+      Model</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-22-establishing-trust-and-non-repudiation-git-based-immutability-and-cryptographic-hashing">
+      <span class="strong"><strong>2.2 Establishing Trust and
+      Non-Repudiation: Git-Based Immutability and Cryptographic
+      Hashing</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-23-the-humanauthorshipscore-a-framework-for-quantifying-creative-input">
+      <span class="strong"><strong>2.3 The
+      "HumanAuthorshipScore": A Framework for Quantifying
+      Creative Input</strong></span>
+    </a></span></li></ul></li><li><span class="section"><a href="#iii-enforcing-copyrightability-by-design-the-human-in-the-loop-workflow">
+    <span class="strong"><strong>III. Enforcing Copyrightability by
+    Design: The Human-in-the-Loop Workflow</strong></span>
+  </a></span><ul><li><span class="section"><a href="#s-31-the-user-interface-as-a-legal-instrument">
+      <span class="strong"><strong>3.1 The User Interface as a Legal
+      Instrument</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-32-logging-the-quantum-of-creativity-capturing-granular-user-interactions">
+      <span class="strong"><strong>3.2 Logging the "Quantum of
+      Creativity": Capturing Granular User
+      Interactions</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-33-diffing-algorithms-and-interaction-metrics-technical-approaches-to-measuring-material-alteration">
+      <span class="strong"><strong>3.3 Diffing Algorithms and
+      Interaction Metrics: Technical Approaches to Measuring
+      "Material Alteration"</strong></span>
+    </a></span></li></ul></li><li><span class="section"><a href="#iv-technical-implementation-blueprint-building-a-resilient-and-scalable-platform-with-jules-and-nx">
+    <span class="strong"><strong>IV. Technical Implementation
+    Blueprint: Building a Resilient and Scalable Platform with Jules and
+    Nx</strong></span>
+  </a></span><ul><li><span class="section"><a href="#s-41-the-strategic-advantage-of-a-monorepo-leveraging-nx">
+      <span class="strong"><strong>4.1 The Strategic Advantage of a
+      Monorepo: Leveraging Nx</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-42-phase-by-phase-implementation-analysis-a-critical-review-of-the-jules-driven-plan">
+      <span class="strong"><strong>4.2 Phase-by-Phase Implementation
+      Analysis: A Critical Review of the Jules-Driven
+      Plan</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-43-component-selection-and-integration-best-practices">
+      <span class="strong"><strong>4.3 Component Selection and
+      Integration: Best Practices</strong></span>
+    </a></span></li></ul></li><li><span class="section"><a href="#v-the-final-deliverable-the-legally-defensible-copyright-provenance-report">
+    <span class="strong"><strong>V. The Final Deliverable: The Legally
+    Defensible Copyright Provenance Report</strong></span>
+  </a></span><ul><li><span class="section"><a href="#s-51-structuring-the-report-for-usco-submission">
+      <span class="strong"><strong>5.1 Structuring the Report for USCO
+      Submission</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-52-automating-the-narrative-of-creation">
+      <span class="strong"><strong>5.2 Automating the Narrative of
+      Creation</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-53-beyond-registration-the-report-as-a-multi-purpose-ip-asset">
+      <span class="strong"><strong>5.3 Beyond Registration: The Report
+      as a Multi-Purpose IP Asset</strong></span>
+    </a></span></li></ul></li><li><span class="section"><a href="#vi-strategic-analysis-and-future-trajectory">
+    <span class="strong"><strong>VI. Strategic Analysis and Future
+    Trajectory</strong></span>
+  </a></span><ul><li><span class="section"><a href="#s-61-addressing-potential-challenges">
+      <span class="strong"><strong>6.1 Addressing Potential
+      Challenges</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-62-market-positioning-and-competitive-differentiation">
+      <span class="strong"><strong>6.2 Market Positioning and
+      Competitive Differentiation</strong></span>
+    </a></span></li><li><span class="section"><a href="#s-63-roadmap-for-evolution">
+      <span class="strong"><strong>6.3 Roadmap for
+      Evolution</strong></span>
+    </a></span></li></ul></li></ul></div><section class="section" id="i-the-human-authorship-mandate-a-legal-and-architectural-framework-for-ai-assisted-creativity"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+    <span class="strong"><strong>I. The Human Authorship Mandate: A
+    Legal and Architectural Framework for AI-Assisted
+    Creativity</strong></span>
+  </h2></div></div></div><p>
       The development of any tool intended to facilitate the creation of
       copyrightable works with the assistance of artificial intelligence
       must begin not with a technical specification, but with a deep and
       rigorous interpretation of the governing legal doctrine. The
       United States Copyright Office (USCO) and federal courts have been
-      unequivocal: human authorship is the <em>sine qua
-      non</em> of copyrightability.1 This principle, far from
+      unequivocal: human authorship is the <span class="emphasis"><em>sine qua
+      non</em></span> of copyrightability.1 This principle, far from
       being a recent contrivance for the AI era, is a foundational tenet
       of U.S. copyright law, consistently upheld and recently reaffirmed
       in landmark decisions such as
-    </p>
-  <p>
-    <em>Thaler v. Perlmutter</em>, which concluded that
+    </p><p>
+    <span class="emphasis"><em>Thaler v. Perlmutter</em></span>, which concluded that
       copyright law protects only works of human creation.2 The proposed
       system's architecture, therefore, cannot treat legal compliance as
       an add-on or a feature. Instead, the legal requirements must serve
@@ -117,13 +105,10 @@
       flow. The system's very design must function as an operationalized
       legal argument, preemptively constructing the case for human
       authorship through its normative workflow.
-    </p>
-  <section id="s-11-deconstructing-the-uscos-stance-beyond-ai-generated-vs-ai-assisted">
-    <h3>
-      <em>1.1 Deconstructing the USCO's
-      Stance: Beyond AI-Generated vs. AI-Assisted</em>
-    </h3>
-    <p>
+    </p><section class="section" id="s-11-deconstructing-the-uscos-stance-beyond-ai-generated-vs-ai-assisted"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>1.1 Deconstructing the USCO's
+      Stance: Beyond AI-Generated vs. AI-Assisted</strong></span>
+    </h3></div></div></div><p>
         The USCO has carefully articulated a critical distinction that
         forms the basis of its regulatory approach. It differentiates
         between the use of AI as a subordinate "tool" to
@@ -131,17 +116,15 @@
         processor, or sophisticated photo-editing software—and the use
         of AI as the autonomous "author" of a work.1 Works
         created by humans with the
-      </p>
-    <p>
-      <em>assistance</em> of AI may be copyrightable, but
-        works <em>generated</em> by AI without sufficient
+      </p><p>
+      <span class="emphasis"><em>assistance</em></span> of AI may be copyrightable, but
+        works <span class="emphasis"><em>generated</em></span> by AI without sufficient
         human creative input are not.1 The primary architectural
         objective of the proposed platform is to manifest this legal
         distinction in code and data. It must be designed from the
         ground up to frame the AI as a powerful, but ultimately
         subordinate, instrument in the hands of a human creator.
-      </p>
-    <p>
+      </p><p>
         A cornerstone of this framework is the USCO's position on user
         prompts. The Office has clarified that prompts, regardless of
         their detail or complexity, are generally considered
@@ -160,24 +143,19 @@
         copyrightable act of creation itself. The AI's output, in turn,
         is treated as raw material, devoid of authorship until a human
         imbues it with the requisite creative contribution.
-      </p>
-  </section>
-  <section id="s-12-the-anatomy-of-copyrightable-contribution-modification-arrangement-and-expressive-input">
-    <h3>
-      <em>1.2 The Anatomy of Copyrightable
+      </p></section><section class="section" id="s-12-the-anatomy-of-copyrightable-contribution-modification-arrangement-and-expressive-input"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>1.2 The Anatomy of Copyrightable
       Contribution: Modification, Arrangement, and Expressive
-      Input</em>
-    </h3>
-    <p>
+      Input</strong></span>
+    </h3></div></div></div><p>
         To build a tool that successfully navigates the USCO's
         requirements, it is essential to understand precisely which
         forms of human intervention are recognized as conferring
         authorship. The USCO's guidance and reports outline three
         primary categories of copyrightable contribution in the context
         of AI-assisted works.
-      </p>
-    <p>
-        First, <em>Material Modification</em>
+      </p><p>
+        First, <span class="strong"><strong>Material Modification</strong></span>
         is a key pathway to establishing authorship. A human who takes
         AI-generated output and significantly modifies it can claim
         copyright in their creative contributions, provided those
@@ -187,11 +165,10 @@
         into a critical technical mandate: the system must be capable of
         meticulously capturing, measuring, and documenting these human
         modifications as distinct, auditable events.
-      </p>
-    <p>
+      </p><p>
         Second, the USCO recognizes authorship in the
-        <em>Creative Selection and
-        Arrangement</em> of AI-generated materials. A human can
+        <span class="strong"><strong>Creative Selection and
+        Arrangement</strong></span> of AI-generated materials. A human can
         create a copyrightable work by selecting from a range of AI
         outputs and arranging them in a sufficiently creative way, such
         that "the resulting work as a whole constitutes an original
@@ -202,15 +179,13 @@
         selecting a single output from a generative process, however, is
         not considered a creative act.8 The system's design must
         therefore log not only the final arrangement but the
-      </p>
-    <p>
-      <em>act of selection</em> itself—recording which
+      </p><p>
+      <span class="emphasis"><em>act of selection</em></span> itself—recording which
         assets were chosen from the available pool of AI-generated raw
         material.
-      </p>
-    <p>
-        Third, the concept of <em>Expressive
-        Inputs</em> provides a more nuanced route to
+      </p><p>
+        Third, the concept of <span class="strong"><strong>Expressive
+        Inputs</strong></span> provides a more nuanced route to
         copyrightability. This applies when a human inputs their own
         pre-existing, copyrightable work into an AI system and directs
         the system to modify it. If the human's original expression
@@ -220,18 +195,13 @@
         new contributions.1 This necessitates that the system be able to
         ingest and track the provenance of user-imported assets,
         distinguishing them from assets generated
-      </p>
-    <p>
-      <em>de novo</em> by the AI.
-      </p>
-  </section>
-  <section id="s-13-from-legal-theory-to-system-architecture-why-copyright-law-dictates-a-provenance-first-design">
-    <h3>
-      <em>1.3 From Legal Theory to System
+      </p><p>
+      <span class="emphasis"><em>de novo</em></span> by the AI.
+      </p></section><section class="section" id="s-13-from-legal-theory-to-system-architecture-why-copyright-law-dictates-a-provenance-first-design"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>1.3 From Legal Theory to System
       Architecture: Why Copyright Law Dictates a Provenance-First
-      Design</em>
-    </h3>
-    <p>
+      Design</strong></span>
+    </h3></div></div></div><p>
         The legal framework established by the USCO places a significant
         evidentiary burden on the copyright applicant. When registering
         a work containing AI-generated material, the applicant must
@@ -244,15 +214,14 @@
         conventional tool, accurately disclaiming AI-generated portions
         and proving the extent of human modification after the fact is
         difficult, if not impossible.
-      </p>
-    <p>
+      </p><p>
         This legal burden dictates that a compliant system must adopt a
         "provenance-first" architecture. The proposed tool's
         design correctly inverts the traditional workflow. Instead of
         creating content and then attempting to retroactively assemble a
         legal justification for its copyrightability, the system's
-        normative workflow is engineered to <em>inherently
-        generate the justification</em> as an inseparable
+        normative workflow is engineered to <span class="emphasis"><em>inherently
+        generate the justification</em></span> as an inseparable
         byproduct of the creative process. Every legally significant
         act—every prompt, every AI generation, and, most critically,
         every human modification, selection, and arrangement—is captured
@@ -261,8 +230,7 @@
         generation. The system's primary output is not just the creative
         work, but the legally defensible proof of its human-authored
         origins.
-      </p>
-    <p>
+      </p><p>
         This leads to a critical realization about the nature of the
         user interface itself. The proposal to render AI-generated
         output as read-only and programmatically funnel the user into a
@@ -278,15 +246,10 @@
         intervention that directly aligns with USCO guidance.12 The UI,
         in this context, becomes a set of regulatory guardrails, guiding
         the creator toward a legally defensible final product.
-      </p>
-  </section>
-</section>
-  <section id="ii-the-copyright-provenance-ledger-an-immutable-record-of-creative-acts">
-  <h2>
-    <em>II. The Copyright Provenance Ledger:
-    An Immutable Record of Creative Acts</em>
-  </h2>
-  <p>
+      </p></section></section><section class="section" id="ii-the-copyright-provenance-ledger-an-immutable-record-of-creative-acts"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+    <span class="strong"><strong>II. The Copyright Provenance Ledger:
+    An Immutable Record of Creative Acts</strong></span>
+  </h2></div></div></div><p>
       At the core of the proposed system lies the Copyright Provenance
       Ledger, a data schema designed to serve as the immutable,
       auditable, and non-repudiable record of a work's creation. This
@@ -300,56 +263,41 @@
       property, the ledger creates a verifiable chain of custody for
       every creative element, from initial prompt to final,
       human-refined expression.16
-    </p>
-  <section id="s-21-schema-deep-dive-formalizing-the-works-contributors-assets-and-contributions-model">
-    <h3>
-      <em>2.1 Schema Deep Dive: Formalizing
+    </p><section class="section" id="s-21-schema-deep-dive-formalizing-the-works-contributors-assets-and-contributions-model"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>2.1 Schema Deep Dive: Formalizing
       the Works, Contributors, Assets, and Contributions
-      Model</em>
-    </h3>
-    <p>
+      Model</strong></span>
+    </h3></div></div></div><p>
         The proposed ledger is structured around four principal
         entities: Works, Contributors, Assets, and Contributions. To
         move from concept to implementation, this structure must be
         formalized into a detailed data schema. This schema serves as
         the blueprint for the system's persistence layer and provides
         the necessary granularity to capture legally significant events.
-      </p>
-    <ul>
-      <li>
-        <p>
-          <em>Works:</em> Represents the
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>Works:</strong></span> Represents the
             final, composite creative project. It acts as the top-level
             container, linking together all associated contributors,
             assets, and contributions. It also houses the
             system-calculated HumanAuthorshipScore, providing a
             real-time metric of the strength of the copyright claim.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Contributors:</em> A catalog
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Contributors:</strong></span> A catalog
             of every actor, both human and AI, that participates in the
             creative process. This entity is crucial for attribution,
             clearly distinguishing between the human author and the AI
             tools used. It logs specific model names and versions (e.g.,
             Google Gemini 2.5 Pro), which is essential for the
             disclaimer required by the USCO.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Assets:</em> An inventory of
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Assets:</strong></span> An inventory of
             every discrete piece of content, whether generated by an AI
             or imported by the user. Each asset is assigned a unique
             identifier and is cryptographically hashed to ensure its
             integrity. This allows the system to track the origin of
             every sentence, image, or sound clip within the final work.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Contributions:</em> This is
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Contributions:</strong></span> This is
             the core transactional log of the ledger. It records every
             single creative act in chronological order as a discrete
             event. Each entry details who performed the act
@@ -358,460 +306,263 @@
             to (e.g., which Asset was modified). This chronological,
             event-based log provides the granular evidence needed to
             substantiate a claim of human authorship.
-          </p>
-      </li>
-    </ul>
-    <p>
+          </p></li></ul></div><p>
         To enhance interoperability and align with established best
         practices, this schema should be designed to be compatible with
         the W3C's PROV Ontology (PROV-O), a global standard for
         representing provenance data.18 In this mapping, a
-      </p>
-    <p>
+      </p><p>
         Contributor would correspond to a prov:Agent, Assets and Works
         would be prov:Entity subtypes, and a Contribution would be a
         prov:Activity. Adopting this standard would ground the system in
         a robust, well-understood model for provenance interchange.
-      </p>
-    <p>
+      </p><p>
         The following table provides a detailed data dictionary for the
         Copyright Provenance Ledger, serving as a concrete blueprint for
         its implementation.
-      </p>
-    
-      <table>
-        
-        
-        
-        
-        
-        
-        <tbody>
-          <tr>
-            <td>
+      </p><div class="informaltable"><table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; "><colgroup><col style="text-align: center; "/><col style="text-align: center; "/><col style="text-align: center; "/><col style="text-align: center; "/><col style="text-align: center; "/><col style="text-align: center; "/></colgroup><tbody><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Table Name
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Field Name
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Data Type
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Description/Purpose
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Relationships/Constraints
-              </td>
-            <td>
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 Example
-              </td>
-          </tr>
-          <tr>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 **Works**
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 WorkID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 UUID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Primary key for the creative project.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 f47ac10b-58cc-4372-a567-0e02b2c3d479
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Title
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 String
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 The title of the final work.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 "Midnight Train"
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 AuthorID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 UUID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Foreign key to the primary human author in Contributors.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 FK -\&gt; Contributors.ContributorID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 ...
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 CompletionDate
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Timestamp
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Date the work was marked as complete.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 2025-10-26T10:00:00Z
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 HumanAuthorshipScore
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Float
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 System-calculated score based on ledger events.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Calculated field; non-editable.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 87.5
-              </td>
-          </tr>
-          <tr>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 **Contributors**
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 ContributorID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 UUID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Primary key for any actor (human or AI).
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 a1b2c3d4-e5f6-7890-1234-567890abcdef
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Type
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Enum
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 'HUMAN' or 'AI'.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 'AI'
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Name
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 String
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Human name or AI model name.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 'Google Gemini 2.5 Pro'
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Version
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 String
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 AI model version, if applicable.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 'v1.2025.10.03'
-              </td>
-          </tr>
-          <tr>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 **Assets**
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 AssetID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 UUID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Primary key for a discrete piece of content.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 b5c6d7e8-f9g0-1234-5678-90abcdef1234
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 AssetHash
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 String (SHA-256)
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Cryptographic hash of the asset's content.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Unique, Indexed.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 e3b0c442...
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Type
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Enum
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 'AI\_GENERATED\_TEXT', 'USER\_IMPORTED\_IMAGE', etc.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 'AI\_GENERATED\_TEXT'
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Content
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Text/BLOB Pointer
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 The actual content or a reference to it.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 "It was a dark and stormy night..."
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 OriginContributionID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 UUID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Foreign key to the Contribution that created this asset.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 FK -\&gt; Contributions.ContributionID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 ...
-              </td>
-          </tr>
-          <tr>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 **Contributions**
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 ContributionID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 UUID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Primary key for a single creative event.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 c9d8e7f6-g5h4-3210-fedc-ba9876543210
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 WorkID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 UUID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Foreign key to the parent Work.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 FK -\&gt; Works.WorkID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 ...
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 ContributorID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 UUID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Foreign key to the Contributor who performed the act.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 FK -\&gt; Contributors.ContributorID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 ...
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Timestamp
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Timestamp
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Precise time of the event.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Indexed.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 2025-10-26T09:15:30Z
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Type
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Enum
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 'Human-Prompt', 'AI-Generation', 'Human-Modification',
                 'Human-Selection', 'Human-Arrangement'.
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 'Human-Modification'
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 ParentContributionID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 UUID
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Foreign key linking this event to a previous one (e.g.,
                 a modification linked to the AI generation it modifies).
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                 Self-referential FK.
-              </td>
-            <td>
+              </td><td style="text-align: center; border-bottom: 1px solid ; ">
                 ...
-              </td>
-          </tr>
-          <tr>
-            <td>
-              </td>
-            <td>
+              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; ">
+              </td><td style="text-align: center; border-right: 1px solid ; ">
                 ContributionData
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; ">
                 JSON/Text
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; ">
                 Data specific to the event type (e.g., the prompt text,
                 a diff object, an array of selected AssetIDs).
-              </td>
-            <td>
-              </td>
-            <td>
+              </td><td style="text-align: center; border-right: 1px solid ; ">
+              </td><td style="text-align: center; ">
                 {"diff": "+-...",
                 "algorithm": "myers"}
-              </td>
-          </tr>
-        </tbody>
-      </table>
-    
-  </section>
-  <section id="s-22-establishing-trust-and-non-repudiation-git-based-immutability-and-cryptographic-hashing">
-    <h3>
-      <em>2.2 Establishing Trust and
+              </td></tr></tbody></table></div></section><section class="section" id="s-22-establishing-trust-and-non-repudiation-git-based-immutability-and-cryptographic-hashing"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>2.2 Establishing Trust and
       Non-Repudiation: Git-Based Immutability and Cryptographic
-      Hashing</em>
-    </h3>
-    <p>
+      Hashing</strong></span>
+    </h3></div></div></div><p>
         The legal utility of the ledger is entirely dependent on its
         integrity. The record of creative acts must be both
         tamper-evident and chronologically sound. The proposal to build
@@ -828,8 +579,7 @@
         past event would change its hash, which would in turn invalidate
         the hashes of all subsequent commits, making tampering
         immediately obvious.
-      </p>
-    <p>
+      </p><p>
         This approach effectively provides the most critical features of
         a blockchain for this specific use case—immutability,
         cryptographic verification, and a distributed history—without
@@ -839,8 +589,7 @@
         trustless environments, the context of a creator tool (often
         single-user or small-team) makes the built-in integrity of Git a
         more than sufficient, and far more achievable, foundation.
-      </p>
-    <p>
+      </p><p>
         To complement this, every discrete Asset stored in the ledger
         will be independently hashed using a strong algorithm like
         SHA-256.15 This creates a unique, verifiable fingerprint for
@@ -849,21 +598,16 @@
         block of AI-generated text being modified at a later stage is
         identical to the one originally generated, ensuring the
         integrity of the entire creative chain of custody.
-      </p>
-  </section>
-  <section id="s-23-the-humanauthorshipscore-a-framework-for-quantifying-creative-input">
-    <h3>
-      <em>2.3 The
+      </p></section><section class="section" id="s-23-the-humanauthorshipscore-a-framework-for-quantifying-creative-input"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>2.3 The
       "HumanAuthorshipScore": A Framework for Quantifying
-      Creative Input</em>
-    </h3>
-    <p>
+      Creative Input</strong></span>
+    </h3></div></div></div><p>
         While the law requires a "quantum of human creative
         contribution," it provides no quantitative measure for what
         is sufficient.3 This ambiguity is a major source of uncertainty
         for creators. The proposed
-      </p>
-    <p>
+      </p><p>
         HumanAuthorshipScore is a direct attempt to address this
         ambiguity, not by creating a new legal standard, but by
         providing a transparent, data-driven feedback mechanism for the
@@ -875,75 +619,49 @@
         legal standard of "more than de minimis" into a clear,
         actionable UI element, such as a progress bar that moves from
         red to green as more creative contributions are logged.
-      </p>
-    <p>
+      </p><p>
         The challenge lies in designing a methodology that is both
         defensible and transparent.22 The score cannot measure aesthetic
         quality, but it can and must measure the quantity and nature of
         legally recognized human interventions as recorded in the
-      </p>
-    <p>
+      </p><p>
         Contributions ledger. A potential framework for the score would
         be a transparent, weighted calculation based on auditable
         events. For instance:
-      </p>
-    <p>
+      </p><p>
         In this model:
-      </p>
-    <ul>
-      <li>
-        <p>
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
             The weights () would be assigned based on the relative
             importance of each type of creative act as interpreted from
             USCO guidance.
-          </p>
-      </li>
-      <li>
-        <p>
+          </p></li><li class="listitem"><p>
             Modification_Events could be quantified by a function of the
             character count of diffs (additions, deletions, and
             substitutions).
-          </p>
-      </li>
-      <li>
-        <p>
+          </p></li><li class="listitem"><p>
             Selection_Events could be weighted by the ratio of items
             selected to items generated (e.g., selecting 1 of 10 items
             is a more significant creative choice than selecting 1 of
             2).
-          </p>
-      </li>
-      <li>
-        <p>
+          </p></li><li class="listitem"><p>
             Arrangement_Events could be measured by the number of
             discrete compositional changes (e.g., reordering paragraphs,
             repositioning images).
-          </p>
-      </li>
-      <li>
-        <p>
+          </p></li><li class="listitem"><p>
             ExpressiveInput_Events would grant a baseline score for
             incorporating pre-existing human-authored work.
-          </p>
-      </li>
-    </ul>
-    <p>
+          </p></li></ul></div><p>
         The legal defensibility of this score hinges entirely on its
-        <em>transparency and
-        traceability</em>. The final Copyright Provenance Report
+        <span class="strong"><strong>transparency and
+        traceability</strong></span>. The final Copyright Provenance Report
         must not simply state the score; it must explicitly show
-        <em>how</em> the score was calculated, linking each
+        <span class="emphasis"><em>how</em></span> the score was calculated, linking each
         component of the formula directly back to the specific,
         timestamped human actions in the ledger.8
-      </p>
-  </section>
-</section>
-  <section id="iii-enforcing-copyrightability-by-design-the-human-in-the-loop-workflow">
-  <h2>
-    <em>III. Enforcing Copyrightability by
-    Design: The Human-in-the-Loop Workflow</em>
-  </h2>
-  <p>
+      </p></section></section><section class="section" id="iii-enforcing-copyrightability-by-design-the-human-in-the-loop-workflow"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+    <span class="strong"><strong>III. Enforcing Copyrightability by
+    Design: The Human-in-the-Loop Workflow</strong></span>
+  </h2></div></div></div><p>
       Translating legal theory into a functional software tool requires
       moving beyond data structures to the dynamic realm of user
       interaction. The system's workflow and user interface must be
@@ -952,16 +670,13 @@
       AI-assisted works.12 This means the UI is not just a creative
       space but a regulatory environment that guides the user's actions
       toward legally significant outcomes.
-    </p>
-  <section id="s-31-the-user-interface-as-a-legal-instrument">
-    <h3>
-      <em>3.1 The User Interface as a Legal
-      Instrument</em>
-    </h3>
-    <p>
+    </p><section class="section" id="s-31-the-user-interface-as-a-legal-instrument"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>3.1 The User Interface as a Legal
+      Instrument</strong></span>
+    </h3></div></div></div><p>
         The most critical workflow design choice is the implementation
-        of <em>Mandatory Post-Generation
-        Curation</em>. As proposed, the system will not permit the
+        of <span class="strong"><strong>Mandatory Post-Generation
+        Curation</strong></span>. As proposed, the system will not permit the
         direct use or export of raw AI-generated output. Immediately
         following an AI-Generation event in the ledger, the UI must
         funnel the user into a distinct "Curation Mode." In
@@ -972,29 +687,26 @@
         This workflow is not optional; it is the sole pathway to
         transforming the raw material into a component of a
         "complete" work.
-      </p>
-    <p>
+      </p><p>
         This enforced sequence serves a crucial legal purpose. It
         programmatically prevents a user from mistakenly creating an
         uncopyrightable work by simply accepting the first AI output.
         Furthermore, it directly addresses the "sweat of the
         brow" fallacy, which the Supreme Court rejected in
-        <em>Feist Publications, Inc., v. Rural Telephone Service
-        Co.</em>.11 Copyright does not protect effort alone. A
+        <span class="emphasis"><em>Feist Publications, Inc., v. Rural Telephone Service
+        Co.</em></span>.11 Copyright does not protect effort alone. A
         user might expend significant effort in crafting prompts or
         iteratively regenerating outputs, but the USCO has clarified
         that this does not constitute authorship.1 The system's workflow
         correctly de-emphasizes the pre-generation phase. By design, the
         "real work" from a copyright perspective begins
-      </p>
-    <p>
-      <em>after</em> the AI has produced its output. By
+      </p><p>
+      <span class="emphasis"><em>after</em></span> the AI has produced its output. By
         logging discrete acts of modification, selection, and
         arrangement, the system builds an evidentiary case based on the
         types of creative labor the law recognizes, not the types it has
         rejected.
-      </p>
-    <p>
+      </p><p>
         To reinforce this, the UI should also provide a transparent
         "provenance view" or "history panel." This
         feature would visualize the ledger's contents in a
@@ -1003,15 +715,11 @@
         the work. This not only empowers the user with a clear
         understanding of their creative process but also constantly
         reminds them of the evidence being generated in the background.
-      </p>
-  </section>
-  <section id="s-32-logging-the-quantum-of-creativity-capturing-granular-user-interactions">
-    <h3>
-      <em>3.2 Logging the "Quantum of
+      </p></section><section class="section" id="s-32-logging-the-quantum-of-creativity-capturing-granular-user-interactions"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>3.2 Logging the "Quantum of
       Creativity": Capturing Granular User
-      Interactions</em>
-    </h3>
-    <p>
+      Interactions</strong></span>
+    </h3></div></div></div><p>
         The entire system hinges on the ability to capture the
         "quantum of creativity" in a granular, event-driven
         manner. Every significant user interaction must be translated
@@ -1022,49 +730,31 @@
         definition of what constitutes a "significant,"
         loggable interaction. This set of events must include, at a
         minimum:
-      </p>
-    <ul>
-      <li>
-        <p>
-          <em>Human-Prompt:</em> The
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>Human-Prompt:</strong></span> The
             submission of a prompt to an AI model, logged with the full
             text of the prompt.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>AI-Generation:</em> The
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>AI-Generation:</strong></span> The
             receipt of a response from an AI model, logged with a
             reference to the newly created Asset.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Human-Modification:</em> A
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Human-Modification:</strong></span> A
             "save" event triggered in the editor after a user
             has altered an asset. The ContributionData for this event
             must contain the details of the changes.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Human-Selection:</em> The act
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Human-Selection:</strong></span> The act
             of a user choosing one or more assets from a set of
             AI-generated options. The ContributionData should log the
             AssetIDs of the selected items as well as the AssetIDs of
             the items that were rejected.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Human-Arrangement:</em> An
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Human-Arrangement:</strong></span> An
             event triggered when a user reorders, repositions, or
             resizes assets within a larger composition. The
             ContributionData would store the new compositional metadata.
-          </p>
-      </li>
-    </ul>
-    <p>
+          </p></li></ul></div><p>
         This granular logging creates more than just a legal record; it
         generates a valuable data asset. The detailed, structured log of
         prompts, AI outputs, and the specific human modifications made
@@ -1075,15 +765,11 @@
         a powerful feedback loop and a significant competitive
         advantage. The legal compliance tool thus doubles as a research
         and development platform.
-      </p>
-  </section>
-  <section id="s-33-diffing-algorithms-and-interaction-metrics-technical-approaches-to-measuring-material-alteration">
-    <h3>
-      <em>3.3 Diffing Algorithms and
+      </p></section><section class="section" id="s-33-diffing-algorithms-and-interaction-metrics-technical-approaches-to-measuring-material-alteration"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>3.3 Diffing Algorithms and
       Interaction Metrics: Technical Approaches to Measuring
-      "Material Alteration"</em>
-    </h3>
-    <p>
+      "Material Alteration"</strong></span>
+    </h3></div></div></div><p>
         For the Human-Modification events to have legal weight, the
         system must be able to technically quantify the extent of the
         alteration. For textual works, this can be achieved using
@@ -1092,66 +778,48 @@
         sequence of insertions and deletions to transform one text into
         another and is a suitable starting point.28 The output of this
         algorithm—the "diff"—can be stored in the
-      </p>
-    <p>
+      </p><p>
         ContributionData field of the ledger entry.
-      </p>
-    <p>
+      </p><p>
         However, to create a more robust measure of "material
         alteration," the system should explore more sophisticated
         techniques beyond simple character-level diffs.
-        <em>Semantic diffing</em> could
+        <span class="strong"><strong>Semantic diffing</strong></span> could
         analyze changes in meaning, while
-        <em>stylistic analysis</em> could
+        <span class="strong"><strong>stylistic analysis</strong></span> could
         detect changes in tone, voice, or complexity. For instance,
         changing "The house was big" to "The imposing
         edifice dominated the skyline" is a far more creative
         modification than fixing a typo, and a sophisticated analysis
         could reflect that difference.
-      </p>
-    <p>
+      </p><p>
         Quantifying modifications for non-textual media like images and
         audio presents a greater challenge, as pixel- or waveform-level
         diffs are often meaningless in a creative context.29 The
         solution is to log the specific, high-level user actions
         performed through the UI's tools. Each of these actions is a
         discrete
-      </p>
-    <p>
+      </p><p>
         Human-Modification event. For example:
-      </p>
-    <ul>
-      <li>
-        <p>
-          <em>For Images:</em> Logging
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>For Images:</strong></span> Logging
             events like ApplyFilter (with filter name and parameters),
             AdjustColorBalance (with RGB values), Crop (with new
             dimensions), or AddLayer.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>For Audio:</em> Logging events
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>For Audio:</strong></span> Logging events
             like SpliceClip (with timestamps), ApplyReverb (with effect
             parameters), AdjustVolume (with decibel change), or
             ChangeTempo.
-          </p>
-      </li>
-    </ul>
-    <p>
+          </p></li></ul></div><p>
         In each case, the ContributionData would store a structured
         object describing the action and its specific parameters,
         providing a clear record of the user's creative choices.
-      </p>
-  </section>
-</section>
-  <section id="iv-technical-implementation-blueprint-building-a-resilient-and-scalable-platform-with-jules-and-nx">
-  <h2>
-    <em>IV. Technical Implementation
+      </p></section></section><section class="section" id="iv-technical-implementation-blueprint-building-a-resilient-and-scalable-platform-with-jules-and-nx"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+    <span class="strong"><strong>IV. Technical Implementation
     Blueprint: Building a Resilient and Scalable Platform with Jules and
-    Nx</em>
-  </h2>
-  <p>
+    Nx</strong></span>
+  </h2></div></div></div><p>
       The proposed technical architecture provides a sound and modern
       foundation for building the Copyright Provenance Ledger tool. The
       plan to use the AI agent Jules within a structured Nx monorepo is
@@ -1160,28 +828,23 @@
       provides a critical analysis of the proposed stack and
       implementation plan, offering expert commentary on its strengths
       and best practices for execution.
-    </p>
-  <section id="s-41-the-strategic-advantage-of-a-monorepo-leveraging-nx">
-    <h3>
-      <em>4.1 The Strategic Advantage of a
-      Monorepo: Leveraging Nx</em>
-    </h3>
-    <p>
+    </p><section class="section" id="s-41-the-strategic-advantage-of-a-monorepo-leveraging-nx"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>4.1 The Strategic Advantage of a
+      Monorepo: Leveraging Nx</strong></span>
+    </h3></div></div></div><p>
         The decision to use an Nx monorepo is a strategically sound
         choice for a project of this nature.31 A monorepo, a single
         repository containing multiple distinct projects, is ideally
         suited for managing the interconnected components of this
         system: the React frontend (
-      </p>
-    <p>
+      </p><p>
         /apps/webapp), the Node.js backend (/apps/api), and the core,
         framework-agnostic copyright-ledger package
         (/packages/copyright-ledger). This structure facilitates
         seamless code sharing, such as sharing data types and validation
         logic between the frontend and backend, which promotes
         consistency and dramatically reduces boilerplate code.31
-      </p>
-    <p>
+      </p><p>
         Nx, as a build system, adds a layer of intelligent tooling on
         top of the monorepo structure. Features like "affected
         commands" ensure that when a change is made, only the
@@ -1191,8 +854,7 @@
         speeding up development cycles.34 This efficiency is
         particularly valuable when development is being driven by an AI
         agent like Jules, which can generate code rapidly.
-      </p>
-    <p>
+      </p><p>
         Furthermore, the choice of a polyglot monorepo is a critical
         decision for future-proofing the platform. While the initial MVP
         focuses on text, future expansion to support images, audio, or
@@ -1205,24 +867,17 @@
         integrated into the same repository, sharing configurations and
         types with the existing applications. This initial architectural
         choice enables a clear and manageable path for future expansion.
-      </p>
-  </section>
-  <section id="s-42-phase-by-phase-implementation-analysis-a-critical-review-of-the-jules-driven-plan">
-    <h3>
-      <em>4.2 Phase-by-Phase Implementation
+      </p></section><section class="section" id="s-42-phase-by-phase-implementation-analysis-a-critical-review-of-the-jules-driven-plan"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>4.2 Phase-by-Phase Implementation
       Analysis: A Critical Review of the Jules-Driven
-      Plan</em>
-    </h3>
-    <p>
+      Plan</strong></span>
+    </h3></div></div></div><p>
         The proposed four-phase implementation plan is logical and
         well-structured, prioritizing the most critical components
         first.
-      </p>
-    <ul>
-      <li>
-        <p>
-          <em>Phase 1: The Monorepo and MVP
-            Core:</em> The initial prompt to Jules to scaffold the
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>Phase 1: The Monorepo and MVP
+            Core:</strong></span> The initial prompt to Jules to scaffold the
             Nx monorepo, create the React/Node.js applications, and
             implement the core ledger schema is a clear, discrete, and
             achievable task. The selection of a local-first database
@@ -1230,12 +885,9 @@
             perfectly with the local-first philosophy of the
             "Scribe" model and minimizing initial
             infrastructure complexity.36
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Phase 2: Building the
-            Provenance-Aware Editor:</em> Integrating the Monaco
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Phase 2: Building the
+            Provenance-Aware Editor:</strong></span> Integrating the Monaco
             Editor into a React application is a well-trodden path,
             simplified by mature libraries like @monaco-editor/react.39
             The prompt correctly specifies the fundamental workflow: a
@@ -1244,12 +896,9 @@
             Asset entries are created in the ledger, and the AI response
             is displayed in a read-only view, awaiting human
             intervention.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Phase 3: Implementing the Human
-            Authorship Workflow:</em> This phase is the functional
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Phase 3: Implementing the Human
+            Authorship Workflow:</strong></span> This phase is the functional
             heart of the application, and the prompt correctly
             identifies the core requirement: performing a diff on every
             save event to capture Human-Modification. To ensure a
@@ -1259,12 +908,9 @@
             Additionally, the diff calculation itself, if it becomes
             computationally intensive, should be offloaded to a Web
             Worker to avoid blocking the main UI thread.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Phase 4: Integration and Final
-            Output:</em> Creating a dedicated API gateway in the
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Phase 4: Integration and Final
+            Output:</strong></span> Creating a dedicated API gateway in the
             backend to manage and log all external calls to services
             like Gemini and SudoWrite is a standard best practice for
             security and observability. The final "Export"
@@ -1272,10 +918,7 @@
             prompt correctly specifies the two essential outputs: the
             finished creative work and the machine-generated Copyright
             Provenance Report.
-          </p>
-      </li>
-    </ul>
-    <p>
+          </p></li></ul></div><p>
         The plan to use Jules as an AI workforce is a powerful force
         multiplier. However, its success is contingent on adopting a
         "human-in-the-loop" development process. Jules should
@@ -1286,52 +929,36 @@
         interpretation, while Jules executes the well-defined coding
         tasks. This meta-level human-AI collaboration mirrors the very
         workflow the tool itself is designed to enable.
-      </p>
-  </section>
-  <section id="s-43-component-selection-and-integration-best-practices">
-    <h3>
-      <em>4.3 Component Selection and
-      Integration: Best Practices</em>
-    </h3>
-    <p>
+      </p></section><section class="section" id="s-43-component-selection-and-integration-best-practices"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>4.3 Component Selection and
+      Integration: Best Practices</strong></span>
+    </h3></div></div></div><p>
         The selected technology stack is modern, robust, and well-suited
         for the project's goals.
-      </p>
-    <ul>
-      <li>
-        <p>
-          <em>Frontend (React/JSX):</em>
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>Frontend (React/JSX):</strong></span>
             React's component-based architecture is ideal for building
             the complex, interactive UI required for a creative tool.
             Its vast ecosystem provides libraries for virtually any
             required functionality.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Backend
-            (Node.js/Express):</em> Node.js offers excellent
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Backend
+            (Node.js/Express):</strong></span> Node.js offers excellent
             performance for the I/O-bound tasks typical of a web
             backend, such as handling API requests and database queries.
             Express provides a minimalist and flexible framework for
             building the API service.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Editor (Monaco Editor):</em>
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Editor (Monaco Editor):</strong></span>
             As the editor that powers VS Code, Monaco provides a
             world-class, feature-rich editing experience out of the box.
             Its extensive API will be invaluable for tracking granular
             user interactions like text selections, cursor movements,
             and other events that could potentially be logged as part of
             the provenance trail.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Persistence
-            (SQLite/File-based):</em> The choice of a local-first
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Persistence
+            (SQLite/File-based):</strong></span> The choice of a local-first
             persistence layer for the MVP is strategically astute. It
             simplifies development, enhances user privacy and data
             ownership, and enables offline functionality. For future
@@ -1339,17 +966,10 @@
             foundation can be extended with synchronization services
             that sync the local SQLite database or file-based ledger
             with a central server.
-          </p>
-      </li>
-    </ul>
-  </section>
-</section>
-  <section id="v-the-final-deliverable-the-legally-defensible-copyright-provenance-report">
-  <h2>
-    <em>V. The Final Deliverable: The Legally
-    Defensible Copyright Provenance Report</em>
-  </h2>
-  <p>
+          </p></li></ul></div></section></section><section class="section" id="v-the-final-deliverable-the-legally-defensible-copyright-provenance-report"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+    <span class="strong"><strong>V. The Final Deliverable: The Legally
+    Defensible Copyright Provenance Report</strong></span>
+  </h2></div></div></div><p>
       The ultimate deliverable of the tool is not the creative work
       itself, but the legally defensible proof of its creation. The
       Copyright Provenance Report is the culmination of the entire
@@ -1358,139 +978,89 @@
       submission with a USCO copyright application. Its structure and
       content must directly address the disclosure and authorship
       requirements set forth by the Office.
-    </p>
-  <section id="s-51-structuring-the-report-for-usco-submission">
-    <h3>
-      <em>5.1 Structuring the Report for USCO
-      Submission</em>
-    </h3>
-    <p>
+    </p><section class="section" id="s-51-structuring-the-report-for-usco-submission"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>5.1 Structuring the Report for USCO
+      Submission</strong></span>
+    </h3></div></div></div><p>
         The report should be automatically generated and formatted to be
         as clear and unambiguous as possible for a USCO examiner. It
         will consist of two primary sections, preceded by standard
         header information.
-      </p>
-    <p>
-      <em>Header Information:</em>
-    </p>
-    <ul>
-      <li>
-        <p>
-          <em>Author Name:</em> Full legal
+      </p><p>
+      <span class="strong"><strong>Header Information:</strong></span>
+    </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>Author Name:</strong></span> Full legal
             name of the human author.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Contact Information:</em>
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Contact Information:</strong></span>
             Email and mailing address.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Work Title:</em> The title of
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Work Title:</strong></span> The title of
             the work being registered.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Completion Date:</em> The
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Completion Date:</strong></span> The
             timestamp when the work was marked as complete in the
             system.
-          </p>
-      </li>
-    </ul>
-    <p>
+          </p></li></ul></div><p>
         Section 1: AI-Generated Content Disclaimer
-      </p>
-    <p>
+      </p><p>
         This section is non-negotiable and directly addresses the USCO's
         disclosure requirement.1 The tool will programmatically generate
         a precise and exhaustive list of all content within the work
         that was produced by an AI model and is therefore being
         disclaimed for copyright purposes. Each entry will be specific
         and verifiable, linking back to the ledger.
-      </p>
-    <p>
+      </p><p>
         Example:
-      </p>
-    <p>
+      </p><p>
         The following content included in this work was generated by an
         artificial intelligence model and is not claimed as part of this
         copyright registration:
-      </p>
-    <ul>
-      <li>
-        <p>
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
             The text content of Asset ID
             b5c6d7e8-f9g0-1234-5678-90abcdef1234, generated by the
             Google Gemini 2.5 Pro model (Version v1.2025.10.03) on
             2025-10-26 at 09:10:15Z.
-          </p>
-      </li>
-      <li>
-        <p>
+          </p></li><li class="listitem"><p>
             The initial draft of the image content of Asset ID
             c3d4e5f6-g7h8-9012-3456-7890abcdef12, generated by the
             Midjourney model (Version 6.0) on 2025-10-26 at 11:22:05Z.
-          </p>
-      </li>
-    </ul>
-    <p>
+          </p></li></ul></div><p>
         Section 2: Statement of Human Authorship
-      </p>
-    <p>
+      </p><p>
         This section makes the affirmative case for copyrightability by
         detailing the human author's creative contributions. It
         translates the raw event data from the ledger into a compelling
         narrative. It will begin with a quantitative summary, followed
         by a detailed, chronological log.
-      </p>
-    <p>
+      </p><p>
         Example Summary:
-      </p>
-    <p>
+      </p><p>
         The human author, [Author Name], is the sole author of the
         copyrightable content in this work. The author's contributions
         include the performance of 87 material modifications to
         AI-generated text, 5 acts of creative selection from
         AI-generated image sets, and 1 act of creative arrangement of
         selected images into a final composition.
-      </p>
-    <p>
-      <em>Example Detailed Log Entry:</em>
-    </p>
-    <ul>
-      <li>
-        <p>
-          <em>Timestamp:</em>
+      </p><p>
+      <span class="emphasis"><em>Example Detailed Log Entry:</em></span>
+    </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>Timestamp:</strong></span>
             2025-10-26T09:15:30Z
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Contribution Type:</em>
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Contribution Type:</strong></span>
             Human-Modification
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Target Asset ID:</em>
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Target Asset ID:</strong></span>
             b5c6d7e8-f9g0-1234-5678-90abcdef1234
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Description:</em> The author
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Description:</strong></span> The author
             performed substantial edits to the AI-generated text,
             resulting in the addition of 50 words and the deletion of 12
             words. These modifications included rewriting dialogue for
             character voice and adding a new concluding paragraph to
             alter the narrative's thematic resolution.
-          </p>
-      </li>
-    </ul>
-    <p>
+          </p></li></ul></div><p>
         This structure transforms the legal ambiguity inherent in
         AI-assisted creation into a clear factual declaration. It shifts
         the conversation with a copyright examiner from a subjective
@@ -1499,14 +1069,10 @@
         longer a vague assertion like "I modified it a lot,"
         but a verifiable statement supported by a precise, timestamped
         log of creative actions.
-      </p>
-  </section>
-  <section id="s-52-automating-the-narrative-of-creation">
-    <h3>
-      <em>5.2 Automating the Narrative of
-      Creation</em>
-    </h3>
-    <p>
+      </p></section><section class="section" id="s-52-automating-the-narrative-of-creation"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>5.2 Automating the Narrative of
+      Creation</strong></span>
+    </h3></div></div></div><p>
         A core technical challenge and a significant value proposition
         of the system is its ability to perform this
         "data-to-text" translation. The backend must contain
@@ -1515,72 +1081,46 @@
         narrative required for the report. This automated generation
         ensures consistency, accuracy, and completeness, removing the
         risk of human error in the legally critical disclosure process.
-      </p>
-  </section>
-  <section id="s-53-beyond-registration-the-report-as-a-multi-purpose-ip-asset">
-    <h3>
-      <em>5.3 Beyond Registration: The Report
-      as a Multi-Purpose IP Asset</em>
-    </h3>
-    <p>
+      </p></section><section class="section" id="s-53-beyond-registration-the-report-as-a-multi-purpose-ip-asset"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>5.3 Beyond Registration: The Report
+      as a Multi-Purpose IP Asset</strong></span>
+    </h3></div></div></div><p>
         While its primary purpose is for USCO registration, the
         Copyright Provenance Report serves as a vital intellectual
         property asset in numerous other contexts. It provides
         verifiable proof of ownership and a clear demarcation of
         protectable versus unprotectable content, which is invaluable
         in:
-      </p>
-    <ul>
-      <li>
-        <p>
-          <em>Licensing Negotiations:</em>
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>Licensing Negotiations:</strong></span>
             Demonstrating to potential licensees the precise scope of
             the copyright they are acquiring.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Infringement Disputes:</em>
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Infringement Disputes:</strong></span>
             Providing clear, contemporaneous evidence of human
             authorship to support a claim of infringement.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Due Diligence:</em> Serving as
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Due Diligence:</strong></span> Serving as
             a key document in mergers, acquisitions, or investment
             rounds where the value of creative IP assets must be
             verified.
-          </p>
-      </li>
-    </ul>
-  </section>
-</section>
-  <section id="vi-strategic-analysis-and-future-trajectory">
-  <h2>
-    <em>VI. Strategic Analysis and Future
-    Trajectory</em>
-  </h2>
-  <p>
+          </p></li></ul></div></section></section><section class="section" id="vi-strategic-analysis-and-future-trajectory"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+    <span class="strong"><strong>VI. Strategic Analysis and Future
+    Trajectory</strong></span>
+  </h2></div></div></div><p>
       The proposed tool represents a sophisticated and timely response
       to a critical challenge at the intersection of technology and law.
       Its success will depend not only on its technical execution but
       also on a clear-eyed understanding of its strategic position,
       potential challenges, and path for future growth.
-    </p>
-  <section id="s-61-addressing-potential-challenges">
-    <h3>
-      <em>6.1 Addressing Potential
-      Challenges</em>
-    </h3>
-    <p>
+    </p><section class="section" id="s-61-addressing-potential-challenges"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>6.1 Addressing Potential
+      Challenges</strong></span>
+    </h3></div></div></div><p>
         While the design is robust, several challenges must be
         proactively addressed:
-      </p>
-    <ul>
-      <li>
-        <p>
-          <em>User Experience Friction:</em>
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>User Experience Friction:</strong></span>
             The legally necessary, enforced
             "human-in-the-loop" workflow introduces friction
             into a creative process that users may expect to be
@@ -1588,12 +1128,9 @@
             will be to make this mandatory curation process feel
             intuitive, empowering, and value-additive, rather than like
             a cumbersome bureaucratic hurdle.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Scalability of Granular
-            Logging:</em> The strategy of logging every
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Scalability of Granular
+            Logging:</strong></span> The strategy of logging every
             significant interaction will generate a substantial volume
             of data, especially for complex, long-form works. The
             system's data storage, indexing, and retrieval mechanisms
@@ -1601,12 +1138,9 @@
             The local-first model mitigates this for individual users,
             but careful planning is required for cloud synchronization
             and long-term archival.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Adaptability to Non-Textual
-            Media:</em> The MVP's focus on text is a wise starting
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Adaptability to Non-Textual
+            Media:</strong></span> The MVP's focus on text is a wise starting
             point. However, extending the system to images, audio, and
             video presents a significant future challenge. As discussed,
             quantifying "material modification" in these
@@ -1615,41 +1149,29 @@
             range of creative actions and tools.41 The polyglot monorepo
             architecture provides a foundation for this, but the
             implementation will be a major undertaking.
-          </p>
-      </li>
-    </ul>
-  </section>
-  <section id="s-62-market-positioning-and-competitive-differentiation">
-    <h3>
-      <em>6.2 Market Positioning and
-      Competitive Differentiation</em>
-    </h3>
-    <p>
+          </p></li></ul></div></section><section class="section" id="s-62-market-positioning-and-competitive-differentiation"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>6.2 Market Positioning and
+      Competitive Differentiation</strong></span>
+    </h3></div></div></div><p>
         The tool is positioned to enter a nascent but rapidly growing
         market of professional and semi-professional creators, authors,
         artists, and small studios who are leveraging AI but are
         hampered by legal uncertainty.43 Its competitive differentiation
         is exceptionally strong because it addresses a fundamentally
         different problem than adjacent tools.
-      </p>
-    <ul>
-      <li>
-        <p>
-          <em>vs. AI Content Detectors (e.g.,
-            Winston AI, Grammarly):</em> These tools analyze a
-            finished product and attempt to <em>guess</em>
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>vs. AI Content Detectors (e.g.,
+            Winston AI, Grammarly):</strong></span> These tools analyze a
+            finished product and attempt to <span class="emphasis"><em>guess</em></span>
             whether it was AI-generated based on statistical patterns.46
             They provide a probabilistic assessment. The proposed tool
-            does not guess; it <em>knows</em>. It provides
+            does not guess; it <span class="emphasis"><em>knows</em></span>. It provides
             deterministic proof of provenance because it was the
             environment of creation. Its output is evidence, not an
             estimate.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>vs. Content Provenance Standards
-            (e.g., C2PA):</em> The Coalition for Content
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>vs. Content Provenance Standards
+            (e.g., C2PA):</strong></span> The Coalition for Content
             Provenance and Authenticity (C2PA) provides an open standard
             for embedding provenance metadata directly into media
             files.49 The proposed tool is not a competitor but a
@@ -1658,94 +1180,66 @@
             data from its own internal ledger, thereby creating a highly
             detailed and trustworthy "digital nutrition
             label."
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>vs. Creative Workflow Tools (e.g.,
-            Ziflow, Workamajig):</em> These platforms are designed
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>vs. Creative Workflow Tools (e.g.,
+            Ziflow, Workamajig):</strong></span> These platforms are designed
             to manage the review and approval stages of a creative
             workflow, focusing on stakeholder feedback and project
             management.50 They lack the specific, legally-oriented focus
             on logging the granular acts of creation required to
             establish IP ownership.
-          </p>
-      </li>
-    </ul>
-    <p>
+          </p></li></ul></div><p>
         The core value proposition of this tool is not content creation;
-        it is <em>Certainty as a Service</em>.
+        it is <span class="strong"><strong>Certainty as a Service</strong></span>.
         It competes not with other AI writing tools, but with the legal
         ambiguity and business risk that currently plague the
         AI-assisted creator economy. Its product is not words or images,
         but defensible proof of human authorship.
-      </p>
-  </section>
-  <section id="s-63-roadmap-for-evolution">
-    <h3>
-      <em>6.3 Roadmap for
-      Evolution</em>
-    </h3>
-    <p>
+      </p></section><section class="section" id="s-63-roadmap-for-evolution"><div class="titlepage"><div><div><h3 class="title">
+      <span class="strong"><strong>6.3 Roadmap for
+      Evolution</strong></span>
+    </h3></div></div></div><p>
         A phased approach to development will be critical for managing
         complexity and achieving market traction.
-      </p>
-    <ul>
-      <li>
-        <p>
-          <em>Phase 1: MVP (Text-Based
-            Focus):</em> Execute the four-phase plan as outlined,
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+          <span class="strong"><strong>Phase 1: MVP (Text-Based
+            Focus):</strong></span> Execute the four-phase plan as outlined,
             focusing exclusively on text-based creative works. The goal
             is to perfect the core ledger, workflow, and reporting
             engine.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Phase 2: Multimedia
-            Support:</em> Begin extending the platform to support
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Phase 2: Multimedia
+            Support:</strong></span> Begin extending the platform to support
             image creation. This will involve integrating with image
             generation APIs and building a new set of UI tools and
             logging mechanisms for visual modifications (e.g., selection
             from a 2x2 grid, inpainting/outpainting, filter application,
             etc.).
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Phase 3: Collaboration
-            Features:</em> Evolve the system from a single-user,
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Phase 3: Collaboration
+            Features:</strong></span> Evolve the system from a single-user,
             local-first application to a multi-user, collaborative
             platform. This will require implementing a robust cloud
             synchronization layer for the provenance ledger and features
             for managing co-authorship and contribution rights.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Phase 4: Integration
-            Ecosystem:</em> Develop plugins and extensions for
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Phase 4: Integration
+            Ecosystem:</strong></span> Develop plugins and extensions for
             popular, existing creative tools (e.g., Adobe Photoshop,
             Final Cut Pro, VS Code). This would allow creators to use
             their preferred software while still benefiting from the
             automated provenance logging running in the background,
             dramatically expanding the tool's addressable market.
-          </p>
-      </li>
-      <li>
-        <p>
-          <em>Phase 5: Legal
-            Adaptability:</em> The legal landscape surrounding AI
+          </p></li><li class="listitem"><p>
+          <span class="strong"><strong>Phase 5: Legal
+            Adaptability:</strong></span> The legal landscape surrounding AI
             and copyright is not static.52 The system must be designed
             for adaptability. The HumanAuthorshipScore algorithm, the
             structure of the Provenance Report, and even the types of
             logged events may need to be updated in response to new USCO
             guidance or court rulings. The platform must be architected
             to accommodate these changes gracefully.
-          </p>
-      </li>
-    </ul>
-    <p>
+          </p></li></ul></div><p>
         This strategic trajectory has the potential to establish the
         tool not just as a product, but as a foundational piece of
         infrastructure for the creator economy. As AI-assisted works
@@ -1758,395 +1252,226 @@
         more the market will demand its reports, which in turn drives
         more creators to the platform, solidifying its position as a
         fundamental layer of trust.
-      </p>
-    <section id="works-cited">
-      <h4>
-        <em>Works cited</em>
-      </h4>
-      <ol>
-        <li>
-          <p>
+      </p><section class="section" id="works-cited"><div class="titlepage"><div><div><h4 class="title">
+        <span class="strong"><strong>Works cited</strong></span>
+      </h4></div></div></div><div class="orderedlist"><ol class="orderedlist compact" type="1"><li class="listitem"><p>
               Copyright Office Publishes Report on Copyrightability of
               AI-Generated Materials | Insights, accessed October 3,
               2025,
-              <a href="https://www.skadden.com/insights/publications/2025/02/copyright-office-publishes-report">https://www.skadden.com/insights/publications/2025/02/copyright-office-publishes-report</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.skadden.com/insights/publications/2025/02/copyright-office-publishes-report" target="_top">https://www.skadden.com/insights/publications/2025/02/copyright-office-publishes-report</a>
+          </p></li><li class="listitem"><p>
               Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf,
               accessed October 3, 2025,
-              <a href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf">https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf" target="_top">https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf</a>
+          </p></li><li class="listitem"><p>
               Copyright Law in the Age of AI: Navigating Authorship,
               Infringement ..., accessed October 3, 2025,
-              <a href="https://nysba.org/copyright-law-in-the-age-of-ai-navigating-authorship-infringement-and-creative-rights/">https://nysba.org/copyright-law-in-the-age-of-ai-navigating-authorship-infringement-and-creative-rights/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://nysba.org/copyright-law-in-the-age-of-ai-navigating-authorship-infringement-and-creative-rights/" target="_top">https://nysba.org/copyright-law-in-the-age-of-ai-navigating-authorship-infringement-and-creative-rights/</a>
+          </p></li><li class="listitem"><p>
               US Court Decides There is No Copyright in AI-Generated
               Works - What About Canada?, accessed October 3, 2025,
-              <a href="https://cassels.com/insights/us-court-decides-there-is-no-copyright-in-ai-generated-works-what-about-canada/">https://cassels.com/insights/us-court-decides-there-is-no-copyright-in-ai-generated-works-what-about-canada/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://cassels.com/insights/us-court-decides-there-is-no-copyright-in-ai-generated-works-what-about-canada/" target="_top">https://cassels.com/insights/us-court-decides-there-is-no-copyright-in-ai-generated-works-what-about-canada/</a>
+          </p></li><li class="listitem"><p>
               Human Authorship Required: AI Isn't an Author Under
               Copyright Act - IP Update, accessed October 3, 2025,
-              <a href="https://www.ipupdate.com/2025/03/human-authorship-required-ai-isnt-an-author-under-copyright-act/">https://www.ipupdate.com/2025/03/human-authorship-required-ai-isnt-an-author-under-copyright-act/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.ipupdate.com/2025/03/human-authorship-required-ai-isnt-an-author-under-copyright-act/" target="_top">https://www.ipupdate.com/2025/03/human-authorship-required-ai-isnt-an-author-under-copyright-act/</a>
+          </p></li><li class="listitem"><p>
               Appellate Court Affirms Human Authorship Requirement for
               Copyrighting AI-Generated Works | Insights | Skadden,
               Arps, Slate, Meagher &amp; Flom LLP, accessed October 3,
               2025,
-              <a href="https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship">https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship" target="_top">https://www.skadden.com/insights/publications/2025/03/appellate-court-affirms-human-authorship</a>
+          </p></li><li class="listitem"><p>
               U.S. Copyright Office issues report on copyrightability of
               AI assisted and generated works, accessed October 3, 2025,
-              <a href="https://www.hoganlovells.com/en/publications/us-copyright-office-issues-report-on-copyrightability-of-ai-assisted-and-generated-works">https://www.hoganlovells.com/en/publications/us-copyright-office-issues-report-on-copyrightability-of-ai-assisted-and-generated-works</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.hoganlovells.com/en/publications/us-copyright-office-issues-report-on-copyrightability-of-ai-assisted-and-generated-works" target="_top">https://www.hoganlovells.com/en/publications/us-copyright-office-issues-report-on-copyrightability-of-ai-assisted-and-generated-works</a>
+          </p></li><li class="listitem"><p>
               Copyrightability of AI Outputs: U.S. Copyright Office
               Analyzes Human Authorship Requirement | Insights | Jones
               Day, accessed October 3, 2025,
-              <a href="https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement">https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement" target="_top">https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement</a>
+          </p></li><li class="listitem"><p>
               Clarifying the Copyrightability of AI-Assisted Works |
               Foley &amp; Lardner ..., accessed October 3, 2025,
-              <a href="https://www.foley.com/insights/publications/2025/02/clarifying-copyrightability-ai-assisted-works/">https://www.foley.com/insights/publications/2025/02/clarifying-copyrightability-ai-assisted-works/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.foley.com/insights/publications/2025/02/clarifying-copyrightability-ai-assisted-works/" target="_top">https://www.foley.com/insights/publications/2025/02/clarifying-copyrightability-ai-assisted-works/</a>
+          </p></li><li class="listitem"><p>
               Copyright Office Releases Part 2 of Artificial
               Intelligence Report, accessed October 3, 2025,
-              <a href="https://www.copyright.gov/newsnet/2025/1060.html">https://www.copyright.gov/newsnet/2025/1060.html</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.copyright.gov/newsnet/2025/1060.html" target="_top">https://www.copyright.gov/newsnet/2025/1060.html</a>
+          </p></li><li class="listitem"><p>
               Summary of the USCO Copyright and AI Report; Part 2:
               Copyrightability - Copyright Alliance, accessed October 3,
               2025,
-              <a href="https://copyrightalliance.org/ai-report-part-2-copyrightability/">https://copyrightalliance.org/ai-report-part-2-copyrightability/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://copyrightalliance.org/ai-report-part-2-copyrightability/" target="_top">https://copyrightalliance.org/ai-report-part-2-copyrightability/</a>
+          </p></li><li class="listitem"><p>
               Building Generative AI prompt chaining workflows with
               human in the ..., accessed October 3, 2025,
-              <a href="https://aws.amazon.com/blogs/machine-learning/building-generative-ai-prompt-chaining-workflows-with-human-in-the-loop/">https://aws.amazon.com/blogs/machine-learning/building-generative-ai-prompt-chaining-workflows-with-human-in-the-loop/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://aws.amazon.com/blogs/machine-learning/building-generative-ai-prompt-chaining-workflows-with-human-in-the-loop/" target="_top">https://aws.amazon.com/blogs/machine-learning/building-generative-ai-prompt-chaining-workflows-with-human-in-the-loop/</a>
+          </p></li><li class="listitem"><p>
               Human-in-the-Loop: Maintaining Control in an AI-Powered
               World - Sogolytics Blog, accessed October 3, 2025,
-              <a href="https://www.sogolytics.com/blog/human-in-the-loop-ai/">https://www.sogolytics.com/blog/human-in-the-loop-ai/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.sogolytics.com/blog/human-in-the-loop-ai/" target="_top">https://www.sogolytics.com/blog/human-in-the-loop-ai/</a>
+          </p></li><li class="listitem"><p>
               Exploring Data Provenance: Ensuring Data Integrity and
               Authenticity - Astera Software, accessed October 3, 2025,
-              <a href="https://www.astera.com/type/blog/data-provenance/">https://www.astera.com/type/blog/data-provenance/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.astera.com/type/blog/data-provenance/" target="_top">https://www.astera.com/type/blog/data-provenance/</a>
+          </p></li><li class="listitem"><p>
               Digital Authenticity: Provenance and Verification in
               AI-Generated Media - Numbers Protocol, accessed October 3,
               2025,
-              <a href="https://numbersprotocol.io/blog/digital-authenticity-provenance-and-verification-in-ai-generated-media">https://numbersprotocol.io/blog/digital-authenticity-provenance-and-verification-in-ai-generated-media</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://numbersprotocol.io/blog/digital-authenticity-provenance-and-verification-in-ai-generated-media" target="_top">https://numbersprotocol.io/blog/digital-authenticity-provenance-and-verification-in-ai-generated-media</a>
+          </p></li><li class="listitem"><p>
               Core structure of a provenance data model. Reprinted with
               permission... - ResearchGate, accessed October 3, 2025,
-              <a href="https://www.researchgate.net/figure/Core-structure-of-a-provenance-data-model-Reprinted-with-permission-from-Ref-14_fig1_360445341">https://www.researchgate.net/figure/Core-structure-of-a-provenance-data-model-Reprinted-with-permission-from-Ref-14_fig1_360445341</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.researchgate.net/figure/Core-structure-of-a-provenance-data-model-Reprinted-with-permission-from-Ref-14_fig1_360445341" target="_top">https://www.researchgate.net/figure/Core-structure-of-a-provenance-data-model-Reprinted-with-permission-from-Ref-14_fig1_360445341</a>
+          </p></li><li class="listitem"><p>
               (PDF) A Design Model of Copyright Protection System Based
               on ..., accessed October 3, 2025,
-              <a href="https://www.researchgate.net/publication/364180624_A_Design_Model_of_Copyright_Protection_System_Based_on_Distributed_Ledger_Technology">https://www.researchgate.net/publication/364180624_A_Design_Model_of_Copyright_Protection_System_Based_on_Distributed_Ledger_Technology</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.researchgate.net/publication/364180624_A_Design_Model_of_Copyright_Protection_System_Based_on_Distributed_Ledger_Technology" target="_top">https://www.researchgate.net/publication/364180624_A_Design_Model_of_Copyright_Protection_System_Based_on_Distributed_Ledger_Technology</a>
+          </p></li><li class="listitem"><p>
               PROV-O: The PROV Ontology - The University of Manchester,
               accessed October 3, 2025,
-              <a href="https://pure.manchester.ac.uk/ws/files/31956469/FULL_TEXT.PDF">https://pure.manchester.ac.uk/ws/files/31956469/FULL_TEXT.PDF</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://pure.manchester.ac.uk/ws/files/31956469/FULL_TEXT.PDF" target="_top">https://pure.manchester.ac.uk/ws/files/31956469/FULL_TEXT.PDF</a>
+          </p></li><li class="listitem"><p>
               PROV-O: The PROV Ontology | Request PDF - ResearchGate,
               accessed October 3, 2025,
-              <a href="https://www.researchgate.net/publication/320333535_PROV-O_The_PROV_Ontology">https://www.researchgate.net/publication/320333535_PROV-O_The_PROV_Ontology</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.researchgate.net/publication/320333535_PROV-O_The_PROV_Ontology" target="_top">https://www.researchgate.net/publication/320333535_PROV-O_The_PROV_Ontology</a>
+          </p></li><li class="listitem"><p>
               Blockchain for Copyright Protection: Use Cases, Benefits
               and Challenges - A3Logics, accessed October 3, 2025,
-              <a href="https://www.a3logics.com/blog/blockchain-for-copyright-protection/">https://www.a3logics.com/blog/blockchain-for-copyright-protection/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.a3logics.com/blog/blockchain-for-copyright-protection/" target="_top">https://www.a3logics.com/blog/blockchain-for-copyright-protection/</a>
+          </p></li><li class="listitem"><p>
               LF Decentralized Trust - The open source foundation for
               decentralized technologies, accessed October 3, 2025,
-              <a href="https://www.lfdecentralizedtrust.org/">https://www.lfdecentralizedtrust.org/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.lfdecentralizedtrust.org/" target="_top">https://www.lfdecentralizedtrust.org/</a>
+          </p></li><li class="listitem"><p>
               Creative Thinking in Art and Design Education: A
               Systematic Review - MDPI, accessed October 3, 2025,
-              <a href="https://www.mdpi.com/2227-7102/14/2/192">https://www.mdpi.com/2227-7102/14/2/192</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.mdpi.com/2227-7102/14/2/192" target="_top">https://www.mdpi.com/2227-7102/14/2/192</a>
+          </p></li><li class="listitem"><p>
               Scoping Review on Digital Creativity: Definition,
               Approaches, and Current Trends - MDPI, accessed October 3,
               2025,
-              <a href="https://www.mdpi.com/2227-7102/15/2/202">https://www.mdpi.com/2227-7102/15/2/202</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.mdpi.com/2227-7102/15/2/202" target="_top">https://www.mdpi.com/2227-7102/15/2/202</a>
+          </p></li><li class="listitem"><p>
               A Big Data Approach to Computational Creativity - arXiv,
               accessed October 3, 2025,
-              <a href="https://arxiv.org/pdf/1311.1213">https://arxiv.org/pdf/1311.1213</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://arxiv.org/pdf/1311.1213" target="_top">https://arxiv.org/pdf/1311.1213</a>
+          </p></li><li class="listitem"><p>
               Humans in the Loop - Colorado Law Scholarly Commons,
               accessed October 3, 2025,
-              <a href="https://scholar.law.colorado.edu/context/faculty-articles/article/2586/viewcontent/Kaminski_Humans_in_the_Loop.pdf">https://scholar.law.colorado.edu/context/faculty-articles/article/2586/viewcontent/Kaminski_Humans_in_the_Loop.pdf</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://scholar.law.colorado.edu/context/faculty-articles/article/2586/viewcontent/Kaminski_Humans_in_the_Loop.pdf" target="_top">https://scholar.law.colorado.edu/context/faculty-articles/article/2586/viewcontent/Kaminski_Humans_in_the_Loop.pdf</a>
+          </p></li><li class="listitem"><p>
               11 Best Practices for Logging in Node.js | Better Stack
               Community, accessed October 3, 2025,
-              <a href="https://betterstack.com/community/guides/logging/nodejs-logging-best-practices/">https://betterstack.com/community/guides/logging/nodejs-logging-best-practices/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://betterstack.com/community/guides/logging/nodejs-logging-best-practices/" target="_top">https://betterstack.com/community/guides/logging/nodejs-logging-best-practices/</a>
+          </p></li><li class="listitem"><p>
               A Programmer's Guide to Logging Best Practices - Dash0,
               accessed October 3, 2025,
-              <a href="https://www.dash0.com/guides/logging-best-practices">https://www.dash0.com/guides/logging-best-practices</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.dash0.com/guides/logging-best-practices" target="_top">https://www.dash0.com/guides/logging-best-practices</a>
+          </p></li><li class="listitem"><p>
               The 'Diffing' Algorithm Explained | by Tito Adeoye -
               Medium, accessed October 3, 2025,
-              <a href="https://medium.com/@titoadeoye/the-diffing-algorithm-explained-81d5b11ad9a1">https://medium.com/@titoadeoye/the-diffing-algorithm-explained-81d5b11ad9a1</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://medium.com/@titoadeoye/the-diffing-algorithm-explained-81d5b11ad9a1" target="_top">https://medium.com/@titoadeoye/the-diffing-algorithm-explained-81d5b11ad9a1</a>
+          </p></li><li class="listitem"><p>
               Quantifying the User Experience | Request PDF -
               ResearchGate, accessed October 3, 2025,
-              <a href="https://www.researchgate.net/publication/316600285_Quantifying_the_User_Experience">https://www.researchgate.net/publication/316600285_Quantifying_the_User_Experience</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.researchgate.net/publication/316600285_Quantifying_the_User_Experience" target="_top">https://www.researchgate.net/publication/316600285_Quantifying_the_User_Experience</a>
+          </p></li><li class="listitem"><p>
               User Experience Quantification Model from Online User
               Reviews - MDPI, accessed October 3, 2025,
-              <a href="https://www.mdpi.com/2076-3417/12/13/6700">https://www.mdpi.com/2076-3417/12/13/6700</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.mdpi.com/2076-3417/12/13/6700" target="_top">https://www.mdpi.com/2076-3417/12/13/6700</a>
+          </p></li><li class="listitem"><p>
               Monorepos | Nx, accessed October 3, 2025,
-              <a href="https://nx.dev/docs/concepts/decisions/why-monorepos">https://nx.dev/docs/concepts/decisions/why-monorepos</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://nx.dev/docs/concepts/decisions/why-monorepos" target="_top">https://nx.dev/docs/concepts/decisions/why-monorepos</a>
+          </p></li><li class="listitem"><p>
               Simplify code sharing and project structure with NX for
               React developers. - Shift Asia, accessed October 3, 2025,
-              <a href="https://shiftasia.com/community/monorepo-made-easy-using-nx-to-manage-react-applications/">https://shiftasia.com/community/monorepo-made-easy-using-nx-to-manage-react-applications/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://shiftasia.com/community/monorepo-made-easy-using-nx-to-manage-react-applications/" target="_top">https://shiftasia.com/community/monorepo-made-easy-using-nx-to-manage-react-applications/</a>
+          </p></li><li class="listitem"><p>
               Are Nx Monorepo Configurations Really Complex? - Mayallo,
               accessed October 3, 2025,
-              <a href="https://mayallo.com/nx-monorepo-typescript-configurations/">https://mayallo.com/nx-monorepo-typescript-configurations/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://mayallo.com/nx-monorepo-typescript-configurations/" target="_top">https://mayallo.com/nx-monorepo-typescript-configurations/</a>
+          </p></li><li class="listitem"><p>
               The Nx Node/React Stack part 1 - Environment - DEV
               Community, accessed October 3, 2025,
-              <a href="https://dev.to/ibrahimshamma99/nx-nodereact-the-enterprise-stack-part-1-the-environment-5f97">https://dev.to/ibrahimshamma99/nx-nodereact-the-enterprise-stack-part-1-the-environment-5f97</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://dev.to/ibrahimshamma99/nx-nodereact-the-enterprise-stack-part-1-the-environment-5f97" target="_top">https://dev.to/ibrahimshamma99/nx-nodereact-the-enterprise-stack-part-1-the-environment-5f97</a>
+          </p></li><li class="listitem"><p>
               Building a Scalable React Monorepo with NX and Shadcn/UI:
               A Complete Implementation Guide | by Sakshi Jaiswal |
               Medium, accessed October 3, 2025,
-              <a href="https://medium.com/@sakshijaiswal0310/building-a-scalable-react-monorepo-with-nx-and-shadcn-ui-a-complete-implementation-guide-96c2bb1b42e8">https://medium.com/@sakshijaiswal0310/building-a-scalable-react-monorepo-with-nx-and-shadcn-ui-a-complete-implementation-guide-96c2bb1b42e8</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://medium.com/@sakshijaiswal0310/building-a-scalable-react-monorepo-with-nx-and-shadcn-ui-a-complete-implementation-guide-96c2bb1b42e8" target="_top">https://medium.com/@sakshijaiswal0310/building-a-scalable-react-monorepo-with-nx-and-shadcn-ui-a-complete-implementation-guide-96c2bb1b42e8</a>
+          </p></li><li class="listitem"><p>
               Intro to Nx - NX Dev, accessed October 3, 2025,
-              <a href="https://nx.dev/getting-started/intro">https://nx.dev/getting-started/intro</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://nx.dev/getting-started/intro" target="_top">https://nx.dev/getting-started/intro</a>
+          </p></li><li class="listitem"><p>
               Monorepos - NX Dev, accessed October 3, 2025,
-              <a href="https://nx.dev/concepts/decisions/why-monorepos">https://nx.dev/concepts/decisions/why-monorepos</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://nx.dev/concepts/decisions/why-monorepos" target="_top">https://nx.dev/concepts/decisions/why-monorepos</a>
+          </p></li><li class="listitem"><p>
               Getting Started with NX Integrated Mono Repo - YouTube,
               accessed October 3, 2025,
-              <a href="https://www.youtube.com/watch?v=OQQ1HbKm0EM">https://www.youtube.com/watch?v=OQQ1HbKm0EM</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.youtube.com/watch?v=OQQ1HbKm0EM" target="_top">https://www.youtube.com/watch?v=OQQ1HbKm0EM</a>
+          </p></li><li class="listitem"><p>
               Integrate Monaco Editor - Sandpack - CodeSandbox, accessed
               October 3, 2025,
-              <a href="https://sandpack.codesandbox.io/docs/guides/integrate-monaco-editor">https://sandpack.codesandbox.io/docs/guides/integrate-monaco-editor</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://sandpack.codesandbox.io/docs/guides/integrate-monaco-editor" target="_top">https://sandpack.codesandbox.io/docs/guides/integrate-monaco-editor</a>
+          </p></li><li class="listitem"><p>
               monaco-editor/react - NPM, accessed October 3, 2025,
-              <a href="https://www.npmjs.com/package/@monaco-editor/react">https://www.npmjs.com/package/@monaco-editor/react</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.npmjs.com/package/@monaco-editor/react" target="_top">https://www.npmjs.com/package/@monaco-editor/react</a>
+          </p></li><li class="listitem"><p>
               The rise of algorithmic art | AI and Art Class Notes -
               Fiveable, accessed October 3, 2025,
-              <a href="https://fiveable.me/art-and-artificial-intelligence/unit-1/rise-algorithmic-art/study-guide/xyfDj04FJHf48rbU">https://fiveable.me/art-and-artificial-intelligence/unit-1/rise-algorithmic-art/study-guide/xyfDj04FJHf48rbU</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://fiveable.me/art-and-artificial-intelligence/unit-1/rise-algorithmic-art/study-guide/xyfDj04FJHf48rbU" target="_top">https://fiveable.me/art-and-artificial-intelligence/unit-1/rise-algorithmic-art/study-guide/xyfDj04FJHf48rbU</a>
+          </p></li><li class="listitem"><p>
               Algorithmic Art: The Formation of the Genre and Its
               Perception in Contemporary Society, accessed October 3,
               2025,
-              <a href="https://www.researchgate.net/publication/393450373_Algorithmic_Art_The_Formation_of_the_Genre_and_Its_Perception_in_Contemporary_Society">https://www.researchgate.net/publication/393450373_Algorithmic_Art_The_Formation_of_the_Genre_and_Its_Perception_in_Contemporary_Society</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.researchgate.net/publication/393450373_Algorithmic_Art_The_Formation_of_the_Genre_and_Its_Perception_in_Contemporary_Society" target="_top">https://www.researchgate.net/publication/393450373_Algorithmic_Art_The_Formation_of_the_Genre_and_Its_Perception_in_Contemporary_Society</a>
+          </p></li><li class="listitem"><p>
               Authorship and Ownership Issues Raised by AI-Generated
               Works: A Comparative Analysis, accessed October 3, 2025,
-              <a href="https://www.mdpi.com/2075-471X/14/4/57">https://www.mdpi.com/2075-471X/14/4/57</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.mdpi.com/2075-471X/14/4/57" target="_top">https://www.mdpi.com/2075-471X/14/4/57</a>
+          </p></li><li class="listitem"><p>
               Copyright Protection for AI-Generated Works: Exploring
               Originality and Ownership in a Digital Landscape | Asian
               Journal of International Law | Cambridge Core, accessed
               October 3, 2025,
-              <a href="https://www.cambridge.org/core/journals/asian-journal-of-international-law/article/copyright-protection-for-aigenerated-works-exploring-originality-and-ownership-in-a-digital-landscape/12B8B8D836AC9DDFFF4082F7859603E3">https://www.cambridge.org/core/journals/asian-journal-of-international-law/article/copyright-protection-for-aigenerated-works-exploring-originality-and-ownership-in-a-digital-landscape/12B8B8D836AC9DDFFF4082F7859603E3</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.cambridge.org/core/journals/asian-journal-of-international-law/article/copyright-protection-for-aigenerated-works-exploring-originality-and-ownership-in-a-digital-landscape/12B8B8D836AC9DDFFF4082F7859603E3" target="_top">https://www.cambridge.org/core/journals/asian-journal-of-international-law/article/copyright-protection-for-aigenerated-works-exploring-originality-and-ownership-in-a-digital-landscape/12B8B8D836AC9DDFFF4082F7859603E3</a>
+          </p></li><li class="listitem"><p>
               The Intersection of AI and Copyright: Navigating the Legal
               Landscape of AI-Generated Art, accessed October 3, 2025,
-              <a href="https://uclawreview.org/2025/06/30/the-intersection-of-ai-and-copyright-navigating-the-legal-landscape-of-ai-generated-art/">https://uclawreview.org/2025/06/30/the-intersection-of-ai-and-copyright-navigating-the-legal-landscape-of-ai-generated-art/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://uclawreview.org/2025/06/30/the-intersection-of-ai-and-copyright-navigating-the-legal-landscape-of-ai-generated-art/" target="_top">https://uclawreview.org/2025/06/30/the-intersection-of-ai-and-copyright-navigating-the-legal-landscape-of-ai-generated-art/</a>
+          </p></li><li class="listitem"><p>
               Free AI Detector | GPT-4, GPT-3, &amp; ChatGPT AI Checker
               - Grammarly, accessed October 3, 2025,
-              <a href="https://www.grammarly.com/ai-detector">https://www.grammarly.com/ai-detector</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.grammarly.com/ai-detector" target="_top">https://www.grammarly.com/ai-detector</a>
+          </p></li><li class="listitem"><p>
               The Most Trusted AI Detector | ChatGPT Detection Tool,
               accessed October 3, 2025,
-              <a href="https://gowinston.ai/">https://gowinston.ai/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://gowinston.ai/" target="_top">https://gowinston.ai/</a>
+          </p></li><li class="listitem"><p>
               AI Detector - Trusted AI Checker for ChatGPT, Copilot
               &amp; Gemini - Scribbr, accessed October 3, 2025,
-              <a href="https://www.scribbr.com/ai-detector/">https://www.scribbr.com/ai-detector/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.scribbr.com/ai-detector/" target="_top">https://www.scribbr.com/ai-detector/</a>
+          </p></li><li class="listitem"><p>
               C2PA | Verifying Media Content Sources, accessed October
               3, 2025,
-              <a href="https://c2pa.org/">https://c2pa.org/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://c2pa.org/" target="_top">https://c2pa.org/</a>
+          </p></li><li class="listitem"><p>
               Online Proofing Software for Creative &amp; Marketing
               Teams, accessed October 3, 2025,
-              <a href="https://www.ziflow.com/">https://www.ziflow.com/</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.ziflow.com/" target="_top">https://www.ziflow.com/</a>
+          </p></li><li class="listitem"><p>
               Creative Workflow Management: Best Practices + Software
               Tools - Workamajig, accessed October 3, 2025,
-              <a href="https://www.workamajig.com/blog/creative-workflow-management-system">https://www.workamajig.com/blog/creative-workflow-management-system</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.workamajig.com/blog/creative-workflow-management-system" target="_top">https://www.workamajig.com/blog/creative-workflow-management-system</a>
+          </p></li><li class="listitem"><p>
               Patent Landscape Report - Generative Artificial
               Intelligence (GenAI) - WIPO, accessed October 3, 2025,
-              <a href="https://www.wipo.int/web-publications/patent-landscape-report-generative-artificial-intelligence-genai/en/index.html">https://www.wipo.int/web-publications/patent-landscape-report-generative-artificial-intelligence-genai/en/index.html</a>
-          </p>
-        </li>
-        <li>
-          <p>
+              <a class="link" href="https://www.wipo.int/web-publications/patent-landscape-report-generative-artificial-intelligence-genai/en/index.html" target="_top">https://www.wipo.int/web-publications/patent-landscape-report-generative-artificial-intelligence-genai/en/index.html</a>
+          </p></li><li class="listitem"><p>
               AI and Copyright Law: U.S. Framework for Training,
               Copyrightability, and Digital Replicas, accessed October
               3, 2025,
-              <a href="https://huggingface.co/blog/jonathanagustin/ai-copyright-analysis-2025">https://huggingface.co/blog/jonathanagustin/ai-copyright-analysis-2025</a>
-          </p>
-        </li>
-      </ol>
-    </section>
-  </section>
-</section>
-<footer><p>Copyright © 2026 Ian D.L.N. McLean. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This document publishes general legal analysis and does not constitute legal advice.</p></footer>
-</body>
-</html>
+              <a class="link" href="https://huggingface.co/blog/jonathanagustin/ai-copyright-analysis-2025" target="_top">https://huggingface.co/blog/jonathanagustin/ai-copyright-analysis-2025</a>
+          </p></li></ol></div></section></section></section></section></body></html>
