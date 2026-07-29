@@ -39,7 +39,7 @@
           <row><entry><code>src/01-llm-database-theory.xml</code></entry><entry>Primary DocBook 5.2 article (10 sections)</entry></row>
           <row><entry><code>src/02-legal-corpus-connections.xml</code></entry><entry>Connections to matters in this repo; proposed FOFs</entry></row>
           <row><entry><code>src/bibliography.bib</code></entry><entry>14 BibTeX entries</entry></row>
-          <row><entry>(real DocBook 5.2 RELAX NG, fetched from OASIS at build time; the official <code>docbook-xsl-ns</code> <code>xhtml5</code> stylesheet, installed via <code>apt</code>, renders DocBook → HTML5)</entry><entry>Structural validation and HTML build — see <code>docs/scripts/convert_to_docbook.py</code>'s <code>fetch_docbook_schema()</code> and <code>build_html()</code>; this project's own hand-rolled <code>xsl/html5.xsl</code> was retired corpus-wide in favor of this stock stylesheet (see <code>docs/superpowers/plans/2026-07-28-html5-xsl-retirement-plan.md</code>)</entry></row>
+          <row><entry>(real DocBook 5.2 RELAX NG, fetched from OASIS at build time; the official <code>docbook-xsl-ns</code> <code>xhtml5</code> stylesheet, installed via <code>apt</code>, renders DocBook → HTML5)</entry><entry>Structural validation and HTML build — see <code>scripts/convert_to_docbook.py</code>'s <code>fetch_docbook_schema()</code> and <code>build_html()</code>; this project's own hand-rolled <code>xsl/html5.xsl</code> was retired corpus-wide in favor of this stock stylesheet</entry></row>
           <row><entry><code>../../../xsl/latex.xsl</code></entry><entry>DocBook → LaTeX (pdflatex-compilable)</entry></row>
           <row><entry><code>scratch/formulas.md</code></entry><entry>Math correspondences, LARQL↔SQL table, memorisation rates — supplementary working notes, retained outside this article's formal citable body (see "Open Questions" below)</entry></row>
           <row><entry><code>scratch/notes.md</code></entry><entry>Session provenance, citation gaps, open questions — supplementary working notes, retained outside this article's formal citable body (see "Open Questions" below)</entry></row>
@@ -69,7 +69,7 @@ sudo apt-get install libxml2-utils libxslt1-dev pandoc
 # macOS
 brew install libxml2 libxslt pandoc
 
-# Note: pandoc is required by docs/scripts/convert_to_docbook.py (the
+# Note: pandoc is required by scripts/convert_to_docbook.py (the
 # Markdown-to-DocBook conversion tool), not by this paper's own build.
 
 # Optional: PDF output
