@@ -13,7 +13,7 @@ from xml.sax.saxutils import escape as xml_escape
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from convert_to_docbook import (  # noqa: E402
-    REPO_ROOT, DB_NS, write_metadata, build_html, validate,
+    REPO_ROOT, DB_NS, write_metadata, build_html, validate, element_full_text,
 )
 
 DOCS_DIR = REPO_ROOT / "docs"
@@ -30,6 +30,21 @@ CATEGORY_ORDER = [
 ]
 
 
+def _root_tag(xml_path):
+    """Local name of the document's root element, read without spawning a
+    subprocess or resolving XIncludes -- the root element itself is always
+    present verbatim regardless of what its xi:include children resolve to,
+    so a lazy iterparse to the first start event answers "is this a shell
+    <article>?" without a process fork per candidate file."""
+    try:
+        with open(xml_path, "rb") as f:
+            for _, elem in ET.iterparse(f, events=("start",)):
+                return elem.tag.rsplit("}", 1)[-1]
+    except ET.ParseError:
+        pass
+    return ""
+
+
 def _shell_articles(docs_dir):
     for xml_path in sorted(Path(docs_dir).rglob("*.xml")):
         s = str(xml_path)
@@ -37,11 +52,7 @@ def _shell_articles(docs_dir):
             continue
         if xml_path.name.endswith(".meta.xml") or xml_path.name == "index.xml":
             continue
-        root_tag = subprocess.run(
-            ["xmllint", "--xpath", "name(/*)", str(xml_path)],
-            capture_output=True, text=True,
-        ).stdout.strip()
-        if root_tag == "article":
+        if _root_tag(xml_path) == "article":
             yield xml_path
 
 
@@ -53,7 +64,8 @@ def _title_for(xml_path):
     root = ET.fromstring(resolved)
     info = root.find(f"{{{DB_NS}}}info")
     title_el = info.find(f"{{{DB_NS}}}title") if info is not None else None
-    return title_el.text if title_el is not None and title_el.text else xml_path.stem
+    title = element_full_text(title_el)
+    return title if title else xml_path.stem
 
 
 def _category_for(rel_path):
@@ -135,7 +147,7 @@ def main():
     build_index_xml(docs, xml_path)
     errors = validate(xml_path)
     if errors:
-        print(f"VALIDATION FAILED:\n" + "\n".join(errors), file=sys.stderr)
+        print("VALIDATION FAILED:\n" + "\n".join(errors), file=sys.stderr)
         return 1
     build_html(xml_path, DOCS_DIR / "index.html")
     build_sitemap(docs, DOCS_DIR / "sitemap.xml")
