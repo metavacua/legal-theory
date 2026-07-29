@@ -75,6 +75,22 @@ class TestBuildIndexXml(unittest.TestCase):
             self.assertEqual(content.count("<itemizedlist>"), 2)
             self.assertEqual(content.count("<listitem>"), 3)
 
+    def test_href_containing_a_double_quote_is_correctly_attribute_escaped(self):
+        import tempfile
+        import xml.etree.ElementTree as ET
+        from generate_index import build_index_xml
+        docs = [(Path('wip/a "quoted" doc.html'), "Title", "Works in Progress")]
+        with tempfile.TemporaryDirectory() as tmp:
+            xml_path = Path(tmp) / "index.xml"
+            build_index_xml(docs, xml_path)
+            content = xml_path.read_text(encoding="utf-8")
+            root = ET.fromstring(content)  # raises ParseError if the quote broke the attribute
+            link_el = root.find(f".//{{http://docbook.org/ns/docbook}}link")
+            self.assertEqual(
+                link_el.get("{http://www.w3.org/1999/xlink}href"),
+                'wip/a "quoted" doc.html',
+            )
+
 
 if __name__ == "__main__":
     unittest.main()

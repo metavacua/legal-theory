@@ -569,6 +569,21 @@ class TestEmitDocbook(unittest.TestCase):
             html_path = REPO_ROOT / html
             self.assertTrue(html_path.is_file(), f"{key} -> {html} does not exist on disk")
 
+    def test_citing_html_path_containing_a_double_quote_is_correctly_attribute_escaped(self):
+        import xml.etree.ElementTree as ET
+        from build_bibliography import emit_docbook, BibliographyEntry
+        secondary = [BibliographyEntry(
+            section="secondary", display="A Source.",
+            citing_htmls=['docs/a "quoted" path.html'], dedup_key="k1",
+        )]
+        xml_text = emit_docbook([], secondary, [])
+        root = ET.fromstring(xml_text)  # raises ParseError if the quote broke the attribute
+        link_el = root.find(f".//{{http://docbook.org/ns/docbook}}link")
+        self.assertEqual(
+            link_el.get("{http://www.w3.org/1999/xlink}href"),
+            '../a "quoted" path.html',
+        )
+
 
 class TestEndToEndIntegration(unittest.TestCase):
     def test_full_pipeline_produces_valid_docbook_with_all_four_buckets(self):

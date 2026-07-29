@@ -531,7 +531,7 @@ def verify_bib_coverage(bib_entries, bib_classified, legal_entries, secondary_en
     return violations
 
 
-from xml.sax.saxutils import escape as xml_escape
+from xml.sax.saxutils import escape as xml_escape, quoteattr
 
 
 def relative_html_link(repo_relative_html):
@@ -560,7 +560,7 @@ def _listitem_xml(display_text, secondary_xml):
 
 def _entry_listitem_xml(entry):
     links = "; ".join(
-        f'<link xlink:href="{xml_escape(relative_html_link(h))}">{xml_escape(h)}</link>'
+        f'<link xlink:href={quoteattr(relative_html_link(h))}>{xml_escape(h)}</link>'
         for h in sorted(entry.citing_htmls)
     )
     return _listitem_xml(entry.display, f"Cited in: {links}")

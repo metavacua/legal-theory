@@ -9,7 +9,7 @@ import subprocess
 import sys
 from pathlib import Path
 from xml.etree import ElementTree as ET
-from xml.sax.saxutils import escape as xml_escape
+from xml.sax.saxutils import escape as xml_escape, quoteattr
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from convert_to_docbook import (  # noqa: E402
@@ -120,7 +120,7 @@ def build_index_xml(docs, xml_path):
         for html_rel, title in entries:
             lines.append(
                 f'      <listitem><para>'
-                f'<link xlink:href="{xml_escape(str(html_rel))}" '
+                f'<link xlink:href={quoteattr(str(html_rel))} '
                 f'xmlns:xlink="http://www.w3.org/1999/xlink">'
                 f'{xml_escape(title)}</link></para></listitem>'
             )
