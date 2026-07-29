@@ -626,23 +626,31 @@ PAPER_ROOT = REPO_ROOT / "docs" / "papers" / "ai_and_ip" / "llm-database-theory"
 PAPER_SRC = PAPER_ROOT / "src"
 PAPER_FALLBACK_HTML = "docs/papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory.html"
 _CITATION_KEY_RE = re.compile(r"<citation>([\w.-]+)</citation>")
+_BIBLIOREF_LINKEND_RE = re.compile(r'<biblioref linkend="([\w.-]+)"/>')
 
 
-def _bib_citation_backlinks():
+def _bib_citation_backlinks(paper_src=PAPER_SRC):
     """dict[str, str]: bibliography.bib key -> repo-relative .html of the
     paper article (src/01-llm-database-theory.html or
     src/02-legal-corpus-connections.html) whose src/ fragments actually
-    contain <citation>KEY</citation>. The paper is built by the same
-    uniform corpus pipeline as every other document -- its HTML lives
-    alongside its .xml source, so build_backlink_map's own computed path
-    is the real, correct path, not just a stem to reconstruct from."""
-    src_backlinks = build_backlink_map(PAPER_SRC)
+    cite it, via either <citation>KEY</citation> (this paper's own
+    convention) or <biblioref linkend="KEY"/> (the convention
+    convert_numbered_citations.py uses corpus-wide). The paper is built
+    by the same uniform corpus pipeline as every other document -- its
+    HTML lives alongside its .xml source, so build_backlink_map's own
+    computed path is the real, correct path, not just a stem to
+    reconstruct from. paper_src is overridable for testing against a
+    fixture directory instead of the real paper."""
+    src_backlinks = build_backlink_map(paper_src)
     key_to_html = {}
-    for xml_path in sorted(PAPER_SRC.rglob("*.xml")):
+    for xml_path in sorted(Path(paper_src).rglob("*.xml")):
         shell_html = src_backlinks.get(xml_path.resolve())
         if shell_html is None:
             continue
-        for key in _CITATION_KEY_RE.findall(xml_path.read_text(encoding="utf-8")):
+        text = xml_path.read_text(encoding="utf-8")
+        for key in _CITATION_KEY_RE.findall(text):
+            key_to_html.setdefault(key, shell_html)
+        for key in _BIBLIOREF_LINKEND_RE.findall(text):
             key_to_html.setdefault(key, shell_html)
     return key_to_html
 

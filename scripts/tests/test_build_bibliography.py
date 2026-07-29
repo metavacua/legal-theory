@@ -569,6 +569,14 @@ class TestEmitDocbook(unittest.TestCase):
             html_path = REPO_ROOT / html
             self.assertTrue(html_path.is_file(), f"{key} -> {html} does not exist on disk")
 
+    def test_bib_citation_backlinks_detects_biblioref_linkend_not_just_citation_element(self):
+        from build_bibliography import _bib_citation_backlinks
+        root = FIXTURES / "citation_and_biblioref_corpus"
+        backlinks = _bib_citation_backlinks(paper_src=root)
+        expected_html = (root / "shell.html").resolve().relative_to(REPO_ROOT).as_posix()
+        self.assertEqual(backlinks.get("old-style-key"), expected_html)
+        self.assertEqual(backlinks.get("new-style-key"), expected_html)
+
     def test_citing_html_path_containing_a_double_quote_is_correctly_attribute_escaped(self):
         import xml.etree.ElementTree as ET
         from build_bibliography import emit_docbook, BibliographyEntry
