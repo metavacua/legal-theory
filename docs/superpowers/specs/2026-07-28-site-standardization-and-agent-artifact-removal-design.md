@@ -89,7 +89,7 @@ categories:
   redundancy this whole design corrects. Any inbound link to one of these (from `docs/index.md`
   itself, or the matter READMEs' cross-references) is repointed to the corresponding
   `docs/index.html#anchor`.
-- **Genuinely authored content (8 files: the 5 matter `README.md`s, `docs/audits/README.md`,
+- **Genuinely authored content (7 files: the 5 matter `README.md`s, `docs/audits/README.md`,
   `docs/papers/ai_and_ip/llm-database-theory/README.md`).** These contain real, non-derivable
   prose -- e.g. a matter's complaint-structure framing ("Jurisdiction and Venue," "Parties,"
   "Causes of Action"), the paper's own extended abstract, the audit methodology writeup. These are
@@ -176,12 +176,12 @@ Confirmed dead (no CI step, no script, nothing references it). Removed.
 
 ## 3. Verification
 
-- Every new/converted document (`docs/index.xml`, 8 converted READMEs) validates against the real,
+- Every new/converted document (`docs/index.xml`, 7 converted READMEs) validates against the real,
   fetched DocBook 5.2 grammar (`jing`) and this project's DCTERMS-completeness policy
   (`check_dcterms_completeness.py`) -- the same gate every existing document already passes,
   applied uniformly, no exceptions.
 - Content-preservation diff (the same before/after rendered-text-diff technique proven in the
-  citation pilot and the `html5.xsl` retirement) for each of the 8 hand-converted READMEs, to
+  citation pilot and the `html5.xsl` retirement) for each of the 7 hand-converted READMEs, to
   confirm no authored prose is lost in the Markdown-to-DocBook conversion.
 - Full test suite re-run after the `scripts/` relocation (path changes are exactly the kind of
   thing a full suite run catches if anything was missed).
@@ -196,7 +196,7 @@ Confirmed dead (no CI step, no script, nothing references it). Removed.
 
 ## 4. Explicit scope
 
-**In scope:** `docs/index.xml` generation (§2.1), the 8 README conversions + 8 README retirements
+**In scope:** `docs/index.xml` generation (§2.1), the 7 README conversions + 8 README retirements
 (§2.2), dropping Jekyll for static-HTML Pages deployment + sitemap generation (§2.3), relocating
 `docs/scripts/` to `scripts/` (§2.4), removing `docs/superpowers/` from the tracked tree (§2.5),
 `scratch/` disposition (§2.6, default: remove), removing the dead lint config (§2.7).
