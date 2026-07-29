@@ -54,7 +54,8 @@ existing script's convention), `xmllint`/`jing`/`xsltproc` (existing), GitHub Ac
 - Modify: `.github/workflows/build-corpus.yml` -- two `docs/scripts/...` references repointed;
   `docs/_config.yml`'s single `exclude:` entry logic no longer needed once Jekyll is dropped
   (Task 5).
-- Delete: `.markdownlint-cli2.jsonc`, `docs/papers/ai_and_ip/llm-database-theory/scratch/`.
+- Delete: `.markdownlint-cli2.jsonc` (`docs/papers/ai_and_ip/llm-database-theory/scratch/` is
+  kept -- see Task 2).
 - Create: `scripts/generate_index.py`.
 - Create: `docs/index.xml`, `docs/index.meta.xml`, `docs/sitemap.xml` (generated, then committed --
   matching every other built artifact's convention in this repo).
@@ -173,12 +174,22 @@ git commit -m "refactor: relocate docs/scripts/ to scripts/ -- it is tooling, no
 
 ---
 
-### Task 2: Remove dead/unintegrated artifacts
+### Task 2: Remove the dead lint config (`docs/papers/.../scratch/` kept -- see below)
+
+**Corrected during execution, replacing the original task text outright rather than annotating
+beside it:** this task originally also planned to delete
+`docs/papers/ai_and_ip/llm-database-theory/scratch/{formulas,notes}.md`. Step 3 below's own
+verification check (run for real during execution) found the opposite of what this plan assumed:
+the paper's own `README.md` actively references both files -- its "Source Files" table lists them
+alongside real build inputs, and its "Open Questions" section directs readers to
+`scratch/notes.md` directly. That is real, load-bearing documentation, not unintegrated content.
+**`scratch/` is kept, not removed.** This task now only removes the lint config; Task 4's
+README-to-DocBook conversion is where `scratch/`'s ultimate disposition (kept as-is, folded into
+the converted README, or promoted into the paper's citable body) gets decided, with that document
+actually in hand.
 
 **Files:**
 - Delete: `.markdownlint-cli2.jsonc`
-- Delete: `docs/papers/ai_and_ip/llm-database-theory/scratch/formulas.md`
-- Delete: `docs/papers/ai_and_ip/llm-database-theory/scratch/notes.md`
 
 **Interfaces:** None -- this task has no consumers and consumes nothing from other tasks.
 
@@ -198,22 +209,7 @@ what references it.
 git rm .markdownlint-cli2.jsonc
 ```
 
-- [ ] **Step 3: Confirm `scratch/` is not referenced by the paper's own build or any script**
-
-```bash
-grep -rln "scratch/formulas\|scratch/notes" docs/papers/ scripts/*.py .github/workflows/*.yml 2>/dev/null
-```
-
-Expected: no output (the paper's `Makefile` builds from `src/*.xml` only; `scratch/` was never
-part of the citable build). If this prints anything, STOP and report back rather than deleting.
-
-- [ ] **Step 4: Delete the scratch directory**
-
-```bash
-git rm -r docs/papers/ai_and_ip/llm-database-theory/scratch/
-```
-
-- [ ] **Step 5: Run the full test suite to confirm nothing depended on either removed path**
+- [ ] **Step 3: Run the full test suite to confirm nothing depended on the removed file**
 
 ```bash
 cd scripts && python3 -m unittest discover -s tests -p "test_*.py" 2>&1 | tail -5
@@ -221,11 +217,11 @@ cd scripts && python3 -m unittest discover -s tests -p "test_*.py" 2>&1 | tail -
 
 Expected: `Ran 247 tests ... OK (skipped=8)`, unchanged.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 4: Commit**
 
 ```bash
-git add -A
-git commit -m "chore: remove unreferenced markdownlint config and unintegrated paper scratch notes (recoverable via git history if needed)"
+git add -A .markdownlint-cli2.jsonc
+git commit -m "chore: remove unreferenced markdownlint config (scratch/ retained -- confirmed actively referenced by the paper's own README, reversing this plan's original assumption)"
 ```
 
 ---
@@ -542,6 +538,14 @@ git commit -m "feat: generate docs/index.xml + sitemap.xml from real corpus stat
 
 ### Task 4: Convert the 7 genuinely-authored README files to DocBook
 
+**`scratch/` disposition (decided here, not in Task 2):** the paper's `README.md` currently
+references `scratch/formulas.md` and `scratch/notes.md` in its "Source Files" table and its "Open
+Questions" section (which points readers to `scratch/notes.md` for the full list, giving only a
+truncated summary inline). When converting this file, decide explicitly whether to keep those
+references as-is, fold the referenced content directly into the converted README, or promote it
+into the paper's own citable body -- and reflect that decision in the converted `README.xml`. Do
+not silently drop the references without one of these three resolutions.
+
 **Files:**
 - Create + Delete (replace): `docs/audits/README.md` → `docs/audits/README.xml` +
   `README.meta.xml`
@@ -837,7 +841,7 @@ git commit -m "chore: remove docs/superpowers/ from the tracked working tree -- 
 retired, 7 converted) → Tasks 3 and 4. §2.3 (drop Jekyll, sitemap) → Tasks 3 (sitemap generation
 folded into the same generator) and 5 (Jekyll removal). §2.4 (relocate `docs/scripts/`) → Task 1.
 §2.5 (remove `docs/superpowers/`, including this plan/design as its own final step) → Task 6.
-§2.6 (`scratch/` disposition, default: remove) → Task 2. §2.7 (dead lint config) → Task 2. §4's
+§2.6 (`scratch/` disposition -- corrected during execution to "kept," see Task 2) → Tasks 2/4. §2.7 (dead lint config) → Task 2. §4's
 explicit out-of-scope items (root README.md/LICENSE, draft-consolidation clusters, the mojibake
 bug, eyecite wiring, citation Phase 2) are correctly not touched by any task.
 

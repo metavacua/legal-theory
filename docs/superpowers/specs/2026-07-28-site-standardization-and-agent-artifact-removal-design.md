@@ -38,9 +38,9 @@ history is the durable, complete, non-decaying record of that provenance; a para
 archive only duplicates it, imperfectly, as already demonstrated twice by real drift in this
 session. `.markdownlint-cli2.jsonc` is confirmed dead (referenced by no script, no CI step).
 `docs/papers/ai_and_ip/llm-database-theory/scratch/{formulas,notes}.md` is real, substantive,
-deliberately-committed content (research provenance, math reference tables) but sits unintegrated,
-un-cited, and excluded from the live site by a single Jekyll config line -- an explicit disposition
-decision this design records rather than defers.
+deliberately-committed content (research provenance, math reference tables), actively referenced
+by the paper's own `README.md` (its "Source Files" table, and its "Open Questions" section pointing
+readers to `scratch/notes.md` directly) -- kept, not removed; see §2.6.
 
 **Framing correction, mid-design (explicit user direction):** `docs/index.html` is not
 "navigation" in a lesser, non-scholarly sense -- it is a legal-theory and scholarship document
@@ -161,14 +161,13 @@ a plan); keeping them after execution would repeat the exact pattern §2.5 corre
 
 ### 2.6 `docs/papers/.../scratch/{formulas,notes}.md`
 
-Recorded as an explicit decision, not silently resolved: this content is real (verified research
-provenance for the flagship paper, real formula references) but currently sits unintegrated, never
-cited from the paper itself, in a directory named `scratch`. Default disposition for this plan:
-**removed from the tracked tree**, same reasoning and same recoverability as §2.5 -- if any of it
-is later judged worth citing, it becomes a properly-authored, properly-cited addition to the paper
-itself (a real DocBook `<section>` or `<footnote>`), not a permanent, uncited "scratch" file. This
-default may be overridden before the plan executes if the content is judged worth promoting
-instead.
+The paper's own `README.md` actively references both files -- its "Source Files" table lists them
+alongside real build inputs, and its "Open Questions" section directs readers to
+`scratch/notes.md` for the full list, giving only a truncated summary inline. This is real,
+currently load-bearing documentation the paper's own README depends on, not unintegrated or
+uncited content. **Disposition: kept, not removed.** Task 4's README-to-DocBook conversion decides,
+with that context in hand, whether to keep referencing `scratch/` as-is, fold its content directly
+into the converted README, or promote it into the paper's own citable body.
 
 ### 2.7 `.markdownlint-cli2.jsonc`
 
@@ -199,7 +198,7 @@ Confirmed dead (no CI step, no script, nothing references it). Removed.
 **In scope:** `docs/index.xml` generation (§2.1), the 7 README conversions + 8 README retirements
 (§2.2), dropping Jekyll for static-HTML Pages deployment + sitemap generation (§2.3), relocating
 `docs/scripts/` to `scripts/` (§2.4), removing `docs/superpowers/` from the tracked tree (§2.5),
-`scratch/` disposition (§2.6, default: remove), removing the dead lint config (§2.7).
+`scratch/` disposition (§2.6, kept), removing the dead lint config (§2.7).
 
 **Explicitly out of scope, not precluded:**
 - Root-level `README.md` and `LICENSE` (repo root, outside `docs/`, outside the Pages build
