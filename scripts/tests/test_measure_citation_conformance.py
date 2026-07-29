@@ -296,12 +296,30 @@ class TestMeasureNumberedCitationPattern(_WritesXmlFixture, unittest.TestCase):
         works-cited entries, full content and order intact through the
         DocBook conversion, with glued inline markers scattered across all
         8 of its atomized fragments referencing that one shared list. Task
-        6 (2026-07-26) then pilot-converted this exact document into real
-        <biblioentry>/<biblioref> structure via convert_numbered_citations.py,
-        so the informal works-cited list and its glued markers no longer
-        exist here -- this now guards that the conversion stays converted
-        (RED/GREEN oracle per measure_citation_conformance.py's own
-        docstring), not that the pre-conversion pattern is still present."""
+        6 (2026-07-26) pilot-converted this document into real
+        <biblioentry>/<biblioref> structure via convert_numbered_citations.py;
+        Task 7 (commit 8de2d12, 2026-07-29) then hand-fixed 12 more markers
+        in fragment 03 (03-iii-deconstructing-llms-categorical-
+        interpretations-of-components-and-processes.xml) that Task 6's
+        tooling had missed. This test guards that fragment 03's
+        originally-converted 12 markers plus Task 7's 12 additional markers
+        stay converted (RED/GREEN oracle per measure_citation_conformance.py's
+        own docstring).
+
+        Scope correction, 2026-07-29: plausible_marker_count == 0 depends on
+        _GLUED_MARKER_RE (measure_citation_conformance.py), which only
+        recognizes the glued "word.N" shape (period, no following space).
+        It is structurally blind to the space-separated "word N" shape (no
+        period) -- so this test passing is necessary but NOT sufficient
+        evidence that the document is fully converted. As of this commit,
+        approximately 20 markers of that space-separated shape remain
+        unconverted across the document's other 7 fragments (fragment 03
+        itself also still has one known residual, "49", already tracked in
+        this plan's SDD ledger). Converting them needs the same per-marker
+        citation-key verification against docs/bibliography/entries/*.xml
+        that Task 7's fix got -- deferred follow-up work, not done here;
+        see the commit that added this note for the full per-fragment
+        count."""
         from measure_citation_conformance import REPO_ROOT, measure_numbered_citation_pattern
         path = (
             REPO_ROOT / "docs" / "court-record" / "theory" / "federal-constitutional"
