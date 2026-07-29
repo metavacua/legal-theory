@@ -702,16 +702,74 @@ git commit -m "feat: convert the 7 genuinely-authored README.md files to DocBook
 **Interfaces:** None -- this task only touches deployment configuration, consumed by nothing else
 in this repo.
 
-- [ ] **Step 1: Confirm the precondition -- zero Markdown files remain under `docs/`**
+- [ ] **Step 1: Confirm the precondition -- zero Markdown files remain under `docs/`, outside two
+  known, deliberate exceptions**
+
+**Corrected during execution, replacing the original check outright:** the original form of this
+check (`find docs -iname "*.md" -not -path "*/scratch/*"`) found 27 files and correctly blocked --
+but 22 of those are `docs/superpowers/*.md`, which are *known* to still exist at this point in the
+plan: Task 6 (the final task) removes them, and it must run last so its own brief can still be
+extracted from this plan file while every earlier task runs. That is not a gap, it is this plan's
+own documented ordering constraint (see the Global Constraints section). The real gap the original
+check also caught was genuine: 5 orphaned pre-DocBook-conversion `.md` originals in `docs/proposals/`
+(each with a real, current `.xml`/`.html` counterpart already in place, confirmed unreferenced from
+anywhere live) that no earlier task in this plan ever addressed. The corrected check excludes the
+known, deliberate `docs/superpowers/` case and separately handles the real gap:
 
 ```bash
-find docs -iname "*.md" -not -path "*/scratch/*"
+find docs -iname "*.md" -not -path "*/scratch/*" -not -path "*/superpowers/*"
 ```
 
-Expected: no output. If anything remains, STOP -- Tasks 3-4 were supposed to eliminate every `.md`
-file under `docs/` (the index, the 8 stubs, the 7 authored READMEs); if this finds something,
-identify what was missed before proceeding with this task, since dropping Jekyll while a `.md`
-file still exists would mean that file is served as raw, unrendered text on the live site.
+Expected: exactly 5 files, all under `docs/proposals/` (orphaned pre-conversion originals with real
+`.xml`/`.html` counterparts already built). If this finds anything else, STOP and investigate
+before proceeding -- only these 5, specifically, are a known, already-diagnosed gap.
+
+- [ ] **Step 1b: Verify each of the 5 files has a real, current `.xml`+`.html` counterpart and is
+  unreferenced from anywhere live, then remove them**
+
+```bash
+for f in \
+  docs/proposals/legislative/california/state-legislature/blueprint-for-innovation-ip-in-cooperative-securities \
+  docs/proposals/legislative/california/state-legislature/hybrid-cooperative-ipo-framework \
+  docs/proposals/legislative/california/state-legislature/legalizing-sexual-service-contracts \
+  docs/proposals/legislative/california/state-legislature/regulating-sexual-services-states-role \
+  docs/proposals/executive/agencies/california/secretary-of-state/improving-ai-accountability-petition-arguments \
+  ; do
+  echo "=== $f ==="
+  ls "${f}.xml" "${f}.html"
+done
+grep -rln "blueprint-for-innovation-ip-in-cooperative-securities\.md\|hybrid-cooperative-ipo-framework\.md\|legalizing-sexual-service-contracts\.md\|regulating-sexual-services-states-role\.md\|improving-ai-accountability-petition-arguments\.md" docs/ --include="*.xml" --include="*.html" 2>/dev/null
+```
+
+Expected: all 5 `.xml`+`.html` pairs exist, and the `grep` finds no live references to any `.md`
+filename. If either check fails for any file, STOP -- do not delete that file.
+
+```bash
+git rm docs/proposals/legislative/california/state-legislature/blueprint-for-innovation-ip-in-cooperative-securities.md \
+       docs/proposals/legislative/california/state-legislature/hybrid-cooperative-ipo-framework.md \
+       docs/proposals/legislative/california/state-legislature/legalizing-sexual-service-contracts.md \
+       docs/proposals/legislative/california/state-legislature/regulating-sexual-services-states-role.md \
+       docs/proposals/executive/agencies/california/secretary-of-state/improving-ai-accountability-petition-arguments.md
+```
+
+- [ ] **Step 1c: Re-run the corrected precondition check**
+
+```bash
+find docs -iname "*.md" -not -path "*/scratch/*" -not -path "*/superpowers/*"
+```
+
+Expected: no output.
+
+- [ ] **Step 1d: Commit the proposals cleanup separately from the Jekyll changes below**
+
+```bash
+cd scripts && python3 -m unittest discover -s tests -p "test_*.py" 2>&1 | tail -5
+cd ..
+git commit -m "chore: remove 5 orphaned pre-DocBook-conversion .md originals from docs/proposals/ (real .xml/.html counterparts already exist, confirmed unreferenced)"
+```
+
+Expected: `Ran 252 tests ... OK (skipped=8)`, unchanged (these were dead files, nothing depended on
+them).
 
 - [ ] **Step 2: Update `deploy-pages.yml`**
 
