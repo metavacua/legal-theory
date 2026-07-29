@@ -3,8 +3,7 @@ name: Deploy Pages
 on:
   push:
     branches:
-      - claude/llm-database-theory-codification
-      - claude/llm-database-theory-codification-sdd-1785019559
+      - main
   workflow_dispatch: {}
 
 permissions:
