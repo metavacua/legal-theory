@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install DocBook toolchain
-        run: sudo apt-get update && sudo apt-get install -y libxml2-utils xsltproc jing
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils xsltproc jing docbook-xsl-ns
 
       - name: Validate and rebuild corpus HTML
         run: |
@@ -44,7 +44,7 @@ jobs:
             xmllint --noout --xinclude "$xml"
             jing -c .cache/docbook-5.2/docbookxi.rnc "$xml"
             python3 docs/scripts/check_dcterms_completeness.py "$xml"
-            xsltproc --xinclude docs/xsl/html5.xsl "$xml" > "${xml%.xml}.html"
+            xsltproc --xinclude /usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl "$xml" > "${xml%.xml}.html"
           done < <(find docs -name '*.xml' -not -path '*/scratch/*' -not -path 'docs/scripts/*' | sort)
 
       # pull_request events check out a detached, synthetic merge ref (not

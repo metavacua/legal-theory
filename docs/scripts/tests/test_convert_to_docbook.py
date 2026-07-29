@@ -405,6 +405,39 @@ class TestValidateAndBuild(unittest.TestCase):
         content = html_path.read_text(encoding="utf-8")
         self.assertIn("A Flat Document", content)
 
+    def test_build_html_renders_bibliography_as_a_real_hyperlink(self):
+        # html5.xsl has no template for <bibliography>/<biblioentry>/<biblioref>
+        # at all (confirmed by direct grep of the file) -- this proves the
+        # switch to docbook-xsl-ns's xhtml5 stylesheet actually happened, not
+        # just that HTML5_XSL_PATH points somewhere that still runs.
+        from convert_to_docbook import build_html
+        xml_path = self.fixtures / "biblio-check.xml"
+        xml_path.write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<article xmlns="http://docbook.org/ns/docbook" version="5.2" '
+            'xml:id="biblio-check" xml:lang="en">\n'
+            '  <info><title>Biblio Check</title></info>\n'
+            '  <para>See <biblioref linkend="smith2020"/> for details.</para>\n'
+            '  <bibliography>\n'
+            '    <biblioentry xml:id="smith2020" role="secondary">\n'
+            '      <title>Some Real Paper</title>\n'
+            '      <biblioid class="uri">https://example.com/a</biblioid>\n'
+            '    </biblioentry>\n'
+            '  </bibliography>\n'
+            '</article>\n',
+            encoding="utf-8",
+        )
+        self.addCleanup(xml_path.unlink)
+        html_path = self.fixtures / "biblio-check.html"
+        build_html(xml_path, html_path)
+        self.addCleanup(html_path.unlink)
+        content = html_path.read_text(encoding="utf-8")
+        # A real, resolved hyperlink from the citation site to the entry --
+        # html5.xsl's default-template fallback would emit the raw text with
+        # no <a href> and no "biblioentry" class at all.
+        self.assertIn('href="#smith2020"', content)
+        self.assertIn('class="biblioentry"', content)
+
 
 class TestContentPreservationDiff(unittest.TestCase):
     def setUp(self):

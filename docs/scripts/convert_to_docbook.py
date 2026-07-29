@@ -263,7 +263,7 @@ def write_metadata(meta_path, title, subject=None):
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-HTML5_XSL_PATH = REPO_ROOT / "docs" / "xsl" / "html5.xsl"
+HTML5_XSL_PATH = Path("/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl")
 
 DOCBOOK_RNC_URL = "https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc"
 DOCBOOK_SCHEMA_CACHE = REPO_ROOT / ".cache" / "docbook-5.2" / "docbookxi.rnc"
