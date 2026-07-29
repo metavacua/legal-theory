@@ -63,7 +63,7 @@ def classify_from_audit_csv(csv_path):
     return results
 
 
-def main(argv=None):
+def main():
     results = classify_from_audit_csv(REPO_ROOT / "docs" / "audits" / "footnote-citation-audit.csv")
     counts = defaultdict(int)
     for r in results.values():
