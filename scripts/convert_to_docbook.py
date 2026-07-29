@@ -1,6 +1,7 @@
 """Convert a Markdown document to validated, XSLT-buildable DocBook 5.2 XML."""
 
 import difflib
+import os
 import re
 import shutil
 import subprocess
@@ -243,19 +244,14 @@ def split_into_fragments(article, out_dir, stem):
 
 def write_metadata(meta_path, title, subject=None):
     meta_path = Path(meta_path)
-    docs_dir = (REPO_ROOT / "docs").resolve()
-    common_dir = docs_dir / "common"
+    common_dir = (REPO_ROOT / "docs" / "common").resolve()
     meta_dir = meta_path.resolve().parent
-    try:
-        # For files under docs/, calculate depth to get relative path to common/
-        depth = len(meta_dir.relative_to(docs_dir).parts)
-        prefix = "../" * depth + "common/"
-    except ValueError:
-        # If meta_dir is not under docs_dir (e.g., test fixtures outside
-        # the corpus), fall back to counting up from meta_dir to
-        # repo_root, then down to docs/common.
-        parts_up = len(meta_dir.parts) - len(REPO_ROOT.parts)
-        prefix = "../" * parts_up + "docs/common/"
+    # os.path.relpath handles both cases uniformly: a depth-N path under
+    # docs/ ("../" * N + "common/") and a path elsewhere (e.g. test
+    # fixtures under scripts/) that must first climb out to REPO_ROOT
+    # and back down into docs/common/ -- no relative_to()/ValueError
+    # branching needed.
+    prefix = os.path.relpath(common_dir, meta_dir) + "/"
     escaped_title = xml_escape(title)
     resolved_subject = subject if subject is not None else derive_subject(meta_path)
     date = derive_date(meta_path)
