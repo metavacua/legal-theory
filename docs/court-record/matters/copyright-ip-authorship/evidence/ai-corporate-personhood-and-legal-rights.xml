@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="ai-corporate-personhood-and-legal-rights" xml:lang="en">
   <xi:include href="ai-corporate-personhood-and-legal-rights.meta.xml" />
-  <title>The Tiered Architecture of Personhood: A Comparative Jurisprudence of Natural, Corporate, and Artificial Persons in American Law</title>
   <xi:include href="ai-corporate-personhood-and-legal-rights/01-executive-summary.xml" />
   <xi:include href="ai-corporate-personhood-and-legal-rights/02-part-i-the-philosophical-and-legal-foundations-of-personhood.xml" />
   <xi:include href="ai-corporate-personhood-and-legal-rights/03-part-ii-the-expansion-of-corporate-personhood-granting-rights-to-a-legal-fiction.xml" />

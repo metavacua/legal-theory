@@ -29,7 +29,7 @@
     <para>
         Knowledge distillation involves training a smaller
         "student" model to replicate the behavior of a larger,
-        pre-trained "teacher" model.67 This is often achieved
+        pre-trained "teacher" model.<biblioref linkend="analyticsvidhya-distilled-models"/> This is often achieved
         by training the student to match the teacher's output
         probability distributions (logits) or its intermediate
         representations.
@@ -46,7 +46,7 @@
         The work on "Category Structure Knowledge
         Distillation" (CSKD) explicitly uses categorical ideas by
         focusing on transferring intra-category and inter-category
-        structural relations from teacher to student.72 CSKD aims to
+        structural relations from teacher to student.<biblioref linkend="rongchangzhao-eccv2pdf"/> CSKD aims to
         ensure that the student model learns to group samples from the
         same semantic category more tightly in its embedding space,
         reflecting a preservation of categorical relationships.
@@ -65,7 +65,7 @@
     <para>
         Quantization reduces the numerical precision of an LLM's weights
         and/or activations (e.g., from 32-bit floating-point numbers to
-        8-bit integers).71 This shrinks the model's storage footprint
+        8-bit integers).<biblioref linkend="xailient-4-popular-model-compression-techniques-explained"/> This shrinks the model's storage footprint
         and can accelerate computation, especially on hardware with
         specialized support for lower-precision arithmetic.
       </para>
@@ -115,14 +115,14 @@
         Tai-Danae Bradley's research applies category theory to model
         natural language by considering words or phrases as objects and
         the probabilities of their co-occurrence (or sequential
-        appearance) as weighted morphisms in an enriched category.11 Her
+        appearance) as weighted morphisms in an enriched category.<biblioref linkend="quantamagazine-where-does-meaning-live-in-a-sentence-math-might-tell-us-20250409"/> Her
         work demonstrates how linguistically meaningful properties, such
         as the semantic similarity of phrases, can emerge from simple
         statistical information about word usage when structured within
-        a categorical framework.11 This resonates with the
+        a categorical framework.<biblioref linkend="quantamagazine-where-does-meaning-live-in-a-sentence-math-might-tell-us-20250409"/> This resonates with the
         distributional hypothesis ("a word is characterized by the
         company it keeps"), a principle that also underpins vector
-        space models of meaning and frameworks like DisCoCat.14
+        space models of meaning and frameworks like DisCoCat.<biblioref linkend="en-discocat"/>
       </para>
     <para>
         If the "internal logics" of an LLM can be effectively
@@ -136,7 +136,7 @@
         compositional semantics. Other research has also explored
         categorical models for semantics and concept representation in
         neural networks more broadly, often with an eye towards
-        cognitive plausibility.59
+        cognitive plausibility.<biblioref linkend="openreview-forumidzm7zqdoazy"/>
       </para>
     <para>
         The convergence of categorical approaches to meaning in human

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info xmlns="http://docbook.org/ns/docbook" xmlns:dc="http://purl.org/dc/terms/" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <dc:title>Beyond Obscenity: The Legal and Public Policy Case for the Enforceability of Private Sexual Service Contracts</dc:title>
-  <xi:include href="../../../../common/shared-metadata.xml" />
+  <title>Beyond Obscenity: The Legal and Public Policy Case for the Enforceability of Private Sexual Service Contracts</title>
+  <pubdate>2026-07-25</pubdate>
+  <biblioid class="uri">https://github.com/metavacua/legal-theory/blob/main/docs/proposals/legislative/california/state-legislature/legalizing-sexual-service-contracts.xml</biblioid>
+  <subjectset><subject><subjectterm>legislative proposal</subjectterm></subject></subjectset>
+  <publisher><publishername>metavacua/legal-theory (GitHub)</publishername></publisher>
+  <dc:type>Text</dc:type>
+  <xi:include href="../../../../common/authorgroup.xml" />
+  <xi:include href="../../../../common/legalnotice.xml" />
 </info>

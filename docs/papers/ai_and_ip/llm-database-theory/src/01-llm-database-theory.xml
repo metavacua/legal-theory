@@ -1,8 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="llm-database-theory" xml:lang="en">
-  <xi:include href="00-metadata.xml" />
-  <title>Language Models Are Databases</title>
-  <subtitle>A Technical and Legal Position Paper on LLMs and Intellectual Property</subtitle>
+  <xi:include href="01-llm-database-theory.meta.xml" />
   <xi:include href="01-llm-database-theory/01-the-position.xml" />
   <xi:include href="01-llm-database-theory/02-the-larql-demonstration.xml" />
   <xi:include href="01-llm-database-theory/03-technical-foundation-the-graph-database-isomorphism.xml" />

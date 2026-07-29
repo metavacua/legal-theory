@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="consent-theories-language-culture" xml:lang="en">
   <xi:include href="consent-theories-language-culture.meta.xml" />
-  <title>The Architectures of Agreement: A Multi-Disciplinary Analysis of Consent</title>
   <xi:include href="consent-theories-language-culture/01-introduction-the-evolving-paradigm-of-consent.xml" />
   <xi:include href="consent-theories-language-culture/02-part-i-informed-consent-the-foundational-paradigm-of-protection.xml" />
   <xi:include href="consent-theories-language-culture/03-part-ii-affirmative-consent-the-legislative-shift-to-proactive-agreement.xml" />

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="google-user-contracts" xml:lang="en">
   <xi:include href="google-user-contracts.meta.xml" />
-  <title>Google User Contracts — Legal Framework of the Argument</title>
   <xi:include href="google-user-contracts/01-the-legal-framework-of-the-argument.xml" />
   <xi:include href="google-user-contracts/02-analysis-of-google-programs.xml" />
   <xi:include href="google-user-contracts/03-synthesis-and-implications.xml" />

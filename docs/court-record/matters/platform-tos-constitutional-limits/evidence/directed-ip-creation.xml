@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="directed-ip-creation" xml:lang="en">
   <xi:include href="directed-ip-creation.meta.xml" />
-  <title>The Directed Hand: An Analysis of Externally-Guided IP Creation as a Service</title>
   <xi:include href="directed-ip-creation/01-introduction-the-locus-of-control.xml" />
   <xi:include href="directed-ip-creation/02-the-legal-framework-defining-a-service-contract-in-california.xml" />
   <xi:include href="directed-ip-creation/03-models-of-external-direction-and-their-legal-classification.xml" />

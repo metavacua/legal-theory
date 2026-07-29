@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="coop-membership-investment" xml:lang="en">
   <xi:include href="coop-membership-investment.meta.xml" />
-  <title>Coop Membership Investment — Phase 1: The "Risk Capital" Security</title>
   <xi:include href="coop-membership-investment/01-phase-1-the-risk-capital-security-class-b-membership.xml" />
   <xi:include href="coop-membership-investment/02-phase-2-the-transformation-to-a-use-instrument-class-a-membership.xml" />
 </article>

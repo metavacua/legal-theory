@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="readme" xml:lang="en">
+  <xi:include href="README.meta.xml" />
+
+  <section xml:id="jurisdiction-and-venue">
+    <title>Jurisdiction and Venue</title>
+    <para>Primary claims arise under California Labor Code and the ABC test (Lab. Code § 2775 et seq.). Subject matter jurisdiction in California Superior Court. Federal dimensions under NLRA (unfair labor practices) may invoke concurrent federal jurisdiction.</para>
+    <para>Constitutional scope: California statutory (ABC test application); federal statutory (NLRA); potentially federal constitutional (Supremacy Clause, preemption analysis if platform argues federal preemption).</para>
+    <para>Administrative exhaustion: Claims under FEHA require CRD complaint and right-to-sue letter before court filing. NLRA claims require NLRB charge filing.</para>
+  </section>
+
+  <section xml:id="parties">
+    <title>Parties</title>
+    <para><emphasis role="strong">Plaintiff:</emphasis> Ian D.L.N. McLean, individually and as member of affected class of platform users systematically misclassified as independent contractors or consumers rather than employees or service providers.</para>
+    <para><emphasis role="strong">Defendants:</emphasis> [To be specified — Google LLC and related entities]</para>
+  </section>
+
+  <section xml:id="statement-of-facts">
+    <title>Statement of Facts</title>
+    <para>See <link xlink:href="findings.html">findings.html</link> FOF section. Supporting evidence in <link xlink:href="evidence/">evidence/</link> (6 documents — see the <link xlink:href="../../../index.html#matters">full index</link>).</para>
+  </section>
+
+  <section xml:id="causes-of-action">
+    <title>Causes of Action</title>
+    <orderedlist numeration="arabic">
+      <listitem><para>Misclassification under CA Labor Code § 2775 (ABC test) — CA statutory — no administrative exhaustion required for individual claims; DLSE complaint recommended as administrative record</para></listitem>
+      <listitem><para>Failure to pay wages, benefits, and provide protections owed to employees — CA statutory</para></listitem>
+      <listitem><para>Unfair labor practices — federal statutory (NLRA) — NLRB charge required before proceeding</para></listitem>
+    </orderedlist>
+  </section>
+
+  <section xml:id="prayer-for-relief">
+    <title>Prayer for Relief</title>
+    <para>[To be specified]</para>
+  </section>
+</article>

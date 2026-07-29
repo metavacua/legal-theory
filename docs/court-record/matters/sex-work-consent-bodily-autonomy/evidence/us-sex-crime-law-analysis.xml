@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="us-sex-crime-law-analysis" xml:lang="en">
   <xi:include href="us-sex-crime-law-analysis.meta.xml" />
-  <title>The Architecture of Legally Permissible Non-Consensual Sexual Interaction in the United States: A Jurisdictional Analysis</title>
   <xi:include href="us-sex-crime-law-analysis/01-section-i-foundational-legal-frameworks-in-us-sexual-offense-law.xml" />
   <xi:include href="us-sex-crime-law-analysis/02-section-ii-systematic-analysis-of-state-jurisdictions.xml" />
   <xi:include href="us-sex-crime-law-analysis/03-section-iii-analysis-of-federal-and-military-jurisdiction.xml" />

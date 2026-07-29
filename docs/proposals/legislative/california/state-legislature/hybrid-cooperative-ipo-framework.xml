@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="hybrid-cooperative-ipo-framework" xml:lang="en">
   <xi:include href="hybrid-cooperative-ipo-framework.meta.xml" />
-  <title>A Tripartite Legal and Strategic Framework for a Publicly-Traded California Cooperative Benefit Corporation</title>
   <xi:include href="hybrid-cooperative-ipo-framework/01-part-i-architecting-the-publicly-traded-hybrid-cooperative.xml" />
   <xi:include href="hybrid-cooperative-ipo-framework/02-part-ii-the-strategic-roadmap-to-an-ipo-and-beyond.xml" />
   <xi:include href="hybrid-cooperative-ipo-framework/03-part-iii-the-cooperative-of-cooperatives-a-federated-public-model.xml" />

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="ip-contract-knowledge-graph" xml:lang="en">
   <xi:include href="ip-contract-knowledge-graph.meta.xml" />
-  <title>IP Contract Knowledge Graph — Conceptual Ontology</title>
   <para>
   This document details the strategy for implementing the Semantic
   Knowledge Graph (KG), focusing on the conceptual ontology,

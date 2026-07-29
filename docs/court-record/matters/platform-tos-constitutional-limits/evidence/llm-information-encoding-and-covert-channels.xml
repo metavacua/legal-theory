@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="llm-information-encoding-and-covert-channels" xml:lang="en">
   <xi:include href="llm-information-encoding-and-covert-channels.meta.xml" />
-  <title>Latent Space and Covert Channels: A Deep Dive into Information Encoding and Communication in Large Language Models</title>
   <xi:include href="llm-information-encoding-and-covert-channels/01-introduction.xml" />
   <xi:include href="llm-information-encoding-and-covert-channels/02-section-1-the-architecture-of-meaning-how-llms-encode-information.xml" />
   <xi:include href="llm-information-encoding-and-covert-channels/03-section-2-the-generative-imperative-why-llms-operate-probabilistically.xml" />

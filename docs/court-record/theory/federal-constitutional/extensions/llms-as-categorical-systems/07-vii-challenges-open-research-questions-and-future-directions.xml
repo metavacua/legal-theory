@@ -83,7 +83,7 @@
             might involve the use of indexed categories (where
             categories themselves vary over a base, e.g., time or
             learning epochs), fibrations, or establishing connections to
-            dynamical systems theory.10
+            dynamical systems theory.<biblioref linkend="people-aaai2025-tutorial-th18pdf"/>
           </para>
       </listitem>
       <listitem>
@@ -107,7 +107,7 @@
         A significant long-term goal is to move beyond using category
         theory as a descriptive tool for existing LLMs towards using it
         as a <emphasis role="strong">prescriptive</emphasis> framework
-        for designing new, improved AI systems.61
+        for designing new, improved AI systems.<biblioref linkend="arxiv-240313001"/>
       </para>
     <itemizedlist spacing="compact">
       <listitem>
@@ -148,7 +148,7 @@
             learning theory (e.g., generalization bounds), computational
             complexity theory, and dynamical systems theory? Tai-Danae
             Bradley's work connecting the magnitude of a language
-            category to entropy is an example of such a bridge.11
+            category to entropy is an example of such a bridge.<biblioref linkend="quantamagazine-where-does-meaning-live-in-a-sentence-math-might-tell-us-20250409"/>
           </para>
       </listitem>
       <listitem>
@@ -196,7 +196,7 @@
             contribute to ensuring that LLMs behave safely, fairly, and
             in alignment with human values? This involves controlling
             their behavior, a goal shared with techniques like Direct
-            Preference Optimization (DPO).77 Could "safe
+            Preference Optimization (DPO).<biblioref linkend="hyperbolic-an-intro-to-fine-tuning"/> Could "safe
             composition" of categorically defined modules be a path
             forward?
           </para>
@@ -215,7 +215,7 @@
         then one could potentially construct complex AI systems with
         verifiable safety guarantees. This would represent a significant
         advance over current approaches that often rely on heuristic
-        guardrails or empirical testing.80
+        guardrails or empirical testing.<biblioref linkend="confident-ai-llm-guardrails-the-ultimate-guide-to-safeguard-llm-systems"/>
       </para>
   </section>
   <section xml:id="f-future-directions">
@@ -234,7 +234,7 @@
             development of software libraries and frameworks that embed
             categorical principles for AI system design is crucial.
             Examples like CatLab.jl and DisCoPy for applied category
-            theory point the way.12
+            theory point the way.<biblioref linkend="en-applied_category_theory"/>
           </para>
       </listitem>
       <listitem>
@@ -242,7 +242,7 @@
           <emphasis role="strong">Formalizing Core
             Mechanisms:</emphasis> Further rigorous exploration of
             parametric (endo)functors and monads for self-attention,
-            layer composition, and sequential processing is needed.49
+            layer composition, and sequential processing is needed.<biblioref linkend="researchgate-387767268_self-attention_as_a_parametric_endofunctor_a_categorical_"/>
           </para>
       </listitem>
       <listitem>
@@ -250,7 +250,7 @@
           <emphasis role="strong">Multimodality:</emphasis> Extending
             categorical frameworks to encompass multi-modal LLMs, which
             process and integrate information from diverse sources like
-            text, images, and audio, is a key challenge.9
+            text, images, and audio, is a key challenge.<biblioref linkend="ecva-06472pdf"/>
           </para>
       </listitem>
       <listitem>

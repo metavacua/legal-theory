@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="us-ca-coop-securities" xml:lang="en">
   <xi:include href="us-ca-coop-securities.meta.xml" />
-  <title>A Unified Framework for Analyzing a Cooperative Security</title>
   <xi:include href="us-ca-coop-securities/01-a-unified-framework-for-analyzing-a-cooperative-security.xml" />
   <xi:include href="us-ca-coop-securities/02-part-1-initial-characterization-what-is-the-nature-of-the-instrument.xml" />
   <xi:include href="us-ca-coop-securities/03-part-2-the-threshold-analysis-is-the-instrument-a-security.xml" />

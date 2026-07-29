@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="independent-artist-business-model" xml:lang="en">
   <xi:include href="independent-artist-business-model.meta.xml" />
-  <title>A Minimalist, Legally Defensible Model for the Patron-Artist Relationship in California</title>
   <xi:include href="independent-artist-business-model/01-introduction.xml" />
   <xi:include href="independent-artist-business-model/02-section-1-the-foundation-of-the-agreement-contract-law-in-california.xml" />
   <xi:include href="independent-artist-business-model/03-section-2-navigating-employment-classification-the-ab-5-ab-2257-and-borello-framework.xml" />

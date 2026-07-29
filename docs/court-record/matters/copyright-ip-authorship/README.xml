@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="readme" xml:lang="en">
+  <xi:include href="README.meta.xml" />
+
+  <section xml:id="jurisdiction-and-venue">
+    <title>Jurisdiction and Venue</title>
+    <para>Claims arise under the Copyright Act (federal statutory), California contract law (CA statutory), and potentially federal constitutional dimensions of authorship rights. Federal copyright claims invoke federal court jurisdiction; contract claims can be heard in CA Superior Court.</para>
+    <para>Constitutional scope: Federal statutory (Copyright Act, 17 U.S.C.); California statutory (contract law governing artist agreements); federal constitutional (IP clause, Art. I §8 cl. 8) for constitutional dimensions of authorship.</para>
+  </section>
+
+  <section xml:id="parties">
+    <title>Parties</title>
+    <para><emphasis role="strong">Plaintiff:</emphasis> Ian D.L.N. McLean, individually, as author and creator, and as commissioner of creative works.</para>
+    <para><emphasis role="strong">Defendants:</emphasis> [To be specified — platforms and companies claiming IP ownership of user-generated or AI-assisted content]</para>
+  </section>
+
+  <section xml:id="statement-of-facts">
+    <title>Statement of Facts</title>
+    <para>See <link xlink:href="findings.html">findings.html</link> FOF section. Supporting evidence in <link xlink:href="evidence/">evidence/</link> (13 documents — see the <link xlink:href="../../../index.html#matters">full index</link>). Theory authority in <link xlink:href="../../theory/federal-statutes/existing-law/">federal-statutes/existing-law/</link> (ip-contract-knowledge-graph.xml).</para>
+  </section>
+
+  <section xml:id="causes-of-action">
+    <title>Causes of Action</title>
+    <orderedlist numeration="arabic">
+      <listitem><para>Copyright authorship and ownership — federal statutory — federal court</para></listitem>
+      <listitem><para>Breach of artist/commission contracts — CA statutory — CA Superior Court</para></listitem>
+      <listitem><para>[To be specified — additional causes]</para></listitem>
+    </orderedlist>
+  </section>
+
+  <section xml:id="prayer-for-relief">
+    <title>Prayer for Relief</title>
+    <para>[To be specified]</para>
+  </section>
+</article>

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="systemic-misclassification-draft" xml:lang="en">
   <xi:include href="systemic-misclassification-draft.meta.xml" />
-  <title>Systemic Misclassification Risk within the Google Ecosystem Under California's Retroactive ABC Test</title>
   <xi:include href="systemic-misclassification-draft/01-executive-summary.xml" />
   <xi:include href="systemic-misclassification-draft/02-part-i-the-california-legal-framework-a-paradigm-shift-in-worker-classification.xml" />
   <xi:include href="systemic-misclassification-draft/03-part-ii-analysis-of-googles-contractual-ecosystem-under-the-abc-test.xml" />

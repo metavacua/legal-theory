@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="readme" xml:lang="en">
+  <xi:include href="README.meta.xml" />
+
+  <section xml:id="jurisdiction-and-venue">
+    <title>Jurisdiction and Venue</title>
+    <para>Claims arise under California Corporations Code (cooperative formation and governance), federal securities law (Investment Company Act, Securities Act of 1933), and IRC provisions governing cooperative patronage income. Federal securities claims invoke federal court jurisdiction; state corporate claims can be heard in CA Superior Court.</para>
+    <para>Constitutional scope: Federal statutory (federal securities law, IRC); California statutory (Corp Code, patron law).</para>
+  </section>
+
+  <section xml:id="parties">
+    <title>Parties</title>
+    <para><emphasis role="strong">Plaintiff:</emphasis> Ian D.L.N. McLean, individually, as patron member of affected cooperatives, and as investor.</para>
+    <para><emphasis role="strong">Defendants:</emphasis> [To be specified]</para>
+  </section>
+
+  <section xml:id="statement-of-facts">
+    <title>Statement of Facts</title>
+    <para>See <link xlink:href="findings.html">findings.html</link> FOF section. Supporting evidence in <link xlink:href="evidence/">evidence/</link> (19 documents — see the <link xlink:href="../../../index.html#matters">full index</link>). Theory authority in <link xlink:href="../../theory/federal-statutes/existing-law/">federal-statutes/existing-law/</link> (cooperative-investing-us-ca-irc.xml, patronage-sourced-income.xml) and <link xlink:href="../../theory/california-statutes/existing-law/">california-statutes/existing-law/</link> (ca-patron-law-v2.xml et al.).</para>
+  </section>
+
+  <section xml:id="causes-of-action">
+    <title>Causes of Action</title>
+    <orderedlist numeration="arabic">
+      <listitem><para>[To be specified — cooperative governance violations]</para></listitem>
+      <listitem><para>[To be specified — patron rights violations]</para></listitem>
+      <listitem><para>[To be specified — securities law claims]</para></listitem>
+    </orderedlist>
+  </section>
+
+  <section xml:id="prayer-for-relief">
+    <title>Prayer for Relief</title>
+    <para>[To be specified]</para>
+  </section>
+</article>

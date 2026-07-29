@@ -2,7 +2,9 @@ name: Deploy Pages
 
 on:
   push:
-    branches: [claude/llm-database-theory-codification]
+    branches:
+      - claude/llm-database-theory-codification
+      - claude/llm-database-theory-codification-sdd-1785019559
   workflow_dispatch: {}
 
 permissions:
@@ -20,15 +22,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: docs
-          destination: _site
-
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: docs
 
   deploy:
     needs: build

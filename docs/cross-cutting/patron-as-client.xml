@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="patron-as-client" xml:lang="en">
   <xi:include href="patron-as-client.meta.xml" />
-  <title>The Patron as Client: Analyzing Crowdfunded Commissions Under California Labor Law</title>
   <xi:include href="patron-as-client/01-introduction-the-blurring-line-between-support-and-service.xml" />
   <xi:include href="patron-as-client/02-the-legal-framework-californias-retroactive-abc-test.xml" />
   <xi:include href="patron-as-client/03-the-patron-as-client-scenario-applying-the-abc-test.xml" />

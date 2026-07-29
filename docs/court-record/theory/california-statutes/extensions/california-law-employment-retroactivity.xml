@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="california-law-employment-retroactivity" xml:lang="en">
   <xi:include href="california-law-employment-retroactivity.meta.xml" />
-  <title>The Shift in California Law and Retroactivity</title>
   <xi:include href="california-law-employment-retroactivity/01-the-shift-in-california-law-and-retroactivity.xml" />
   <xi:include href="california-law-employment-retroactivity/02-analyzing-the-scenarios-under-the-california-framework.xml" />
   <xi:include href="california-law-employment-retroactivity/03-conclusion.xml" />

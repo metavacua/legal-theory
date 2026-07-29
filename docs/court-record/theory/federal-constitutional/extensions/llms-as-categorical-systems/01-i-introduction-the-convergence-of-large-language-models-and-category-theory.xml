@@ -14,14 +14,14 @@
         and pervasive artificial intelligence systems, demonstrating
         remarkable capabilities in understanding, generating, and
         manipulating human language, as well as other complex data
-        modalities.1 These models, exemplified by systems like GPT,
+        modalities.<biblioref linkend="hatchworks-large-language-models-guide"/> These models, exemplified by systems like GPT,
         LLaMA, and BERT, are fundamentally based on neural network
         architectures trained on vast quantities of data, often
-        encompassing billions or even trillions of parameters.1 Their
+        encompassing billions or even trillions of parameters.<biblioref linkend="hatchworks-large-language-models-guide"/> Their
         operational core frequently relies on the Transformer
         architecture, a design that facilitates parallel processing of
         information and excels at capturing long-range dependencies and
-        contextual nuances within data.1 Despite their empirical
+        contextual nuances within data.<biblioref linkend="hatchworks-large-language-models-guide"/> Despite their empirical
         successes across a wide array of applications—from chatbots and
         content creation to code generation and scientific research 1—a
         comprehensive theoretical understanding of their internal
@@ -51,7 +51,7 @@
     <para>
         Category theory, a branch of mathematics originating in the
         mid-20th century, provides a highly abstract and powerful
-        language for formalizing structures and systems of structures.8
+        language for formalizing structures and systems of structures.<biblioref linkend="mlconference-deep-learning-category-theory-developers"/>
         It achieves this by focusing on
         <emphasis role="strong">objects</emphasis> (which can represent
         diverse entities, from sets and vector spaces to more complex
@@ -61,16 +61,16 @@
         theory is its emphasis on the patterns of composition of these
         morphisms, rather than the intrinsic nature of the objects
         themselves, allowing it to uncover profound unities across
-        disparate mathematical fields and scientific domains.8 This
+        disparate mathematical fields and scientific domains.<biblioref linkend="mlconference-deep-learning-category-theory-developers"/> This
         approach provides a common template for describing various
         notions of sameness, transformation, and interaction, thereby
         facilitating inter-contextual problem-solving and the transfer
-        of insights across disciplines.11 Consequently, category theory
+        of insights across disciplines.<biblioref linkend="quantamagazine-where-does-meaning-live-in-a-sentence-math-might-tell-us-20250409"/> Consequently, category theory
         has found increasingly diverse applications in areas such as
         theoretical computer science (including programming language
         semantics and type theory), mathematical physics, logic, and,
         more recently, in systems biology and natural language
-        processing.12
+        processing.<biblioref linkend="en-applied_category_theory"/>
       </para>
   </section>
   <section xml:id="c-thesis-statement-unveiling-the-internal-logics-of-llms-through-categorical-lenses">

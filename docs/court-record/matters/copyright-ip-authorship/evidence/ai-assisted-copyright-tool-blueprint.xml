@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="ai-assisted-copyright-tool-blueprint" xml:lang="en">
   <xi:include href="ai-assisted-copyright-tool-blueprint.meta.xml" />
-  <title>Operationalizing Human Authorship: A Legal and Technical Framework for Copyright in the Age of AI</title>
   <xi:include href="ai-assisted-copyright-tool-blueprint/01-i-the-human-authorship-mandate-a-legal-and-architectural-framework-for-ai-assisted-creativity.xml" />
   <xi:include href="ai-assisted-copyright-tool-blueprint/02-ii-the-copyright-provenance-ledger-an-immutable-record-of-creative-acts.xml" />
   <xi:include href="ai-assisted-copyright-tool-blueprint/03-iii-enforcing-copyrightability-by-design-the-human-in-the-loop-workflow.xml" />

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="cooperative-security" xml:lang="en">
   <xi:include href="cooperative-security.meta.xml" />
-  <title>A Unified Framework for Analyzing a Cooperative Security</title>
   <xi:include href="cooperative-security/01-a-unified-framework-for-analyzing-a-cooperative-security.xml" />
   <xi:include href="cooperative-security/02-the-9-point-analytical-checklist.xml" />
 </article>

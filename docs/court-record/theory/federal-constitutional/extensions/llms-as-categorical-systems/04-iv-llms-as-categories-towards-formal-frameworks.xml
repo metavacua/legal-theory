@@ -40,7 +40,7 @@
             Given that LLMs internally process numerical vectors,
             objects could be the specific vector spaces (e.g., Rd) that
             house token embeddings or hidden states, or even individual
-            embedding vectors themselves.30
+            embedding vectors themselves.<biblioref linkend="datacamp-how-transformers-work"/>
           </para>
       </listitem>
       <listitem>
@@ -65,7 +65,7 @@
         <para>
           <emphasis role="strong">Contexts/Prompts:</emphasis> The
             conditioning information provided to an LLM (the prompt) is
-            crucial for its behavior.42 Contexts themselves could be
+            crucial for its behavior.<biblioref linkend="community-77749"/> Contexts themselves could be
             considered objects, representing the initial state or
             information upon which the LLM operates.
           </para>
@@ -89,7 +89,7 @@
             objects are hidden states or vector spaces of
             representations, then an entire LLM layer (or a block of
             layers) acts as a morphism mapping an input state (object)
-            to an output state (object).58
+            to an output state (object).<biblioref linkend="ntrs-categories_of_neural_networkspdf"/>
           </para>
       </listitem>
       <listitem>
@@ -98,7 +98,7 @@
             The self-attention mechanism, or even individual attention
             heads, can be viewed as morphisms that transform a set of
             input token representations into a refined, contextualized
-            set.62
+            set.<biblioref linkend="pubs-026108_1_50256873pdf"/>
           </para>
       </listitem>
       <listitem>
@@ -108,7 +108,7 @@
             (context,previous_tokens) to (context,previous_tokens,
             new_token) can be seen as a morphism. This aligns with the
             idea of monadic composition, where each step is a morphism
-            in a Kleisli category.51
+            in a Kleisli category.<biblioref linkend="ncatlab-monad"/>
           </para>
       </listitem>
       <listitem>
@@ -167,7 +167,7 @@
       </para>
     <para>
         This idea draws inspiration from frameworks like DisCoCat
-        (Distributional Compositional Categorical Semantics).13 In
+        (Distributional Compositional Categorical Semantics).<biblioref linkend="drops-lipicscalco20193pdf"/> In
         DisCoCat, functors map from a category representing grammatical
         structure (syntax) to a category of vector spaces representing
         meaning (semantics). An LLM could similarly be viewed as
@@ -269,7 +269,7 @@
         Limits (e.g., products, pullbacks) and colimits (e.g.,
         coproducts, pushouts) are categorical constructions for
         combining or decomposing objects and morphisms in a universal
-        way.10
+        way.<biblioref linkend="people-aaai2025-tutorial-th18pdf"/>
       </para>
     <itemizedlist spacing="compact">
       <listitem>
@@ -301,7 +301,7 @@
             categorical neural network semantics has explored colimits
             as a way to express how specialized concepts are formed from
             combinations of more abstract concepts along shared
-            sub-concept relationships.59 This suggests that limits and
+            sub-concept relationships.<biblioref linkend="openreview-forumidzm7zqdoazy"/> This suggests that limits and
             colimits could provide a formal language for understanding
             how LLMs integrate diverse pieces of information (like
             attention pooling from various tokens, which could be a type

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="readme" xml:lang="en">
+  <xi:include href="README.meta.xml" />
+
+  <para><emphasis>A Technical and Legal Position Paper</emphasis></para>
+
+  <itemizedlist>
+    <listitem><para><emphasis role="strong">Category:</emphasis> <code>ai_and_ip</code></para></listitem>
+    <listitem><para><emphasis role="strong">Slug:</emphasis> <code>llm-database-theory</code></para></listitem>
+    <listitem><para><emphasis role="strong">Author:</emphasis> Ian D.L.N. McLean</para></listitem>
+    <listitem><para><emphasis role="strong">Date:</emphasis> 2026-07-01</para></listitem>
+    <listitem><para><emphasis role="strong">License:</emphasis> <link xlink:href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</link></para></listitem>
+  </itemizedlist>
+
+  <section xml:id="position">
+    <title>Position</title>
+    <para>Transformer language models are <emphasis role="strong">graph databases</emphasis> in a technically precise, legally operative sense:</para>
+    <orderedlist numeration="arabic">
+      <listitem><para><emphasis role="strong">FFN layers are key-value stores</emphasis> — each layer encodes entity→relation→target triples addressable by vector similarity search, isomorphic to a property graph.</para></listitem>
+      <listitem><para><emphasis role="strong">Forward passes are KNN graph walks</emphasis> — <code>Attention(Q,K,V) = softmax(QK^T/√d_k)·V</code> is KNN retrieval over the key-value graph.</para></listitem>
+      <listitem><para><emphasis role="strong">LARQL demonstrates this directly</emphasis> — Chris Hay's open-source tool (<link xlink:href="https://github.com/chrishayuk/larql">github.com/chrishayuk/larql</link>) extracts transformer weights into a queryable <emphasis>vindex</emphasis> and returns labelled edges via declarative LQL (<code>DESCRIBE</code>, <code>WALK</code>, <code>INSERT INTO EDGES</code>, <code>COMPILE ... INTO MODEL FORMAT safetensors</code>).</para></listitem>
+      <listitem><para><emphasis role="strong">Memorisation is empirically confirmed</emphasis> — Llama 3.1 70B regenerates Harry Potter near-verbatim from a seed (Cooper et al. 2025); 100+ training images extracted from Stable Diffusion (Carlini et al. 2023).</para></listitem>
+      <listitem><para><emphasis role="strong">Legal consequence</emphasis> — a model trained on protected works is a derivative work (17 U.S.C. § 101), a collective work, and a database subject to EU Directive 96/9/EC; distributing it distributes copies; GDPR Art. 17 erasure is technically feasible via <code>INSERT INTO EDGES</code>.</para></listitem>
+    </orderedlist>
+  </section>
+
+  <section xml:id="source-files">
+    <title>Source Files</title>
+    <informaltable>
+      <tgroup cols="2">
+        <colspec colname="file" />
+        <colspec colname="content" />
+        <thead>
+          <row><entry>File</entry><entry>Content</entry></row>
+        </thead>
+        <tbody>
+          <row><entry><code>src/01-llm-database-theory.meta.xml</code></entry><entry>This article's own native DocBook metadata (title/pubdate/biblioid/subjectset), XIncluding shared <code>authorgroup.xml</code>/<code>legalnotice.xml</code></entry></row>
+          <row><entry><code>src/02-legal-corpus-connections.meta.xml</code></entry><entry>Same, for the connections article</entry></row>
+          <row><entry><code>src/01-llm-database-theory.xml</code></entry><entry>Primary DocBook 5.2 article (10 sections)</entry></row>
+          <row><entry><code>src/02-legal-corpus-connections.xml</code></entry><entry>Connections to matters in this repo; proposed FOFs</entry></row>
+          <row><entry><code>src/bibliography.bib</code></entry><entry>14 BibTeX entries</entry></row>
+          <row><entry>(real DocBook 5.2 RELAX NG, fetched from OASIS at build time; the official <code>docbook-xsl-ns</code> <code>xhtml5</code> stylesheet, installed via <code>apt</code>, renders DocBook → HTML5)</entry><entry>Structural validation and HTML build — see <code>scripts/convert_to_docbook.py</code>'s <code>fetch_docbook_schema()</code> and <code>build_html()</code>; this project's own hand-rolled <code>xsl/html5.xsl</code> was retired corpus-wide in favor of this stock stylesheet</entry></row>
+          <row><entry><code>../../../xsl/latex.xsl</code></entry><entry>DocBook → LaTeX (pdflatex-compilable)</entry></row>
+          <row><entry><code>scratch/formulas.md</code></entry><entry>Math correspondences, LARQL↔SQL table, memorisation rates — supplementary working notes, retained outside this article's formal citable body (see "Open Questions" below)</entry></row>
+          <row><entry><code>scratch/notes.md</code></entry><entry>Session provenance, citation gaps, open questions — supplementary working notes, retained outside this article's formal citable body (see "Open Questions" below)</entry></row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+
+  <section xml:id="build">
+    <title>Build</title>
+    <para>This paper is validated and built to HTML by the same uniform pipeline as
+    every other document in the corpus -- see
+    <code>.github/workflows/build-corpus.yml</code> (real DocBook 5.2 RELAX NG via <code>jing</code>,
+    this project's DCTERMS completeness policy check, then <code>xsltproc</code> against the
+    official <code>docbook-xsl-ns</code> <code>xhtml5</code> stylesheet, writing <code>src/01-llm-database-theory.html</code> next to its
+    source, same as any other document). There is nothing paper-specific to
+    validate or build to HTML; running the corpus pipeline against <code>src/*.xml</code>
+    manually reproduces it locally.</para>
+    <para>This directory's own <code>Makefile</code> only covers the one thing that genuinely
+    is unique to this document: LaTeX/PDF output.</para>
+
+    <section xml:id="prerequisites">
+      <title>Prerequisites</title>
+      <programlisting language="bash"># Debian/Ubuntu
+sudo apt-get install libxml2-utils libxslt1-dev pandoc
+
+# macOS
+brew install libxml2 libxslt pandoc
+
+# Note: pandoc is required by scripts/convert_to_docbook.py (the
+# Markdown-to-DocBook conversion tool), not by this paper's own build.
+
+# Optional: PDF output
+sudo apt-get install texlive-full   # or texlive-latex-recommended</programlisting>
+    </section>
+
+    <section xml:id="commands">
+      <title>Commands</title>
+      <programlisting language="bash"># Generate LaTeX
+make latex
+# → generated/01-llm-database-theory.tex
+# → generated/02-legal-corpus-connections.tex
+
+# Generate PDF (requires pdflatex)
+make pdf
+
+# Open primary article's LaTeX source
+make open-latex</programlisting>
+    </section>
+  </section>
+
+  <section xml:id="primary-findings">
+    <title>Primary Findings</title>
+
+    <section xml:id="fof-ai-1">
+      <title>FOF-AI-1</title>
+      <para>The FFN layers of a transformer LLM function as key-value stores structurally isomorphic to a property graph.</para>
+      <para><emphasis>Evidence:</emphasis> LARQL demonstration; Self-Attention as Parametric Endofunctor (arXiv:2501.02931)</para>
+    </section>
+
+    <section xml:id="fof-ai-2">
+      <title>FOF-AI-2</title>
+      <para>LARQL returns labelled directed edges from transformer weights via declarative LQL queries, without retraining or structural modification.</para>
+      <para><emphasis>Evidence:</emphasis> <link xlink:href="https://github.com/chrishayuk/larql">github.com/chrishayuk/larql</link></para>
+    </section>
+
+    <section xml:id="fof-ai-3">
+      <title>FOF-AI-3</title>
+      <para>Llama 3.1 70B regenerates the first Harry Potter novel near-verbatim from a seed of the opening tokens.</para>
+      <para><emphasis>Evidence:</emphasis> Cooper et al. 2025 (arXiv:2505.12546) — "copied inside the model parameters"</para>
+    </section>
+
+    <section xml:id="fof-ai-4">
+      <title>FOF-AI-4</title>
+      <para>Over 100 near-identical training images, including trademarked logos, were extracted from Stable Diffusion and Imagen.</para>
+      <para><emphasis>Evidence:</emphasis> Carlini et al. 2023 (arXiv:2301.13188)</para>
+    </section>
+
+    <section xml:id="fof-ai-5">
+      <title>FOF-AI-5</title>
+      <para>A measurable fraction of diffusion-model outputs are near-exact copies of training images.</para>
+      <para><emphasis>Evidence:</emphasis> Somepalli et al. 2023 (CVPR 2023)</para>
+    </section>
+
+    <section xml:id="fof-ai-6">
+      <title>FOF-AI-6</title>
+      <para>OpenAI and Google stated to the U.S. Copyright Office that their models store no copies of training data — only numbers.</para>
+      <para><emphasis>Evidence:</emphasis> Admissions compilation (arXiv:2603.20957) — contradicted by FOF-AI-3 through FOF-AI-5.</para>
+    </section>
+  </section>
+
+  <section xml:id="conclusions-of-law">
+    <title>Conclusions of Law</title>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec colname="num" />
+        <colspec colname="conclusion" />
+        <colspec colname="basis" />
+        <thead>
+          <row><entry>#</entry><entry>Conclusion</entry><entry>Basis</entry></row>
+        </thead>
+        <tbody>
+          <row><entry>COL-1</entry><entry>An LLM trained on protected works is a <emphasis role="strong">derivative work</emphasis> under 17 U.S.C. § 101</entry><entry>FOF-AI-1 through FOF-AI-5</entry></row>
+          <row><entry>COL-2</entry><entry>An LLM trained on multiple copyrighted works is a <emphasis role="strong">collective work</emphasis> under 17 U.S.C. § 101</entry><entry>FOF-AI-1 through FOF-AI-5</entry></row>
+          <row><entry>COL-3</entry><entry>A deployed LLM qualifies as a <emphasis role="strong">database</emphasis> under EU Directive 96/9/EC (sui generis right)</entry><entry>FOF-AI-1, FOF-AI-2</entry></row>
+          <row><entry>COL-4</entry><entry>GDPR Art. 17 <emphasis role="strong">right to erasure is technically feasible</emphasis> via INSERT INTO EDGES</entry><entry>FOF-AI-2</entry></row>
+          <row><entry>COL-5</entry><entry>The format defence ("only numbers") fails the 17 U.S.C. § 101 machine-perceptibility test</entry><entry>FOF-AI-2 through FOF-AI-5; <emphasis>Litchfield v. Spielberg</emphasis> 736 F.2d 1352</entry></row>
+          <row><entry>COL-6</entry><entry>Distribution and API access to an LLM are database acts requiring rights-holder authorisation</entry><entry>COL-1 through COL-3</entry></row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+
+  <section xml:id="connections-to-legal-theory-corpus">
+    <title>Connections to Legal-Theory Corpus</title>
+    <para>This paper strengthens and unifies arguments across three existing matters:</para>
+    <itemizedlist>
+      <listitem><para><emphasis role="strong">copyright-ip-authorship</emphasis> — FOF-AI-1 through FOF-AI-6 are ready for incorporation into the findings stub; provides the derivative-work and collective-work technical predicates.</para></listitem>
+      <listitem><para><emphasis role="strong">platform-tos-constitutional-limits</emphasis> — resolves the data-vs-program ambiguity in <code>llm-data-vs-program.xml</code>; informs the database-retrieval-vs-speech First Amendment analysis.</para></listitem>
+      <listitem><para><emphasis role="strong">agpl-ai-training-and-code-licensing</emphasis> — provides the technical premise for the GPL derivative-works / poison-pill argument: training on GPL code encodes GPL-licensed edges into the vindex, retrievable by LARQL.</para></listitem>
+    </itemizedlist>
+    <para>See <code>src/02-legal-corpus-connections.xml</code> for the full analysis.</para>
+  </section>
+
+  <section xml:id="open-questions">
+    <title>Open Questions</title>
+    <para>These are working notes, not a citable claim of this article -- see
+    <link xlink:href="scratch/notes.md">scratch/notes.md</link> for the detailed list this
+    summarizes (session provenance, per-source verification tiers, and the full gap
+    inventory). That file, and its companion <link xlink:href="scratch/formulas.md">scratch/formulas.md</link>,
+    are retained as real, deliberate cross-references to supplementary material that lives
+    outside this paper's formal citable body (<code>src/*.xml</code>) rather than folded into
+    it or silently dropped: they are dated research-session artifacts (deep-research workflow
+    output, confidence tiers, math derivations) useful for provenance and follow-on work, not
+    polished, citation-ready prose fit for the article itself. Key gaps:</para>
+    <orderedlist numeration="arabic">
+      <listitem><para><emphasis role="strong">Source attribution precision</emphasis> — LARQL returns semantic triples; it does not yet identify <emphasis>which training document</emphasis> is the source of a specific edge. Needed for litigation standing.</para></listitem>
+      <listitem><para><emphasis role="strong">GDPR erasure at person-level</emphasis> — feasibility of identifying and removing edges for a specific named individual without corrupting surrounding graph structure.</para></listitem>
+      <listitem><para><emphasis role="strong">EU Database Directive case law</emphasis> — no ECJ ruling yet on whether AI weights qualify; watch for national court referrals.</para></listitem>
+    </orderedlist>
+  </section>
+
+  <section xml:id="citation">
+    <title>Citation</title>
+    <programlisting language="bibtex">@techreport{mclean2026llm-database-theory,
+  author    = {McLean, Ian D.L.N.},
+  title     = {Language Models Are Databases: A Technical and Legal Position Paper},
+  year      = {2026},
+  month     = {July},
+  url       = {https://github.com/metavacua/legal-theory/tree/main/docs/papers/ai_and_ip/llm-database-theory},
+  license   = {CC BY-SA 4.0}
+}</programlisting>
+  </section>
+</article>

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="defining-legal-human-experiments" xml:lang="en">
   <xi:include href="defining-legal-human-experiments.meta.xml" />
-  <title>Beyond the Laboratory: Delineating the Legal Boundaries of Human Experimentation in the Digital Age</title>
   <xi:include href="defining-legal-human-experiments/01-introduction.xml" />
   <xi:include href="defining-legal-human-experiments/02-part-i-the-foundational-framework-for-human-subjects-research.xml" />
   <xi:include href="defining-legal-human-experiments/03-part-ii-explicit-carve-outs-activities-deemed-not-to-be-research.xml" />

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2" xml:id="readme" xml:lang="en">
+  <xi:include href="README.meta.xml" />
+
+  <section xml:id="jurisdiction-and-venue">
+    <title>Jurisdiction and Venue</title>
+    <para>Claims arise under the First Amendment (federal constitutional), California Constitution Art. I §1 (privacy) and Art. I §2 (speech), and California Penal Code provisions governing sexual services. Federal constitutional claims invoke federal court jurisdiction; state constitutional claims can be heard in CA Superior Court.</para>
+    <para>Constitutional scope: Federal constitutional (1st Amendment, bodily autonomy doctrine post-Dobbs); California constitutional (Art. I §1 explicit privacy right, Art. I §2 broader speech). Lower courts cannot resolve these constitutional questions.</para>
+  </section>
+
+  <section xml:id="parties">
+    <title>Parties</title>
+    <para><emphasis role="strong">Plaintiff:</emphasis> Ian D.L.N. McLean, individually, as member of affected class, and as member of the public.</para>
+    <para><emphasis role="strong">Defendants:</emphasis> [To be specified — state actors enforcing overbroad statutes; corporate actors restricting constitutionally protected conduct]</para>
+  </section>
+
+  <section xml:id="statement-of-facts">
+    <title>Statement of Facts</title>
+    <para>See <link xlink:href="findings.html">findings.html</link> FOF section. Supporting evidence in <link xlink:href="evidence/">evidence/</link> (20 documents — see the <link xlink:href="../../../index.html#matters">full index</link>). Theory authority in <link xlink:href="../../theory/federal-constitutional/">federal-constitutional/</link> (first-amendment-landmark-cases-research.xml, legal-status-of-bodily-autonomy-post-dobbs.xml, first-amendment-and-prostitution-law.xml) and <link xlink:href="../../theory/california-statutes/existing-law/">california-statutes/existing-law/</link> (california-sex-contract-consent-standards.xml et al.).</para>
+  </section>
+
+  <section xml:id="causes-of-action">
+    <title>Causes of Action</title>
+    <orderedlist numeration="arabic">
+      <listitem><para>Overbroad criminalization of consensual sexual services — federal constitutional, 1st Amendment — federal court</para></listitem>
+      <listitem><para>California privacy right violations — CA constitutional, Art. I §1 — CA Superior Court</para></listitem>
+      <listitem><para>[To be specified — additional causes]</para></listitem>
+    </orderedlist>
+  </section>
+
+  <section xml:id="prayer-for-relief">
+    <title>Prayer for Relief</title>
+    <para>[To be specified]</para>
+  </section>
+</article>

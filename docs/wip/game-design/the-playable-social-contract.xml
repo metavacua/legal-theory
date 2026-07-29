@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="the-playable-social-contract" xml:lang="en">
   <xi:include href="the-playable-social-contract.meta.xml" />
-  <title>The Playable Social Contract: An Analysis of Consent, Conflict, and Community in "The Tender Contract"</title>
   <xi:include href="the-playable-social-contract/01-introduction-from-leviathan-to-the-tabletop.xml" />
   <xi:include href="the-playable-social-contract/02-chapter-1-the-architecture-of-consent-a-formal-grammar-of-interaction.xml" />
   <xi:include href="the-playable-social-contract/03-chapter-2-the-state-of-nature-and-the-path-to-conflict.xml" />

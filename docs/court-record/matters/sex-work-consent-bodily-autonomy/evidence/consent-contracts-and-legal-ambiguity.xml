@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="consent-contracts-and-legal-ambiguity" xml:lang="en">
   <xi:include href="consent-contracts-and-legal-ambiguity.meta.xml" />
-  <title>The Quantum Contract: A New Jurisprudence of Consent, Coercion, and Agreement</title>
   <xi:include href="consent-contracts-and-legal-ambiguity/01-part-i-the-architecture-of-non-consensual-legality-autonomy-as-a-contingent-privilege.xml" />
   <xi:include href="consent-contracts-and-legal-ambiguity/02-part-ii-the-california-paradox-obscurity-in-law-clarity-in-consent.xml" />
   <xi:include href="consent-contracts-and-legal-ambiguity/03-part-iii-a-unified-theory-of-vitiation-deconstructing-invalid-agreements.xml" />

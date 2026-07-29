@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="patron-artist-collective-work-structure" xml:lang="en">
   <xi:include href="patron-artist-collective-work-structure.meta.xml" />
-  <title>The Producer-Patron's Playbook: A Legal and Operational Framework for Cultivating Artistic Collectives in California</title>
   <xi:include href="patron-artist-collective-work-structure/01-introduction-the-vision-of-the-executive-author.xml" />
   <xi:include href="patron-artist-collective-work-structure/02-section-1-choosing-the-optimal-corporate-vehicle-california-llc-vs-cooperative-corporation.xml" />
   <xi:include href="patron-artist-collective-work-structure/03-section-2-architecting-the-relationship-the-master-service-agreement-msa.xml" />

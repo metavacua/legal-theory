@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="the-algorithmic-editor-ai-moderation-as-creative-control" xml:lang="en">
   <xi:include href="the-algorithmic-editor-ai-moderation-as-creative-control.meta.xml" />
-  <title>The Algorithmic Editor: AI Moderation as Creative Control in the Platform Economy</title>
   <xi:include href="the-algorithmic-editor-ai-moderation-as-creative-control/01-introduction-from-passive-host-to-active-publisher.xml" />
   <xi:include href="the-algorithmic-editor-ai-moderation-as-creative-control/02-s-1-moderation-as-an-act-of-creative-direction.xml" />
   <xi:include href="the-algorithmic-editor-ai-moderation-as-creative-control/03-s-2-the-ai-authorship-analogy-who-holds-creative-control.xml" />

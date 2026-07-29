@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="spousal-investment-adviser-registration-analysis" xml:lang="en">
   <xi:include href="spousal-investment-adviser-registration-analysis.meta.xml" />
-  <title>Regulatory Analysis of Intra-Spousal Investment Management Under the Investment Advisers Act of 1940</title>
   <xi:include href="spousal-investment-adviser-registration-analysis/01-i-introduction-the-regulatory-boundaries-of-marital-financial-management.xml" />
   <xi:include href="spousal-investment-adviser-registration-analysis/02-ii-the-federal-definition-of-an-investment-adviser-a-three-prong-analysis.xml" />
   <xi:include href="spousal-investment-adviser-registration-analysis/03-iii-navigating-exclusions-and-exemptions-the-family-office-safe-harbor.xml" />

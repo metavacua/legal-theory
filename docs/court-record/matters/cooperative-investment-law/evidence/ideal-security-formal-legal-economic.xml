@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2" xml:id="ideal-security-formal-legal-economic" xml:lang="en">
   <xi:include href="ideal-security-formal-legal-economic.meta.xml" />
-  <title>Properties of an Ideal Security: A Multidimensional Analysis</title>
   <xi:include href="ideal-security-formal-legal-economic/01-i-introduction-defining-the-ideal-security-in-a-multidimensional-context.xml" />
   <xi:include href="ideal-security-formal-legal-economic/02-ii-formal-properties-clarity-transparency-and-enforceability.xml" />
   <xi:include href="ideal-security-formal-legal-economic/03-iii-legal-properties-investor-protection-regulatory-oversight-and-rights.xml" />

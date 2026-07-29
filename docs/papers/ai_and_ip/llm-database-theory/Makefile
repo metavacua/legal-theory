@@ -1,37 +1,16 @@
 SRCS      := $(wildcard src/0*.xml)
-HTML_OUTS := $(patsubst src/%.xml,generated/%.html,$(SRCS))
 TEX_OUTS  := $(patsubst src/%.xml,generated/%.tex,$(SRCS))
 PDF_OUTS  := $(patsubst src/%.xml,generated/%.pdf,$(SRCS))
-# 00-metadata.xml is an XInclude fragment (<db:info>, XIncluded into each
-# article's <db:info> slot) — it has no <db:article> root, so it isn't a
-# standalone document custom.rnc's `start` pattern can validate.
-ARTICLES  := $(filter-out src/00-metadata.xml,$(SRCS))
 
-.PHONY: all html latex pdf validate clean
+# Validation and HTML5 generation are NOT paper-specific -- every DocBook
+# article in the corpus, this paper included, is validated and built to
+# HTML by the single uniform pipeline in .github/workflows/build-corpus.yml
+# (jing against the real DocBook 5.2 grammar, this project's DCTERMS
+# completeness policy check, then xsltproc docs/xsl/html5.xsl). This
+# Makefile only exists for the one thing that genuinely is unique to this
+# document: LaTeX/PDF output, which nothing else in the corpus produces.
 
-all: validate html latex
-
-# ── Validation ──────────────────────────────────────────────────────────────
-
-validate: $(SRCS)
-	@echo "==> Validating XML (XInclude + xmllint well-formedness)"
-	@for f in $(SRCS); do \
-	  echo "    $$f"; \
-	  xmllint --noout --xinclude "$$f"; \
-	done
-	@echo "==> Custom RELAX NG validation"
-	@which jing >/dev/null 2>&1 && \
-	  for f in $(ARTICLES); do \
-	    jing -c ../../../schema/docbook-corpus.rnc "$$f" && echo "    OK: $$f" || true; \
-	  done || echo "    (jing not installed; skipping RELAX NG step)"
-
-# ── HTML5 ────────────────────────────────────────────────────────────────────
-
-html: $(HTML_OUTS)
-
-generated/%.html: src/%.xml ../../../xsl/html5.xsl | generated
-	xsltproc --xinclude ../../../xsl/html5.xsl $< > $@
-	@echo "==> generated/$*.html"
+.PHONY: latex pdf clean
 
 # ── LaTeX ────────────────────────────────────────────────────────────────────
 
@@ -55,16 +34,12 @@ generated:
 	mkdir -p generated
 
 clean:
-	rm -f generated/*.html generated/*.tex generated/*.pdf
+	rm -f generated/*.tex generated/*.pdf
 	rm -f generated/*.aux generated/*.log generated/*.out generated/*.toc
 
 # ── Convenience shortcuts ────────────────────────────────────────────────────
 
-.PHONY: open-html open-latex
-
-open-html: html
-	@f="generated/01-llm-database-theory.html"; \
-	 xdg-open "$$f" 2>/dev/null || open "$$f" 2>/dev/null || echo "Open: $$f"
+.PHONY: open-latex
 
 open-latex: latex
 	@f="generated/01-llm-database-theory.tex"; \
