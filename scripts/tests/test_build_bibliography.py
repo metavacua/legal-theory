@@ -577,6 +577,25 @@ class TestEmitDocbook(unittest.TestCase):
         self.assertEqual(backlinks.get("old-style-key"), expected_html)
         self.assertEqual(backlinks.get("new-style-key"), expected_html)
 
+    def test_bib_citation_backlinks_detects_biblioref_linkend_with_or_without_space_before_self_close(self):
+        """xml.etree.ElementTree serializes an empty element as
+        `<biblioref linkend="k" />` -- a space before the closing slash --
+        not the no-space `.../>` this repo's own fixtures otherwise use.
+        This repo round-trips fragments through ElementTree in at least
+        remove_works_cited_section() (convert_numbered_citations.py) and
+        strip_sibling_title() (migrate_to_native_metadata.py); if either
+        ever touches a fragment that already has a <biblioref>, it would
+        come back out in this space-before-slash form. _BIBLIOREF_LINKEND_RE
+        must match both serializations, or such a biblioref would silently
+        stop being detected -- the exact silent-drop failure class Task 6
+        exists to prevent."""
+        from build_bibliography import _bib_citation_backlinks
+        root = FIXTURES / "citation_and_biblioref_corpus"
+        backlinks = _bib_citation_backlinks(paper_src=root)
+        expected_html = (root / "shell.html").resolve().relative_to(REPO_ROOT).as_posix()
+        self.assertEqual(backlinks.get("new-style-key"), expected_html)
+        self.assertEqual(backlinks.get("spaced-style-key"), expected_html)
+
     def test_citing_html_path_containing_a_double_quote_is_correctly_attribute_escaped(self):
         import xml.etree.ElementTree as ET
         from build_bibliography import emit_docbook, BibliographyEntry

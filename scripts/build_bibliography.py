@@ -626,7 +626,7 @@ PAPER_ROOT = REPO_ROOT / "docs" / "papers" / "ai_and_ip" / "llm-database-theory"
 PAPER_SRC = PAPER_ROOT / "src"
 PAPER_FALLBACK_HTML = "docs/papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory.html"
 _CITATION_KEY_RE = re.compile(r"<citation>([\w.-]+)</citation>")
-_BIBLIOREF_LINKEND_RE = re.compile(r'<biblioref linkend="([\w.-]+)"/>')
+_BIBLIOREF_LINKEND_RE = re.compile(r'<biblioref linkend="([\w.-]+)"\s*/>')
 
 
 def _bib_citation_backlinks(paper_src=PAPER_SRC):
