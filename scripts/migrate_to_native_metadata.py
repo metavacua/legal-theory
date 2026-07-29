@@ -22,7 +22,10 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from convert_to_docbook import REPO_ROOT, DB_NS, DC_NS, element_full_text, write_metadata  # noqa: E402
+from convert_to_docbook import (  # noqa: E402
+    REPO_ROOT, DB_NS, DC_NS, element_full_text, write_metadata,
+    _content_path_for_meta as content_path_for_meta,
+)
 
 # convert_to_docbook registers db/xi/xlink at import time; register dc here too
 # so insert_subtitle()'s ET round-trip serializes <dc:type> instead of an
@@ -87,13 +90,6 @@ def strip_sibling_title(content_path):
     ET.indent(tree, space="  ")
     tree.write(content_path, encoding="unicode", xml_declaration=True)
     return True
-
-
-def content_path_for_meta(meta_path):
-    name = meta_path.name
-    if name.endswith(".meta.xml"):
-        return meta_path.parent / (name[: -len(".meta.xml")] + ".xml")
-    return meta_path
 
 
 def main(argv=None):
