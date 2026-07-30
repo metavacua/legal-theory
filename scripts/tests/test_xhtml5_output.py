@@ -189,3 +189,23 @@ class TestBuildCorpusWorkflowUsesCustomizationLayer(unittest.TestCase):
             "/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl",
             workflow,
         )
+
+
+class TestBuildHtmlWiring(unittest.TestCase):
+    def setUp(self):
+        self.fixtures = Path(__file__).resolve().parent / "fixtures"
+
+    def test_html5_xsl_path_points_at_the_customization_layer(self):
+        from convert_to_docbook import HTML5_XSL_PATH
+        self.assertEqual(HTML5_XSL_PATH, CUSTOM_XSL_PATH)
+
+    def test_build_html_output_has_no_xml_declaration(self):
+        from convert_to_docbook import build_html
+        xml_path = self.fixtures / "build-html-wiring.xml"
+        html_path = self.fixtures / "build-html-wiring.html"
+        xml_path.write_text(LANG_FIXTURE, encoding="utf-8")
+        self.addCleanup(xml_path.unlink)
+        build_html(xml_path, html_path)
+        self.addCleanup(html_path.unlink)
+        content = html_path.read_text(encoding="utf-8")
+        self.assertTrue(content.startswith("<!DOCTYPE html>"))
