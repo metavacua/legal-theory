@@ -91,7 +91,11 @@ def _committed_corpus_html_paths():
     )
 
 
-class TestXhtml5CustomizationLayer(unittest.TestCase):
+class _FixtureTestCase(unittest.TestCase):
+    """Shared setUp/_build for tests that write a throwaway XML fixture
+    into scripts/tests/fixtures/, run it through xsltproc, and clean up
+    afterward. Contributes no test methods of its own."""
+
     def setUp(self):
         self.fixtures = Path(__file__).resolve().parent / "fixtures"
 
@@ -101,6 +105,8 @@ class TestXhtml5CustomizationLayer(unittest.TestCase):
         self.addCleanup(xml_path.unlink)
         return _run_xsltproc(xsl_path, xml_path)
 
+
+class TestXhtml5CustomizationLayer(_FixtureTestCase):
     def test_no_leading_xml_declaration(self):
         html = self._build(LANG_FIXTURE, "no-xml-decl.xml")
         self.assertTrue(
@@ -156,16 +162,7 @@ class TestXhtml5CustomizationLayer(unittest.TestCase):
 
 
 @unittest.skipUnless(HTML5LIB_AVAILABLE, HTML5LIB_SKIP_REASON)
-class TestHtml5libAgreesNoParseErrors(unittest.TestCase):
-    def setUp(self):
-        self.fixtures = Path(__file__).resolve().parent / "fixtures"
-
-    def _build(self, fixture_text, name, xsl_path):
-        xml_path = self.fixtures / name
-        xml_path.write_text(fixture_text, encoding="utf-8")
-        self.addCleanup(xml_path.unlink)
-        return _run_xsltproc(xsl_path, xml_path)
-
+class TestHtml5libAgreesNoParseErrors(_FixtureTestCase):
     def test_customization_layer_output_has_zero_parse_errors(self):
         html = self._build(LANG_FIXTURE, "html5lib-fixed.xml", CUSTOM_XSL_PATH)
         parser = html5lib.HTMLParser(strict=False)
@@ -198,10 +195,7 @@ class TestBuildCorpusWorkflowUsesCustomizationLayer(unittest.TestCase):
         )
 
 
-class TestBuildHtmlWiring(unittest.TestCase):
-    def setUp(self):
-        self.fixtures = Path(__file__).resolve().parent / "fixtures"
-
+class TestBuildHtmlWiring(_FixtureTestCase):
     def test_html5_xsl_path_points_at_the_customization_layer(self):
         from convert_to_docbook import HTML5_XSL_PATH
         self.assertEqual(HTML5_XSL_PATH, CUSTOM_XSL_PATH)
@@ -222,26 +216,35 @@ class TestCommittedCorpusHtmlIsClean(unittest.TestCase):
     """Corpus-wide regression guard: every committed page, not just the
     fixtures above, actually got rebuilt through the fixed pipeline."""
 
+    @classmethod
+    def setUpClass(cls):
+        # Read each of the ~128 pages once, shared read-only across the
+        # three checks below, rather than each independently re-walking
+        # docs/ and re-reading every file from disk.
+        cls.pages = [
+            (p, p.read_text(encoding="utf-8"))
+            for p in _committed_corpus_html_paths()
+        ]
+
     def test_no_committed_page_has_a_leading_xml_declaration(self):
         offenders = [
-            str(p.relative_to(REPO_ROOT)) for p in _committed_corpus_html_paths()
-            if p.read_text(encoding="utf-8").lstrip().startswith("<?xml")
+            str(p.relative_to(REPO_ROOT)) for p, text in self.pages
+            if text.lstrip().startswith("<?xml")
         ]
         self.assertEqual(offenders, [])
 
     def test_no_committed_page_has_invalid_cellspacing_or_cellpadding_css(self):
-        offenders = []
-        for p in _committed_corpus_html_paths():
-            text = p.read_text(encoding="utf-8")
-            if "cellspacing" in text or "cellpadding" in text:
-                offenders.append(str(p.relative_to(REPO_ROOT)))
+        offenders = [
+            str(p.relative_to(REPO_ROOT)) for p, text in self.pages
+            if "cellspacing" in text or "cellpadding" in text
+        ]
         self.assertEqual(offenders, [])
 
     def test_every_committed_page_pairs_lang_and_xml_lang_and_html_has_lang(self):
         offenders = []
-        for p in _committed_corpus_html_paths():
+        for p, text in self.pages:
             rel = str(p.relative_to(REPO_ROOT))
-            tags = _parse_tags(p.read_text(encoding="utf-8"))
+            tags = _parse_tags(text)
             html_tags = [attrs for tag, attrs in tags if tag == "html"]
             if not html_tags or "lang" not in html_tags[0]:
                 offenders.append(f"{rel}: <html> missing lang")
