@@ -7,6 +7,7 @@ on <blockquote><attribution> tables). See
 .superpowers/sdd/2026-07-29-xhtml5-text-html-conformance.md for the full
 research record."""
 
+import html.parser
 import subprocess
 import sys
 import unittest
@@ -59,6 +60,30 @@ def _run_xsltproc(xsl_path, xml_path):
     return result.stdout
 
 
+class _TagAttributeCollector(html.parser.HTMLParser):
+    """Collects every start tag's attributes as (tag_name, {attr: value}).
+    stdlib only. Used instead of substring/regex checks anywhere a test
+    needs to know a specific attribute (e.g. a standalone "lang=") is
+    genuinely present as its own attribute -- "'lang=\"en\"' in html_text"
+    is a false positive whenever xml:lang="en" is present without a
+    paired lang, because that literal substring also occurs inside
+    "xml:lang=\"en\"" (confirmed directly: it produced a passing test for
+    the wrong reason before this helper replaced the substring check)."""
+
+    def __init__(self):
+        super().__init__()
+        self.tags = []
+
+    def handle_starttag(self, tag, attrs):
+        self.tags.append((tag, dict(attrs)))
+
+
+def _parse_tags(html_text):
+    collector = _TagAttributeCollector()
+    collector.feed(html_text)
+    return collector.tags
+
+
 class TestXhtml5CustomizationLayer(unittest.TestCase):
     def setUp(self):
         self.fixtures = Path(__file__).resolve().parent / "fixtures"
@@ -85,6 +110,27 @@ class TestXhtml5CustomizationLayer(unittest.TestCase):
         self.assertIn("café", html)
         self.assertIn("—", html)
         self.assertIn("→", html)
+
+    def test_root_html_element_has_paired_lang_and_xml_lang(self):
+        html = self._build(LANG_FIXTURE, "html-lang.xml")
+        html_tags = [attrs for tag, attrs in _parse_tags(html) if tag == "html"]
+        self.assertTrue(html_tags, f"no <html> tag found in: {html[:200]!r}")
+        attrs = html_tags[0]
+        self.assertEqual(attrs.get("lang"), "en")
+        self.assertEqual(attrs.get("xml:lang"), "en")
+
+    def test_article_section_wrapper_has_paired_lang_and_xml_lang(self):
+        html = self._build(LANG_FIXTURE, "section-lang.xml")
+        section_tags = [
+            attrs for tag, attrs in _parse_tags(html)
+            if tag == "section" and attrs.get("class") == "article"
+        ]
+        self.assertTrue(
+            section_tags, f'no <section class="article"> found in: {html[:200]!r}'
+        )
+        attrs = section_tags[0]
+        self.assertEqual(attrs.get("lang"), "en")
+        self.assertEqual(attrs.get("xml:lang"), "en")
 
 
 @unittest.skipUnless(HTML5LIB_AVAILABLE, HTML5LIB_SKIP_REASON)

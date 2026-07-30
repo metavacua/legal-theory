@@ -65,4 +65,43 @@
        override. -->
   <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes"/>
 
+  <!-- Fix 2a: pair lang with xml:lang wherever DocBook's lang/xml:lang
+       would otherwise be projected as only one or the other. Upstream's
+       html.lang.attribute mode (xhtml/html.xsl) picks exactly one
+       attribute name based on $stylesheet.result.type, which is
+       'xhtml' for every xhtml5 build — so xml:lang only, never paired.
+       Emitting both, with identical values, is valid both as real XML
+       (xml:lang always was legal XHTML) and under HTML5 text/html
+       parsing (paired, matching lang/xml:lang is explicitly permitted;
+       this is the standard "polyglot markup" pattern). -->
+  <xsl:template match="*" mode="html.lang.attribute">
+    <xsl:choose>
+      <xsl:when test="@lang">
+        <xsl:attribute name="lang"><xsl:value-of select="@lang"/></xsl:attribute>
+        <xsl:attribute name="xml:lang"><xsl:value-of select="@lang"/></xsl:attribute>
+      </xsl:when>
+      <xsl:when test="@xml:lang">
+        <xsl:attribute name="lang"><xsl:value-of select="@xml:lang"/></xsl:attribute>
+        <xsl:attribute name="xml:lang"><xsl:value-of select="@xml:lang"/></xsl:attribute>
+      </xsl:when>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- Fix 2b: the root <html> element specifically never goes through
+       html.lang.attribute at all upstream — root.attributes is a
+       deliberately empty, documented customization point ("customize to
+       add attributes to <html> element") at every level of the upstream
+       chain (xhtml/docbook.xsl, xhtml5/xhtml-docbook.xsl,
+       xhtml5/html5-element-mods.xsl all define it as a no-op). Route it
+       through the same paired-attribute logic above: generate.html.lang
+       is an existing, unmodified upstream named template that just
+       dispatches into html.lang.attribute mode on the current node,
+       which here (root.attributes is called from mode="process.root",
+       with no context switch in between) is the source document's own
+       root element — every corpus <article> root declares
+       xml:lang="en". -->
+  <xsl:template name="root.attributes">
+    <xsl:call-template name="generate.html.lang"/>
+  </xsl:template>
+
 </xsl:stylesheet>
