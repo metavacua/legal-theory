@@ -177,3 +177,15 @@ class TestHtml5libAgreesNoParseErrors(unittest.TestCase):
             "expected the raw upstream stylesheet's leading XML "
             "declaration to trip a parse error",
         )
+
+
+class TestBuildCorpusWorkflowUsesCustomizationLayer(unittest.TestCase):
+    def test_xsltproc_invocation_points_at_the_customization_layer(self):
+        workflow = (REPO_ROOT / ".github" / "workflows" / "build-corpus.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("docs/xsl/xhtml5-corpus.xsl", workflow)
+        self.assertNotIn(
+            "/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl",
+            workflow,
+        )
