@@ -102,5 +102,86 @@ class TestValidateGrammar(unittest.TestCase):
         self.assertNotIn(tempfile.gettempdir(), joined)
 
 
+class TestValidateResolvedDocument(_WritesFilesFixture, unittest.TestCase):
+    def setUp(self):
+        from check_docbook_grammar import fetch_docbook_schema
+        self.schema = fetch_docbook_schema()
+
+    def test_passes_a_good_shell_with_a_good_included_fragment(self):
+        from check_docbook_grammar import validate_resolved_document
+        d = self._dir()
+        self._write(d, "fragment.xml", GOOD_FRAGMENT)
+        shell = self._write(d, "shell.xml", GOOD_SHELL)
+        self.assertEqual(validate_resolved_document(shell, self.schema), [])
+
+    def test_catches_a_defect_hidden_inside_an_included_fragment(self):
+        # The regression case this whole module exists for: the
+        # shell's OWN literal content (an <xi:include> placeholder)
+        # has nothing wrong with it in isolation -- the defect only
+        # exists inside the fragment the include points at, and is
+        # only visible once that fragment's content is actually
+        # resolved into the tree.
+        from check_docbook_grammar import validate_resolved_document
+        d = self._dir()
+        self._write(d, "fragment.xml", BROKEN_FRAGMENT)
+        shell = self._write(d, "shell.xml", GOOD_SHELL)
+        errors = validate_resolved_document(shell, self.schema)
+        self.assertTrue(errors)
+        self.assertIn("title", " ".join(errors))
+
+    def test_passes_a_standalone_fragment_with_no_parent_shell_at_all(self):
+        from check_docbook_grammar import validate_resolved_document
+        d = self._dir()
+        frag = self._write(d, "fragment.xml", GOOD_FRAGMENT)
+        self.assertEqual(validate_resolved_document(frag, self.schema), [])
+
+    def test_rejects_a_standalone_broken_fragment_with_no_parent_shell(self):
+        from check_docbook_grammar import validate_resolved_document
+        d = self._dir()
+        frag = self._write(d, "fragment.xml", BROKEN_FRAGMENT)
+        errors = validate_resolved_document(frag, self.schema)
+        self.assertTrue(errors)
+
+    def test_a_missing_include_target_is_reported_as_a_validation_error(self):
+        from check_docbook_grammar import validate_resolved_document
+        d = self._dir()
+        shell = self._write(
+            d, "shell.xml", GOOD_SHELL.replace("fragment.xml", "does-not-exist.xml")
+        )
+        errors = validate_resolved_document(shell, self.schema)
+        self.assertTrue(errors)
+        self.assertIn("does-not-exist.xml", " ".join(errors))
+
+
+class TestValidateResolvedDocumentAgainstRealCorpusFiles(unittest.TestCase):
+    """A small number of real corpus documents, independently confirmed
+    clean during design: xmllint --noout --xinclude, raw jing, AND a
+    grep for markdown-remnant syntax (**/*|pipe-tables) all confirmed
+    clean for every file in this specific paper. NOT the whole corpus
+    -- see this plan's Global Constraints and Design Note 3."""
+
+    def setUp(self):
+        from check_docbook_grammar import fetch_docbook_schema
+        self.schema = fetch_docbook_schema()
+
+    def test_a_real_shell_article_with_eleven_real_xincluded_fragments(self):
+        from check_docbook_grammar import validate_resolved_document
+        path = REPO_ROOT / "docs/papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory.xml"
+        self.assertEqual(validate_resolved_document(path, self.schema), [])
+
+    def test_a_real_standalone_section_fragment(self):
+        from check_docbook_grammar import validate_resolved_document
+        path = (
+            REPO_ROOT
+            / "docs/papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory/01-the-position.xml"
+        )
+        self.assertEqual(validate_resolved_document(path, self.schema), [])
+
+    def test_a_real_standalone_info_metadata_file_with_its_own_nested_includes(self):
+        from check_docbook_grammar import validate_resolved_document
+        path = REPO_ROOT / "docs/papers/ai_and_ip/llm-database-theory/src/01-llm-database-theory.meta.xml"
+        self.assertEqual(validate_resolved_document(path, self.schema), [])
+
+
 if __name__ == "__main__":
     unittest.main()

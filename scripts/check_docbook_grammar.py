@@ -108,3 +108,17 @@ def validate_grammar(resolved_text, schema_path, source_label):
         return []
     output = result.stdout.strip() or result.stderr.strip()
     return [line.replace(temp_path, str(source_label)) for line in output.splitlines()]
+
+
+def validate_resolved_document(xml_path, schema_path):
+    """[] if xml_path's fully-XIncluded content is valid DocBook 5.2
+    per schema_path, else a nonempty list of human-readable error
+    strings. This is the real conformance gate: it validates the
+    MERGED, reader-facing content a shell article's own includes
+    resolve to (or, for a fragment with no includes of its own, its
+    own content unchanged) -- not just the literal <xi:include>
+    placeholders a narrower check would only ever see."""
+    resolved_text, error = resolve_xinclude(xml_path)
+    if error is not None:
+        return [f"{xml_path}: XInclude resolution failed: {error}"]
+    return validate_grammar(resolved_text, schema_path, xml_path)
