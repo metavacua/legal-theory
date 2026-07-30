@@ -85,9 +85,19 @@ def _parse_tags(html_text):
 
 
 def _committed_corpus_html_paths():
+    # git ls-files, not a filesystem walk: this repo's working tree can carry
+    # untracked, gitignored stray artifacts (e.g. a prior, non-DocBook build
+    # under docs/papers/ai_and_ip/llm-database-theory/generated/) that a raw
+    # rglob() would silently include despite this function's name promising
+    # "committed" paths -- confirmed live, one such stray .meta.html file has
+    # no <html lang> because it was never built by this pipeline at all.
+    result = subprocess.run(
+        ["git", "-C", str(REPO_ROOT), "ls-files", "docs/**/*.html"],
+        capture_output=True, text=True, check=True,
+    )
     return sorted(
-        p for p in (REPO_ROOT / "docs").rglob("*.html")
-        if "/scratch/" not in str(p)
+        REPO_ROOT / rel for rel in result.stdout.splitlines()
+        if "/scratch/" not in rel
     )
 
 
