@@ -177,3 +177,22 @@ def classify(xml_path):
     if ns == DB_NS or ns is None:
         return "validate", None
     return "skip", f"root element is not in the DocBook namespace (found {ns!r})"
+
+
+def main(argv=None):
+    argv = argv if argv is not None else sys.argv[1:]
+    schema_path = fetch_docbook_schema()
+    had_errors = False
+    for path in argv:
+        action, reason = classify(path)
+        if action == "skip":
+            print(f"SKIP {path}: {reason}")
+            continue
+        for error in validate_resolved_document(path, schema_path):
+            had_errors = True
+            print(error, file=sys.stderr)
+    return 1 if had_errors else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

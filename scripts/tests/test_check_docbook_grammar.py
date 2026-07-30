@@ -261,5 +261,91 @@ class TestClassify(_WritesFilesFixture, unittest.TestCase):
         self.assertEqual(classify(path), ("validate", None))
 
 
+class TestMain(_WritesFilesFixture, unittest.TestCase):
+    def test_returns_zero_for_a_clean_file_list(self):
+        from check_docbook_grammar import main
+        d = self._dir()
+        self._write(d, "fragment.xml", GOOD_FRAGMENT)
+        shell = self._write(d, "shell.xml", GOOD_SHELL)
+        self.assertEqual(main([str(shell)]), 0)
+
+    def test_returns_nonzero_and_prints_a_useful_message_for_a_broken_file(self):
+        from check_docbook_grammar import main
+        import io
+        from contextlib import redirect_stderr
+        d = self._dir()
+        self._write(d, "fragment.xml", BROKEN_FRAGMENT)
+        shell = self._write(d, "shell.xml", GOOD_SHELL)
+        err = io.StringIO()
+        with redirect_stderr(err):
+            rc = main([str(shell)])
+        self.assertEqual(rc, 1)
+        self.assertIn("title", err.getvalue())
+
+    def test_returns_zero_and_reports_a_skip_for_an_unvalidatable_root(self):
+        from check_docbook_grammar import main
+        import io
+        from contextlib import redirect_stdout
+        d = self._dir()
+        path = self._write(
+            d, "b.xml",
+            '<?xml version="1.0"?>\n<biblioentry xmlns="http://docbook.org/ns/docbook"><abbrev>x</abbrev></biblioentry>\n',
+        )
+        out = io.StringIO()
+        with redirect_stdout(out):
+            rc = main([str(path)])
+        self.assertEqual(rc, 0)
+        self.assertIn("SKIP", out.getvalue())
+
+    def test_one_bad_file_among_several_good_ones_still_fails_the_whole_run(self):
+        from check_docbook_grammar import main
+        d = self._dir()
+        # GOOD_SHELL's own literal <xi:include> always says
+        # href="fragment.xml" -- the good fixture MUST keep that exact
+        # name on disk, or the "good" shell fails too, for an
+        # unrelated, accidental reason (a dangling include), which
+        # would make this test pass without actually proving anything
+        # about aggregation across multiple files.
+        self._write(d, "fragment.xml", GOOD_FRAGMENT)
+        good_shell = self._write(d, "good-shell.xml", GOOD_SHELL)
+        self._write(d, "bad-fragment.xml", BROKEN_FRAGMENT)
+        bad_shell = self._write(
+            d, "bad-shell.xml", GOOD_SHELL.replace("fragment.xml", "bad-fragment.xml")
+        )
+        self.assertEqual(main([str(good_shell), str(bad_shell)]), 1)
+
+    def test_processes_every_file_rather_than_stopping_at_the_first_defect(self):
+        # Two DISTINCT, independently-identifiable defects (a missing
+        # <title> vs. a missing include target) surrounding a good
+        # file in between. A short-circuiting main() that returns as
+        # soon as it finds the FIRST error would still return 1 here
+        # (same as a correct one) -- the only way to prove every file
+        # was actually processed is to confirm BOTH distinct defects
+        # show up in the output, not just that the overall exit code
+        # is nonzero.
+        from check_docbook_grammar import main
+        import io
+        from contextlib import redirect_stderr
+        d = self._dir()
+        self._write(d, "missing-title-fragment.xml", BROKEN_FRAGMENT)
+        first_bad_shell = self._write(
+            d, "first-bad-shell.xml",
+            GOOD_SHELL.replace("fragment.xml", "missing-title-fragment.xml"),
+        )
+        self._write(d, "fragment.xml", GOOD_FRAGMENT)
+        good_shell = self._write(d, "good-shell.xml", GOOD_SHELL)
+        second_bad_shell = self._write(
+            d, "second-bad-shell.xml",
+            GOOD_SHELL.replace("fragment.xml", "does-not-exist.xml"),
+        )
+        err = io.StringIO()
+        with redirect_stderr(err):
+            rc = main([str(first_bad_shell), str(good_shell), str(second_bad_shell)])
+        self.assertEqual(rc, 1)
+        output = err.getvalue()
+        self.assertIn("title", output)
+        self.assertIn("does-not-exist.xml", output)
+
+
 if __name__ == "__main__":
     unittest.main()
