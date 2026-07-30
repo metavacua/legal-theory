@@ -37,14 +37,39 @@ jobs:
               https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc
           while IFS= read -r xml; do
             root_element="$(xmllint --xpath 'name(/*)' "$xml" 2>/dev/null || true)"
-            if [ "$root_element" != "article" ]; then
-              continue
-            fi
+            root_ns="$(xmllint --xpath 'namespace-uri(/*)' "$xml" 2>/dev/null || true)"
+
+            # Which of this corpus's actual root-element shapes this loop
+            # validates, and how -- see scripts/check_docbook_grammar.py's
+            # module docstring for the full research trail. "article" is
+            # every shell document (gets the article-only dcterms check
+            # and HTML build too). "section"/"info"/"legalnotice" are
+            # XIncluded fragment/metadata/boilerplate content that DocBook
+            # 5.2's own RNG grammar DOES export as a standalone start
+            # pattern -- validated, but not dcterms-checked (that policy
+            # is <article><info> shaped) or built to HTML (only shells are
+            # reader-facing pages). Anything else -- "biblioentry"/
+            # "authorgroup" (real DocBook content this grammar does NOT
+            # export a standalone start pattern for; only ever validated
+            # in context, via the shell that XIncludes it) or a non-
+            # DocBook root entirely (docs/sitemap.xml's "urlset") -- is
+            # correctly out of scope and left alone, same as before.
+            case "$root_ns:$root_element" in
+              "http://docbook.org/ns/docbook:article")
+                is_article=1 ;;
+              "http://docbook.org/ns/docbook:section" | "http://docbook.org/ns/docbook:info" | "http://docbook.org/ns/docbook:legalnotice")
+                is_article=0 ;;
+              *)
+                continue ;;
+            esac
+
             echo "== $xml =="
             xmllint --noout --xinclude "$xml"
-            jing -c .cache/docbook-5.2/docbookxi.rnc "$xml"
-            python3 scripts/check_dcterms_completeness.py "$xml"
-            xsltproc --xinclude --stringparam docbook.css.source '' /usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl "$xml" > "${xml%.xml}.html"
+            python3 scripts/check_docbook_grammar.py "$xml"
+            if [ "$is_article" = "1" ]; then
+              python3 scripts/check_dcterms_completeness.py "$xml"
+              xsltproc --xinclude --stringparam docbook.css.source '' /usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl "$xml" > "${xml%.xml}.html"
+            fi
           done < <(find docs -name '*.xml' -not -path '*/scratch/*' | sort)
 
       # pull_request events check out a detached, synthetic merge ref (not
