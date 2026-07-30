@@ -830,6 +830,25 @@ class TestEmitDocbook(unittest.TestCase):
         xml_text = emit_docbook([], [], [])
         self.assertIn('version="5.2"', xml_text)
 
+    def test_no_sibling_title_alongside_the_meta_xml_xinclude(self):
+        # Regression test: emit_docbook() used to emit a <title> as a direct
+        # child of <article>, immediately after the xi:include of
+        # references.meta.xml -- but that meta file's own <info> (via
+        # write_meta_xml() -> write_metadata()) already carries the real
+        # title as of the corpus's native-DocBook-metadata migration. DocBook
+        # 5.2 does not allow both: jing rejects the fully-XIncluded document
+        # with "element 'title' not allowed here" (title must be info's
+        # first child, not a second, independent one nested inside article).
+        # Verified live: this exact defect made every build_bibliography.py
+        # run since that migration fail its own jing validation step.
+        import xml.etree.ElementTree as ET
+        from build_bibliography import emit_docbook
+        DB_NS = "{http://docbook.org/ns/docbook}"
+        xml_text = emit_docbook([], [], [])
+        root = ET.fromstring(xml_text)
+        sibling_titles = [c for c in root if c.tag == f"{DB_NS}title"]
+        self.assertEqual(sibling_titles, [])
+
     def test_bib_citation_backlinks_resolve_to_real_existing_html_files(self):
         from build_bibliography import _bib_citation_backlinks
         backlinks = _bib_citation_backlinks()

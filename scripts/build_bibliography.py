@@ -783,7 +783,6 @@ def emit_docbook(legal_entries, secondary_entries, appendix_entries):
         'xmlns:xi="http://www.w3.org/2001/XInclude" '
         'version="5.2" xml:id="references" xml:lang="en">\n'
         '  <xi:include href="references.meta.xml"/>\n'
-        "  <title>Consolidated References &amp; Bibliography</title>\n"
         '  <section xml:id="methodology">\n'
         "    <title>Scope and Citation Policy</title>\n"
         f"    <para>{xml_escape(METHODOLOGY_PARA)}</para>\n"
