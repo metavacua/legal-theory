@@ -132,6 +132,21 @@ class TestXhtml5CustomizationLayer(unittest.TestCase):
         self.assertEqual(attrs.get("lang"), "en")
         self.assertEqual(attrs.get("xml:lang"), "en")
 
+    def test_blockquote_table_style_drops_invalid_css_properties(self):
+        html = self._build(BLOCKQUOTE_FIXTURE, "blockquote-css.xml")
+        self.assertNotIn("cellspacing", html)
+        self.assertNotIn("cellpadding", html)
+
+    def test_blockquote_content_and_remaining_style_are_preserved(self):
+        # Proves the fix is surgical (GC-3): everything else about the
+        # blockquote table -- content, attribution, the *valid* CSS
+        # declarations -- survives unchanged.
+        html = self._build(BLOCKQUOTE_FIXTURE, "blockquote-content.xml")
+        self.assertIn("Quoted text.", html)
+        self.assertIn('class="attribution"', html)
+        self.assertIn(">Someone<", html)
+        self.assertIn('style="border: 0; width: 100%;"', html)
+
 
 @unittest.skipUnless(HTML5LIB_AVAILABLE, HTML5LIB_SKIP_REASON)
 class TestHtml5libAgreesNoParseErrors(unittest.TestCase):

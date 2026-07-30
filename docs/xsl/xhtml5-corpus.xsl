@@ -104,4 +104,57 @@
     <xsl:call-template name="generate.html.lang"/>
   </xsl:template>
 
+  <!-- Fix 3: exact copy of xhtml/block.xsl's d:blockquote template (the
+       one html5-element-mods.xsl's own d:blockquote override reaches
+       via apply-imports, wrapped in the same convert.styles /
+       convert.to.style attribute-to-CSS pipeline every other xhtml5
+       block-level rewrite already goes through — reused unmodified via
+       convert.styles' own content param, not reimplemented), minus the
+       two invalid CSS declarations. -->
+  <xsl:template match="d:blockquote">
+    <xsl:call-template name="convert.styles">
+      <xsl:with-param name="content">
+        <div>
+          <xsl:call-template name="common.html.attributes"/>
+          <xsl:call-template name="id.attribute"/>
+          <xsl:call-template name="anchor"/>
+          <xsl:choose>
+            <xsl:when test="d:attribution">
+              <table border="{$table.border.off}" class="blockquote">
+                <xsl:if test="$css.decoration != 0">
+                  <xsl:attribute name="style">
+                    <xsl:text>width: 100%;</xsl:text>
+                  </xsl:attribute>
+                </xsl:if>
+                <xsl:if test="$div.element != 'section'">
+                  <xsl:attribute name="summary">Block quote</xsl:attribute>
+                </xsl:if>
+                <tr>
+                  <td width="10%" valign="top">&#160;</td>
+                  <td width="80%" valign="top">
+                    <xsl:apply-templates select="child::*[local-name(.)!='attribution']"/>
+                  </td>
+                  <td width="10%" valign="top">&#160;</td>
+                </tr>
+                <tr>
+                  <td width="10%" valign="top">&#160;</td>
+                  <td colspan="2" align="{$direction.align.end}" valign="top">
+                    <xsl:text>--</xsl:text>
+                    <xsl:apply-templates select="d:attribution"/>
+                  </td>
+                </tr>
+              </table>
+            </xsl:when>
+            <xsl:otherwise>
+              <blockquote>
+                <xsl:call-template name="common.html.attributes"/>
+                <xsl:apply-templates/>
+              </blockquote>
+            </xsl:otherwise>
+          </xsl:choose>
+        </div>
+      </xsl:with-param>
+    </xsl:call-template>
+  </xsl:template>
+
 </xsl:stylesheet>
