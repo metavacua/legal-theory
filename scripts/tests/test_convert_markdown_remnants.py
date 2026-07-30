@@ -164,6 +164,59 @@ class TestConvertRawTables(unittest.TestCase):
         self.assertEqual(emphasis.get("role"), "strong")
         self.assertEqual(emphasis.text, "bold cell")
 
+    def test_pipe_paragraphs_without_an_alignment_row_are_not_converted(self):
+        from convert_markdown_remnants import convert_raw_tables
+        root = _parse(
+            '<section xmlns="http://docbook.org/ns/docbook">'
+            '<para>| Type | SSI | CalFresh |</para>'
+            '<para>| Direct Cash Gift | High Risk | High Risk |</para>'
+            '</section>'
+        )
+        n = convert_raw_tables(root)
+        self.assertEqual(n, 0)
+        self.assertEqual([c.tag for c in root], [f"{DB_NS}para", f"{DB_NS}para"])
+
+    def test_headerless_table_blank_first_row_produces_no_thead(self):
+        # Reproduces the exact structural shape of 3 of the 5 real
+        # corpus tables (e.g. potential-service-contracts-in-google):
+        # a blank first row is pandoc/GFM's own convention for "this
+        # table has no header" -- see the design doc's Design Notes.
+        from convert_markdown_remnants import convert_raw_tables
+        root = self._table_fixture()
+        convert_raw_tables(root)
+        table = root.find(f"{DB_NS}informaltable")
+        self.assertIsNone(table.find(f".//{DB_NS}thead"))
+        rows = table.findall(f".//{DB_NS}row")
+        self.assertEqual(len(rows), 2)
+
+    def test_real_header_table_produces_a_thead(self):
+        # The OTHER real structural variant (e.g. from-clay-tablets-
+        # to-blockchains-final/02-introduction.xml): a genuine,
+        # non-blank header row. Must produce a real <thead>, not be
+        # forced into the headerless shape.
+        from convert_markdown_remnants import convert_raw_tables
+        root = _parse(
+            '<section xmlns="http://docbook.org/ns/docbook">'
+            '<para>| Era | Innovation |</para>'
+            '<para>| :--- | :--- |</para>'
+            '<para>| Ancient | Grain Bonds |</para>'
+            '</section>'
+        )
+        convert_raw_tables(root)
+        table = root.find(f"{DB_NS}informaltable")
+        self.assertIsNotNone(table.find(f".//{DB_NS}thead"))
+        body_rows = table.findall(f".//{DB_NS}tbody/{DB_NS}row")
+        self.assertEqual(len(body_rows), 1)
+
+    def test_is_idempotent_on_a_second_run(self):
+        from convert_markdown_remnants import convert_raw_tables
+        root = self._table_fixture()
+        convert_raw_tables(root)
+        first_pass_xml = ET.tostring(root)
+        n_second = convert_raw_tables(root)
+        self.assertEqual(n_second, 0)
+        self.assertEqual(ET.tostring(root), first_pass_xml)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -131,3 +131,111 @@ def convert_inline_emphasis(root):
 
         el[:] = new_children
     return converted
+
+
+_ALIGN_ROW_RE = re.compile(r"^\|?\s*:?-{1,}:?\s*(\|\s*:?-{1,}:?\s*)+\|?$")
+
+
+def _para_own_text(el):
+    return "".join(el.itertext())
+
+
+def _is_pipe_row(text):
+    stripped = text.strip()
+    return stripped.startswith("|") and stripped.endswith("|") and stripped.count("|") >= 2
+
+
+def _is_align_row(text):
+    return bool(_ALIGN_ROW_RE.match(_normalize_ws(text)))
+
+
+def _find_table_runs(parent):
+    """[(start, end), ...] half-open index ranges into list(parent) of
+    every contiguous run of >= 2 direct <para> children that are all
+    pipe rows AND include at least one real alignment row -- the
+    signal that distinguishes an actual (if unconverted) Markdown
+    table from a paragraph that merely happens to contain a pipe
+    character. Confirmed live: a real corpus document
+    (docs/court-record/matters/cooperative-investment-law/evidence/
+    community-care-cooperatives/04-...xml) has 6 contiguous pipe-
+    shaped <para> siblings with NO alignment row anywhere among them
+    -- a malformed Markdown table GFM itself would never have
+    recognized either, so it is correctly excluded here, not
+    converted (see test_pipe_paragraphs_without_an_alignment_row_are_
+    not_converted)."""
+    children = list(parent)
+    runs = []
+    i, n = 0, len(children)
+    while i < n:
+        if children[i].tag == f"{{{DB_NS}}}para" and _is_pipe_row(_para_own_text(children[i])):
+            j = i
+            while j < n and children[j].tag == f"{{{DB_NS}}}para" and _is_pipe_row(_para_own_text(children[j])):
+                j += 1
+            run = children[i:j]
+            if len(run) >= 2 and any(_is_align_row(_para_own_text(c)) for c in run):
+                runs.append((i, j))
+            i = j
+        else:
+            i += 1
+    return runs
+
+
+def _markdown_table_source(row_paragraphs):
+    return "\n".join(_normalize_ws(_para_own_text(r)) for r in row_paragraphs)
+
+
+def _pandoc_table_fragment(markdown_text):
+    """The single <informaltable> pandoc's GFM table reader + DocBook5
+    writer produces for markdown_text -- raises ValueError if the
+    input didn't resolve to exactly one (defensive; convert_raw_tables
+    only ever calls this with source _find_table_runs already
+    confirmed is a valid table)."""
+    result = subprocess.run(
+        ["pandoc", "-f", "gfm", "-t", "docbook5"],
+        input=markdown_text, capture_output=True, text=True, check=True,
+    )
+    fragment = result.stdout.strip()
+    fragment = fragment.replace(f'xmlns="{DB_NS}" ', "")
+    fragment = re.sub(r"\s+", " ", fragment).strip()
+    wrapped = f'<r xmlns="{DB_NS}">{fragment}</r>'
+    root = ET.fromstring(wrapped)
+    tables = [c for c in root if c.tag == f"{{{DB_NS}}}informaltable"]
+    if len(tables) != 1:
+        raise ValueError(f"expected exactly one informaltable from {markdown_text!r}, got {len(tables)}")
+    return tables[0]
+
+
+def convert_raw_tables(root):
+    """Replaces every raw pipe-table <para> run found by
+    _find_table_runs anywhere in root's tree with a single real
+    <informaltable>, built by handing the reconstructed raw Markdown
+    table source to pandoc -- the same engine, and so the same
+    <informaltable>/<tgroup>/<colspec align=".."/> shape, this
+    corpus's OTHER, already-correctly-converted tables were built
+    with (confirmed live against docs/court-record/matters/
+    cooperative-investment-law/evidence/community-care-cooperatives-v2/
+    06-...xml's existing <informaltable>). A table whose Markdown
+    source has an all-blank first row (three of the five real corpus
+    cases) is pandoc/GFM's own "headerless table" convention: no
+    <thead> is emitted, and the row that LOOKS like column labels
+    lands in <tbody> as an ordinary first data row, matching this
+    corpus's own existing convention exactly -- this is not a
+    structural choice made by this function, it falls out of handing
+    pandoc the real reconstructed source unmodified.
+
+    Runs within the same parent are processed back-to-front so
+    removing/inserting elements for one run never invalidates a later
+    run's still-pending indices. Returns the number of tables
+    converted."""
+    converted = 0
+    for parent in list(root.iter()):
+        for start, end in reversed(_find_table_runs(parent)):
+            children = list(parent)
+            row_paragraphs = children[start:end]
+            table = _pandoc_table_fragment(_markdown_table_source(row_paragraphs))
+            table.tail = row_paragraphs[-1].tail
+            for row in row_paragraphs:
+                parent.remove(row)
+            parent.insert(start, table)
+            converted += 1
+    return converted
