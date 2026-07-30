@@ -239,3 +239,18 @@ def convert_raw_tables(root):
             parent.insert(start, table)
             converted += 1
     return converted
+
+
+def convert_file(xml_path):
+    """Applies both conversions to xml_path, tables first (see the
+    design doc's Design Notes for why this order is load-bearing, not
+    arbitrary). Writes xml_path back only if something actually
+    changed. Returns (tables_converted, emphasis_runs_converted)."""
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+    n_tables = convert_raw_tables(root)
+    n_emphasis = convert_inline_emphasis(root)
+    if n_tables or n_emphasis:
+        ET.indent(tree, space="  ")
+        tree.write(xml_path, encoding="unicode", xml_declaration=True)
+    return n_tables, n_emphasis

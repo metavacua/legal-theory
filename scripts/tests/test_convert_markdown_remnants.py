@@ -218,5 +218,74 @@ class TestConvertRawTables(unittest.TestCase):
         self.assertEqual(ET.tostring(root), first_pass_xml)
 
 
+class TestConvertFileOrdering(unittest.TestCase):
+    def test_tables_run_before_emphasis_so_bold_table_cells_are_preserved(self):
+        # Adversarial ordering regression test: if convert_inline_emphasis
+        # ran FIRST, it would already strip "**bold cell**"'s asterisks
+        # into a real <emphasis> INSIDE the raw <para> pipe-row before
+        # convert_raw_tables ever runs -- and convert_raw_tables
+        # rebuilds its Markdown table source from each row's *plain*
+        # text (itertext(), which silently drops existing tags), so the
+        # bold would be lost from the resulting table. This test fails
+        # against a version of convert_file() that calls
+        # convert_inline_emphasis() before convert_raw_tables().
+        from convert_markdown_remnants import convert_file
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            target = Path(d) / "sample.xml"
+            target.write_text(
+                '<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<section xmlns="http://docbook.org/ns/docbook" xml:id="s">\n'
+                '  <para>| | |</para>\n'
+                '  <para>| :-: | :-: |</para>\n'
+                '  <para>| A | B |</para>\n'
+                '  <para>| **bold cell** | plain |</para>\n'
+                '</section>\n',
+                encoding="utf-8",
+            )
+            convert_file(target)
+            root = ET.parse(target).getroot()
+            table = root.find(f"{DB_NS}informaltable")
+            self.assertIsNotNone(table, "table was not converted at all")
+            emphasis = table.find(f".//{DB_NS}entry/{DB_NS}emphasis")
+            self.assertIsNotNone(emphasis, "bold cell content was lost -- tables must convert before inline emphasis")
+            self.assertEqual(emphasis.text, "bold cell")
+
+
+class TestConvertFile(unittest.TestCase):
+    def test_convert_file_writes_back_only_when_something_changed(self):
+        from convert_markdown_remnants import convert_file
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            untouched = Path(d) / "untouched.xml"
+            untouched.write_text(
+                '<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<section xmlns="http://docbook.org/ns/docbook" xml:id="s">'
+                '<para>Nothing to convert here.</para></section>\n',
+                encoding="utf-8",
+            )
+            before_mtime = untouched.stat().st_mtime_ns
+            n_tables, n_emphasis = convert_file(untouched)
+            self.assertEqual((n_tables, n_emphasis), (0, 0))
+            self.assertEqual(untouched.stat().st_mtime_ns, before_mtime)
+
+    def test_convert_file_fixes_a_real_shaped_fixture_end_to_end(self):
+        from convert_markdown_remnants import convert_file
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            target = Path(d) / "sample.xml"
+            target.write_text(
+                '<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<section xmlns="http://docbook.org/ns/docbook" xml:id="s">\n'
+                '  <para>This has **bold** text.</para>\n'
+                '</section>\n',
+                encoding="utf-8",
+            )
+            n_tables, n_emphasis = convert_file(target)
+            self.assertEqual((n_tables, n_emphasis), (0, 1))
+            root = ET.parse(target).getroot()
+            self.assertNotIn("*", "".join(root.itertext()))
+
+
 if __name__ == "__main__":
     unittest.main()
