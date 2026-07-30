@@ -1,6 +1,9 @@
+import io
 import sys
+import tempfile
 import unittest
 import xml.etree.ElementTree as ET
+from contextlib import redirect_stdout
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -230,7 +233,6 @@ class TestConvertFileOrdering(unittest.TestCase):
         # against a version of convert_file() that calls
         # convert_inline_emphasis() before convert_raw_tables().
         from convert_markdown_remnants import convert_file
-        import tempfile
         with tempfile.TemporaryDirectory() as d:
             target = Path(d) / "sample.xml"
             target.write_text(
@@ -255,7 +257,6 @@ class TestConvertFileOrdering(unittest.TestCase):
 class TestConvertFile(unittest.TestCase):
     def test_convert_file_writes_back_only_when_something_changed(self):
         from convert_markdown_remnants import convert_file
-        import tempfile
         with tempfile.TemporaryDirectory() as d:
             untouched = Path(d) / "untouched.xml"
             untouched.write_text(
@@ -271,7 +272,6 @@ class TestConvertFile(unittest.TestCase):
 
     def test_convert_file_fixes_a_real_shaped_fixture_end_to_end(self):
         from convert_markdown_remnants import convert_file
-        import tempfile
         with tempfile.TemporaryDirectory() as d:
             target = Path(d) / "sample.xml"
             target.write_text(
@@ -290,7 +290,6 @@ class TestConvertFile(unittest.TestCase):
 class TestCountMarkdownRemnants(unittest.TestCase):
     def test_counts_bold_italic_and_raw_tables_before_and_after_fix(self):
         from convert_markdown_remnants import count_markdown_remnants, convert_file
-        import tempfile
         with tempfile.TemporaryDirectory() as d:
             target = Path(d) / "sample.xml"
             target.write_text(
@@ -321,7 +320,6 @@ class TestCountMarkdownRemnants(unittest.TestCase):
         # early draft of count_markdown_remnants() reported 262 instead
         # of the correct 265 corpus-wide because of exactly this).
         from convert_markdown_remnants import count_markdown_remnants
-        import tempfile
         with tempfile.TemporaryDirectory() as d:
             target = Path(d) / "triple.xml"
             target.write_text(
@@ -338,9 +336,6 @@ class TestCountMarkdownRemnants(unittest.TestCase):
 class TestMainCorpusWalk(unittest.TestCase):
     def test_check_mode_reports_totals_without_modifying_files(self):
         from convert_markdown_remnants import main
-        import io
-        import tempfile
-        from contextlib import redirect_stdout
         with tempfile.TemporaryDirectory() as d:
             f = Path(d) / "doc.xml"
             f.write_text(
@@ -360,9 +355,6 @@ class TestMainCorpusWalk(unittest.TestCase):
 
     def test_default_mode_converts_and_reports_the_changed_file(self):
         from convert_markdown_remnants import main
-        import io
-        import tempfile
-        from contextlib import redirect_stdout
         with tempfile.TemporaryDirectory() as d:
             f = Path(d) / "doc.xml"
             f.write_text(

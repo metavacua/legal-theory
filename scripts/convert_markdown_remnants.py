@@ -38,32 +38,49 @@ from convert_to_docbook import DB_NS, REPO_ROOT  # noqa: E402
 from build_bibliography import _normalize_ws  # noqa: E402
 
 
-def _pandoc_inline_fragment(text):
-    """Run text (a single, tag-free XML text/tail run -- no XML
-    entities to worry about, since ElementTree already decoded them
-    into real characters) through pandoc's GFM reader and DocBook5
-    writer. Returns the parsed <r> wrapper element (its .text is the
-    leading plain text, its children are the resolved inline elements
-    with their own correct .tail chain), or None if pandoc's output
-    isn't the single <para>...</para> it always produces for one-line
-    input (defensive; not expected on real corpus text)."""
+def _run_pandoc_docbook5(text):
+    """text run through pandoc's GFM reader and DocBook5 writer,
+    stripped of pandoc's own line-wrapped pretty-printing (collapsed
+    to single spaces -- pure wrapper/formatting artifact, not
+    meaningful content -- confirmed live during design: without this,
+    a converted run's leading space survives as a genuine, wrong extra
+    space glued onto whatever plain text precedes it) and of the
+    repeated xmlns declaration pandoc puts on every top-level element.
+    Shared by _pandoc_inline_fragment and _pandoc_table_fragment,
+    which each do their own wrapping/extraction on top of this common
+    "run pandoc, get a clean fragment string back" step."""
     result = subprocess.run(
         ["pandoc", "-f", "gfm", "-t", "docbook5"],
         input=text, capture_output=True, text=True, check=True,
     )
-    fragment = result.stdout.strip()
+    fragment = result.stdout.replace(f'xmlns="{DB_NS}" ', "")
+    return re.sub(r"\s+", " ", fragment).strip()
+
+
+def _pandoc_inline_fragment(text):
+    """Run text (a single, tag-free XML text/tail run -- no XML
+    entities to worry about, since ElementTree already decoded them
+    into real characters) through pandoc. Returns the parsed <r>
+    wrapper element (its .text is the leading plain text, its children
+    are the resolved inline elements with their own correct .tail
+    chain), or None if pandoc's output isn't the single
+    <para>...</para> it always produces for one-line input (defensive;
+    not expected on real corpus text)."""
+    fragment = _run_pandoc_docbook5(text)
     if not (fragment.startswith("<para") and fragment.endswith("</para>")):
         return None
-    inner = fragment[fragment.index(">") + 1: -len("</para>")]
-    # Collapse pandoc's own line-wrapped pretty-printing to single
-    # spaces, then strip the outer boundary: pandoc always wraps
-    # output as "<para>\n  CONTENT\n</para>", and that "\n  "/"\n" is
-    # pure wrapper artifact, not meaningful leading/trailing content.
-    # (Confirmed live during design: without the final .strip(), a
-    # converted run's leading space survives as a genuine, wrong extra
-    # space glued onto whatever plain text precedes it.)
-    inner = re.sub(r"\s+", " ", inner).strip()
-    inner = inner.replace(f'xmlns="{DB_NS}" ', "")
+    # _run_pandoc_docbook5's own .strip() only reaches the boundary of
+    # the WHOLE fragment string, which is a no-op here (the string
+    # starts with "<para" and ends with "</para>", not whitespace) --
+    # it does NOT reach the collapsed single space now sitting just
+    # inside those tags (e.g. "<para> This is ... </para>"). Slicing
+    # the wrapper off exposes that inner boundary, so it needs its own
+    # .strip(): without it, a converted run's leading space survives
+    # as a genuine, wrong extra space glued onto whatever plain text
+    # precedes it (confirmed live: this exact omission was caught by
+    # test_para_containing_bold_converts_to_emphasis_strong during the
+    # simplify pass that introduced _run_pandoc_docbook5).
+    inner = fragment[fragment.index(">") + 1: -len("</para>")].strip()
     wrapped = f'<r xmlns="{DB_NS}">{inner}</r>'
     return ET.fromstring(wrapped)
 
@@ -91,7 +108,7 @@ def _convert_run_if_safe(text):
     new_plain = "".join(new_root.itertext())
     if _normalize_ws(text.replace("*", "")) != _normalize_ws(new_plain.replace("*", "")):
         return None
-    if not any(True for _ in new_root.iter(f"{{{DB_NS}}}emphasis")):
+    if new_root.find(f".//{{{DB_NS}}}emphasis") is None:
         return None
     return new_root
 
@@ -190,13 +207,7 @@ def _pandoc_table_fragment(markdown_text):
     input didn't resolve to exactly one (defensive; convert_raw_tables
     only ever calls this with source _find_table_runs already
     confirmed is a valid table)."""
-    result = subprocess.run(
-        ["pandoc", "-f", "gfm", "-t", "docbook5"],
-        input=markdown_text, capture_output=True, text=True, check=True,
-    )
-    fragment = result.stdout.strip()
-    fragment = fragment.replace(f'xmlns="{DB_NS}" ', "")
-    fragment = re.sub(r"\s+", " ", fragment).strip()
+    fragment = _run_pandoc_docbook5(markdown_text)
     wrapped = f'<r xmlns="{DB_NS}">{fragment}</r>'
     root = ET.fromstring(wrapped)
     tables = [c for c in root if c.tag == f"{{{DB_NS}}}informaltable"]
