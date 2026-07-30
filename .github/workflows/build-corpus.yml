@@ -36,37 +36,34 @@ jobs:
             curl -fsSL -o .cache/docbook-5.2/docbookxi.rnc \
               https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc
           while IFS= read -r xml; do
-            root_element="$(xmllint --xpath 'name(/*)' "$xml" 2>/dev/null || true)"
-            root_ns="$(xmllint --xpath 'namespace-uri(/*)' "$xml" 2>/dev/null || true)"
-
-            # Which of this corpus's actual root-element shapes this loop
-            # validates, and how -- see scripts/check_docbook_grammar.py's
-            # module docstring for the full research trail. "article" is
-            # every shell document (gets the article-only dcterms check
-            # and HTML build too). "section"/"info"/"legalnotice" are
-            # XIncluded fragment/metadata/boilerplate content that DocBook
-            # 5.2's own RNG grammar DOES export as a standalone start
-            # pattern -- validated, but not dcterms-checked (that policy
-            # is <article><info> shaped) or built to HTML (only shells are
-            # reader-facing pages). Anything else -- "biblioentry"/
-            # "authorgroup" (real DocBook content this grammar does NOT
-            # export a standalone start pattern for; only ever validated
-            # in context, via the shell that XIncludes it) or a non-
-            # DocBook root entirely (docs/sitemap.xml's "urlset") -- is
-            # correctly out of scope and left alone, same as before.
-            case "$root_ns:$root_element" in
-              "http://docbook.org/ns/docbook:article")
-                is_article=1 ;;
-              "http://docbook.org/ns/docbook:section" | "http://docbook.org/ns/docbook:info" | "http://docbook.org/ns/docbook:legalnotice")
-                is_article=0 ;;
-              *)
-                continue ;;
-            esac
-
             echo "== $xml =="
             xmllint --noout --xinclude "$xml"
+
+            # Validates the fully-XIncluded, reader-facing content against
+            # the real DocBook 5.2 grammar -- not just each shell article's
+            # own literal, unresolved <xi:include> placeholders -- and also
+            # validates fragment/metadata/boilerplate files this loop used
+            # to skip outright (root elements "section"/"info"/
+            # "legalnotice"). check_docbook_grammar.py's own classify()
+            # already knows, precisely and by namespace, which of this
+            # corpus's root-element shapes the real grammar can validate at
+            # all (see its module docstring for the full research trail),
+            # so every file found below is simply handed to it -- a file
+            # this grammar can't validate standalone ("biblioentry"/
+            # "authorgroup": real DocBook content, but not a start element
+            # this grammar exports; or a non-DocBook root entirely, e.g.
+            # docs/sitemap.xml's "urlset") is reported as an explicit,
+            # visible SKIP with its reason, not silently dropped -- so
+            # there is no separate, parallel root-element filter here that
+            # could quietly drift out of sync with what that script knows.
             python3 scripts/check_docbook_grammar.py "$xml"
-            if [ "$is_article" = "1" ]; then
+
+            # dcterms-completeness and the HTML build are policies specific
+            # to reader-facing shell documents (root element "article"),
+            # unrelated to grammar validity -- this is the one classification
+            # this loop still needs to make for itself.
+            root_element="$(xmllint --xpath 'name(/*)' "$xml" 2>/dev/null || true)"
+            if [ "$root_element" = "article" ]; then
               python3 scripts/check_dcterms_completeness.py "$xml"
               xsltproc --xinclude --stringparam docbook.css.source '' /usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl "$xml" > "${xml%.xml}.html"
             fi

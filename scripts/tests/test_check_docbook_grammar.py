@@ -28,6 +28,15 @@ BROKEN_FRAGMENT = """<?xml version='1.0' encoding='utf-8'?>
 </section>
 """
 
+# Real DocBook content, but not a root element docbookxi.rnc's own
+# `start =` production exports standalone -- shared by TestClassify and
+# TestMain, which both need exactly this shape to exercise the "skip,
+# with a reason" path.
+BIBLIOENTRY_FIXTURE = (
+    '<?xml version="1.0"?>\n'
+    '<biblioentry xmlns="http://docbook.org/ns/docbook"><abbrev>x</abbrev></biblioentry>\n'
+)
+
 
 class _WritesFilesFixture:
     """Shared by test classes below that need real sibling files on
@@ -45,6 +54,17 @@ class _WritesFilesFixture:
         path = dir_path / name
         path.write_text(content, encoding="utf-8")
         return path
+
+
+class _HasSchemaFixture:
+    """Shared by test classes below that need self.schema -- the real,
+    cached DocBook 5.2 grammar path -- rather than each repeating the
+    same two-line setUp."""
+
+    def setUp(self):
+        from check_docbook_grammar import fetch_docbook_schema
+        self.schema = fetch_docbook_schema()
+        super().setUp()
 
 
 class TestResolveXinclude(_WritesFilesFixture, unittest.TestCase):
@@ -78,11 +98,7 @@ class TestResolveXinclude(_WritesFilesFixture, unittest.TestCase):
         self.assertIn("does-not-exist.xml", error)
 
 
-class TestValidateGrammar(unittest.TestCase):
-    def setUp(self):
-        from check_docbook_grammar import fetch_docbook_schema
-        self.schema = fetch_docbook_schema()
-
+class TestValidateGrammar(_HasSchemaFixture, unittest.TestCase):
     def test_accepts_valid_resolved_text(self):
         from check_docbook_grammar import validate_grammar
         errors = validate_grammar(GOOD_FRAGMENT, self.schema, "source.xml")
@@ -102,10 +118,7 @@ class TestValidateGrammar(unittest.TestCase):
         self.assertNotIn(tempfile.gettempdir(), joined)
 
 
-class TestValidateResolvedDocument(_WritesFilesFixture, unittest.TestCase):
-    def setUp(self):
-        from check_docbook_grammar import fetch_docbook_schema
-        self.schema = fetch_docbook_schema()
+class TestValidateResolvedDocument(_HasSchemaFixture, _WritesFilesFixture, unittest.TestCase):
 
     def test_passes_a_good_shell_with_a_good_included_fragment(self):
         from check_docbook_grammar import validate_resolved_document
@@ -153,16 +166,12 @@ class TestValidateResolvedDocument(_WritesFilesFixture, unittest.TestCase):
         self.assertIn("does-not-exist.xml", " ".join(errors))
 
 
-class TestValidateResolvedDocumentAgainstRealCorpusFiles(unittest.TestCase):
+class TestValidateResolvedDocumentAgainstRealCorpusFiles(_HasSchemaFixture, unittest.TestCase):
     """A small number of real corpus documents, independently confirmed
     clean during design: xmllint --noout --xinclude, raw jing, AND a
     grep for markdown-remnant syntax (**/*|pipe-tables) all confirmed
     clean for every file in this specific paper. NOT the whole corpus
     -- see this plan's Global Constraints and Design Note 3."""
-
-    def setUp(self):
-        from check_docbook_grammar import fetch_docbook_schema
-        self.schema = fetch_docbook_schema()
 
     def test_a_real_shell_article_with_eleven_real_xincluded_fragments(self):
         from check_docbook_grammar import validate_resolved_document
@@ -217,10 +226,7 @@ class TestClassify(_WritesFilesFixture, unittest.TestCase):
     def test_biblioentry_root_is_skipped_with_a_reason(self):
         from check_docbook_grammar import classify
         d = self._dir()
-        path = self._write(
-            d, "b.xml",
-            '<?xml version="1.0"?>\n<biblioentry xmlns="http://docbook.org/ns/docbook"><abbrev>x</abbrev></biblioentry>\n',
-        )
+        path = self._write(d, "b.xml", BIBLIOENTRY_FIXTURE)
         status, reason = classify(path)
         self.assertEqual(status, "skip")
         self.assertIn("biblioentry", reason)
@@ -287,10 +293,7 @@ class TestMain(_WritesFilesFixture, unittest.TestCase):
         import io
         from contextlib import redirect_stdout
         d = self._dir()
-        path = self._write(
-            d, "b.xml",
-            '<?xml version="1.0"?>\n<biblioentry xmlns="http://docbook.org/ns/docbook"><abbrev>x</abbrev></biblioentry>\n',
-        )
+        path = self._write(d, "b.xml", BIBLIOENTRY_FIXTURE)
         out = io.StringIO()
         with redirect_stdout(out):
             rc = main([str(path)])
