@@ -77,10 +77,33 @@ def _pandoc_inline_fragment(text):
     into real characters) through pandoc. Returns the parsed <r>
     wrapper element (its .text is the leading plain text, its children
     are the resolved inline elements with their own correct .tail
-    chain), or None if pandoc's output isn't the single
-    <para>...</para> it always produces for one-line input (defensive;
-    not expected on real corpus text)."""
-    fragment = _run_pandoc_docbook5(text)
+    chain, with text's own original leading/trailing whitespace
+    restored -- see below), or None if pandoc's output isn't the
+    single <para>...</para> it always produces for one-line input
+    (defensive; not expected on real corpus text)."""
+    # This corpus's own XML pretty-printing routinely gives a deeply
+    # nested element's .text/.tail substantial leading/trailing
+    # whitespace of its own -- e.g. a <entry> nested inside
+    # <informaltable>/<tgroup>/<tbody>/<row> commonly looks like
+    # "\n              **word**\n            " (confirmed live: this
+    # corpus's real <entry> cells are one of the deepest nesting
+    # levels it has). CommonMark treats a line indented 4+ spaces as
+    # an INDENTED CODE BLOCK, not a paragraph (confirmed directly:
+    # feeding pandoc that exact indented text produces
+    # <programlisting>, not <para>) -- so passing text to pandoc
+    # unstripped silently fails this function's own <para> check for
+    # every sufficiently-indented run. Confirmed live: this was the
+    # root cause of the first real corpus-wide run converting only 65
+    # of 1124 bold spans and 0 of 265 italic spans (italic is
+    # exclusively inside <entry>, which is always this deeply
+    # indented in practice; see
+    # test_deeply_indented_entry_text_still_converts).
+    leading_ws = text[: len(text) - len(text.lstrip())]
+    trailing_ws = text[len(text.rstrip()):]
+    stripped = text.strip()
+    if not stripped:
+        return None
+    fragment = _run_pandoc_docbook5(stripped)
     if not (fragment.startswith("<para") and fragment.endswith("</para>")):
         return None
     # _run_pandoc_docbook5's own .strip() only reaches the boundary of
@@ -96,7 +119,41 @@ def _pandoc_inline_fragment(text):
     # simplify pass that introduced _run_pandoc_docbook5).
     inner = fragment[fragment.index(">") + 1: -len("</para>")].strip()
     wrapped = f'<r {_WRAPPER_XMLNS}>{inner}</r>'
-    return ET.fromstring(wrapped)
+    new_root = ET.fromstring(wrapped)
+    # Restore text's own original boundary whitespace (stripped off
+    # above only so pandoc wouldn't misread it) onto whichever end of
+    # new_root now represents that same boundary: its own .text for
+    # the leading side; the last child's .tail for the trailing side
+    # (or .text again if pandoc produced no child elements at all --
+    # reachable here since a stray, non-emphasis '*' still parses to a
+    # childless <para>, even though _convert_run_if_safe's own rule 2
+    # will separately decline to use this result).
+    new_root.text = leading_ws + (new_root.text or "")
+    children = list(new_root)
+    if children:
+        children[-1].tail = (children[-1].tail or "") + trailing_ws
+    else:
+        new_root.text += trailing_ws
+    return new_root
+
+
+def _strip_markdown_noise(s):
+    """s with '*' and '\\' characters removed, for the word-preservation
+    comparison in _convert_run_if_safe. '*' is the emphasis delimiter
+    itself, expected to disappear on conversion. '\\' is CommonMark's
+    escape-next-character marker (e.g. "\\_", "\\&", "\\[", "\\]") --
+    pandoc always un-escapes these as normal, spec-required rendering,
+    which is not a content change worth rejecting (confirmed live on
+    real corpus text: "*303 Creative LLC v. Elenis*, 599 U.S. \\_\\_\\_"
+    round-trips through pandoc as
+    "<emphasis>303 Creative LLC v. Elenis</emphasis>, 599 U.S. ___" --
+    genuinely correct, but a raw-character comparison sees "\\_\\_\\_"
+    != "___" and would wrongly reject the whole run over an unrelated
+    trailing citation placeholder). Stripping backslashes wholesale
+    (not just the specific escaped characters seen so far) is safe for
+    this corpus: legal prose has no legitimate standalone backslash of
+    its own, so any backslash present is a CommonMark escape marker."""
+    return s.replace("*", "").replace("\\", "")
 
 
 def _convert_run_if_safe(text):
@@ -104,23 +161,24 @@ def _convert_run_if_safe(text):
     else None (including the common case: text has no '*' at all, and
     the case where pandoc found nothing to convert). "Safe" means:
     (1) every word in text survives, unchanged, in the converted plain
-    text once '*' characters are stripped from both sides for
-    comparison -- catches pandoc reinterpreting something unexpected;
-    (2) the result contains at least one real <emphasis> element
-    (nothing to do otherwise). Together these two rules are what
-    correctly leave a genuine, non-emphasis asterisk pair like the
-    "Schwartz* & Robert E. Scott**" citation-footnote-marker text
-    untouched: rule (1) trivially holds (pandoc leaves it as literal
-    text too, so both sides are identical once '*' is stripped from
-    both), but rule (2) is what actually excludes it -- its converted
-    form has no <emphasis> in it at all."""
+    text once markdown-noise characters ('*', '\\' -- see
+    _strip_markdown_noise) are stripped from both sides for comparison
+    -- catches pandoc reinterpreting something unexpected; (2) the
+    result contains at least one real <emphasis> element (nothing to
+    do otherwise). Together these two rules are what correctly leave a
+    genuine, non-emphasis asterisk pair like the "Schwartz* & Robert
+    E. Scott**" citation-footnote-marker text untouched: rule (1)
+    trivially holds (pandoc leaves it as literal text too, so both
+    sides are identical once noise is stripped from both), but rule
+    (2) is what actually excludes it -- its converted form has no
+    <emphasis> in it at all."""
     if "*" not in text:
         return None
     new_root = _pandoc_inline_fragment(text)
     if new_root is None:
         return None
     new_plain = "".join(new_root.itertext())
-    if _normalize_ws(text.replace("*", "")) != _normalize_ws(new_plain.replace("*", "")):
+    if _normalize_ws(_strip_markdown_noise(text)) != _normalize_ws(_strip_markdown_noise(new_plain)):
         return None
     if new_root.find(f".//{{{DB_NS}}}emphasis") is None:
         return None

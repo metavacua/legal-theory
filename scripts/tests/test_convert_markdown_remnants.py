@@ -34,6 +34,43 @@ class TestConvertInlineEmphasis(unittest.TestCase):
         self.assertEqual(emphasis.tail, " text.")
         self.assertNotIn("*", "".join(para.itertext()))
 
+    def test_deeply_indented_entry_text_still_converts(self):
+        # Real corpus shape (docs/court-record/matters/
+        # cooperative-investment-law/evidence/community-care-
+        # cooperatives-v2/06-...xml): a pandoc-pretty-printed
+        # <entry>'s .text is NOT "**word**" directly -- it carries
+        # substantial leading/trailing indentation from the corpus's
+        # own XML pretty-printing, e.g.
+        # "\n              **Exploitative Model**\n            ".
+        # CommonMark treats 4+ leading spaces as an indented CODE
+        # block, not a paragraph -- confirmed directly: feeding pandoc
+        # that indented text produces <programlisting>, not <para>, so
+        # naively feeding the RAW (unstripped) text run to pandoc
+        # silently fails to convert every single one of this shape
+        # (confirmed live: this was why the first real corpus-wide run
+        # converted only 65 of 1124 bold spans and 0 of 265 italic
+        # spans -- italic is exclusively inside <entry>, which is
+        # always this deeply indented in practice). The fix strips
+        # leading/trailing whitespace before handing text to pandoc
+        # and re-attaches the ORIGINAL whitespace to the converted
+        # result, rather than losing this corpus's indentation.
+        from convert_markdown_remnants import convert_inline_emphasis
+        root = _parse(
+            '<section xmlns="http://docbook.org/ns/docbook">'
+            '<informaltable><tgroup cols="1"><tbody><row>'
+            '<entry>\n              **Exploitative Model**\n            </entry>'
+            '</row></tbody></tgroup></informaltable>'
+            '</section>'
+        )
+        n = convert_inline_emphasis(root)
+        self.assertEqual(n, 1)
+        entry = root.find(f".//{DB_NS}entry")
+        emphasis = entry.find(f"{DB_NS}emphasis")
+        self.assertIsNotNone(emphasis)
+        self.assertEqual(emphasis.get("role"), "strong")
+        self.assertEqual(emphasis.text, "Exploitative Model")
+        self.assertNotIn("*", "".join(entry.itertext()))
+
     def test_entry_containing_italic_converts_to_plain_emphasis(self):
         from convert_markdown_remnants import convert_inline_emphasis
         root = _parse(
@@ -100,6 +137,53 @@ class TestConvertInlineEmphasis(unittest.TestCase):
         para = root.find(f"{DB_NS}para")
         self.assertEqual(para.text, text)
         self.assertEqual(list(para), [])
+
+    def test_backslash_escaped_underscore_still_converts(self):
+        # Real corpus text (first-amendment-landmark-cases-research/
+        # 07-appendix-...xml): a case citation with a backslash-
+        # escaped placeholder, "*303 Creative LLC v. Elenis*, 599 U.S.
+        # \_\_\_" -- the author escaped each underscore ("\_") so
+        # CommonMark wouldn't misread three consecutive underscores as
+        # emphasis markup. pandoc correctly un-escapes "\_" to "_" as
+        # normal, spec-required CommonMark rendering (confirmed
+        # directly) at the same time it converts the case name to
+        # <emphasis> -- this is not a content change worth rejecting,
+        # but the original (pre-fix) safety check compared raw
+        # characters including the backslash, saw "\_\_\_" != "___",
+        # and wrongly declined the whole run.
+        from convert_markdown_remnants import convert_inline_emphasis
+        text = r'*303 Creative LLC v. Elenis*, 599 U.S. \_\_\_'
+        root = _parse(
+            '<section xmlns="http://docbook.org/ns/docbook">'
+            f'<para>{text}</para>'
+            '</section>'
+        )
+        n = convert_inline_emphasis(root)
+        self.assertEqual(n, 1)
+        para = root.find(f"{DB_NS}para")
+        emphasis = para.find(f"{DB_NS}emphasis")
+        self.assertIsNotNone(emphasis)
+        self.assertIsNone(emphasis.get("role"))
+        self.assertEqual(emphasis.text, "303 Creative LLC v. Elenis")
+        self.assertEqual(emphasis.tail, ", 599 U.S. ___")
+
+    def test_backslash_escaped_ampersand_still_converts(self):
+        # Real corpus text (ai-corporate-personhood-and-legal-rights/
+        # 03-...xml): "*FCC v. AT\&T*" -- same family as the escaped-
+        # underscore case above, with '&' instead of '_'.
+        from convert_markdown_remnants import convert_inline_emphasis
+        text = r'*FCC v. AT\&T*'
+        root = _parse(
+            '<section xmlns="http://docbook.org/ns/docbook">'
+            f'<para>{text.replace("&", "&amp;")}</para>'
+            '</section>'
+        )
+        n = convert_inline_emphasis(root)
+        self.assertEqual(n, 1)
+        para = root.find(f"{DB_NS}para")
+        emphasis = para.find(f"{DB_NS}emphasis")
+        self.assertIsNotNone(emphasis)
+        self.assertEqual(emphasis.text, "FCC v. AT&T")
 
     def test_triple_asterisk_becomes_nested_italic_wrapping_bold(self):
         from convert_markdown_remnants import convert_inline_emphasis
