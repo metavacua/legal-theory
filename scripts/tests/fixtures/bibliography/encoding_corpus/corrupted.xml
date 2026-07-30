@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioentry xmlns="http://docbook.org/ns/docbook" xml:id="corrupted-entry" role="secondary">
+  <title>A Title With One Corrupted Codepoint:  Here</title>
+  <biblioid class="uri">https://example.com/corrupted</biblioid>
+</biblioentry>
