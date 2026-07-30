@@ -37,6 +37,33 @@ BIBLIOENTRY_FIXTURE = (
     '<biblioentry xmlns="http://docbook.org/ns/docbook"><abbrev>x</abbrev></biblioentry>\n'
 )
 
+# A structurally complete fragment whose <biblioref> targets an
+# xml:id that only exists in a sibling bibliography-entry file the
+# fragment's own shell XIncludes elsewhere (not this fragment, and not
+# anything this fragment itself includes) -- exactly the real,
+# already-committed shape of docs/court-record/theory/federal-
+# constitutional/extensions/llms-as-categorical-systems/*.xml, which
+# jing correctly reports as an unresolvable IDREF when this fragment
+# is validated on its own. This is not a defect in the fragment: ID/
+# IDREF completeness is a property of the assembled document, and no
+# standalone fragment that cites a bibliography entry from a sibling
+# file can ever satisfy it alone.
+FRAGMENT_WITH_UNRESOLVABLE_BIBLIOREF = """<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="cites-out">
+  <title>Cites Something Elsewhere</title>
+  <para>See <biblioref linkend="defined-in-a-sibling-file-this-fragment-never-includes"/>.</para>
+</section>
+"""
+
+# Same unresolvable cross-file biblioref, PLUS a genuine, independent
+# structural defect (missing <title>) -- proves the cross-document-
+# IDREF allowance doesn't mask a real defect riding along with it.
+FRAGMENT_WITH_UNRESOLVABLE_BIBLIOREF_AND_MISSING_TITLE = """<?xml version='1.0' encoding='utf-8'?>
+<section xmlns="http://docbook.org/ns/docbook" xml:id="cites-out-and-broken">
+  <para>See <biblioref linkend="defined-in-a-sibling-file-this-fragment-never-includes"/>.</para>
+</section>
+"""
+
 
 class _WritesFilesFixture:
     """Shared by test classes below that need real sibling files on
@@ -285,6 +312,37 @@ class TestMain(_WritesFilesFixture, unittest.TestCase):
         err = io.StringIO()
         with redirect_stderr(err):
             rc = main([str(shell)])
+        self.assertEqual(rc, 1)
+        self.assertIn("title", err.getvalue())
+
+    def test_a_standalone_fragment_citing_a_sibling_files_bibliography_entry_is_not_a_failure(self):
+        # Real, already-committed shape: a fragment's <biblioref> can
+        # only resolve once its shell assembles it alongside the
+        # bibliography-entry files that define the target xml:id --
+        # confirmed live against the real corpus (the shell itself
+        # validates clean; only its standalone fragments, checked in
+        # isolation, ever see this). A standalone fragment can never
+        # satisfy that alone, so this must not fail the run.
+        from check_docbook_grammar import main
+        d = self._dir()
+        path = self._write(d, "cites-out.xml", FRAGMENT_WITH_UNRESOLVABLE_BIBLIOREF)
+        self.assertEqual(main([str(path)]), 0)
+
+    def test_a_real_defect_alongside_an_unresolvable_biblioref_still_fails(self):
+        # The cross-document-IDREF allowance must not swallow a
+        # genuine, independent structural defect (missing <title>)
+        # riding along in the same fragment.
+        from check_docbook_grammar import main
+        import io
+        from contextlib import redirect_stderr
+        d = self._dir()
+        path = self._write(
+            d, "cites-out-and-broken.xml",
+            FRAGMENT_WITH_UNRESOLVABLE_BIBLIOREF_AND_MISSING_TITLE,
+        )
+        err = io.StringIO()
+        with redirect_stderr(err):
+            rc = main([str(path)])
         self.assertEqual(rc, 1)
         self.assertIn("title", err.getvalue())
 

@@ -179,6 +179,38 @@ def classify(xml_path):
     return "skip", f"root element is not in the DocBook namespace (found {ns!r})"
 
 
+# jing's exact wording (confirmed empirically, and stable across the RELAX
+# NG ID/IDREF datatype-library implementation jing uses) for "this
+# attribute is typed IDREF and its value names no xml:id anywhere in the
+# document jing actually validated."
+_IDREF_ERROR_MARKER = "error: IDREF "
+
+
+def _is_cross_document_idref_error(line):
+    return _IDREF_ERROR_MARKER in line
+
+
+def _drop_cross_document_idref_noise(errors):
+    """A standalone "section" fragment can genuinely, correctly cite a
+    bibliography entry (<biblioref linkend="...">) whose xml:id is only
+    ever defined in a SIBLING file its own shell XIncludes elsewhere --
+    never in the fragment itself, and never in anything the fragment
+    itself includes. ID/IDREF completeness is a property of the fully
+    assembled document, not of any one fragment in isolation, so jing
+    reporting an unresolvable IDREF when a fragment is validated alone
+    is expected, not a defect -- confirmed live: every fragment of
+    docs/court-record/theory/federal-constitutional/extensions/llms-as-
+    categorical-systems/ that cites the shell's own bibliography-entry
+    XIncludes fails standalone validation this way, while the fully
+    assembled shell (which XIncludes both the fragments AND the entries)
+    validates clean. Filtering here, not in classify(), because whether
+    this applies can only be known from validate_resolved_document()'s
+    own result, not from the root element alone; a genuine, unrelated
+    defect (e.g. a missing <title>) in the same fragment is never an
+    IDREF error and always survives this filter unchanged."""
+    return [e for e in errors if not _is_cross_document_idref_error(e)]
+
+
 def main(argv=None):
     argv = argv if argv is not None else sys.argv[1:]
     schema_path = fetch_docbook_schema()
@@ -188,7 +220,11 @@ def main(argv=None):
         if action == "skip":
             print(f"SKIP {path}: {reason}")
             continue
-        for error in validate_resolved_document(path, schema_path):
+        errors = validate_resolved_document(path, schema_path)
+        _, root_local = root_element_info(path)
+        if root_local == "section":
+            errors = _drop_cross_document_idref_noise(errors)
+        for error in errors:
             had_errors = True
             print(error, file=sys.stderr)
     return 1 if had_errors else 0
