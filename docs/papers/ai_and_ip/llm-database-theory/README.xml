@@ -40,7 +40,6 @@
           <row><entry><code>src/02-legal-corpus-connections.xml</code></entry><entry>Connections to matters in this repo; proposed FOFs</entry></row>
           <row><entry><code>src/bibliography.bib</code></entry><entry>14 BibTeX entries</entry></row>
           <row><entry>(real DocBook 5.2 RELAX NG, fetched from OASIS at build time; the official <code>docbook-xsl-ns</code> <code>xhtml5</code> stylesheet, installed via <code>apt</code>, renders DocBook → HTML5)</entry><entry>Structural validation and HTML build — see <code>scripts/convert_to_docbook.py</code>'s <code>fetch_docbook_schema()</code> and <code>build_html()</code>; this project's own hand-rolled <code>xsl/html5.xsl</code> was retired corpus-wide in favor of this stock stylesheet</entry></row>
-          <row><entry><code>../../../xsl/latex.xsl</code></entry><entry>DocBook → LaTeX (pdflatex-compilable)</entry></row>
           <row><entry><code>scratch/formulas.md</code></entry><entry>Math correspondences, LARQL↔SQL table, memorisation rates — supplementary working notes, retained outside this article's formal citable body (see "Open Questions" below)</entry></row>
           <row><entry><code>scratch/notes.md</code></entry><entry>Session provenance, citation gaps, open questions — supplementary working notes, retained outside this article's formal citable body (see "Open Questions" below)</entry></row>
         </tbody>
@@ -58,37 +57,14 @@
     source, same as any other document). There is nothing paper-specific to
     validate or build to HTML; running the corpus pipeline against <code>src/*.xml</code>
     manually reproduces it locally.</para>
-    <para>This directory's own <code>Makefile</code> only covers the one thing that genuinely
-    is unique to this document: LaTeX/PDF output.</para>
-
-    <section xml:id="prerequisites">
-      <title>Prerequisites</title>
-      <programlisting language="bash"># Debian/Ubuntu
-sudo apt-get install libxml2-utils libxslt1-dev pandoc
-
-# macOS
-brew install libxml2 libxslt pandoc
-
-# Note: pandoc is required by scripts/convert_to_docbook.py (the
-# Markdown-to-DocBook conversion tool), not by this paper's own build.
-
-# Optional: PDF output
-sudo apt-get install texlive-full   # or texlive-latex-recommended</programlisting>
-    </section>
-
-    <section xml:id="commands">
-      <title>Commands</title>
-      <programlisting language="bash"># Generate LaTeX
-make latex
-# → generated/01-llm-database-theory.tex
-# → generated/02-legal-corpus-connections.tex
-
-# Generate PDF (requires pdflatex)
-make pdf
-
-# Open primary article's LaTeX source
-make open-latex</programlisting>
-    </section>
+    <para>This directory has no <code>Makefile</code> of its own: there is nothing about
+    this paper's build that the corpus-wide pipeline above doesn't already cover.
+    A hand-rolled <code>xsl/latex.xsl</code> DocBook→LaTeX stylesheet previously lived here
+    for LaTeX/PDF export; it duplicated what <code>pandoc</code> (already a dependency of
+    <code>scripts/convert_to_docbook.py</code>) does natively and correctly --
+    <code>pandoc -f docbook -t latex &lt;resolved-source&gt;.xml</code> against this article's
+    XInclude-resolved source (<code>xmllint --xinclude src/01-llm-database-theory.xml</code>)
+    is the direct replacement, with no maintained tooling of its own required.</para>
   </section>
 
   <section xml:id="primary-findings">
