@@ -84,6 +84,13 @@ def _parse_tags(html_text):
     return collector.tags
 
 
+def _committed_corpus_html_paths():
+    return sorted(
+        p for p in (REPO_ROOT / "docs").rglob("*.html")
+        if "/scratch/" not in str(p)
+    )
+
+
 class TestXhtml5CustomizationLayer(unittest.TestCase):
     def setUp(self):
         self.fixtures = Path(__file__).resolve().parent / "fixtures"
@@ -209,3 +216,36 @@ class TestBuildHtmlWiring(unittest.TestCase):
         self.addCleanup(html_path.unlink)
         content = html_path.read_text(encoding="utf-8")
         self.assertTrue(content.startswith("<!DOCTYPE html>"))
+
+
+class TestCommittedCorpusHtmlIsClean(unittest.TestCase):
+    """Corpus-wide regression guard: every committed page, not just the
+    fixtures above, actually got rebuilt through the fixed pipeline."""
+
+    def test_no_committed_page_has_a_leading_xml_declaration(self):
+        offenders = [
+            str(p.relative_to(REPO_ROOT)) for p in _committed_corpus_html_paths()
+            if p.read_text(encoding="utf-8").lstrip().startswith("<?xml")
+        ]
+        self.assertEqual(offenders, [])
+
+    def test_no_committed_page_has_invalid_cellspacing_or_cellpadding_css(self):
+        offenders = []
+        for p in _committed_corpus_html_paths():
+            text = p.read_text(encoding="utf-8")
+            if "cellspacing" in text or "cellpadding" in text:
+                offenders.append(str(p.relative_to(REPO_ROOT)))
+        self.assertEqual(offenders, [])
+
+    def test_every_committed_page_pairs_lang_and_xml_lang_and_html_has_lang(self):
+        offenders = []
+        for p in _committed_corpus_html_paths():
+            rel = str(p.relative_to(REPO_ROOT))
+            tags = _parse_tags(p.read_text(encoding="utf-8"))
+            html_tags = [attrs for tag, attrs in tags if tag == "html"]
+            if not html_tags or "lang" not in html_tags[0]:
+                offenders.append(f"{rel}: <html> missing lang")
+            for tag, attrs in tags:
+                if "xml:lang" in attrs and attrs.get("lang") != attrs["xml:lang"]:
+                    offenders.append(f"{rel}: <{tag}> unpaired lang/xml:lang: {attrs}")
+        self.assertEqual(offenders, [])
