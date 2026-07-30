@@ -254,3 +254,79 @@ def convert_file(xml_path):
         ET.indent(tree, space="  ")
         tree.write(xml_path, encoding="unicode", xml_declaration=True)
     return n_tables, n_emphasis
+
+
+_BOLD_COUNT_RE = re.compile(r"\*\*[^*\n]+?\*\*")
+_ITALIC_COUNT_RE = re.compile(r"(?<!\*)\*(?!\*)[^*\n]+?(?<!\*)\*(?!\*)")
+
+
+def count_markdown_remnants(xml_path):
+    """dict(bold=N, italic=N, raw_tables=N) -- the exact same "own
+    text/tail run" tree walk convert_inline_emphasis/convert_raw_tables
+    use, so this count is trustworthy as a before/after measurement of
+    the SAME thing the fix itself acts on, not a separately-maintained
+    approximation. Bold spans are stripped from each run BEFORE
+    searching for italic spans in the remainder, matching how a
+    "***triple***" span's outer italic half is only visible once its
+    inner bold half is accounted for (confirmed live during design: a
+    naive un-stripped scan undercounts italic corpus-wide by exactly
+    the 3 real '***word***' triple-star spans in the corpus).
+
+    The bold strip's replacement text MUST be non-empty (here, "X"):
+    "***Borello***" contains exactly one _BOLD_COUNT_RE match, using
+    the inner two of each three-star run ("**Borello**", positions
+    1-11), leaving a lone '*' on each side (positions 0 and 12). A
+    NON-empty replacement keeps those two lone stars separated by the
+    placeholder, so "*X*" still reads as one valid italic span. An
+    EMPTY replacement instead collapses the gap between them into a
+    bare "**" -- two adjacent stars, which _ITALIC_COUNT_RE's own
+    "(?!\\*)"/"(?<!\\*)" guards correctly refuse to match at all,
+    silently undercounting italic by 3 again. (Caught live during
+    design: an early draft of this exact function used
+    `_BOLD_COUNT_RE.sub("", run)` and reported 262, not the correct
+    265, on the real corpus -- do not reintroduce that regression;
+    see test_triple_star_span_counts_as_one_bold_and_one_italic.)"""
+    try:
+        root = ET.parse(xml_path).getroot()
+    except ET.ParseError:
+        return {"bold": 0, "italic": 0, "raw_tables": 0}
+    bold = italic = 0
+    for el in root.iter():
+        runs = ([el.text] if el.text else []) + [c.tail for c in el if c.tail]
+        for run in runs:
+            bold += len(_BOLD_COUNT_RE.findall(run))
+            italic += len(_ITALIC_COUNT_RE.findall(_BOLD_COUNT_RE.sub("X", run)))
+    raw_tables = sum(len(_find_table_runs(parent)) for parent in root.iter())
+    return {"bold": bold, "italic": italic, "raw_tables": raw_tables}
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--corpus-root", default=str(REPO_ROOT / "docs"))
+    parser.add_argument("--check", action="store_true",
+                         help="report counts only; do not modify any file")
+    args = parser.parse_args(argv)
+    corpus_root = Path(args.corpus_root)
+
+    totals = {"bold": 0, "italic": 0, "raw_tables": 0}
+    changed_files = []
+    for xml_path in sorted(corpus_root.rglob("*.xml")):
+        before = count_markdown_remnants(xml_path)
+        for k in totals:
+            totals[k] += before[k]
+        if args.check:
+            continue
+        n_tables, n_emphasis = convert_file(xml_path)
+        if n_tables or n_emphasis:
+            changed_files.append(str(xml_path))
+
+    mode = "found" if args.check else "found before fix (now converted)"
+    print(f"OK: {mode} -- bold {totals['bold']}, italic {totals['italic']}, "
+          f"raw_tables {totals['raw_tables']}, across {len(changed_files)} changed files")
+    for f in changed_files:
+        print(f"  {f}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

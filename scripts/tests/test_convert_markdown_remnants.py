@@ -287,5 +287,99 @@ class TestConvertFile(unittest.TestCase):
             self.assertNotIn("*", "".join(root.itertext()))
 
 
+class TestCountMarkdownRemnants(unittest.TestCase):
+    def test_counts_bold_italic_and_raw_tables_before_and_after_fix(self):
+        from convert_markdown_remnants import count_markdown_remnants, convert_file
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            target = Path(d) / "sample.xml"
+            target.write_text(
+                '<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<section xmlns="http://docbook.org/ns/docbook" xml:id="s">\n'
+                '  <para>**bold** and *italic*.</para>\n'
+                '  <para>| | |</para>\n'
+                '  <para>| :-: | :-: |</para>\n'
+                '  <para>| A | B |</para>\n'
+                '</section>\n',
+                encoding="utf-8",
+            )
+            before = count_markdown_remnants(target)
+            self.assertEqual(before, {"bold": 1, "italic": 1, "raw_tables": 1})
+            convert_file(target)
+            after = count_markdown_remnants(target)
+            self.assertEqual(after, {"bold": 0, "italic": 0, "raw_tables": 0})
+
+    def test_triple_star_span_counts_as_one_bold_and_one_italic(self):
+        # Regression test for a real bug caught during design: stripping
+        # matched bold spans with an EMPTY replacement (instead of a
+        # non-empty placeholder) before searching for italic spans
+        # collapses "***word***" down to a bare, adjacent "**" with
+        # nothing between -- which _ITALIC_COUNT_RE's own delimiter
+        # guards then correctly (and misleadingly, for THIS purpose)
+        # refuse to match, silently undercounting italic by one per
+        # triple-star span (3 such spans exist in the real corpus; an
+        # early draft of count_markdown_remnants() reported 262 instead
+        # of the correct 265 corpus-wide because of exactly this).
+        from convert_markdown_remnants import count_markdown_remnants
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            target = Path(d) / "triple.xml"
+            target.write_text(
+                '<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<section xmlns="http://docbook.org/ns/docbook" xml:id="s">\n'
+                '  <para>***Borello***</para>\n'
+                '</section>\n',
+                encoding="utf-8",
+            )
+            counts = count_markdown_remnants(target)
+            self.assertEqual(counts, {"bold": 1, "italic": 1, "raw_tables": 0})
+
+
+class TestMainCorpusWalk(unittest.TestCase):
+    def test_check_mode_reports_totals_without_modifying_files(self):
+        from convert_markdown_remnants import main
+        import io
+        import tempfile
+        from contextlib import redirect_stdout
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / "doc.xml"
+            f.write_text(
+                '<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<section xmlns="http://docbook.org/ns/docbook" xml:id="s">\n'
+                '  <para>**bold**</para>\n'
+                '</section>\n',
+                encoding="utf-8",
+            )
+            before_mtime = f.stat().st_mtime_ns
+            out = io.StringIO()
+            with redirect_stdout(out):
+                rc = main(["--corpus-root", d, "--check"])
+            self.assertEqual(rc, 0)
+            self.assertIn("bold 1", out.getvalue())
+            self.assertEqual(f.stat().st_mtime_ns, before_mtime)
+
+    def test_default_mode_converts_and_reports_the_changed_file(self):
+        from convert_markdown_remnants import main
+        import io
+        import tempfile
+        from contextlib import redirect_stdout
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / "doc.xml"
+            f.write_text(
+                '<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<section xmlns="http://docbook.org/ns/docbook" xml:id="s">\n'
+                '  <para>**bold**</para>\n'
+                '</section>\n',
+                encoding="utf-8",
+            )
+            out = io.StringIO()
+            with redirect_stdout(out):
+                rc = main(["--corpus-root", d])
+            self.assertEqual(rc, 0)
+            self.assertIn(str(f), out.getvalue())
+            root = ET.parse(f).getroot()
+            self.assertNotIn("*", "".join(root.itertext()))
+
+
 if __name__ == "__main__":
     unittest.main()
