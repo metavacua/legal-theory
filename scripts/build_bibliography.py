@@ -66,6 +66,34 @@ def _require_eyecite():
         raise RuntimeError(_EYECITE_REQUIRED_MSG)
 
 
+# bibtexparser has no apt package either -- installed into the same
+# .venv-eyecite/ venv as eyecite (see that block above for why one
+# shared venv, not a second one: main() needs both in the same
+# process). Guarded the same way, for the same reason: `import
+# build_bibliography` must not fail under bare python3, and
+# parse_bibtex raises a clear RuntimeError if actually called without
+# it rather than silently degrading.
+try:
+    import bibtexparser
+    from bibtexparser.bparser import BibTexParser
+    _BIBTEXPARSER_AVAILABLE = True
+except ImportError:
+    _BIBTEXPARSER_AVAILABLE = False
+
+_BIBTEXPARSER_REQUIRED_MSG = (
+    "bibtexparser is required for BibTeX parsing and is not installed "
+    "under this interpreter. Run this script/test via "
+    ".venv-eyecite/bin/python3 (create it once with: python3 -m venv "
+    ".venv-eyecite && .venv-eyecite/bin/pip install --quiet eyecite "
+    "bibtexparser)."
+)
+
+
+def _require_bibtexparser():
+    if not _BIBTEXPARSER_AVAILABLE:
+        raise RuntimeError(_BIBTEXPARSER_REQUIRED_MSG)
+
+
 def _normalize_ws(s):
     return " ".join(s.split())
 
@@ -476,57 +504,53 @@ def classify_and_format(raw):
     return "appendix", raw.text
 
 
-_BIB_ENTRY_START_RE = re.compile(r"@(?P<type>\w+)\{(?P<key>[^,\s]+),")
-_BIB_FIELD_NAME_RE = re.compile(r"(?P<name>\w+)\s*=\s*\{")
-
-
-def _read_balanced(text, start):
-    """text[start] must be '{'. Returns (contents without outer braces,
-    index just after the matching closing brace), correctly handling
-    arbitrarily nested {..} inside."""
-    assert text[start] == "{"
-    depth = 0
-    i = start
-    while i < len(text):
-        if text[i] == "{":
-            depth += 1
-        elif text[i] == "}":
-            depth -= 1
-            if depth == 0:
-                return text[start + 1:i], i + 1
-        i += 1
-    raise ValueError(f"unbalanced braces in BibTeX starting at index {start}")
-
-
 def _strip_inner_braces(value):
     return re.sub(r"[{}]", "", value)
 
 
 def parse_bibtex(path):
     """[{"key": str, "entry_type": str, "fields": dict[str, str]}, ...]
-    for every @type{key, ...} entry in a BibTeX file. Field values are
-    extracted with a manual balanced-brace scan (not a pure regex) since
-    nested braces like {{LARQL} --- {Lazarus Query Language}} defeat a
-    naive non-greedy regex, which stops at the first closing brace."""
+    for every @type{key, ...} entry in a BibTeX file.
+
+    Uses bibtexparser rather than hand-rolled parsing -- confirmed
+    2026-07-29 the old hand-rolled field regex (which required every
+    value to start with a literal "{") silently dropped any field
+    written as "..." (quoted) or bare/unquoted (e.g. a bare "year =
+    2020"), and silently truncated "#"-concatenated values at the first
+    closing brace. ignore_nonstandard_types=False is required:
+    bibtexparser's own default (True) silently drops entire entries
+    whose @type isn't one of a fixed classic-BibTeX list -- confirmed
+    this would otherwise drop this project's own bibliography.bib's
+    real @online{hay2024video, ...} entry, which is exactly the kind of
+    silent data loss this replacement must not introduce.
+
+    Field values are still run through _strip_inner_braces/_normalize_ws
+    exactly as before -- that post-processing is this project's own
+    display-formatting policy (strip protective-capitalization braces,
+    collapse whitespace), not something a generic parser should have an
+    opinion about, and is confirmed to produce byte-for-byte identical
+    output to the old parser, entry-by-entry and field-by-field, across
+    the real 28-entry bibliography.bib.
+    """
     text = Path(path).read_text(encoding="utf-8")
+    _require_bibtexparser()
+    parser = BibTexParser(ignore_nonstandard_types=False)
+    db = bibtexparser.loads(text, parser=parser)
     entries = []
-    for m in _BIB_ENTRY_START_RE.finditer(text):
-        open_brace_idx = text.index("{", m.start())
-        _, end_idx = _read_balanced(text, open_brace_idx)
-        body = text[m.end():end_idx - 1]
-
+    for raw in db.entries:
+        # Each dict in db.entries is freshly built by bibtexparser, one
+        # per entry, and never read again after this loop -- popping
+        # ID/ENTRYTYPE off it directly (rather than a defensive `dict(raw)`
+        # copy first) is safe (confirmed 2026-07-29: mutating one entry's
+        # dict here does not affect any other entry's).
+        key = raw.pop("ID")
+        entry_type = raw.pop("ENTRYTYPE")
         fields = {}
-        for fm in _BIB_FIELD_NAME_RE.finditer(body):
-            value_raw, _ = _read_balanced(body, fm.end() - 1)
-            value = _normalize_ws(_strip_inner_braces(value_raw))
-            if value:
-                fields[fm.group("name").lower()] = value
-
-        entries.append({
-            "key": m.group("key").strip(),
-            "entry_type": m.group("type").lower(),
-            "fields": fields,
-        })
+        for name, value in raw.items():
+            cleaned = _normalize_ws(_strip_inner_braces(value))
+            if cleaned:
+                fields[name] = cleaned
+        entries.append({"key": key, "entry_type": entry_type, "fields": fields})
     return entries
 
 

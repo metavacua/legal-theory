@@ -21,6 +21,20 @@ SKIP_REASON = (
     "test file with .venv-eyecite/bin/python3 to exercise it."
 )
 
+try:
+    import bibtexparser  # noqa: F401
+    BIBTEXPARSER_AVAILABLE = True
+except ImportError:
+    BIBTEXPARSER_AVAILABLE = False
+
+BIBTEXPARSER_SKIP_REASON = (
+    "bibtexparser is not installed under this interpreter -- it lives "
+    "only in the dedicated .venv-eyecite/ virtualenv (shared with "
+    "eyecite), not the bare system python3 every other script/test in "
+    "this repo runs under. Run this test file with "
+    ".venv-eyecite/bin/python3 to exercise it."
+)
+
 
 class TestBuildBacklinkMap(unittest.TestCase):
     def test_maps_shell_and_its_fragment_to_shells_html(self):
@@ -519,6 +533,7 @@ class TestClassifyAndFormat(unittest.TestCase):
         self.assertEqual(display, "Systemic_Misclassification")
 
 
+@unittest.skipUnless(BIBTEXPARSER_AVAILABLE, BIBTEXPARSER_SKIP_REASON)
 class TestParseBibtex(unittest.TestCase):
     def test_parses_both_entries_with_correct_types_and_keys(self):
         from build_bibliography import parse_bibtex
@@ -539,6 +554,54 @@ class TestParseBibtex(unittest.TestCase):
         from build_bibliography import parse_bibtex
         entries = parse_bibtex(FIXTURES / "sample.bib")
         self.assertNotIn("author", entries[1]["fields"])
+
+    def test_quoted_field_values_are_not_silently_dropped(self):
+        """Confirmed 2026-07-29 root cause: the old _BIB_FIELD_NAME_RE
+        required every value to start with a literal "{", so a
+        quote-delimited field ("...") was silently omitted from the
+        parsed entry's fields dict entirely -- not an error, not a
+        placeholder, just gone."""
+        from build_bibliography import parse_bibtex
+        entries = parse_bibtex(FIXTURES / "tricky.bib")
+        by_key = {e["key"]: e for e in entries}
+        fields = by_key["quoted2020"]["fields"]
+        self.assertEqual(fields["author"], "Quoted, Author")
+        self.assertEqual(fields["title"], "A Quoted Title")
+        self.assertEqual(fields["year"], "2020")
+        self.assertEqual(fields["journal"], "Journal of Testing")
+
+    def test_bare_unquoted_field_value_is_not_silently_dropped(self):
+        from build_bibliography import parse_bibtex
+        entries = parse_bibtex(FIXTURES / "tricky.bib")
+        by_key = {e["key"]: e for e in entries}
+        fields = by_key["bareyear2022"]["fields"]
+        self.assertEqual(fields["year"], "2022")
+        self.assertEqual(fields["title"], "Bare Year Field")
+
+    def test_hash_concatenated_value_is_not_silently_truncated(self):
+        from build_bibliography import parse_bibtex
+        entries = parse_bibtex(FIXTURES / "tricky.bib")
+        by_key = {e["key"]: e for e in entries}
+        self.assertEqual(by_key["concat2021"]["fields"]["title"], "Part One, and Part Two")
+
+    def test_nonstandard_entry_type_is_not_silently_dropped(self):
+        """Guards against a DIFFERENT silent-drop trap this fix must not
+        introduce: bibtexparser's own default (ignore_nonstandard_types=
+        True) silently drops the whole entry for any @type it doesn't
+        recognize as classic BibTeX -- confirmed 2026-07-29 this would
+        have dropped this project's own real bibliography.bib entry
+        @online{hay2024video, ...}."""
+        from build_bibliography import parse_bibtex
+        entries = parse_bibtex(FIXTURES / "tricky.bib")
+        keys = {e["key"] for e in entries}
+        self.assertIn("online2023", keys)
+        by_key = {e["key"]: e for e in entries}
+        self.assertEqual(by_key["online2023"]["entry_type"], "online")
+
+    def test_tricky_fixture_loses_no_entries(self):
+        from build_bibliography import parse_bibtex
+        entries = parse_bibtex(FIXTURES / "tricky.bib")
+        self.assertEqual(len(entries), 4)
 
 
 class TestClassifyBibEntry(unittest.TestCase):
@@ -852,6 +915,7 @@ class TestEndToEndIntegration(unittest.TestCase):
         self.assertIn("Systemic_Misclassification", xml_text)
         self.assertIn(f"Source: {appendix_entries[0][1]}", xml_text)
 
+    @unittest.skipUnless(BIBTEXPARSER_AVAILABLE, BIBTEXPARSER_SKIP_REASON)
     def test_real_bibliography_bib_parses_and_classifies_without_exceptions(self):
         # Runs Tasks 10-11 against the ACTUAL repo file, not a fixture --
         # the one place a real-file regression (e.g. an unhandled field
