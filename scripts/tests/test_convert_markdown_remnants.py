@@ -68,6 +68,72 @@ class TestConvertInlineEmphasis(unittest.TestCase):
         self.assertEqual(para.text, text)
         self.assertEqual(list(para), [])
 
+    def test_triple_asterisk_becomes_nested_italic_wrapping_bold(self):
+        from convert_markdown_remnants import convert_inline_emphasis
+        root = _parse(
+            '<section xmlns="http://docbook.org/ns/docbook">'
+            '<para>***Borello***</para>'
+            '</section>'
+        )
+        convert_inline_emphasis(root)
+        para = root.find(f"{DB_NS}para")
+        outer = para.find(f"{DB_NS}emphasis")
+        self.assertIsNone(outer.get("role"))
+        inner = outer.find(f"{DB_NS}emphasis")
+        self.assertEqual(inner.get("role"), "strong")
+        self.assertEqual(inner.text, "Borello")
+
+    def test_span_after_a_nested_existing_emphasis_tail_converts(self):
+        # Regression fixture reproducing the real corpus shape found in
+        # docs/court-record/theory/federal-constitutional/existing-doctrine/
+        # first-amendment-landmark-cases-research/01-...xml: a <title>
+        # with an ALREADY-correct nested <emphasis> whose .tail still
+        # holds raw, unconverted "**...**" text.
+        from convert_markdown_remnants import convert_inline_emphasis
+        root = _parse(
+            '<section xmlns="http://docbook.org/ns/docbook">'
+            '<title><emphasis role="strong">Case Analysis:</emphasis> '
+            '<emphasis><emphasis role="strong">Gitlow v. New York</emphasis>'
+            '</emphasis>**, 268 U.S. 652 (1925)**</title>'
+            '</section>'
+        )
+        n = convert_inline_emphasis(root)
+        self.assertEqual(n, 1)
+        title = root.find(f"{DB_NS}title")
+        emphases = title.findall(f"{DB_NS}emphasis")
+        self.assertEqual(len(emphases), 3)
+        new_one = emphases[-1]
+        self.assertEqual(new_one.get("role"), "strong")
+        self.assertEqual(new_one.text, ", 268 U.S. 652 (1925)")
+        self.assertNotIn("*", "".join(title.itertext()))
+
+    def test_multiple_spans_in_one_run_all_convert(self):
+        from convert_markdown_remnants import convert_inline_emphasis
+        root = _parse(
+            '<section xmlns="http://docbook.org/ns/docbook">'
+            '<para>**one** and *two* and **three**</para>'
+            '</section>'
+        )
+        convert_inline_emphasis(root)
+        para = root.find(f"{DB_NS}para")
+        children = list(para)
+        self.assertEqual(len(children), 3)
+        self.assertEqual([c.text for c in children], ["one", "two", "three"])
+        self.assertEqual([c.get("role") for c in children], ["strong", None, "strong"])
+
+    def test_is_idempotent_on_a_second_run(self):
+        from convert_markdown_remnants import convert_inline_emphasis
+        root = _parse(
+            '<section xmlns="http://docbook.org/ns/docbook">'
+            '<para>This is **bold** text.</para>'
+            '</section>'
+        )
+        convert_inline_emphasis(root)
+        first_pass_xml = ET.tostring(root)
+        n_second = convert_inline_emphasis(root)
+        self.assertEqual(n_second, 0)
+        self.assertEqual(ET.tostring(root), first_pass_xml)
+
 
 class TestConvertRawTables(unittest.TestCase):
     def _table_fixture(self):
