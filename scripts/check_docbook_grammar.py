@@ -84,3 +84,27 @@ def resolve_xinclude(xml_path):
     if result.returncode != 0:
         return None, result.stderr.strip()
     return result.stdout, None
+
+
+def validate_grammar(resolved_text, schema_path, source_label):
+    """[] if resolved_text is valid per schema_path, else jing's own
+    error lines -- with the meaningless throwaway temp-file path jing
+    was actually handed rewritten back to source_label, so a reported
+    error points a reader at the real corpus file, not a /tmp path
+    that won't exist by the time anyone reads the CI log. jing's own
+    CLI only validates files, not stdin, so resolved_text is spilled
+    to a temp file first, always cleaned up (success or error)."""
+    fd, temp_path = tempfile.mkstemp(suffix=".xml")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            f.write(resolved_text)
+        result = subprocess.run(
+            ["jing", "-c", str(schema_path), temp_path],
+            capture_output=True, text=True,
+        )
+    finally:
+        os.unlink(temp_path)
+    if result.returncode == 0:
+        return []
+    output = result.stdout.strip() or result.stderr.strip()
+    return [line.replace(temp_path, str(source_label)) for line in output.splitlines()]

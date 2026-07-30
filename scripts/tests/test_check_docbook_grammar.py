@@ -78,5 +78,29 @@ class TestResolveXinclude(_WritesFilesFixture, unittest.TestCase):
         self.assertIn("does-not-exist.xml", error)
 
 
+class TestValidateGrammar(unittest.TestCase):
+    def setUp(self):
+        from check_docbook_grammar import fetch_docbook_schema
+        self.schema = fetch_docbook_schema()
+
+    def test_accepts_valid_resolved_text(self):
+        from check_docbook_grammar import validate_grammar
+        errors = validate_grammar(GOOD_FRAGMENT, self.schema, "source.xml")
+        self.assertEqual(errors, [])
+
+    def test_rejects_a_structurally_broken_document(self):
+        from check_docbook_grammar import validate_grammar
+        errors = validate_grammar(BROKEN_FRAGMENT, self.schema, "source.xml")
+        self.assertTrue(errors)
+        self.assertIn("title", " ".join(errors))
+
+    def test_error_messages_reference_the_source_label_not_a_temp_path(self):
+        from check_docbook_grammar import validate_grammar
+        errors = validate_grammar(BROKEN_FRAGMENT, self.schema, "my-real-source.xml")
+        joined = " ".join(errors)
+        self.assertIn("my-real-source.xml", joined)
+        self.assertNotIn(tempfile.gettempdir(), joined)
+
+
 if __name__ == "__main__":
     unittest.main()
