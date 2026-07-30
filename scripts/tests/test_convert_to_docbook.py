@@ -912,6 +912,101 @@ class TestWrapFragmentNoSiblingTitle(unittest.TestCase):
         self.assertTrue(any(c.tag == f"{{{DB_NS}}}para" for c in article))
 
 
+class TestDctermsCompletenessSchematron(unittest.TestCase):
+    """Exercises docs/schema/dcterms-completeness.sch directly through
+    lxml.isoschematron, independent of validate_dcterms_completeness()'s
+    own XInclude-resolution plumbing (covered separately, against this
+    same schema file, by TestValidateDctermsCompleteness below)."""
+
+    SVRL_NS = "http://purl.oclc.org/dsdl/svrl"
+
+    def _messages(self, xml_str):
+        from lxml import etree
+        from lxml.isoschematron import Schematron
+        from convert_to_docbook import REPO_ROOT, element_full_text
+
+        sch_path = REPO_ROOT / "docs" / "schema" / "dcterms-completeness.sch"
+        validator = Schematron(file=str(sch_path), store_report=True)
+        doc = etree.fromstring(xml_str.encode("utf-8"))
+        validator.validate(doc)
+        return [
+            element_full_text(fa.find(f"{{{self.SVRL_NS}}}text"))
+            for fa in validator.validation_report.getroot().iter(
+                f"{{{self.SVRL_NS}}}failed-assert"
+            )
+        ]
+
+    def _article(self, info_inner):
+        return (
+            '<article xmlns="http://docbook.org/ns/docbook" '
+            'xmlns:dc="http://purl.org/dc/terms/" version="5.2" '
+            'xml:id="s" xml:lang="en">\n'
+            f'  <info>{info_inner}</info>\n'
+            '  <para>Body.</para>\n'
+            '</article>\n'
+        )
+
+    def test_flags_missing_info(self):
+        xml = (
+            '<article xmlns="http://docbook.org/ns/docbook" '
+            'xmlns:dc="http://purl.org/dc/terms/" version="5.2" '
+            'xml:id="s" xml:lang="en">\n'
+            '  <para>Body.</para>\n'
+            '</article>\n'
+        )
+        self.assertEqual(self._messages(xml), ["missing info"])
+
+    def test_flags_missing_title(self):
+        xml = self._article(
+            '<pubdate>2026-01-01</pubdate>'
+            '<biblioid class="uri">https://example.com/x</biblioid>'
+            '<dc:type>Text</dc:type>'
+        )
+        self.assertEqual(self._messages(xml), ["missing title"])
+
+    def test_flags_missing_pubdate(self):
+        xml = self._article(
+            '<title>T</title>'
+            '<biblioid class="uri">https://example.com/x</biblioid>'
+            '<dc:type>Text</dc:type>'
+        )
+        self.assertEqual(self._messages(xml), ["missing pubdate"])
+
+    def test_flags_missing_biblioid(self):
+        xml = self._article(
+            '<title>T</title><pubdate>2026-01-01</pubdate><dc:type>Text</dc:type>'
+        )
+        self.assertEqual(self._messages(xml), ["missing biblioid"])
+
+    def test_flags_dc_type_missing_entirely(self):
+        xml = self._article(
+            '<title>T</title><pubdate>2026-01-01</pubdate>'
+            '<biblioid class="uri">https://example.com/x</biblioid>'
+        )
+        self.assertEqual(
+            self._messages(xml), ['dc:type must be exactly "Text", found None']
+        )
+
+    def test_flags_wrong_dc_type_value(self):
+        xml = self._article(
+            '<title>T</title><pubdate>2026-01-01</pubdate>'
+            '<biblioid class="uri">https://example.com/x</biblioid>'
+            '<dc:type>ScholarlyArticle</dc:type>'
+        )
+        self.assertEqual(
+            self._messages(xml),
+            ['dc:type must be exactly "Text", found \'ScholarlyArticle\''],
+        )
+
+    def test_accepts_fully_compliant_document(self):
+        xml = self._article(
+            '<title>T</title><pubdate>2026-01-01</pubdate>'
+            '<biblioid class="uri">https://example.com/x</biblioid>'
+            '<dc:type>Text</dc:type>'
+        )
+        self.assertEqual(self._messages(xml), [])
+
+
 class TestValidateDctermsCompleteness(unittest.TestCase):
     def _write(self, tmp, info_children):
         path = Path(tmp) / "sample.xml"
