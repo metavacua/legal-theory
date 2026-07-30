@@ -10,11 +10,19 @@ from datetime import date as _date
 from pathlib import Path
 from xml.sax.saxutils import escape as xml_escape
 
+# lxml (not the stdlib xml.etree.ElementTree already imported as ET
+# above) is used for exactly one thing in this file: running the real
+# ISO/IEC 19757-3 Schematron schema below through lxml.isoschematron.
+# Everything else in this module keeps using ET.
+from lxml import etree
+from lxml import isoschematron
+
 DB_NS = "http://docbook.org/ns/docbook"
 XI_NS = "http://www.w3.org/2001/XInclude"
 XLINK_NS = "http://www.w3.org/1999/xlink"
 XML_NS = "http://www.w3.org/XML/1998/namespace"
 DC_NS = "http://purl.org/dc/terms/"
+SVRL_NS = "http://purl.oclc.org/dsdl/svrl"
 ET.register_namespace("", DB_NS)
 ET.register_namespace("xi", XI_NS)
 ET.register_namespace("xlink", XLINK_NS)
@@ -276,6 +284,7 @@ HTML5_XSL_PATH = Path("/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/d
 
 DOCBOOK_RNC_URL = "https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc"
 DOCBOOK_SCHEMA_CACHE = REPO_ROOT / ".cache" / "docbook-5.2" / "docbookxi.rnc"
+DCTERMS_SCHEMATRON_PATH = REPO_ROOT / "docs" / "schema" / "dcterms-completeness.sch"
 
 
 def fetch_docbook_schema():
@@ -299,27 +308,29 @@ def validate_dcterms_completeness(xml_path):
     missing any of this project's own required <info> fields: <title>,
     <pubdate>, <biblioid>, or a dc:type not equal to "Text". DocBook's
     own grammar correctly has no opinion about any of this -- these are
-    this project's policy, not DocBook's, so they're enforced here in
-    Python rather than forced into RELAX NG or Schematron (both
-    confirmed, elsewhere in this project's tooling, to have real gaps
-    in this environment's jing/xmllint combination)."""
+    this project's policy, not DocBook's, so they're enforced via a real
+    Schematron (ISO/IEC 19757-3) schema -- docs/schema/dcterms-completeness.sch,
+    run through lxml.isoschematron -- rather than a hand-rolled tree walk.
+    (xmllint --schematron, libxml2's native support, is confirmed broken
+    in this environment: even a minimal valid Schematron file fails with
+    "validation generated an internal error". lxml.isoschematron is a
+    second, architecturally unrelated Schematron implementation -- a
+    pure-XSLT compiler of the official ISO skeleton, not libxml2's
+    native C support -- and it works, confirmed by direct testing.)"""
     resolved = subprocess.run(
         ["xmllint", "--xinclude", str(xml_path)], capture_output=True, text=True, check=True,
     ).stdout
-    root = ET.fromstring(resolved)
-    info = root.find(f"{{{DB_NS}}}info")
+    # lxml refuses to parse a Python str that carries an XML encoding
+    # declaration ("Unicode strings with encoding declaration are not
+    # supported"), and xmllint's resolved output always has one -- so
+    # re-encode to bytes before handing it to lxml.
+    doc = etree.fromstring(resolved.encode("utf-8"))
+    validator = isoschematron.Schematron(file=str(DCTERMS_SCHEMATRON_PATH), store_report=True)
+    validator.validate(doc)
     violations = []
-    if info is None:
-        return [f"{xml_path}: missing info"]
-    if info.find(f"{{{DB_NS}}}title") is None:
-        violations.append(f"{xml_path}: missing title")
-    if info.find(f"{{{DB_NS}}}pubdate") is None:
-        violations.append(f"{xml_path}: missing pubdate")
-    if info.find(f"{{{DB_NS}}}biblioid") is None:
-        violations.append(f"{xml_path}: missing biblioid")
-    dc_type = info.find(f"{{{DC_NS}}}type")
-    if dc_type is None or dc_type.text != "Text":
-        violations.append(f"{xml_path}: dc:type must be exactly \"Text\", found {dc_type.text if dc_type is not None else None!r}")
+    for failed_assert in validator.validation_report.getroot().iter(f"{{{SVRL_NS}}}failed-assert"):
+        message = element_full_text(failed_assert.find(f"{{{SVRL_NS}}}text"))
+        violations.append(f"{xml_path}: {message}")
     return violations
 
 

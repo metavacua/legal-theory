@@ -1072,6 +1072,17 @@ class TestValidateDctermsCompleteness(unittest.TestCase):
             self.assertEqual(len(violations), 1)
             self.assertIn("dc:type", violations[0])
 
+    def test_missing_dc_type_entirely_is_flagged(self):
+        from convert_to_docbook import validate_dcterms_completeness
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self._write(
+                tmp,
+                '<title>T</title><pubdate>2026-01-01</pubdate>'
+                '<biblioid class="uri">https://example.com/x</biblioid>',
+            )
+            violations = validate_dcterms_completeness(path)
+            self.assertEqual(violations, [f'{path}: dc:type must be exactly "Text", found None'])
+
     def test_real_corpus_document_has_no_violations(self):
         from convert_to_docbook import validate_dcterms_completeness, REPO_ROOT
         path = REPO_ROOT / "docs" / "wip" / "jpa-and-city-cooperatives.xml"
