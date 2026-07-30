@@ -16,6 +16,55 @@ from convert_to_docbook import (  # noqa: E402
     REPO_ROOT, element_full_text, validate, build_html, write_metadata,
 )
 
+# eyecite (Free Law Project) has no apt package -- installed into a
+# dedicated, gitignored venv at .venv-eyecite/, same precedent as
+# scripts/eyecite_classify.py. Guarded so `import build_bibliography`
+# never fails under the bare system python3 this repo's other tooling
+# and most of this file's own tests run under; classify_case/
+# classify_statute raise a clear, actionable RuntimeError if actually
+# called without it (see _require_eyecite below) rather than silently
+# degrading -- consistent with this codebase's existing no-fabrication
+# convention (format_secondary_chicago's "[author unknown]" markers,
+# etc.): a missing dependency must be loud, not a silent wrong answer.
+try:
+    from eyecite import get_citations
+    from eyecite.models import FullCaseCitation, FullLawCitation
+    from reporters_db import LAWS  # eyecite's own hard dependency (see its "Requires:")
+    # eyecite's own reporters-db already enumerates every reporter-string
+    # variation that means the U.S. Code -- confirmed 2026-07-29:
+    # reporters_db.LAWS["U.S.C."][0]["variations"] includes "U.S. Code"
+    # (Cornell LII's own page-title phrasing, the confirmed source of this
+    # bug), plus "U.S.C.A.", "U.S.C.S.", "USC", "United States Code", etc.,
+    # and citation.groups["reporter"] preserves the source text's own
+    # variation string verbatim (confirmed: get_citations("17 U.S.C.A. §
+    # 101")[0].groups["reporter"] == "U.S.C.A."). Reused directly here
+    # instead of hand-typing a subset that would silently miss whichever
+    # variation some other aggregator happens to use. Computed here,
+    # inside the same guarded block as the imports it depends on (not at
+    # bare module scope), so it is never even evaluated -- let alone
+    # raise a NameError -- under the bare python3 interpreter that has
+    # neither eyecite nor reporters_db; like get_citations/
+    # FullCaseCitation/FullLawCitation above, it is simply never bound
+    # under that interpreter, and every real use is already gated behind
+    # _require_eyecite() first.
+    _USC_REPORTER_ALIASES = {"U.S.C."} | set(LAWS["U.S.C."][0]["variations"])
+    _EYECITE_AVAILABLE = True
+except ImportError:
+    _EYECITE_AVAILABLE = False
+
+_EYECITE_REQUIRED_MSG = (
+    "eyecite is required for legal-citation classification and is not "
+    "installed under this interpreter. Run this script/test via "
+    ".venv-eyecite/bin/python3 (create it once with: python3 -m venv "
+    ".venv-eyecite && .venv-eyecite/bin/pip install --quiet eyecite -- "
+    "see scripts/eyecite_classify.py for the same precedent)."
+)
+
+
+def _require_eyecite():
+    if not _EYECITE_AVAILABLE:
+        raise RuntimeError(_EYECITE_REQUIRED_MSG)
+
 
 def _normalize_ws(s):
     return " ".join(s.split())
@@ -177,25 +226,60 @@ _STATUTE_RE = re.compile(
     r"(?P<code>" + "|".join(re.escape(k) for k in CODE_ABBREVIATIONS) + r")\s*§\s*(?P<section>[\d.]+)",
     re.IGNORECASE,
 )
-_USC_RE = re.compile(r"(?P<title>\d+)\s*U\.S\.C\.\s*§+\s*(?P<section>[\w.-]+(?:,\s*[\w.-]+)*)")
 _YEAR_RE = re.compile(r"\((\d{4})\)")
+
+# eyecite's FullLawCitation only captures the FIRST section number in a
+# "§§ 101, 106" list (confirmed 2026-07-29:
+# get_citations("17 U.S.C. §§ 101, 106")[0].groups["section"] == "101",
+# not "101, 106") -- recovered by scanning the original text immediately
+# after eyecite's own matched span for further ", NNN" continuations.
+# Anchored to digits only (not the old _USC_RE's [\w.-]+, which could
+# over-consume into following prose -- e.g. "§ 101, defining terms"
+# would wrongly capture section "101, defining" with a word-based
+# pattern; verified this exact failure mode with [\w.-]+ before settling
+# on digits-only).
+_SECTION_CONTINUATION_RE = re.compile(r"^(?:,\s*\d[\d.-]*)+")
+
+
+def _section_with_continuation(text, citation):
+    m = _SECTION_CONTINUATION_RE.match(text[citation.span()[1]:])
+    return citation.groups.get("section", "") + (m.group(0) if m else "")
 
 
 def classify_statute(text):
     """dict(type='statute', abbrev, section, year) if text names a known
-    statute (a code in CODE_ABBREVIATIONS or a U.S.C. title) with a
-    section symbol, else None. Never guesses at unrecognized
-    abbreviations."""
+    statute with a section symbol, else None. Never guesses at
+    unrecognized abbreviations.
+
+    Tries eyecite's FullLawCitation first, but ONLY trusts it for the
+    federal U.S. Code (_USC_REPORTER_ALIASES) -- confirmed 2026-07-29
+    that eyecite's reporters-db does not recognize this corpus's actual
+    raw works-cited phrasing for California codes ("California Civil
+    Code § 1550"), only the already-abbreviated Bluebook form ("Cal.
+    Civ. Code § 1550") this corpus's raw text never actually uses, AND
+    that eyecite's own corrected_citation()/groups reconstruction for
+    California codes silently drops the "Civ."/"Corp." subject
+    specifier. CODE_ABBREVIATIONS/_STATUTE_RE is therefore kept,
+    unchanged, as the sole path for state codes; eyecite replaces only
+    the confirmed, narrower federal U.S.C./U.S. Code bug.
+    """
+    if not text or not text.strip():
+        return None
+    _require_eyecite()
+    for citation in get_citations(text):
+        if isinstance(citation, FullLawCitation) and citation.groups.get("reporter") in _USC_REPORTER_ALIASES:
+            year = citation.metadata.year
+            return {
+                "type": "statute",
+                "abbrev": f"{citation.groups.get('title')} U.S.C.",
+                "section": _section_with_continuation(text, citation),
+                "year": str(year) if year else None,
+            }
     m = _STATUTE_RE.search(text)
-    if m:
-        abbrev = CODE_ABBREVIATIONS[m.group("code").lower()]
-        section = m.group("section")
-    else:
-        m = _USC_RE.search(text)
-        if not m:
-            return None
-        abbrev = f"{m.group('title')} U.S.C."
-        section = m.group("section")
+    if not m:
+        return None
+    abbrev = CODE_ABBREVIATIONS[m.group("code").lower()]
+    section = m.group("section")
     year_m = _YEAR_RE.search(text)
     return {"type": "statute", "abbrev": abbrev, "section": section, "year": year_m.group(1) if year_m else None}
 
@@ -207,21 +291,48 @@ def format_statute_bluebook(parsed):
     return f"{parsed['abbrev']} {mark} {parsed['section']} ({year})."
 
 
-CASE_LAW_DOMAINS = {"courtlistener.com", "casetext.com", "casemine.com", "law.justia.com", "scholar.google.com"}
+CASE_LAW_DOMAINS = {
+    # Original 5.
+    "courtlistener.com", "casetext.com", "casemine.com", "law.justia.com", "scholar.google.com",
+    # Added 2026-07-29 -- confirmed by direct corpus analysis: of 356 raw
+    # works-cited entries containing " v. " that the old code misfiled as
+    # "secondary", 350 have NO recoverable reporter citation anywhere in
+    # their text (bare case-name titles from case-law-specific archives/
+    # study-aid sites); fixing the reporter-parsing bug alone (Task 3)
+    # only recovers 6 of those 356. These real hostnames (one verified
+    # real corpus entry per host) recover most of the rest.
+    "supreme.justia.com",       # Justia's US Supreme Court opinion archive (a sibling subdomain of law.justia.com, not a suffix of it -- needs its own entry)
+    "caselaw.findlaw.com", "supreme.findlaw.com",  # FindLaw's case-law subdomains (codes./constitution./corporate.findlaw.com are NOT case archives and are deliberately excluded)
+    "oyez.org",                 # Oyez -- dedicated SCOTUS oral-argument/case archive
+    "casebriefs.com",           # dedicated case-brief archive (briefs real, decided cases only)
+    "studicata.com",            # ditto
+    "law.cornell.edu",          # Cornell LII -- hosts primary case text alongside U.S.C./CFR
+    "scocal.stanford.edu",      # Stanford's CA Supreme Court opinion archive
+    "uscourts.gov",             # federal judiciary -- matches *.uscourts.gov via the existing suffix check (e.g. cdn.ca9.uscourts.gov, media.cadc.uscourts.gov, www.uscourts.gov)
+    "supremecourt.gov",         # official SCOTUS site
+    # Deliberately NOT added (confirmed real hostnames in the same
+    # corpus scan, none case-law-specific): en.wikipedia.org,
+    # www.britannica.com, www.ebsco.com, firstamendment.mtsu.edu, and a
+    # long tail of law-firm/advocacy/general-education sites. See
+    # test_wikipedia_domain_deliberately_not_recognized_as_case_law_aggregator.
+}
 _CASE_RE = re.compile(
     r"(?P<plaintiff>[A-Z][\w.,'&-]*(?:\s+[A-Z][\w.,'&-]*){0,6})\s+v\.\s+"
     r"(?P<defendant>[A-Z][\w.,'&-]*(?:\s+[A-Z][\w.,'&-]*){0,6})"
-)
-_REPORTER_ABBREVS = ["Cal. 3d", "Cal.3d", "F.2d", "F. 2d", "F.3d", "F. 3d", "U.S.", "P.2d", "P. 2d"]
-_REPORTER_RE = re.compile(
-    r"\((?P<year>\d{4})\)\s*(?P<volume>\d+)\s+(?P<reporter>"
-    + "|".join(re.escape(r) for r in _REPORTER_ABBREVS)
-    + r")\.?\s*(?P<page>\d+)"
 )
 _PROCEDURAL_ROLE_RE = re.compile(
     r",?\s*(?:Plaintiff|Defendant|Appellant|Appellee|Respondent|Petitioner)(?:-\w+)?\.?,?\s*$",
     re.IGNORECASE,
 )
+# A citation immediately follows the matched case name in one of two
+# orders, confirmed 2026-07-29 against real examples of both: standard
+# Bluebook ("Marbury v. Madison, 5 U.S. 137 (1803)" -- citation right at
+# the start of the tail) or California's year-first order ("Marvin v.
+# Marvin (1976) 18 Cal. 3d 660" -- a "(YEAR) " prefix before the
+# citation). eyecite does not capture a LEADING year as the citation's
+# own metadata.year (confirmed: get_citations("(1976) 18 Cal. 3d
+# 660")[0].metadata.year is None), so it is captured here instead.
+_LEADING_YEAR_RE = re.compile(r"^\((?P<year>\d{4})\)\s*")
 
 
 def _strip_procedural_role(name):
@@ -239,24 +350,67 @@ def _looks_like_case_domain(href):
     return any(host == d or host.endswith("." + d) for d in CASE_LAW_DOMAINS)
 
 
+def _immediately_following_case_citation(tail):
+    """(FullCaseCitation, leading_year) for the reporter citation that
+    appears immediately at the start of tail, in either order (see
+    _LEADING_YEAR_RE above) -- or (None, None) if no eyecite-resolvable
+    citation is immediately adjacent. Anchoring to the exact start of
+    tail (not "found somewhere in tail") is deliberate: it is what
+    prevents an unrelated reporter citation elsewhere in a longer string
+    from corroborating a false " v. " match -- confirmed 2026-07-29
+    against both existing adversarial tests for this (an unrelated
+    citation 60+ characters into the tail, and a second, real, but
+    unrelated citation embedded in a parenthetical aside): neither sits
+    at position 0 of tail, so neither corroborates."""
+    if not tail:
+        return None, None
+    leading_year = None
+    remainder = tail
+    ly_m = _LEADING_YEAR_RE.match(tail)
+    if ly_m:
+        leading_year = ly_m.group("year")
+        remainder = tail[ly_m.end():]
+    for citation in get_citations(remainder):
+        if isinstance(citation, FullCaseCitation) and citation.span()[0] == 0:
+            return citation, leading_year
+    return None, None
+
+
 def classify_case(text, href):
     """dict(type='case', name, complete, ...) if text contains a " v. "
     case-name pattern AND that pattern is corroborated by either a full
-    reporter citation in the same text or a known case-law-aggregator
-    URL, else None. A bare " v. " match with neither signal is NOT
-    classified as a case (avoids false positives on essay titles like
-    "Privacy v. Transparency in Legal Practice")."""
+    reporter citation immediately following the matched name or a known
+    case-law-aggregator URL, else None. A bare " v. " match with neither
+    signal is NOT classified as a case (avoids false positives on essay
+    titles like "Privacy v. Transparency in Legal Practice").
+
+    The reporter citation itself is found via eyecite, replacing the old
+    hand-rolled _REPORTER_RE (which only matched a "(YEAR) VOLUME
+    REPORTER PAGE" order against 9 hardcoded reporters -- confirmed
+    2026-07-29 to miss standard Bluebook "VOLUME REPORTER PAGE (YEAR)"
+    order entirely). The case-name pattern itself (_CASE_RE) is
+    unchanged: eyecite has no bare-prose case-name-extraction capability
+    independent of an actual citation, so it cannot replace this part --
+    it is only used to recognize/parse the reporter citation once a
+    candidate name is already in hand.
+    """
+    if not text or not text.strip():
+        return None
     m = _CASE_RE.search(text)
     if not m:
         return None
     name = f"{_strip_procedural_role(m.group('plaintiff'))} v. {_strip_procedural_role(m.group('defendant'))}"
     tail = text[m.end():].lstrip(" ,.")
-    rep_m = _REPORTER_RE.match(tail)
-    if rep_m:
+    _require_eyecite()
+    citation, leading_year = _immediately_following_case_citation(tail)
+    if citation:
+        year = leading_year or (str(citation.metadata.year) if citation.metadata.year else None)
         return {
             "type": "case", "name": name, "complete": True,
-            "year": rep_m.group("year"), "volume": rep_m.group("volume"),
-            "reporter": rep_m.group("reporter"), "page": rep_m.group("page"),
+            "year": year,
+            "volume": citation.groups.get("volume"),
+            "reporter": citation.groups.get("reporter"),
+            "page": citation.groups.get("page"),
         }
     if _looks_like_case_domain(href):
         return {"type": "case", "name": name, "complete": False}
@@ -266,9 +420,13 @@ def classify_case(text, href):
 def format_case_bluebook(parsed):
     """Bluebook-style citation string for a classify_case() result. Falls
     back to a "[reporter citation unknown]" marker when the case data is
-    only partial (name corroborated by domain but no reporter found)."""
+    only partial (name corroborated by domain but no reporter found), and
+    to a "[year unknown]" marker when a reporter WAS found but with no
+    adjoining year -- confirmed against a real corpus entry (Task 3) where
+    the only nearby 4-digit number is an access date, not a decision year."""
     if parsed["complete"]:
-        return f"{parsed['name']}, {parsed['volume']} {parsed['reporter']} {parsed['page']} ({parsed['year']})."
+        year = parsed["year"] or "[year unknown]"
+        return f"{parsed['name']}, {parsed['volume']} {parsed['reporter']} {parsed['page']} ({year})."
     return f"{parsed['name']}, [reporter citation unknown]."
 
 

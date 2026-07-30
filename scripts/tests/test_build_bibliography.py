@@ -8,6 +8,19 @@ from build_bibliography import REPO_ROOT  # noqa: E402
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures" / "bibliography"
 
+try:
+    import eyecite  # noqa: F401
+    EYECITE_AVAILABLE = True
+except ImportError:
+    EYECITE_AVAILABLE = False
+
+SKIP_REASON = (
+    "eyecite is not installed under this interpreter -- it lives only "
+    "in the dedicated .venv-eyecite/ virtualenv, not the bare system "
+    "python3 every other script/test in this repo runs under. Run this "
+    "test file with .venv-eyecite/bin/python3 to exercise it."
+)
+
 
 class TestBuildBacklinkMap(unittest.TestCase):
     def test_maps_shell_and_its_fragment_to_shells_html(self):
@@ -112,6 +125,7 @@ class TestAccessDate(unittest.TestCase):
         self.assertEqual(strip_access_date(text), "First then re-accessed September 19, 2025,")
 
 
+@unittest.skipUnless(EYECITE_AVAILABLE, SKIP_REASON)
 class TestClassifyStatute(unittest.TestCase):
     def test_classifies_known_code_with_year(self):
         from build_bibliography import classify_statute
@@ -143,6 +157,41 @@ class TestClassifyStatute(unittest.TestCase):
         parsed = classify_statute("17 U.S.C. §§ 101, 106")
         self.assertEqual(parsed["section"], "101, 106")
 
+    def test_classifies_us_code_phrasing(self):
+        """Cornell LII's actual works-cited page-title phrasing for the
+        U.S. Code -- confirmed 2026-07-29 as the root cause of 20 real
+        corpus entries (including this project's own central Copyright
+        Act provisions, "17 U.S. Code § 101 - Definitions") being
+        misfiled as non-legal, since the old _USC_RE required the
+        literal string "U.S.C."."""
+        from build_bibliography import classify_statute
+        parsed = classify_statute(
+            "17 U.S. Code § 101 - Definitions - Legal Information Institute - Cornell University."
+        )
+        self.assertEqual(parsed["abbrev"], "17 U.S.C.")
+        self.assertEqual(parsed["section"], "101")
+        self.assertIsNone(parsed["year"])
+
+    def test_classifies_us_code_phrasing_with_year(self):
+        from build_bibliography import classify_statute
+        parsed = classify_statute("17 U.S. Code § 101 (2018)")
+        self.assertEqual(parsed["abbrev"], "17 U.S.C.")
+        self.assertEqual(parsed["section"], "101")
+        self.assertEqual(parsed["year"], "2018")
+
+    def test_classifies_annotated_usc_variation(self):
+        """U.S.C.A. (West's Annotated) is one of several other real
+        variations reporters-db already lists as meaning the U.S. Code
+        (alongside U.S.C. and U.S. Code) -- confirmed 2026-07-29 via
+        reporters_db.LAWS["U.S.C."][0]["variations"]. Locks in reusing
+        that canonical list rather than a hand-typed 2-item subset that
+        would silently miss this and other real variations."""
+        from build_bibliography import classify_statute
+        parsed = classify_statute("17 U.S.C.A. § 101 (2018)")
+        self.assertEqual(parsed["abbrev"], "17 U.S.C.")
+        self.assertEqual(parsed["section"], "101")
+        self.assertEqual(parsed["year"], "2018")
+
 
 class TestFormatStatuteBluebook(unittest.TestCase):
     def test_formats_with_known_year(self):
@@ -161,6 +210,7 @@ class TestFormatStatuteBluebook(unittest.TestCase):
         self.assertEqual(format_statute_bluebook(parsed), "17 U.S.C. §§ 101, 106 ([year unknown]).")
 
 
+@unittest.skipUnless(EYECITE_AVAILABLE, SKIP_REASON)
 class TestClassifyCase(unittest.TestCase):
     def test_full_reporter_citation_gives_complete_bluebook_data(self):
         from build_bibliography import classify_case
@@ -215,6 +265,144 @@ class TestClassifyCase(unittest.TestCase):
         self.assertNotIn("Plaintiff", parsed["name"])
         self.assertNotIn("appellant", parsed["name"])
 
+    def test_bluebook_order_reporter_citation_now_recognized(self):
+        """Confirmed 2026-07-29 root cause: the old _REPORTER_RE only
+        matched "(YEAR) VOLUME REPORTER PAGE" (California order); this is
+        the standard Bluebook "VOLUME REPORTER PAGE (YEAR)" order it
+        missed entirely, even though "U.S." was in the old 9-item
+        reporter allowlist."""
+        from build_bibliography import classify_case
+        parsed = classify_case("Marbury v. Madison, 5 U.S. 137 (1803)", href=None)
+        self.assertEqual(parsed["name"], "Marbury v. Madison")
+        self.assertTrue(parsed["complete"])
+        self.assertEqual(parsed["year"], "1803")
+        self.assertEqual(parsed["volume"], "5")
+        self.assertEqual(parsed["reporter"], "U.S.")
+        self.assertEqual(parsed["page"], "137")
+
+    def test_second_bluebook_order_example(self):
+        from build_bibliography import classify_case
+        parsed = classify_case("Roe v. Wade, 410 U.S. 113 (1973)", href=None)
+        self.assertTrue(parsed["complete"])
+        self.assertEqual(parsed["year"], "1973")
+        self.assertEqual(parsed["volume"], "410")
+        self.assertEqual(parsed["page"], "113")
+
+    def test_reporter_outside_old_nine_item_allowlist_now_recognized(self):
+        """N.W.2d (North Western Reporter) was never in the old
+        hardcoded 9-entry _REPORTER_ABBREVS list -- confirmed 2026-07-29
+        against this real corpus works-cited entry."""
+        from build_bibliography import classify_case
+        parsed = classify_case("Women of State of Minnesota v. Gomez, 542 N.W.2d 17 (1995)", href=None)
+        self.assertTrue(parsed["complete"])
+        self.assertEqual(parsed["volume"], "542")
+        self.assertEqual(parsed["reporter"], "N.W.2d")
+        self.assertEqual(parsed["page"], "17")
+        self.assertEqual(parsed["year"], "1995")
+
+    def test_real_corpus_findlaw_bluebook_order_example(self):
+        """Real works-cited text (caselaw.findlaw.com), not a synthetic
+        string -- confirmed 2026-07-29 this is one of only 6 (of 356)
+        currently-misfiled ' v. ' secondary entries with an immediately
+        recoverable reporter citation."""
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "CALIFORNIA v. FREEMAN, 488 U.S. 1311 (1989) - FindLaw Caselaw, accessed September 21, 2025,",
+            href="https://caselaw.findlaw.com/court/us-supreme-court/488/1311.html",
+        )
+        self.assertTrue(parsed["complete"])
+        self.assertEqual(parsed["volume"], "488")
+        self.assertEqual(parsed["reporter"], "U.S.")
+        self.assertEqual(parsed["page"], "1311")
+        self.assertEqual(parsed["year"], "1989")
+
+    def test_real_corpus_reporter_with_no_adjoining_year_leaves_year_none(self):
+        """Confirmed 2026-07-29 against a real corpus entry: the "2025"
+        here is an access date, not a decision year, and must not be
+        misread as one. Feeds format_case_bluebook's new "[year
+        unknown]" fallback (Task 4)."""
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "Trading Technologies International v. IBG LLC, 921 F. 3d 1084 - BitLaw, accessed June 27, 2025,",
+            href=None,
+        )
+        self.assertTrue(parsed["complete"])
+        self.assertIsNone(parsed["year"])
+        self.assertEqual(parsed["volume"], "921")
+        self.assertEqual(parsed["reporter"], "F. 3d")
+        self.assertEqual(parsed["page"], "1084")
+
+    def test_expanded_domain_supreme_justia_recognized(self):
+        """Real corpus entry -- the reporter citation IS present in this
+        title ("421 U.S. 837 (1975)") but is not immediately adjacent to
+        the matched case name (separated by a "| " page-title divider),
+        so this is recognized via domain corroboration, not the reporter
+        path -- confirmed 2026-07-29 by direct testing of the anchoring
+        logic against this exact string."""
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "United Housing Foundation, Inc. v. Forman | 421 U.S. 837 (1975) | Justia U.S. Supreme Court Center, accessed June 28, 2025,",
+            href="https://supreme.justia.com/cases/federal/us/421/837/",
+        )
+        self.assertIsNotNone(parsed)
+        self.assertFalse(parsed["complete"])
+
+    def test_expanded_domain_oyez_recognized(self):
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "Citizens United v. Federal Election Commission | Oyez, accessed June 28, 2025,",
+            href="https://www.oyez.org/cases/2008/08-205",
+        )
+        self.assertIsNotNone(parsed)
+        self.assertFalse(parsed["complete"])
+
+    def test_expanded_domain_casebriefs_recognized(self):
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "United Housing Foundation, Inc. v. Forman | Case Brief for Law ..., accessed June 28, 2025,",
+            href="https://www.casebriefs.com/blog/law/securities-regulation/securities-regulation-keyed-to-coffee/definitions-of-security-and-exempted-securities/united-housing-foundation-inc-v-forman/",
+        )
+        self.assertIsNotNone(parsed)
+        self.assertFalse(parsed["complete"])
+
+    def test_expanded_domain_uscourts_gov_suffix_recognized(self):
+        """Confirms the existing suffix-match mechanism (host.endswith("."
+        + d)) correctly extends to a federal-court subdomain from just
+        one "uscourts.gov" entry -- confirmed 2026-07-29 this exact real
+        corpus entry (a notable Section 230 case) uses this subdomain."""
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "FAIR HOUSING COUNCIL v. ROOMMATES.COM - Ninth Circuit, accessed September 13, 2025,",
+            href="https://cdn.ca9.uscourts.gov/datastore/opinions/2008/04/02/0456916.pdf",
+        )
+        self.assertIsNotNone(parsed)
+        self.assertFalse(parsed["complete"])
+
+    def test_expanded_domain_supremecourt_gov_recognized(self):
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "19-1392 Dobbs v. Jackson Women's Health Organization (06/24/2022) - Supreme Court, accessed September 16, 2025,",
+            href="https://www.supremecourt.gov/opinions/21pdf/19-1392_6j37.pdf",
+        )
+        self.assertIsNotNone(parsed)
+        self.assertFalse(parsed["complete"])
+
+    def test_wikipedia_domain_deliberately_not_recognized_as_case_law_aggregator(self):
+        """Pins a deliberate design decision, not an oversight: Wikipedia
+        is a general encyclopedia, not a case-law-specific aggregator --
+        confirmed 2026-07-29 that none of the corpus's 63 Wikipedia-linked
+        ' v. ' entries carry a recoverable reporter citation either, so
+        classifying them as "legal" would fabricate a citation status
+        this data doesn't support. They correctly remain unclassified
+        here (classify_and_format later routes them to "secondary", the
+        honest outcome for a real secondary source)."""
+        from build_bibliography import classify_case
+        parsed = classify_case(
+            "Reves v. Ernst & Young - Wikipedia, accessed June 28, 2025,",
+            href="https://en.wikipedia.org/wiki/Reves_v._Ernst_%26_Young",
+        )
+        self.assertIsNone(parsed)
+
 
 class TestFormatCaseBluebook(unittest.TestCase):
     def test_formats_complete_citation(self):
@@ -231,6 +419,20 @@ class TestFormatCaseBluebook(unittest.TestCase):
             "Dynamex Operations West, Inc. v. Superior Court, [reporter citation unknown].",
         )
 
+    def test_formats_complete_citation_with_unknown_year(self):
+        """Newly reachable now that eyecite can find a complete reporter
+        citation with no adjoining year at all (Task 3) -- the old
+        _REPORTER_RE could never produce this combination, since its
+        year group was mandatory for a match to happen at all."""
+        from build_bibliography import format_case_bluebook
+        parsed = {"type": "case", "name": "Trading Technologies International v. IBG LLC",
+                  "complete": True, "year": None, "volume": "921", "reporter": "F. 3d", "page": "1084"}
+        self.assertEqual(
+            format_case_bluebook(parsed),
+            "Trading Technologies International v. IBG LLC, 921 F. 3d 1084 ([year unknown]).",
+        )
+
+    @unittest.skipUnless(EYECITE_AVAILABLE, SKIP_REASON)
     def test_trailing_comma_in_captured_party_name_does_not_produce_double_comma(self):
         from build_bibliography import classify_case, format_case_bluebook
         parsed = classify_case("Langford v. United States,", href="https://www.courtlistener.com/opinion/x/")
@@ -238,6 +440,7 @@ class TestFormatCaseBluebook(unittest.TestCase):
         self.assertNotIn(",,", display)
         self.assertEqual(display, "Langford v. United States, [reporter citation unknown].")
 
+    @unittest.skipUnless(EYECITE_AVAILABLE, SKIP_REASON)
     def test_trailing_comma_after_abbreviation_period_strips_comma_not_period(self):
         from build_bibliography import classify_case, format_case_bluebook
         parsed = classify_case("Trust Co. v. Signature Financial Group, Inc.,", href="https://www.courtlistener.com/opinion/x/")
@@ -281,6 +484,7 @@ class TestFormatSecondaryChicago(unittest.TestCase):
         self.assertNotIn('..."', result)
 
 
+@unittest.skipUnless(EYECITE_AVAILABLE, SKIP_REASON)
 class TestClassifyAndFormat(unittest.TestCase):
     def test_statute_routes_to_legal(self):
         from build_bibliography import classify_and_format, RawEntry
@@ -470,12 +674,14 @@ class TestVerifyInvariants(unittest.TestCase):
         return BibliographyEntry(section=section, display=display, citing_htmls=htmls,
                                    dedup_key=f"k:{display}")
 
+    @unittest.skipUnless(EYECITE_AVAILABLE, SKIP_REASON)
     def test_no_entry_lost_passes_when_counts_reconcile(self):
         from build_bibliography import verify_invariants, RawEntry
         raw = [RawEntry(text="t", href=None, citing_html="docs/a.html", source_file="docs/a.xml")]
         appendix = ["t"]
         self.assertEqual(verify_invariants(raw, appendix, [], [], REPO_ROOT), [])
 
+    @unittest.skipUnless(EYECITE_AVAILABLE, SKIP_REASON)
     def test_entry_lost_is_flagged(self):
         from build_bibliography import verify_invariants, RawEntry
         raw = [RawEntry(text="t", href=None, citing_html="docs/a.html", source_file="docs/a.xml")]
@@ -613,6 +819,7 @@ class TestEmitDocbook(unittest.TestCase):
 
 
 class TestEndToEndIntegration(unittest.TestCase):
+    @unittest.skipUnless(EYECITE_AVAILABLE, SKIP_REASON)
     def test_full_pipeline_produces_valid_docbook_with_all_four_buckets(self):
         from build_bibliography import (
             extract_all_raw_entries, parse_bibtex, classify_and_format, classify_bib_entry,
