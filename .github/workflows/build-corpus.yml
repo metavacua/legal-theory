@@ -36,15 +36,37 @@ jobs:
             curl -fsSL -o .cache/docbook-5.2/docbookxi.rnc \
               https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc
           while IFS= read -r xml; do
-            root_element="$(xmllint --xpath 'name(/*)' "$xml" 2>/dev/null || true)"
-            if [ "$root_element" != "article" ]; then
-              continue
-            fi
             echo "== $xml =="
             xmllint --noout --xinclude "$xml"
-            jing -c .cache/docbook-5.2/docbookxi.rnc "$xml"
-            python3 scripts/check_dcterms_completeness.py "$xml"
-            xsltproc --xinclude --stringparam docbook.css.source '' /usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl "$xml" > "${xml%.xml}.html"
+
+            # Validates the fully-XIncluded, reader-facing content against
+            # the real DocBook 5.2 grammar -- not just each shell article's
+            # own literal, unresolved <xi:include> placeholders -- and also
+            # validates fragment/metadata/boilerplate files this loop used
+            # to skip outright (root elements "section"/"info"/
+            # "legalnotice"). check_docbook_grammar.py's own classify()
+            # already knows, precisely and by namespace, which of this
+            # corpus's root-element shapes the real grammar can validate at
+            # all (see its module docstring for the full research trail),
+            # so every file found below is simply handed to it -- a file
+            # this grammar can't validate standalone ("biblioentry"/
+            # "authorgroup": real DocBook content, but not a start element
+            # this grammar exports; or a non-DocBook root entirely, e.g.
+            # docs/sitemap.xml's "urlset") is reported as an explicit,
+            # visible SKIP with its reason, not silently dropped -- so
+            # there is no separate, parallel root-element filter here that
+            # could quietly drift out of sync with what that script knows.
+            python3 scripts/check_docbook_grammar.py "$xml"
+
+            # dcterms-completeness and the HTML build are policies specific
+            # to reader-facing shell documents (root element "article"),
+            # unrelated to grammar validity -- this is the one classification
+            # this loop still needs to make for itself.
+            root_element="$(xmllint --xpath 'name(/*)' "$xml" 2>/dev/null || true)"
+            if [ "$root_element" = "article" ]; then
+              python3 scripts/check_dcterms_completeness.py "$xml"
+              xsltproc --xinclude --stringparam docbook.css.source '' /usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl "$xml" > "${xml%.xml}.html"
+            fi
           done < <(find docs -name '*.xml' -not -path '*/scratch/*' | sort)
 
       # pull_request events check out a detached, synthetic merge ref (not
