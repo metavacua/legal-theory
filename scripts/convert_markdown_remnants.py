@@ -34,8 +34,22 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from convert_to_docbook import DB_NS, REPO_ROOT  # noqa: E402
+from convert_to_docbook import DB_NS, XLINK_NS, REPO_ROOT  # noqa: E402
 from build_bibliography import _normalize_ws  # noqa: E402
+
+# Both wrapper elements below need not just the default DocBook
+# namespace but also xlink: a bare URL in plain prose (routine in
+# citation/works-cited text) is autolinked by pandoc's GFM reader into
+# a real <link xlink:href="..."> with no xmlns:xlink declaration of
+# its own (it relies on an ancestor to provide one, matching how
+# convert_to_docbook.py's own wrap_fragment() declares it on ITS
+# wrapper root for the same reason) -- confirmed live: omitting this
+# crashed the real corpus-wide run with "unbound prefix" on the first
+# citation text containing both a stray, non-emphasis '*' and a bare
+# URL (docs/bibliography/references.xml), well before
+# _convert_run_if_safe's own safety checks ever got a chance to
+# correctly decline converting that text for unrelated reasons.
+_WRAPPER_XMLNS = f'xmlns="{DB_NS}" xmlns:xlink="{XLINK_NS}"'
 
 
 def _run_pandoc_docbook5(text):
@@ -81,7 +95,7 @@ def _pandoc_inline_fragment(text):
     # test_para_containing_bold_converts_to_emphasis_strong during the
     # simplify pass that introduced _run_pandoc_docbook5).
     inner = fragment[fragment.index(">") + 1: -len("</para>")].strip()
-    wrapped = f'<r xmlns="{DB_NS}">{inner}</r>'
+    wrapped = f'<r {_WRAPPER_XMLNS}>{inner}</r>'
     return ET.fromstring(wrapped)
 
 
@@ -208,7 +222,7 @@ def _pandoc_table_fragment(markdown_text):
     only ever calls this with source _find_table_runs already
     confirmed is a valid table)."""
     fragment = _run_pandoc_docbook5(markdown_text)
-    wrapped = f'<r xmlns="{DB_NS}">{fragment}</r>'
+    wrapped = f'<r {_WRAPPER_XMLNS}>{fragment}</r>'
     root = ET.fromstring(wrapped)
     tables = [c for c in root if c.tag == f"{{{DB_NS}}}informaltable"]
     if len(tables) != 1:

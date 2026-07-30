@@ -71,6 +71,36 @@ class TestConvertInlineEmphasis(unittest.TestCase):
         self.assertEqual(para.text, text)
         self.assertEqual(list(para), [])
 
+    def test_stray_asterisk_next_to_a_bare_url_does_not_crash(self):
+        # Real corpus text (docs/bibliography/references.xml): a
+        # citation entry with a stray, non-emphasis "*" (footnote-
+        # marker-shaped, same family as the Schwartz/Scott case) in the
+        # same run as a bare URL. GFM autolinks bare URLs into a real
+        # <link xlink:href="..."> element -- pandoc emits that
+        # regardless of whether the stray "*" ends up converted, so
+        # _pandoc_inline_fragment's own wrapper element must declare
+        # the xlink namespace, not just the default DocBook one, or
+        # ET.fromstring raises "unbound prefix" before this function
+        # ever reaches its own safety checks. Confirmed live: this
+        # crashed main() on the real corpus during the first live
+        # --check-free run, on exactly this shape of text.
+        from convert_markdown_remnants import convert_inline_emphasis
+        text = (
+            'csun.edu. "Contract* What is an Acceptance?" '
+            "Accessed September 19, 2025. "
+            "https://www.csun.edu/sites/default/files/blawaccept.pdf"
+        )
+        root = _parse(
+            '<section xmlns="http://docbook.org/ns/docbook">'
+            f'<para>{text.replace("&", "&amp;")}</para>'
+            '</section>'
+        )
+        n = convert_inline_emphasis(root)
+        self.assertEqual(n, 0)
+        para = root.find(f"{DB_NS}para")
+        self.assertEqual(para.text, text)
+        self.assertEqual(list(para), [])
+
     def test_triple_asterisk_becomes_nested_italic_wrapping_bold(self):
         from convert_markdown_remnants import convert_inline_emphasis
         root = _parse(
