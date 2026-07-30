@@ -918,43 +918,28 @@ class TestDctermsCompletenessSchematron(unittest.TestCase):
     own XInclude-resolution plumbing (covered separately, against this
     same schema file, by TestValidateDctermsCompleteness below)."""
 
-    SVRL_NS = "http://purl.oclc.org/dsdl/svrl"
-
     def _messages(self, xml_str):
         from lxml import etree
-        from lxml.isoschematron import Schematron
-        from convert_to_docbook import REPO_ROOT, element_full_text
+        from convert_to_docbook import _dcterms_schematron_messages
 
-        sch_path = REPO_ROOT / "docs" / "schema" / "dcterms-completeness.sch"
-        validator = Schematron(file=str(sch_path), store_report=True)
         doc = etree.fromstring(xml_str.encode("utf-8"))
-        validator.validate(doc)
-        return [
-            element_full_text(fa.find(f"{{{self.SVRL_NS}}}text"))
-            for fa in validator.validation_report.getroot().iter(
-                f"{{{self.SVRL_NS}}}failed-assert"
-            )
-        ]
+        return _dcterms_schematron_messages(doc)
 
-    def _article(self, info_inner):
+    def _article(self, info_inner=None):
+        # info_inner=None omits <info> entirely (for the missing-info
+        # case below) rather than emitting an empty <info></info>.
+        info = f'  <info>{info_inner}</info>\n' if info_inner is not None else ''
         return (
             '<article xmlns="http://docbook.org/ns/docbook" '
             'xmlns:dc="http://purl.org/dc/terms/" version="5.2" '
             'xml:id="s" xml:lang="en">\n'
-            f'  <info>{info_inner}</info>\n'
+            f'{info}'
             '  <para>Body.</para>\n'
             '</article>\n'
         )
 
     def test_flags_missing_info(self):
-        xml = (
-            '<article xmlns="http://docbook.org/ns/docbook" '
-            'xmlns:dc="http://purl.org/dc/terms/" version="5.2" '
-            'xml:id="s" xml:lang="en">\n'
-            '  <para>Body.</para>\n'
-            '</article>\n'
-        )
-        self.assertEqual(self._messages(xml), ["missing info"])
+        self.assertEqual(self._messages(self._article()), ["missing info"])
 
     def test_flags_missing_title(self):
         xml = self._article(

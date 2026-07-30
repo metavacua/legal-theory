@@ -303,6 +303,25 @@ def fetch_docbook_schema():
     return DOCBOOK_SCHEMA_CACHE
 
 
+def _dcterms_schematron_messages(doc):
+    """Bare violation-message strings (no xml_path prefix) for an
+    already-parsed lxml document, per this project's own DCTERMS-
+    completeness policy (docs/schema/dcterms-completeness.sch), run
+    through lxml.isoschematron. Shared by validate_dcterms_completeness()
+    below and by that schema file's own direct tests
+    (TestDctermsCompletenessSchematron in test_convert_to_docbook.py),
+    so the SVRL failed-assert extraction logic lives in exactly one
+    place."""
+    validator = isoschematron.Schematron(file=str(DCTERMS_SCHEMATRON_PATH), store_report=True)
+    validator.validate(doc)
+    return [
+        element_full_text(failed_assert.find(f"{{{SVRL_NS}}}text"))
+        for failed_assert in validator.validation_report.getroot().iter(
+            f"{{{SVRL_NS}}}failed-assert"
+        )
+    ]
+
+
 def validate_dcterms_completeness(xml_path):
     """[violation message, ...] for a document (after XInclude resolution)
     missing any of this project's own required <info> fields: <title>,
@@ -325,13 +344,7 @@ def validate_dcterms_completeness(xml_path):
     # supported"), and xmllint's resolved output always has one -- so
     # re-encode to bytes before handing it to lxml.
     doc = etree.fromstring(resolved.encode("utf-8"))
-    validator = isoschematron.Schematron(file=str(DCTERMS_SCHEMATRON_PATH), store_report=True)
-    validator.validate(doc)
-    violations = []
-    for failed_assert in validator.validation_report.getroot().iter(f"{{{SVRL_NS}}}failed-assert"):
-        message = element_full_text(failed_assert.find(f"{{{SVRL_NS}}}text"))
-        violations.append(f"{xml_path}: {message}")
-    return violations
+    return [f"{xml_path}: {message}" for message in _dcterms_schematron_messages(doc)]
 
 
 def validate(xml_path):
