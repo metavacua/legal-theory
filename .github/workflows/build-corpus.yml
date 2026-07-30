@@ -61,11 +61,20 @@ jobs:
             # dcterms-completeness and the HTML build are policies specific
             # to reader-facing shell documents (root element "article"),
             # unrelated to grammar validity -- this is the one classification
-            # this loop still needs to make for itself.
+            # this loop still needs to make for itself. HTML is built via
+            # docs/xsl/xhtml5-corpus.xsl, a thin customization layer over the
+            # official docbook-xsl-ns xhtml5 stylesheet (not the upstream
+            # stylesheet directly) -- it suppresses the leading XML
+            # declaration and pairs xml:lang with lang, both required for
+            # this output to be valid HTML5 under real text/html serving
+            # (this corpus is served by GitHub Pages, which always serves
+            # .html as text/html), and works around a real, upstream
+            # docbook-xsl-ns bug emitting invalid "cellspacing"/"cellpadding"
+            # CSS properties for blockquote-derived tables.
             root_element="$(xmllint --xpath 'name(/*)' "$xml" 2>/dev/null || true)"
             if [ "$root_element" = "article" ]; then
               python3 scripts/check_dcterms_completeness.py "$xml"
-              xsltproc --xinclude --stringparam docbook.css.source '' /usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl "$xml" > "${xml%.xml}.html"
+              xsltproc --xinclude --stringparam docbook.css.source '' docs/xsl/xhtml5-corpus.xsl "$xml" > "${xml%.xml}.html"
             fi
           done < <(find docs -name '*.xml' -not -path '*/scratch/*' | sort)
 
