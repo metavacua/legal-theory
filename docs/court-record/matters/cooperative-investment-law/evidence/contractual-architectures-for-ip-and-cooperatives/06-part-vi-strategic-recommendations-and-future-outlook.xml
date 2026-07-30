@@ -326,21 +326,16 @@
             </row>
             <row>
               <entry>
-                  **Platform Terms of Service (ToS)**
+                <emphasis role="strong">Platform Terms of Service (ToS)</emphasis>
+              </entry>
+              <entry>
+                <emphasis role="strong">High:</emphasis> Systemic, retroactive labor misclassification liability. Existential balance-sheet risk.
                 </entry>
               <entry>
-                  **High:** Systemic, retroactive labor
-                  misclassification liability. Existential balance-sheet
-                  risk.
+                <emphasis role="strong">Centralized:</emphasis> Platform dictates all terms via adhesive contract. Control is algorithmic and architectural.
                 </entry>
               <entry>
-                  **Centralized:** Platform dictates all terms via
-                  adhesive contract. Control is algorithmic and
-                  architectural.
-                </entry>
-              <entry>
-                  **Very High:** Near-frictionless onboarding allows for
-                  engagement of millions of users rapidly.
+                <emphasis role="strong">Very High:</emphasis> Near-frictionless onboarding allows for engagement of millions of users rapidly.
                 </entry>
               <entry>
                   Enterprises in jurisdictions with weak labor laws, or
@@ -350,22 +345,16 @@
             </row>
             <row>
               <entry>
-                  **Compliant MSA/SOW Framework**
+                <emphasis role="strong">Compliant MSA/SOW Framework</emphasis>
+              </entry>
+              <entry>
+                <emphasis role="strong">Low:</emphasis> Significantly reduced misclassification risk through clear contractual separation of relationship and project.
                 </entry>
               <entry>
-                  **Low:** Significantly reduced misclassification risk
-                  through clear contractual separation of relationship
-                  and project.
+                <emphasis role="strong">Negotiated/Decentralized:</emphasis> Control is defined by the terms of the MSA and is limited to the deliverables in each SOW.
                 </entry>
               <entry>
-                  **Negotiated/Decentralized:** Control is defined by
-                  the terms of the MSA and is limited to the
-                  deliverables in each SOW.
-                </entry>
-              <entry>
-                  **Medium:** Higher transactional friction and
-                  negotiation costs per engagement limit the speed of
-                  scaling compared to ToS.
+                <emphasis role="strong">Medium:</emphasis> Higher transactional friction and negotiation costs per engagement limit the speed of scaling compared to ToS.
                 </entry>
               <entry>
                   Enterprises building a network of professional,
@@ -375,24 +364,16 @@
             </row>
             <row>
               <entry>
-                  **Publicly-Traded Hybrid Cooperative**
+                <emphasis role="strong">Publicly-Traded Hybrid Cooperative</emphasis>
+              </entry>
+              <entry>
+                <emphasis role="strong">Very Low:</emphasis> Lowest long-term risk. Aligns interests of all stakeholders, mitigating legal, labor, and governance risks through structural design.
                 </entry>
               <entry>
-                  **Very Low:** Lowest long-term risk. Aligns interests
-                  of all stakeholders, mitigating legal, labor, and
-                  governance risks through structural design.
+                <emphasis role="strong">Bifurcated/Democratized:</emphasis> Control is formally divided between member-patrons (mission) and public investors (capital) via a dual-class, mutual-veto system.
                 </entry>
               <entry>
-                  **Bifurcated/Democratized:** Control is formally
-                  divided between member-patrons (mission) and public
-                  investors (capital) via a dual-class, mutual-veto
-                  system.
-                </entry>
-              <entry>
-                  **High:** Engineered specifically to solve the
-                  "Capital Conundrum" and access public
-                  markets for large-scale growth, while preserving the
-                  cooperative mission.
+                <emphasis role="strong">High:</emphasis> Engineered specifically to solve the "Capital Conundrum" and access public markets for large-scale growth, while preserving the cooperative mission.
                 </entry>
               <entry>
                   Mission-driven enterprises seeking to operate at scale

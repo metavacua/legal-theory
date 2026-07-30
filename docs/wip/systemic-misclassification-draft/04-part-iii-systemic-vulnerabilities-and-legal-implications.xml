@@ -264,8 +264,8 @@
           </row>
           <row>
             <entry>
-                **Opinion Rewards/Crowdsource**
-              </entry>
+              <emphasis role="strong">Opinion Rewards/Crowdsource</emphasis>
+            </entry>
             <entry>
                 Program ToS
               </entry>
@@ -288,13 +288,13 @@
                 Very High
               </entry>
             <entry>
-                **Very High**
-              </entry>
+              <emphasis role="strong">Very High</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Local Guides/Waze Editors**
-              </entry>
+              <emphasis role="strong">Local Guides/Waze Editors</emphasis>
+            </entry>
             <entry>
                 Program Policies
               </entry>
@@ -317,13 +317,13 @@
                 Very High
               </entry>
             <entry>
-                **High**
-              </entry>
+              <emphasis role="strong">High</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **AI Feedback (Gemini/AI Premium)**
-              </entry>
+              <emphasis role="strong">AI Feedback (Gemini/AI Premium)</emphasis>
+            </entry>
             <entry>
                 General ToS
               </entry>
@@ -346,13 +346,13 @@
                 Very High
               </entry>
             <entry>
-                **High**
-              </entry>
+              <emphasis role="strong">High</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Beta Testers**
-              </entry>
+              <emphasis role="strong">Beta Testers</emphasis>
+            </entry>
             <entry>
                 NDA / Program ToS
               </entry>
@@ -375,13 +375,13 @@
                 Very High
               </entry>
             <entry>
-                **Very High**
-              </entry>
+              <emphasis role="strong">Very High</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **VRP Participants (Hobbyist)**
-              </entry>
+              <emphasis role="strong">VRP Participants (Hobbyist)</emphasis>
+            </entry>
             <entry>
                 VRP Rules
               </entry>
@@ -404,13 +404,13 @@
                 Very High
               </entry>
             <entry>
-                **High**
-              </entry>
+              <emphasis role="strong">High</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **VRP Participants (Professional)**
-              </entry>
+              <emphasis role="strong">VRP Participants (Professional)</emphasis>
+            </entry>
             <entry>
                 VRP Rules
               </entry>
@@ -433,13 +433,13 @@
                 Low
               </entry>
             <entry>
-                **Medium**
-              </entry>
+              <emphasis role="strong">Medium</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Platform Developers (Play/Chrome)**
-              </entry>
+              <emphasis role="strong">Platform Developers (Play/Chrome)</emphasis>
+            </entry>
             <entry>
                 DDA / Developer Agreement
               </entry>
@@ -462,13 +462,13 @@
                 Low
               </entry>
             <entry>
-                **Medium-Low**
-              </entry>
+              <emphasis role="strong">Medium-Low</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **YouTube Partners**
-              </entry>
+              <emphasis role="strong">YouTube Partners</emphasis>
+            </entry>
             <entry>
                 YPP Terms
               </entry>
@@ -491,12 +491,11 @@
                 Low
               </entry>
             <entry>
-                **Medium-Low**
-              </entry>
+              <emphasis role="strong">Medium-Low</emphasis>
+            </entry>
           </row>
         </tbody>
       </tgroup>
     </informaltable>
   </section>
 </section>
-  

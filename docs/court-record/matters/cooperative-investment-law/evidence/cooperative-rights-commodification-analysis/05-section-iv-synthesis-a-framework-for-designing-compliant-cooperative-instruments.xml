@@ -126,170 +126,111 @@
         <tbody>
           <row>
             <entry>
-                **Instrument Type**
+              <emphasis role="strong">Instrument Type</emphasis>
+            </entry>
+            <entry>
+              <emphasis role="strong">CA Corp. Law Compliance</emphasis>
+            </entry>
+            <entry>
+              <emphasis role="strong">Subchapter T Compliance</emphasis>
+            </entry>
+            <entry>
+              <emphasis role="strong">Securities Law Status (<emphasis>
+                  <emphasis role="strong">
+                    <emphasis role="strong">Reves/Howey</emphasis>
+                  </emphasis>
+                </emphasis>)</emphasis>
+            </entry>
+            <entry>
+              <emphasis role="strong">Tradability Analysis &amp; Risk</emphasis>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <emphasis role="strong">1. Standard Membership Share</emphasis>
+            </entry>
+            <entry>
+              <emphasis role="strong">High:</emphasis> The baseline model. Equal voting power is the default (§12404).10 Default is non-transferable (§12404).1
               </entry>
             <entry>
-                **CA Corp. Law Compliance**
+              <emphasis role="strong">High:</emphasis> Perfectly embodies the three pillars. The member's primary relationship is patronage.
               </entry>
             <entry>
-                **Subchapter T Compliance**
+              <emphasis role="strong">Low Risk of Security Classification:</emphasis> Often fails the "expectation of profit" prong of the <emphasis>Howey</emphasis> test, as the benefit is cost savings or access to services, not financial return.1
               </entry>
             <entry>
-                **Securities Law Status (*****Reves/Howey*****)**
-              </entry>
-            <entry>
-                **Tradability Analysis &amp; Risk**
+              <emphasis role="strong">Non-Tradable:</emphasis> Not considered a "saleable commodity".1 Liquidity is available only through redemption by the cooperative, subject to its bylaws and solvency.
               </entry>
           </row>
           <row>
             <entry>
-                **1. Standard Membership Share**
+              <emphasis role="strong">2. Non-Voting Preferred Stock (e.g., Shared Capital Model)</emphasis>
+            </entry>
+            <entry>
+              <emphasis role="strong">High:</emphasis> Permitted by the statutory distinction between equal voting rights and potentially unequal proprietary rights (§12310).12 Dividends must adhere to the 15% annual cap on distributions (§12451).15
               </entry>
             <entry>
-                **High:** The baseline model. Equal voting power is the
-                default (§12404).10 Default is non-transferable
-                (§12404).1
+              <emphasis role="strong">Medium:</emphasis> Compliant only if dividends are paid from the cooperative's after-tax non-patronage income.9 Risks failing the "subordination of capital" pillar if returns are excessive or if it creates pressure to prioritize non-patronage business over patronage business.
               </entry>
             <entry>
-                **High:** Perfectly embodies the three pillars. The
-                member's primary relationship is patronage.
+              <emphasis role="strong">High Likelihood of Security Classification:</emphasis> Clearly meets all four prongs of the <emphasis>Howey</emphasis> test due to the investment of money for an expected profit (dividends) based on the efforts of management.20
               </entry>
             <entry>
-                **Low Risk of Security Classification:** Often fails the
-                "expectation of profit" prong of the *Howey*
-                test, as the benefit is cost savings or access to
-                services, not financial return.1
-              </entry>
-            <entry>
-                **Non-Tradable:** Not considered a "saleable
-                commodity".1 Liquidity is available only through
-                redemption by the cooperative, subject to its bylaws and
-                solvency.
+              <emphasis role="strong">Privately Tradable:</emphasis> Can be sold to investors, typically under a securities law exemption like Regulation D. Robust transfer restrictions in the bylaws (e.g., right of first refusal for the co-op) are essential to maintain control. Public trading is extremely high risk and likely incompatible with Subchapter T.
               </entry>
           </row>
           <row>
             <entry>
-                **2. Non-Voting Preferred Stock (e.g., Shared Capital
-                Model)**
+              <emphasis role="strong">3. Tradable Delivery Right (e.g., NGC Model)</emphasis>
+            </entry>
+            <entry>
+              <emphasis role="strong">High:</emphasis> Can be structured as a contractual right tied to membership. The terms of transferability must be explicitly defined in the articles or bylaws.1
               </entry>
             <entry>
-                **High:** Permitted by the statutory distinction between
-                equal voting rights and potentially unequal proprietary
-                rights (§12310).12 Dividends must adhere to the 15%
-                annual cap on distributions (§12451).15
+              <emphasis role="strong">High:</emphasis> Passes the "actually facilitates" test, as the capital raised is directly used to enable and enhance the patronage activity (e.g., building a processing plant).23 The right's value is tied to the benefit of patronage, not passive profit.
               </entry>
             <entry>
-                **Medium:** Compliant only if dividends are paid from
-                the cooperative's after-tax non-patronage income.9 Risks
-                failing the "subordination of capital" pillar
-                if returns are excessive or if it creates pressure to
-                prioritize non-patronage business over patronage
-                business.
+              <emphasis role="strong">Medium Risk of Security Classification:</emphasis> Likely meets the <emphasis>Howey</emphasis> test. There is an investment of value, a common enterprise, and the return depends on the efforts of management. The potential for the right to appreciate in value creates an expectation of profit.
               </entry>
             <entry>
-                **High Likelihood of Security Classification:** Clearly
-                meets all four prongs of the *Howey* test due to the
-                investment of money for an expected profit (dividends)
-                based on the efforts of management.20
-              </entry>
-            <entry>
-                **Privately Tradable:** Can be sold to investors,
-                typically under a securities law exemption like
-                Regulation D. Robust transfer restrictions in the bylaws
-                (e.g., right of first refusal for the co-op) are
-                essential to maintain control. Public trading is
-                extremely high risk and likely incompatible with
-                Subchapter T.
+              <emphasis role="strong">Internally Tradable:</emphasis> Designed for trading within a closed pool of qualified patrons (e.g., other farmers who can meet the delivery obligation). A public market would sever the essential link to patronage and likely violate Subchapter T principles.
               </entry>
           </row>
           <row>
             <entry>
-                **3. Tradable Delivery Right (e.g., NGC Model)**
+              <emphasis role="strong">4. Patronage-Linked Debt Note</emphasis>
+            </entry>
+            <entry>
+              <emphasis role="strong">High:</emphasis> Cooperatives have the general power to borrow money and issue debt securities (§12320).3
               </entry>
             <entry>
-                **High:** Can be structured as a contractual right tied
-                to membership. The terms of transferability must be
-                explicitly defined in the articles or bylaws.1
+              <emphasis role="strong">High:</emphasis> Compliant if interest payments are treated as a legitimate cost of doing business that facilitates the cooperative's patronage activities (e.g., borrowing for operating capital to serve members).
               </entry>
             <entry>
-                **High:** Passes the "actually facilitates"
-                test, as the capital raised is directly used to enable
-                and enhance the patronage activity (e.g., building a
-                processing plant).23 The right's value is tied to the
-                benefit of patronage, not passive profit.
+              <emphasis role="strong">Medium Risk of Security Classification (under
+                <emphasis>
+                  <emphasis role="strong">Reves</emphasis>
+                </emphasis>):</emphasis> Highly fact-dependent. If marketed broadly to the public as an "investment note," it is almost certainly a security. If structured as a member loan program with limited distribution and framed as a commercial transaction, it may escape classification.23
               </entry>
             <entry>
-                **Medium Risk of Security Classification:** Likely meets
-                the *Howey* test. There is an investment of value, a
-                common enterprise, and the return depends on the efforts
-                of management. The potential for the right to appreciate
-                in value creates an expectation of profit.
-              </entry>
-            <entry>
-                **Internally Tradable:** Designed for trading within a
-                closed pool of qualified patrons (e.g., other farmers
-                who can meet the delivery obligation). A public market
-                would sever the essential link to patronage and likely
-                violate Subchapter T principles.
+              <emphasis role="strong">Privately Tradable (if a security):</emphasis> Similar risk profile to preferred stock. If it is not a security, its tradability is governed purely by the terms of the contract.
               </entry>
           </row>
           <row>
             <entry>
-                **4. Patronage-Linked Debt Note**
+              <emphasis role="strong">5. Special Management Share (Hypothetical)</emphasis>
+            </entry>
+            <entry>
+              <emphasis role="strong">Very Low:</emphasis> Fundamentally violates the principle of equal voting power for members (§12404).10 It is unlikely to fit within the narrow statutory exceptions for worker or federated cooperatives.
               </entry>
             <entry>
-                **High:** Cooperatives have the general power to borrow
-                money and issue debt securities (§12320).3
+              <emphasis role="strong">Very Low:</emphasis> Directly violates the "democratic control" pillar of Subchapter T by concentrating power based on a special class of share rather than patronage.9
               </entry>
             <entry>
-                **High:** Compliant if interest payments are treated as
-                a legitimate cost of doing business that facilitates the
-                cooperative's patronage activities (e.g., borrowing for
-                operating capital to serve members).
+              <emphasis role="strong">High Likelihood of Security Classification:</emphasis> A clear investment contract where the "profit" sought is control and influence over the enterprise.
               </entry>
             <entry>
-                **Medium Risk of Security Classification (under**
-                ***Reves*****):** Highly fact-dependent. If marketed
-                broadly to the public as an "investment note,"
-                it is almost certainly a security. If structured as a
-                member loan program with limited distribution and framed
-                as a commercial transaction, it may escape
-                classification.23
-              </entry>
-            <entry>
-                **Privately Tradable (if a security):** Similar risk
-                profile to preferred stock. If it is not a security, its
-                tradability is governed purely by the terms of the
-                contract.
-              </entry>
-          </row>
-          <row>
-            <entry>
-                **5. Special Management Share (Hypothetical)**
-              </entry>
-            <entry>
-                **Very Low:** Fundamentally violates the principle of
-                equal voting power for members (§12404).10 It is
-                unlikely to fit within the narrow statutory exceptions
-                for worker or federated cooperatives.
-              </entry>
-            <entry>
-                **Very Low:** Directly violates the "democratic
-                control" pillar of Subchapter T by concentrating
-                power based on a special class of share rather than
-                patronage.9
-              </entry>
-            <entry>
-                **High Likelihood of Security Classification:** A clear
-                investment contract where the "profit" sought
-                is control and influence over the enterprise.
-              </entry>
-            <entry>
-                **Not Recommended:** This structure is fundamentally
-                incompatible with the legal and tax definitions of a
-                cooperative. It represents a direct attempt to import
-                the C-Corp governance model, which would disqualify the
-                entity as a cooperative.
+              <emphasis role="strong">Not Recommended:</emphasis> This structure is fundamentally incompatible with the legal and tax definitions of a cooperative. It represents a direct attempt to import the C-Corp governance model, which would disqualify the entity as a cooperative.
               </entry>
           </row>
         </tbody>
@@ -297,4 +238,3 @@
     </informaltable>
   </section>
 </section>
-  

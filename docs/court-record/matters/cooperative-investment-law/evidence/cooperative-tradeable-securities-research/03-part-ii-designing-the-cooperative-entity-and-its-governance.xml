@@ -161,11 +161,11 @@
           </row>
           <row>
             <entry>
-                **Membership**
-              </entry>
+              <emphasis role="strong">Membership</emphasis>
+            </entry>
             <entry>
-                **Qualification for Voting Membership**
-              </entry>
+              <emphasis role="strong">Qualification for Voting Membership</emphasis>
+            </entry>
             <entry>
                 25
               </entry>
@@ -181,11 +181,11 @@
           </row>
           <row>
             <entry>
-                **Capital Structure**
-              </entry>
+              <emphasis role="strong">Capital Structure</emphasis>
+            </entry>
             <entry>
-                **Rights of Class S and Class U Securities**
-              </entry>
+              <emphasis role="strong">Rights of Class S and Class U Securities</emphasis>
+            </entry>
             <entry>
                 8
               </entry>
@@ -199,11 +199,11 @@
           </row>
           <row>
             <entry>
-                **Patronage**
-              </entry>
+              <emphasis role="strong">Patronage</emphasis>
+            </entry>
             <entry>
-                **Calculation and Distribution of Patronage Dividends**
-              </entry>
+              <emphasis role="strong">Calculation and Distribution of Patronage Dividends</emphasis>
+            </entry>
             <entry>
                 16
               </entry>
@@ -217,11 +217,11 @@
           </row>
           <row>
             <entry>
-                **Transferability**
-              </entry>
+              <emphasis role="strong">Transferability</emphasis>
+            </entry>
             <entry>
-                **Rules for Trading and Right of First Refusal (ROFR)**
-              </entry>
+              <emphasis role="strong">Rules for Trading and Right of First Refusal (ROFR)</emphasis>
+            </entry>
             <entry>
                 2
               </entry>
@@ -235,11 +235,11 @@
           </row>
           <row>
             <entry>
-                **Dissolution/Conversion**
-              </entry>
+              <emphasis role="strong">Dissolution/Conversion</emphasis>
+            </entry>
             <entry>
-                **Involuntary Transmutation Triggers**
-              </entry>
+              <emphasis role="strong">Involuntary Transmutation Triggers</emphasis>
+            </entry>
             <entry>
                 17
               </entry>
@@ -253,11 +253,11 @@
           </row>
           <row>
             <entry>
-                **Governance**
-              </entry>
+              <emphasis role="strong">Governance</emphasis>
+            </entry>
             <entry>
-                **Board of Directors Composition and Election**
-              </entry>
+              <emphasis role="strong">Board of Directors Composition and Election</emphasis>
+            </entry>
             <entry>
                 4
               </entry>
@@ -270,11 +270,11 @@
           </row>
           <row>
             <entry>
-                **Amendments**
-              </entry>
+              <emphasis role="strong">Amendments</emphasis>
+            </entry>
             <entry>
-                **Supermajority Vote for Fundamental Changes**
-              </entry>
+              <emphasis role="strong">Supermajority Vote for Fundamental Changes</emphasis>
+            </entry>
             <entry>
                 25
               </entry>
@@ -291,4 +291,3 @@
     </informaltable>
   </section>
 </section>
-  

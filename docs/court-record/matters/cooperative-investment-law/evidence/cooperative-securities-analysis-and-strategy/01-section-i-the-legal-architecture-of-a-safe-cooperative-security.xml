@@ -505,16 +505,14 @@
             <entry>
               </entry>
             <entry>
-                **Analysis Criteria**
-              </entry>
+              <emphasis role="strong">Analysis Criteria</emphasis>
+            </entry>
             <entry>
-                **"Safe" Cooperative Security (Compliant
-                Outcome)**
-              </entry>
+              <emphasis role="strong">"Safe" Cooperative Security (Compliant Outcome)</emphasis>
+            </entry>
             <entry>
-                **"Unsafe" Cooperative Security (Non-Compliant
-                Outcome &amp; Resulting Risk)**
-              </entry>
+              <emphasis role="strong">"Unsafe" Cooperative Security (Non-Compliant Outcome &amp; Resulting Risk)</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
@@ -543,14 +541,10 @@
                 Primary purpose consumption or investment?
               </entry>
             <entry>
-                Investment. Economic reality is to hold for a future
-                financial or other valuable benefit. Passes *Forman*
-                test.
+                Investment. Economic reality is to hold for a future financial or other valuable benefit. Passes <emphasis>Forman</emphasis> test.
               </entry>
             <entry>
-                Consumption. Economic reality is for personal use (e.g.,
-                housing). Fails *Forman* test; likely a non-security
-                membership interest.
+                Consumption. Economic reality is for personal use (e.g., housing). Fails <emphasis>Forman</emphasis> test; likely a non-security membership interest.
               </entry>
             <entry>
               </entry>
@@ -628,8 +622,8 @@
           </row>
           <row>
             <entry>
-                **7. Subordination of Capital**
-              </entry>
+              <emphasis role="strong">7. Subordination of Capital</emphasis>
+            </entry>
             <entry>
                 Is capital a servant, not master?
               </entry>
@@ -638,17 +632,15 @@
                 preserve the co-op's primary purpose of serving patrons.
               </entry>
             <entry>
-                **No.** Returns are uncapped or prioritized over
-                patronage. **Risk:** Violates Subchapter T; potential
-                loss of cooperative tax status.
+              <emphasis role="strong">No.</emphasis> Returns are uncapped or prioritized over patronage. <emphasis role="strong">Risk:</emphasis> Violates Subchapter T; potential loss of cooperative tax status.
               </entry>
             <entry>
               </entry>
           </row>
           <row>
             <entry>
-                **8. Democratic Member Control**
-              </entry>
+              <emphasis role="strong">8. Democratic Member Control</emphasis>
+            </entry>
             <entry>
                 One-member, one-vote?
               </entry>
@@ -657,18 +649,15 @@
                 restricted-voting, preserving member control.
               </entry>
             <entry>
-                **No.** Voting rights are tied to the number of
-                securities held. **Risk:** Capital dominates governance,
-                leading to loss of cooperative identity and status; high
-                risk of demutualization.
+              <emphasis role="strong">No.</emphasis> Voting rights are tied to the number of securities held. <emphasis role="strong">Risk:</emphasis> Capital dominates governance, leading to loss of cooperative identity and status; high risk of demutualization.
               </entry>
             <entry>
               </entry>
           </row>
           <row>
             <entry>
-                **9. Patronage Basis**
-              </entry>
+              <emphasis role="strong">9. Patronage Basis</emphasis>
+            </entry>
             <entry>
                 Supports return of net margins to patrons?
               </entry>
@@ -678,10 +667,7 @@
                 patrons.
               </entry>
             <entry>
-                **No.** The security's dividend/interest obligations
-                drain resources from patronage refunds. **Risk:**
-                Undermines the core cooperative function; potential
-                violation of Subchapter T.
+              <emphasis role="strong">No.</emphasis> The security's dividend/interest obligations drain resources from patronage refunds. <emphasis role="strong">Risk:</emphasis> Undermines the core cooperative function; potential violation of Subchapter T.
               </entry>
             <entry>
               </entry>
@@ -691,4 +677,3 @@
     </informaltable>
   </section>
 </section>
-  

@@ -227,8 +227,8 @@
           </row>
           <row>
             <entry>
-                **Tradability**
-              </entry>
+              <emphasis role="strong">Tradability</emphasis>
+            </entry>
             <entry>
                 Fully Tradable
               </entry>
@@ -238,8 +238,8 @@
           </row>
           <row>
             <entry>
-                **Voting Rights**
-              </entry>
+              <emphasis role="strong">Voting Rights</emphasis>
+            </entry>
             <entry>
                 None inherent in the security. Requires separate
                 admission as a "Voting Member" based on active
@@ -252,8 +252,8 @@
           </row>
           <row>
             <entry>
-                **Corporate ROFR**
-              </entry>
+              <emphasis role="strong">Corporate ROFR</emphasis>
+            </entry>
             <entry>
                 Yes. The cooperative retains a Right of First Refusal on
                 all transfers to third parties.
@@ -265,8 +265,8 @@
           </row>
           <row>
             <entry>
-                **Subchapter T Risk**
-              </entry>
+              <emphasis role="strong">Subchapter T Risk</emphasis>
+            </entry>
             <entry>
                 Low. Protected by multiple bylaw provisions, including
                 ROFR, active patron requirements, and supermajority vote
@@ -280,8 +280,8 @@
           </row>
           <row>
             <entry>
-                **Key Risk Disclosure**
-              </entry>
+              <emphasis role="strong">Key Risk Disclosure</emphasis>
+            </entry>
             <entry>
                 Risks associated with a cooperative business model;
                 reliance on democratic control and patronage benefits.
@@ -294,8 +294,8 @@
           </row>
           <row>
             <entry>
-                **Ideal Investor Profile**
-              </entry>
+              <emphasis role="strong">Ideal Investor Profile</emphasis>
+            </entry>
             <entry>
                 Long-term member-patrons, employees, community
                 stakeholders, and impact investors seeking stable,
@@ -312,4 +312,3 @@
     </informaltable>
   </section>
 </section>
-  

@@ -185,8 +185,8 @@
           </row>
           <row>
             <entry>
-                **EU AI Act**
-              </entry>
+              <emphasis role="strong">EU AI Act</emphasis>
+            </entry>
             <entry>
                 High-Risk Systems (as defined by the Act)
               </entry>
@@ -201,8 +201,8 @@
           </row>
           <row>
             <entry>
-                **US Algorithmic Accountability Act (proposed)**
-              </entry>
+              <emphasis role="strong">US Algorithmic Accountability Act (proposed)</emphasis>
+            </entry>
             <entry>
                 Automated Critical Decision Processes (affecting
                 consumers)
@@ -218,8 +218,8 @@
           </row>
           <row>
             <entry>
-                **CA Public Registry Proposal**
-              </entry>
+              <emphasis role="strong">CA Public Registry Proposal</emphasis>
+            </entry>
             <entry>
                 Foundational Corporate AI Systems (functional
                 definition)
@@ -238,4 +238,3 @@
     </informaltable>
   </section>
 </section>
-  

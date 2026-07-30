@@ -269,8 +269,8 @@
             </row>
             <row>
               <entry>
-                  **Research**
-                </entry>
+                <emphasis role="strong">Research</emphasis>
+              </entry>
               <entry>
                   45 CFR 46.102(l)
                 </entry>
@@ -285,8 +285,8 @@
             </row>
             <row>
               <entry>
-                  **Human Subject**
-                </entry>
+                <emphasis role="strong">Human Subject</emphasis>
+              </entry>
               <entry>
                   45 CFR 46.102(e)
                 </entry>
@@ -302,8 +302,8 @@
             </row>
             <row>
               <entry>
-                  **Practice**
-                </entry>
+                <emphasis role="strong">Practice</emphasis>
+              </entry>
               <entry>
                   Belmont Report
                 </entry>
@@ -318,8 +318,8 @@
             </row>
             <row>
               <entry>
-                  **Quality Improvement**
-                </entry>
+                <emphasis role="strong">Quality Improvement</emphasis>
+              </entry>
               <entry>
                   OHRP Guidance
                 </entry>
@@ -339,4 +339,3 @@
     </section>
   </section>
 </section>
-  

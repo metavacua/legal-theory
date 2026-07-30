@@ -428,18 +428,15 @@
             </row>
             <row>
               <entry>
-                  **Standard ToS License Grant**
-                </entry>
+                <emphasis role="strong">Standard ToS License Grant</emphasis>
+              </entry>
               <entry>
                   User agrees to adhesive terms, granting the platform a
                   broad, non-exclusive license to their content in
                   exchange for service access.
                 </entry>
               <entry>
-                  **Systemic Misclassification:** The transaction is
-                  easily re-characterized as a service, leading to
-                  massive retroactive liability under the ABC test,
-                  especially due to the "Hobbyist Dilemma."
+                <emphasis role="strong">Systemic Misclassification:</emphasis> The transaction is easily re-characterized as a service, leading to massive retroactive liability under the ABC test, especially due to the "Hobbyist Dilemma."
                 </entry>
               <entry>
                   None are truly effective. The risk is inherent in the
@@ -452,18 +449,15 @@
             </row>
             <row>
               <entry>
-                  **Work Made for Hire (WFH)**
-                </entry>
+                <emphasis role="strong">Work Made for Hire (WFH)</emphasis>
+              </entry>
               <entry>
                   A written agreement where a creator is commissioned to
                   create a specific work, with ownership vesting in the
                   hiring entity from inception.
                 </entry>
               <entry>
-                  **Triggering Employment Status:** The WFH agreement
-                  itself is strong evidence of an employment
-                  relationship, especially in California, creating high
-                  misclassification risk.
+                <emphasis role="strong">Triggering Employment Status:</emphasis> The WFH agreement itself is strong evidence of an employment relationship, especially in California, creating high misclassification risk.
                 </entry>
               <entry>
                   Limit use to bona fide W-2 employees. Avoid using with
@@ -476,16 +470,14 @@
             </row>
             <row>
               <entry>
-                  **Unilateral Contract (VRP)**
-                </entry>
+                <emphasis role="strong">Unilateral Contract (VRP)</emphasis>
+              </entry>
               <entry>
                   A public offer of remuneration for the performance of
                   a specific act (e.g., finding a security bug).
                 </entry>
               <entry>
-                  **The "Service Nexus":** Performance creates
-                  an irrevocable contract, legally linking payment to
-                  the service and triggering labor law scrutiny.
+                <emphasis role="strong">The "Service Nexus":</emphasis> Performance creates an irrevocable contract, legally linking payment to the service and triggering labor law scrutiny.
                 </entry>
               <entry>
                   Frame as a discretionary prize or award where
@@ -498,23 +490,18 @@
             </row>
             <row>
               <entry>
-                  **Option-to-Purchase Agreement**
-                </entry>
+                <emphasis role="strong">Option-to-Purchase Agreement</emphasis>
+              </entry>
               <entry>
                   The entity pays a fee for the exclusive right (the
                   option) to purchase a finished IP asset at a later
                   date for a pre-agreed price.
                 </entry>
               <entry>
-                  **Low:** The primary risk is commercial (the option is
-                  not exercised), not legal. Requires careful drafting
-                  to avoid being re-characterized as a service contract.
+                <emphasis role="strong">Low:</emphasis> The primary risk is commercial (the option is not exercised), not legal. Requires careful drafting to avoid being re-characterized as a service contract.
                 </entry>
               <entry>
-                  **Structural Mitigation:** The contract is framed as
-                  the sale of a right and a future asset, not a service,
-                  thus avoiding the primary trigger for labor law
-                  application.
+                <emphasis role="strong">Structural Mitigation:</emphasis> The contract is framed as the sale of a right and a future asset, not a service, thus avoiding the primary trigger for labor law application.
                 </entry>
               <entry>
                   High-value, exclusive IP where the acquirer needs time
@@ -529,4 +516,3 @@
     </section>
   </section>
 </section>
-  

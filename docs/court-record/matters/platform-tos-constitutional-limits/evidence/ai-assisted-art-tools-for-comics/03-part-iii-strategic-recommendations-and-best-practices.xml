@@ -38,151 +38,129 @@
         <tbody>
           <row>
             <entry>
-                **Tool**
-              </entry>
+              <emphasis role="strong">Tool</emphasis>
+            </entry>
             <entry>
-                **Key Comic Creation Features**
-              </entry>
+              <emphasis role="strong">Key Comic Creation Features</emphasis>
+            </entry>
             <entry>
-                **Nature of AI Integration**
-              </entry>
+              <emphasis role="strong">Nature of AI Integration</emphasis>
+            </entry>
             <entry>
-                **Copyright &amp; Ownership Analysis**
-              </entry>
+              <emphasis role="strong">Copyright &amp; Ownership Analysis</emphasis>
+            </entry>
             <entry>
-                **Pricing Model**
-              </entry>
+              <emphasis role="strong">Pricing Model</emphasis>
+            </entry>
             <entry>
-                **Suitability Score for Copyright-Conscious Creators**
-              </entry>
+              <emphasis role="strong">Suitability Score for Copyright-Conscious Creators</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Procreate**
-              </entry>
+              <emphasis role="strong">Procreate</emphasis>
+            </entry>
             <entry>
                 Page Assist, powerful brush engine, intuitive gestures,
                 Drawing Assist.40
               </entry>
             <entry>
-                **Level 1 (No AI):** Explicitly rejects generative AI as
-                a core company principle.43
+              <emphasis role="strong">Level 1 (No AI):</emphasis> Explicitly rejects generative AI as a core company principle.43
               </entry>
             <entry>
-                **Perfect:** Unambiguous user ownership is stated in
-                ToS.16 The complete absence of AI eliminates any
-                question of human authorship.
+              <emphasis role="strong">Perfect:</emphasis> Unambiguous user ownership is stated in ToS.16 The complete absence of AI eliminates any question of human authorship.
               </entry>
             <entry>
                 One-time purchase.65
               </entry>
             <entry>
-                **10/10**
-              </entry>
+              <emphasis role="strong">10/10</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Clip Studio Paint EX**
-              </entry>
+              <emphasis role="strong">Clip Studio Paint EX</emphasis>
+            </entry>
             <entry>
                 Multi-page management, dedicated panel tools, superior
                 vector layers, story editor, screentones.24
               </entry>
             <entry>
-                **Level 2 (Assistive):** AI posing from photos, guided
-                colorization of user line art. Strictly non-generative.5
+              <emphasis role="strong">Level 2 (Assistive):</emphasis> AI posing from photos, guided colorization of user line art. Strictly non-generative.5
               </entry>
             <entry>
-                **Excellent:** Clear ToS affirm user ownership of
-                created works.28 AI functions as a sophisticated tool,
-                enhancing artist control and preserving human
-                authorship.
+              <emphasis role="strong">Excellent:</emphasis> Clear ToS affirm user ownership of created works.28 AI functions as a sophisticated tool, enhancing artist control and preserving human authorship.
               </entry>
             <entry>
                 One-time purchase or Subscription.66
               </entry>
             <entry>
-                **9.5/10**
-              </entry>
+              <emphasis role="strong">9.5/10</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Krita**
-              </entry>
+              <emphasis role="strong">Krita</emphasis>
+            </entry>
             <entry>
                 Professional brush engine, vector/text tools for panels
                 and lettering, drawing assistants.4
               </entry>
             <entry>
-                **Level 1 (No AI):** Base application is free of
-                generative AI. **Level 5 (Generative):** Optional,
-                third-party AI Diffusion plugin introduces high-risk
-                generation.61
+              <emphasis role="strong">Level 1 (No AI):</emphasis> Base application is free of generative AI. <emphasis role="strong">Level 5 (Generative):</emphasis> Optional, third-party AI Diffusion plugin introduces high-risk generation.61
               </entry>
             <entry>
-                **Excellent (without plugin):** Open-source GPL license
-                guarantees absolute user ownership of creations.57 Use
-                of the AI Diffusion plugin negates this safety.
+              <emphasis role="strong">Excellent (without plugin):</emphasis> Open-source GPL license guarantees absolute user ownership of creations.57 Use of the AI Diffusion plugin negates this safety.
               </entry>
             <entry>
                 Free (Open Source).58
               </entry>
             <entry>
-                **9/10 (without plugin), 3/10 (with plugin)**
-              </entry>
+              <emphasis role="strong">9/10 (without plugin), 3/10 (with plugin)</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Corel Painter**
-              </entry>
+              <emphasis role="strong">Corel Painter</emphasis>
+            </entry>
             <entry>
                 Realistic traditional media brushes, Manga workspace
                 layout, perspective guides.49
               </entry>
             <entry>
-                **Level 3 (Transformative):** Built-in AI Styles.
-                **Level 5 (Generative):** Optional, third-party Vision
-                FX plugin.7
+              <emphasis role="strong">Level 3 (Transformative):</emphasis> Built-in AI Styles. <emphasis role="strong">Level 5 (Generative):</emphasis> Optional, third-party Vision FX plugin.7
               </entry>
             <entry>
-                **Good (without plugin):** Standard EULA ensures user
-                owns their work.54 AI Styles are transformative, posing
-                low risk. The Vision FX plugin introduces high copyright
-                risk.
+              <emphasis role="strong">Good (without plugin):</emphasis> Standard EULA ensures user owns their work.54 AI Styles are transformative, posing low risk. The Vision FX plugin introduces high copyright risk.
               </entry>
             <entry>
                 One-time purchase or Subscription.51
               </entry>
             <entry>
-                **8/10 (without plugin), 4/10 (with plugin)**
-              </entry>
+              <emphasis role="strong">8/10 (without plugin), 4/10 (with plugin)</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Adobe Photoshop**
-              </entry>
+              <emphasis role="strong">Adobe Photoshop</emphasis>
+            </entry>
             <entry>
                 Industry-standard brush engine, advanced
                 coloring/editing, full Creative Cloud ecosystem
                 integration.31
               </entry>
             <entry>
-                **Levels 2, 4, 5:** Ranges from assistive Neural Filters
-                to fully generative Fill, Expand, and Text to Image
-                features.9
+              <emphasis role="strong">Levels 2, 4, 5:</emphasis> Ranges from assistive Neural Filters to fully generative Fill, Expand, and Text to Image features.9
               </entry>
             <entry>
-                **Conditional/High-Risk:** ToS explicitly disclaim the
-                copyrightability of generative Output.20
-                "Commercially safe" is not a guarantee of
-                ownership. Requires significant human modification.
+              <emphasis role="strong">Conditional/High-Risk:</emphasis> ToS explicitly disclaim the copyrightability of generative Output.20 "Commercially safe" is not a guarantee of ownership. Requires significant human modification.
               </entry>
             <entry>
                 Subscription.31
               </entry>
             <entry>
-                **5/10 (with Generative AI), 8/10 (without)**
-              </entry>
+              <emphasis role="strong">5/10 (with Generative AI), 8/10 (without)</emphasis>
+            </entry>
           </row>
         </tbody>
       </tgroup>

@@ -422,20 +422,20 @@
         <tbody>
           <row>
             <entry>
-                **Base LLM**
-              </entry>
+              <emphasis role="strong">Base LLM</emphasis>
+            </entry>
             <entry>
-                **Fine-tuning Dataset/Mix**
-              </entry>
+              <emphasis role="strong">Fine-tuning Dataset/Mix</emphasis>
+            </entry>
             <entry>
-                **Key Evaluation Benchmark(s)**
-              </entry>
+              <emphasis role="strong">Key Evaluation Benchmark(s)</emphasis>
+            </entry>
             <entry>
-                **Reported Performance/Observation**
-              </entry>
+              <emphasis role="strong">Reported Performance/Observation</emphasis>
+            </entry>
             <entry>
-                **Source Study Snippet**
-              </entry>
+              <emphasis role="strong">Source Study Snippet</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
@@ -632,4 +632,3 @@
     </informaltable>
   </section>
 </section>
-  

@@ -192,48 +192,46 @@
         <tbody>
           <row>
             <entry>
-                **Table 3.1: Risk Analysis of Digital Platforms and
-                Financial Infrastructure**
-              </entry>
+              <emphasis role="strong">Table 3.1: Risk Analysis of Digital Platforms and Financial Infrastructure</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Platform/Service**
-              </entry>
+              <emphasis role="strong">Platform/Service</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Mainstream (Fiverr/Upwork)**
-              </entry>
+              <emphasis role="strong">Mainstream (Fiverr/Upwork)</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Niche (Artists\&amp;Clients)**
-              </entry>
+              <emphasis role="strong">Niche (Artists&amp;Clients)</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Community (Pansy Studios)**
-              </entry>
+              <emphasis role="strong">Community (Pansy Studios)</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Payment - Mainstream (Stripe/PayPal)**
-              </entry>
+              <emphasis role="strong">Payment - Mainstream (Stripe/PayPal)</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Payment - High-Risk (Zen Payments)**
-              </entry>
+              <emphasis role="strong">Payment - High-Risk (Zen Payments)</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Payment - Crypto (Stablecoins)**
-              </entry>
+              <emphasis role="strong">Payment - Crypto (Stablecoins)</emphasis>
+            </entry>
           </row>
         </tbody>
       </tgroup>
     </informaltable>
   </section>
 </section>
-  

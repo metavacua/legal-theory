@@ -236,8 +236,8 @@
           </row>
           <row>
             <entry>
-                **Voting Rights**
-              </entry>
+              <emphasis role="strong">Voting Rights</emphasis>
+            </entry>
             <entry>
                 Proportional to share ownership (one-share, one-vote),
                 based on capital invested.1
@@ -246,16 +246,13 @@
                 Equal (one-member, one-vote), based on participation.1
               </entry>
             <entry>
-                **Hybrid System:** Class A (Member) shares vote
-                one-member, one-vote on Fundamental Cooperative Matters.
-                Class B (Investor) shares vote per-share on Capital and
-                Corporate Matters.1
+              <emphasis role="strong">Hybrid System:</emphasis> Class A (Member) shares vote one-member, one-vote on Fundamental Cooperative Matters. Class B (Investor) shares vote per-share on Capital and Corporate Matters.1
               </entry>
           </row>
           <row>
             <entry>
-                **Board Control**
-              </entry>
+              <emphasis role="strong">Board Control</emphasis>
+            </entry>
             <entry>
                 Determined by voting power; control follows capital.1
               </entry>
@@ -264,16 +261,13 @@
                 ensuring member control.1
               </entry>
             <entry>
-                **Classified Board:** A majority of directors are
-                elected by Class A members; a minority of directors are
-                elected by Class B shareholders, ensuring member control
-                with investor representation.1
+              <emphasis role="strong">Classified Board:</emphasis> A majority of directors are elected by Class A members; a minority of directors are elected by Class B shareholders, ensuring member control with investor representation.1
               </entry>
           </row>
           <row>
             <entry>
-                **Economic Returns**
-              </entry>
+              <emphasis role="strong">Economic Returns</emphasis>
+            </entry>
             <entry>
                 Dividends and capital appreciation based on
                 profitability and market value.1
@@ -283,15 +277,13 @@
                 cooperative's services.1
               </entry>
             <entry>
-                **Bifurcated System:** Class A shares receive patronage
-                refunds. Class B shares receive dividends and are
-                structured for capital appreciation.1
+              <emphasis role="strong">Bifurcated System:</emphasis> Class A shares receive patronage refunds. Class B shares receive dividends and are structured for capital appreciation.1
               </entry>
           </row>
           <row>
             <entry>
-                **Share Transfers**
-              </entry>
+              <emphasis role="strong">Share Transfers</emphasis>
+            </entry>
             <entry>
                 Generally free, governed by contractual rights like
                 ROFR, drag-along, and tag-along rights.33
@@ -301,15 +293,13 @@
                 closed-loop nature of the cooperative.1
               </entry>
             <entry>
-                **Class-Specific Rules:** Class A transfers are highly
-                restricted to maintain the member-patron link. Class B
-                shares are freely tradable post-IPO.1
+              <emphasis role="strong">Class-Specific Rules:</emphasis> Class A transfers are highly restricted to maintain the member-patron link. Class B shares are freely tradable post-IPO.1
               </entry>
           </row>
           <row>
             <entry>
-                **Primary Fiduciary Duty**
-              </entry>
+              <emphasis role="strong">Primary Fiduciary Duty</emphasis>
+            </entry>
             <entry>
                 To the corporation and its shareholders, with the goal
                 of maximizing shareholder value.1
@@ -319,11 +309,7 @@
                 members.1
               </entry>
             <entry>
-                **Dual Fiduciary Duty (Benefit Corp. Overlay):** A
-                codified duty to balance the cooperative mission for
-                Class A members with the financial interests of all
-                shareholders, providing a legal safe harbor for the
-                board.1
+              <emphasis role="strong">Dual Fiduciary Duty (Benefit Corp. Overlay):</emphasis> A codified duty to balance the cooperative mission for Class A members with the financial interests of all shareholders, providing a legal safe harbor for the board.1
               </entry>
           </row>
         </tbody>
@@ -532,4 +518,3 @@
       </para>
   </section>
 </section>
-  

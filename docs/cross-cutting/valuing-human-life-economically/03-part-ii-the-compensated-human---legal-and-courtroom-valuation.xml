@@ -216,8 +216,8 @@
           </row>
           <row>
             <entry>
-                **Economic**
-              </entry>
+              <emphasis role="strong">Economic</emphasis>
+            </entry>
             <entry>
                 Human Capital / Lost Financial Contribution
               </entry>
@@ -235,8 +235,8 @@
           </row>
           <row>
             <entry>
-                **Non-Economic**
-              </entry>
+              <emphasis role="strong">Non-Economic</emphasis>
+            </entry>
             <entry>
                 Intangible Loss to Survivors
               </entry>
@@ -254,8 +254,8 @@
           </row>
           <row>
             <entry>
-                **Hedonic**
-              </entry>
+              <emphasis role="strong">Hedonic</emphasis>
+            </entry>
             <entry>
                 Loss of Enjoyment of Life
               </entry>
@@ -272,8 +272,8 @@
           </row>
           <row>
             <entry>
-                **Punitive**
-              </entry>
+              <emphasis role="strong">Punitive</emphasis>
+            </entry>
             <entry>
                 Punishment and Deterrence
               </entry>
@@ -409,4 +409,3 @@
       </para>
   </section>
 </section>
-  

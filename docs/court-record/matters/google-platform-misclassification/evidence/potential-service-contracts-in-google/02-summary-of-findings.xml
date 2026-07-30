@@ -9,32 +9,51 @@
     frameworks are specifically designed to define the relationship as
     something other than employment.
   </para>
-  <para>
-    | | | | | |
-  </para>
-  <para>
-    | :-: | :-: | :-: | :-: | :-: |
-  </para>
-  <para>
-    | Program/Service | Nature of Agreement | Remuneration Argument | IP
-    Ownership | Misclassification Risk |
-  </para>
-  <para>
-    | **General AI/UGC** | Terms of Service (License-for-Access) | Weak
-    (Non-monetary benefit is service access, not wages) | User retains
-    ownership, grants Google a license | Very Low |
-  </para>
-  <para>
-    | **Vulnerability Reward Program** | Unilateral Offer (Prize for a
-    result) | Moderate (Monetary, but framed as a reward, not wages) |
-    Not applicable (IP is in the bug report, not a creative work) | Low
-    |
-  </para>
-  <para>
-    | **Developer/Contributor** | Contributor License Agreement (CLA) |
-    None (Explicitly royalty-free) | Contributor retains ownership,
-    grants Google a license 14 | Extremely Low |
-  </para>
+  <informaltable>
+    <tgroup cols="5">
+      <colspec align="center" />
+      <colspec align="center" />
+      <colspec align="center" />
+      <colspec align="center" />
+      <colspec align="center" />
+      <tbody>
+        <row>
+          <entry> Program/Service </entry>
+          <entry> Nature of Agreement </entry>
+          <entry> Remuneration Argument </entry>
+          <entry> IP Ownership </entry>
+          <entry> Misclassification Risk </entry>
+        </row>
+        <row>
+          <entry>
+            <emphasis role="strong">General AI/UGC</emphasis>
+          </entry>
+          <entry> Terms of Service (License-for-Access) </entry>
+          <entry> Weak (Non-monetary benefit is service access, not wages) </entry>
+          <entry> User retains ownership, grants Google a license </entry>
+          <entry> Very Low </entry>
+        </row>
+        <row>
+          <entry>
+            <emphasis role="strong">Vulnerability Reward Program</emphasis>
+          </entry>
+          <entry> Unilateral Offer (Prize for a result) </entry>
+          <entry> Moderate (Monetary, but framed as a reward, not wages) </entry>
+          <entry> Not applicable (IP is in the bug report, not a creative work) </entry>
+          <entry> Low </entry>
+        </row>
+        <row>
+          <entry>
+            <emphasis role="strong">Developer/Contributor</emphasis>
+          </entry>
+          <entry> Contributor License Agreement (CLA) </entry>
+          <entry> None (Explicitly royalty-free) </entry>
+          <entry> Contributor retains ownership, grants Google a license 14 </entry>
+          <entry> Extremely Low </entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
   <para>
     While your argument is powerful in theory, it runs directly into the
     carefully constructed legal reality of Google's Terms of Service and

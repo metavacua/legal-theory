@@ -267,8 +267,8 @@
           </row>
           <row>
             <entry>
-                **The Tender Contract**
-              </entry>
+              <emphasis role="strong">The Tender Contract</emphasis>
+            </entry>
             <entry>
                 Explicit Veto of an Interactive Action
               </entry>
@@ -284,8 +284,8 @@
           </row>
           <row>
             <entry>
-                **Fog of Love**
-              </entry>
+              <emphasis role="strong">Fog of Love</emphasis>
+            </entry>
             <entry>
                 Misaligned choices on Scene cards
               </entry>
@@ -301,8 +301,8 @@
           </row>
           <row>
             <entry>
-                **Star Crossed**
-              </entry>
+              <emphasis role="strong">Star Crossed</emphasis>
+            </entry>
             <entry>
                 Actions that increase forbidden attraction
               </entry>
@@ -334,4 +334,3 @@
       </para>
   </section>
 </section>
-  

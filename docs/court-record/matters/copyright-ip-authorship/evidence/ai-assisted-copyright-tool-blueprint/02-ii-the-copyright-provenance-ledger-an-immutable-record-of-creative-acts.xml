@@ -127,8 +127,8 @@
           </row>
           <row>
             <entry>
-                **Works**
-              </entry>
+              <emphasis role="strong">Works</emphasis>
+            </entry>
             <entry>
                 WorkID
               </entry>
@@ -220,8 +220,8 @@
           </row>
           <row>
             <entry>
-                **Contributors**
-              </entry>
+              <emphasis role="strong">Contributors</emphasis>
+            </entry>
             <entry>
                 ContributorID
               </entry>
@@ -293,8 +293,8 @@
           </row>
           <row>
             <entry>
-                **Assets**
-              </entry>
+              <emphasis role="strong">Assets</emphasis>
+            </entry>
             <entry>
                 AssetID
               </entry>
@@ -386,8 +386,8 @@
           </row>
           <row>
             <entry>
-                **Contributions**
-              </entry>
+              <emphasis role="strong">Contributions</emphasis>
+            </entry>
             <entry>
                 ContributionID
               </entry>
@@ -656,4 +656,3 @@
       </para>
   </section>
 </section>
-  

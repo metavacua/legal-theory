@@ -276,19 +276,19 @@
         <tbody>
           <row>
             <entry>
-                **Metric**
-              </entry>
+              <emphasis role="strong">Metric</emphasis>
+            </entry>
             <entry>
-                **Framework A: Presumption of Illegality**
-              </entry>
+              <emphasis role="strong">Framework A: Presumption of Illegality</emphasis>
+            </entry>
             <entry>
-                **Framework B: Presumption of Legality**
-              </entry>
+              <emphasis role="strong">Framework B: Presumption of Legality</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Burden of Proof**
-              </entry>
+              <emphasis role="strong">Burden of Proof</emphasis>
+            </entry>
             <entry>
                 Shifts to the defendant to prove a lawful purpose.
               </entry>
@@ -299,8 +299,8 @@
           </row>
           <row>
             <entry>
-                **Nature of the Crime**
-              </entry>
+              <emphasis role="strong">Nature of the Crime</emphasis>
+            </entry>
             <entry>
                 Status-based: The relationship itself is suspect.
               </entry>
@@ -311,8 +311,8 @@
           </row>
           <row>
             <entry>
-                **Evidentiary Standard**
-              </entry>
+              <emphasis role="strong">Evidentiary Standard</emphasis>
+            </entry>
             <entry>
                 Defendant must produce evidence of an affirmative
                 defense.
@@ -324,8 +324,8 @@
           </row>
           <row>
             <entry>
-                **Role of Contract**
-              </entry>
+              <emphasis role="strong">Role of Contract</emphasis>
+            </entry>
             <entry>
                 A lawful contract is an affirmative defense that must be
                 proven by the defendant.
@@ -337,8 +337,8 @@
           </row>
           <row>
             <entry>
-                **Legislative Impact**
-              </entry>
+              <emphasis role="strong">Legislative Impact</emphasis>
+            </entry>
             <entry>
                 Promotes narrow, exception-based legislation.
               </entry>
@@ -349,8 +349,8 @@
           </row>
           <row>
             <entry>
-                **Law Enforcement Focus**
-              </entry>
+              <emphasis role="strong">Law Enforcement Focus</emphasis>
+            </entry>
             <entry>
                 Broad policing of personal relationships involving
                 economic exchange.
@@ -362,8 +362,8 @@
           </row>
           <row>
             <entry>
-                **Social Consequence**
-              </entry>
+              <emphasis role="strong">Social Consequence</emphasis>
+            </entry>
             <entry>
                 Chilling effect on non-traditional relationships;
                 increased stigma; potential for misuse in personal
@@ -380,4 +380,3 @@
     </informaltable>
   </section>
 </section>
-  

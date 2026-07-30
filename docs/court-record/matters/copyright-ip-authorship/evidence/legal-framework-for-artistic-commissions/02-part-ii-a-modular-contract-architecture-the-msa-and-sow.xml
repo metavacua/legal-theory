@@ -305,28 +305,27 @@
         <tbody>
           <row>
             <entry>
-                **MSA (The Relationship)**
-              </entry>
+              <emphasis role="strong">MSA (The Relationship)</emphasis>
+            </entry>
             <entry>
-                **SOW (The Project)**
-              </entry>
+              <emphasis role="strong">SOW (The Project)</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Governs the long-term engagement between the
-                parties.**
-              </entry>
+              <emphasis role="strong">Governs the long-term engagement between the parties.</emphasis>
+            </entry>
             <entry>
-                **Governs a single, specific project.**
-              </entry>
+              <emphasis role="strong">Governs a single, specific project.</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Clauses:**
-              </entry>
+              <emphasis role="strong">Clauses:</emphasis>
+            </entry>
             <entry>
-                **Clauses:**
-              </entry>
+              <emphasis role="strong">Clauses:</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
@@ -445,4 +444,3 @@
     </informaltable>
   </section>
 </section>
-  

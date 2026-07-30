@@ -202,32 +202,32 @@
         <tbody>
           <row>
             <entry>
-                **Area of Regulation**
-              </entry>
+              <emphasis role="strong">Area of Regulation</emphasis>
+            </entry>
             <entry>
-                **Primary Legal Framework**
-              </entry>
+              <emphasis role="strong">Primary Legal Framework</emphasis>
+            </entry>
             <entry>
-                **Governing Philosophy**
-              </entry>
+              <emphasis role="strong">Governing Philosophy</emphasis>
+            </entry>
             <entry>
-                **Key Regulations &amp; Controls**
-              </entry>
+              <emphasis role="strong">Key Regulations &amp; Controls</emphasis>
+            </entry>
             <entry>
-                **Primary Social Outcome**
-              </entry>
+              <emphasis role="strong">Primary Social Outcome</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Alcohol**
-              </entry>
+              <emphasis role="strong">Alcohol</emphasis>
+            </entry>
             <entry>
                 Sale and Supply of Alcohol Act 2012; National Drug
                 Policy
               </entry>
             <entry>
-                **Regulated Tolerance / Harm Minimisation**
-              </entry>
+              <emphasis role="strong">Regulated Tolerance / Harm Minimisation</emphasis>
+            </entry>
             <entry>
                 Age restrictions (18+), licensing for sale, restrictions
                 on advertising and hours of operation, excise taxes. 51
@@ -240,14 +240,14 @@
           </row>
           <row>
             <entry>
-                **Cannabis**
-              </entry>
+              <emphasis role="strong">Cannabis</emphasis>
+            </entry>
             <entry>
                 Misuse of Drugs Act 1975
               </entry>
             <entry>
-                **Prohibitionist**
-              </entry>
+              <emphasis role="strong">Prohibitionist</emphasis>
+            </entry>
             <entry>
                 Illegal to possess, cultivate, and supply. Criminal
                 penalties apply. Police have discretion but prohibition
@@ -261,14 +261,14 @@
           </row>
           <row>
             <entry>
-                **Sex Work**
-              </entry>
+              <emphasis role="strong">Sex Work</emphasis>
+            </entry>
             <entry>
                 Prostitution Reform Act 2003 (PRA)
               </entry>
             <entry>
-                **Harm Reduction / Decriminalized (Hybrid)**
-              </entry>
+              <emphasis role="strong">Harm Reduction / Decriminalized (Hybrid)</emphasis>
+            </entry>
             <entry>
                 Decriminalized for citizens/residents. Health and safety
                 requirements for operators. Prohibitions on underage
@@ -282,14 +282,14 @@
           </row>
           <row>
             <entry>
-                **Pornography**
-              </entry>
+              <emphasis role="strong">Pornography</emphasis>
+            </entry>
             <entry>
                 Films, Videos, and Publications Classification Act 1993
               </entry>
             <entry>
-                **Censorship / Moral Control**
-              </entry>
+              <emphasis role="strong">Censorship / Moral Control</emphasis>
+            </entry>
             <entry>
                 Tiered classification system (Unrestricted, Restricted,
                 Objectionable). Subjective "objectionable"
@@ -307,4 +307,3 @@
     </informaltable>
   </section>
 </section>
-  

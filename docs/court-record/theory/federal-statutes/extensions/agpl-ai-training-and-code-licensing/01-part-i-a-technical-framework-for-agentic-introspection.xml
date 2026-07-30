@@ -180,8 +180,8 @@
             </row>
             <row>
               <entry>
-                  **dependency\_graph.json**
-                </entry>
+                <emphasis role="strong">dependency_graph.json</emphasis>
+              </entry>
               <entry>
                   Custom tree-sitter Script
                 </entry>
@@ -189,16 +189,13 @@
                   JSON
                 </entry>
               <entry>
-                  **Mitigates:** Lack of dependency graph analysis.
-                  Provides an explicit, machine-readable map of project
-                  relationships, bypassing the need for Jules to infer
-                  them.2
+                <emphasis role="strong">Mitigates:</emphasis> Lack of dependency graph analysis. Provides an explicit, machine-readable map of project relationships, bypassing the need for Jules to infer them.2
                 </entry>
             </row>
             <row>
               <entry>
-                  **symbols.json**
-                </entry>
+                <emphasis role="strong">symbols.json</emphasis>
+              </entry>
               <entry>
                   Universal Ctags
                 </entry>
@@ -206,16 +203,13 @@
                   JSON
                 </entry>
               <entry>
-                  **Mitigates:** Failure in project-wide symbol
-                  recognition. Enables high-precision, direct lookup of
-                  any symbol's definition, replacing fuzzy semantic
-                  search.2
+                <emphasis role="strong">Mitigates:</emphasis> Failure in project-wide symbol recognition. Enables high-precision, direct lookup of any symbol's definition, replacing fuzzy semantic search.2
                 </entry>
             </row>
             <row>
               <entry>
-                  **\*.ast**
-                </entry>
+                <emphasis role="strong">*.ast</emphasis>
+              </entry>
               <entry>
                   tree-sitter
                 </entry>
@@ -223,16 +217,13 @@
                   S-expression/JSON
                 </entry>
               <entry>
-                  **Mitigates:** "Context-as-Text" flaw.
-                  Provides deep structural understanding of code,
-                  enabling syntactic analysis and reasoning required for
-                  tool development.2
+                <emphasis role="strong">Mitigates:</emphasis> "Context-as-Text" flaw. Provides deep structural understanding of code, enabling syntactic analysis and reasoning required for tool development.2
                 </entry>
             </row>
             <row>
               <entry>
-                  **llms.txt**
-                </entry>
+                <emphasis role="strong">llms.txt</emphasis>
+              </entry>
               <entry>
                   Concatenation of /docs/
                 </entry>
@@ -240,16 +231,13 @@
                   Plain Text / Markdown
                 </entry>
               <entry>
-                  **Mitigates:** Lack of project-specific conceptual
-                  understanding. Provides curated conceptual and
-                  procedural knowledge for high-level RAG on internal
-                  project logic.2
+                <emphasis role="strong">Mitigates:</emphasis> Lack of project-specific conceptual understanding. Provides curated conceptual and procedural knowledge for high-level RAG on internal project logic.2
                 </entry>
             </row>
             <row>
               <entry>
-                  **temporal\_orientation.md**
-                </entry>
+                <emphasis role="strong">temporal_orientation.md</emphasis>
+              </entry>
               <entry>
                   Scheduled GitHub Action
                 </entry>
@@ -257,10 +245,7 @@
                   Markdown
                 </entry>
               <entry>
-                  **Mitigates:** Stale knowledge base. Provides a
-                  regularly updated, cached summary of the current state
-                  (versions, best practices) of external technologies,
-                  orienting the agent in time.2
+                <emphasis role="strong">Mitigates:</emphasis> Stale knowledge base. Provides a regularly updated, cached summary of the current state (versions, best practices) of external technologies, orienting the agent in time.2
                 </entry>
             </row>
           </tbody>
@@ -444,4 +429,3 @@
     </section>
   </section>
 </section>
-  

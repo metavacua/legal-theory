@@ -284,8 +284,8 @@
           </row>
           <row>
             <entry>
-                **Mortgage Application Denial**
-              </entry>
+              <emphasis role="strong">Mortgage Application Denial</emphasis>
+            </entry>
             <entry>
                 Banks
               </entry>
@@ -301,8 +301,8 @@
           </row>
           <row>
             <entry>
-                **Business Banking Services Refusal**
-              </entry>
+              <emphasis role="strong">Business Banking Services Refusal</emphasis>
+            </entry>
             <entry>
                 Bank
               </entry>
@@ -317,8 +317,8 @@
           </row>
           <row>
             <entry>
-                **Income Protection Insurance Refusal**
-              </entry>
+              <emphasis role="strong">Income Protection Insurance Refusal</emphasis>
+            </entry>
             <entry>
                 Insurance Company
               </entry>
@@ -333,8 +333,8 @@
           </row>
           <row>
             <entry>
-                **Higher Premiums / Fees**
-              </entry>
+              <emphasis role="strong">Higher Premiums / Fees</emphasis>
+            </entry>
             <entry>
                 Insurance Companies, Banks
               </entry>
@@ -349,8 +349,8 @@
           </row>
           <row>
             <entry>
-                **Denial of Loans / Overdrafts**
-              </entry>
+              <emphasis role="strong">Denial of Loans / Overdrafts</emphasis>
+            </entry>
             <entry>
                 Banks
               </entry>
@@ -365,8 +365,8 @@
           </row>
           <row>
             <entry>
-                **Discriminatory Advice from Professionals**
-              </entry>
+              <emphasis role="strong">Discriminatory Advice from Professionals</emphasis>
+            </entry>
             <entry>
                 Accountant, Mortgage Broker
               </entry>
@@ -382,8 +382,8 @@
           </row>
           <row>
             <entry>
-                **Housing Rental Discrimination**
-              </entry>
+              <emphasis role="strong">Housing Rental Discrimination</emphasis>
+            </entry>
             <entry>
                 Landlords / Property Managers
               </entry>
@@ -454,4 +454,3 @@
       </para>
   </section>
 </section>
-  

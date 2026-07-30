@@ -127,8 +127,8 @@
           </row>
           <row>
             <entry>
-                **Individual w/ No Income**
-              </entry>
+              <emphasis role="strong">Individual w/ No Income</emphasis>
+            </entry>
             <entry>
                 Exempt
               </entry>
@@ -153,8 +153,7 @@
           </row>
           <row>
             <entry>
-                **Hobbyist** (e.g., $1,000 gross income, no profit
-                motive)
+              <emphasis role="strong">Hobbyist</emphasis> (e.g., $1,000 gross income, no profit motive)
               </entry>
             <entry>
                 Required if total income \&gt; threshold
@@ -180,8 +179,7 @@
           </row>
           <row>
             <entry>
-                **Micro-Sole Proprietor** (e.g., $4,500 gross receipts
-                in Chico)
+              <emphasis role="strong">Micro-Sole Proprietor</emphasis> (e.g., $4,500 gross receipts in Chico)
               </entry>
             <entry>
                 Required ($400+ SE income)
@@ -207,8 +205,7 @@
           </row>
           <row>
             <entry>
-                **Sole Proprietor** (e.g., $25,000 gross receipts in
-                Chico)
+              <emphasis role="strong">Sole Proprietor</emphasis> (e.g., $25,000 gross receipts in Chico)
               </entry>
             <entry>
                 Required
@@ -234,8 +231,7 @@
           </row>
           <row>
             <entry>
-                **Sole Proprietor w/ Retail Sales** (e.g., $25,000 gross
-                receipts)
+              <emphasis role="strong">Sole Proprietor w/ Retail Sales</emphasis> (e.g., $25,000 gross receipts)
               </entry>
             <entry>
                 Required
@@ -261,8 +257,8 @@
           </row>
           <row>
             <entry>
-                **LLC w/ Employees &amp; Retail Sales**
-              </entry>
+              <emphasis role="strong">LLC w/ Employees &amp; Retail Sales</emphasis>
+            </entry>
             <entry>
                 Required
               </entry>

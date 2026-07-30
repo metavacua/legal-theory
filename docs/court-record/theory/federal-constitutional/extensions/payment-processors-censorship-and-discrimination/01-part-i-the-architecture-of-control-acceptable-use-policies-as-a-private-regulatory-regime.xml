@@ -112,8 +112,8 @@
           </row>
           <row>
             <entry>
-                **PayPal**
-              </entry>
+              <emphasis role="strong">PayPal</emphasis>
+            </entry>
             <entry>
                 Sexually Oriented Materials
               </entry>
@@ -154,8 +154,8 @@
           </row>
           <row>
             <entry>
-                **Stripe**
-              </entry>
+              <emphasis role="strong">Stripe</emphasis>
+            </entry>
             <entry>
                 Reputational Risk
               </entry>
@@ -186,8 +186,8 @@
           </row>
           <row>
             <entry>
-                **Visa**
-              </entry>
+              <emphasis role="strong">Visa</emphasis>
+            </entry>
             <entry>
                 Brand-Damaging Activity
               </entry>
@@ -248,4 +248,3 @@
       </para>
   </section>
 </section>
-  

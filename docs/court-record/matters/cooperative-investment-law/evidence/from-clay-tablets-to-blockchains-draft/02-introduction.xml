@@ -53,42 +53,50 @@
   <para>
       Table 1: Evolution of IP Protection for Financial Innovations
     </para>
-  <para>
-      | Era | Key Financial Innovation | Dominant Form of
-      "Protection" or Exclusionary Right |
-    </para>
-  <para>
-      | :--- | :--- | :--- |
-    </para>
-  <para>
-      | Ancient (c. 2400 BC - 476 AD) | Mesopotamian Grain Bonds, Roman
-      Societates | Contract Law, Physical Records (e.g., Clay Tablets) |
-    </para>
-  <para>
-      | Medieval/Renaissance (c. 1300s-1500s) | Venetian Debt Trading |
-      Contract Law, Guild Rules, Physical Ledgers |
-    </para>
-  <para>
-      | Early Modern (c. 1600-1800) | Dutch East India Co. (VOC) Stock,
-      Joint-Stock Companies | Government-Granted Charter, State-Enforced
-      Monopoly |
-    </para>
-  <para>
-      | Industrial/Modern (c. 1800-1998) | Common/Preferred Stock,
-      Modern Exchanges (NYSE, LSE) | Public Domain (Instrument Concept),
-      Governed by Securities Law; Trademarks for Exchange Brands;
-      Copyright for Documents |
-    </para>
-  <para>
-      | The State Street Era (1998-2014) | Financial Business Methods,
-      Derivatives, Mutual Fund Structures | U.S. Business Method Patents
-      |
-    </para>
-  <para>
-      | The Post-Alice Era (2014-Present) | Trading Algorithms, FinTech
-      Platforms, Complex Derivatives | Primarily Trade Secrets;
-      Narrowly-Tailored Software/System Patents; Copyright for Code/UI;
-      Trademark for Branding |
-    </para>
+  <informaltable>
+    <tgroup cols="3">
+      <colspec align="left" />
+      <colspec align="left" />
+      <colspec align="left" />
+      <thead>
+        <row>
+          <entry> Era </entry>
+          <entry> Key Financial Innovation </entry>
+          <entry> Dominant Form of "Protection" or Exclusionary Right </entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry> Ancient (c. 2400 BC - 476 AD) </entry>
+          <entry> Mesopotamian Grain Bonds, Roman Societates </entry>
+          <entry> Contract Law, Physical Records (e.g., Clay Tablets) </entry>
+        </row>
+        <row>
+          <entry> Medieval/Renaissance (c. 1300s-1500s) </entry>
+          <entry> Venetian Debt Trading </entry>
+          <entry> Contract Law, Guild Rules, Physical Ledgers </entry>
+        </row>
+        <row>
+          <entry> Early Modern (c. 1600-1800) </entry>
+          <entry> Dutch East India Co. (VOC) Stock, Joint-Stock Companies </entry>
+          <entry> Government-Granted Charter, State-Enforced Monopoly </entry>
+        </row>
+        <row>
+          <entry> Industrial/Modern (c. 1800-1998) </entry>
+          <entry> Common/Preferred Stock, Modern Exchanges (NYSE, LSE) </entry>
+          <entry> Public Domain (Instrument Concept), Governed by Securities Law; Trademarks for Exchange Brands; Copyright for Documents </entry>
+        </row>
+        <row>
+          <entry> The State Street Era (1998-2014) </entry>
+          <entry> Financial Business Methods, Derivatives, Mutual Fund Structures </entry>
+          <entry> U.S. Business Method Patents </entry>
+        </row>
+        <row>
+          <entry> The Post-Alice Era (2014-Present) </entry>
+          <entry> Trading Algorithms, FinTech Platforms, Complex Derivatives </entry>
+          <entry> Primarily Trade Secrets; Narrowly-Tailored Software/System Patents; Copyright for Code/UI; Trademark for Branding </entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
 </section>
-  

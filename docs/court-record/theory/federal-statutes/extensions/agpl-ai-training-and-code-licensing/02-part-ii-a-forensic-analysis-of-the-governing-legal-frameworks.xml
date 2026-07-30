@@ -189,8 +189,8 @@
             </row>
             <row>
               <entry>
-                  **Google's License to Content (Personal Accounts)**
-                </entry>
+                <emphasis role="strong">Google's License to Content (Personal Accounts)</emphasis>
+              </entry>
               <entry>
                   Grants Google a license to use content for
                   "operating and improving the services...
@@ -202,16 +202,13 @@
                   models.
                 </entry>
               <entry>
-                  **CRITICAL:** Cease all use of personal/free accounts.
-                  The project must exclusively use a paid-tier Google
-                  Cloud or Workspace account to gain contractual data
-                  confidentiality guarantees.6
+                <emphasis role="strong">CRITICAL:</emphasis> Cease all use of personal/free accounts. The project must exclusively use a paid-tier Google Cloud or Workspace account to gain contractual data confidentiality guarantees.6
                 </entry>
             </row>
             <row>
               <entry>
-                  **Non-Compete Clause (Gemini API ToS)**
-                </entry>
+                <emphasis role="strong">Non-Compete Clause (Gemini API ToS)</emphasis>
+              </entry>
               <entry>
                   "You may not use the Services to develop models
                   that compete with the Services" or "develop
@@ -231,8 +228,8 @@
             </row>
             <row>
               <entry>
-                  **Data Caching (Gemini API Default)**
-                </entry>
+                <emphasis role="strong">Data Caching (Gemini API Default)</emphasis>
+              </entry>
               <entry>
                   By default, Google may cache API inputs and outputs
                   for up to 24 hours for latency reduction.5
@@ -386,4 +383,3 @@
       </para>
   </section>
 </section>
-  

@@ -172,60 +172,45 @@
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
                   Purpose &amp; Mitigation of Jules's Weakness
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-                  **dependency\_graph.json**
-                </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+                <span class="strong"><strong>dependency_graph.json</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   Custom tree-sitter Script
                 </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   JSON
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
-                  **Mitigates:** Lack of dependency graph analysis.
-                  Provides an explicit, machine-readable map of project
-                  relationships, bypassing the need for Jules to infer
-                  them.2
+                <span class="strong"><strong>Mitigates:</strong></span> Lack of dependency graph analysis. Provides an explicit, machine-readable map of project relationships, bypassing the need for Jules to infer them.2
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-                  **symbols.json**
-                </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+                <span class="strong"><strong>symbols.json</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   Universal Ctags
                 </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   JSON
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
-                  **Mitigates:** Failure in project-wide symbol
-                  recognition. Enables high-precision, direct lookup of
-                  any symbol's definition, replacing fuzzy semantic
-                  search.2
+                <span class="strong"><strong>Mitigates:</strong></span> Failure in project-wide symbol recognition. Enables high-precision, direct lookup of any symbol's definition, replacing fuzzy semantic search.2
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-                  **\*.ast**
-                </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+                <span class="strong"><strong>*.ast</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   tree-sitter
                 </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   S-expression/JSON
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
-                  **Mitigates:** "Context-as-Text" flaw.
-                  Provides deep structural understanding of code,
-                  enabling syntactic analysis and reasoning required for
-                  tool development.2
+                <span class="strong"><strong>Mitigates:</strong></span> "Context-as-Text" flaw. Provides deep structural understanding of code, enabling syntactic analysis and reasoning required for tool development.2
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-                  **llms.txt**
-                </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+                <span class="strong"><strong>llms.txt</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   Concatenation of /docs/
                 </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   Plain Text / Markdown
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
-                  **Mitigates:** Lack of project-specific conceptual
-                  understanding. Provides curated conceptual and
-                  procedural knowledge for high-level RAG on internal
-                  project logic.2
+                <span class="strong"><strong>Mitigates:</strong></span> Lack of project-specific conceptual understanding. Provides curated conceptual and procedural knowledge for high-level RAG on internal project logic.2
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; ">
-                  **temporal\_orientation.md**
-                </td><td style="text-align: center; border-right: 1px solid ; ">
+                <span class="strong"><strong>temporal_orientation.md</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; ">
                   Scheduled GitHub Action
                 </td><td style="text-align: center; border-right: 1px solid ; ">
                   Markdown
                 </td><td style="text-align: center; ">
-                  **Mitigates:** Stale knowledge base. Provides a
-                  regularly updated, cached summary of the current state
-                  (versions, best practices) of external technologies,
-                  orienting the agent in time.2
+                <span class="strong"><strong>Mitigates:</strong></span> Stale knowledge base. Provides a regularly updated, cached summary of the current state (versions, best practices) of external technologies, orienting the agent in time.2
                 </td></tr></tbody></table></div></section></section><section class="section" id="architecting-the-introspection-and-self-improvement-loop"><div class="titlepage"><div><div><h3 class="title">
       <span class="strong"><strong>Architecting the Introspection and
       Self-Improvement Loop</strong></span>
@@ -478,8 +463,8 @@
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
                   Mandatory Mitigation
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-                  **Google's License to Content (Personal Accounts)**
-                </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+                <span class="strong"><strong>Google's License to Content (Personal Accounts)</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   Grants Google a license to use content for
                   "operating and improving the services...
                   developing new technologies".10
@@ -488,13 +473,10 @@
                   SynthPlayground to train its own proprietary AI
                   models.
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
-                  **CRITICAL:** Cease all use of personal/free accounts.
-                  The project must exclusively use a paid-tier Google
-                  Cloud or Workspace account to gain contractual data
-                  confidentiality guarantees.6
+                <span class="strong"><strong>CRITICAL:</strong></span> Cease all use of personal/free accounts. The project must exclusively use a paid-tier Google Cloud or Workspace account to gain contractual data confidentiality guarantees.6
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-                  **Non-Compete Clause (Gemini API ToS)**
-                </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+                <span class="strong"><strong>Non-Compete Clause (Gemini API ToS)</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   "You may not use the Services to develop models
                   that compete with the Services" or "develop
                   machine learning models or related technology".11
@@ -508,8 +490,8 @@
                   the agent's processes and the underlying model to
                   support this legal argument.6
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; ">
-                  **Data Caching (Gemini API Default)**
-                </td><td style="text-align: center; border-right: 1px solid ; ">
+                <span class="strong"><strong>Data Caching (Gemini API Default)</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; ">
                   By default, Google may cache API inputs and outputs
                   for up to 24 hours for latency reduction.5
                 </td><td style="text-align: center; border-right: 1px solid ; ">
@@ -801,58 +783,45 @@
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
                   Key Implication for SynthPlayground
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-                  **MIT**
-                </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+                <span class="strong"><strong>MIT</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   None. Derivative works can be proprietary.46
                 </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   None.
                 </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   No explicit grant.
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
-                  **Low Risk.** Removes the "poison pill"
-                  threat and "copyleft hole" problem.
-                  Maximizes legal simplicity and safety but sacrifices
-                  the share-alike requirement.
+                <span class="strong"><strong>Low Risk.</strong></span> Removes the "poison pill" threat and "copyleft hole" problem. Maximizes legal simplicity and safety but sacrifices the share-alike requirement.
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-                  **Apache 2.0**
-                </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+                <span class="strong"><strong>Apache 2.0</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   None. Derivative works can be proprietary.46
                 </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   None.
                 </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   Yes, explicit grant from contributors.47
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
-                  **Low Risk.** Similar to MIT but provides explicit
-                  protection against patent trolling. Legally more
-                  verbose but robust for corporate environments.
+                <span class="strong"><strong>Low Risk.</strong></span> Similar to MIT but provides explicit protection against patent trolling. Legally more verbose but robust for corporate environments.
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-                  **GPL 3.0**
-                </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-                  **Strong Copyleft.** Derivative works must also be
-                  licensed under GPL 3.0.20
+                <span class="strong"><strong>GPL 3.0</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+                <span class="strong"><strong>Strong Copyleft.</strong></span> Derivative works must also be licensed under GPL 3.0.20
                 </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   None (this is the "SaaS loophole").30
                 </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
                   Yes, explicit grant from contributors.18
                 </td><td style="text-align: center; border-bottom: 1px solid ; ">
-                  **High Risk (Current Choice).** Creates the
-                  "poison pill" threat when public. The
-                  "copyleft hole" from AI output undermines
-                  its core purpose.
+                <span class="strong"><strong>High Risk (Current Choice).</strong></span> Creates the "poison pill" threat when public. The "copyleft hole" from AI output undermines its core purpose.
                 </td></tr><tr><td style="text-align: center; border-right: 1px solid ; ">
-                  **AGPL 3.0**
-                </td><td style="text-align: center; border-right: 1px solid ; ">
-                  **Strong Copyleft.**
-                </td><td style="text-align: center; border-right: 1px solid ; ">
-                  **Yes.** Users interacting over a network must be
-                  offered the source code.29
+                <span class="strong"><strong>AGPL 3.0</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; ">
+                <span class="strong"><strong>Strong Copyleft.</strong></span>
+              </td><td style="text-align: center; border-right: 1px solid ; ">
+                <span class="strong"><strong>Yes.</strong></span> Users interacting over a network must be offered the source code.29
                 </td><td style="text-align: center; border-right: 1px solid ; ">
                   Yes, explicit grant from contributors.
                 </td><td style="text-align: center; ">
-                  **Very High Risk.** Explicitly codifies the network
-                  interaction obligation, making the legal argument
-                  against Google even more direct and antagonistic. Not
-                  recommended.
+                <span class="strong"><strong>Very High Risk.</strong></span> Explicitly codifies the network interaction obligation, making the legal argument against Google even more direct and antagonistic. Not recommended.
                 </td></tr></tbody></table></div><p>
           The most prudent course of action is to re-license the
           repository under a permissive license like

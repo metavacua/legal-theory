@@ -242,10 +242,7 @@
                   MIT
                 </entry>
               <entry>
-                  **High:** Feature set is exceptionally well-aligned
-                  with personal knowledge management and deep, recursive
-                  self-inquiry. Local file support is critical for
-                  privacy.
+                <emphasis role="strong">High:</emphasis> Feature set is exceptionally well-aligned with personal knowledge management and deep, recursive self-inquiry. Local file support is critical for privacy.
                 </entry>
             </row>
             <row>
@@ -268,10 +265,7 @@
                   MIT
                 </entry>
               <entry>
-                  **Medium:** Highly powerful and configurable, but may
-                  be overly complex for a single-user tool. Best suited
-                  as a source of architectural patterns or for a more
-                  advanced, custom build.
+                <emphasis role="strong">Medium:</emphasis> Highly powerful and configurable, but may be overly complex for a single-user tool. Best suited as a source of architectural patterns or for a more advanced, custom build.
                 </entry>
             </row>
             <row>
@@ -293,10 +287,7 @@
                   MIT
                 </entry>
               <entry>
-                  **Medium:** The multi-modal outputs are a unique
-                  advantage for visualizing personal data. However, it
-                  lacks the persistent knowledge base and recursive
-                  inquiry features.
+                <emphasis role="strong">Medium:</emphasis> The multi-modal outputs are a unique advantage for visualizing personal data. However, it lacks the persistent knowledge base and recursive inquiry features.
                 </entry>
             </row>
             <row>
@@ -316,9 +307,7 @@
                   Not specified, but likely MIT
                 </entry>
               <entry>
-                  **Low:** High dependency on a specific, paid cloud
-                  stack makes it less flexible and potentially more
-                  costly. Lacks key introspection-focused features.
+                <emphasis role="strong">Low:</emphasis> High dependency on a specific, paid cloud stack makes it less flexible and potentially more costly. Lacks key introspection-focused features.
                 </entry>
             </row>
             <row>
@@ -338,9 +327,7 @@
                   Not specified
                 </entry>
               <entry>
-                  **Very Low:** Appears to be an early-stage project
-                  with no community traction. Unsuitable for a stable,
-                  long-term tool.
+                <emphasis role="strong">Very Low:</emphasis> Appears to be an early-stage project with no community traction. Unsuitable for a stable, long-term tool.
                 </entry>
             </row>
           </tbody>
@@ -669,4 +656,3 @@
     </section>
   </section>
 </section>
-  

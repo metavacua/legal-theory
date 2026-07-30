@@ -157,8 +157,9 @@
         in U.S. patent law.
       </para>
     <section xml:id="the-post-alice-landscape">
-      <title>**The
-        Post-**<emphasis>
+      <title>
+        <emphasis role="strong">The Post-</emphasis>
+        <emphasis>
           <emphasis role="strong">Alice</emphasis>
         </emphasis>
         <emphasis role="strong">Landscape</emphasis>
@@ -321,11 +322,11 @@
             </row>
             <row>
               <entry>
-                  **Foundational Legal Documents** (Bylaws, Prospectus)
+                <emphasis role="strong">Foundational Legal Documents</emphasis> (Bylaws, Prospectus)
                 </entry>
               <entry>
-                  **Copyright**
-                </entry>
+                <emphasis role="strong">Copyright</emphasis>
+              </entry>
               <entry>
                   Protects the specific, unique expression and language
                   of the documents, not the underlying legal or
@@ -339,11 +340,10 @@
             </row>
             <row>
               <entry>
-                  **The Technology Platform** (Governance Engine, Smart
-                  Contracts)
+                <emphasis role="strong">The Technology Platform</emphasis> (Governance Engine, Smart Contracts)
                 </entry>
               <entry>
-                  **Patent** (Post-*Alice* Strategy)
+                <emphasis role="strong">Patent</emphasis> (Post-<emphasis>Alice</emphasis> Strategy)
                 </entry>
               <entry>
                   Protects the specific, novel technological
@@ -359,12 +359,11 @@
             </row>
             <row>
               <entry>
-                  **Brand &amp; Instrument Names** ("Hybrid
-                  Coop," "Class A Share")
+                <emphasis role="strong">Brand &amp; Instrument Names</emphasis> ("Hybrid Coop," "Class A Share")
                 </entry>
               <entry>
-                  **Trademark &amp; Certification Mark**
-                </entry>
+                <emphasis role="strong">Trademark &amp; Certification Mark</emphasis>
+              </entry>
               <entry>
                   Protects the names, logos, and slogans that identify
                   the enterprise and its products. A certification mark
@@ -380,11 +379,11 @@
             </row>
             <row>
               <entry>
-                  **Proprietary Financial Models &amp; Algorithms**
-                </entry>
+                <emphasis role="strong">Proprietary Financial Models &amp; Algorithms</emphasis>
+              </entry>
               <entry>
-                  **Trade Secret**
-                </entry>
+                <emphasis role="strong">Trade Secret</emphasis>
+              </entry>
               <entry>
                   Protects any confidential information that provides a
                   competitive advantage, including valuation models,
@@ -403,4 +402,3 @@
     </section>
   </section>
 </section>
-  

@@ -210,8 +210,7 @@
                   N/A
                 </entry>
               <entry>
-                  **Medium**: Provides the core conceptual workflow but
-                  lacks advanced features for recursion and memory.
+                <emphasis role="strong">Medium</emphasis>: Provides the core conceptual workflow but lacks advanced features for recursion and memory.
                 </entry>
             </row>
             <row>
@@ -230,10 +229,7 @@
                   Multiple AI providers (Google, OpenAI, etc.)
                 </entry>
               <entry>
-                  **High**: The feature set directly maps to the
-                  requirements for an orientation and introspection
-                  engine. The combination of recursion and persistent
-                  memory is ideal.
+                <emphasis role="strong">High</emphasis>: The feature set directly maps to the requirements for an orientation and introspection engine. The combination of recursion and persistent memory is ideal.
                 </entry>
             </row>
             <row>
@@ -251,10 +247,7 @@
                   Tavily Search API
                 </entry>
               <entry>
-                  **Medium**: The evaluation framework is highly
-                  valuable for methodology, but the core research
-                  features are less advanced than btahir's
-                  implementation.
+                <emphasis role="strong">Medium</emphasis>: The evaluation framework is highly valuable for methodology, but the core research features are less advanced than btahir's implementation.
                 </entry>
             </row>
             <row>
@@ -272,9 +265,7 @@
                   Firecrawl, Vercel Postgres
                 </entry>
               <entry>
-                  **Medium**: The architectural concept of a separate
-                  reasoning model is a valuable pattern to adopt, but
-                  the overall feature set is less comprehensive.
+                <emphasis role="strong">Medium</emphasis>: The architectural concept of a separate reasoning model is a valuable pattern to adopt, but the overall feature set is less comprehensive.
                 </entry>
             </row>
           </tbody>
@@ -677,4 +668,3 @@
     </section>
   </section>
 </section>
-  

@@ -143,10 +143,10 @@
                 Feature
               </entry>
             <entry>
-                Federal *Howey* Test
+                Federal <emphasis>Howey</emphasis> Test
               </entry>
             <entry>
-                California *Risk Capital* Test
+                California <emphasis>Risk Capital</emphasis> Test
               </entry>
             <entry>
                 Strategic Implication for this Cooperative
@@ -154,8 +154,8 @@
           </row>
           <row>
             <entry>
-                **Primary Focus**
-              </entry>
+              <emphasis role="strong">Primary Focus</emphasis>
+            </entry>
             <entry>
                 Expectation of profit for the investor.
               </entry>
@@ -163,15 +163,13 @@
                 Risk of loss of the investor's capital.
               </entry>
             <entry>
-                The *Risk Capital* test is easier to satisfy, as the
-                risk to initial capital is undeniable in a startup
-                context.
+                The <emphasis>Risk Capital</emphasis> test is easier to satisfy, as the risk to initial capital is undeniable in a startup context.
               </entry>
           </row>
           <row>
             <entry>
-                **Key Prongs**
-              </entry>
+              <emphasis role="strong">Key Prongs</emphasis>
+            </entry>
             <entry>
                 1\. Investment of money2\. In a common enterprise3\.
                 With expectation of profits4\. From the efforts of
@@ -183,16 +181,13 @@
                 is at substantial risk
               </entry>
             <entry>
-                The cooperative's offering will be designed to meet all
-                prongs of both tests, but the *Risk Capital* test
-                provides a stronger, less ambiguous foundation in
-                California.
+                The cooperative's offering will be designed to meet all prongs of both tests, but the <emphasis>Risk Capital</emphasis> test provides a stronger, less ambiguous foundation in California.
               </entry>
           </row>
           <row>
             <entry>
-                **"Profit" Motive**
-              </entry>
+              <emphasis role="strong">"Profit" Motive</emphasis>
+            </entry>
             <entry>
                 Essential. The investor must be attracted by the
                 prospect of a return on their investment.
@@ -302,4 +297,3 @@
       </para>
   </section>
 </section>
-  

@@ -95,14 +95,14 @@
           </row>
           <row>
             <entry>
-                **AI Context Window Efficiency**
-              </entry>
+              <emphasis role="strong">AI Context Window Efficiency</emphasis>
+            </entry>
             <entry>
-                **Excellent**
-              </entry>
+              <emphasis role="strong">Excellent</emphasis>
+            </entry>
             <entry>
-                **Poor**
-              </entry>
+              <emphasis role="strong">Poor</emphasis>
+            </entry>
             <entry>
                 Jules clones a single repository for context.5 A
                 monorepo provides a complete, system-wide context in one
@@ -115,14 +115,14 @@
           </row>
           <row>
             <entry>
-                **AI-Driven Cross-Project Refactoring**
-              </entry>
+              <emphasis role="strong">AI-Driven Cross-Project Refactoring</emphasis>
+            </entry>
             <entry>
-                **High**
-              </entry>
+              <emphasis role="strong">High</emphasis>
+            </entry>
             <entry>
-                **Low**
-              </entry>
+              <emphasis role="strong">Low</emphasis>
+            </entry>
             <entry>
                 Atomic commits across projects are trivial in a
                 monorepo.10 Jules can modify a library and all its
@@ -135,14 +135,14 @@
           </row>
           <row>
             <entry>
-                **Tooling Overhead &amp; Consistency**
-              </entry>
+              <emphasis role="strong">Tooling Overhead &amp; Consistency</emphasis>
+            </entry>
             <entry>
-                **High (Initial), Low (Ongoing)**
-              </entry>
+              <emphasis role="strong">High (Initial), Low (Ongoing)</emphasis>
+            </entry>
             <entry>
-                **Low (Initial), High (Ongoing)**
-              </entry>
+              <emphasis role="strong">Low (Initial), High (Ongoing)</emphasis>
+            </entry>
             <entry>
                 A monorepo requires specialized build tools.11 However,
                 this enforces consistent tooling across all projects 3,
@@ -155,14 +155,14 @@
           </row>
           <row>
             <entry>
-                **Dependency Management Complexity**
-              </entry>
+              <emphasis role="strong">Dependency Management Complexity</emphasis>
+            </entry>
             <entry>
-                **Low**
-              </entry>
+              <emphasis role="strong">Low</emphasis>
+            </entry>
             <entry>
-                **High**
-              </entry>
+              <emphasis role="strong">High</emphasis>
+            </entry>
             <entry>
                 Shared dependencies are centralized, reducing version
                 conflicts.1 Jules can update a dependency once and
@@ -174,14 +174,14 @@
           </row>
           <row>
             <entry>
-                **Codebase Discoverability for AI**
-              </entry>
+              <emphasis role="strong">Codebase Discoverability for AI</emphasis>
+            </entry>
             <entry>
-                **Excellent**
-              </entry>
+              <emphasis role="strong">Excellent</emphasis>
+            </entry>
             <entry>
-                **Poor**
-              </entry>
+              <emphasis role="strong">Poor</emphasis>
+            </entry>
             <entry>
                 All code is housed in one location, making it easy for
                 an AI to search, analyze, and map relationships across
@@ -347,4 +347,3 @@
       </para>
   </section>
 </section>
-  

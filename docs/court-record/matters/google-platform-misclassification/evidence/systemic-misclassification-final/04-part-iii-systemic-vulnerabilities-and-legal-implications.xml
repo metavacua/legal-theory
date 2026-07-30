@@ -221,63 +221,151 @@
         providing a comparative risk assessment for each major category
         of user-provided labor under California's retroactive ABC test.
       </para>
-    <para>
-        | | | | | | | | | |
-      </para>
-    <para>
-        | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-      </para>
-    <para>
-        | Program/User Class | Governing Agreement | Nature of Labor
-        &amp; IP Generated | Remuneration Model | Predominant Factor
-        Test Risk | ABC Prong A (Control) Risk | ABC Prong B (Business)
-        Risk | ABC Prong C (Ind. Trade) Risk | Overall Misclassification
-        Risk |
-      </para>
-    <para>
-        | **Opinion Rewards/Crowdsource** | Program ToS | Micro-task
-        data labeling &amp; market research | Direct (cash/credits) or
-        indirect (perks) | Very High | High | Very High | Very High |
-        **Very High** |
-      </para>
-    <para>
-        | **Local Guides/Waze Editors** | Program Policies | Content
-        generation, data verification, cartography | Gamified (points,
-        badges, perks) | High | High | Very High | Very High | **High**
-        |
-      </para>
-    <para>
-        | **AI Feedback (Gemini/AI Premium)** | General ToS | RLHF, QA,
-        data generation for LLM training | None, or user pays a fee
-        ("Tom Sawyer") | High | Medium | Very High | Very High
-        | **High** |
-      </para>
-    <para>
-        | **Beta Testers** | NDA / Program ToS | Structured QA,
-        debugging, technical analysis | Early access, small gratuities |
-        Very High | Very High | Very High | Very High | **Very High** |
-      </para>
-    <para>
-        | **VRP Participants (Hobbyist)** | VRP Rules | Security
-        research, vulnerability reporting (IP) | Unilateral Offer
-        (Reward for result) | High | High | Very High | Very High |
-        **High** |
-      </para>
-    <para>
-        | **VRP Participants (Professional)** | VRP Rules | Security
-        research, vulnerability reporting (IP) | Unilateral Offer
-        (Reward for result) | High | High | Very High | Low | **Medium**
-        |
-      </para>
-    <para>
-        | **Platform Developers (Play/Chrome)** | DDA / Developer
-        Agreement | Software application development (IP) | Revenue
-        Share | Medium | High | High | Low | **Medium-Low** |
-      </para>
-    <para>
-        | **YouTube Partners** | YPP Terms | Video content creation (IP)
-        | Revenue Share | Medium | High | High | Low | **Medium-Low** |
-      </para>
+    <informaltable>
+      <tgroup cols="9">
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <colspec align="center" />
+        <tbody>
+          <row>
+            <entry> Program/User Class </entry>
+            <entry> Governing Agreement </entry>
+            <entry> Nature of Labor &amp; IP Generated </entry>
+            <entry> Remuneration Model </entry>
+            <entry> Predominant Factor Test Risk </entry>
+            <entry> ABC Prong A (Control) Risk </entry>
+            <entry> ABC Prong B (Business) Risk </entry>
+            <entry> ABC Prong C (Ind. Trade) Risk </entry>
+            <entry> Overall Misclassification Risk </entry>
+          </row>
+          <row>
+            <entry>
+              <emphasis role="strong">Opinion Rewards/Crowdsource</emphasis>
+            </entry>
+            <entry> Program ToS </entry>
+            <entry> Micro-task data labeling &amp; market research </entry>
+            <entry> Direct (cash/credits) or indirect (perks) </entry>
+            <entry> Very High </entry>
+            <entry> High </entry>
+            <entry> Very High </entry>
+            <entry> Very High </entry>
+            <entry>
+              <emphasis role="strong">Very High</emphasis>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <emphasis role="strong">Local Guides/Waze Editors</emphasis>
+            </entry>
+            <entry> Program Policies </entry>
+            <entry> Content generation, data verification, cartography </entry>
+            <entry> Gamified (points, badges, perks) </entry>
+            <entry> High </entry>
+            <entry> High </entry>
+            <entry> Very High </entry>
+            <entry> Very High </entry>
+            <entry>
+              <emphasis role="strong">High</emphasis>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <emphasis role="strong">AI Feedback (Gemini/AI Premium)</emphasis>
+            </entry>
+            <entry> General ToS </entry>
+            <entry> RLHF, QA, data generation for LLM training </entry>
+            <entry> None, or user pays a fee ("Tom Sawyer") </entry>
+            <entry> High </entry>
+            <entry> Medium </entry>
+            <entry> Very High </entry>
+            <entry> Very High </entry>
+            <entry>
+              <emphasis role="strong">High</emphasis>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <emphasis role="strong">Beta Testers</emphasis>
+            </entry>
+            <entry> NDA / Program ToS </entry>
+            <entry> Structured QA, debugging, technical analysis </entry>
+            <entry> Early access, small gratuities </entry>
+            <entry> Very High </entry>
+            <entry> Very High </entry>
+            <entry> Very High </entry>
+            <entry> Very High </entry>
+            <entry>
+              <emphasis role="strong">Very High</emphasis>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <emphasis role="strong">VRP Participants (Hobbyist)</emphasis>
+            </entry>
+            <entry> VRP Rules </entry>
+            <entry> Security research, vulnerability reporting (IP) </entry>
+            <entry> Unilateral Offer (Reward for result) </entry>
+            <entry> High </entry>
+            <entry> High </entry>
+            <entry> Very High </entry>
+            <entry> Very High </entry>
+            <entry>
+              <emphasis role="strong">High</emphasis>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <emphasis role="strong">VRP Participants (Professional)</emphasis>
+            </entry>
+            <entry> VRP Rules </entry>
+            <entry> Security research, vulnerability reporting (IP) </entry>
+            <entry> Unilateral Offer (Reward for result) </entry>
+            <entry> High </entry>
+            <entry> High </entry>
+            <entry> Very High </entry>
+            <entry> Low </entry>
+            <entry>
+              <emphasis role="strong">Medium</emphasis>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <emphasis role="strong">Platform Developers (Play/Chrome)</emphasis>
+            </entry>
+            <entry> DDA / Developer Agreement </entry>
+            <entry> Software application development (IP) </entry>
+            <entry> Revenue Share </entry>
+            <entry> Medium </entry>
+            <entry> High </entry>
+            <entry> High </entry>
+            <entry> Low </entry>
+            <entry>
+              <emphasis role="strong">Medium-Low</emphasis>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <emphasis role="strong">YouTube Partners</emphasis>
+            </entry>
+            <entry> YPP Terms </entry>
+            <entry> Video content creation (IP) </entry>
+            <entry> Revenue Share </entry>
+            <entry> Medium </entry>
+            <entry> High </entry>
+            <entry> High </entry>
+            <entry> Low </entry>
+            <entry>
+              <emphasis role="strong">Medium-Low</emphasis>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
   </section>
 </section>
-  

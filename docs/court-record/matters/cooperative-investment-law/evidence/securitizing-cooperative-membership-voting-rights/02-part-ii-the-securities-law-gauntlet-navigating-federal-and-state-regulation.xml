@@ -349,10 +349,10 @@
                 Test Prong
               </entry>
             <entry>
-                *Howey* Test Application
+              <emphasis>Howey</emphasis> Test Application
               </entry>
             <entry>
-                *Reves* Test Application
+              <emphasis>Reves</emphasis> Test Application
               </entry>
             <entry>
                 CA "Risk Capital" Test Application
@@ -360,8 +360,8 @@
           </row>
           <row>
             <entry>
-                **Investment of Money/Risk Capital**
-              </entry>
+              <emphasis role="strong">Investment of Money/Risk Capital</emphasis>
+            </entry>
             <entry>
                 Yes. Investor provides funds to purchase the CMS.
               </entry>
@@ -376,8 +376,8 @@
           </row>
           <row>
             <entry>
-                **Common Enterprise**
-              </entry>
+              <emphasis role="strong">Common Enterprise</emphasis>
+            </entry>
             <entry>
                 Yes. Investor's fortunes are tied to the performance of
                 the cooperative and its corporate member.
@@ -393,8 +393,8 @@
           </row>
           <row>
             <entry>
-                **Expectation of Profit/Benefit**
-              </entry>
+              <emphasis role="strong">Expectation of Profit/Benefit</emphasis>
+            </entry>
             <entry>
                 Yes. Investor expects financial returns from
                 appreciation or cash flows (e.g., swaps).
@@ -404,16 +404,13 @@
                 payments.
               </entry>
             <entry>
-                Yes, but broader. Investor expects a
-                "benefit," which need not be a traditional
-                profit. The right to use club facilities was a
-                sufficient benefit in *Silver Hills*.
+                Yes, but broader. Investor expects a "benefit," which need not be a traditional profit. The right to use club facilities was a sufficient benefit in <emphasis>Silver Hills</emphasis>.
               </entry>
           </row>
           <row>
             <entry>
-                **Efforts of Others/Investor Passivity**
-              </entry>
+              <emphasis role="strong">Efforts of Others/Investor Passivity</emphasis>
+            </entry>
             <entry>
                 Yes. Investor is passive; returns depend on the
                 management of the co-op and corporate member.
@@ -428,8 +425,8 @@
           </row>
           <row>
             <entry>
-                **Plan of Distribution**
-              </entry>
+              <emphasis role="strong">Plan of Distribution</emphasis>
+            </entry>
             <entry>
                 N/A (analyzed under "common enterprise").
               </entry>
@@ -444,8 +441,8 @@
           </row>
           <row>
             <entry>
-                **Other Risk-Reducing Factors**
-              </entry>
+              <emphasis role="strong">Other Risk-Reducing Factors</emphasis>
+            </entry>
             <entry>
                 N/A
               </entry>
@@ -461,21 +458,20 @@
           </row>
           <row>
             <entry>
-                **Conclusion**
+              <emphasis role="strong">Conclusion</emphasis>
+            </entry>
+            <entry>
+              <emphasis role="strong">Likely a Security</emphasis> (Investment Contract)
               </entry>
             <entry>
-                **Likely a Security** (Investment Contract)
-              </entry>
+              <emphasis role="strong">Likely a Security</emphasis>
+            </entry>
             <entry>
-                **Likely a Security**
-              </entry>
-            <entry>
-                **Definitely a Security**
-              </entry>
+              <emphasis role="strong">Definitely a Security</emphasis>
+            </entry>
           </row>
         </tbody>
       </tgroup>
     </informaltable>
   </section>
 </section>
-  
