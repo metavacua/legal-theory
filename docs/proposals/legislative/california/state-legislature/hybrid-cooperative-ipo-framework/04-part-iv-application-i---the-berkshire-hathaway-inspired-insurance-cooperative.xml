@@ -86,8 +86,8 @@
             </row>
             <row>
               <entry>
-                  **Property &amp; Casualty**
-                </entry>
+                <emphasis role="strong">Property &amp; Casualty</emphasis>
+              </entry>
               <entry>
                   $1,000,000 to $2,600,000
                 </entry>
@@ -100,8 +100,8 @@
             </row>
             <row>
               <entry>
-                  **Life &amp; Disability**
-                </entry>
+                <emphasis role="strong">Life &amp; Disability</emphasis>
+              </entry>
               <entry>
                   $2,500,000
                 </entry>
@@ -114,8 +114,8 @@
             </row>
             <row>
               <entry>
-                  **Title**
-                </entry>
+                <emphasis role="strong">Title</emphasis>
+              </entry>
               <entry>
                   Varies by documents handled (e.g., $200,000 for
                   100k-500k docs)
@@ -226,4 +226,3 @@
     </section>
   </section>
 </section>
-  

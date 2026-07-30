@@ -220,8 +220,8 @@
           </row>
           <row>
             <entry>
-                **Minimum Expression**
-              </entry>
+              <emphasis role="strong">Minimum Expression</emphasis>
+            </entry>
             <entry>
                 Is the human contribution more than a short phrase,
                 name, title, or simple geometric shape?
@@ -261,18 +261,15 @@
           </row>
           <row>
             <entry>
-                **De Minimis Use (Visual)**
-              </entry>
+              <emphasis role="strong">De Minimis Use (Visual)</emphasis>
+            </entry>
             <entry>
                 Is the sampled visual work fleeting (e.g., \&lt; 3
                 seconds), out of focus, and not central to the new
                 work's theme or narrative?
               </entry>
             <entry>
-                "The background image appears for less than 3
-                seconds and is not the focus of the scene. The risk of
-                an infringement claim is likely low under the *de
-                minimis* doctrine."
+                "The background image appears for less than 3 seconds and is not the focus of the scene. The risk of an infringement claim is likely low under the <emphasis>de minimis</emphasis> doctrine."
               </entry>
             <entry>
                 Low
@@ -283,18 +280,13 @@
           </row>
           <row>
             <entry>
-                **De Minimis Use (Audio - Conservative / 6th Circuit
-                Rule)**
+              <emphasis role="strong">De Minimis Use (Audio - Conservative / 6th Circuit Rule)</emphasis>
+            </entry>
+            <entry>
+                Is any part of a copyrighted <emphasis>sound recording</emphasis> being digitally sampled without a license?
               </entry>
             <entry>
-                Is any part of a copyrighted *sound recording* being
-                digitally sampled without a license?
-              </entry>
-            <entry>
-                "**HIGH RISK WARNING:** You are digitally sampling
-                a sound recording. In some jurisdictions, any unlicensed
-                sampling, regardless of length, is considered copyright
-                infringement. A license is strongly recommended."
+                "<emphasis role="strong">HIGH RISK WARNING:</emphasis> You are digitally sampling a sound recording. In some jurisdictions, any unlicensed sampling, regardless of length, is considered copyright infringement. A license is strongly recommended."
               </entry>
             <entry>
                 High
@@ -305,20 +297,15 @@
           </row>
           <row>
             <entry>
-                **De Minimis Use (Audio - Permissive / 9th Circuit
-                Rule)**
-              </entry>
+              <emphasis role="strong">De Minimis Use (Audio - Permissive / 9th Circuit Rule)</emphasis>
+            </entry>
             <entry>
                 Is the sampled audio quantitatively and qualitatively
                 insignificant? Would an average listener recognize its
                 source?
               </entry>
             <entry>
-                "**MODERATE RISK:** The sampled audio is less than
-                one second and has been significantly altered. It is
-                unlikely to be recognizable to an average listener.
-                While this may be considered *de minimis* use in some
-                jurisdictions, a risk of legal challenge remains."
+                "<emphasis role="strong">MODERATE RISK:</emphasis> The sampled audio is less than one second and has been significantly altered. It is unlikely to be recognizable to an average listener. While this may be considered <emphasis>de minimis</emphasis> use in some jurisdictions, a risk of legal challenge remains."
               </entry>
             <entry>
                 Moderate
@@ -332,4 +319,3 @@
     </informaltable>
   </section>
 </section>
-  

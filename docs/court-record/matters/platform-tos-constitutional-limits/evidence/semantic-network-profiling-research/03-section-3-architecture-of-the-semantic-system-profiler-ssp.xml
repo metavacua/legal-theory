@@ -142,8 +142,8 @@
           </row>
           <row>
             <entry>
-                **Layer 1: Data Source &amp; Telemetry**
-              </entry>
+              <emphasis role="strong">Layer 1: Data Source &amp; Telemetry</emphasis>
+            </entry>
             <entry>
                 The heterogeneous sources of raw network data providing
                 the ground truth of the network's state.
@@ -163,8 +163,8 @@
           </row>
           <row>
             <entry>
-                **Layer 2: Semantic Integration &amp; Lifting**
-              </entry>
+              <emphasis role="strong">Layer 2: Semantic Integration &amp; Lifting</emphasis>
+            </entry>
             <entry>
                 To translate raw, syntactic data from diverse sources
                 into a unified, semantic RDF format.
@@ -185,8 +185,8 @@
           </row>
           <row>
             <entry>
-                **Layer 3: Knowledge Representation &amp; Persistence**
-              </entry>
+              <emphasis role="strong">Layer 3: Knowledge Representation &amp; Persistence</emphasis>
+            </entry>
             <entry>
                 To store and manage the unified, machine-understandable
                 model of the network.
@@ -206,8 +206,8 @@
           </row>
           <row>
             <entry>
-                **Layer 4: Profiling &amp; Reasoning**
-              </entry>
+              <emphasis role="strong">Layer 4: Profiling &amp; Reasoning</emphasis>
+            </entry>
             <entry>
                 To analyze the knowledge graph, enrich it with inferred
                 knowledge, and construct on-demand semantic profiles.
@@ -229,8 +229,8 @@
           </row>
           <row>
             <entry>
-                **Layer 5: Automation &amp; Management Application**
-              </entry>
+              <emphasis role="strong">Layer 5: Automation &amp; Management Application</emphasis>
+            </entry>
             <entry>
                 The consumers of the semantic profiles that drive
                 automated network operations.
@@ -294,4 +294,3 @@
       </para>
   </section>
 </section>
-  

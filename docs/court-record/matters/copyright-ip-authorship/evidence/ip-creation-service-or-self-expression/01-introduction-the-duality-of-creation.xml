@@ -116,8 +116,8 @@
         </row>
         <row>
           <entry>
-              **Patent**
-            </entry>
+            <emphasis role="strong">Patent</emphasis>
+          </entry>
           <entry>
               New and useful inventions, processes, machines,
               compositions of matter, designs 3
@@ -137,8 +137,8 @@
         </row>
         <row>
           <entry>
-              **Copyright**
-            </entry>
+            <emphasis role="strong">Copyright</emphasis>
+          </entry>
           <entry>
               Original works of authorship fixed in a tangible medium
               (e.g., books, music, software, films) 3
@@ -158,8 +158,8 @@
         </row>
         <row>
           <entry>
-              **Trademark**
-            </entry>
+            <emphasis role="strong">Trademark</emphasis>
+          </entry>
           <entry>
               Words, names, symbols, logos, or sounds that distinguish
               the goods/services of one enterprise from others 1
@@ -179,8 +179,8 @@
         </row>
         <row>
           <entry>
-              **Trade Secret**
-            </entry>
+            <emphasis role="strong">Trade Secret</emphasis>
+          </entry>
           <entry>
               Confidential business information that provides a
               competitive edge (e.g., formulas, processes, client lists)
@@ -203,4 +203,3 @@
     </tgroup>
   </informaltable>
 </section>
-  

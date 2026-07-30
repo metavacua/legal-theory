@@ -117,8 +117,8 @@
             </row>
             <row>
               <entry>
-                  **SEC Registration Required?**
-                </entry>
+                <emphasis role="strong">SEC Registration Required?</emphasis>
+              </entry>
               <entry>
                   Yes 63
                 </entry>
@@ -131,8 +131,8 @@
             </row>
             <row>
               <entry>
-                  **Investor Limit**
-                </entry>
+                <emphasis role="strong">Investor Limit</emphasis>
+              </entry>
               <entry>
                   Unlimited
                 </entry>
@@ -145,8 +145,8 @@
             </row>
             <row>
               <entry>
-                  **Investor Type**
-                </entry>
+                <emphasis role="strong">Investor Type</emphasis>
+              </entry>
               <entry>
                   Open to all investors (retail and institutional)
                 </entry>
@@ -161,8 +161,8 @@
             </row>
             <row>
               <entry>
-                  **Public Offering Permitted?**
-                </entry>
+                <emphasis role="strong">Public Offering Permitted?</emphasis>
+              </entry>
               <entry>
                   Yes 63
                 </entry>
@@ -215,4 +215,3 @@
     </section>
   </section>
 </section>
-  

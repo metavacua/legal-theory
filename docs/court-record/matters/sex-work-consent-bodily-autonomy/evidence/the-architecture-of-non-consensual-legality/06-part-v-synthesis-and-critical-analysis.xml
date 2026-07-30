@@ -116,31 +116,31 @@
             <tbody>
               <row>
                 <entry>
-                    **Category of Action**
-                  </entry>
+                  <emphasis role="strong">Category of Action</emphasis>
+                </entry>
                 <entry>
-                    **Specific Example**
-                  </entry>
+                  <emphasis role="strong">Specific Example</emphasis>
+                </entry>
                 <entry>
-                    **Legal Doctrine/Justification**
-                  </entry>
+                  <emphasis role="strong">Legal Doctrine/Justification</emphasis>
+                </entry>
                 <entry>
-                    **Nature of Consent**
-                  </entry>
+                  <emphasis role="strong">Nature of Consent</emphasis>
+                </entry>
                 <entry>
-                    **Key Legal Instruments/Cases**
-                  </entry>
+                  <emphasis role="strong">Key Legal Instruments/Cases</emphasis>
+                </entry>
                 <entry>
-                    **Locus of Power**
-                  </entry>
+                  <emphasis role="strong">Locus of Power</emphasis>
+                </entry>
                 <entry>
-                    **Identified Risks/Harms**
-                  </entry>
+                  <emphasis role="strong">Identified Risks/Harms</emphasis>
+                </entry>
               </row>
               <row>
                 <entry>
-                    **State Security**
-                  </entry>
+                  <emphasis role="strong">State Security</emphasis>
+                </entry>
                 <entry>
                     Mass Electronic Surveillance
                   </entry>
@@ -162,8 +162,8 @@
               </row>
               <row>
                 <entry>
-                    **State Security**
-                  </entry>
+                  <emphasis role="strong">State Security</emphasis>
+                </entry>
                 <entry>
                     Warrantless Search (Exigent Circumstances)
                   </entry>
@@ -174,8 +174,8 @@
                     Overridden
                   </entry>
                 <entry>
-                    *Terry v. Ohio*; *Kentucky v. King*
-                  </entry>
+                  <emphasis>Terry v. Ohio</emphasis>; <emphasis>Kentucky v. King</emphasis>
+                </entry>
                 <entry>
                     State (Law Enforcement)
                   </entry>
@@ -185,8 +185,8 @@
               </row>
               <row>
                 <entry>
-                    **Public Welfare**
-                  </entry>
+                  <emphasis role="strong">Public Welfare</emphasis>
+                </entry>
                 <entry>
                     Eminent Domain for Economic Development
                   </entry>
@@ -198,8 +198,8 @@
                     Overridden
                   </entry>
                 <entry>
-                    *Kelo v. City of New London*
-                  </entry>
+                  <emphasis>Kelo v. City of New London</emphasis>
+                </entry>
                 <entry>
                     State (Legislative/Judicial)
                   </entry>
@@ -210,13 +210,13 @@
               </row>
               <row>
                 <entry>
-                    **Public Welfare**
-                  </entry>
+                  <emphasis role="strong">Public Welfare</emphasis>
+                </entry>
                 <entry>
                     Involuntary Civil Commitment
                   </entry>
                 <entry>
-                    *Parens Patriae* Doctrine
+                  <emphasis>Parens Patriae</emphasis> Doctrine
                   </entry>
                 <entry>
                     Overridden
@@ -233,8 +233,8 @@
               </row>
               <row>
                 <entry>
-                    **Hierarchical Command**
-                  </entry>
+                  <emphasis role="strong">Hierarchical Command</emphasis>
+                </entry>
                 <entry>
                     Military Orders
                   </entry>
@@ -256,8 +256,8 @@
               </row>
               <row>
                 <entry>
-                    **Hierarchical Command**
-                  </entry>
+                  <emphasis role="strong">Hierarchical Command</emphasis>
+                </entry>
                 <entry>
                     Emergency Response (ICS)
                   </entry>
@@ -279,8 +279,8 @@
               </row>
               <row>
                 <entry>
-                    **Commercial Activity**
-                  </entry>
+                  <emphasis role="strong">Commercial Activity</emphasis>
+                </entry>
                 <entry>
                     Data Brokerage &amp; Sale of Personal Info
                   </entry>
@@ -303,8 +303,8 @@
               </row>
               <row>
                 <entry>
-                    **Commercial Activity**
-                  </entry>
+                  <emphasis role="strong">Commercial Activity</emphasis>
+                </entry>
                 <entry>
                     Public Video Surveillance by Businesses
                   </entry>
@@ -327,8 +327,8 @@
               </row>
               <row>
                 <entry>
-                    **Social Expression**
-                  </entry>
+                  <emphasis role="strong">Social Expression</emphasis>
+                </entry>
                 <entry>
                     Public Photography/Videography
                   </entry>
@@ -339,8 +339,8 @@
                     Irrelevant
                   </entry>
                 <entry>
-                    *Glik v. Cunniffe*
-                  </entry>
+                  <emphasis>Glik v. Cunniffe</emphasis>
+                </entry>
                 <entry>
                     Individual/Media
                   </entry>
@@ -350,8 +350,8 @@
               </row>
               <row>
                 <entry>
-                    **Social Expression**
-                  </entry>
+                  <emphasis role="strong">Social Expression</emphasis>
+                </entry>
                 <entry>
                     Public Protest
                   </entry>
@@ -362,9 +362,8 @@
                     Irrelevant
                   </entry>
                 <entry>
-                    *Perry Education Ass'n v. Perry Local Educators'
-                    Ass'n*
-                  </entry>
+                  <emphasis>Perry Education Ass'n v. Perry Local Educators' Ass'n</emphasis>
+                </entry>
                 <entry>
                     Individual/Social Group
                   </entry>
@@ -374,8 +373,8 @@
               </row>
               <row>
                 <entry>
-                    **Social Behavior**
-                  </entry>
+                  <emphasis role="strong">Social Behavior</emphasis>
+                </entry>
                 <entry>
                     Social Ostracism/Exclusion
                   </entry>
@@ -690,4 +689,3 @@
     </section>
   </section>
 </section>
-  

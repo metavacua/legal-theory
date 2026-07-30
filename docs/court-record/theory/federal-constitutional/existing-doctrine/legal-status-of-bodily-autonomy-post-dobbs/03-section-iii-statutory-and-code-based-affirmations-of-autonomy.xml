@@ -170,8 +170,8 @@
           </row>
           <row>
             <entry>
-                **Alaska**
-              </entry>
+              <emphasis role="strong">Alaska</emphasis>
+            </entry>
             <entry>
                 Affirmative Consent
               </entry>
@@ -186,8 +186,8 @@
           </row>
           <row>
             <entry>
-                **California**
-              </entry>
+              <emphasis role="strong">California</emphasis>
+            </entry>
             <entry>
                 Affirmative Consent
               </entry>
@@ -202,8 +202,8 @@
           </row>
           <row>
             <entry>
-                **Colorado**
-              </entry>
+              <emphasis role="strong">Colorado</emphasis>
+            </entry>
             <entry>
                 Consent-Based
               </entry>
@@ -218,8 +218,8 @@
           </row>
           <row>
             <entry>
-                **Connecticut**
-              </entry>
+              <emphasis role="strong">Connecticut</emphasis>
+            </entry>
             <entry>
                 Coercion-Based
               </entry>
@@ -234,8 +234,8 @@
           </row>
           <row>
             <entry>
-                **Florida**
-              </entry>
+              <emphasis role="strong">Florida</emphasis>
+            </entry>
             <entry>
                 Consent-Based
               </entry>
@@ -250,8 +250,8 @@
           </row>
           <row>
             <entry>
-                **Illinois**
-              </entry>
+              <emphasis role="strong">Illinois</emphasis>
+            </entry>
             <entry>
                 Affirmative Consent
               </entry>
@@ -265,8 +265,8 @@
           </row>
           <row>
             <entry>
-                **Massachusetts**
-              </entry>
+              <emphasis role="strong">Massachusetts</emphasis>
+            </entry>
             <entry>
                 Coercion-Based
               </entry>
@@ -281,8 +281,8 @@
           </row>
           <row>
             <entry>
-                **Minnesota**
-              </entry>
+              <emphasis role="strong">Minnesota</emphasis>
+            </entry>
             <entry>
                 Affirmative Consent
               </entry>
@@ -297,8 +297,8 @@
           </row>
           <row>
             <entry>
-                **New Jersey**
-              </entry>
+              <emphasis role="strong">New Jersey</emphasis>
+            </entry>
             <entry>
                 Affirmative Consent
               </entry>
@@ -312,8 +312,8 @@
           </row>
           <row>
             <entry>
-                **New York**
-              </entry>
+              <emphasis role="strong">New York</emphasis>
+            </entry>
             <entry>
                 Hybrid
               </entry>
@@ -328,8 +328,8 @@
           </row>
           <row>
             <entry>
-                **Washington**
-              </entry>
+              <emphasis role="strong">Washington</emphasis>
+            </entry>
             <entry>
                 Affirmative Consent
               </entry>
@@ -408,4 +408,3 @@
       </para>
   </section>
 </section>
-  

@@ -203,8 +203,8 @@
           </row>
           <row>
             <entry>
-                **Default (No Agreement)**
-              </entry>
+              <emphasis role="strong">Default (No Agreement)</emphasis>
+            </entry>
             <entry>
                 The statutory presumption under 17 U.S.C. § 201(c).60
               </entry>
@@ -222,8 +222,8 @@
           </row>
           <row>
             <entry>
-                **Work Made for Hire**
-              </entry>
+              <emphasis role="strong">Work Made for Hire</emphasis>
+            </entry>
             <entry>
                 LLC is deemed the legal author and owner from the work's
                 creation.62
@@ -241,8 +241,8 @@
           </row>
           <row>
             <entry>
-                **Copyright License**
-              </entry>
+              <emphasis role="strong">Copyright License</emphasis>
+            </entry>
             <entry>
                 Artist retains ownership; LLC is granted permission (a
                 "rental") to use the work.64
@@ -262,8 +262,8 @@
           </row>
           <row>
             <entry>
-                **Copyright Assignment**
-              </entry>
+              <emphasis role="strong">Copyright Assignment</emphasis>
+            </entry>
             <entry>
                 Artist transfers full and permanent ownership (a
                 "sale") to the LLC upon payment.65
@@ -287,4 +287,3 @@
     </informaltable>
   </section>
 </section>
-  

@@ -44,8 +44,8 @@
           </row>
           <row>
             <entry>
-                **All Persons**
-              </entry>
+              <emphasis role="strong">All Persons</emphasis>
+            </entry>
             <entry>
                 Civil Code § 51 (Unruh Civil Rights Act)
               </entry>
@@ -59,8 +59,8 @@
           </row>
           <row>
             <entry>
-                **Customer**
-              </entry>
+              <emphasis role="strong">Customer</emphasis>
+            </entry>
             <entry>
                 Civil Code § 1798.80 et seq. (Customer Records); Civil
                 Code § 1798.140 (CCPA/CPRA); Business &amp; Professions
@@ -75,8 +75,8 @@
           </row>
           <row>
             <entry>
-                **Guest**
-              </entry>
+              <emphasis role="strong">Guest</emphasis>
+            </entry>
             <entry>
                 Civil Code § 1865 (Hotels); Civil Code § 798.34
                 (Mobilehome Parks); Health &amp; Safety Code § 113893
@@ -92,8 +92,8 @@
           </row>
           <row>
             <entry>
-                **Client**
-              </entry>
+              <emphasis role="strong">Client</emphasis>
+            </entry>
             <entry>
                 Business &amp; Professions Code § 6068 (Attorneys);
                 Business &amp; Professions Code § 5063.3 (Accountants)
@@ -370,4 +370,3 @@
       </para>
   </section>
 </section>
-  

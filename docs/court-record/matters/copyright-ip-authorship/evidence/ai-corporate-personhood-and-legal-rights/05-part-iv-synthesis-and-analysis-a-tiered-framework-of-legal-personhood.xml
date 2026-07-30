@@ -105,8 +105,8 @@
           </row>
           <row>
             <entry>
-                **Basis of Personhood**
-              </entry>
+              <emphasis role="strong">Basis of Personhood</emphasis>
+            </entry>
             <entry>
                 Biological fact; Inherent dignity; Concept of autonomy.
               </entry>
@@ -120,8 +120,8 @@
           </row>
           <row>
             <entry>
-                **Source of Rights**
-              </entry>
+              <emphasis role="strong">Source of Rights</emphasis>
+            </entry>
             <entry>
                 Inherent; Recognized by the Constitution and natural law
                 principles.
@@ -137,8 +137,8 @@
           </row>
           <row>
             <entry>
-                **Key Rights Held**
-              </entry>
+              <emphasis role="strong">Key Rights Held</emphasis>
+            </entry>
             <entry>
                 Full spectrum of constitutional rights (Life, Liberty,
                 Speech, Religion, Privacy, etc.).
@@ -153,8 +153,8 @@
           </row>
           <row>
             <entry>
-                **Key Rights Denied**
-              </entry>
+              <emphasis role="strong">Key Rights Denied</emphasis>
+            </entry>
             <entry>
                 Rights are contingent and can be overridden by
                 compelling state interests (e.g., security, public
@@ -170,8 +170,8 @@
           </row>
           <row>
             <entry>
-                **Locus of Agency**
-              </entry>
+              <emphasis role="strong">Locus of Agency</emphasis>
+            </entry>
             <entry>
                 Individual will, conscience, and rational
                 self-governance.
@@ -187,18 +187,17 @@
           </row>
           <row>
             <entry>
-                **Governing Case Law**
+              <emphasis role="strong">Governing Case Law</emphasis>
+            </entry>
+            <entry>
+              <emphasis>Griswold v. Connecticut</emphasis>; <emphasis>Obergefell v. Hodges</emphasis> (pre-<emphasis>Dobbs</emphasis>)
               </entry>
             <entry>
-                *Griswold v. Connecticut*; *Obergefell v. Hodges*
-                (pre-*Dobbs*)
-              </entry>
+              <emphasis>Citizens United v. FEC</emphasis>; <emphasis>Burwell v. Hobby Lobby</emphasis>
+            </entry>
             <entry>
-                *Citizens United v. FEC*; *Burwell v. Hobby Lobby*
-              </entry>
-            <entry>
-                *Thaler v. Perlmutter*
-              </entry>
+              <emphasis>Thaler v. Perlmutter</emphasis>
+            </entry>
           </row>
         </tbody>
       </tgroup>
@@ -264,4 +263,3 @@
       </para>
   </section>
 </section>
-  

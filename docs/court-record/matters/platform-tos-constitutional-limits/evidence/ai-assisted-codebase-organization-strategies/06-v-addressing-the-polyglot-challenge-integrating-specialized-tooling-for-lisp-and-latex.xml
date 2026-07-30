@@ -163,8 +163,8 @@
             </row>
             <row>
               <entry>
-                  **Python**
-                </entry>
+                <emphasis role="strong">Python</emphasis>
+              </entry>
               <entry>
                   Nx, Pants
                 </entry>
@@ -179,8 +179,8 @@
             </row>
             <row>
               <entry>
-                  **JavaScript/React/JSX**
-                </entry>
+                <emphasis role="strong">JavaScript/React/JSX</emphasis>
+              </entry>
               <entry>
                   Nx, Turborepo
                 </entry>
@@ -197,8 +197,8 @@
             </row>
             <row>
               <entry>
-                  **LISP**
-                </entry>
+                <emphasis role="strong">LISP</emphasis>
+              </entry>
               <entry>
                   (Managed via custom scripts in /tools)
                 </entry>
@@ -214,8 +214,8 @@
             </row>
             <row>
               <entry>
-                  **LaTeX**
-                </entry>
+                <emphasis role="strong">LaTeX</emphasis>
+              </entry>
               <entry>
                   (Managed via custom scripts in /tools)
                 </entry>
@@ -235,4 +235,3 @@
     </section>
   </section>
 </section>
-  

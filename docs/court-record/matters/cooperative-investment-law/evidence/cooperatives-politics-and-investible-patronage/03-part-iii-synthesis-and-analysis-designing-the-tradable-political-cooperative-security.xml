@@ -200,8 +200,8 @@
             </row>
             <row>
               <entry>
-                  **Ownership Basis**
-                </entry>
+                <emphasis role="strong">Ownership Basis</emphasis>
+              </entry>
               <entry>
                   Patronage (use of services)
                 </entry>
@@ -220,8 +220,8 @@
             </row>
             <row>
               <entry>
-                  **Control Principle**
-                </entry>
+                <emphasis role="strong">Control Principle</emphasis>
+              </entry>
               <entry>
                   One Member, One Vote
                 </entry>
@@ -239,8 +239,8 @@
             </row>
             <row>
               <entry>
-                  **Capital Source**
-                </entry>
+                <emphasis role="strong">Capital Source</emphasis>
+              </entry>
               <entry>
                   Minimal member buy-in; retained patronage earnings
                 </entry>
@@ -258,8 +258,8 @@
             </row>
             <row>
               <entry>
-                  **Equity Nature**
-                </entry>
+                <emphasis role="strong">Equity Nature</emphasis>
+              </entry>
               <entry>
                   Non-tradable, non-appreciable, redeemable at par value
                 </entry>
@@ -278,8 +278,8 @@
             </row>
             <row>
               <entry>
-                  **Primary Beneficiary**
-                </entry>
+                <emphasis role="strong">Primary Beneficiary</emphasis>
+              </entry>
               <entry>
                   Member-patrons, through services at cost and patronage
                   refunds
@@ -533,7 +533,7 @@
           <tbody>
             <row>
               <entry>
-                  *Howey* Test Prong
+                <emphasis>Howey</emphasis> Test Prong
                 </entry>
               <entry>
                   Analysis for "Influence Share" (Class I)
@@ -547,16 +547,14 @@
             </row>
             <row>
               <entry>
-                  **1. Investment of Money**
-                </entry>
+                <emphasis role="strong">1. Investment of Money</emphasis>
+              </entry>
               <entry>
                   Class I shares are purchased by external investors
                   with cash, representing a clear investment of money.
                 </entry>
               <entry>
-                  *SEC v. Howey Co.* established that an investment of
-                  money is the first element. Digital asset frameworks
-                  confirm this applies to any exchange of value.
+                <emphasis>SEC v. Howey Co.</emphasis> established that an investment of money is the first element. Digital asset frameworks confirm this applies to any exchange of value.
                 </entry>
               <entry>
                   Acknowledge this prong is met. Structure the offering
@@ -565,8 +563,8 @@
             </row>
             <row>
               <entry>
-                  **2. Common Enterprise**
-                </entry>
+                <emphasis role="strong">2. Common Enterprise</emphasis>
+              </entry>
               <entry>
                   Investors' funds are pooled within the cooperative,
                   and their fortunes are interwoven with the success of
@@ -585,8 +583,8 @@
             </row>
             <row>
               <entry>
-                  **3. Expectation of Profits**
-                </entry>
+                <emphasis role="strong">3. Expectation of Profits</emphasis>
+              </entry>
               <entry>
                   Class I shares are designed to provide a financial
                   return through appreciation and/or dividends from
@@ -596,10 +594,7 @@
                   profit motive.
                 </entry>
               <entry>
-                  *Forman* distinguished co-op membership (no profit
-                  motive) from investments. NGCs, with their appreciable
-                  rights, demonstrate that cooperative instruments *can*
-                  have a profit motive.62
+                <emphasis>Forman</emphasis> distinguished co-op membership (no profit motive) from investments. NGCs, with their appreciable rights, demonstrate that cooperative instruments <emphasis>can</emphasis> have a profit motive.62
                 </entry>
               <entry>
                   Acknowledge this prong is met. Clearly disclose in
@@ -610,8 +605,8 @@
             </row>
             <row>
               <entry>
-                  **4. Efforts of Others**
-                </entry>
+                <emphasis role="strong">4. Efforts of Others</emphasis>
+              </entry>
               <entry>
                   Class I investors are passive. Their financial return
                   is entirely dependent on the managerial, strategic,
@@ -634,23 +629,17 @@
             </row>
             <row>
               <entry>
-                  **Conclusion**
-                </entry>
+                <emphasis role="strong">Conclusion</emphasis>
+              </entry>
               <entry>
-                  The "Influence Share" is an investment
-                  contract and therefore a **security**.
+                  The "Influence Share" is an investment contract and therefore a <emphasis role="strong">security</emphasis>.
                 </entry>
               <entry>
                   The economic reality of the transaction is that of a
                   passive investment for profit.
                 </entry>
               <entry>
-                  Do not attempt to structure the instrument to fail the
-                  test. Instead, **embrace its status as a security**
-                  and plan for compliance with securities law, likely
-                  through an exemption from full registration (e.g.,
-                  Regulation D, Regulation Crowdfunding, or state-level
-                  exemptions).
+                  Do not attempt to structure the instrument to fail the test. Instead, <emphasis role="strong">embrace its status as a security</emphasis> and plan for compliance with securities law, likely through an exemption from full registration (e.g., Regulation D, Regulation Crowdfunding, or state-level exemptions).
                 </entry>
             </row>
           </tbody>
@@ -1284,14 +1273,14 @@
             </row>
             <row>
               <entry>
-                  **Legal Basis**
-                </entry>
+                <emphasis role="strong">Legal Basis</emphasis>
+              </entry>
               <entry>
                   Federal Election Campaign Act (FECA)
                 </entry>
               <entry>
-                  *Citizens United*, *SpeechNow.org*
-                </entry>
+                <emphasis>Citizens United</emphasis>, <emphasis>SpeechNow.org</emphasis>
+              </entry>
               <entry>
                   IRS Code § 501(c)(4)
                 </entry>
@@ -1301,8 +1290,8 @@
             </row>
             <row>
               <entry>
-                  **Contribution Source**
-                </entry>
+                <emphasis role="strong">Contribution Source</emphasis>
+              </entry>
               <entry>
                   Individuals from a restricted class (e.g., employees,
                   members)
@@ -1314,14 +1303,13 @@
                   Individuals, Corporations, Foundations
                 </entry>
               <entry>
-                  **Operations Revenue (Non-Patronage)**; Sale of
-                  "Influence Shares"
+                <emphasis role="strong">Operations Revenue (Non-Patronage)</emphasis>; Sale of "Influence Shares"
                 </entry>
             </row>
             <row>
               <entry>
-                  **Contribution Limits**
-                </entry>
+                <emphasis role="strong">Contribution Limits</emphasis>
+              </entry>
               <entry>
                   Yes (e.g., $5,000 per donor/year)
                 </entry>
@@ -1337,8 +1325,8 @@
             </row>
             <row>
               <entry>
-                  **Spending Limits**
-                </entry>
+                <emphasis role="strong">Spending Limits</emphasis>
+              </entry>
               <entry>
                   No limit on independent expenditures; limited
                   contributions to candidates
@@ -1358,8 +1346,8 @@
             </row>
             <row>
               <entry>
-                  **Coordination Rules**
-                </entry>
+                <emphasis role="strong">Coordination Rules</emphasis>
+              </entry>
               <entry>
                   Can contribute to/coordinate with candidates
                 </entry>
@@ -1376,8 +1364,8 @@
             </row>
             <row>
               <entry>
-                  **Donor Disclosure**
-                </entry>
+                <emphasis role="strong">Donor Disclosure</emphasis>
+              </entry>
               <entry>
                   Yes (to FEC)
                 </entry>
@@ -1385,7 +1373,7 @@
                   Yes (to FEC)
                 </entry>
               <entry>
-                  **No** (to public)
+                <emphasis role="strong">No</emphasis> (to public)
                 </entry>
               <entry>
                   N/A (Source is revenue); Shareholder identity may be
@@ -1408,4 +1396,3 @@
     </section>
   </section>
 </section>
-  

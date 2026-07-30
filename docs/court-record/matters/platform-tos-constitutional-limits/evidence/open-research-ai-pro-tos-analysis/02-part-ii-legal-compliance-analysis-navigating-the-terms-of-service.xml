@@ -648,8 +648,8 @@
             </row>
             <row>
               <entry>
-                  **Content Ownership**
-                </entry>
+                <emphasis role="strong">Content Ownership</emphasis>
+              </entry>
               <entry>
                   Google Drive ToS / Universal ToS
                 </entry>
@@ -668,8 +668,8 @@
             </row>
             <row>
               <entry>
-                  **Google's License to Content**
-                </entry>
+                <emphasis role="strong">Google's License to Content</emphasis>
+              </entry>
               <entry>
                   Universal ToS
                 </entry>
@@ -692,8 +692,8 @@
             </row>
             <row>
               <entry>
-                  **Data Caching**
-                </entry>
+                <emphasis role="strong">Data Caching</emphasis>
+              </entry>
               <entry>
                   Vertex AI Documentation
                 </entry>
@@ -708,15 +708,13 @@
                   servers.
                 </entry>
               <entry>
-                  **CRITICAL:** Disable caching at the Google Cloud
-                  project level using the provided API commands to
-                  achieve zero data retention.31
+                <emphasis role="strong">CRITICAL:</emphasis> Disable caching at the Google Cloud project level using the provided API commands to achieve zero data retention.31
                 </entry>
             </row>
             <row>
               <entry>
-                  **Non-Compete Clause**
-                </entry>
+                <emphasis role="strong">Non-Compete Clause</emphasis>
+              </entry>
               <entry>
                   Gemini API Additional ToS
                 </entry>
@@ -738,8 +736,8 @@
             </row>
             <row>
               <entry>
-                  **Prohibited Use (Sensitive Areas)**
-                </entry>
+                <emphasis role="strong">Prohibited Use (Sensitive Areas)</emphasis>
+              </entry>
               <entry>
                   Generative AI Prohibited Use Policy
                 </entry>
@@ -766,4 +764,3 @@
     </section>
   </section>
 </section>
-  

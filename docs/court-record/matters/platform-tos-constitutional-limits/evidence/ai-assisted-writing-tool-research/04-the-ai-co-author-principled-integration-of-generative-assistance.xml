@@ -92,16 +92,14 @@
           passage.
         </para>
       <para>
-          **Tone and Style Instructions:** - Voice: Third-person limited
-          - Tense: Past - Style: Evocative, with a focus on sensory
-          details.
+        <emphasis role="strong">Tone and Style Instructions:</emphasis> - Voice: Third-person limited - Tense: Past - Style: Evocative, with a focus on sensory details.
         </para>
       <para>
-          **Structured Data:** --- # ---
+        <emphasis role="strong">Structured Data:</emphasis> --- # ---
         </para>
       <para>
-          **Rendered Prose:**
-        </para>
+        <emphasis role="strong">Rendered Prose:</emphasis>
+      </para>
       <para>
           This method employs multiple prompt engineering best
           practices: it assigns a specific role, provides clear and
@@ -207,8 +205,8 @@
           </row>
           <row>
             <entry>
-                **Prose Generation**
-              </entry>
+              <emphasis role="strong">Prose Generation</emphasis>
+            </entry>
             <entry>
                 Generates a first draft of prose for a scene.
               </entry>
@@ -225,8 +223,8 @@
           </row>
           <row>
             <entry>
-                **Dialogue Generation**
-              </entry>
+              <emphasis role="strong">Dialogue Generation</emphasis>
+            </entry>
             <entry>
                 Suggests dialogue options for a character in a scene.
               </entry>
@@ -243,8 +241,8 @@
           </row>
           <row>
             <entry>
-                **Inconsistency Detection**
-              </entry>
+              <emphasis role="strong">Inconsistency Detection</emphasis>
+            </entry>
             <entry>
                 Analyzes prose to find contradictions with the project's
                 data.
@@ -262,8 +260,8 @@
           </row>
           <row>
             <entry>
-                **Data Extraction**
-              </entry>
+              <emphasis role="strong">Data Extraction</emphasis>
+            </entry>
             <entry>
                 Summarizes prose into a structured YAML scene file.
               </entry>
@@ -283,4 +281,3 @@
     </informaltable>
   </section>
 </section>
-  

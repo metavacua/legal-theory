@@ -157,8 +157,8 @@
           </row>
           <row>
             <entry>
-                **Identity &amp; History**
-              </entry>
+              <emphasis role="strong">Identity &amp; History</emphasis>
+            </entry>
             <entry>
                 Name, aliases, 3-year address/employment history,
                 criminal record.
@@ -173,8 +173,8 @@
           </row>
           <row>
             <entry>
-                **Biometric Data**
-              </entry>
+              <emphasis role="strong">Biometric Data</emphasis>
+            </entry>
             <entry>
                 Full set of fingerprints, recent photograph.
               </entry>
@@ -188,8 +188,8 @@
           </row>
           <row>
             <entry>
-                **Medical/Biological**
-              </entry>
+              <emphasis role="strong">Medical/Biological</emphasis>
+            </entry>
             <entry>
                 Weekly gonorrhea/chlamydia tests; monthly HIV/syphilis
                 tests.
@@ -204,8 +204,8 @@
           </row>
           <row>
             <entry>
-                **Privacy &amp; Consent**
-              </entry>
+              <emphasis role="strong">Privacy &amp; Consent</emphasis>
+            </entry>
             <entry>
                 Waiver of medical information release; authorization for
                 criminal investigation.
@@ -220,8 +220,8 @@
           </row>
           <row>
             <entry>
-                **Mobility &amp; Conduct**
-              </entry>
+              <emphasis role="strong">Mobility &amp; Conduct</emphasis>
+            </entry>
             <entry>
                 Re-testing required after extended absence; mandatory
                 condom use.
@@ -239,4 +239,3 @@
     </informaltable>
   </section>
 </section>
-  

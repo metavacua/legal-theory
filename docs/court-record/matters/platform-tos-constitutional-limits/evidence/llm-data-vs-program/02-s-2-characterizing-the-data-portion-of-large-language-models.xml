@@ -105,34 +105,34 @@
         <tbody>
           <row>
             <entry>
-                **Dataset Name**
-              </entry>
+              <emphasis role="strong">Dataset Name</emphasis>
+            </entry>
             <entry>
-                **Size (Examples)**
-              </entry>
+              <emphasis role="strong">Size (Examples)</emphasis>
+            </entry>
             <entry>
-                **Primary Source(s)**
-              </entry>
+              <emphasis role="strong">Primary Source(s)</emphasis>
+            </entry>
             <entry>
-                **Generation Style**
-              </entry>
+              <emphasis role="strong">Generation Style</emphasis>
+            </entry>
             <entry>
-                **Key Task Focus**
-              </entry>
+              <emphasis role="strong">Key Task Focus</emphasis>
+            </entry>
             <entry>
-                **Licensing**
-              </entry>
+              <emphasis role="strong">Licensing</emphasis>
+            </entry>
             <entry>
-                **Notable Strengths/Weaknesses/Biases**
-              </entry>
+              <emphasis role="strong">Notable Strengths/Weaknesses/Biases</emphasis>
+            </entry>
             <entry>
-                **Relevant Snippets**
-              </entry>
+              <emphasis role="strong">Relevant Snippets</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **databricks-dolly-15k**
-              </entry>
+              <emphasis role="strong">databricks-dolly-15k</emphasis>
+            </entry>
             <entry>
                 \~15,000
               </entry>
@@ -161,8 +161,8 @@
           </row>
           <row>
             <entry>
-                **Alpaca (Stanford)**
-              </entry>
+              <emphasis role="strong">Alpaca (Stanford)</emphasis>
+            </entry>
             <entry>
                 52,000
               </entry>
@@ -189,8 +189,8 @@
           </row>
           <row>
             <entry>
-                **AlpacaDataCleaned**
-              </entry>
+              <emphasis role="strong">AlpacaDataCleaned</emphasis>
+            </entry>
             <entry>
                 \~50,000 (ongoing curation)
               </entry>
@@ -217,8 +217,8 @@
           </row>
           <row>
             <entry>
-                **LIMA (Less Is More for Alignment)**
-              </entry>
+              <emphasis role="strong">LIMA (Less Is More for Alignment)</emphasis>
+            </entry>
             <entry>
                 1,000
               </entry>
@@ -246,8 +246,8 @@
           </row>
           <row>
             <entry>
-                **OpenAssistant-OASST1**
-              </entry>
+              <emphasis role="strong">OpenAssistant-OASST1</emphasis>
+            </entry>
             <entry>
                 \~161,000 messages (varies by export)
               </entry>
@@ -274,8 +274,8 @@
           </row>
           <row>
             <entry>
-                **FLAN (Fine-tuned Language Net)**
-              </entry>
+              <emphasis role="strong">FLAN (Fine-tuned Language Net)</emphasis>
+            </entry>
             <entry>
                 Varies by version (e.g., Flan 2022 includes \&gt;60
                 datasets, \&gt;40k examples for some tasks)
@@ -305,8 +305,8 @@
           </row>
           <row>
             <entry>
-                **P3 (Public Pool of Prompts)**
-              </entry>
+              <emphasis role="strong">P3 (Public Pool of Prompts)</emphasis>
+            </entry>
             <entry>
                 2,052 English prompts applied to 170 English NLP
                 datasets
@@ -333,8 +333,8 @@
           </row>
           <row>
             <entry>
-                **Self-Instruct**
-              </entry>
+              <emphasis role="strong">Self-Instruct</emphasis>
+            </entry>
             <entry>
                 Variable (framework to generate data, e.g., 52k for
                 original Alpaca)
@@ -362,8 +362,8 @@
           </row>
           <row>
             <entry>
-                **ShareGPT**
-              </entry>
+              <emphasis role="strong">ShareGPT</emphasis>
+            </entry>
             <entry>
                 \~90,000 conversations (common version)
               </entry>
@@ -429,4 +429,3 @@
       </para>
   </section>
 </section>
-  

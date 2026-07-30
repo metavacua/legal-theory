@@ -380,7 +380,7 @@
                   Factor/Test
                 </entry>
               <entry>
-                  The *Borello* Test (Multi-Factor, Holistic)
+                  The <emphasis>Borello</emphasis> Test (Multi-Factor, Holistic)
                 </entry>
               <entry>
                   The ABC Test (Strict, Conjunctive)
@@ -391,8 +391,8 @@
             </row>
             <row>
               <entry>
-                  **Control (Prong A)**
-                </entry>
+                <emphasis role="strong">Control (Prong A)</emphasis>
+              </entry>
               <entry>
                   The primary factor, but weighed among many others.
                   Focuses on the "right to control the manner and
@@ -411,8 +411,8 @@
             </row>
             <row>
               <entry>
-                  **Course of Business (Prong B)**
-                </entry>
+                <emphasis role="strong">Course of Business (Prong B)</emphasis>
+              </entry>
               <entry>
                   A relevant factor, but not dispositive.
                 </entry>
@@ -430,8 +430,8 @@
             </row>
             <row>
               <entry>
-                  **Independent Business (Prong C)**
-                </entry>
+                <emphasis role="strong">Independent Business (Prong C)</emphasis>
+              </entry>
               <entry>
                   A relevant factor, considering if the worker has an
                   independent business, but not required.
@@ -450,15 +450,14 @@
             </row>
             <row>
               <entry>
-                  **Presumption**
-                </entry>
+                <emphasis role="strong">Presumption</emphasis>
+              </entry>
               <entry>
                   No formal presumption; a balancing of all factors
                   determines the outcome.
                 </entry>
               <entry>
-                  The worker is presumed to be an employee unless the
-                  hiring entity proves *all three* prongs.
+                  The worker is presumed to be an employee unless the hiring entity proves <emphasis>all three</emphasis> prongs.
                 </entry>
               <entry>
                   The burden of proof is high and falls entirely on the
@@ -468,23 +467,16 @@
             </row>
             <row>
               <entry>
-                  **Key Exemptions**
-                </entry>
+                <emphasis role="strong">Key Exemptions</emphasis>
+              </entry>
               <entry>
                   N/A
                 </entry>
               <entry>
-                  AB 5 and its successor, AB 2257, create specific
-                  professional exemptions (e.g., "fine
-                  artist," freelance writer) that revert
-                  classification to the *Borello* test if certain
-                  criteria are met.8
+                  AB 5 and its successor, AB 2257, create specific professional exemptions (e.g., "fine artist," freelance writer) that revert classification to the <emphasis>Borello</emphasis> test if certain criteria are met.8
                 </entry>
               <entry>
-                  Platforms must navigate a complex web of exemptions.
-                  Even if an exemption applies, the platform must still
-                  satisfy the more nuanced *Borello* test, which
-                  requires careful contractual design.16
+                  Platforms must navigate a complex web of exemptions. Even if an exemption applies, the platform must still satisfy the more nuanced <emphasis>Borello</emphasis> test, which requires careful contractual design.16
                 </entry>
             </row>
           </tbody>
@@ -493,4 +485,3 @@
     </section>
   </section>
 </section>
-  

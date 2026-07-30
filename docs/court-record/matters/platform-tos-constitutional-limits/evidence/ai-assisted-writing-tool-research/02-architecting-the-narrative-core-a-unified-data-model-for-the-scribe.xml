@@ -210,8 +210,8 @@
           </row>
           <row>
             <entry>
-                **Opening Image**
-              </entry>
+              <emphasis role="strong">Opening Image</emphasis>
+            </entry>
             <entry>
                 id: opening\_imagename: "Opening
                 Image"percent\_placement: 1
@@ -219,8 +219,8 @@
           </row>
           <row>
             <entry>
-                **Theme Stated**
-              </entry>
+              <emphasis role="strong">Theme Stated</emphasis>
+            </entry>
             <entry>
                 id: theme\_statedname: "Theme
                 Stated"percent\_placement: 5
@@ -228,8 +228,8 @@
           </row>
           <row>
             <entry>
-                **Catalyst**
-              </entry>
+              <emphasis role="strong">Catalyst</emphasis>
+            </entry>
             <entry>
                 id: catalystname:
                 "Catalyst"percent\_placement: 10
@@ -237,8 +237,8 @@
           </row>
           <row>
             <entry>
-                **Debate**
-              </entry>
+              <emphasis role="strong">Debate</emphasis>
+            </entry>
             <entry>
                 id: debatename: "Debate"percent\_placement:
                 10-20
@@ -246,8 +246,8 @@
           </row>
           <row>
             <entry>
-                **Break Into Two**
-              </entry>
+              <emphasis role="strong">Break Into Two</emphasis>
+            </entry>
             <entry>
                 id: break\_into\_twoname: "Break Into Two (Act
                 2)"percent\_placement: 20
@@ -255,8 +255,8 @@
           </row>
           <row>
             <entry>
-                **Midpoint**
-              </entry>
+              <emphasis role="strong">Midpoint</emphasis>
+            </entry>
             <entry>
                 id: midpointname:
                 "Midpoint"percent\_placement: 50
@@ -264,8 +264,8 @@
           </row>
           <row>
             <entry>
-                **All is Lost**
-              </entry>
+              <emphasis role="strong">All is Lost</emphasis>
+            </entry>
             <entry>
                 id: all\_is\_lostname: "All is
                 Lost"percent\_placement: 75
@@ -273,8 +273,8 @@
           </row>
           <row>
             <entry>
-                **Finale**
-              </entry>
+              <emphasis role="strong">Finale</emphasis>
+            </entry>
             <entry>
                 id: finalename: "Finale"percent\_placement:
                 80-99
@@ -282,8 +282,8 @@
           </row>
           <row>
             <entry>
-                **Final Image**
-              </entry>
+              <emphasis role="strong">Final Image</emphasis>
+            </entry>
             <entry>
                 id: final\_imagename: "Final
                 Image"percent\_placement: 99
@@ -305,4 +305,3 @@
       </para>
   </section>
 </section>
-  

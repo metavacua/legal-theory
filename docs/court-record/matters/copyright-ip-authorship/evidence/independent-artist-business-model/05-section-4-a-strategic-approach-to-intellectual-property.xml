@@ -223,28 +223,28 @@
         <tbody>
           <row>
             <entry>
-                **IP Management Model**
-              </entry>
+              <emphasis role="strong">IP Management Model</emphasis>
+            </entry>
             <entry>
-                **Copyright Owner**
-              </entry>
+              <emphasis role="strong">Copyright Owner</emphasis>
+            </entry>
             <entry>
-                **Best Use Case**
-              </entry>
+              <emphasis role="strong">Best Use Case</emphasis>
+            </entry>
             <entry>
-                **Risk to Patron**
-              </entry>
+              <emphasis role="strong">Risk to Patron</emphasis>
+            </entry>
             <entry>
-                **Risk to Artist**
-              </entry>
+              <emphasis role="strong">Risk to Artist</emphasis>
+            </entry>
             <entry>
-                **California Legal Risk**
-              </entry>
+              <emphasis role="strong">California Legal Risk</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Limited License**
-              </entry>
+              <emphasis role="strong">Limited License</emphasis>
+            </entry>
             <entry>
                 Artist
               </entry>
@@ -259,13 +259,13 @@
                 Low. Retains full control of IP for future licensing.
               </entry>
             <entry>
-                **Minimal.**
-              </entry>
+              <emphasis role="strong">Minimal.</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **Option-to-Purchase / Assignment**
-              </entry>
+              <emphasis role="strong">Option-to-Purchase / Assignment</emphasis>
+            </entry>
             <entry>
                 Artist initially, transfers to Patron upon final
                 payment.
@@ -282,21 +282,19 @@
                 rejected.
               </entry>
             <entry>
-                **Minimal.** This is the legally correct and safest
-                method.
+              <emphasis role="strong">Minimal.</emphasis> This is the legally correct and safest method.
               </entry>
           </row>
           <row>
             <entry>
-                **Work-for-Hire (WFH)**
+              <emphasis role="strong">Work-for-Hire (WFH)</emphasis>
+            </entry>
+            <entry>
+                Legally remains with Artist (for fine art); Patron <emphasis>thinks</emphasis> they own it.
               </entry>
             <entry>
-                Legally remains with Artist (for fine art); Patron
-                *thinks* they own it.
-              </entry>
-            <entry>
-                **None for individual artists in California.**
-              </entry>
+              <emphasis role="strong">None for individual artists in California.</emphasis>
+            </entry>
             <entry>
                 High. Ineffective for copyright transfer and creates
                 employment liability.
@@ -305,8 +303,7 @@
                 High. Ambiguous rights and potential for disputes.
               </entry>
             <entry>
-                **Extreme.** Triggers a statutory presumption of
-                employment.
+              <emphasis role="strong">Extreme.</emphasis> Triggers a statutory presumption of employment.
               </entry>
           </row>
         </tbody>
@@ -314,4 +311,3 @@
     </informaltable>
   </section>
 </section>
-  

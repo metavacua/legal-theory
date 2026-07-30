@@ -199,8 +199,8 @@
             </row>
             <row>
               <entry>
-                  **Public Health Surveillance**
-                </entry>
+                <emphasis role="strong">Public Health Surveillance</emphasis>
+              </entry>
               <entry>
                   Deemed Not to Be Research
                 </entry>
@@ -219,8 +219,8 @@
             </row>
             <row>
               <entry>
-                  **Journalistic Activities**
-                </entry>
+                <emphasis role="strong">Journalistic Activities</emphasis>
+              </entry>
               <entry>
                   Deemed Not to Be Research
                 </entry>
@@ -239,8 +239,8 @@
             </row>
             <row>
               <entry>
-                  **Quality Improvement**
-                </entry>
+                <emphasis role="strong">Quality Improvement</emphasis>
+              </entry>
               <entry>
                   Deemed Not to Be Research
                 </entry>
@@ -260,8 +260,8 @@
             </row>
             <row>
               <entry>
-                  **Benign Behavioral Interventions**
-                </entry>
+                <emphasis role="strong">Benign Behavioral Interventions</emphasis>
+              </entry>
               <entry>
                   Exempt Research
                 </entry>
@@ -285,4 +285,3 @@
     </section>
   </section>
 </section>
-  

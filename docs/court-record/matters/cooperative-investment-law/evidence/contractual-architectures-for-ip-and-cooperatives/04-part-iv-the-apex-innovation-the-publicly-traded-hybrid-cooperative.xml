@@ -366,8 +366,8 @@
             </row>
             <row>
               <entry>
-                  **Holder Profile**
-                </entry>
+                <emphasis role="strong">Holder Profile</emphasis>
+              </entry>
               <entry>
                   Active members and patrons of the cooperative.
                 </entry>
@@ -377,8 +377,8 @@
             </row>
             <row>
               <entry>
-                  **Purpose**
-                </entry>
+                <emphasis role="strong">Purpose</emphasis>
+              </entry>
               <entry>
                   Membership, participation, and governance.
                 </entry>
@@ -388,8 +388,8 @@
             </row>
             <row>
               <entry>
-                  **Economic Rights**
-                </entry>
+                <emphasis role="strong">Economic Rights</emphasis>
+              </entry>
               <entry>
                   Patronage dividends (based on use), paid from
                   patronage-sourced income.
@@ -402,8 +402,8 @@
             </row>
             <row>
               <entry>
-                  **Voting Rights**
-                </entry>
+                <emphasis role="strong">Voting Rights</emphasis>
+              </entry>
               <entry>
                   One-member, one-vote on "Fundamental Cooperative
                   Matters."
@@ -415,8 +415,8 @@
             </row>
             <row>
               <entry>
-                  **Board Representation**
-                </entry>
+                <emphasis role="strong">Board Representation</emphasis>
+              </entry>
               <entry>
                   Elect a majority of the Board of Directors.
                 </entry>
@@ -426,8 +426,8 @@
             </row>
             <row>
               <entry>
-                  **Transferability**
-                </entry>
+                <emphasis role="strong">Transferability</emphasis>
+              </entry>
               <entry>
                   Highly restricted; subject to ROFR and active
                   patronage requirements.
@@ -438,8 +438,8 @@
             </row>
             <row>
               <entry>
-                  **Core Principle Represented**
-                </entry>
+                <emphasis role="strong">Core Principle Represented</emphasis>
+              </entry>
               <entry>
                   Democratic Control &amp; Subordination of Capital.
                 </entry>
@@ -453,4 +453,3 @@
     </section>
   </section>
 </section>
-  

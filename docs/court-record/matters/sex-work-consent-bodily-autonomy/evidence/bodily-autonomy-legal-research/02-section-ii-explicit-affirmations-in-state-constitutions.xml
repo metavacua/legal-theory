@@ -171,8 +171,8 @@
           </row>
           <row>
             <entry>
-                **California**
-              </entry>
+              <emphasis role="strong">California</emphasis>
+            </entry>
             <entry>
                 Proposition 1
               </entry>
@@ -190,8 +190,8 @@
           </row>
           <row>
             <entry>
-                **Michigan**
-              </entry>
+              <emphasis role="strong">Michigan</emphasis>
+            </entry>
             <entry>
                 Proposal 3
               </entry>
@@ -207,8 +207,8 @@
           </row>
           <row>
             <entry>
-                **Vermont**
-              </entry>
+              <emphasis role="strong">Vermont</emphasis>
+            </entry>
             <entry>
                 Article 22
               </entry>
@@ -224,8 +224,8 @@
           </row>
           <row>
             <entry>
-                **Ohio**
-              </entry>
+              <emphasis role="strong">Ohio</emphasis>
+            </entry>
             <entry>
                 Issue 1
               </entry>
@@ -242,8 +242,8 @@
           </row>
           <row>
             <entry>
-                **Arizona**
-              </entry>
+              <emphasis role="strong">Arizona</emphasis>
+            </entry>
             <entry>
                 Proposition 139
               </entry>
@@ -259,8 +259,8 @@
           </row>
           <row>
             <entry>
-                **Colorado**
-              </entry>
+              <emphasis role="strong">Colorado</emphasis>
+            </entry>
             <entry>
                 Amendment 89
               </entry>
@@ -276,8 +276,8 @@
           </row>
           <row>
             <entry>
-                **Maryland**
-              </entry>
+              <emphasis role="strong">Maryland</emphasis>
+            </entry>
             <entry>
                 Question 1
               </entry>
@@ -293,8 +293,8 @@
           </row>
           <row>
             <entry>
-                **Missouri**
-              </entry>
+              <emphasis role="strong">Missouri</emphasis>
+            </entry>
             <entry>
                 Amendment 3
               </entry>
@@ -310,8 +310,8 @@
           </row>
           <row>
             <entry>
-                **Montana**
-              </entry>
+              <emphasis role="strong">Montana</emphasis>
+            </entry>
             <entry>
                 CI-128
               </entry>
@@ -328,8 +328,8 @@
           </row>
           <row>
             <entry>
-                **Nevada**
-              </entry>
+              <emphasis role="strong">Nevada</emphasis>
+            </entry>
             <entry>
                 Question 6
               </entry>
@@ -340,13 +340,13 @@
                 "fundamental right to abortion"
               </entry>
             <entry>
-                *Requires second passage in 2026*
-              </entry>
+              <emphasis>Requires second passage in 2026</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
-                **New York**
-              </entry>
+              <emphasis role="strong">New York</emphasis>
+            </entry>
             <entry>
                 Proposal 1
               </entry>
@@ -497,11 +497,11 @@
           </row>
           <row>
             <entry>
-                **Alaska**
-              </entry>
+              <emphasis role="strong">Alaska</emphasis>
+            </entry>
             <entry>
-                *Valley Hosp. Ass'n v. Mat-Su Coalition*
-              </entry>
+              <emphasis>Valley Hosp. Ass'n v. Mat-Su Coalition</emphasis>
+            </entry>
             <entry>
                 1997
               </entry>
@@ -517,11 +517,11 @@
           </row>
           <row>
             <entry>
-                **Kansas**
-              </entry>
+              <emphasis role="strong">Kansas</emphasis>
+            </entry>
             <entry>
-                *Hodes &amp; Nauser v. Schmidt*
-              </entry>
+              <emphasis>Hodes &amp; Nauser v. Schmidt</emphasis>
+            </entry>
             <entry>
                 2019
               </entry>
@@ -537,11 +537,11 @@
           </row>
           <row>
             <entry>
-                **Montana**
-              </entry>
+              <emphasis role="strong">Montana</emphasis>
+            </entry>
             <entry>
-                *Armstrong v. State*
-              </entry>
+              <emphasis>Armstrong v. State</emphasis>
+            </entry>
             <entry>
                 1999
               </entry>
@@ -557,11 +557,11 @@
           </row>
           <row>
             <entry>
-                **Minnesota**
-              </entry>
+              <emphasis role="strong">Minnesota</emphasis>
+            </entry>
             <entry>
-                *Doe v. Gomez*
-              </entry>
+              <emphasis>Doe v. Gomez</emphasis>
+            </entry>
             <entry>
                 1995
               </entry>
@@ -576,10 +576,10 @@
           </row>
           <row>
             <entry>
-                **Florida**
-              </entry>
+              <emphasis role="strong">Florida</emphasis>
+            </entry>
             <entry>
-                *In re T.W.* (overturned 2024)
+              <emphasis>In re T.W.</emphasis> (overturned 2024)
               </entry>
             <entry>
                 1989
@@ -588,10 +588,7 @@
                 Art. I, § 23 (Right of Privacy)
               </entry>
             <entry>
-                *Original Holding:* The explicit right to privacy
-                protected a woman's decision whether or not to continue
-                her pregnancy. *Current Status:* This precedent was
-                overturned in 2024.
+              <emphasis>Original Holding:</emphasis> The explicit right to privacy protected a woman's decision whether or not to continue her pregnancy. <emphasis>Current Status:</emphasis> This precedent was overturned in 2024.
               </entry>
           </row>
         </tbody>
@@ -599,4 +596,3 @@
     </informaltable>
   </section>
 </section>
-  

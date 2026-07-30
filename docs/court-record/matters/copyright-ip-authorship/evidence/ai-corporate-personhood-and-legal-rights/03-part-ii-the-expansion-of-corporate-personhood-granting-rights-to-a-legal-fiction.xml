@@ -26,8 +26,9 @@
       <emphasis>
         <emphasis role="strong">Citizens United v.
       FEC</emphasis>
-      </emphasis>**: The Corporation as a Political
-      Speaker**</title>
+      </emphasis>
+      <emphasis role="strong">: The Corporation as a Political Speaker</emphasis>
+    </title>
     <para>
         The Supreme Court's 5-4 decision in <emphasis>Citizens United v.
         Federal Election Commission</emphasis> (2010) fundamentally
@@ -128,8 +129,9 @@
       <emphasis>
         <emphasis role="strong">Burwell v. Hobby
       Lobby</emphasis>
-      </emphasis>**: The Corporation as a Religious
-      Adherent**</title>
+      </emphasis>
+      <emphasis role="strong">: The Corporation as a Religious Adherent</emphasis>
+    </title>
     <para>
         Four years after <emphasis>Citizens United</emphasis>, the
         Supreme Court again expanded corporate rights in
@@ -299,8 +301,8 @@
           </row>
           <row>
             <entry>
-                **1st Amendment: Free Speech**
-              </entry>
+              <emphasis role="strong">1st Amendment: Free Speech</emphasis>
+            </entry>
             <entry>
                 Full, inherent right.
               </entry>
@@ -308,7 +310,7 @@
                 Yes, for political and commercial speech.
               </entry>
             <entry>
-                *Citizens United v. FEC* (2010)
+              <emphasis>Citizens United v. FEC</emphasis> (2010)
               </entry>
             <entry>
                 Applies to independent political expenditures, not
@@ -318,8 +320,8 @@
           </row>
           <row>
             <entry>
-                **1st Amendment: Religious Freedom**
-              </entry>
+              <emphasis role="strong">1st Amendment: Religious Freedom</emphasis>
+            </entry>
             <entry>
                 Full, inherent right.
               </entry>
@@ -327,7 +329,7 @@
                 Yes, under RFRA for closely held corporations.
               </entry>
             <entry>
-                *Burwell v. Hobby Lobby* (2014)
+              <emphasis>Burwell v. Hobby Lobby</emphasis> (2014)
               </entry>
             <entry>
                 The Court limited its holding to "closely
@@ -337,8 +339,8 @@
           </row>
           <row>
             <entry>
-                **4th Amendment: Search &amp; Seizure**
-              </entry>
+              <emphasis role="strong">4th Amendment: Search &amp; Seizure</emphasis>
+            </entry>
             <entry>
                 Full protection, especially in the home.
               </entry>
@@ -346,7 +348,7 @@
                 Yes, but limited.
               </entry>
             <entry>
-                *Hale v. Henkel* (1906)
+              <emphasis>Hale v. Henkel</emphasis> (1906)
               </entry>
             <entry>
                 Corporations have a lower expectation of privacy than
@@ -357,8 +359,8 @@
           </row>
           <row>
             <entry>
-                **5th Amendment: Self-Incrimination**
-              </entry>
+              <emphasis role="strong">5th Amendment: Self-Incrimination</emphasis>
+            </entry>
             <entry>
                 Absolute right ("pleading the Fifth").
               </entry>
@@ -366,7 +368,7 @@
                 No.
               </entry>
             <entry>
-                *Wilson v. United States* (1911)
+              <emphasis>Wilson v. United States</emphasis> (1911)
               </entry>
             <entry>
                 The privilege against self-incrimination is considered a
@@ -376,8 +378,8 @@
           </row>
           <row>
             <entry>
-                **5th Am.: Due Process &amp; Takings**
-              </entry>
+              <emphasis role="strong">5th Am.: Due Process &amp; Takings</emphasis>
+            </entry>
             <entry>
                 Full protection of life, liberty, and property.
               </entry>
@@ -385,7 +387,7 @@
                 Yes, for property.
               </entry>
             <entry>
-                *Pembina Mining Co. v. Pennsylvania* (1888)
+              <emphasis>Pembina Mining Co. v. Pennsylvania</emphasis> (1888)
               </entry>
             <entry>
                 Corporations have due process rights protecting their
@@ -395,8 +397,8 @@
           </row>
           <row>
             <entry>
-                **14th Am.: Equal Protection**
-              </entry>
+              <emphasis role="strong">14th Am.: Equal Protection</emphasis>
+            </entry>
             <entry>
                 Full protection.
               </entry>
@@ -404,7 +406,7 @@
                 Yes, but limited.
               </entry>
             <entry>
-                *Santa Clara County v. Southern Pacific Railroad* (1886)
+              <emphasis>Santa Clara County v. Southern Pacific Railroad</emphasis> (1886)
               </entry>
             <entry>
                 Corporations are considered "persons" under
@@ -415,8 +417,8 @@
           </row>
           <row>
             <entry>
-                **General Right to Privacy**
-              </entry>
+              <emphasis role="strong">General Right to Privacy</emphasis>
+            </entry>
             <entry>
                 Recognized, though not absolute ("penumbras"
                 of Bill of Rights).
@@ -425,7 +427,7 @@
                 No.
               </entry>
             <entry>
-                *FCC v. AT\&amp;T* (2011)
+              <emphasis>FCC v. AT&amp;T</emphasis> (2011)
               </entry>
             <entry>
                 The Supreme Court held that corporations do not have a
@@ -435,8 +437,8 @@
           </row>
           <row>
             <entry>
-                **Right to Vote**
-              </entry>
+              <emphasis role="strong">Right to Vote</emphasis>
+            </entry>
             <entry>
                 Fundamental right of citizenship.
               </entry>
@@ -457,4 +459,3 @@
     </informaltable>
   </section>
 </section>
-  

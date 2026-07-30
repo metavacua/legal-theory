@@ -206,8 +206,8 @@
                   future AI models.
                 </entry>
               <entry>
-                  **High**
-                </entry>
+                <emphasis role="strong">High</emphasis>
+              </entry>
             </row>
             <row>
               <entry>
@@ -227,7 +227,7 @@
                   training.
                 </entry>
               <entry>
-                  **Low** (if paid tier is used)
+                <emphasis role="strong">Low</emphasis> (if paid tier is used)
                 </entry>
             </row>
             <row>
@@ -249,8 +249,8 @@
                   "related technology."
                 </entry>
               <entry>
-                  **High**
-                </entry>
+                <emphasis role="strong">High</emphasis>
+              </entry>
             </row>
             <row>
               <entry>
@@ -269,8 +269,8 @@
                   (e.g., generating harmful content).
                 </entry>
               <entry>
-                  **Medium**
-                </entry>
+                <emphasis role="strong">Medium</emphasis>
+              </entry>
             </row>
             <row>
               <entry>
@@ -289,8 +289,8 @@
                   these stringent privacy and security requirements.
                 </entry>
               <entry>
-                  **Medium**
-                </entry>
+                <emphasis role="strong">Medium</emphasis>
+              </entry>
             </row>
           </tbody>
         </tgroup>
@@ -535,4 +535,3 @@
     </section>
   </section>
 </section>
-  

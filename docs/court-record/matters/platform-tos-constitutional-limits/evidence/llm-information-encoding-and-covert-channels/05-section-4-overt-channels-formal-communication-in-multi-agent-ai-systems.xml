@@ -182,8 +182,8 @@
           </row>
           <row>
             <entry>
-                **KQML**
-              </entry>
+              <emphasis role="strong">KQML</emphasis>
+            </entry>
             <entry>
                 1990s (Pre-Web)
               </entry>
@@ -200,8 +200,8 @@
           </row>
           <row>
             <entry>
-                **FIPA-ACL**
-              </entry>
+              <emphasis role="strong">FIPA-ACL</emphasis>
+            </entry>
             <entry>
                 1990s (Pre-Web)
               </entry>
@@ -218,8 +218,8 @@
           </row>
           <row>
             <entry>
-                **MCP**
-              </entry>
+              <emphasis role="strong">MCP</emphasis>
+            </entry>
             <entry>
                 2020s (LLM-era)
               </entry>
@@ -236,8 +236,8 @@
           </row>
           <row>
             <entry>
-                **A2A**
-              </entry>
+              <emphasis role="strong">A2A</emphasis>
+            </entry>
             <entry>
                 2020s (LLM-era)
               </entry>
@@ -254,8 +254,8 @@
           </row>
           <row>
             <entry>
-                **ACP**
-              </entry>
+              <emphasis role="strong">ACP</emphasis>
+            </entry>
             <entry>
                 2020s (LLM-era)
               </entry>
@@ -344,4 +344,3 @@
       </para>
   </section>
 </section>
-  

@@ -213,8 +213,8 @@
           </row>
           <row>
             <entry>
-                **SNoMAC**
-              </entry>
+              <emphasis role="strong">SNoMAC</emphasis>
+            </entry>
             <entry>
                 Heterogeneity of protocols in home/IoT networks.
               </entry>
@@ -234,8 +234,8 @@
           </row>
           <row>
             <entry>
-                **Semantic Network Inventory**
-              </entry>
+              <emphasis role="strong">Semantic Network Inventory</emphasis>
+            </entry>
             <entry>
                 Heterogeneity and complexity of YANG data models in
                 multi-vendor environments.
@@ -255,8 +255,8 @@
           </row>
           <row>
             <entry>
-                **EasyWay**
-              </entry>
+              <emphasis role="strong">EasyWay</emphasis>
+            </entry>
             <entry>
                 Complexity of manual configuration in enterprise SDN
                 environments.
@@ -277,8 +277,8 @@
           </row>
           <row>
             <entry>
-                **Two-Level DSS**
-              </entry>
+              <emphasis role="strong">Two-Level DSS</emphasis>
+            </entry>
             <entry>
                 Lack of semantic context in device information models
                 for advanced orchestration.
@@ -315,4 +315,3 @@
       </para>
   </section>
 </section>
-  

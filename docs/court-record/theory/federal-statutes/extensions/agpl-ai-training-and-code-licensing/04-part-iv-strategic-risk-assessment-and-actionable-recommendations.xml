@@ -137,8 +137,8 @@
             </row>
             <row>
               <entry>
-                  **MIT**
-                </entry>
+                <emphasis role="strong">MIT</emphasis>
+              </entry>
               <entry>
                   None. Derivative works can be proprietary.46
                 </entry>
@@ -149,16 +149,13 @@
                   No explicit grant.
                 </entry>
               <entry>
-                  **Low Risk.** Removes the "poison pill"
-                  threat and "copyleft hole" problem.
-                  Maximizes legal simplicity and safety but sacrifices
-                  the share-alike requirement.
+                <emphasis role="strong">Low Risk.</emphasis> Removes the "poison pill" threat and "copyleft hole" problem. Maximizes legal simplicity and safety but sacrifices the share-alike requirement.
                 </entry>
             </row>
             <row>
               <entry>
-                  **Apache 2.0**
-                </entry>
+                <emphasis role="strong">Apache 2.0</emphasis>
+              </entry>
               <entry>
                   None. Derivative works can be proprietary.46
                 </entry>
@@ -169,18 +166,15 @@
                   Yes, explicit grant from contributors.47
                 </entry>
               <entry>
-                  **Low Risk.** Similar to MIT but provides explicit
-                  protection against patent trolling. Legally more
-                  verbose but robust for corporate environments.
+                <emphasis role="strong">Low Risk.</emphasis> Similar to MIT but provides explicit protection against patent trolling. Legally more verbose but robust for corporate environments.
                 </entry>
             </row>
             <row>
               <entry>
-                  **GPL 3.0**
-                </entry>
+                <emphasis role="strong">GPL 3.0</emphasis>
+              </entry>
               <entry>
-                  **Strong Copyleft.** Derivative works must also be
-                  licensed under GPL 3.0.20
+                <emphasis role="strong">Strong Copyleft.</emphasis> Derivative works must also be licensed under GPL 3.0.20
                 </entry>
               <entry>
                   None (this is the "SaaS loophole").30
@@ -189,31 +183,24 @@
                   Yes, explicit grant from contributors.18
                 </entry>
               <entry>
-                  **High Risk (Current Choice).** Creates the
-                  "poison pill" threat when public. The
-                  "copyleft hole" from AI output undermines
-                  its core purpose.
+                <emphasis role="strong">High Risk (Current Choice).</emphasis> Creates the "poison pill" threat when public. The "copyleft hole" from AI output undermines its core purpose.
                 </entry>
             </row>
             <row>
               <entry>
-                  **AGPL 3.0**
-                </entry>
+                <emphasis role="strong">AGPL 3.0</emphasis>
+              </entry>
               <entry>
-                  **Strong Copyleft.**
-                </entry>
+                <emphasis role="strong">Strong Copyleft.</emphasis>
+              </entry>
               <entry>
-                  **Yes.** Users interacting over a network must be
-                  offered the source code.29
+                <emphasis role="strong">Yes.</emphasis> Users interacting over a network must be offered the source code.29
                 </entry>
               <entry>
                   Yes, explicit grant from contributors.
                 </entry>
               <entry>
-                  **Very High Risk.** Explicitly codifies the network
-                  interaction obligation, making the legal argument
-                  against Google even more direct and antagonistic. Not
-                  recommended.
+                <emphasis role="strong">Very High Risk.</emphasis> Explicitly codifies the network interaction obligation, making the legal argument against Google even more direct and antagonistic. Not recommended.
                 </entry>
             </row>
           </tbody>

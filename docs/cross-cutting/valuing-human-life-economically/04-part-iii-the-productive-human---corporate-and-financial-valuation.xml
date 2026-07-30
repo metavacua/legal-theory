@@ -255,17 +255,17 @@
           </row>
           <row>
             <entry>
-                **S\&amp;P 500 Average**
-              </entry>
+              <emphasis role="strong">S&amp;P 500 Average</emphasis>
+            </entry>
             <entry>
-                **$17,734,075**
-              </entry>
+              <emphasis role="strong">$17,734,075</emphasis>
+            </entry>
             <entry>
-                **$91,917**
-              </entry>
+              <emphasis role="strong">$91,917</emphasis>
+            </entry>
             <entry>
-                **268:1**
-              </entry>
+              <emphasis role="strong">268:1</emphasis>
+            </entry>
           </row>
         </tbody>
       </tgroup>
@@ -478,4 +478,3 @@
       </para>
   </section>
 </section>
-  

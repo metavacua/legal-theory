@@ -560,14 +560,13 @@
           <tbody>
             <row>
               <entry>
-                  **Table 2: Contract State Transition Matrix
-                  (Simplified Example)**
-                </entry>
+                <emphasis role="strong">Table 2: Contract State Transition Matrix (Simplified Example)</emphasis>
+              </entry>
             </row>
             <row>
               <entry>
-                  **Current State**
-                </entry>
+                <emphasis role="strong">Current State</emphasis>
+              </entry>
             </row>
             <row>
               <entry>
@@ -788,14 +787,13 @@
           <tbody>
             <row>
               <entry>
-                  **Table 3: Mapping the "X-Card" to
-                  California Legal Doctrines**
-                </entry>
+                <emphasis role="strong">Table 3: Mapping the "X-Card" to California Legal Doctrines</emphasis>
+              </entry>
             </row>
             <row>
               <entry>
-                  **Game State at Invocation**
-                </entry>
+                <emphasis role="strong">Game State at Invocation</emphasis>
+              </entry>
             </row>
             <row>
               <entry>
@@ -840,4 +838,3 @@
     </section>
   </section>
 </section>
-  

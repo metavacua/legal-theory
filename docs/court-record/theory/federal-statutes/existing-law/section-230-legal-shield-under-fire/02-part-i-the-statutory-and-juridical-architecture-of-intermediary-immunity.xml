@@ -231,10 +231,10 @@
           </row>
           <row>
             <entry>
-                **Distributor Liability**
-              </entry>
+              <emphasis role="strong">Distributor Liability</emphasis>
+            </entry>
             <entry>
-                *Cubby v. CompuServe* (1991)
+              <emphasis>Cubby v. CompuServe</emphasis> (1991)
               </entry>
             <entry>
                 Liable only if the distributor knew or had reason to
@@ -247,10 +247,10 @@
           </row>
           <row>
             <entry>
-                **Publisher Liability**
-              </entry>
+              <emphasis role="strong">Publisher Liability</emphasis>
+            </entry>
             <entry>
-                *Stratton Oakmont v. Prodigy* (1995)
+              <emphasis>Stratton Oakmont v. Prodigy</emphasis> (1995)
               </entry>
             <entry>
                 Liable for all third-party content if the platform
@@ -263,10 +263,10 @@
           </row>
           <row>
             <entry>
-                **§230(c)(1) Immunity**
-              </entry>
+              <emphasis role="strong">§230(c)(1) Immunity</emphasis>
+            </entry>
             <entry>
-                *Zeran v. AOL* (1997)
+              <emphasis>Zeran v. AOL</emphasis> (1997)
               </entry>
             <entry>
                 Not liable for third-party content, even with notice, as
@@ -279,10 +279,10 @@
           </row>
           <row>
             <entry>
-                **Material Contribution Exception**
-              </entry>
+              <emphasis role="strong">Material Contribution Exception</emphasis>
+            </entry>
             <entry>
-                *Roommates.com* (2008)
+              <emphasis>Roommates.com</emphasis> (2008)
               </entry>
             <entry>
                 Liable if the platform's own design choices materially
@@ -299,4 +299,3 @@
     </informaltable>
   </section>
 </section>
-  

@@ -211,10 +211,7 @@
                   Text
                 </entry>
               <entry>
-                  The legal jurisdiction under which the work was
-                  created (e.g., "USA", "GBR",
-                  "CHN"). Essential for applying the correct
-                  legal rules (e.g., for *de minimis* use).
+                  The legal jurisdiction under which the work was created (e.g., "USA", "GBR", "CHN"). Essential for applying the correct legal rules (e.g., for <emphasis>de minimis</emphasis> use).
                 </entry>
             </row>
           </tbody>
@@ -560,4 +557,3 @@
     </section>
   </section>
 </section>
-  

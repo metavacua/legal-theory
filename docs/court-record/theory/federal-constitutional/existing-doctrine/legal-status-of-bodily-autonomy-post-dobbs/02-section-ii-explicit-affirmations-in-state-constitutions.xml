@@ -154,8 +154,8 @@
         </row>
         <row>
           <entry>
-              **California**
-            </entry>
+            <emphasis role="strong">California</emphasis>
+          </entry>
           <entry>
               Proposition 1
             </entry>
@@ -173,8 +173,8 @@
         </row>
         <row>
           <entry>
-              **Michigan**
-            </entry>
+            <emphasis role="strong">Michigan</emphasis>
+          </entry>
           <entry>
               Proposal 3
             </entry>
@@ -190,8 +190,8 @@
         </row>
         <row>
           <entry>
-              **Vermont**
-            </entry>
+            <emphasis role="strong">Vermont</emphasis>
+          </entry>
           <entry>
               Article 22
             </entry>
@@ -207,8 +207,8 @@
         </row>
         <row>
           <entry>
-              **Ohio**
-            </entry>
+            <emphasis role="strong">Ohio</emphasis>
+          </entry>
           <entry>
               Issue 1
             </entry>
@@ -225,8 +225,8 @@
         </row>
         <row>
           <entry>
-              **Arizona**
-            </entry>
+            <emphasis role="strong">Arizona</emphasis>
+          </entry>
           <entry>
               Proposition 139
             </entry>
@@ -242,8 +242,8 @@
         </row>
         <row>
           <entry>
-              **Colorado**
-            </entry>
+            <emphasis role="strong">Colorado</emphasis>
+          </entry>
           <entry>
               Amendment 89
             </entry>
@@ -259,8 +259,8 @@
         </row>
         <row>
           <entry>
-              **Maryland**
-            </entry>
+            <emphasis role="strong">Maryland</emphasis>
+          </entry>
           <entry>
               Question 1
             </entry>
@@ -276,8 +276,8 @@
         </row>
         <row>
           <entry>
-              **Missouri**
-            </entry>
+            <emphasis role="strong">Missouri</emphasis>
+          </entry>
           <entry>
               Amendment 3
             </entry>
@@ -293,8 +293,8 @@
         </row>
         <row>
           <entry>
-              **Montana**
-            </entry>
+            <emphasis role="strong">Montana</emphasis>
+          </entry>
           <entry>
               CI-128
             </entry>
@@ -311,8 +311,8 @@
         </row>
         <row>
           <entry>
-              **Nevada**
-            </entry>
+            <emphasis role="strong">Nevada</emphasis>
+          </entry>
           <entry>
               Question 6
             </entry>
@@ -323,13 +323,13 @@
               "fundamental right to abortion"
             </entry>
           <entry>
-              *Requires second passage in 2026*
-            </entry>
+            <emphasis>Requires second passage in 2026</emphasis>
+          </entry>
         </row>
         <row>
           <entry>
-              **New York**
-            </entry>
+            <emphasis role="strong">New York</emphasis>
+          </entry>
           <entry>
               Proposal 1
             </entry>
@@ -348,4 +348,3 @@
     </tgroup>
   </informaltable>
 </section>
-  

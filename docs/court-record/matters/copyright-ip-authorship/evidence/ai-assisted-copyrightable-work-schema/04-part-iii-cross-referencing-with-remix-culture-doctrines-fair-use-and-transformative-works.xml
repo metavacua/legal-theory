@@ -207,8 +207,8 @@
           </row>
           <row>
             <entry>
-                **1. Purpose &amp; Character**
-              </entry>
+              <emphasis role="strong">1. Purpose &amp; Character</emphasis>
+            </entry>
             <entry>
                 Use.Purpose (Enum: Commercial, Education, Parody,
                 Criticism, Research, News)
@@ -228,8 +228,7 @@
             <entry>
               </entry>
             <entry>
-                Use.TransformativeScore (Float: 0-1, based on *Warhol*
-                purpose test)
+                Use.TransformativeScore (Float: 0-1, based on <emphasis>Warhol</emphasis> purpose test)
               </entry>
             <entry>
                 High score (fundamentally different purpose, e.g., data
@@ -245,8 +244,8 @@
           </row>
           <row>
             <entry>
-                **2. Nature of Work**
-              </entry>
+              <emphasis role="strong">2. Nature of Work</emphasis>
+            </entry>
             <entry>
                 Source.Nature (Enum: Factual, Creative)
               </entry>
@@ -278,8 +277,8 @@
           </row>
           <row>
             <entry>
-                **3. Amount Used**
-              </entry>
+              <emphasis role="strong">3. Amount Used</emphasis>
+            </entry>
             <entry>
                 Use.AmountQuantitative (Float: 0-1, percentage of work
                 used)
@@ -313,8 +312,8 @@
           </row>
           <row>
             <entry>
-                **4. Market Effect**
-              </entry>
+              <emphasis role="strong">4. Market Effect</emphasis>
+            </entry>
             <entry>
                 Use.MarketEffect.Substitution (Boolean: Is it a direct
                 market replacement?)
@@ -352,4 +351,3 @@
     </informaltable>
   </section>
 </section>
-  

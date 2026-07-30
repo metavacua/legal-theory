@@ -209,8 +209,8 @@
           </row>
           <row>
             <entry>
-                **Whole Body (Research)**
-              </entry>
+              <emphasis role="strong">Whole Body (Research)</emphasis>
+            </entry>
             <entry>
                 Cost of cremation (\~$1,000-$3,000)
               </entry>
@@ -226,8 +226,8 @@
           </row>
           <row>
             <entry>
-                **Kidney**
-              </entry>
+              <emphasis role="strong">Kidney</emphasis>
+            </entry>
             <entry>
                 $0
               </entry>
@@ -243,8 +243,8 @@
           </row>
           <row>
             <entry>
-                **Liver**
-              </entry>
+              <emphasis role="strong">Liver</emphasis>
+            </entry>
             <entry>
                 $0
               </entry>
@@ -260,8 +260,8 @@
           </row>
           <row>
             <entry>
-                **Heart**
-              </entry>
+              <emphasis role="strong">Heart</emphasis>
+            </entry>
             <entry>
                 $0
               </entry>
@@ -277,8 +277,8 @@
           </row>
           <row>
             <entry>
-                **Lungs (pair)**
-              </entry>
+              <emphasis role="strong">Lungs (pair)</emphasis>
+            </entry>
             <entry>
                 $0
               </entry>
@@ -294,8 +294,8 @@
           </row>
           <row>
             <entry>
-                **Bone Marrow**
-              </entry>
+              <emphasis role="strong">Bone Marrow</emphasis>
+            </entry>
             <entry>
                 $0 (Donation)
               </entry>
@@ -312,8 +312,8 @@
           </row>
           <row>
             <entry>
-                **Sum of all Parts**
-              </entry>
+              <emphasis role="strong">Sum of all Parts</emphasis>
+            </entry>
             <entry>
                 N/A
               </entry>
@@ -374,4 +374,3 @@
       </para>
   </section>
 </section>
-  

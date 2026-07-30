@@ -46,8 +46,8 @@
           </row>
           <row>
             <entry>
-                **Cooperative Corporations**
-              </entry>
+              <emphasis role="strong">Cooperative Corporations</emphasis>
+            </entry>
             <entry>
               </entry>
             <entry>
@@ -206,8 +206,8 @@
           </row>
           <row>
             <entry>
-                **Public &amp; Commercial Venues**
-              </entry>
+              <emphasis role="strong">Public &amp; Commercial Venues</emphasis>
+            </entry>
             <entry>
               </entry>
             <entry>
@@ -519,8 +519,8 @@
           </row>
           <row>
             <entry>
-                **Health, Safety, and Personal Care**
-              </entry>
+              <emphasis role="strong">Health, Safety, and Personal Care</emphasis>
+            </entry>
             <entry>
               </entry>
             <entry>
@@ -665,8 +665,8 @@
           </row>
           <row>
             <entry>
-                **Gambling &amp; Wagering**
-              </entry>
+              <emphasis role="strong">Gambling &amp; Wagering</emphasis>
+            </entry>
             <entry>
               </entry>
             <entry>
@@ -701,8 +701,8 @@
                 in a controlled game.
               </entry>
             <entry>
-                **No**
-              </entry>
+              <emphasis role="strong">No</emphasis>
+            </entry>
           </row>
           <row>
             <entry>
@@ -751,8 +751,8 @@
           </row>
           <row>
             <entry>
-                **Public Services (Libraries, Schools)**
-              </entry>
+              <emphasis role="strong">Public Services (Libraries, Schools)</emphasis>
+            </entry>
             <entry>
               </entry>
             <entry>
@@ -851,8 +851,8 @@
           </row>
           <row>
             <entry>
-                **Food, Agriculture, &amp; Wildlife**
-              </entry>
+              <emphasis role="strong">Food, Agriculture, &amp; Wildlife</emphasis>
+            </entry>
             <entry>
               </entry>
             <entry>
@@ -967,8 +967,8 @@
           </row>
           <row>
             <entry>
-                **Employment &amp; Labor**
-              </entry>
+              <emphasis role="strong">Employment &amp; Labor</emphasis>
+            </entry>
             <entry>
               </entry>
             <entry>
@@ -1008,8 +1008,8 @@
           </row>
           <row>
             <entry>
-                **Non-Discrimination &amp; Civil Rights**
-              </entry>
+              <emphasis role="strong">Non-Discrimination &amp; Civil Rights</emphasis>
+            </entry>
             <entry>
               </entry>
             <entry>
@@ -1138,4 +1138,3 @@
       </para>
   </section>
 </section>
-  
