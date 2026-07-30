@@ -183,5 +183,83 @@ class TestValidateResolvedDocumentAgainstRealCorpusFiles(unittest.TestCase):
         self.assertEqual(validate_resolved_document(path, self.schema), [])
 
 
+class TestClassify(_WritesFilesFixture, unittest.TestCase):
+    def test_article_root_is_validated(self):
+        from check_docbook_grammar import classify
+        d = self._dir()
+        path = self._write(d, "a.xml", GOOD_SHELL)
+        self.assertEqual(classify(path), ("validate", None))
+
+    def test_section_root_is_validated(self):
+        from check_docbook_grammar import classify
+        d = self._dir()
+        path = self._write(d, "s.xml", GOOD_FRAGMENT)
+        self.assertEqual(classify(path), ("validate", None))
+
+    def test_info_root_is_validated(self):
+        from check_docbook_grammar import classify
+        d = self._dir()
+        path = self._write(
+            d, "i.xml",
+            '<?xml version="1.0"?>\n<info xmlns="http://docbook.org/ns/docbook"><title>T</title></info>\n',
+        )
+        self.assertEqual(classify(path), ("validate", None))
+
+    def test_legalnotice_root_is_validated(self):
+        from check_docbook_grammar import classify
+        d = self._dir()
+        path = self._write(
+            d, "l.xml",
+            '<?xml version="1.0"?>\n<legalnotice xmlns="http://docbook.org/ns/docbook"><para>Copyright.</para></legalnotice>\n',
+        )
+        self.assertEqual(classify(path), ("validate", None))
+
+    def test_biblioentry_root_is_skipped_with_a_reason(self):
+        from check_docbook_grammar import classify
+        d = self._dir()
+        path = self._write(
+            d, "b.xml",
+            '<?xml version="1.0"?>\n<biblioentry xmlns="http://docbook.org/ns/docbook"><abbrev>x</abbrev></biblioentry>\n',
+        )
+        status, reason = classify(path)
+        self.assertEqual(status, "skip")
+        self.assertIn("biblioentry", reason)
+
+    def test_authorgroup_root_is_skipped_with_a_reason(self):
+        from check_docbook_grammar import classify
+        d = self._dir()
+        path = self._write(
+            d, "ag.xml",
+            '<?xml version="1.0"?>\n<authorgroup xmlns="http://docbook.org/ns/docbook"><author/></authorgroup>\n',
+        )
+        status, reason = classify(path)
+        self.assertEqual(status, "skip")
+        self.assertIn("authorgroup", reason)
+
+    def test_non_docbook_namespace_root_is_skipped_with_a_reason(self):
+        # Reproduces docs/sitemap.xml's actual shape: a totally
+        # different XML vocabulary that happens to live under docs/
+        # and match *.xml, not a DocBook document at all.
+        from check_docbook_grammar import classify
+        d = self._dir()
+        path = self._write(
+            d, "sitemap.xml",
+            '<?xml version="1.0"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            '<url><loc>x</loc></url></urlset>\n',
+        )
+        status, reason = classify(path)
+        self.assertEqual(status, "skip")
+        self.assertIn("namespace", reason)
+
+    def test_an_unparseable_root_defaults_to_validate_not_a_silent_skip(self):
+        # Fail-open: a file this broken should surface a real error
+        # through validate_resolved_document(), never disappear
+        # silently the way this whole module exists to stop happening.
+        from check_docbook_grammar import classify
+        d = self._dir()
+        path = self._write(d, "bad.xml", "not even xml")
+        self.assertEqual(classify(path), ("validate", None))
+
+
 if __name__ == "__main__":
     unittest.main()

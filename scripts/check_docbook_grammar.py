@@ -122,3 +122,58 @@ def validate_resolved_document(xml_path, schema_path):
     if error is not None:
         return [f"{xml_path}: XInclude resolution failed: {error}"]
     return validate_grammar(resolved_text, schema_path, xml_path)
+
+
+# Real DocBook content this corpus has (root elements "biblioentry",
+# "authorgroup") that DocBook 5.2's own RNG grammar's `start =`
+# production does not export as a standalone top-level start element
+# -- confirmed empirically (see the module docstring). Not a gap in
+# this checker: both are only ever valid nested inside a larger
+# document, and are already reached and validated as part of resolving
+# and validating whichever <article> shell XIncludes them.
+_KNOWN_UNVALIDATABLE_STANDALONE = {
+    (DB_NS, "biblioentry"),
+    (DB_NS, "authorgroup"),
+}
+
+
+def root_element_info(xml_path):
+    """(namespace_uri, local_name) for xml_path's own root element, or
+    (None, None) if the file is too malformed to even find one. Reads
+    the file directly with no XInclude resolution: in this corpus's
+    own convention, the root element itself is never the target of an
+    xi:include (every xi:include is a child of some already-concrete
+    root), so this is always a cheap, accurate, resolution-free read."""
+    try:
+        tag = ET.parse(xml_path).getroot().tag
+    except ET.ParseError:
+        return None, None
+    if tag.startswith("{"):
+        ns, _, local = tag[1:].partition("}")
+        return ns, local
+    return "", tag
+
+
+def classify(xml_path):
+    """('validate', None) if xml_path should be run through
+    validate_resolved_document(); ('skip', reason) with a nonempty,
+    specific, human-readable reason otherwise. Defaults to 'validate'
+    whenever in doubt -- an unparseable root, or any DocBook-namespaced
+    root this function doesn't specifically know is exception-listed
+    -- deliberately failing open toward validating rather than toward
+    silently skipping, since a silent skip is exactly the shape of the
+    original bug this module exists to close."""
+    ns, local = root_element_info(xml_path)
+    if (ns, local) in _KNOWN_UNVALIDATABLE_STANDALONE:
+        return "skip", (
+            f"<{local}> is real DocBook content, but DocBook 5.2's own "
+            "RELAX NG grammar does not export it as a standalone "
+            "top-level start element (confirmed empirically: jing "
+            f"rejects a bare <{local}> root, citing a list of permitted "
+            "start elements that does not include it) -- it is only "
+            "validated in context, via the shell document that "
+            "XIncludes it."
+        )
+    if ns == DB_NS or ns is None:
+        return "validate", None
+    return "skip", f"root element is not in the DocBook namespace (found {ns!r})"
