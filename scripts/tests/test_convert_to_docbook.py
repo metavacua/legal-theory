@@ -29,6 +29,48 @@ class TestSlugifyAndTitle(unittest.TestCase):
         from convert_to_docbook import slugify
         self.assertEqual(slugify(""), "s")
 
+    def test_slugify_converts_em_dash_to_separator_not_deletion(self):
+        # Real corpus text (appears verbatim in 3 works-cited entries
+        # under docs/court-record/matters/cooperative-investment-law/
+        # and in docs/bibliography/references.xml). Confirmed
+        # 2026-07-29: the old hand-rolled regex
+        # (re.sub(r"[^\w\s-]", "", text)) silently deleted the en dash
+        # itself -- unicode-aware \w/\s don't match it, and it isn't a
+        # literal "-" either -- jamming the two adjacent words together
+        # with no separator at all: "university-of-wisconsinmadison".
+        from convert_to_docbook import slugify
+        self.assertEqual(
+            slugify("University of Wisconsin–Madison"),
+            "university-of-wisconsin-madison",
+        )
+
+    def test_slugify_converts_em_dash_to_separator_not_deletion_real_section_title(self):
+        # Real corpus section title
+        # (docs/court-record/matters/copyright-ip-authorship/evidence/
+        # ip-creation-service-or-self-expression/). This exact jammed
+        # slug ("...dualitya...") is the CURRENTLY COMMITTED fragment
+        # filename in this repo today -- real output from a real prior
+        # run of this same buggy function, not a synthetic case.
+        from convert_to_docbook import slugify
+        self.assertEqual(
+            slugify("Conclusion: Reconciling the Duality—A Spectrum of Intent and Context"),
+            "conclusion-reconciling-the-duality-a-spectrum-of-intent-and-context",
+        )
+
+    def test_slugify_collapses_repeated_separators(self):
+        # The old implementation had no collapse step of its own for
+        # runs of the *literal* "-" character (only for whitespace) --
+        # "hello---world" passed straight through re.sub(r"[^\w\s-]",
+        # "", ...) unchanged (hyphens are explicitly allowed), then
+        # re.sub(r"\s+", "-", ...) had nothing to collapse (no
+        # whitespace present), leaving the triple hyphen intact.
+        from convert_to_docbook import slugify
+        self.assertEqual(slugify("hello---world"), "hello-world")
+
+    def test_slugify_strips_leading_and_trailing_separators(self):
+        from convert_to_docbook import slugify
+        self.assertEqual(slugify("--hello--"), "hello")
+
     def test_extract_title_reads_first_heading(self):
         from convert_to_docbook import extract_title
         fixtures = Path(__file__).resolve().parent / "fixtures"
@@ -289,6 +331,37 @@ class TestSplitIntoFragments(unittest.TestCase):
             self.assertEqual(
                 frag_names,
                 ["01-introduction-the-blurring-line.xml", "02-second-section.xml"],
+            )
+
+    def test_em_dash_title_produces_hyphenated_not_jammed_fragment_slug(self):
+        # Root-caused on docs/court-record/matters/copyright-ip-
+        # authorship/evidence/ip-creation-service-or-self-expression/,
+        # whose ALREADY-COMMITTED fragment filename
+        # ("04-conclusion-reconciling-the-dualitya-spectrum-of-intent-
+        # and-context.xml") is live, real evidence of this exact
+        # defect. This fixture reuses that real title verbatim to
+        # confirm the fix through the full pandoc round-trip, not just
+        # the slugify() unit alone.
+        from convert_to_docbook import (
+            pandoc_to_docbook_fragment, wrap_fragment, split_into_fragments,
+        )
+        fragment = pandoc_to_docbook_fragment(self.fixtures / "em_dash_title_section.md")
+        article, _ = wrap_fragment(
+            fragment, "em-dash-title", "Em Dash Title Test", "em-dash-title.meta.xml"
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            out_dir = Path(tmp)
+            split_into_fragments(article, out_dir, "em-dash-title")
+
+            frag_dir = out_dir / "em-dash-title"
+            frag_names = sorted(f.name for f in frag_dir.iterdir())
+            self.assertEqual(
+                frag_names,
+                [
+                    "01-conclusion-reconciling-the-duality-a-spectrum-of-intent-and-context.xml",
+                    "02-second-section.xml",
+                ],
             )
 
 

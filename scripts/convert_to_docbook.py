@@ -16,6 +16,7 @@ from xml.sax.saxutils import escape as xml_escape
 # Everything else in this module keeps using ET.
 from lxml import etree
 from lxml import isoschematron
+from slugify import slugify as _slugify
 
 DB_NS = "http://docbook.org/ns/docbook"
 XI_NS = "http://www.w3.org/2001/XInclude"
@@ -112,9 +113,20 @@ def derive_subject(meta_path):
 
 
 def slugify(text):
-    text = text.strip().lower()
-    text = re.sub(r"[^\w\s-]", "", text)
-    text = re.sub(r"\s+", "-", text)
+    """URL/file-path/XML-id-safe slug: lowercase, hyphen-separated,
+    unicode-transliterated (python-slugify: converts a dash or other
+    punctuation to a "-" separator rather than deleting it outright,
+    fixing a real, already-committed word-jamming defect --
+    "Wisconsin–Madison" used to become "wisconsinmadison", not
+    "wisconsin-madison", because Python's unicode-aware \\w/\\s don't
+    match an em/en dash and it isn't a literal "-" either, so the old
+    hand-rolled regex deleted it with nothing left to mark the word
+    boundary). Two project-specific rules python-slugify has no
+    opinion about are kept on top of it: an empty result falls back to
+    the literal string "s", and a result starting with a digit gets an
+    "s-" prefix (both callers rely on the result being non-empty and
+    being a valid XML NCName, since it is used as an xml:id)."""
+    text = _slugify(text)
     if not text:
         return "s"
     if re.match(r"^[0-9]", text):

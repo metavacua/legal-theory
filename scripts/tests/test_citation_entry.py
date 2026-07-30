@@ -33,6 +33,32 @@ class TestDeriveEntryKey(unittest.TestCase):
         key = derive_entry_key("A Real Paper Title", href="/local/relative/path")
         self.assertEqual(key, "a-real-paper-title")
 
+    def test_em_dash_in_fallback_text_becomes_a_separator_not_deleted(self):
+        from citation_entry import derive_entry_key
+        key = derive_entry_key("University of Wisconsin–Madison")
+        self.assertEqual(key, "university-of-wisconsin-madison")
+
+    def test_em_dash_inside_href_host_or_tail_becomes_a_separator_not_deleted(self):
+        """host/tail come from the URL itself, not the display text --
+        exercised directly since no href in the real corpus happens to
+        contain a literal (unencoded) dash character (confirmed by a
+        direct corpus scan 2026-07-29), so this path isn't hit by any
+        real, already-committed data today, but it is real, reachable
+        code (slugify(f"{host}-{tail}")) that must not regress."""
+        from citation_entry import derive_entry_key
+        key = derive_entry_key("irrelevant display text", href="https://example.com/wisconsin–madison")
+        self.assertEqual(key, "example-wisconsin-madison")
+
+    def test_leading_digit_prefix_is_preserved_through_derive_entry_key(self):
+        """The "starts with a digit -> s- prefix" rule exists so a slug
+        is always a valid XML NCName (used as xml:id) -- this must keep
+        working through derive_entry_key(), not just through slugify()
+        in isolation, since derive_entry_key()'s result is what
+        actually becomes write_biblioentry()'s xml:id and file name."""
+        from citation_entry import derive_entry_key
+        key = derive_entry_key("2020 Annual Report")
+        self.assertEqual(key, "s-2020-annual-report")
+
 
 class TestWriteAndParseBiblioentry(unittest.TestCase):
     def setUp(self):
