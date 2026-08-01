@@ -7,6 +7,9 @@ from xml.etree import ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+DB_NS = "http://docbook.org/ns/docbook"
+XLINK_NS = "http://www.w3.org/1999/xlink"
+
 
 class _EntriesDirSandboxTestCase(unittest.TestCase):
     """Shared setup for tests that exercise build_entry_key_map: points
@@ -122,8 +125,8 @@ class TestConvertMarkersInFragment(unittest.TestCase):
         count = convert_markers_in_fragment(path, {1: "key-one", 2: "key-two"})
         self.assertEqual(count, 2)
         text = path.read_text(encoding="utf-8")
-        self.assertIn('parameters.<biblioref linkend="key-one"/>', text)
-        self.assertIn('dependencies.<biblioref linkend="key-two"/>', text)
+        self.assertIn('parameters.<biblioref linkend="key-one" />', text)
+        self.assertIn('dependencies.<biblioref linkend="key-two" />', text)
         ET.parse(path)  # still well-formed
 
     def test_marker_outside_key_map_is_left_untouched(self):
@@ -170,7 +173,7 @@ class TestConvertMarkersInFragment(unittest.TestCase):
         count = convert_markers_in_fragment(path, {3: "key-three"})
         self.assertEqual(count, 2)
         text = path.read_text(encoding="utf-8")
-        self.assertEqual(text.count('<biblioref linkend="key-three"/>'), 2)
+        self.assertEqual(text.count('<biblioref linkend="key-three" />'), 2)
 
     def test_marker_number_zero_is_never_converted(self):
         """build_entry_key_map's ordinals are always 1-based
@@ -206,7 +209,7 @@ class TestConvertMarkersInFragment(unittest.TestCase):
         )
         count = convert_markers_in_fragment(path, {100: "key-hundred"})
         self.assertEqual(count, 1)
-        self.assertIn('list.<biblioref linkend="key-hundred"/>', path.read_text(encoding="utf-8"))
+        self.assertIn('list.<biblioref linkend="key-hundred" />', path.read_text(encoding="utf-8"))
 
     def test_marker_inside_title_element_is_not_converted(self):
         """Bug-hunt case: unlike audit_footnote_links.py's
@@ -250,7 +253,7 @@ class TestConvertMarkersInFragment(unittest.TestCase):
         self.assertEqual(count, 1)
         text = path.read_text(encoding="utf-8")
         self.assertIn("<title>New Approach.5</title>", text)
-        self.assertIn('citation.<biblioref linkend="key-five"/>', text)
+        self.assertIn('citation.<biblioref linkend="key-five" />', text)
 
     def test_marker_after_inline_closing_tag_converts_correctly(self):
         """Checks the brief's stated 'known limitation' about
@@ -271,8 +274,266 @@ class TestConvertMarkersInFragment(unittest.TestCase):
         count = convert_markers_in_fragment(path, {1: "key-one"})
         self.assertEqual(count, 1)
         text = path.read_text(encoding="utf-8")
-        self.assertIn('<emphasis>word</emphasis>.<biblioref linkend="key-one"/>', text)
+        self.assertIn('<emphasis>word</emphasis>.<biblioref linkend="key-one" />', text)
         ET.parse(path)  # still well-formed
+
+
+class TestConvertMarkersInFragmentStructuralShapes(unittest.TestCase):
+    """Task 2: covers every real marker shape Task 1's corpus survey
+    found beyond the original glued "word.N" shape --
+    .superpowers/sdd/task-1-survey-findings.md is the spec these tests
+    encode. Reproduces the brief's own draft cases (bare space-
+    separated token, whole-cell) AND the findings that supersede the
+    brief's draft: em-dash-bounded bare-token, bracket-glued (no
+    period), the bare-token colon-boundary false-positive exclusion,
+    and whole-cell's non-universal safety (real data tables can
+    coincidentally collide with a valid key_map ordinal)."""
+
+    def _write(self, content):
+        out_dir = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, out_dir)
+        path = out_dir / "fragment.xml"
+        path.write_text(content, encoding="utf-8")
+        return path
+
+    def test_bare_space_separated_token_in_prose_converts(self):
+        # Reproduces the real miss from commit 8de2d12: "For instance,
+        # 58 describes a neural network layer" -- a bare digit token,
+        # not glued to a preceding word via ".".
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}">'
+            '<para>For instance, 58 describes a neural network layer.</para>'
+            '</section>'
+        )
+        converted = convert_markers_in_fragment(path, {58: "ntrs-categories_of_neural_networkspdf"})
+        self.assertEqual(converted, 1)
+        text = path.read_text(encoding="utf-8")
+        self.assertIn('<biblioref linkend="ntrs-categories_of_neural_networkspdf" />', text)
+        self.assertNotIn(">58<", text)
+
+    def test_whole_table_cell_bare_digit_converts_when_column_is_a_citation_column(self):
+        # Reproduces the real miss from commit 8de2d12: <entry>30</entry>
+        # where the cell's ENTIRE content is the bare marker digit --
+        # the real pilot table's own header ("Key Snippet(s) Example"),
+        # which is what makes this whole-cell candidate trustworthy
+        # under the new corroboration signal (see
+        # test_whole_cell_in_a_real_data_table_is_not_converted for the
+        # counter-case this signal exists to reject).
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}"><informaltable><tgroup cols="2"><tbody>'
+            '<row><entry>Component</entry><entry>Key Snippet(s) Example</entry></row>'
+            '<row><entry>Token Embedding</entry><entry>30</entry></row>'
+            '</tbody></tgroup></informaltable></section>'
+        )
+        converted = convert_markers_in_fragment(path, {30: "datacamp-how-transformers-work"})
+        self.assertEqual(converted, 1)
+        text = path.read_text(encoding="utf-8")
+        self.assertIn('<biblioref linkend="datacamp-how-transformers-work" />', text)
+
+    def test_whole_cell_in_a_real_data_table_is_not_converted(self):
+        # Task 1's survey found 2 of 9 documents with whole-cell
+        # candidates are real DATA tables, not citation-mapping
+        # tables: us-sex-crime-law-analysis.html's "General Age of
+        # Consent" column (ages 16/17/18) and tax-and-regulatory-
+        # thresholds-explained.html's "Dependents" column (0/1) -- both
+        # can coincidentally fall inside a valid key_map ordinal range.
+        # Neither column header contains a citation-apparatus keyword
+        # (source/citation/reference/snippet/research), so the
+        # corroboration check must reject them even though the digit
+        # is both whole-cell AND in key_map.
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}"><informaltable><tgroup cols="2"><tbody>'
+            '<row><entry>State</entry><entry>General Age of Consent</entry></row>'
+            '<row><entry>Alabama</entry><entry>16</entry></row>'
+            '</tbody></tgroup></informaltable></section>'
+        )
+        converted = convert_markers_in_fragment(path, {16: "some-unrelated-source"})
+        self.assertEqual(converted, 0)
+        text = path.read_text(encoding="utf-8")
+        self.assertNotIn("biblioref", text)
+        self.assertIn(">16<", text)
+
+    def test_whole_cell_standalone_paragraph_not_in_a_table_converts(self):
+        # Real corpus shape (patron-artist-collective-work-structure,
+        # fragment 07): a citation marker isolated as the ENTIRE content
+        # of its own <para>, not inside any table. No known false-
+        # positive shape exists for this outside a table cell (Task 1's
+        # survey found the safety problem only in table <entry>
+        # columns), so this converts on shape + key_map alone, same
+        # discipline as ordinary bare-token.
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}"><itemizedlist><listitem>'
+            '<para>Independent Trade: the worker is customarily engaged.</para>'
+            '<para>78</para>'
+            '</listitem></itemizedlist></section>'
+        )
+        converted = convert_markers_in_fragment(path, {78: "some-key"})
+        self.assertEqual(converted, 1)
+        text = path.read_text(encoding="utf-8")
+        self.assertIn('<biblioref linkend="some-key" />', text)
+
+    def test_ordinary_prose_number_not_in_key_map_is_left_untouched(self):
+        # A bare number in prose that ISN'T a real marker (e.g. "58
+        # percent of respondents") must not convert just because it's
+        # a bare token -- key_map membership is still the deciding
+        # factor, structural shape only changes HOW it's found.
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}">'
+            '<para>Roughly 58 percent of respondents agreed.</para>'
+            '</section>'
+        )
+        converted = convert_markers_in_fragment(path, {})  # empty key_map
+        self.assertEqual(converted, 0)
+        self.assertIn(">Roughly 58 percent", path.read_text(encoding="utf-8"))
+
+    def test_em_dash_bounded_bare_token_converts(self):
+        # Task 1 confirmed 5 real instances corpus-wide of a bare digit
+        # marker whose TRAILING boundary is an em dash (U+2014) glued
+        # directly on with no space, e.g. "...from being a business
+        # 12--making Prong C..." (systemic-misclassification-final.html).
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}">'
+            '<para>...from being a business 12—making Prong C difficult to satisfy.</para>'
+            '</section>'
+        )
+        converted = convert_markers_in_fragment(path, {12: "some-source"})
+        self.assertEqual(converted, 1)
+        text = path.read_text(encoding="utf-8")
+        self.assertIn('<biblioref linkend="some-source" />', text)
+        self.assertNotIn("12—", text)
+
+    def test_en_dash_bounded_digit_is_not_a_marker(self):
+        # Task 1's caveat: em-dash adjacency alone is NOT sufficient --
+        # an en dash (U+2013, a DIFFERENT character) bounds ordinary
+        # non-marker numbers too, e.g. "...has reached the age of
+        # 18--has the legal right..." must not convert even though 18
+        # is in key_map and superficially dash-adjacent.
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}">'
+            '<para>...has reached the age of 18–has the legal right to vote.</para>'
+            '</section>'
+        )
+        converted = convert_markers_in_fragment(path, {18: "some-source"})
+        self.assertEqual(converted, 0)
+        self.assertIn("18–has", path.read_text(encoding="utf-8"))
+
+    def test_bracket_glued_marker_converts(self):
+        # Task 1 confirmed 1 real instance (first-amendment-and-
+        # prostitution-law.html, fragment 06): a bare digit run glued
+        # directly onto a closing "]" immediately after an inline
+        # <emphasis> close tag, with NO period anywhere:
+        # "No [<emphasis>Arcara</emphasis>]32".
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}"><informaltable><tgroup cols="1"><tbody>'
+            '<row><entry>No [<emphasis>Arcara</emphasis>]32</entry></row>'
+            '</tbody></tgroup></informaltable></section>'
+        )
+        converted = convert_markers_in_fragment(path, {32: "arcara-v-cloud-books"})
+        self.assertEqual(converted, 1)
+        text = path.read_text(encoding="utf-8")
+        self.assertIn('<biblioref linkend="arcara-v-cloud-books" />', text)
+        self.assertNotIn(">32<", text)
+
+    def test_bare_token_immediately_followed_by_colon_is_not_converted(self):
+        # Task 1's real, quantified false-positive: 484 of 8,977
+        # bare-token candidates corpus-wide are "Label N:" section/list
+        # headers, e.g. "Trigger 1: Non-Patron Ownership Concentration:"
+        # (cooperative-tradeable-securities-research). The brief's draft
+        # trailing-boundary set (").,;:]") wrongly admits ":" -- a digit
+        # immediately followed by ":" must never be treated as a
+        # bare-token marker candidate.
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}">'
+            '<para><emphasis role="strong">Trigger 1: Non-Patron Ownership '
+            'Concentration:</emphasis> If patron activity falls below plan.</para>'
+            '</section>'
+        )
+        converted = convert_markers_in_fragment(path, {1: "some-source"})
+        self.assertEqual(converted, 0)
+        self.assertIn("Trigger 1:", path.read_text(encoding="utf-8"))
+
+    def test_clock_time_digit_followed_by_colon_and_digit_is_not_converted(self):
+        # Task 1's second colon-boundary sub-shape: clock times, ratios,
+        # timestamps, docket numbers -- e.g. "12:30 a.m. on an evening
+        # preceding a non-school day.24" (real corpus text, minors-
+        # operating-businesses-in-california). "12" must not convert
+        # even though it's in key_map; "24" (the real, correctly glued
+        # marker at the sentence's actual end) still converts normally.
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}">'
+            '<para>Curfew begins at 12:30 a.m. on an evening preceding a '
+            'non-school day.24</para>'
+            '</section>'
+        )
+        converted = convert_markers_in_fragment(path, {12: "wrong-clock-source", 24: "real-source"})
+        self.assertEqual(converted, 1)
+        text = path.read_text(encoding="utf-8")
+        self.assertIn("12:30", text)
+        self.assertIn('day.<biblioref linkend="real-source" />', text)
+
+    def test_marker_inside_link_element_text_is_not_converted(self):
+        # Task 1's largest single "other"-bucket category (5,870 of
+        # 14,705, 39.9%): digit runs inside <link> element text/tail --
+        # works-cited citation URLs/display text. Never markers, even
+        # when structurally bare-token-shaped and numerically in
+        # key_map's range. The production driver calls
+        # convert_markers_in_fragment BEFORE remove_works_cited_section
+        # (per docs/superpowers/sdd/2026-07-29-category-a-toolchain-
+        # verification-plan.md's Task 3 loop), so the works-cited
+        # section's own <link> elements are still present and must be
+        # excluded structurally, the same way <title> already is.
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}" xmlns:xlink="{XLINK_NS}">'
+            '<para>See <link xlink:href="https://example.com/report">Report 9</link> '
+            'for details.</para>'
+            '</section>'
+        )
+        converted = convert_markers_in_fragment(path, {9: "some-source"})
+        self.assertEqual(converted, 0)
+        self.assertIn("Report 9", path.read_text(encoding="utf-8"))
+
+    def test_marker_inside_works_cited_section_body_text_is_not_converted(self):
+        # Companion to the <link> exclusion above: the works-cited
+        # section's own listitem PROSE (not just its <link> children)
+        # is scanned too, since convert_markers_in_fragment runs on the
+        # works-cited fragment before remove_works_cited_section deletes
+        # it. A bare number in that prose (e.g. a volume number in a
+        # source citation) must not convert even if it happens to match
+        # a key_map ordinal.
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}" xml:id="conclusion">'
+            '<section xml:id="works-cited"><orderedlist numeration="arabic">'
+            '<listitem><para>Some Journal, Volume 9, 2025.</para></listitem>'
+            '</orderedlist></section>'
+            '</section>'
+        )
+        converted = convert_markers_in_fragment(path, {9: "some-source"})
+        self.assertEqual(converted, 0)
+        self.assertIn("Volume 9", path.read_text(encoding="utf-8"))
 
 
 class TestRemoveWorksCitedSection(unittest.TestCase):
