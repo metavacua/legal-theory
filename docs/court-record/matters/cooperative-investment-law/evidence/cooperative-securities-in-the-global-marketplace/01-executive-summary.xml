@@ -18,20 +18,20 @@
       Corporation Law provides the essential statutory exceptions that
       permit a hybrid governance model, allowing for a dual-class share
       structure that can accommodate both member-patrons and public
-      investors.1 At the federal level, the U.S. Securities and Exchange
+      investors.<biblioref linkend="hybrid-corporate-governance-synthesis" /> At the federal level, the U.S. Securities and Exchange
       Commission (SEC) has, through a series of no-action letters,
       established a critical precedent: cooperative shares that
       primarily serve a membership function and lack the traditional
       characteristics of an investment (such as profit-based dividends,
       transferability, and appreciation potential) are generally not
-      considered "securities" under federal law.2 This
+      considered "securities" under federal law.<biblioref linkend="ahclaw-cooperative-selling-shares" /> This
       distinction is paramount, as it provides the legal basis for
       creating a non-traded class of member shares exempt from SEC
       registration. Concurrently, the Internal Revenue Service (IRS)
       provides a distinct tax framework under Subchapter T, which treats
       the cooperative as a pass-through entity for patronage-sourced
-      income, a significant departure from standard corporate taxation.5
-    </para>
+      income, a significant departure from standard corporate taxation.<biblioref linkend="ncbarblog-tax-taxation-of-cooperatives-under-subchapter-t" />
+  </para>
   <para>
       The report then provides a detailed examination of the listing and
       governance requirements of the three primary U.S. securities
@@ -39,12 +39,12 @@
       Stock Market, and the OTC Markets Group. Each exchange has
       specific financial, public float, and corporate governance
       standards that a cooperative's publicly-traded security class must
-      meet.7 Crucially, both the NYSE and NASDAQ permit dual-class
+      meet.<biblioref linkend="resourcehub-principal-listing-and-maintenance-requirements-and-procedures" /> Crucially, both the NYSE and NASDAQ permit dual-class
       voting structures, which is the linchpin that makes the hybrid
-      cooperative model viable for a public listing.10 The OTC Markets
+      cooperative model viable for a public listing.<biblioref linkend="investopedia-dualclassstock-asp" /> The OTC Markets
       offer a more accessible, tiered alternative with less stringent,
-      though still significant, requirements.12
-    </para>
+      though still significant, requirements.<biblioref linkend="michaelbest-otc-markets-guide-michael-best-securities-team" />
+  </para>
   <para>
       Finally, the report addresses the international dimension. It
       clarifies that there is no single "international court
@@ -54,8 +54,8 @@
       exchanges. While principles from bodies like the International
       Co-operative Alliance inform the cooperative's ethos, legal
       compliance remains a jurisdiction-by-jurisdiction and
-      exchange-by-exchange undertaking.1
-    </para>
+      exchange-by-exchange undertaking.<biblioref linkend="hybrid-corporate-governance-synthesis" />
+  </para>
   <para>
       The conclusion is that a pathway for a publicly-traded cooperative
       exists but requires meticulous legal architecture. The entity must
@@ -64,4 +64,3 @@
       of its chosen trading venue.
     </para>
 </section>
-  

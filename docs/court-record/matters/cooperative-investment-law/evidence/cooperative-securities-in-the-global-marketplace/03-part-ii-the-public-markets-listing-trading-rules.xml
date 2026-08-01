@@ -29,8 +29,8 @@
             includes minimums for the number of public shareholders, the
             market value of publicly-held shares, and at least one of
             several financial tests related to earnings, cash flow, or
-            revenue.24
-          </para>
+            revenue.<biblioref linkend="corporatefinanceinstitute-dual-listing" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -40,22 +40,22 @@
             requirements for a majority-independent board of directors,
             fully independent audit, compensation, and nominating
             committees, and the adoption of comprehensive corporate
-            governance guidelines and a code of conduct.9 Companies
+            governance guidelines and a code of conduct.<biblioref linkend="assets-nysegovernancestandards-000-pdf" /> Companies
             listing in conjunction with an IPO are granted transition
-            periods to phase in these requirements.9
-          </para>
+            periods to phase in these requirements.<biblioref linkend="assets-nysegovernancestandards-000-pdf" />
+        </para>
       </listitem>
       <listitem>
         <para>
           <emphasis role="strong">Dual-Class Shares:</emphasis>
             Historically, the NYSE banned dual-class voting structures
             but reversed this policy in the 1980s due to competition
-            from other exchanges.10 Today, the NYSE permits companies to
+            from other exchanges.<biblioref linkend="investopedia-dualclassstock-asp" /> Today, the NYSE permits companies to
             list with dual-class share structures, which is essential
-            for the hybrid cooperative model.10 However, once listed, a
+            for the hybrid cooperative model.<biblioref linkend="investopedia-dualclassstock-asp" /> However, once listed, a
             company cannot take actions that would disparately reduce
-            the voting rights of an existing class of stock.27
-          </para>
+            the voting rights of an existing class of stock.<biblioref linkend="congress-if11992" />
+        </para>
       </listitem>
     </itemizedlist>
   </section>
@@ -77,32 +77,32 @@
             NASDAQ tier has its own set of initial and continued listing
             requirements, including minimum bid price, number of
             publicly held shares, market value of public float, and
-            shareholder equity.7 The Global Select Market has the most
-            rigorous standards, comparable to the NYSE.7
-          </para>
+            shareholder equity.<biblioref linkend="resourcehub-principal-listing-and-maintenance-requirements-and-procedures" /> The Global Select Market has the most
+            rigorous standards, comparable to the NYSE.<biblioref linkend="resourcehub-principal-listing-and-maintenance-requirements-and-procedures" />
+        </para>
       </listitem>
       <listitem>
         <para>
           <emphasis role="strong">Corporate Governance:</emphasis> The
-            NASDAQ Rule 5600 Series governs corporate governance.30 Like
+            NASDAQ Rule 5600 Series governs corporate governance.<biblioref linkend="listingcenter-nasdaq-205600-20series" /> Like
             the NYSE, it mandates a majority-independent board and
             independent audit, compensation, and nomination
-            committees.31 It also requires shareholder approval for
+            committees.<biblioref linkend="listingcenter-nasdaq-5600-series" /> It also requires shareholder approval for
             certain stock issuances and the adoption of a code of
-            conduct.28
-          </para>
+            conduct.<biblioref linkend="listingcenter-continuedguide-pdf" />
+        </para>
       </listitem>
       <listitem>
         <para>
           <emphasis role="strong">Dual-Class Shares and
             Cooperatives:</emphasis> NASDAQ's Voting Rights Rule (Rule
             5640) generally permits dual-class structures at the time of
-            an IPO.11 This makes it a viable venue for a hybrid
-            cooperative. Significantly, NASDAQ Listing Rule 5615(a)(2)
+            an IPO.<biblioref linkend="listingcenter-viewpdf-aspx-material-search-aspx-mcd-lq-cid-69-years-201720162015" /> This makes it a viable venue for a hybrid
+            cooperative. Significantly, NASDAQ Listing Rule 5615(a)(<biblioref linkend="ahclaw-cooperative-selling-shares" />)
             provides an explicit exemption for "Cooperatives"
             from the corporate governance rules related to board
             independence and independent committees, recognizing their
-            unique member-driven governance structure.33 This exemption
+            unique member-driven governance structure.<biblioref linkend="sec-34-86072-ex5-pdf" /> This exemption
             could provide substantial flexibility for a listed hybrid
             cooperative.
           </para>
@@ -133,8 +133,8 @@
             is the highest tier. Companies must meet stringent financial
             standards, be current in their disclosure, and undergo a
             qualitative review. They are explicitly forbidden from being
-            penny stocks or shell companies.12
-          </para>
+            penny stocks or shell companies.<biblioref linkend="michaelbest-otc-markets-guide-michael-best-securities-team" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -143,16 +143,16 @@
             development-stage companies. Companies must be current in
             their reporting, have a minimum bid price of $0.01, and
             undergo an annual verification and management certification
-            process.35
-          </para>
+            process.<biblioref linkend="otcmarkets-otcqb-standards-v3-3-2-22-2020-redline-pdf" />
+        </para>
       </listitem>
       <listitem>
         <para>
           <emphasis role="strong">Pink® Open Market:</emphasis> This
             tier has no financial standards or disclosure requirements.
             It is an open marketplace for brokers to trade a wide
-            spectrum of securities.12
-          </para>
+            spectrum of securities.<biblioref linkend="michaelbest-otc-markets-guide-michael-best-securities-team" />
+        </para>
       </listitem>
     </itemizedlist>
     <itemizedlist spacing="compact">
@@ -164,8 +164,8 @@
             Reporting Standard." These rules require at least two
             independent directors and an audit committee with a majority
             of independent directors, though these are less prescriptive
-            than NYSE or NASDAQ rules.12
-          </para>
+            than NYSE or NASDAQ rules.<biblioref linkend="michaelbest-otc-markets-guide-michael-best-securities-team" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -174,8 +174,8 @@
             or OTCQB, could serve as a more accessible entry point for a
             hybrid cooperative's Class B shares, with lower financial
             thresholds and less burdensome governance rules than the
-            major exchanges.8
-          </para>
+            major exchanges.<biblioref linkend="colonialstock-otc-listings-htm" />
+        </para>
       </listitem>
     </itemizedlist>
   </section>
@@ -189,13 +189,12 @@
         self-regulatory organization that oversees broker-dealers in the
         United States. Its role is not to approve the issuance of
         securities but to regulate their trading and the conduct of its
-        member firms.38 For a cooperative security trading on the OTC
+        member firms.<biblioref linkend="finra-sie-content-outline-pdf" /> For a cooperative security trading on the OTC
         markets, FINRA rules would govern how brokers handle and report
         trades (Rule 6600 series) and would prohibit manipulative
-        practices like trading ahead of customer orders (Rule 5320).39
+        practices like trading ahead of customer orders (Rule 5320).<biblioref linkend="finra-6610" />
         FINRA also has the authority to halt trading in an OTC security
-        under extraordinary circumstances to protect investors.41
-      </para>
+        under extraordinary circumstances to protect investors.<biblioref linkend="finra-6440-0" />
+    </para>
   </section>
 </section>
-  
