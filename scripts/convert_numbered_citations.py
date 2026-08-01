@@ -302,7 +302,15 @@ def convert_markers_in_fragment(fragment_path, key_map):
 
       - glued: immediately preceded by a single "." with no
         intervening space (e.g. "parameters.1") -- the original,
-        already-verified shape, trusted on shape + key_map alone.
+        already-verified shape, trusted on shape + key_map alone. A
+        digit run preceded by "..." (an ellipsis) is NEVER treated as
+        this shape -- a real footnote marker's "." is sentence-final
+        or citation-terminal, never part of an ellipsis. No real
+        corpus instance of a 1-3 digit run glued directly onto an
+        ellipsis was found (grepped every docs/**/*.xml document for
+        the pattern: zero hits), so this exclusion is currently a
+        no-op in practice, but it guards against a future ellipsis-
+        adjacent number being misread as a citation marker.
       - whole-cell: the digit run is the WHOLE, exact text content of
         its containing element (nothing precedes or follows it there,
         and nothing else in the element's full text either). NOT

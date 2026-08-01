@@ -450,6 +450,28 @@ class TestConvertMarkersInFragmentStructuralShapes(unittest.TestCase):
         self.assertIn('<biblioref linkend="arcara-v-cloud-books" />', text)
         self.assertNotIn(">32<", text)
 
+    def test_ellipsis_glued_digit_is_not_converted(self):
+        # A digit immediately after "..." must NOT be treated as the
+        # glued shape's "." boundary -- an ellipsis's final "." is not
+        # a sentence-final or citation-terminal period. Confirmed zero
+        # real corpus instances of "...N" exist today (grepped every
+        # docs/**/*.xml for \.\.\.\d{1,3}(?=\s|$|<)), but the exclusion
+        # guards against a future ellipsis-adjacent number being
+        # misread as a marker, even when the number is a valid
+        # key_map ordinal.
+        from convert_numbered_citations import convert_markers_in_fragment
+        path = self._write(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<section xmlns="{DB_NS}">'
+            '<para>The pattern continued...58 more times.</para>'
+            '</section>'
+        )
+        converted = convert_markers_in_fragment(path, {58: "some-source"})
+        self.assertEqual(converted, 0)
+        text = path.read_text(encoding="utf-8")
+        self.assertNotIn("biblioref", text)
+        self.assertIn("continued...58 more times", text)
+
     def test_bare_token_immediately_followed_by_colon_is_not_converted(self):
         # Task 1's real, quantified false-positive: 484 of 8,977
         # bare-token candidates corpus-wide are "Label N:" section/list
