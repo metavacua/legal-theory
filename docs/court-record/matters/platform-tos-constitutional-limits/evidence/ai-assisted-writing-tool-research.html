@@ -1,79 +1,94 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>The Scribe: An Architectural Blueprint for a Next-Generation Creative Writing Platform</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"/></head><body><section lang="en" xml:lang="en" class="article" id="ai-assisted-writing-tool-research"><div class="titlepage"><div><div><h1 class="title">The Scribe: An Architectural Blueprint for a Next-Generation Creative Writing Platform</h1></div><div><div class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Ian</span> <span class="othername">D.L.N.</span> <span class="surname">McLean</span></h3><code class="email">&lt;<a class="email" href="mailto:metavacua@gmail.com">metavacua@gmail.com</a>&gt;</code></div></div></div><div><div class="legalnotice" id="id1337"><p>Copyright © 2026 Ian D.L.N. McLean. Licensed under <a class="link" href="https://spdx.org/licenses/CC-BY-SA-4.0" target="_top">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>. This document publishes general legal analysis and does not constitute legal advice.</p></div></div><div><p class="pubdate">2026-07-25</p></div></div><hr/></div><div class="toc"><div class="toc-title">Table of Contents</div><ul class="toc"><li><span class="section"><a href="#the-contemporary-creative-writing-toolset-a-critical-analysis">
-    <span class="strong"><strong>The Contemporary Creative Writing
-    Toolset: A Critical Analysis</strong></span>
-  </a></span><ul><li><span class="section"><a href="#scrivener-the-digital-ring-binder-paradigm">
-      <span class="strong"><strong>Scrivener: The Digital Ring-Binder
-      Paradigm</strong></span>
-    </a></span></li><li><span class="section"><a href="#world-anvil-the-worldbuilders-wiki">
-      <span class="strong"><strong>World Anvil: The Worldbuilder's
-      Wiki</strong></span>
-    </a></span></li><li><span class="section"><a href="#campfire-the-modular-storytelling-suite">
-      <span class="strong"><strong>Campfire: The Modular Storytelling
-      Suite</strong></span>
-    </a></span></li><li><span class="section"><a href="#the-architectural-chasm-in-the-market">
-      <span class="strong"><strong>The Architectural Chasm in the
-      Market</strong></span>
-    </a></span></li><li><span class="section"><a href="#table-1-competitive-analysis-matrix">
-      <span class="strong"><strong>Table 1: Competitive Analysis
-      Matrix</strong></span>
-    </a></span></li></ul></li><li><span class="section"><a href="#architecting-the-narrative-core-a-unified-data-model-for-the-scribe">
-    <span class="strong"><strong>Architecting the Narrative Core: A
-    Unified Data Model for 'The Scribe'</strong></span>
-  </a></span><ul><li><span class="section"><a href="#rationale-for-yaml-human-readability-and-machine-parsability">
-      <span class="strong"><strong>Rationale for YAML:
-      Human-Readability and Machine-Parsability</strong></span>
-    </a></span></li><li><span class="section"><a href="#foundational-schemas-defining-the-narrative-primitives">
-      <span class="strong"><strong>Foundational Schemas: Defining the
-      Narrative Primitives</strong></span>
-    </a></span></li><li><span class="section"><a href="#codifying-narrative-structures-as-schemas">
-      <span class="strong"><strong>Codifying Narrative Structures as
-      Schemas</strong></span>
-    </a></span></li><li><span class="section"><a href="#table-2-narrative-structure-schema-mapping-save-the-cat-example">
-      <span class="strong"><strong>Table 2: Narrative Structure Schema
-      Mapping (Save the Cat! Example)</strong></span>
-    </a></span></li></ul></li><li><span class="section"><a href="#beyond-save-as-implementing-true-version-control-for-storytelling">
-    <span class="strong"><strong>Beyond 'Save As': Implementing True
-    Version Control for Storytelling</strong></span>
-  </a></span><ul><li><span class="section"><a href="#abstracting-git-a-writer-centric-user-experience">
-      <span class="strong"><strong>Abstracting Git: A Writer-Centric
-      User Experience</strong></span>
-    </a></span></li><li><span class="section"><a href="#the-narrative-integrity-pipeline-cicd-for-fiction">
-      <span class="strong"><strong>The Narrative Integrity Pipeline:
-      CI/CD for Fiction</strong></span>
-    </a></span></li></ul></li><li><span class="section"><a href="#the-ai-co-author-principled-integration-of-generative-assistance">
-    <span class="strong"><strong>The AI Co-Author: Principled
-    Integration of Generative Assistance</strong></span>
-  </a></span><ul><li><span class="section"><a href="#the-legal-framework-human-authorship-in-the-age-of-ai">
-      <span class="strong"><strong>The Legal Framework: Human
-      Authorship in the Age of AI</strong></span>
-    </a></span></li><li><span class="section"><a href="#prompt-engineering-with-structured-data">
-      <span class="strong"><strong>Prompt Engineering with Structured
-      Data</strong></span>
-    </a></span></li><li><span class="section"><a href="#proposed-ai-features">
-      <span class="strong"><strong>Proposed AI
-      Features</strong></span>
-    </a></span></li><li><span class="section"><a href="#table-3-ai-feature-implementation-and-copyright-compliance">
-      <span class="strong"><strong>Table 3: AI Feature Implementation
-      and Copyright Compliance</strong></span>
-    </a></span></li></ul></li><li><span class="section"><a href="#synthesizing-the-scribe-a-blueprint-for-development">
-    <span class="strong"><strong>Synthesizing 'The Scribe': A
-    Blueprint for Development</strong></span>
-  </a></span><ul><li><span class="section"><a href="#the-core-vision-an-ide-for-storytellers">
-      <span class="strong"><strong>The Core Vision: An IDE for
-      Storytellers</strong></span>
-    </a></span></li><li><span class="section"><a href="#high-level-system-architecture">
-      <span class="strong"><strong>High-Level System
-      Architecture</strong></span>
-    </a></span></li><li><span class="section"><a href="#strategic-development-roadmap">
-      <span class="strong"><strong>Strategic Development
-      Roadmap</strong></span>
-    </a></span></li><li><span class="section"><a href="#conclusion-building-the-future-of-creative-tooling">
-      <span class="strong"><strong>Conclusion: Building the Future of
-      Creative Tooling</strong></span>
-    </a></span></li></ul></li></ul></div><section class="section" id="the-contemporary-creative-writing-toolset-a-critical-analysis"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
-    <span class="strong"><strong>The Contemporary Creative Writing
-    Toolset: A Critical Analysis</strong></span>
-  </h2></div></div></div><p>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script><title>The Scribe: An Architectural Blueprint for a Next-Generation Creative Writing Platform</title><meta name="keywords" content="legal matter: platform tos constitutional limits"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link href="https://purl.org/dc/elements/1.1/" rel="schema.dc"/><meta name="dc.modified" content="2026-08-01T11:11:21Z"/><meta name="dc.created" content="2026-07-25"/><meta name="generator" content="DocBook xslTNG version 2.7.1 / 43e25a0b / SAXON HE 12.9"/><link href="./css/docbook.css" rel="stylesheet" media="screen"/></head><body class="home"><nav class="top"></nav><main><article id="ai-assisted-writing-tool-research" lang="en" class="article component"><header><h1>The Scribe: An Architectural Blueprint for a Next-Generation Creative Writing Platform</h1><div class="authorgroup"><div class="author"><h3><span class="first-last personname"><span class="firstname">Ian</span> <span class="middle othername">D.L.N.</span> <span class="surname">McLean</span></span></h3></div></div><p class="pubdate"><time class="pubdate" datetime="2026-07-25">25 Jul 2026</time></p><div lang="" class="legalnotice">
+  <p>Copyright © 2026 Ian D.L.N. McLean. Licensed under <a href="https://spdx.org/licenses/CC-BY-SA-4.0" class="link">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>. This document publishes general legal analysis and does not constitute legal advice.</p>
+</div></header><div class="list-of-titles"><div class="lot toc"><div class="title">Table of Contents</div><ul class="toc"><li><a href="#the-contemporary-creative-writing-toolset-a-critical-analysis"><span class="label">1</span><span class="sep">. </span>
+    <strong class="strong">The Contemporary Creative Writing
+    Toolset: A Critical Analysis</strong>
+  </a><ul class="toc"><li><a href="#scrivener-the-digital-ring-binder-paradigm"><span class="label">1<span class="sep">.</span>1</span><span class="sep">. </span>
+      <strong class="strong">Scrivener: The Digital Ring-Binder
+      Paradigm</strong>
+    </a></li><li><a href="#world-anvil-the-worldbuilders-wiki"><span class="label">1<span class="sep">.</span>2</span><span class="sep">. </span>
+      <strong class="strong">World Anvil: The Worldbuilder's
+      Wiki</strong>
+    </a></li><li><a href="#campfire-the-modular-storytelling-suite"><span class="label">1<span class="sep">.</span>3</span><span class="sep">. </span>
+      <strong class="strong">Campfire: The Modular Storytelling
+      Suite</strong>
+    </a></li><li><a href="#the-architectural-chasm-in-the-market"><span class="label">1<span class="sep">.</span>4</span><span class="sep">. </span>
+      <strong class="strong">The Architectural Chasm in the
+      Market</strong>
+    </a></li><li><a href="#table-1-competitive-analysis-matrix"><span class="label">1<span class="sep">.</span>5</span><span class="sep">. </span>
+      <strong class="strong">Table 1: Competitive Analysis
+      Matrix</strong>
+    </a></li></ul></li><li><a href="#architecting-the-narrative-core-a-unified-data-model-for-the-scribe"><span class="label">2</span><span class="sep">. </span>
+    <strong class="strong">Architecting the Narrative Core: A
+    Unified Data Model for 'The Scribe'</strong>
+  </a><ul class="toc"><li><a href="#rationale-for-yaml-human-readability-and-machine-parsability"><span class="label">2<span class="sep">.</span>1</span><span class="sep">. </span>
+      <strong class="strong">Rationale for YAML:
+      Human-Readability and Machine-Parsability</strong>
+    </a></li><li><a href="#foundational-schemas-defining-the-narrative-primitives"><span class="label">2<span class="sep">.</span>2</span><span class="sep">. </span>
+      <strong class="strong">Foundational Schemas: Defining the
+      Narrative Primitives</strong>
+    </a><ul class="toc"><li><a href="#example-character-schema"><span class="label">2<span class="sep">.</span>2<span class="sep">.</span>1</span><span class="sep">. </span>
+        <strong class="strong">Example Character
+        Schema</strong>
+      </a></li><li><a href="#example-scene-schema"><span class="label">2<span class="sep">.</span>2<span class="sep">.</span>2</span><span class="sep">. </span>
+        <strong class="strong">Example Scene
+        Schema</strong>
+      </a></li></ul></li><li><a href="#codifying-narrative-structures-as-schemas"><span class="label">2<span class="sep">.</span>3</span><span class="sep">. </span>
+      <strong class="strong">Codifying Narrative Structures as
+      Schemas</strong>
+    </a></li><li><a href="#table-2-narrative-structure-schema-mapping-save-the-cat-example"><span class="label">2<span class="sep">.</span>4</span><span class="sep">. </span>
+      <strong class="strong">Table 2: Narrative Structure Schema
+      Mapping (Save the Cat! Example)</strong>
+    </a></li></ul></li><li><a href="#beyond-save-as-implementing-true-version-control-for-storytelling"><span class="label">3</span><span class="sep">. </span>
+    <strong class="strong">Beyond 'Save As': Implementing True
+    Version Control for Storytelling</strong>
+  </a><ul class="toc"><li><a href="#abstracting-git-a-writer-centric-user-experience"><span class="label">3<span class="sep">.</span>1</span><span class="sep">. </span>
+      <strong class="strong">Abstracting Git: A Writer-Centric
+      User Experience</strong>
+    </a></li><li><a href="#the-narrative-integrity-pipeline-cicd-for-fiction"><span class="label">3<span class="sep">.</span>2</span><span class="sep">. </span>
+      <strong class="strong">The Narrative Integrity Pipeline:
+      CI/CD for Fiction</strong>
+    </a></li></ul></li><li><a href="#the-ai-co-author-principled-integration-of-generative-assistance"><span class="label">4</span><span class="sep">. </span>
+    <strong class="strong">The AI Co-Author: Principled
+    Integration of Generative Assistance</strong>
+  </a><ul class="toc"><li><a href="#the-legal-framework-human-authorship-in-the-age-of-ai"><span class="label">4<span class="sep">.</span>1</span><span class="sep">. </span>
+      <strong class="strong">The Legal Framework: Human
+      Authorship in the Age of AI</strong>
+    </a></li><li><a href="#prompt-engineering-with-structured-data"><span class="label">4<span class="sep">.</span>2</span><span class="sep">. </span>
+      <strong class="strong">Prompt Engineering with Structured
+      Data</strong>
+    </a><ul class="toc"><li><a href="#example-prompt-template"><span class="label">4<span class="sep">.</span>2<span class="sep">.</span>1</span><span class="sep">. </span>
+        <strong class="strong">Example Prompt
+        Template</strong>
+      </a></li></ul></li><li><a href="#proposed-ai-features"><span class="label">4<span class="sep">.</span>3</span><span class="sep">. </span>
+      <strong class="strong">Proposed AI
+      Features</strong>
+    </a></li><li><a href="#table-3-ai-feature-implementation-and-copyright-compliance"><span class="label">4<span class="sep">.</span>4</span><span class="sep">. </span>
+      <strong class="strong">Table 3: AI Feature Implementation
+      and Copyright Compliance</strong>
+    </a></li></ul></li><li><a href="#synthesizing-the-scribe-a-blueprint-for-development"><span class="label">5</span><span class="sep">. </span>
+    <strong class="strong">Synthesizing 'The Scribe': A
+    Blueprint for Development</strong>
+  </a><ul class="toc"><li><a href="#the-core-vision-an-ide-for-storytellers"><span class="label">5<span class="sep">.</span>1</span><span class="sep">. </span>
+      <strong class="strong">The Core Vision: An IDE for
+      Storytellers</strong>
+    </a></li><li><a href="#high-level-system-architecture"><span class="label">5<span class="sep">.</span>2</span><span class="sep">. </span>
+      <strong class="strong">High-Level System
+      Architecture</strong>
+    </a></li><li><a href="#strategic-development-roadmap"><span class="label">5<span class="sep">.</span>3</span><span class="sep">. </span>
+      <strong class="strong">Strategic Development
+      Roadmap</strong>
+    </a></li><li><a href="#conclusion-building-the-future-of-creative-tooling"><span class="label">5<span class="sep">.</span>4</span><span class="sep">. </span>
+      <strong class="strong">Conclusion: Building the Future of
+      Creative Tooling</strong>
+    </a><ul class="toc"><li><a href="#works-cited"><span class="label">5<span class="sep">.</span>4<span class="sep">.</span>1</span><span class="sep">. </span>
+        <strong class="strong">Works cited</strong>
+      </a></li></ul></li></ul></li></ul></div></div><section lang="" id="the-contemporary-creative-writing-toolset-a-critical-analysis" class="section"><header><h2><span class="label">1</span><span class="sep">. </span>
+    <strong class="strong">The Contemporary Creative Writing
+    Toolset: A Critical Analysis</strong>
+  </h2></header>
+  
+  <p>
       An examination of the current market for creative writing software
       reveals a landscape dominated by tools whose architectural
       foundations predate the modern requirements of collaborative,
@@ -85,10 +100,13 @@
       architectural chasm in the market—a gap that a purpose-built,
       next-generation tool like 'The Scribe' is uniquely positioned to
       fill.
-    </p><section class="section" id="scrivener-the-digital-ring-binder-paradigm"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Scrivener: The Digital Ring-Binder
-      Paradigm</strong></span>
-    </h3></div></div></div><p>
+    </p>
+  <section id="scrivener-the-digital-ring-binder-paradigm" class="section"><header><h3><span class="label">1<span class="sep">.</span>1</span><span class="sep">. </span>
+      <strong class="strong">Scrivener: The Digital Ring-Binder
+      Paradigm</strong>
+    </h3></header>
+    
+    <p>
         Scrivener's enduring popularity stems from its powerful
         organizational metaphor: a digital ring-binder combined with a
         scrapbook and typewriter.1 This paradigm is tailored for
@@ -97,7 +115,8 @@
         corkboard or outliner, and then seamlessly compile them into a
         single document.1 This approach excels for the solo author
         managing a complex but singular narrative thread.
-      </p><p>
+      </p>
+    <p>
         However, the very architecture that enables this experience is
         also its greatest liability. A Scrivener project is not a simple
         document but a complex package of interconnected files,
@@ -111,7 +130,8 @@
         format, even minor textual edits can result in large,
         indecipherable changes in the underlying file, rendering Git's
         powerful
-      </p><p>
+      </p>
+    <p>
         diff and merge capabilities useless.2 This structural
         incompatibility makes true collaborative writing, where multiple
         authors work on the same project files, fundamentally
@@ -119,7 +139,8 @@
         sections to external formats like Microsoft Word, working with
         an editor, and then manually reintegrating changes, a cumbersome
         process that fractures the creative environment.5
-      </p><p>
+      </p>
+    <p>
         Furthermore, Scrivener's architecture offers no pathway for deep
         AI integration. The software itself contains no artificial
         intelligence capabilities and does not engage in data scraping.7
@@ -129,10 +150,14 @@
         provider.7 This hands-off approach underscores its inability to
         leverage a project's rich narrative data for intelligent,
         context-aware assistance.
-      </p></section><section class="section" id="world-anvil-the-worldbuilders-wiki"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>World Anvil: The Worldbuilder's
-      Wiki</strong></span>
-    </h3></div></div></div><p>
+      </p>
+  </section>
+  <section id="world-anvil-the-worldbuilders-wiki" class="section"><header><h3><span class="label">1<span class="sep">.</span>2</span><span class="sep">. </span>
+      <strong class="strong">World Anvil: The Worldbuilder's
+      Wiki</strong>
+    </h3></header>
+    
+    <p>
         World Anvil occupies a different niche, positioning itself as
         the definitive "Ultimate Worldbuilding Toolset &amp; RPG
         Campaign Manager".8 Its architectural philosophy is that of
@@ -142,7 +167,8 @@
         and cross-linking capabilities.10 This taxonomic approach is
         exceptionally powerful for managing the vast, intricate details
         of fantasy and science-fiction worlds.
-      </p><p>
+      </p>
+    <p>
         This reliance on a traditional, monolithic database structure,
         however, has created a critical and self-acknowledged
         architectural dead end. The World Anvil development team has
@@ -162,10 +188,14 @@
         feasible when architected correctly from the outset.12 World
         Anvil's inability to evolve in this direction is a direct
         consequence of its foundational design choices.
-      </p></section><section class="section" id="campfire-the-modular-storytelling-suite"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Campfire: The Modular Storytelling
-      Suite</strong></span>
-    </h3></div></div></div><p>
+      </p>
+  </section>
+  <section id="campfire-the-modular-storytelling-suite" class="section"><header><h3><span class="label">1<span class="sep">.</span>3</span><span class="sep">. </span>
+      <strong class="strong">Campfire: The Modular Storytelling
+      Suite</strong>
+    </h3></header>
+    
+    <p>
         Campfire represents a more modern, web-first architectural
         approach, offering its functionality as a suite of discrete,
         interoperable modules.13 Users can subscribe to or purchase
@@ -174,7 +204,8 @@
         carte model provides significant flexibility and is built on a
         cloud-native foundation using Google's servers, which
         facilitates real-time collaboration.15
-      </p><p>
+      </p>
+    <p>
         Despite its modern architecture, Campfire's approach to version
         control appears to be a feature addition rather than a
         foundational principle. Only recently did the platform introduce
@@ -192,10 +223,14 @@
         marketplace confusion with unaffiliated AI companies of the same
         name, the Campfire writing software itself shows no evidence of
         offering generative AI features for prose or content creation.18
-      </p></section><section class="section" id="the-architectural-chasm-in-the-market"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>The Architectural Chasm in the
-      Market</strong></span>
-    </h3></div></div></div><p>
+      </p>
+  </section>
+  <section id="the-architectural-chasm-in-the-market" class="section"><header><h3><span class="label">1<span class="sep">.</span>4</span><span class="sep">. </span>
+      <strong class="strong">The Architectural Chasm in the
+      Market</strong>
+    </h3></header>
+    
+    <p>
         The analysis of these leading tools reveals a universal weakness
         rooted in their foundational architecture. None were built on a
         data model of version-control-friendly, plain-text files.
@@ -208,7 +243,8 @@
         systemic limitation stemming from core design decisions made
         years ago, trapping these platforms in a paradigm that 'The
         Scribe' can be explicitly designed to overcome.
-      </p><p>
+      </p>
+    <p>
         Simultaneously, while the underlying technology of Git is
         perfectly suited for managing plain-text writing projects, its
         user experience presents a formidable barrier to its target
@@ -223,83 +259,99 @@
         only adopt a Git-based backend but, more importantly, design a
         new user interface that translates version control concepts into
         intuitive, narrative-centric actions.
-      </p></section><section class="section" id="table-1-competitive-analysis-matrix"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Table 1: Competitive Analysis
-      Matrix</strong></span>
-    </h3></div></div></div><div class="informaltable"><table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; "><colgroup><col style="text-align: center; "/><col style="text-align: center; "/><col style="text-align: center; "/><col style="text-align: center; "/><col style="text-align: center; "/></colgroup><tbody><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+      </p>
+  </section>
+  <section id="table-1-competitive-analysis-matrix" class="section"><header><h3><span class="label">1<span class="sep">.</span>5</span><span class="sep">. </span>
+      <strong class="strong">Table 1: Competitive Analysis
+      Matrix</strong>
+    </h3></header>
+    
+    <div id="table-1-competitive-analysis-matrix_informaltable1" class="informalobject informaltable"><table><tbody>
+          <tr><td class="center">
                 Feature Dimension
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Scrivener
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 World Anvil
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Campfire
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 The Scribe (Proposed)
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Data Model</strong></span>
-            </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Data Model</strong>
+            </td><td class="center">
                 Proprietary package (RTF, XML)
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Web-based relational database
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Cloud-hosted modular database
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Local-first, plain-text (YAML, Markdown)
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Version Control</strong></span>
-            </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Version Control</strong>
+            </td><td class="center">
                 None (Incompatible with Git)
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 None (Architecturally infeasible)
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Limited (Manuscript-only history)
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Foundational (Git-based, project-wide)
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Collaboration</strong></span>
-            </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Collaboration</strong>
+            </td><td class="center">
                 Poor (Requires export/import)
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Good (Web-based co-editing)
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Good (Web-based collaboration)
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Excellent (Branching, merging, reviews)
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>AI Integration</strong></span>
-            </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">AI Integration</strong>
+            </td><td class="center">
                 None (OS-level pass-through only)
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 None
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 None
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Principled &amp; Deep (Via structured data)
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Extensibility</strong></span>
-            </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Extensibility</strong>
+            </td><td class="center">
                 Low (Closed format)
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Low (Proprietary platform)
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Low (Proprietary platform)
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 High (Open, plain-text format)
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; ">
-              <span class="strong"><strong>Platform</strong></span>
-            </td><td style="text-align: center; border-right: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Platform</strong>
+            </td><td class="center">
                 Desktop-only (macOS, Windows, iOS)
-              </td><td style="text-align: center; border-right: 1px solid ; ">
+              </td><td class="center">
                 Web-only
-              </td><td style="text-align: center; border-right: 1px solid ; ">
+              </td><td class="center">
                 Web, Desktop, Mobile
-              </td><td style="text-align: center; ">
+              </td><td class="center">
                 Web, Desktop (local-first sync)
-              </td></tr></tbody></table></div></section></section><section class="section" id="architecting-the-narrative-core-a-unified-data-model-for-the-scribe"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
-    <span class="strong"><strong>Architecting the Narrative Core: A
-    Unified Data Model for 'The Scribe'</strong></span>
-  </h2></div></div></div><p>
+              </td></tr>
+        </tbody></table></div>
+  </section>
+</section><section lang="" id="architecting-the-narrative-core-a-unified-data-model-for-the-scribe" class="section"><header><h2><span class="label">2</span><span class="sep">. </span>
+    <strong class="strong">Architecting the Narrative Core: A
+    Unified Data Model for 'The Scribe'</strong>
+  </h2></header>
+  
+  <p>
       To overcome the architectural limitations of existing tools, 'The
       Scribe' must be built upon a data model that is inherently
       version-control-friendly, human-readable, and machine-parsable.
@@ -309,10 +361,13 @@
       but also enables a new paradigm of "semantic editing,"
       where the tool actively understands and assists in the structuring
       of the narrative itself.
-    </p><section class="section" id="rationale-for-yaml-human-readability-and-machine-parsability"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Rationale for YAML:
-      Human-Readability and Machine-Parsability</strong></span>
-    </h3></div></div></div><p>
+    </p>
+  <section id="rationale-for-yaml-human-readability-and-machine-parsability" class="section"><header><h3><span class="label">2<span class="sep">.</span>1</span><span class="sep">. </span>
+      <strong class="strong">Rationale for YAML:
+      Human-Readability and Machine-Parsability</strong>
+    </h3></header>
+    
+    <p>
         YAML (a recursive acronym for "YAML Ain't Markup
         Language") is a data serialization language designed
         explicitly for human readability.27 Its syntax relies on clean,
@@ -321,7 +376,8 @@
         formats.27 As a strict superset of JSON, any valid JSON file is
         also a valid YAML file, ensuring broad compatibility while
         offering a more approachable authoring experience.27
-      </p><p>
+      </p>
+    <p>
         The core of the data model will be constructed using YAML's
         three primary node types: mappings (key-value pairs), sequences
         (lists), and scalars (strings, numbers, booleans).27 Most
@@ -329,15 +385,20 @@
         suited for version control systems like Git. Changes can be
         tracked on a line-by-line basis, enabling the clear,
         intelligible
-      </p><p>
+      </p>
+    <p>
         diffs and intelligent merges that are impossible with the
         proprietary formats used by competitors.4 This foundational
         choice directly addresses the principal failing identified in
         the competitive analysis.
-      </p></section><section class="section" id="foundational-schemas-defining-the-narrative-primitives"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Foundational Schemas: Defining the
-      Narrative Primitives</strong></span>
-    </h3></div></div></div><p>
+      </p>
+  </section>
+  <section id="foundational-schemas-defining-the-narrative-primitives" class="section"><header><h3><span class="label">2<span class="sep">.</span>2</span><span class="sep">. </span>
+      <strong class="strong">Foundational Schemas: Defining the
+      Narrative Primitives</strong>
+    </h3></header>
+    
+    <p>
         A schema-driven design will be employed to ensure data
         consistency and enable advanced tooling. A schema is a formal
         contract that defines the expected structure, data types, and
@@ -345,47 +406,63 @@
         well-established JSON Schema standard and utilizing YAML
         validation tools, 'The Scribe' can provide features like error
         checking, autocompletion, and context-aware assistance.32
-      </p><p>
+      </p>
+    <p>
         Each core narrative entity will have a corresponding schema. A
         project in 'The Scribe' will be a directory of these
         interconnected YAML files.
-      </p><section class="section" id="example-character-schema"><div class="titlepage"><div><div><h4 class="title">
-        <span class="strong"><strong>Example Character
-        Schema</strong></span>
-      </h4></div></div></div><p>
+      </p>
+    <section id="example-character-schema" class="section"><header><h4><span class="label">2<span class="sep">.</span>2<span class="sep">.</span>1</span><span class="sep">. </span>
+        <strong class="strong">Example Character
+        Schema</strong>
+      </h4></header>
+      
+      <p>
           This schema defines the structure for a character file,
           incorporating basic attributes, nested objects for complex
           traits like motivations, and lists for relationships and
           inventory. It draws on conventions from existing character
           sheet templates and open-source narrative game designs.34
-        </p><p>
+        </p>
+      <p>
           YAML
-        </p><p>
+        </p>
+      <p>
           # file: characters/elara.yaml meta: id: char-001 schema:
           character-v1 name: Elara Vance archetype: The Reluctant
           Scholar description: &gt; A brilliant but cautious historian
           who is thrust into an adventure she is intellectually prepared
           for but emotionally terrified of. attributes: age: 32
           occupation: Professor of Ancient Symbology motivations:
-        </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
+        </p>
+      <ul class="itemizedlist">
+        <li>
               goal: "Uncover the truth about the Lost City of
               Aeridor." stakes: "Her professional reputation
               and the safety of her mentor." relationships:
-            </p></li><li class="listitem"><p>
+            </li>
+        <li>
               target: char-002 # ID of another character type: Mentee
               status: Strained inventory: [item-012, item-045]
-            </p></li></ul></div></section><section class="section" id="example-scene-schema"><div class="titlepage"><div><div><h4 class="title">
-        <span class="strong"><strong>Example Scene
-        Schema</strong></span>
-      </h4></div></div></div><p>
+            </li>
+      </ul>
+    </section>
+    <section id="example-scene-schema" class="section"><header><h4><span class="label">2<span class="sep">.</span>2<span class="sep">.</span>2</span><span class="sep">. </span>
+        <strong class="strong">Example Scene
+        Schema</strong>
+      </h4></header>
+      
+      <p>
           This schema defines a single scene, linking to other entities
           via their unique IDs and specifying its structural role within
           the plot. The actual prose is intentionally separated into a
           linked Markdown file, keeping the structured data clean and
           the manuscript text in a familiar, easy-to-edit format.
-        </p><p>
+        </p>
+      <p>
           YAML
-        </p><p>
+        </p>
+      <p>
           # file: scenes/chapter1/01-the-archives.yaml meta: id:
           scene-001 schema: scene-v1 title: "A Disturbance in the
           Archives" setting: loc-003 # ID of a location
@@ -395,30 +472,38 @@
           manuscript. Her mentor, Kael, dismisses it, but is visibly
           shaken. prose_file: chapter1/01-prose.md # Link to the actual
           manuscript text
-        </p></section></section><section class="section" id="codifying-narrative-structures-as-schemas"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Codifying Narrative Structures as
-      Schemas</strong></span>
-    </h3></div></div></div><p>
+        </p>
+    </section>
+  </section>
+  <section id="codifying-narrative-structures-as-schemas" class="section"><header><h3><span class="label">2<span class="sep">.</span>3</span><span class="sep">. </span>
+      <strong class="strong">Codifying Narrative Structures as
+      Schemas</strong>
+    </h3></header>
+    
+    <p>
         A core innovation of 'The Scribe' is the formalization of
         abstract storytelling frameworks into machine-readable schemas.
         Well-known structures like the Snowflake Method, the Hero's
-        Journey, and <span class="emphasis"><em>Save the Cat!</em></span> are, in essence,
+        Journey, and <em>Save the Cat!</em> are, in essence,
         high-level schemas that define the required components and
         sequence of a story. By codifying them, the tool can provide
         unparalleled, active structural guidance.
-      </p><p>
-        For example, the 12 stages of the <span class="strong"><strong>Hero's
-        Journey</strong></span> can be defined in a template schema file.37
+      </p>
+    <p>
+        For example, the 12 stages of the <strong class="strong">Hero's
+        Journey</strong> can be defined in a template schema file.37
         Each stage is given a unique ID, a name, and a description. When
         a writer applies this template to their project, 'The Scribe'
         can then validate that scenes are being tagged with these
         required
-      </p><p>
+      </p>
+    <p>
         plot_beat identifiers, visually indicating which stages of the
         journey have been written and which are still missing.
-      </p><p>
+      </p>
+    <p>
         Similarly, the iterative process of the
-        <span class="strong"><strong>Snowflake Method</strong></span>, which
+        <strong class="strong">Snowflake Method</strong>, which
         involves progressively expanding a story from a single sentence
         to a full draft, can be managed by a project-level schema.39 The
         schema would define fields for each of the ten steps, and the
@@ -426,7 +511,8 @@
         unlocking the next step as the previous one is finished. This
         transforms a set of instructions from a blog post into an
         interactive, guided writing process.
-      </p><p>
+      </p>
+    <p>
         This schema-driven approach turns the editor into an active,
         intelligent partner. By integrating a language server aware of
         these narrative schemas, the tool can offer context-sensitive
@@ -439,64 +525,81 @@
         the cognitive load of managing a complex narrative, moving
         beyond the "digital paper" model of traditional word
         processors.
-      </p></section><section class="section" id="table-2-narrative-structure-schema-mapping-save-the-cat-example"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Table 2: Narrative Structure Schema
-      Mapping (Save the Cat! Example)</strong></span>
-    </h3></div></div></div><p>
+      </p>
+  </section>
+  <section id="table-2-narrative-structure-schema-mapping-save-the-cat-example" class="section"><header><h3><span class="label">2<span class="sep">.</span>4</span><span class="sep">. </span>
+      <strong class="strong">Table 2: Narrative Structure Schema
+      Mapping (Save the Cat! Example)</strong>
+    </h3></header>
+    
+    <p>
         The following table demonstrates how the beats of the popular
-        <span class="emphasis"><em>Save the Cat!</em></span> framework can be translated
+        <em>Save the Cat!</em> framework can be translated
         into a formal YAML schema, allowing the tool to provide
         structural guidance and pacing analysis.41
-      </p><div class="informaltable"><table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; "><colgroup><col style="text-align: center; "/><col style="text-align: center; "/></colgroup><tbody><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+      </p>
+    <div id="table-2-narrative-structure-schema-mapping-save-the-cat-example_informaltable1" class="informalobject informaltable"><table><tbody>
+          <tr><td class="center">
                 Save the Cat\! Beat
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Corresponding YAML Schema Snippet
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Opening Image</strong></span>
-            </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Opening Image</strong>
+            </td><td class="center">
                 id: opening\_imagename: "Opening
                 Image"percent\_placement: 1
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Theme Stated</strong></span>
-            </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Theme Stated</strong>
+            </td><td class="center">
                 id: theme\_statedname: "Theme
                 Stated"percent\_placement: 5
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Catalyst</strong></span>
-            </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Catalyst</strong>
+            </td><td class="center">
                 id: catalystname:
                 "Catalyst"percent\_placement: 10
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Debate</strong></span>
-            </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Debate</strong>
+            </td><td class="center">
                 id: debatename: "Debate"percent\_placement:
                 10-20
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Break Into Two</strong></span>
-            </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Break Into Two</strong>
+            </td><td class="center">
                 id: break\_into\_twoname: "Break Into Two (Act
                 2)"percent\_placement: 20
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Midpoint</strong></span>
-            </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Midpoint</strong>
+            </td><td class="center">
                 id: midpointname:
                 "Midpoint"percent\_placement: 50
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>All is Lost</strong></span>
-            </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">All is Lost</strong>
+            </td><td class="center">
                 id: all\_is\_lostname: "All is
                 Lost"percent\_placement: 75
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Finale</strong></span>
-            </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Finale</strong>
+            </td><td class="center">
                 id: finalename: "Finale"percent\_placement:
                 80-99
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; ">
-              <span class="strong"><strong>Final Image</strong></span>
-            </td><td style="text-align: center; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Final Image</strong>
+            </td><td class="center">
                 id: final\_imagename: "Final
                 Image"percent\_placement: 99
-              </td></tr></tbody></table></div><p>
+              </td></tr>
+        </tbody></table></div>
+    <p>
         Furthermore, this unified, open data model ensures
         future-proofing and fosters an ecosystem. A project in 'The
         Scribe' is simply a folder of human-readable text files. This
@@ -506,10 +609,14 @@
         and interact with the project data.43 'The Scribe' becomes not
         just a tool, but a platform and a specification for modern
         narrative construction.
-      </p></section></section><section class="section" id="beyond-save-as-implementing-true-version-control-for-storytelling"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
-    <span class="strong"><strong>Beyond 'Save As': Implementing True
-    Version Control for Storytelling</strong></span>
-  </h2></div></div></div><p>
+      </p>
+  </section>
+</section><section lang="" id="beyond-save-as-implementing-true-version-control-for-storytelling" class="section"><header><h2><span class="label">3</span><span class="sep">. </span>
+    <strong class="strong">Beyond 'Save As': Implementing True
+    Version Control for Storytelling</strong>
+  </h2></header>
+  
+  <p>
       Building on the foundation of a plain-text data model, 'The
       Scribe' will implement a version control system (VCS) that
       harnesses the full power of Git while completely abstracting its
@@ -519,18 +626,23 @@
       development's Continuous Integration (CI) principles to provide
       writers with immediate, automated feedback on story consistency
       and structural integrity.
-    </p><section class="section" id="abstracting-git-a-writer-centric-user-experience"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Abstracting Git: A Writer-Centric
-      User Experience</strong></span>
-    </h3></div></div></div><p>
+    </p>
+  <section id="abstracting-git-a-writer-centric-user-experience" class="section"><header><h3><span class="label">3<span class="sep">.</span>1</span><span class="sep">. </span>
+      <strong class="strong">Abstracting Git: A Writer-Centric
+      User Experience</strong>
+    </h3></header>
+    
+    <p>
         The primary barrier to Git adoption among non-technical users is
         its steep learning curve and developer-focused terminology.24
         'The Scribe' will solve this usability problem by creating a
         visual interface that maps core Git operations to familiar,
         narrative-centric actions.
-      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
-          <span class="strong"><strong>Commit becomes "Save
-            Checkpoint":</strong></span> Instead of executing a git
+      </p>
+    <ul class="itemizedlist">
+      <li>
+          <strong class="strong">Commit becomes "Save
+            Checkpoint":</strong> Instead of executing a git
             commit command, a user will click a "Save
             Checkpoint" button. They will be prompted for a
             descriptive summary of the changes, such as "Revised
@@ -538,9 +650,10 @@
             betrayal." This creates an atomic, revertible snapshot
             of the project's state, preserving a meaningful history of
             the creative process.26
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Branch becomes "Explore
-            Alternate Path":</strong></span> The most powerful and
+          </li>
+      <li>
+          <strong class="strong">Branch becomes "Explore
+            Alternate Path":</strong> The most powerful and
             underutilized feature of Git for creative work is branching.
             'The Scribe' will expose this by allowing a user to, for
             instance, right-click a scene and select "Explore
@@ -551,9 +664,10 @@
             point of view—without affecting the main storyline. The user
             can easily switch between these paths or visually compare
             them, encouraging creative risk-taking.21
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Pull Request becomes "Submit
-            for Review":</strong></span> For collaboration, a writer
+          </li>
+      <li>
+          <strong class="strong">Pull Request becomes "Submit
+            for Review":</strong> For collaboration, a writer
             working on an "alternate path" can select
             "Submit for Review." This action creates a pull
             request on the underlying remote repository. An editor or
@@ -561,16 +675,22 @@
             comparison showing exactly what has changed in both the
             structured YAML data and the Markdown prose files. They can
             add comments and suggestions directly to specific lines.26
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Merge becomes "Incorporate
-            Edits":</strong></span> After review, the original author
+          </li>
+      <li>
+          <strong class="strong">Merge becomes "Incorporate
+            Edits":</strong> After review, the original author
             can approve the changes and click "Incorporate
             Edits," which performs a git merge operation,
             seamlessly integrating the revisions into the main draft.
-          </p></li></ul></div></section><section class="section" id="the-narrative-integrity-pipeline-cicd-for-fiction"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>The Narrative Integrity Pipeline:
-      CI/CD for Fiction</strong></span>
-    </h3></div></div></div><p>
+          </li>
+    </ul>
+  </section>
+  <section id="the-narrative-integrity-pipeline-cicd-for-fiction" class="section"><header><h3><span class="label">3<span class="sep">.</span>2</span><span class="sep">. </span>
+      <strong class="strong">The Narrative Integrity Pipeline:
+      CI/CD for Fiction</strong>
+    </h3></header>
+    
+    <p>
         The concept of Continuous Integration/Continuous Deployment
         (CI/CD) from software engineering, where every code change
         automatically triggers a pipeline of builds and tests, will be
@@ -580,15 +700,19 @@
         "Narrative Integrity Pipeline." This system can be
         implemented using a workflow engine like GitHub Actions, which
         responds to Git events.49
-      </p><p>
+      </p>
+    <p>
         The pipeline will consist of several automated stages:
-      </p><div class="orderedlist"><ol class="orderedlist compact" type="1"><li class="listitem"><p>
-          <span class="strong"><strong>Syntax Validation
-            (Linting):</strong></span> The first stage runs a standard
+      </p>
+    <ol class="orderedlist" type="1">
+      <li>
+          <strong class="strong">Syntax Validation
+            (Linting):</strong> The first stage runs a standard
             linter, such as yamllint, across all .yaml files to catch
             basic formatting errors and ensure syntactic correctness.52
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Schema Validation:</strong></span> The
+          </li>
+      <li>
+          <strong class="strong">Schema Validation:</strong> The
             pipeline then validates every data file against its declared
             schema (as defined in Section 2). This crucial step checks
             for adherence to the project's structural rules: Are all
@@ -596,26 +720,34 @@
             character's age an integer? This is analogous to
             type-checking in a programming language and prevents a wide
             class of data-entry errors.31
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Cross-Reference and Consistency
-            Checking:</strong></span> The final stage executes custom scripts
+          </li>
+      <li>
+          <strong class="strong">Cross-Reference and Consistency
+            Checking:</strong> The final stage executes custom scripts
             to analyze the narrative logic across the entire project.
             These checks can identify complex continuity errors that are
             tedious for humans to track, such as:
-          </p></li></ol></div><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
-          <span class="strong"><strong>Broken Links:</strong></span> A scene
+          </li>
+    </ol>
+    <ul class="itemizedlist">
+      <li>
+          <strong class="strong">Broken Links:</strong> A scene
             file references a character ID (char-042) that does not
             exist.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Timeline Paradoxes:</strong></span> A
+          </li>
+      <li>
+          <strong class="strong">Timeline Paradoxes:</strong> A
             character is mentioned in a scene dated before their defined
             birth year.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Structural Adherence:</strong></span> A
-            project using the <span class="emphasis"><em>Hero's Journey</em></span>
+          </li>
+      <li>
+          <strong class="strong">Structural Adherence:</strong> A
+            project using the <em>Hero's Journey</em>
             template is missing a scene tagged with the the_ordeal plot
             beat.
-          </p></li></ul></div><p>
+          </li>
+    </ul>
+    <p>
         Feedback from this pipeline is delivered directly within the
         application. A failed check on a local checkpoint might
         highlight the erroneous file with a clear error message. On a
@@ -623,7 +755,8 @@
         to the pull request, stating "Consistency Check Failed:
         Character 'Elara Vance' is referenced in Scene 5, which occurs
         before her date of birth".54
-      </p><p>
+      </p>
+    <p>
         This system fundamentally shifts the editing process from being
         purely reactive to proactive. Instead of discovering continuity
         errors or plot holes during a manual read-through late in the
@@ -633,10 +766,14 @@
         human creators from mechanical, error-prone checking and
         allowing them to focus on higher-order creative concerns like
         voice, theme, and emotional impact.
-      </p></section></section><section class="section" id="the-ai-co-author-principled-integration-of-generative-assistance"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
-    <span class="strong"><strong>The AI Co-Author: Principled
-    Integration of Generative Assistance</strong></span>
-  </h2></div></div></div><p>
+      </p>
+  </section>
+</section><section lang="" id="the-ai-co-author-principled-integration-of-generative-assistance" class="section"><header><h2><span class="label">4</span><span class="sep">. </span>
+    <strong class="strong">The AI Co-Author: Principled
+    Integration of Generative Assistance</strong>
+  </h2></header>
+  
+  <p>
       The integration of generative AI into 'The Scribe' will be guided
       by a principled approach grounded in the legal framework of human
       authorship as defined by the U.S. Copyright Office. The tool's
@@ -645,10 +782,13 @@
       replace, the author's creative control. This strategy ensures that
       the user remains the legal author of their work while benefiting
       from AI-driven acceleration and analysis.
-    </p><section class="section" id="the-legal-framework-human-authorship-in-the-age-of-ai"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>The Legal Framework: Human
-      Authorship in the Age of AI</strong></span>
-    </h3></div></div></div><p>
+    </p>
+  <section id="the-legal-framework-human-authorship-in-the-age-of-ai" class="section"><header><h3><span class="label">4<span class="sep">.</span>1</span><span class="sep">. </span>
+      <strong class="strong">The Legal Framework: Human
+      Authorship in the Age of AI</strong>
+    </h3></header>
+    
+    <p>
         Recent guidance from the U.S. Copyright Office (USCO)
         establishes clear boundaries for the copyrightability of
         AI-generated content. The foundational principle is that
@@ -656,14 +796,16 @@
         which requires a human author.56 A work produced by a machine
         "without any creative input or intervention from a human
         author" is not eligible for copyright registration.58
-      </p><p>
+      </p>
+    <p>
         Crucially, the USCO has clarified that, with current technology,
         merely providing a text prompt to an AI system is insufficient
         to claim authorship of the resulting output.59 The prompt is
         considered an uncopyrightable idea or instruction; the AI
         determines the "traditional elements of authorship"
         and expressive execution.58
-      </p><p>
+      </p>
+    <p>
         Copyright protection for AI-assisted work is possible only when
         a human exercises sufficient "creative control over the
         work's expression".58 The USCO identifies several paths to
@@ -672,20 +814,25 @@
         post-generation.58 The most robust path, however, is when
         expressive, human-authored input is substantially reflected in
         the final output.57
-      </p><p>
+      </p>
+    <p>
         'The Scribe's' AI integration strategy is built squarely on this
         principle. The user's structured YAML data files—the character
         profiles, scene summaries, and worldbuilding details they have
         authored—serve as the detailed, expressive, human-authored
         input. The AI's role is not to invent the core expressive
-        elements of the story but to <span class="emphasis"><em>render</em></span> this
+        elements of the story but to <em>render</em> this
         pre-existing data into prose. The AI functions as an advanced
         tool under the author's direct creative command, not as the
         author itself.56
-      </p></section><section class="section" id="prompt-engineering-with-structured-data"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Prompt Engineering with Structured
-      Data</strong></span>
-    </h3></div></div></div><p>
+      </p>
+  </section>
+  <section id="prompt-engineering-with-structured-data" class="section"><header><h3><span class="label">4<span class="sep">.</span>2</span><span class="sep">. </span>
+      <strong class="strong">Prompt Engineering with Structured
+      Data</strong>
+    </h3></header>
+    
+    <p>
         This approach inverts the conventional AI writing paradigm.
         Instead of a vague, natural-language prompt, 'The Scribe' will
         use the user's structured data to construct highly specific,
@@ -693,14 +840,18 @@
         providing instructions in a structured format like JSON or YAML
         reduces ambiguity and gives the user greater control over the
         AI's output, leading to more accurate and consistent results.61
-      </p><p>
+      </p>
+    <p>
         The AI generation process is treated as a "function
         call," where the prompt acts as a template and the user's
         YAML data serves as the arguments.
-      </p><section class="section" id="example-prompt-template"><div class="titlepage"><div><div><h4 class="title">
-        <span class="strong"><strong>Example Prompt
-        Template</strong></span>
-      </h4></div></div></div><p>
+      </p>
+    <section id="example-prompt-template" class="section"><header><h4><span class="label">4<span class="sep">.</span>2<span class="sep">.</span>1</span><span class="sep">. </span>
+        <strong class="strong">Example Prompt
+        Template</strong>
+      </h4></header>
+      
+      <p>
           You are an expert fiction writer acting as a narrative
           assistant. Your task is to take the provided structured data
           in YAML format and render it into compelling prose. Adhere
@@ -708,40 +859,52 @@
           plot points, or settings. The user has provided the creative
           expression; your job is to translate it into a narrative
           passage.
-        </p><p>
-        <span class="strong"><strong>Tone and Style Instructions:</strong></span> - Voice: Third-person limited - Tense: Past - Style: Evocative, with a focus on sensory details.
-        </p><p>
-        <span class="strong"><strong>Structured Data:</strong></span> --- # ---
-        </p><p>
-        <span class="strong"><strong>Rendered Prose:</strong></span>
-      </p><p>
+        </p>
+      <p>
+        <strong class="strong">Tone and Style Instructions:</strong> - Voice: Third-person limited - Tense: Past - Style: Evocative, with a focus on sensory details.
+        </p>
+      <p>
+        <strong class="strong">Structured Data:</strong> --- # ---
+        </p>
+      <p>
+        <strong class="strong">Rendered Prose:</strong>
+      </p>
+      <p>
           This method employs multiple prompt engineering best
           practices: it assigns a specific role, provides clear and
           direct instructions, separates the instructions from the input
           data, and specifies the desired output, ensuring the AI's
           creative latitude is constrained by the user's explicit
           authorial decisions.64
-        </p></section></section><section class="section" id="proposed-ai-features"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Proposed AI
-      Features</strong></span>
-    </h3></div></div></div><div class="orderedlist"><ol class="orderedlist compact" type="1"><li class="listitem"><p>
-          <span class="strong"><strong>Prose Generation from Scene
-            Data:</strong></span> The core feature. A user authors a scene in
+        </p>
+    </section>
+  </section>
+  <section id="proposed-ai-features" class="section"><header><h3><span class="label">4<span class="sep">.</span>3</span><span class="sep">. </span>
+      <strong class="strong">Proposed AI
+      Features</strong>
+    </h3></header>
+    
+    <ol class="orderedlist" type="1">
+      <li>
+          <strong class="strong">Prose Generation from Scene
+            Data:</strong> The core feature. A user authors a scene in
             the structured YAML editor, defining the setting, characters
             involved, and a summary of events and motivations. They then
             invoke the AI, which uses the prompt template to generate a
             first draft of the prose for that scene. The human author
             retains full control, editing and refining the AI-generated
             text to match their voice.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Character Dialogue
-            Generation:</strong></span> Using a character's detailed YAML
+          </li>
+      <li>
+          <strong class="strong">Character Dialogue
+            Generation:</strong> Using a character's detailed YAML
             file—which includes their personality, background, goals,
             and defined speech patterns—the AI can generate dialogue
             options for a scene that are consistent with that
             character's established voice.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Inconsistency Detection:</strong></span>
+          </li>
+      <li>
+          <strong class="strong">Inconsistency Detection:</strong>
             The AI can be tasked with analyzing a passage of prose
             against the project's entire structured data set. A prompt
             could ask the AI to "Review the following text and
@@ -749,14 +912,17 @@
             provided character and location data. Output findings as a
             JSON list." This automates a deeper layer of continuity
             editing.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Summarization and Data
-            Extraction:</strong></span> In a reverse workflow, the AI can
+          </li>
+      <li>
+          <strong class="strong">Summarization and Data
+            Extraction:</strong> In a reverse workflow, the AI can
             take an existing passage of unstructured prose and generate
             a structured YAML scene summary, helping users to migrate
             existing work into 'The Scribe' or to quickly build out
             their story bible from a completed draft.
-          </p></li></ol></div><p>
+          </li>
+    </ol>
+    <p>
         By feeding the AI with the user's own structured world bible,
         the LLM transforms from a generic text generator into a
         fine-tuned expert on that specific story. When a user asks the
@@ -770,70 +936,84 @@
         beginning of the generative process, creating a much stronger
         and more defensible claim to authorship over the final work than
         models that rely on simple text prompts.
-      </p></section><section class="section" id="table-3-ai-feature-implementation-and-copyright-compliance"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Table 3: AI Feature Implementation
-      and Copyright Compliance</strong></span>
-    </h3></div></div></div><div class="informaltable"><table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; "><colgroup><col style="text-align: center; "/><col style="text-align: center; "/><col style="text-align: center; "/><col style="text-align: center; "/></colgroup><tbody><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+      </p>
+  </section>
+  <section id="table-3-ai-feature-implementation-and-copyright-compliance" class="section"><header><h3><span class="label">4<span class="sep">.</span>4</span><span class="sep">. </span>
+      <strong class="strong">Table 3: AI Feature Implementation
+      and Copyright Compliance</strong>
+    </h3></header>
+    
+    <div id="table-3-ai-feature-implementation-and-copyright-compliance_informaltable1" class="informalobject informaltable"><table><tbody>
+          <tr><td class="center">
                 AI Feature
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Function
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Required Structured Input
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Human Authorship Justification
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Prose Generation</strong></span>
-            </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Prose Generation</strong>
+            </td><td class="center">
                 Generates a first draft of prose for a scene.
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Scene YAML file (setting, participants, summary, plot
                 beat).
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 The user defines all core expressive elements (what,
                 who, where, why). The AI's role is limited to rendering
                 these pre-determined elements into prose, functioning as
                 a sophisticated tool under human control.58
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Dialogue Generation</strong></span>
-            </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Dialogue Generation</strong>
+            </td><td class="center">
                 Suggests dialogue options for a character in a scene.
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Character YAML file (personality, voice, goals) and
                 Scene YAML (context).
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 The AI generates dialogue based on the human-authored
                 personality and motivations. The user makes the final
                 creative selection and arrangement of the dialogue,
                 which is a recognized basis for authorship.58
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
-              <span class="strong"><strong>Inconsistency Detection</strong></span>
-            </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Inconsistency Detection</strong>
+            </td><td class="center">
                 Analyzes prose to find contradictions with the project's
                 data.
-              </td><td style="text-align: center; border-right: 1px solid ; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 Prose text (Markdown) and all relevant project YAML
                 files.
-              </td><td style="text-align: center; border-bottom: 1px solid ; ">
+              </td><td class="center">
                 This is a purely analytical, non-expressive use of AI.
                 It functions as an advanced editing tool, not a creative
                 partner. The output is factual data about the user's own
                 work, not a new creative expression.56
-              </td></tr><tr><td style="text-align: center; border-right: 1px solid ; ">
-              <span class="strong"><strong>Data Extraction</strong></span>
-            </td><td style="text-align: center; border-right: 1px solid ; ">
+              </td></tr>
+          <tr><td class="center">
+              <strong class="strong">Data Extraction</strong>
+            </td><td class="center">
                 Summarizes prose into a structured YAML scene file.
-              </td><td style="text-align: center; border-right: 1px solid ; ">
+              </td><td class="center">
                 Prose text (Markdown).
-              </td><td style="text-align: center; ">
+              </td><td class="center">
                 The AI is creating a factual summary of a pre-existing,
                 human-authored work. The creative expression already
                 exists in the prose; the AI is merely transforming its
                 format. The user reviews and approves the final
                 structured data.56
-              </td></tr></tbody></table></div></section></section><section class="section" id="synthesizing-the-scribe-a-blueprint-for-development"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
-    <span class="strong"><strong>Synthesizing 'The Scribe': A
-    Blueprint for Development</strong></span>
-  </h2></div></div></div><p>
+              </td></tr>
+        </tbody></table></div>
+  </section>
+</section><section lang="" id="synthesizing-the-scribe-a-blueprint-for-development" class="section"><header><h2><span class="label">5</span><span class="sep">. </span>
+    <strong class="strong">Synthesizing 'The Scribe': A
+    Blueprint for Development</strong>
+  </h2></header>
+  
+  <p>
       This report has systematically deconstructed the architectural
       limitations of the current creative writing software market and
       proposed a new foundation for 'The Scribe'. By unifying a
@@ -843,10 +1023,13 @@
       the category of "writing software" to become the first
       true "Integrated Development Environment (IDE) for
       Storytellers."
-    </p><section class="section" id="the-core-vision-an-ide-for-storytellers"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>The Core Vision: An IDE for
-      Storytellers</strong></span>
-    </h3></div></div></div><p>
+    </p>
+  <section id="the-core-vision-an-ide-for-storytellers" class="section"><header><h3><span class="label">5<span class="sep">.</span>1</span><span class="sep">. </span>
+      <strong class="strong">The Core Vision: An IDE for
+      Storytellers</strong>
+    </h3></header>
+    
+    <p>
         The central vision for 'The Scribe' is to provide narrative
         creators with the same level of rigor, power, and tooling that
         software developers have benefited from for decades. The project
@@ -861,89 +1044,117 @@
         entire architecture. This paradigm shift addresses the core pain
         points of modern creative workflows—collaboration friction, data
         loss, continuity errors, and creative paralysis.
-      </p></section><section class="section" id="high-level-system-architecture"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>High-Level System
-      Architecture</strong></span>
-    </h3></div></div></div><p>
+      </p>
+  </section>
+  <section id="high-level-system-architecture" class="section"><header><h3><span class="label">5<span class="sep">.</span>2</span><span class="sep">. </span>
+      <strong class="strong">High-Level System
+      Architecture</strong>
+    </h3></header>
+    
+    <p>
         The proposed system is a modern, local-first application with
         robust backend services for synchronization, validation, and AI
         processing.
-      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
-          <span class="strong"><strong>Frontend (UI Layer):</strong></span> A
+      </p>
+    <ul class="itemizedlist">
+      <li>
+          <strong class="strong">Frontend (UI Layer):</strong> A
             cross-platform desktop and web application built with a
             modern framework (e.g., Vue, React). The interface will
             feature a multi-pane editor that simultaneously displays the
             prose (Markdown editor), the associated structured data
             (YAML editor with schema-driven autocompletion), and a
             project navigation/VCS panel.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Workspace (Local Data):</strong></span>
+          </li>
+      <li>
+          <strong class="strong">Workspace (Local Data):</strong>
             The source of truth for a project is a standard directory on
             the user's local machine containing all .yaml and .md files,
             managed by a local Git repository. This ensures offline
             capability and user ownership of data.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Backend Services:</strong></span>
-        </p></li></ul></div><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
-          <span class="strong"><strong>VCS Service:</strong></span> A core
+          </li>
+      <li>
+          <strong class="strong">Backend Services:</strong>
+        </li>
+    </ul>
+    <ul class="itemizedlist">
+      <li>
+          <strong class="strong">VCS Service:</strong> A core
             service that wraps Git commands in a simplified,
             narrative-focused API for the frontend (e.g.,
             createAlternatePath(sceneId)). It manages all interactions
             with the local Git repository.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Sync Service:</strong></span> Handles
+          </li>
+      <li>
+          <strong class="strong">Sync Service:</strong> Handles
             authentication and communication with remote Git providers
             (e.g., GitHub, GitLab) to push and pull changes, enabling
             cloud backup and collaboration.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Narrative Integrity
-            Service:</strong></span> A containerized service, deployable as a
+          </li>
+      <li>
+          <strong class="strong">Narrative Integrity
+            Service:</strong> A containerized service, deployable as a
             GitHub Action or similar CI/CD tool. It is triggered by Git
             events and executes the validation pipeline (linting, schema
             checks, consistency analysis).
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>AI Service Gateway:</strong></span> A
+          </li>
+      <li>
+          <strong class="strong">AI Service Gateway:</strong> A
             secure API gateway that constructs detailed, context-rich
             prompts from the project's YAML files and routes them to a
             third-party LLM provider (e.g., OpenAI, Anthropic), managing
             API keys and responses.
-          </p></li></ul></div></section><section class="section" id="strategic-development-roadmap"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Strategic Development
-      Roadmap</strong></span>
-    </h3></div></div></div><p>
+          </li>
+    </ul>
+  </section>
+  <section id="strategic-development-roadmap" class="section"><header><h3><span class="label">5<span class="sep">.</span>3</span><span class="sep">. </span>
+      <strong class="strong">Strategic Development
+      Roadmap</strong>
+    </h3></header>
+    
+    <p>
         A phased development approach is recommended to manage technical
         complexity and deliver value incrementally.
-      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>
-          <span class="strong"><strong>Phase 1: The Core Editor and Data
-            Model (Minimum Viable Product).</strong></span> The initial focus
+      </p>
+    <ul class="itemizedlist">
+      <li>
+          <strong class="strong">Phase 1: The Core Editor and Data
+            Model (Minimum Viable Product).</strong> The initial focus
             is on building a powerful, single-user, offline-capable
             structured writing tool. This phase includes the local-first
             editor for YAML and Markdown, the implementation of
             foundational schemas (character, scene, location), and
             integration with a local Git repository to power the
             "Save Checkpoint" functionality.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Phase 2: Collaboration and the
-            Narrative Pipeline.</strong></span> This phase introduces
+          </li>
+      <li>
+          <strong class="strong">Phase 2: Collaboration and the
+            Narrative Pipeline.</strong> This phase introduces
             multi-user capabilities. It involves integrating with remote
             Git providers for synchronization, building the UI for the
             "Submit for Review" (pull request) and
             "Incorporate Edits" (merge) workflow, and
             deploying the Narrative Integrity Pipeline as an automated
             service.
-          </p></li><li class="listitem"><p>
-          <span class="strong"><strong>Phase 3: Principled AI
-            Integration.</strong></span> With the robust data and versioning
+          </li>
+      <li>
+          <strong class="strong">Phase 3: Principled AI
+            Integration.</strong> With the robust data and versioning
             foundation in place, this phase focuses on building the AI
             Service Gateway and implementing the prompt engineering
             templates. AI features will be rolled out incrementally,
             beginning with the core Prose Generation from Scene Data,
             ensuring each feature adheres to the principle of
             maintaining human authorship.
-          </p></li></ul></div></section><section class="section" id="conclusion-building-the-future-of-creative-tooling"><div class="titlepage"><div><div><h3 class="title">
-      <span class="strong"><strong>Conclusion: Building the Future of
-      Creative Tooling</strong></span>
-    </h3></div></div></div><p>
+          </li>
+    </ul>
+  </section>
+  <section id="conclusion-building-the-future-of-creative-tooling" class="section"><header><h3><span class="label">5<span class="sep">.</span>4</span><span class="sep">. </span>
+      <strong class="strong">Conclusion: Building the Future of
+      Creative Tooling</strong>
+    </h3></header>
+    
+    <p>
         The analysis presented in this report identifies a clear and
         significant opportunity in the creative software market.
         Existing tools are encumbered by legacy architectures that are
@@ -956,277 +1167,352 @@
         writers for years. This architecture provides a robust, ethical,
         and future-proof platform poised to become the essential tool
         for the next generation of storytellers.
-      </p><section class="section" id="works-cited"><div class="titlepage"><div><div><h4 class="title">
-        <span class="strong"><strong>Works cited</strong></span>
-      </h4></div></div></div><div class="orderedlist"><ol class="orderedlist compact" type="1"><li class="listitem"><p>
+      </p>
+    <section id="works-cited" class="section"><header><h4><span class="label">5<span class="sep">.</span>4<span class="sep">.</span>1</span><span class="sep">. </span>
+        <strong class="strong">Works cited</strong>
+      </h4></header>
+      
+      <ol class="orderedlist" type="1">
+        <li>
               #1 Novel &amp; Book Writing Software For Writers -
               Literature &amp; Latte, accessed October 3, 2025,
-              <a class="link" href="https://www.literatureandlatte.com/scrivener/overview" target="_top">https://www.literatureandlatte.com/scrivener/overview</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.literatureandlatte.com/scrivener/overview" class="link">https://www.literatureandlatte.com/scrivener/overview</a>
+          </li>
+        <li>
               Scrivener and git (or github) - Literature &amp; Latte
               Forums, accessed October 3, 2025,
-              <a class="link" href="https://forum.literatureandlatte.com/t/scrivener-and-git-or-github/51085" target="_top">https://forum.literatureandlatte.com/t/scrivener-and-git-or-github/51085</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://forum.literatureandlatte.com/t/scrivener-and-git-or-github/51085" class="link">https://forum.literatureandlatte.com/t/scrivener-and-git-or-github/51085</a>
+          </li>
+        <li>
               GitHub for Writers: An Introduction | by Rich Hosek -
               Medium, accessed October 3, 2025,
-              <a class="link" href="https://medium.com/@RichHosek/github-for-writers-an-introduction-8cec9d9ece2" target="_top">https://medium.com/@RichHosek/github-for-writers-an-introduction-8cec9d9ece2</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://medium.com/@RichHosek/github-for-writers-an-introduction-8cec9d9ece2" class="link">https://medium.com/@RichHosek/github-for-writers-an-introduction-8cec9d9ece2</a>
+          </li>
+        <li>
               Software engineers - have you used github or version
               control : r/writing - Reddit, accessed October 3, 2025,
-              <a class="link" href="https://www.reddit.com/r/writing/comments/16wlu3a/software_engineers_have_you_used_github_or/" target="_top">https://www.reddit.com/r/writing/comments/16wlu3a/software_engineers_have_you_used_github_or/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.reddit.com/r/writing/comments/16wlu3a/software_engineers_have_you_used_github_or/" class="link">https://www.reddit.com/r/writing/comments/16wlu3a/software_engineers_have_you_used_github_or/</a>
+          </li>
+        <li>
               Best Book Writing Software: Word vs. Scrivener, accessed
               October 3, 2025,
-              <a class="link" href="https://thewritepractice.com/book-writing-software-word-vs-scrivener/" target="_top">https://thewritepractice.com/book-writing-software-word-vs-scrivener/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://thewritepractice.com/book-writing-software-word-vs-scrivener/" class="link">https://thewritepractice.com/book-writing-software-word-vs-scrivener/</a>
+          </li>
+        <li>
               Google Docs vs. Scrivener for Writing - Jamie Todd Rubin,
               accessed October 3, 2025,
-              <a class="link" href="https://jamierubin.net/2015/01/21/google-docs-vs-scrivener-for-writing/" target="_top">https://jamierubin.net/2015/01/21/google-docs-vs-scrivener-for-writing/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://jamierubin.net/2015/01/21/google-docs-vs-scrivener-for-writing/" class="link">https://jamierubin.net/2015/01/21/google-docs-vs-scrivener-for-writing/</a>
+          </li>
+        <li>
               Does Scrivener use AI? / General / Knowledge Base -
               Literature and Latte Support, accessed October 3, 2025,
-              <a class="link" href="https://scrivener.tenderapp.com/help/kb/general/does-scrivener-use-ai" target="_top">https://scrivener.tenderapp.com/help/kb/general/does-scrivener-use-ai</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://scrivener.tenderapp.com/help/kb/general/does-scrivener-use-ai" class="link">https://scrivener.tenderapp.com/help/kb/general/does-scrivener-use-ai</a>
+          </li>
+        <li>
               Community Suggestion: Article Version Control / Saving -
               World Anvil, accessed October 3, 2025,
-              <a class="link" href="https://www.worldanvil.com/community/voting/suggestion/74c70152-3bda-4ce0-89f5-75b3e0b35fe8/view" target="_top">https://www.worldanvil.com/community/voting/suggestion/74c70152-3bda-4ce0-89f5-75b3e0b35fe8/view</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.worldanvil.com/community/voting/suggestion/74c70152-3bda-4ce0-89f5-75b3e0b35fe8/view" class="link">https://www.worldanvil.com/community/voting/suggestion/74c70152-3bda-4ce0-89f5-75b3e0b35fe8/view</a>
+          </li>
+        <li>
               Novel Writing Software | Online Novel Planner - World
               Anvil, accessed October 3, 2025,
-              <a class="link" href="https://www.worldanvil.com/features/novel-writing-software" target="_top">https://www.worldanvil.com/features/novel-writing-software</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.worldanvil.com/features/novel-writing-software" class="link">https://www.worldanvil.com/features/novel-writing-software</a>
+          </li>
+        <li>
               Online Book Writing Tools | Start Free - World Anvil,
               accessed October 3, 2025,
-              <a class="link" href="https://www.worldanvil.com/nanowrimo" target="_top">https://www.worldanvil.com/nanowrimo</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.worldanvil.com/nanowrimo" class="link">https://www.worldanvil.com/nanowrimo</a>
+          </li>
+        <li>
               World Anvil Review [2025]: Everything Need to Know -
               Kindlepreneur, accessed October 3, 2025,
-              <a class="link" href="https://kindlepreneur.com/world-anvil/" target="_top">https://kindlepreneur.com/world-anvil/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://kindlepreneur.com/world-anvil/" class="link">https://kindlepreneur.com/world-anvil/</a>
+          </li>
+        <li>
               Anvil Docs | Version Control and Collaboration, accessed
               October 3, 2025,
-              <a class="link" href="https://anvil.works/docs/version-control" target="_top">https://anvil.works/docs/version-control</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://anvil.works/docs/version-control" class="link">https://anvil.works/docs/version-control</a>
+          </li>
+        <li>
               Writing Software for Novelists and Worldbuilders -
               Campfire, accessed October 3, 2025,
-              <a class="link" href="https://www.campfirewriting.com/write" target="_top">https://www.campfirewriting.com/write</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.campfirewriting.com/write" class="link">https://www.campfirewriting.com/write</a>
+          </li>
+        <li>
               Campfire Write Review [2025]: Worldbuilding Software for
               Authors - Kindlepreneur, accessed October 3, 2025,
-              <a class="link" href="https://kindlepreneur.com/campfire-write-review/" target="_top">https://kindlepreneur.com/campfire-write-review/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://kindlepreneur.com/campfire-write-review/" class="link">https://kindlepreneur.com/campfire-write-review/</a>
+          </li>
+        <li>
               Campfire – Write Your Book - Apps on Google Play, accessed
               October 3, 2025,
-              <a class="link" href="https://play.google.com/store/apps/details?id=com.campfiremobile" target="_top">https://play.google.com/store/apps/details?id=com.campfiremobile</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://play.google.com/store/apps/details?id=com.campfiremobile" class="link">https://play.google.com/store/apps/details?id=com.campfiremobile</a>
+          </li>
+        <li>
               Frequently Asked Questions - Campfire, accessed October 3,
               2025,
-              <a class="link" href="https://www.campfirewriting.com/faq" target="_top">https://www.campfirewriting.com/faq</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.campfirewriting.com/faq" class="link">https://www.campfirewriting.com/faq</a>
+          </li>
+        <li>
               Update 37: New Editing Tools, Goal Tracking, and Wallets -
               Campfire, accessed October 3, 2025,
-              <a class="link" href="https://www.campfirewriting.com/learn/update37" target="_top">https://www.campfirewriting.com/learn/update37</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.campfirewriting.com/learn/update37" class="link">https://www.campfirewriting.com/learn/update37</a>
+          </li>
+        <li>
               Campfire - Ai Tool Details &amp; Features, accessed
               October 3, 2025,
-              <a class="link" href="https://airespo.com/ai-tools/campfire/" target="_top">https://airespo.com/ai-tools/campfire/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://airespo.com/ai-tools/campfire/" class="link">https://airespo.com/ai-tools/campfire/</a>
+          </li>
+        <li>
               Campfire Is AI a magic button? Intelligently incorporating
               AI technologies into your work, accessed October 3, 2025,
-              <a class="link" href="https://www.youtube.com/watch?v=ittaTwZW1vg" target="_top">https://www.youtube.com/watch?v=ittaTwZW1vg</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.youtube.com/watch?v=ittaTwZW1vg" class="link">https://www.youtube.com/watch?v=ittaTwZW1vg</a>
+          </li>
+        <li>
               Campfire, accessed October 3, 2025,
-              <a class="link" href="https://www.campfirewriting.com/" target="_top">https://www.campfirewriting.com/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.campfirewriting.com/" class="link">https://www.campfirewriting.com/</a>
+          </li>
+        <li>
               Does anyone use Git for their personal writing? :
               r/technicalwriting101 - Reddit, accessed October 3, 2025,
-              <a class="link" href="https://www.reddit.com/r/technicalwriting101/comments/1dkg6ol/does_anyone_use_git_for_their_personal_writing/" target="_top">https://www.reddit.com/r/technicalwriting101/comments/1dkg6ol/does_anyone_use_git_for_their_personal_writing/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.reddit.com/r/technicalwriting101/comments/1dkg6ol/does_anyone_use_git_for_their_personal_writing/" class="link">https://www.reddit.com/r/technicalwriting101/comments/1dkg6ol/does_anyone_use_git_for_their_personal_writing/</a>
+          </li>
+        <li>
               How To Use Git to Manage Your Writing Project |
               DigitalOcean, accessed October 3, 2025,
-              <a class="link" href="https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-writing-project" target="_top">https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-writing-project</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-writing-project" class="link">https://www.digitalocean.com/community/tutorials/how-to-use-git-to-manage-your-writing-project</a>
+          </li>
+        <li>
               Should I suggest to use version control for writing a
               paper with new collaborators?, accessed October 3, 2025,
-              <a class="link" href="https://academia.stackexchange.com/questions/85635/should-i-suggest-to-use-version-control-for-writing-a-paper-with-new-collaborato" target="_top">https://academia.stackexchange.com/questions/85635/should-i-suggest-to-use-version-control-for-writing-a-paper-with-new-collaborato</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://academia.stackexchange.com/questions/85635/should-i-suggest-to-use-version-control-for-writing-a-paper-with-new-collaborato" class="link">https://academia.stackexchange.com/questions/85635/should-i-suggest-to-use-version-control-for-writing-a-paper-with-new-collaborato</a>
+          </li>
+        <li>
               Why Git is worth the learning curve - GitLab, accessed
               October 3, 2025,
-              <a class="link" href="https://about.gitlab.com/blog/learning-curve-is-the-biggest-challenge-developers-face-with-git/" target="_top">https://about.gitlab.com/blog/learning-curve-is-the-biggest-challenge-developers-face-with-git/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://about.gitlab.com/blog/learning-curve-is-the-biggest-challenge-developers-face-with-git/" class="link">https://about.gitlab.com/blog/learning-curve-is-the-biggest-challenge-developers-face-with-git/</a>
+          </li>
+        <li>
               What are the biggest learning curves in Github? ·
               community · Discussion #138591, accessed October 3, 2025,
-              <a class="link" href="https://github.com/orgs/community/discussions/138591" target="_top">https://github.com/orgs/community/discussions/138591</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/orgs/community/discussions/138591" class="link">https://github.com/orgs/community/discussions/138591</a>
+          </li>
+        <li>
               Git for Writers | How to Organize Projects with Git and
               GitKraken, accessed October 3, 2025,
-              <a class="link" href="https://www.gitkraken.com/gitkon/git-for-writers" target="_top">https://www.gitkraken.com/gitkon/git-for-writers</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.gitkraken.com/gitkon/git-for-writers" class="link">https://www.gitkraken.com/gitkon/git-for-writers</a>
+          </li>
+        <li>
               YAML Tutorial : A Complete Language Guide with Examples,
               accessed October 3, 2025,
-              <a class="link" href="https://spacelift.io/blog/yaml" target="_top">https://spacelift.io/blog/yaml</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://spacelift.io/blog/yaml" class="link">https://spacelift.io/blog/yaml</a>
+          </li>
+        <li>
               YAML Syntax — Ansible Community Documentation, accessed
               October 3, 2025,
-              <a class="link" href="https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html" target="_top">https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html" class="link">https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html</a>
+          </li>
+        <li>
               Appendix: YAML Techniques - Helm, accessed October 3,
               2025,
-              <a class="link" href="https://helm.sh/docs/chart_template_guide/yaml_techniques/" target="_top">https://helm.sh/docs/chart_template_guide/yaml_techniques/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://helm.sh/docs/chart_template_guide/yaml_techniques/" class="link">https://helm.sh/docs/chart_template_guide/yaml_techniques/</a>
+          </li>
+        <li>
               JSON Schema Examples Tutorial - MongoDB, accessed October
               3, 2025,
-              <a class="link" href="https://www.mongodb.com/resources/languages/json-schema-examples" target="_top">https://www.mongodb.com/resources/languages/json-schema-examples</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.mongodb.com/resources/languages/json-schema-examples" class="link">https://www.mongodb.com/resources/languages/json-schema-examples</a>
+          </li>
+        <li>
               23andMe/Yamale: A schema and validator for YAML. - GitHub,
               accessed October 3, 2025,
-              <a class="link" href="https://github.com/23andMe/Yamale" target="_top">https://github.com/23andMe/Yamale</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/23andMe/Yamale" class="link">https://github.com/23andMe/Yamale</a>
+          </li>
+        <li>
               Creating your first schema - JSON Schema, accessed October
               3, 2025,
-              <a class="link" href="https://json-schema.org/learn/getting-started-step-by-step" target="_top">https://json-schema.org/learn/getting-started-step-by-step</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://json-schema.org/learn/getting-started-step-by-step" class="link">https://json-schema.org/learn/getting-started-step-by-step</a>
+          </li>
+        <li>
               redhat-developer/yaml-language-server - GitHub, accessed
               October 3, 2025,
-              <a class="link" href="https://github.com/redhat-developer/yaml-language-server" target="_top">https://github.com/redhat-developer/yaml-language-server</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/redhat-developer/yaml-language-server" class="link">https://github.com/redhat-developer/yaml-language-server</a>
+          </li>
+        <li>
               Best character card format? : r/SillyTavernAI - Reddit,
               accessed October 3, 2025,
-              <a class="link" href="https://www.reddit.com/r/SillyTavernAI/comments/1ge0bqp/best_character_card_format/" target="_top">https://www.reddit.com/r/SillyTavernAI/comments/1ge0bqp/best_character_card_format/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.reddit.com/r/SillyTavernAI/comments/1ge0bqp/best_character_card_format/" class="link">https://www.reddit.com/r/SillyTavernAI/comments/1ge0bqp/best_character_card_format/</a>
+          </li>
+        <li>
               mhgolkar/Arrow: Game Narrative Design Tool - GitHub,
               accessed October 3, 2025,
-              <a class="link" href="https://github.com/mhgolkar/Arrow" target="_top">https://github.com/mhgolkar/Arrow</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/mhgolkar/Arrow" class="link">https://github.com/mhgolkar/Arrow</a>
+          </li>
+        <li>
               mluogh/eastworld: Framework for Generative Agents in Games
               - GitHub, accessed October 3, 2025,
-              <a class="link" href="https://github.com/mluogh/eastworld" target="_top">https://github.com/mluogh/eastworld</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/mluogh/eastworld" class="link">https://github.com/mluogh/eastworld</a>
+          </li>
+        <li>
               Free Hero's Journey Template &amp; Example - Milanote,
               accessed October 3, 2025,
-              <a class="link" href="https://milanote.com/templates/creative-writing/heros-journey" target="_top">https://milanote.com/templates/creative-writing/heros-journey</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://milanote.com/templates/creative-writing/heros-journey" class="link">https://milanote.com/templates/creative-writing/heros-journey</a>
+          </li>
+        <li>
               How to Outline Your Novel with the Hero's Journey -
               Savannah Gilbo, accessed October 3, 2025,
-              <a class="link" href="https://www.savannahgilbo.com/blog/plotting-hero's-journey" target="_top">https://www.savannahgilbo.com/blog/plotting-hero's-journey</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.savannahgilbo.com/blog/plotting-hero's-journey" class="link">https://www.savannahgilbo.com/blog/plotting-hero's-journey</a>
+          </li>
+        <li>
               The Snowflake Method: 10 Steps to Outline Your Novel - The
               Wordling, accessed October 3, 2025,
-              <a class="link" href="https://www.thewordling.com/the-snowflake-method/" target="_top">https://www.thewordling.com/the-snowflake-method/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.thewordling.com/the-snowflake-method/" class="link">https://www.thewordling.com/the-snowflake-method/</a>
+          </li>
+        <li>
               The Snowflake Method: Plot Bold Characters, accessed
               October 3, 2025,
-              <a class="link" href="https://plottr.com/snowflake-method-for-characters/" target="_top">https://plottr.com/snowflake-method-for-characters/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://plottr.com/snowflake-method-for-characters/" class="link">https://plottr.com/snowflake-method-for-characters/</a>
+          </li>
+        <li>
               How to Outline Your Novel with the Save the Cat! Beat
               Sheet - Savannah Gilbo, accessed October 3, 2025,
-              <a class="link" href="https://www.savannahgilbo.com/blog/plotting-save-the-cat" target="_top">https://www.savannahgilbo.com/blog/plotting-save-the-cat</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.savannahgilbo.com/blog/plotting-save-the-cat" class="link">https://www.savannahgilbo.com/blog/plotting-save-the-cat</a>
+          </li>
+        <li>
               Save the Cat Beat Sheet Explained [with FREE Template],
               accessed October 3, 2025,
-              <a class="link" href="https://www.studiobinder.com/blog/save-the-cat-beat-sheet/" target="_top">https://www.studiobinder.com/blog/save-the-cat-beat-sheet/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.studiobinder.com/blog/save-the-cat-beat-sheet/" class="link">https://www.studiobinder.com/blog/save-the-cat-beat-sheet/</a>
+          </li>
+        <li>
               Revolutionizing Novel Writing: Introducing novelWriter -
               DEV ..., accessed October 3, 2025,
-              <a class="link" href="https://dev.to/githubopensource/revolutionizing-novel-writing-introducing-novelwriter-52j4" target="_top">https://dev.to/githubopensource/revolutionizing-novel-writing-introducing-novelwriter-52j4</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://dev.to/githubopensource/revolutionizing-novel-writing-introducing-novelwriter-52j4" class="link">https://dev.to/githubopensource/revolutionizing-novel-writing-introducing-novelwriter-52j4</a>
+          </li>
+        <li>
               opengaming/osgameclones: Open Source Clones of Popular
               Games - GitHub, accessed October 3, 2025,
-              <a class="link" href="https://github.com/opengaming/osgameclones" target="_top">https://github.com/opengaming/osgameclones</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/opengaming/osgameclones" class="link">https://github.com/opengaming/osgameclones</a>
+          </li>
+        <li>
               Git for Web Development: Get to Know the Typical Workflow
               of a Project - Kinsta, accessed October 3, 2025,
-              <a class="link" href="https://kinsta.com/blog/git-for-web-development/" target="_top">https://kinsta.com/blog/git-for-web-development/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://kinsta.com/blog/git-for-web-development/" class="link">https://kinsta.com/blog/git-for-web-development/</a>
+          </li>
+        <li>
               Git Workflows for API Technical Writers - Bump.sh,
               accessed October 3, 2025,
-              <a class="link" href="https://bump.sh/blog/git-workflows-for-api-technical-writers/" target="_top">https://bump.sh/blog/git-workflows-for-api-technical-writers/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://bump.sh/blog/git-workflows-for-api-technical-writers/" class="link">https://bump.sh/blog/git-workflows-for-api-technical-writers/</a>
+          </li>
+        <li>
               PR Build &amp; Merge · Actions · GitHub Marketplace,
               accessed October 3, 2025,
-              <a class="link" href="https://github.com/marketplace/actions/pr-build-merge" target="_top">https://github.com/marketplace/actions/pr-build-merge</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/marketplace/actions/pr-build-merge" class="link">https://github.com/marketplace/actions/pr-build-merge</a>
+          </li>
+        <li>
               Managing a merge queue - GitHub Docs, accessed October 3,
               2025,
-              <a class="link" href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue" target="_top">https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue" class="link">https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue</a>
+          </li>
+        <li>
               Triggering a workflow - GitHub Docs, accessed October 3,
               2025,
-              <a class="link" href="https://docs.github.com/actions/using-workflows/triggering-a-workflow" target="_top">https://docs.github.com/actions/using-workflows/triggering-a-workflow</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://docs.github.com/actions/using-workflows/triggering-a-workflow" class="link">https://docs.github.com/actions/using-workflows/triggering-a-workflow</a>
+          </li>
+        <li>
               Using GitHub Actions on pull requests - Graphite, accessed
               October 3, 2025,
-              <a class="link" href="https://graphite.dev/guides/github-actions-on-pull-requests" target="_top">https://graphite.dev/guides/github-actions-on-pull-requests</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://graphite.dev/guides/github-actions-on-pull-requests" class="link">https://graphite.dev/guides/github-actions-on-pull-requests</a>
+          </li>
+        <li>
               Triggering a workflow - GitHub Docs, accessed October 3,
               2025,
-              <a class="link" href="https://docs.github.com/en/actions/using-workflows/triggering-a-workflow" target="_top">https://docs.github.com/en/actions/using-workflows/triggering-a-workflow</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://docs.github.com/en/actions/using-workflows/triggering-a-workflow" class="link">https://docs.github.com/en/actions/using-workflows/triggering-a-workflow</a>
+          </li>
+        <li>
               Yamllint Github Action · Actions · GitHub Marketplace ·
               GitHub, accessed October 3, 2025,
-              <a class="link" href="https://github.com/marketplace/actions/yamllint-github-action" target="_top">https://github.com/marketplace/actions/yamllint-github-action</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/marketplace/actions/yamllint-github-action" class="link">https://github.com/marketplace/actions/yamllint-github-action</a>
+          </li>
+        <li>
               Frenck's yamllint · Actions · GitHub Marketplace, accessed
               October 3, 2025,
-              <a class="link" href="https://github.com/marketplace/actions/frenck-s-yamllint" target="_top">https://github.com/marketplace/actions/frenck-s-yamllint</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/marketplace/actions/frenck-s-yamllint" class="link">https://github.com/marketplace/actions/frenck-s-yamllint</a>
+          </li>
+        <li>
               github.com, accessed October 3, 2025,
-              <a class="link" href="https://github.com/marketplace/actions/post-pr-comment-from-artifact#:~:text=This%20GitHub%20Action%20allows%20you,used%20as%20the%20comment%20body." target="_top">https://github.com/marketplace/actions/post-pr-comment-from-artifact#:~:text=This%20GitHub%20Action%20allows%20you,used%20as%20the%20comment%20body.</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/marketplace/actions/post-pr-comment-from-artifact#:~:text=This%20GitHub%20Action%20allows%20you,used%20as%20the%20comment%20body." class="link">https://github.com/marketplace/actions/post-pr-comment-from-artifact#:~:text=This%20GitHub%20Action%20allows%20you,used%20as%20the%20comment%20body.</a>
+          </li>
+        <li>
               Add PR Comment · Actions · GitHub Marketplace · GitHub,
               accessed October 3, 2025,
-              <a class="link" href="https://github.com/marketplace/actions/add-pr-comment" target="_top">https://github.com/marketplace/actions/add-pr-comment</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://github.com/marketplace/actions/add-pr-comment" class="link">https://github.com/marketplace/actions/add-pr-comment</a>
+          </li>
+        <li>
               What Does Copyright Protect? (FAQ) | U.S. Copyright
               Office, accessed October 3, 2025,
-              <a class="link" href="https://www.copyright.gov/help/faq/faq-protect.html" target="_top">https://www.copyright.gov/help/faq/faq-protect.html</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.copyright.gov/help/faq/faq-protect.html" class="link">https://www.copyright.gov/help/faq/faq-protect.html</a>
+          </li>
+        <li>
               Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf,
               accessed October 3, 2025,
-              <a class="link" href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf" target="_top">https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf" class="link">https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf</a>
+          </li>
+        <li>
               Copyright Registration Guidance: Works Containing Material
               Generated by Artificial Intelligence, accessed October 3,
               2025,
-              <a class="link" href="https://www.copyright.gov/ai/ai_policy_guidance.pdf" target="_top">https://www.copyright.gov/ai/ai_policy_guidance.pdf</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.copyright.gov/ai/ai_policy_guidance.pdf" class="link">https://www.copyright.gov/ai/ai_policy_guidance.pdf</a>
+          </li>
+        <li>
               Copyrightability and Artificial Intelligence: A new report
               from the U.S. Copyright Office, accessed October 3, 2025,
-              <a class="link" href="https://www.authorsalliance.org/2025/02/20/copyrightability-and-artificial-intelligence-a-new-report-from-the-u-s-copyright-office/" target="_top">https://www.authorsalliance.org/2025/02/20/copyrightability-and-artificial-intelligence-a-new-report-from-the-u-s-copyright-office/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.authorsalliance.org/2025/02/20/copyrightability-and-artificial-intelligence-a-new-report-from-the-u-s-copyright-office/" class="link">https://www.authorsalliance.org/2025/02/20/copyrightability-and-artificial-intelligence-a-new-report-from-the-u-s-copyright-office/</a>
+          </li>
+        <li>
               Copyright Office Releases Part 2 of Artificial
               Intelligence Report - Library of Congress, accessed
               October 3, 2025,
-              <a class="link" href="https://newsroom.loc.gov/news/copyright-office-releases-part-2-of-artificial-intelligence-report/s/f3959c36-d616-498d-b8f9-67641fd18bab" target="_top">https://newsroom.loc.gov/news/copyright-office-releases-part-2-of-artificial-intelligence-report/s/f3959c36-d616-498d-b8f9-67641fd18bab</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://newsroom.loc.gov/news/copyright-office-releases-part-2-of-artificial-intelligence-report/s/f3959c36-d616-498d-b8f9-67641fd18bab" class="link">https://newsroom.loc.gov/news/copyright-office-releases-part-2-of-artificial-intelligence-report/s/f3959c36-d616-498d-b8f9-67641fd18bab</a>
+          </li>
+        <li>
               How to Use JSON Format to Write Shockingly Accurate
               Prompts? - Apidog, accessed October 3, 2025,
-              <a class="link" href="https://apidog.com/blog/json-format-prompts/" target="_top">https://apidog.com/blog/json-format-prompts/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://apidog.com/blog/json-format-prompts/" class="link">https://apidog.com/blog/json-format-prompts/</a>
+          </li>
+        <li>
               JSON Prompt: The Ultimate Guide to Perfect AI Outputs -
               MPG ONE, accessed October 3, 2025,
-              <a class="link" href="https://mpgone.com/json-prompt-guide/" target="_top">https://mpgone.com/json-prompt-guide/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://mpgone.com/json-prompt-guide/" class="link">https://mpgone.com/json-prompt-guide/</a>
+          </li>
+        <li>
               How to Write JSON Prompts for Maximizing the Accuracy of
               AI Responses - Mindbees, accessed October 3, 2025,
-              <a class="link" href="https://www.mindbees.com/blog/json-prompts-ai-accuracy/" target="_top">https://www.mindbees.com/blog/json-prompts-ai-accuracy/</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.mindbees.com/blog/json-prompts-ai-accuracy/" class="link">https://www.mindbees.com/blog/json-prompts-ai-accuracy/</a>
+          </li>
+        <li>
               Prompt Engineering: The Art of Getting What You Need From
               Generative AI, accessed October 3, 2025,
-              <a class="link" href="https://iac.gatech.edu/featured-news/2024/02/AI-prompt-engineering-ChatGPT" target="_top">https://iac.gatech.edu/featured-news/2024/02/AI-prompt-engineering-ChatGPT</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://iac.gatech.edu/featured-news/2024/02/AI-prompt-engineering-ChatGPT" class="link">https://iac.gatech.edu/featured-news/2024/02/AI-prompt-engineering-ChatGPT</a>
+          </li>
+        <li>
               Prompt engineering techniques - Azure OpenAI | Microsoft
               Learn, accessed October 3, 2025,
-              <a class="link" href="https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/prompt-engineering" target="_top">https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/prompt-engineering</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/prompt-engineering" class="link">https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/prompt-engineering</a>
+          </li>
+        <li>
               Mastering LLM Prompts: How to Structure Your Queries for
               Better AI Responses - Codesmith, accessed October 3, 2025,
-              <a class="link" href="https://www.codesmith.io/blog/mastering-llm-prompts" target="_top">https://www.codesmith.io/blog/mastering-llm-prompts</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://www.codesmith.io/blog/mastering-llm-prompts" class="link">https://www.codesmith.io/blog/mastering-llm-prompts</a>
+          </li>
+        <li>
               Prompt Engineering for AI Guide | Google Cloud, accessed
               October 3, 2025,
-              <a class="link" href="https://cloud.google.com/discover/what-is-prompt-engineering" target="_top">https://cloud.google.com/discover/what-is-prompt-engineering</a>
-          </p></li><li class="listitem"><p>
+              <a href="https://cloud.google.com/discover/what-is-prompt-engineering" class="link">https://cloud.google.com/discover/what-is-prompt-engineering</a>
+          </li>
+        <li>
               Prompt engineering - OpenAI API, accessed October 3, 2025,
-              <a class="link" href="https://platform.openai.com/docs/guides/prompt-engineering" target="_top">https://platform.openai.com/docs/guides/prompt-engineering</a>
-          </p></li></ol></div></section></section></section></section></body></html>
+              <a href="https://platform.openai.com/docs/guides/prompt-engineering" class="link">https://platform.openai.com/docs/guides/prompt-engineering</a>
+          </li>
+      </ol>
+    </section>
+  </section>
+</section></article></main><nav class="bottom"></nav></body></html>
