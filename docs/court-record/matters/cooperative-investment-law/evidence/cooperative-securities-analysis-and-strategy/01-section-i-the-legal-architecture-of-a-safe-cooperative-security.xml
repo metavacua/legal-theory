@@ -11,15 +11,15 @@
       and the preservation of a member-centric, democratically
       controlled identity. Historically, cooperatives have struggled
       with under-capitalization, a factor contributing to numerous
-      failures.1 The traditional path to significant capital
+      failures.<biblioref linkend="concordfoodcoop-history-of-co-ops" /> The traditional path to significant capital
       infusion—issuing equity on public markets—typically requires
       adopting a conventional corporate structure where control follows
       capital, a dynamic that is antithetical to the cooperative ethos.
       This often leads to a "failure of success," where a
       thriving cooperative, in its quest for growth capital, transforms
       into a standard investor-owned firm, a process known as
-      demutualization.3
-    </para>
+      demutualization.<biblioref linkend="geo-why-some-worker-co-ops-succeed-while-others-fail" />
+  </para>
   <para>
       A "Safe" Cooperative Security is an instrument of
       deliberate legal and financial engineering designed to resolve
@@ -27,13 +27,13 @@
       distinct and often contradictory legal regimes: U.S. securities
       law, which governs investments, and U.S. tax law governing
       cooperatives, specifically Subchapter T of the Internal Revenue
-      Code.5 The goal is to create an instrument that is legally a
+      Code.<biblioref linkend="cooperative-security" /> The goal is to create an instrument that is legally a
       tradable security, capable of attracting outside investment, yet
       is structurally bound to uphold the core principles of a
       cooperative. This section deconstructs this architecture using a
       formal 9-Point Analytical Checklist, which synthesizes the
-      requisite legal tests into a unified framework.5
-    </para>
+      requisite legal tests into a unified framework.<biblioref linkend="cooperative-security" />
+  </para>
   <section xml:id="a-the-threshold-inquiries-market-access-and-economic-purpose">
     <title>
       <emphasis role="strong">A. The Threshold Inquiries: Market
@@ -54,27 +54,27 @@
       <para>
           The first and most foundational question for any instrument
           intended to access public capital markets is whether it is
-          tradable.5 Tradability is the gateway to liquidity, providing
+          tradable.<biblioref linkend="cooperative-security" /> Tradability is the gateway to liquidity, providing
           investors with an exit mechanism and making the investment
           more attractive. For a cooperative, it represents a potential
           solution to the chronic problem of insufficient capital that
-          has historically constrained growth and led to failures.3
-        </para>
+          has historically constrained growth and led to failures.<biblioref linkend="geo-why-some-worker-co-ops-succeed-while-others-fail" />
+      </para>
       <para>
           A traditional cooperative membership share is typically not
           tradable. It represents a member's right to participate in and
           patronize the cooperative and is often redeemable only by the
-          cooperative itself, frequently at its original par value.7 To
+          cooperative itself, frequently at its original par value.<biblioref linkend="peoples-law-basics-forming-and-maintaining-cooperatives-maryland" /> To
           create a tradable security, the cooperative's foundational
           legal documents—its charter and bylaws—must be explicitly
           drafted to authorize a separate class of equity or debt
           instrument that is distinct from the standard membership
           share. These governing documents must expressly permit the
           free transfer of these specific securities on a secondary
-          market.7 Without this explicit authorization in its legal DNA,
+          market.<biblioref linkend="peoples-law-basics-forming-and-maintaining-cooperatives-maryland" /> Without this explicit authorization in its legal DNA,
           the instrument cannot be a publicly-traded security and would
           be confined to private placements, severely limiting its
-          capital-raising potential.5 This structural element is the
+          capital-raising potential.<biblioref linkend="cooperative-security" /> This structural element is the
           non-negotiable first step in building a bridge between the
           cooperative world and the public capital markets.
         </para>
@@ -93,7 +93,7 @@
           addresses the "economic reality" of the transaction,
           a principle articulated by the U.S. Supreme Court in
           <emphasis>United Housing Foundation, Inc. v.
-          Forman</emphasis>.8 The
+          Forman</emphasis>.<biblioref linkend="casebriefs-united-housing-foundation-inc-v-forman" /> The
         </para>
       <para>
         <emphasis>Forman</emphasis> case involved residents of a
@@ -103,13 +103,13 @@
           were not securities because the purchasers were motivated by a
           desire to acquire affordable housing for personal use—a
           motivation of consumption—rather than an expectation of
-          financial profit.8
-        </para>
+          financial profit.<biblioref linkend="casebriefs-united-housing-foundation-inc-v-forman" />
+      </para>
       <para>
           The <emphasis>Forman</emphasis> test, therefore, draws a
           critical line: is the instrument purchased primarily for
           personal use and consumption, or is it acquired with the
-          expectation of a future financial return or benefit?.5 A
+          expectation of a future financial return or benefit?.<biblioref linkend="cooperative-security" /> A
           "Safe" Cooperative Security must be designed to fall
           squarely on the investment side of this line. The economic
           reality for the holder of a Cooperative Security cannot be
@@ -117,8 +117,8 @@
           that role is reserved for the member-patron. The security
           holder's motivation must be investment-oriented: to place
           capital in an enterprise with the expectation of receiving a
-          valuable benefit in the future.5
-        </para>
+          valuable benefit in the future.<biblioref linkend="cooperative-security" />
+      </para>
       <para>
           By structuring the instrument's purpose as investment, not
           consumption, it deliberately satisfies this initial prong of
@@ -150,26 +150,28 @@
         the seminal federal test from <emphasis>SEC v. W. J. Howey
         Co.</emphasis> with the broader "risk capital" test,
         prominent in states like California, to create a comprehensive
-        four-prong analysis (Checklist Points 3-6).5 A "Safe"
+        four-prong analysis (Checklist Points 3-6).<biblioref linkend="cooperative-security" /> A "Safe"
         Cooperative Security must be structured to affirmatively satisfy
         all four prongs.
       </para>
     <para>
-      <emphasis role="strong">1. Investment of Value (Point
-        3):</emphasis> This prong requires that the holder has made an
+      <emphasis role="strong">
+        <biblioref linkend="concordfoodcoop-history-of-co-ops" />. Investment of Value (Point
+        <biblioref linkend="geo-why-some-worker-co-ops-succeed-while-others-fail" />):</emphasis> This prong requires that the holder has made an
         investment of value. The definition of "value" is
         broad, encompassing not only money or tangible assets but also
         intangible contributions such as labor, data, or a binding
         promise, consistent with the standard for consideration in
-        contract law.5 For a Cooperative Security, this is typically met
+        contract law.<biblioref linkend="cooperative-security" /> For a Cooperative Security, this is typically met
         through the straightforward purchase of the instrument for cash.
       </para>
     <para>
-      <emphasis role="strong">2. Common Enterprise (Point
-        4):</emphasis> This prong requires that the instrument be part
+      <emphasis role="strong">
+        <biblioref linkend="archives-why-co-ops-die-exchange" />. Common Enterprise (Point
+        <biblioref linkend="en-demutualization" />):</emphasis> This prong requires that the instrument be part
         of a common enterprise. This is satisfied when the fortune of
         the individual instrument holder is interwoven with and
-        dependent upon the success of the promoter and other investors.5
+        dependent upon the success of the promoter and other investors.<biblioref linkend="cooperative-security" />
         In the context of a cooperative, the value and any potential
         return of the security are directly tied to the ongoing
         viability and performance of the cooperative as a whole. The
@@ -177,36 +179,38 @@
         providers.
       </para>
     <para>
-      <emphasis role="strong">3. Expectation of Benefit (Point
-        5):</emphasis> This is perhaps the most critical and
+      <emphasis role="strong">
+        <biblioref linkend="geo-why-some-worker-co-ops-succeed-while-others-fail" />. Expectation of Benefit (Point
+        <biblioref linkend="cooperative-security" />):</emphasis> This is perhaps the most critical and
         innovatively applied prong in the framework. The traditional
         <emphasis>Howey</emphasis> test requires an "expectation of
         profits." However, this framework strategically adopts the
         more expansive California "risk capital" test, which
         broadens the concept from "profit" to
-        "benefit".5 Under this standard, the holder need not
+        "benefit".<biblioref linkend="cooperative-security" /> Under this standard, the holder need not
         expect profit in the form of dividends or capital appreciation
         alone. The expectation of any valuable benefit, such as access
         to services, use of facilities, or other valuable rights, is
-        sufficient to meet this prong.5 This adaptation is crucial for a
+        sufficient to meet this prong.<biblioref linkend="cooperative-security" /> This adaptation is crucial for a
         cooperative context. Cooperatives are designed to return net
         margins to patrons based on use (patronage), not to maximize
-        profit for capital providers.15 By defining "benefit"
+        profit for capital providers.<biblioref linkend="jrwiener-how-patronage-is-really-paid-out-to-cooperative-members-qualified-and-n" /> By defining "benefit"
         broadly, the patronage-driven returns and other advantages
         generated by the cooperative can satisfy the requirements of the
         securities test, even if they don't fit the narrow definition of
         corporate profit.
       </para>
     <para>
-      <emphasis role="strong">4. Benefit Derived from the Efforts of
-        Others (Point 6):</emphasis> The final prong requires that the
+      <emphasis role="strong">
+        <biblioref linkend="en-demutualization" />. Benefit Derived from the Efforts of
+        Others (Point <biblioref linkend="rd-rr192-pdf" />):</emphasis> The final prong requires that the
         expected benefit be derived primarily from the entrepreneurial
-        or managerial efforts of others.5 For a Cooperative Security,
+        or managerial efforts of others.<biblioref linkend="cooperative-security" /> For a Cooperative Security,
         the holder is a passive investor. Their return depends not on
         their own actions, but on the ability of the cooperative's
         board, management, and employees to run the business
         effectively, manage its assets, and generate sufficient revenue
-        to both serve patrons and provide a return to security holders.5
+        to both serve patrons and provide a return to security holders.<biblioref linkend="cooperative-security" />
         This distinguishes the passive security holder from an active
         member-patron, whose benefit is derived from their own
         participation and consumption.
@@ -224,27 +228,27 @@
           When a cooperative security is structured as a debt
           instrument, such as a promissory note, the analysis is
           governed by the Supreme Court's ruling in <emphasis>Reves v.
-          Ernst &amp; Young</emphasis>.16 The
+          Ernst &amp; Young</emphasis>.<biblioref linkend="casebriefs-reves-v-ernst-young-2" /> The
         </para>
       <para>
         <emphasis>Reves</emphasis> case itself involved demand notes
           sold by a farmer's cooperative to its members and the general
-          public to fund its operations.16 The Court recognized that
+          public to fund its operations.<biblioref linkend="casebriefs-reves-v-ernst-young-2" /> The Court recognized that
           while the securities acts literally include "any
           note" in the definition of a security, Congress did not
           intend for the term to be read so broadly as to cover all
           notes. It thus established the "family resemblance"
           test to distinguish notes that are securities (investment
           instruments) from those that are not (commercial or consumer
-          instruments).19
-        </para>
+          instruments).<biblioref linkend="caselaw-56-html" />
+      </para>
       <para>
           Under this test, a note is presumed to be a security. This
           presumption can be rebutted only if the note bears a strong
           "family resemblance" to a judicially created list of
           non-security instruments, such as a note delivered in consumer
           financing, a note secured by a mortgage on a home, or a
-          short-term note secured by a lien on a small business.20 The
+          short-term note secured by a lien on a small business.<biblioref linkend="terrybrennanlawyer-definition-of-a-security-its-all-in-the-family-resemblance-te" /> The
           resemblance is determined by analyzing four factors:
         </para>
       <orderedlist numeration="arabic" spacing="compact">
@@ -255,7 +259,7 @@
               money for the general use of a business enterprise and the
               buyer is interested primarily in the profit the note is
               expected to generate, the instrument is likely a
-              security.19 A Cooperative Security sold to raise capital
+              security.<biblioref linkend="caselaw-56-html" /> A Cooperative Security sold to raise capital
               for the co-op's operations perfectly fits this
               description, mirroring the facts in
               <emphasis>Reves</emphasis>.
@@ -266,8 +270,8 @@
             <emphasis role="strong">The plan of distribution of the
               instrument:</emphasis> If the instrument is offered and
               sold to a broad segment of the public as a passive
-              investment, this points toward it being a security.19
-            </para>
+              investment, this points toward it being a security.<biblioref linkend="caselaw-56-html" />
+          </para>
         </listitem>
         <listitem>
           <para>
@@ -275,8 +279,8 @@
               investing public:</emphasis> When an instrument is
               marketed and advertised to the public as an
               "investment," the public will reasonably expect
-              it to be a security protected by securities laws.18
-            </para>
+              it to be a security protected by securities laws.<biblioref linkend="studicata-reves-v-ernst-young" />
+          </para>
         </listitem>
         <listitem>
           <para>
@@ -285,7 +289,7 @@
               another regulatory regime, such as FDIC insurance or the
               collateralization of the note, significantly reduces the
               instrument's risk, the application of securities laws may
-              be unnecessary.22 A typical Cooperative Security, being
+              be unnecessary.<biblioref linkend="jdsupra-the-limits-of-applying-reves-v-ernst-5896777" /> A typical Cooperative Security, being
               uncollateralized and uninsured, would lack such factors,
               strengthening the case for it being a security.
             </para>
@@ -314,9 +318,9 @@
         cooperative model. This is not merely a matter of philosophy but
         a strict requirement for the enterprise to maintain its legal
         identity and favorable tax treatment under Subchapter T of the
-        Internal Revenue Code.24 This part of the analysis (Checklist
+        Internal Revenue Code.<biblioref linkend="irs-i1099ptr" /> This part of the analysis (Checklist
         Points 7-9) examines the three pillars of "operating on a
-        cooperative basis".5 Failure to uphold these pillars
+        cooperative basis".<biblioref linkend="cooperative-security" /> Failure to uphold these pillars
         creates what the framework terms an "Unsafe" security,
         which could trigger the loss of cooperative status and create an
         existential threat to the organization.
@@ -330,14 +334,14 @@
           The first pillar of cooperative operation is the subordination
           of capital. This principle, rooted in the original Rochdale
           model, dictates that capital should be a servant to the
-          enterprise, not its master.26 In practical terms, this means
+          enterprise, not its master.<biblioref linkend="historians-introduction-why-co-ops" /> In practical terms, this means
           that the primary purpose of the cooperative is to serve its
           patrons, not to maximize financial returns for its capital
-          providers.5 Subchapter T reflects this by allowing deductions
+          providers.<biblioref linkend="cooperative-security" /> Subchapter T reflects this by allowing deductions
           for patronage dividends but not for typical stock dividends.
           To comply, a cooperative must place a strict limit on the
-          dividends or interest paid on its capital instruments.5
-        </para>
+          dividends or interest paid on its capital instruments.<biblioref linkend="cooperative-security" />
+      </para>
       <para>
           For a Cooperative Security, this requirement creates an
           immediate and direct conflict with the expectations of a
@@ -358,10 +362,10 @@
       </title>
       <para>
           The second pillar is democratic control by members, which is
-          the political foundation of the cooperative model.27 This is
+          the political foundation of the cooperative model.<biblioref linkend="ncbaclusa-7-cooperative-principles" /> This is
           almost universally implemented on a "one-member,
           one-vote" basis, regardless of the amount of equity a
-          member holds.7 This ensures that governance is based on
+          member holds.<biblioref linkend="peoples-law-basics-forming-and-maintaining-cooperatives-maryland" /> This ensures that governance is based on
           participation, not capital investment.
         </para>
       <para>
@@ -373,14 +377,14 @@
           offering is successful. This would destroy the cooperative's
           democratic nature and violate a core tenet of Subchapter T,
           leading to the "failure of success" where a co-op
-          effectively demutualizes itself.3
-        </para>
+          effectively demutualizes itself.<biblioref linkend="geo-why-some-worker-co-ops-succeed-while-others-fail" />
+      </para>
       <para>
           The solution, and a key innovation of the "Safe"
           Cooperative Security model, is the structural uncoupling of
           financial interest from governance control. The security must
           be issued as either non-voting or strictly limited-voting
-          stock.29 This allows the cooperative to raise capital from an
+          stock.<biblioref linkend="coop-coops" /> This allows the cooperative to raise capital from an
           unlimited number of outside investors without diluting the
           one-member, one-vote control held by its member-patrons.
           Control of the enterprise remains with the members, while
@@ -399,14 +403,14 @@
           patronage basis. This means its primary economic function is
           to return its net margins (the difference between revenues and
           costs) to its members in proportion to their business volume,
-          or "patronage," with the cooperative.5 These returns
+          or "patronage," with the cooperative.<biblioref linkend="cooperative-security" /> These returns
           are known as patronage dividends or refunds and are the
           central mechanism by which a cooperative serves its members'
-          economic interests.25
-        </para>
+          economic interests.<biblioref linkend="cooperatives-cooperative-taxation" />
+      </para>
       <para>
           The existence of a Cooperative Security must support, or at a
-          minimum not interfere with, this core function.5 The use of
+          minimum not interfere with, this core function.<biblioref linkend="cooperative-security" /> The use of
           proceeds from the sale of the security should ideally be
           directed toward projects that enhance the cooperative's
           ability to serve its patrons—for example, funding new
@@ -434,8 +438,8 @@
         diagnostic tool to classify a proposed instrument and assess its
         viability. The culmination of this analysis is the distinction
         between a "Safe" and an "Unsafe" Cooperative
-        Security.5
-      </para>
+        Security.<biblioref linkend="cooperative-security" />
+    </para>
     <para>
         A <emphasis role="strong">"Safe" Cooperative
         Security</emphasis> is an instrument that has been meticulously
@@ -459,21 +463,21 @@
         fail one or more of the critical Subchapter T operational tests
         (Points 7-9). For instance, a security that grants investors
         voting rights proportional to their investment would fail the
-        democratic control test (Point 8). A security with uncapped,
+        democratic control test (Point <biblioref linkend="casebriefs-united-housing-foundation-inc-v-forman" />). A security with uncapped,
         market-rate dividends could violate the subordination of capital
-        (Point 7) and patronage basis (Point 9) tests. Such an
+        (Point <biblioref linkend="peoples-law-basics-forming-and-maintaining-cooperatives-maryland" />) and patronage basis (Point <biblioref linkend="dewitt-legal-considerations-for-creating-a-cooperative" />) tests. Such an
         instrument would place the cooperative in an untenable legal
         position, caught between its duties to investors under
         securities law and its foundational requirements under
         cooperative law. This conflict introduces an existential risk,
         potentially leading to the loss of cooperative status, adverse
         tax consequences, and ultimately, the failure of the
-        enterprise.2
-      </para>
+        enterprise.<biblioref linkend="archives-why-co-ops-die-exchange" />
+    </para>
     <para>
         The history of the cooperative movement is replete with examples
         of failures driven by insufficient capital, poor management, and
-        a drift away from member-centric principles.1 An
+        a drift away from member-centric principles.<biblioref linkend="concordfoodcoop-history-of-co-ops" /> An
         "Unsafe" security would act as an accelerant for these
         failure modes, importing the very capital-centric pressures that
         the cooperative model was created to shield its members from.
@@ -500,8 +504,8 @@
         <tbody>
           <row>
             <entry>
-                Checklist Point 5
-              </entry>
+                Checklist Point <biblioref linkend="cooperative-security" />
+            </entry>
             <entry>
               </entry>
             <entry>
@@ -622,7 +626,8 @@
           </row>
           <row>
             <entry>
-              <emphasis role="strong">7. Subordination of Capital</emphasis>
+              <emphasis role="strong">
+                <biblioref linkend="peoples-law-basics-forming-and-maintaining-cooperatives-maryland" />. Subordination of Capital</emphasis>
             </entry>
             <entry>
                 Is capital a servant, not master?
@@ -639,7 +644,8 @@
           </row>
           <row>
             <entry>
-              <emphasis role="strong">8. Democratic Member Control</emphasis>
+              <emphasis role="strong">
+                <biblioref linkend="casebriefs-united-housing-foundation-inc-v-forman" />. Democratic Member Control</emphasis>
             </entry>
             <entry>
                 One-member, one-vote?
@@ -656,7 +662,8 @@
           </row>
           <row>
             <entry>
-              <emphasis role="strong">9. Patronage Basis</emphasis>
+              <emphasis role="strong">
+                <biblioref linkend="dewitt-legal-considerations-for-creating-a-cooperative" />. Patronage Basis</emphasis>
             </entry>
             <entry>
                 Supports return of net margins to patrons?

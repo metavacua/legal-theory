@@ -28,19 +28,19 @@
         structured to be a security, its offer and sale to the public
         triggers the registration requirements of the Securities Act of
         1933. For a U.S.-based issuer, this typically involves filing a
-        Form S-1 registration statement with the SEC.61 This is a
+        Form S-1 registration statement with the SEC.<biblioref linkend="investopedia-sec-forms-asp" /> This is a
         formidable undertaking, requiring comprehensive disclosure about
         the company's business, finances, management, and the securities
-        being offered.63 The process is expensive, time-consuming, and
+        being offered.<biblioref linkend="smartasset-registering-with-the-sec" /> The process is expensive, time-consuming, and
         requires the coordinated effort of legal counsel, auditors, and
-        underwriters.64
-      </para>
+        underwriters.<biblioref linkend="dfinsolutions-what-s-1-ipo-filing" />
+    </para>
     <para>
         The standard Form S-1, designed for conventional corporations,
         is ill-suited to capture the unique characteristics of a
         Cooperative Security. Therefore, its disclosure sections would
         need significant and careful adaptation to provide investors
-        with a true and accurate picture of the investment.62 Key areas
+        with a true and accurate picture of the investment.<biblioref linkend="investopedia-sec-form-s-1-asp" /> Key areas
         requiring modification include:
       </para>
     <itemizedlist spacing="compact">
@@ -62,7 +62,7 @@
             that returns on capital (dividends or interest) are
             intentionally limited by the cooperative's bylaws to comply
             with the "subordination of capital" principle
-            under Subchapter T.5 This is a fundamental departure from a
+            under Subchapter T.<biblioref linkend="cooperative-security" /> This is a fundamental departure from a
             typical equity investment and must be a primary disclosure.
           </para>
       </listitem>
@@ -72,7 +72,7 @@
             The filing must detail the restricted-voting or non-voting
             nature of the securities and explain that ultimate control
             of the enterprise rests with the member-patrons under a
-            "one-member, one-vote" governance structure.29
+            "one-member, one-vote" governance structure.<biblioref linkend="coop-coops" />
             Investors must understand they are providing capital without
             gaining commensurate control.
           </para>
@@ -95,8 +95,8 @@
             will be deployed to benefit the cooperative enterprise and
             its patrons, aligning with the "patronage basis"
             principle, rather than solely to generate profits for
-            investors.62
-          </para>
+            investors.<biblioref linkend="investopedia-sec-form-s-1-asp" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -105,8 +105,8 @@
             legal description of the instrument, emphasizing its
             restricted voting rights and its relationship to the
             separate class of membership shares that hold governance
-            power.62
-          </para>
+            power.<biblioref linkend="investopedia-sec-form-s-1-asp" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -132,14 +132,14 @@
         Compliance with federal law is only the first hurdle. Issuers
         must also comply with the securities laws of each state in which
         they intend to offer the securities. These regulations are
-        commonly known as "Blue Sky" laws.65 While the
+        commonly known as "Blue Sky" laws.<biblioref linkend="investopedia-blueskylaws-asp" /> While the
         National Securities Markets Improvement Act of 1996 (NSMIA)
         preempted state registration requirements for certain
         "covered securities" (like those listed on major
         national exchanges), states retain significant authority,
         particularly their anti-fraud provisions and, for many
-        offerings, the power of "merit review".67
-      </para>
+        offerings, the power of "merit review".<biblioref linkend="law-blue-sky-law" />
+    </para>
     <para>
         The greatest regulatory challenge for a Cooperative Security may
         not come from the disclosure-focused SEC, but from state
@@ -149,8 +149,8 @@
         states like California and Texas) empower their regulators to
         block an offering if they deem it substantively "unfair,
         unjust, or inequitable" to investors, regardless of the
-        quality of disclosure.65
-      </para>
+        quality of disclosure.<biblioref linkend="investopedia-blueskylaws-asp" />
+    </para>
     <para>
         This creates a fundamental conflict. The very features that make
         a Cooperative Security "Safe" under cooperative law
@@ -212,31 +212,31 @@
         broker-dealers. These firms and their representatives are
         regulated by FINRA, which imposes strict rules on their
         interactions with customers, particularly concerning the
-        suitability of their recommendations.69
-      </para>
+        suitability of their recommendations.<biblioref linkend="finra-suitability" />
+    </para>
     <para>
       <emphasis role="strong">FINRA Rule 2111 (Suitability)</emphasis>
         requires that a broker-dealer have a "reasonable basis to
         believe that a recommended transaction or investment strategy...
         is suitable for the customer," based on that customer's
         investment profile (age, financial situation, objectives, risk
-        tolerance, etc.).70 This suitability obligation has three
-        components: (1)
+        tolerance, etc.).<biblioref linkend="finra-faq" /> This suitability obligation has three
+        components: (<biblioref linkend="concordfoodcoop-history-of-co-ops" />)
       </para>
     <para>
       <emphasis role="strong">Reasonable-Basis Suitability</emphasis>,
         requiring the firm to perform due diligence and understand the
-        product's risks and rewards; (2)
+        product's risks and rewards; (<biblioref linkend="archives-why-co-ops-die-exchange" />)
         <emphasis role="strong">Customer-Specific
         Suitability</emphasis>, requiring the firm to match the product
-        to a specific customer's profile; and (3)
+        to a specific customer's profile; and (<biblioref linkend="geo-why-some-worker-co-ops-succeed-while-others-fail" />)
         <emphasis role="strong">Quantitative Suitability</emphasis>,
-        ensuring a series of transactions is not excessive.69
-      </para>
+        ensuring a series of transactions is not excessive.<biblioref linkend="finra-suitability" />
+    </para>
     <para>
         For a novel instrument like a Cooperative Security, FINRA's
         rules on <emphasis role="strong">complex products</emphasis>
-        would almost certainly apply.71 FINRA expects firms to exercise
+        would almost certainly apply.<biblioref linkend="perkinscoie-finra-emphasizes-reg-bi-standards-complex-product-recommendations" /> FINRA expects firms to exercise
         heightened diligence when dealing with products that have
         intricate structures, uncertain returns, or unique risks. To
         comply, a broker-dealer firm wishing to offer Cooperative
@@ -252,8 +252,8 @@
             S-1; it would mean verifying the cooperative's compliance
             with the 9-Point Checklist, assessing the stability of its
             business model, and understanding the legal opinions
-            underpinning its hybrid structure.72
-          </para>
+            underpinning its hybrid structure.<biblioref linkend="sidley-finra-issues-reg-notice-on-broker-dealer-responsibilities-in-private-plac" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -264,8 +264,8 @@
             representatives, ensuring they fully comprehend the
             security's dual-return nature, restricted governance, and
             specific risk factors so they can explain them accurately to
-            clients.71
-          </para>
+            clients.<biblioref linkend="perkinscoie-finra-emphasizes-reg-bi-standards-complex-product-recommendations" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -275,8 +275,8 @@
             Securities. This would include criteria for approving
             customer accounts for such investments and a process for
             reviewing and approving individual recommendations made by
-            its representatives.72
-          </para>
+            its representatives.<biblioref linkend="sidley-finra-issues-reg-notice-on-broker-dealer-responsibilities-in-private-plac" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -286,8 +286,8 @@
             intense scrutiny under FINRA Rule 2210. They must be fair,
             balanced, and not misleading, giving equal prominence to the
             potential risks and limitations (like capped returns) as
-            they do to the potential benefits.72
-          </para>
+            they do to the potential benefits.<biblioref linkend="sidley-finra-issues-reg-notice-on-broker-dealer-responsibilities-in-private-plac" />
+        </para>
       </listitem>
     </orderedlist>
   </section>
@@ -300,18 +300,18 @@
         The entire regulatory examination of a Cooperative Security will
         be viewed through the lens of a long and often troubled history
         of demutualization, particularly in the agricultural and mutual
-        insurance sectors.4 Demutualization is the process by which a
+        insurance sectors.<biblioref linkend="en-demutualization" /> Demutualization is the process by which a
         member-owned organization converts into an investor-owned stock
-        company.75 While sometimes necessary for survival or growth,
+        company.<biblioref linkend="corporatefinanceinstitute-demutualization" /> While sometimes necessary for survival or growth,
         these conversions have frequently been criticized for creating
         windfalls for management and a select group of members at the
         time of conversion, while extinguishing the long-term,
-        member-focused purpose of the organization.77 Regulators are
+        member-focused purpose of the organization.<biblioref linkend="cambridge-e70520aadd5486b7b18f959ab4e06de7" /> Regulators are
         aware that these conversions can be triggered by a desire for
         liquidity, access to capital, and higher management
         compensation—the very same pressures that might motivate a
-        cooperative to issue a tradable security.79
-      </para>
+        cooperative to issue a tradable security.<biblioref linkend="hbtlj-olsen-pdf" />
+    </para>
     <para>
         Therefore, a key task for the issuer of a Cooperative Security
         is to convince regulators that the instrument is not simply a
@@ -328,15 +328,14 @@
         "Finnish model" of stock exchange cooperatives,
         provide precedents for how such stable hybrids can be structured
         and regulated, offering a path for growth without abandoning the
-        cooperative identity.31 The Coop Exchange, a proposed global
+        cooperative identity.<biblioref linkend="corpgov-hybrid-listed-cooperatives" /> The Coop Exchange, a proposed global
         stock exchange for cooperatives, represents a potential systemic
         solution by creating a specialized market environment with rules
         and processes designed explicitly to uphold cooperative
-        principles and prevent demutualization.29 This specialized
+        principles and prevent demutualization.<biblioref linkend="coop-coops" /> This specialized
         infrastructure could lower the regulatory and compliance costs
         for individual cooperatives and build a more predictable and
-        trusted path to market.82
-      </para>
+        trusted path to market.<biblioref linkend="coop-coop" />
+    </para>
   </section>
 </section>
-  

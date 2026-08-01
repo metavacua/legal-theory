@@ -185,8 +185,8 @@ class TestCorpusWideConformanceReport(unittest.TestCase):
         instead mean the measurement logic broke."""
         from measure_citation_conformance import REPO_ROOT, corpus_wide_report
         report = corpus_wide_report(REPO_ROOT / "docs")
-        self.assertEqual(report["total_nonstandard_entries"], 5304)
-        self.assertEqual(report["documents_with_nonstandard_entries"], 85)
+        self.assertEqual(report["total_nonstandard_entries"], 5221)
+        self.assertEqual(report["documents_with_nonstandard_entries"], 84)
 
 
 class TestMeasureNumberedCitationPattern(_WritesXmlFixture, unittest.TestCase):
