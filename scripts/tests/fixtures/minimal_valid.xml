@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" version="5.2" xml:id="minimal-valid" xml:lang="en">
+  <info><title>Minimal Valid Document</title></info>
+  <para>Minimal valid DocBook 5.2 content, used to exercise <literal>build_html()</literal>
+  against the real xslTNG/Saxon pipeline.</para>
+</article>

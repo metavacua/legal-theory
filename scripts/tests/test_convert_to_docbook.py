@@ -964,6 +964,23 @@ class TestFetchDocbookSchema(unittest.TestCase):
         self.assertEqual(path.stat().st_mtime, mtime_before)
 
 
+class TestFetchXsltng(unittest.TestCase):
+    def test_fetches_and_caches_a_working_docbook_wrapper(self):
+        from convert_to_docbook import fetch_xsltng
+        wrapper = fetch_xsltng()
+        self.assertTrue(wrapper.exists())
+        self.assertTrue(wrapper.is_file())
+        # bin/docbook has no "--version" flag (confirmed directly: it
+        # errors "Unknown configuration property --version", exit 2 --
+        # every non-"--help"/"--config"/etc. flag is passed straight
+        # through to Saxon, which doesn't recognize it either).
+        # "--help" is a real, documented flag, exits 0, and its first
+        # line is "DocBook xslTNG version 2.7.1" -- confirmed directly.
+        result = subprocess.run([str(wrapper), "--help"], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0)
+        self.assertIn("2.7.1", result.stdout + result.stderr)
+
+
 class TestWrapFragmentNoSiblingTitle(unittest.TestCase):
     def setUp(self):
         self.fixtures = Path(__file__).resolve().parent / "fixtures"

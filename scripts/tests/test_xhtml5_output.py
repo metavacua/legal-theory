@@ -10,11 +10,12 @@ research record."""
 import html.parser
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from convert_to_docbook import REPO_ROOT  # noqa: E402
+from convert_to_docbook import REPO_ROOT, build_html  # noqa: E402
 
 try:
     import html5lib
@@ -32,6 +33,7 @@ CUSTOM_XSL_PATH = REPO_ROOT / "docs" / "xsl" / "xhtml5-corpus.xsl"
 RAW_UPSTREAM_XSL_PATH = Path(
     "/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl"
 )
+FIXTURES = Path(__file__).resolve().parent / "fixtures"
 
 LANG_FIXTURE = '''<?xml version="1.0" encoding="UTF-8"?>
 <article xmlns="http://docbook.org/ns/docbook" version="5.2" xml:id="lang-check" xml:lang="en">
@@ -191,6 +193,16 @@ class TestBuildHtmlWiring(_FixtureTestCase):
         self.addCleanup(html_path.unlink)
         content = html_path.read_text(encoding="utf-8")
         self.assertTrue(content.startswith("<!DOCTYPE html>"))
+
+
+class TestBuildHtmlUsesXsltng(unittest.TestCase):
+    def test_build_html_uses_xsltng(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out.html"
+            build_html(FIXTURES / "minimal_valid.xml", out)
+            text = out.read_text(encoding="utf-8")
+            self.assertIn("DocBook xslTNG", text, "generator meta tag confirms the real pipeline ran")
+            self.assertNotIn("<?xml", text[:20], "no XML declaration in HTML5 text/html output")
 
 
 class TestCommittedCorpusHtmlIsClean(unittest.TestCase):

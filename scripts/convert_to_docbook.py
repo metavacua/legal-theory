@@ -380,12 +380,46 @@ def validate(xml_path):
     return errors
 
 
+XSLTNG_VERSION = "2.7.1"
+XSLTNG_URL = f"https://github.com/docbook/xslTNG/releases/download/{XSLTNG_VERSION}/docbook-xslTNG-{XSLTNG_VERSION}.zip"
+XSLTNG_CACHE_DIR = REPO_ROOT / ".cache" / "xsltng"
+XSLTNG_WRAPPER = XSLTNG_CACHE_DIR / f"docbook-xslTNG-{XSLTNG_VERSION}" / "bin" / "docbook"
+
+
+def fetch_xsltng():
+    """Path to the DocBook xslTNG distribution's bin/docbook wrapper
+    script (a real Java-classpath-aware Saxon runner, confirmed working
+    directly: transforms real corpus content, self-identifies as
+    "DocBook xslTNG version 2.7.1 / ... / SAXON HE 12.9" in its own
+    generator meta tag), fetched from the project's real GitHub
+    releases on first use and cached locally -- not vendored into the
+    repo, matching fetch_docbook_schema()'s own precedent. The
+    "-nosaxon" variant is deliberately NOT used: it omits Saxon and
+    several other required jars (xmlresolver, confirmed missing
+    directly: a bare Saxon-HE jar without it raises
+    NoClassDefFoundError on org/xmlresolver/Resolver), while the full
+    distribution bundles a complete, tested, mutually-compatible set."""
+    if not XSLTNG_WRAPPER.exists():
+        XSLTNG_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        zip_path = XSLTNG_CACHE_DIR / "xsltng.zip"
+        subprocess.run(
+            ["curl", "-fsSL", "-o", str(zip_path), XSLTNG_URL],
+            check=True,
+        )
+        subprocess.run(
+            ["unzip", "-q", "-o", str(zip_path), "-d", str(XSLTNG_CACHE_DIR)],
+            check=True,
+        )
+        zip_path.unlink()
+        XSLTNG_WRAPPER.chmod(0o755)
+    return XSLTNG_WRAPPER
+
+
 def build_html(xml_path, out_path):
-    raise NotImplementedError(
-        "build_html() was demolished along with xsltproc/docbook-xsl-ns/"
-        "xhtml5-corpus.xsl -- Task 4 of the xslTNG/Saxon migration plan "
-        "rebuilds this from scratch. If you are seeing this error, that "
-        "task has not run yet in this worktree."
+    wrapper = fetch_xsltng()
+    result = subprocess.run(
+        [str(wrapper), str(xml_path), f"-o:{out_path}"],
+        capture_output=True, text=True, check=True,
     )
 
 
