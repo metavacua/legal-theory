@@ -49,11 +49,11 @@
             rights and limitations of these instruments must be clearly
             defined in the cooperative's articles and bylaws. The
             dividend must comply with California's 15% cap on
-            distributions (§ 12451).15 Liquidity is provided exclusively
+            distributions (§ 12451).<biblioref linkend="california-corporations-code-section-12451" /> Liquidity is provided exclusively
             through redemption by the cooperative, which is itself
             subject to the solvency requirements of § 12453, meaning the
             cooperative cannot redeem shares if doing so would
-            jeopardize its financial stability.16 This structure is
+            jeopardize its financial stability.<biblioref linkend="law-12450-12454-html" /> This structure is
             low-risk from a securities perspective as there is no public
             plan of distribution.
           </para>
@@ -77,7 +77,7 @@
           <emphasis role="strong">Structure:</emphasis> The
             instruments of choice are non-voting preferred stock (like
             the Shared Capital model) or, in an agricultural context,
-            tradable delivery rights (like the NGC model).20 These
+            tradable delivery rights (like the NGC model).<biblioref linkend="sec-sec" /> These
             instruments are intentionally designed as securities.
           </para>
       </listitem>
@@ -129,7 +129,7 @@
             tests. The profit-maximization motive of public market
             investors is diametrically opposed to the principle of
             <emphasis role="strong">subordination of
-            capital</emphasis>.9 A public market would create immense
+            capital</emphasis>.<biblioref linkend="ncbarblog-tax-taxation-of-cooperatives-under-subchapter-t" /> A public market would create immense
             pressure to prioritize shareholder returns over patron
             benefits, violating the essence of Subchapter T. It would
             destroy <emphasis role="strong">democratic
@@ -137,12 +137,12 @@
             and anonymous group of non-patrons with no connection to the
             cooperative's mission. The "closed loop" of
             patronage that cooperative law is designed to protect would
-            be irrevocably broken.1 From a securities law perspective,
+            be irrevocably broken.<biblioref linkend="lewitthackman-california-law-cooperatives-dgurnicklalawyermag-pdf" /> From a securities law perspective,
             under the <emphasis>Reves</emphasis> and
             <emphasis>Howey</emphasis> tests, the instrument would be so
             clearly an investment for profit that it would be difficult
-            to argue it retains any cooperative character at all.23
-          </para>
+            to argue it retains any cooperative character at all.<biblioref linkend="uscacoopsecv6" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -173,24 +173,24 @@
           <emphasis role="strong">[ ] Purpose Clause:</emphasis> State
             clearly that the corporation is a cooperative organized
             under the Cooperative Corporation Law and that its primary
-            purpose is the mutual benefit of its members as patrons.3
-          </para>
+            purpose is the mutual benefit of its members as patrons.<biblioref linkend="ncbaclusa-california-general-statute-pdf" />
+        </para>
       </listitem>
       <listitem>
         <para>
           <emphasis role="strong">[ ] Membership
             Qualifications:</emphasis> Define precisely who is eligible
             for membership, tying eligibility directly to patronage of
-            the cooperative's services.1
-          </para>
+            the cooperative's services.<biblioref linkend="lewitthackman-california-law-cooperatives-dgurnicklalawyermag-pdf" />
+        </para>
       </listitem>
       <listitem>
         <para>
           <emphasis role="strong">[ ] Voting Rights:</emphasis>
             Explicitly state that voting rights for members are equal,
             adhering to the one-member, one-vote principle (§ 12404),
-            unless utilizing a specific statutory exception.10
-          </para>
+            unless utilizing a specific statutory exception.<biblioref linkend="california-corporations-code-section-12404" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -199,8 +199,8 @@
             non-voting preferred), define the rights, preferences,
             privileges, and restrictions of each class with absolute
             clarity, especially the absence of voting rights for any
-            non-patron class.12
-          </para>
+            non-patron class.<biblioref linkend="codes-corp-sect-12401" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -209,8 +209,8 @@
             equity are not transferable except as provided in the
             bylaws. The bylaws should then detail the restrictions,
             including, at a minimum, a right of first refusal for the
-            cooperative.1
-          </para>
+            cooperative.<biblioref linkend="lewitthackman-california-law-cooperatives-dgurnicklalawyermag-pdf" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -218,8 +218,8 @@
             any dividend-bearing instrument, state that dividends are
             discretionary, non-cumulative, and subject to the 15% cap
             under § 12451. Specify that they will be paid from
-            non-patronage sources (for non-exempt co-ops).9
-          </para>
+            non-patronage sources (for non-exempt co-ops).<biblioref linkend="ncbarblog-tax-taxation-of-cooperatives-under-subchapter-t" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -234,8 +234,8 @@
           <emphasis role="strong">[ ] Patronage Definition:</emphasis>
             Define what constitutes "patronage" and the
             formula for calculating and distributing patronage refunds
-            to ensure compliance with Subchapter T.6
-          </para>
+            to ensure compliance with Subchapter T.<biblioref linkend="law-12200-12203-html" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -250,4 +250,3 @@
     </itemizedlist>
   </section>
 </section>
-  

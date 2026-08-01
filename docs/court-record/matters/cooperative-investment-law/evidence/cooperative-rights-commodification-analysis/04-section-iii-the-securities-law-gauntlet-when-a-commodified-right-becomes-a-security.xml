@@ -19,8 +19,8 @@
       a cooperative instrument is a security is a fact-intensive inquiry
       that hinges on its economic reality, not its name. A unified
       framework, integrating the key Supreme Court tests, is essential
-      for this determination.23
-    </para>
+      for this determination.<biblioref linkend="uscacoopsecv6" />
+  </para>
   <section xml:id="a-initial-characterization-debt-or-equity">
     <title>
       <emphasis role="strong">A. Initial Characterization: Debt
@@ -29,8 +29,8 @@
     <para>
         The first analytical step is to characterize the fundamental
         nature of the instrument, as this determines which legal test to
-        apply.23
-      </para>
+        apply.<biblioref linkend="uscacoopsecv6" />
+    </para>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -40,8 +40,8 @@
             a principal amount, and a stated interest rate (even if
             zero). If the instrument has these characteristics, the
             proper analysis falls under the <emphasis>Reves</emphasis>
-            test.23
-          </para>
+            test.<biblioref linkend="uscacoopsecv6" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -53,8 +53,8 @@
             success. This includes things like preferred stock, tradable
             delivery rights, or any instrument marketed for its
             potential appreciation. If so, the analysis proceeds under
-            the <emphasis>Howey</emphasis> test.23
-          </para>
+            the <emphasis>Howey</emphasis> test.<biblioref linkend="uscacoopsecv6" />
+        </para>
       </listitem>
     </itemizedlist>
   </section>
@@ -182,7 +182,7 @@
         <emphasis>Howey</emphasis> test. The member's primary motivation
         is not financial return but rather to gain access to goods or
         services at a lower cost or higher quality—a benefit of use, not
-        of investment.1 However, the moment a cooperative unbundles
+        of investment.<biblioref linkend="lewitthackman-california-law-cooperatives-dgurnicklalawyermag-pdf" /> However, the moment a cooperative unbundles
         rights and creates a special instrument designed to attract
         capital, the analysis shifts dramatically. An instrument that is
         transferable, can appreciate in value, or pays a dividend is
@@ -190,7 +190,7 @@
       </para>
     <para>
         Consider the Class A Preferred Stock offered by Shared Capital
-        Cooperative, a Subchapter T entity.20 Applying the
+        Cooperative, a Subchapter T entity.<biblioref linkend="sec-sec" /> Applying the
       </para>
     <para>
       <emphasis>Howey</emphasis> test demonstrates why it is a
@@ -240,7 +240,7 @@
         meaningfully to passive, non-patron investors. An outside
         investor in a non-voting instrument has no voice in governance
         and their primary interest—financial return—is statutorily
-        subordinated to the interests of the patron-members.2 For
+        subordinated to the interests of the patron-members.<biblioref linkend="ucanr-legacy-file-143728-pdf-legacy-site-sfp" /> For
         example, the patron-controlled board could decide to forgo
         paying a preferred dividend in favor of making investments that
         lower costs for patrons, leaving the investor with no recourse
@@ -252,4 +252,3 @@
       </para>
   </section>
 </section>
-  

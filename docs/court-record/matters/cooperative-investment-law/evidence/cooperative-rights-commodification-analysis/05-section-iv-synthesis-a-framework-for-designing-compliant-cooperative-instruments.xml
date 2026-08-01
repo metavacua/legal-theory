@@ -23,7 +23,7 @@
     <para>
         The intersection of these legal regimes gives rise to a novel
         asset class that can be termed a "Subchapter T
-        Security".23 This is an instrument that is legally
+        Security".<biblioref linkend="uscacoopsecv6" /> This is an instrument that is legally
         classified as a security under the
       </para>
     <para>
@@ -40,8 +40,8 @@
         patrons, rather than being privatized and captured by the
         instrument holder alone. It is a tool for injecting capital
         <emphasis>into</emphasis> the cooperative commons, not for
-        enclosing and extracting value <emphasis>from</emphasis> it.23
-      </para>
+        enclosing and extracting value <emphasis>from</emphasis> it.<biblioref linkend="uscacoopsecv6" />
+    </para>
   </section>
   <section xml:id="b-the-three-pillar-compliance-test">
     <title>
@@ -64,8 +64,8 @@
             compliant instrument is engineered to ensure that gains are
             captured by the cooperative and distributed according to
             patronage principles, thereby socializing the benefits of
-            the capital rather than privatizing them.23
-          </para>
+            the capital rather than privatizing them.<biblioref linkend="uscacoopsecv6" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -79,8 +79,8 @@
             security per member or multiple non-duplicative voting
             securities (e.g., one vote for the main board, a separate
             vote for a regional committee), but it forbids the standard
-            corporate "one share, one vote" model.23
-          </para>
+            corporate "one share, one vote" model.<biblioref linkend="uscacoopsecv6" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -95,8 +95,8 @@
             instrument that raises capital for purposes unrelated to the
             cooperative's direct business with patrons, such as for a
             speculative investment fund, would sever this link and fail
-            the test.23
-          </para>
+            the test.<biblioref linkend="uscacoopsecv6" />
+        </para>
       </listitem>
     </orderedlist>
   </section>
@@ -147,47 +147,50 @@
           </row>
           <row>
             <entry>
-              <emphasis role="strong">1. Standard Membership Share</emphasis>
+              <emphasis role="strong">
+                <biblioref linkend="lewitthackman-california-law-cooperatives-dgurnicklalawyermag-pdf" />. Standard Membership Share</emphasis>
             </entry>
             <entry>
-              <emphasis role="strong">High:</emphasis> The baseline model. Equal voting power is the default (§12404).10 Default is non-transferable (§12404).1
-              </entry>
+              <emphasis role="strong">High:</emphasis> The baseline model. Equal voting power is the default (§12404).<biblioref linkend="california-corporations-code-section-12404" /> Default is non-transferable (§12404).<biblioref linkend="lewitthackman-california-law-cooperatives-dgurnicklalawyermag-pdf" />
+            </entry>
             <entry>
               <emphasis role="strong">High:</emphasis> Perfectly embodies the three pillars. The member's primary relationship is patronage.
               </entry>
             <entry>
-              <emphasis role="strong">Low Risk of Security Classification:</emphasis> Often fails the "expectation of profit" prong of the <emphasis>Howey</emphasis> test, as the benefit is cost savings or access to services, not financial return.1
-              </entry>
+              <emphasis role="strong">Low Risk of Security Classification:</emphasis> Often fails the "expectation of profit" prong of the <emphasis>Howey</emphasis> test, as the benefit is cost savings or access to services, not financial return.<biblioref linkend="lewitthackman-california-law-cooperatives-dgurnicklalawyermag-pdf" />
+            </entry>
             <entry>
-              <emphasis role="strong">Non-Tradable:</emphasis> Not considered a "saleable commodity".1 Liquidity is available only through redemption by the cooperative, subject to its bylaws and solvency.
+              <emphasis role="strong">Non-Tradable:</emphasis> Not considered a "saleable commodity".<biblioref linkend="lewitthackman-california-law-cooperatives-dgurnicklalawyermag-pdf" /> Liquidity is available only through redemption by the cooperative, subject to its bylaws and solvency.
               </entry>
           </row>
           <row>
             <entry>
-              <emphasis role="strong">2. Non-Voting Preferred Stock (e.g., Shared Capital Model)</emphasis>
+              <emphasis role="strong">
+                <biblioref linkend="ucanr-legacy-file-143728-pdf-legacy-site-sfp" />. Non-Voting Preferred Stock (e.g., Shared Capital Model)</emphasis>
             </entry>
             <entry>
-              <emphasis role="strong">High:</emphasis> Permitted by the statutory distinction between equal voting rights and potentially unequal proprietary rights (§12310).12 Dividends must adhere to the 15% annual cap on distributions (§12451).15
+              <emphasis role="strong">High:</emphasis> Permitted by the statutory distinction between equal voting rights and potentially unequal proprietary rights (§12310).<biblioref linkend="codes-corp-sect-12401" /> Dividends must adhere to the 15% annual cap on distributions (§12451).<biblioref linkend="california-corporations-code-section-12451" />
+            </entry>
+            <entry>
+              <emphasis role="strong">Medium:</emphasis> Compliant only if dividends are paid from the cooperative's after-tax non-patronage income.<biblioref linkend="ncbarblog-tax-taxation-of-cooperatives-under-subchapter-t" /> Risks failing the "subordination of capital" pillar if returns are excessive or if it creates pressure to prioritize non-patronage business over patronage business.
               </entry>
             <entry>
-              <emphasis role="strong">Medium:</emphasis> Compliant only if dividends are paid from the cooperative's after-tax non-patronage income.9 Risks failing the "subordination of capital" pillar if returns are excessive or if it creates pressure to prioritize non-patronage business over patronage business.
-              </entry>
-            <entry>
-              <emphasis role="strong">High Likelihood of Security Classification:</emphasis> Clearly meets all four prongs of the <emphasis>Howey</emphasis> test due to the investment of money for an expected profit (dividends) based on the efforts of management.20
-              </entry>
+              <emphasis role="strong">High Likelihood of Security Classification:</emphasis> Clearly meets all four prongs of the <emphasis>Howey</emphasis> test due to the investment of money for an expected profit (dividends) based on the efforts of management.<biblioref linkend="sec-sec" />
+            </entry>
             <entry>
               <emphasis role="strong">Privately Tradable:</emphasis> Can be sold to investors, typically under a securities law exemption like Regulation D. Robust transfer restrictions in the bylaws (e.g., right of first refusal for the co-op) are essential to maintain control. Public trading is extremely high risk and likely incompatible with Subchapter T.
               </entry>
           </row>
           <row>
             <entry>
-              <emphasis role="strong">3. Tradable Delivery Right (e.g., NGC Model)</emphasis>
+              <emphasis role="strong">
+                <biblioref linkend="ncbaclusa-california-general-statute-pdf" />. Tradable Delivery Right (e.g., NGC Model)</emphasis>
             </entry>
             <entry>
-              <emphasis role="strong">High:</emphasis> Can be structured as a contractual right tied to membership. The terms of transferability must be explicitly defined in the articles or bylaws.1
-              </entry>
+              <emphasis role="strong">High:</emphasis> Can be structured as a contractual right tied to membership. The terms of transferability must be explicitly defined in the articles or bylaws.<biblioref linkend="lewitthackman-california-law-cooperatives-dgurnicklalawyermag-pdf" />
+            </entry>
             <entry>
-              <emphasis role="strong">High:</emphasis> Passes the "actually facilitates" test, as the capital raised is directly used to enable and enhance the patronage activity (e.g., building a processing plant).23 The right's value is tied to the benefit of patronage, not passive profit.
+              <emphasis role="strong">High:</emphasis> Passes the "actually facilitates" test, as the capital raised is directly used to enable and enhance the patronage activity (e.g., building a processing plant).<biblioref linkend="uscacoopsecv6" /> The right's value is tied to the benefit of patronage, not passive profit.
               </entry>
             <entry>
               <emphasis role="strong">Medium Risk of Security Classification:</emphasis> Likely meets the <emphasis>Howey</emphasis> test. There is an investment of value, a common enterprise, and the return depends on the efforts of management. The potential for the right to appreciate in value creates an expectation of profit.
@@ -198,11 +201,12 @@
           </row>
           <row>
             <entry>
-              <emphasis role="strong">4. Patronage-Linked Debt Note</emphasis>
+              <emphasis role="strong">
+                <biblioref linkend="codes-corp-sect-12200" />. Patronage-Linked Debt Note</emphasis>
             </entry>
             <entry>
-              <emphasis role="strong">High:</emphasis> Cooperatives have the general power to borrow money and issue debt securities (§12320).3
-              </entry>
+              <emphasis role="strong">High:</emphasis> Cooperatives have the general power to borrow money and issue debt securities (§12320).<biblioref linkend="ncbaclusa-california-general-statute-pdf" />
+            </entry>
             <entry>
               <emphasis role="strong">High:</emphasis> Compliant if interest payments are treated as a legitimate cost of doing business that facilitates the cooperative's patronage activities (e.g., borrowing for operating capital to serve members).
               </entry>
@@ -210,22 +214,23 @@
               <emphasis role="strong">Medium Risk of Security Classification (under
                 <emphasis>
                   <emphasis role="strong">Reves</emphasis>
-                </emphasis>):</emphasis> Highly fact-dependent. If marketed broadly to the public as an "investment note," it is almost certainly a security. If structured as a member loan program with limited distribution and framed as a commercial transaction, it may escape classification.23
-              </entry>
+                </emphasis>):</emphasis> Highly fact-dependent. If marketed broadly to the public as an "investment note," it is almost certainly a security. If structured as a member loan program with limited distribution and framed as a commercial transaction, it may escape classification.<biblioref linkend="uscacoopsecv6" />
+            </entry>
             <entry>
               <emphasis role="strong">Privately Tradable (if a security):</emphasis> Similar risk profile to preferred stock. If it is not a security, its tradability is governed purely by the terms of the contract.
               </entry>
           </row>
           <row>
             <entry>
-              <emphasis role="strong">5. Special Management Share (Hypothetical)</emphasis>
+              <emphasis role="strong">
+                <biblioref linkend="law-part-2" />. Special Management Share (Hypothetical)</emphasis>
             </entry>
             <entry>
-              <emphasis role="strong">Very Low:</emphasis> Fundamentally violates the principle of equal voting power for members (§12404).10 It is unlikely to fit within the narrow statutory exceptions for worker or federated cooperatives.
+              <emphasis role="strong">Very Low:</emphasis> Fundamentally violates the principle of equal voting power for members (§12404).<biblioref linkend="california-corporations-code-section-12404" /> It is unlikely to fit within the narrow statutory exceptions for worker or federated cooperatives.
               </entry>
             <entry>
-              <emphasis role="strong">Very Low:</emphasis> Directly violates the "democratic control" pillar of Subchapter T by concentrating power based on a special class of share rather than patronage.9
-              </entry>
+              <emphasis role="strong">Very Low:</emphasis> Directly violates the "democratic control" pillar of Subchapter T by concentrating power based on a special class of share rather than patronage.<biblioref linkend="ncbarblog-tax-taxation-of-cooperatives-under-subchapter-t" />
+            </entry>
             <entry>
               <emphasis role="strong">High Likelihood of Security Classification:</emphasis> A clear investment contract where the "profit" sought is control and influence over the enterprise.
               </entry>
