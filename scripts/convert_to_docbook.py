@@ -292,7 +292,7 @@ def write_metadata(meta_path, title, subject=None):
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-HTML5_XSL_PATH = REPO_ROOT / "docs" / "xsl" / "xhtml5-corpus.xsl"
+# HTML5_XSL_PATH deleted entirely -- no replacement constant yet, added fresh in Task 4.
 
 DOCBOOK_RNC_URL = "https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc"
 DOCBOOK_SCHEMA_CACHE = REPO_ROOT / ".cache" / "docbook-5.2" / "docbookxi.rnc"
@@ -381,11 +381,12 @@ def validate(xml_path):
 
 
 def build_html(xml_path, out_path):
-    result = subprocess.run(
-        ["xsltproc", "--xinclude", "--stringparam", "docbook.css.source", "", str(HTML5_XSL_PATH), str(xml_path)],
-        capture_output=True, text=True, check=True,
+    raise NotImplementedError(
+        "build_html() was demolished along with xsltproc/docbook-xsl-ns/"
+        "xhtml5-corpus.xsl -- Task 4 of the xslTNG/Saxon migration plan "
+        "rebuilds this from scratch. If you are seeing this error, that "
+        "task has not run yet in this worktree."
     )
-    Path(out_path).write_text(result.stdout, encoding="utf-8")
 
 
 def _is_ignorable_word_run(words):

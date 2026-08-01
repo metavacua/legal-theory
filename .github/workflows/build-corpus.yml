@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install DocBook toolchain
-        run: sudo apt-get update && sudo apt-get install -y libxml2-utils xsltproc jing docbook-xsl-ns python3-lxml
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils jing python3-lxml
 
       - name: Validate and rebuild corpus HTML
         run: |
@@ -58,23 +58,18 @@ jobs:
             # could quietly drift out of sync with what that script knows.
             python3 scripts/check_docbook_grammar.py "$xml"
 
-            # dcterms-completeness and the HTML build are policies specific
-            # to reader-facing shell documents (root element "article"),
-            # unrelated to grammar validity -- this is the one classification
-            # this loop still needs to make for itself. HTML is built via
-            # docs/xsl/xhtml5-corpus.xsl, a thin customization layer over the
-            # official docbook-xsl-ns xhtml5 stylesheet (not the upstream
-            # stylesheet directly) -- it suppresses the leading XML
-            # declaration and pairs xml:lang with lang, both required for
-            # this output to be valid HTML5 under real text/html serving
-            # (this corpus is served by GitHub Pages, which always serves
-            # .html as text/html), and works around a real, upstream
-            # docbook-xsl-ns bug emitting invalid "cellspacing"/"cellpadding"
-            # CSS properties for blockquote-derived tables.
+            # dcterms-completeness is a policy specific to reader-facing
+            # shell documents (root element "article"), unrelated to grammar
+            # validity -- this is the one classification this loop still
+            # needs to make for itself.
+            #
+            # HTML build step removed: the old xsltproc/docbook-xsl-ns/
+            # docs/xsl/xhtml5-corpus.xsl toolchain was demolished (xslTNG/
+            # Saxon migration plan, Task 2) and has no replacement yet --
+            # Task 7 restores this step against the new pipeline.
             root_element="$(xmllint --xpath 'name(/*)' "$xml" 2>/dev/null || true)"
             if [ "$root_element" = "article" ]; then
               python3 scripts/check_dcterms_completeness.py "$xml"
-              xsltproc --xinclude --stringparam docbook.css.source '' docs/xsl/xhtml5-corpus.xsl "$xml" > "${xml%.xml}.html"
             fi
           done < <(find docs -name '*.xml' -not -path '*/scratch/*' | sort)
 

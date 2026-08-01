@@ -179,37 +179,8 @@ class TestHtml5libAgreesNoParseErrors(_FixtureTestCase):
         parser.parse(html.encode("utf-8"))
         self.assertEqual(parser.errors, [])
 
-    def test_raw_upstream_output_does_have_a_parse_error(self):
-        # Negative control: proves the assertion above would actually have
-        # caught the original bug, not just that this fixture happens to
-        # parse cleanly regardless of which stylesheet built it.
-        html = self._build(LANG_FIXTURE, "html5lib-raw.xml", RAW_UPSTREAM_XSL_PATH)
-        parser = html5lib.HTMLParser(strict=False)
-        parser.parse(html.encode("utf-8"))
-        self.assertTrue(
-            parser.errors,
-            "expected the raw upstream stylesheet's leading XML "
-            "declaration to trip a parse error",
-        )
-
-
-class TestBuildCorpusWorkflowUsesCustomizationLayer(unittest.TestCase):
-    def test_xsltproc_invocation_points_at_the_customization_layer(self):
-        workflow = (REPO_ROOT / ".github" / "workflows" / "build-corpus.yml").read_text(
-            encoding="utf-8"
-        )
-        self.assertIn("docs/xsl/xhtml5-corpus.xsl", workflow)
-        self.assertNotIn(
-            "/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl",
-            workflow,
-        )
-
 
 class TestBuildHtmlWiring(_FixtureTestCase):
-    def test_html5_xsl_path_points_at_the_customization_layer(self):
-        from convert_to_docbook import HTML5_XSL_PATH
-        self.assertEqual(HTML5_XSL_PATH, CUSTOM_XSL_PATH)
-
     def test_build_html_output_has_no_xml_declaration(self):
         from convert_to_docbook import build_html
         xml_path = self.fixtures / "build-html-wiring.xml"
