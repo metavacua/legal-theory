@@ -292,7 +292,6 @@ def write_metadata(meta_path, title, subject=None):
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-# HTML5_XSL_PATH deleted entirely -- no replacement constant yet, added fresh in Task 4.
 
 DOCBOOK_RNC_URL = "https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc"
 DOCBOOK_SCHEMA_CACHE = REPO_ROOT / ".cache" / "docbook-5.2" / "docbookxi.rnc"
@@ -303,9 +302,11 @@ def fetch_docbook_schema():
     """Path to the real, official DocBook 5.2 XInclude-aware RELAX NG
     compact schema, fetched from OASIS on first use and cached locally
     (not vendored into the repo -- kept out of git, matching how this
-    pipeline already installs jing/xmllint/xsltproc via apt at build
-    time rather than committing them). Subsequent calls reuse the
-    cached file without a network round-trip."""
+    pipeline already installs jing/xmllint via apt at build time, and
+    fetches/caches DocBook xslTNG itself the same not-vendored way (see
+    fetch_xsltng() below), rather than committing any of them).
+    Subsequent calls reuse the cached file without a network
+    round-trip."""
     if not DOCBOOK_SCHEMA_CACHE.exists():
         DOCBOOK_SCHEMA_CACHE.parent.mkdir(parents=True, exist_ok=True)
         subprocess.run(
