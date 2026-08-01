@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install DocBook toolchain
-        run: sudo apt-get update && sudo apt-get install -y libxml2-utils jing python3-lxml
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils jing python3-lxml default-jre-headless
 
       - name: Validate and rebuild corpus HTML
         run: |
@@ -58,18 +58,19 @@ jobs:
             # could quietly drift out of sync with what that script knows.
             python3 scripts/check_docbook_grammar.py "$xml"
 
-            # dcterms-completeness is a policy specific to reader-facing
-            # shell documents (root element "article"), unrelated to grammar
-            # validity -- this is the one classification this loop still
-            # needs to make for itself.
-            #
-            # HTML build step removed: the old xsltproc/docbook-xsl-ns/
-            # docs/xsl/xhtml5-corpus.xsl toolchain was demolished (xslTNG/
-            # Saxon migration plan, Task 2) and has no replacement yet --
-            # Task 7 restores this step against the new pipeline.
+            # dcterms-completeness and the HTML build are policies specific
+            # to reader-facing shell documents (root element "article"),
+            # unrelated to grammar validity -- this is the one
+            # classification this loop still needs to make for itself. HTML
+            # is built by calling the real build_html() from
+            # scripts/convert_to_docbook.py -- the same function the
+            # corpus-wide rebuild (xslTNG/Saxon migration plan, Task 6)
+            # used -- rather than re-deriving Saxon's invocation shape a
+            # second, independently-drifting time in bash.
             root_element="$(xmllint --xpath 'name(/*)' "$xml" 2>/dev/null || true)"
             if [ "$root_element" = "article" ]; then
               python3 scripts/check_dcterms_completeness.py "$xml"
+              python3 -c "import sys; sys.path.insert(0, 'scripts'); from convert_to_docbook import build_html; xml = sys.argv[1]; build_html(xml, xml[:-4] + '.html')" "$xml"
             fi
           done < <(find docs -name '*.xml' -not -path '*/scratch/*' | sort)
 
