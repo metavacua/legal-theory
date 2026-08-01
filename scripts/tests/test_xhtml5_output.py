@@ -46,9 +46,6 @@ HTML5LIB_SKIP_REASON = (
 )
 
 CUSTOM_XSL_PATH = REPO_ROOT / "docs" / "xsl" / "xhtml5-corpus.xsl"
-RAW_UPSTREAM_XSL_PATH = Path(
-    "/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/xhtml5/docbook.xsl"
-)
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 
 LANG_FIXTURE = '''<?xml version="1.0" encoding="UTF-8"?>

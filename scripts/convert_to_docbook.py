@@ -418,7 +418,7 @@ def fetch_xsltng():
 
 def build_html(xml_path, out_path):
     wrapper = fetch_xsltng()
-    result = subprocess.run(
+    subprocess.run(
         [str(wrapper), str(xml_path), f"-o:{out_path}"],
         capture_output=True, text=True, check=True,
     )
