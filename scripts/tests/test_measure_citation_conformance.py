@@ -175,18 +175,18 @@ class TestMeasureCitationConformance(_WritesXmlFixture, unittest.TestCase):
 
 class TestCorpusWideConformanceReport(unittest.TestCase):
     def test_real_corpus_produces_the_known_baseline(self):
-        """Anchors this measurement against the corpus-wide count independently
-        confirmed by direct grep during the 2026-07-26 review: 88 documents
-        carried a works-cited section, 5,482 total informal entries. Updated
-        after Task 6's pilot conversion of llms-as-categorical-systems (82
-        entries, the only document that fully lost its works-cited section)
-        dropped the baseline to 87 documents / 5,400 entries. If this drifts
-        again, either the corpus changed (expected, update the baseline) or
-        the measurement logic broke (not expected, investigate)."""
+        """Anchors this measurement against the actual corpus-wide state. This
+        number necessarily keeps changing as Category A documents are
+        converted to real biblioentry/biblioref structure (Task 3 of
+        .superpowers/sdd/2026-07-29-category-a-toolchain-verification-plan.md)
+        -- both assertions below are updated per-document as that conversion
+        proceeds, per this test's own long-documented "if this drifts, update
+        the baseline" policy; a drift with no accompanying corpus change would
+        instead mean the measurement logic broke."""
         from measure_citation_conformance import REPO_ROOT, corpus_wide_report
         report = corpus_wide_report(REPO_ROOT / "docs")
-        self.assertEqual(report["total_nonstandard_entries"], 5400)
-        self.assertEqual(report["documents_with_nonstandard_entries"], 87)
+        self.assertEqual(report["total_nonstandard_entries"], 5334)
+        self.assertEqual(report["documents_with_nonstandard_entries"], 86)
 
 
 class TestMeasureNumberedCitationPattern(_WritesXmlFixture, unittest.TestCase):

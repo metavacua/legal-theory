@@ -48,8 +48,8 @@
               Capital:</emphasis> In a cooperative, capital is a tool to
               serve the members' needs, not an end in itself. Returns on
               capital are limited, and capital does not carry the
-              primary rights of control.40
-            </para>
+              primary rights of control.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+          </para>
         </listitem>
         <listitem>
           <para>
@@ -58,8 +58,8 @@
               (patrons), typically on a one-member, one-vote basis,
               regardless of the amount of capital each member has
               contributed. This decouples governance from capital
-              investment.40
-            </para>
+              investment.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+          </para>
         </listitem>
         <listitem>
           <para>
@@ -69,8 +69,8 @@
               earnings or surplus generated from business transacted
               with members ("patronage") is returned to those
               members in proportion to their use of the cooperative's
-              services.40
-            </para>
+              services.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+          </para>
         </listitem>
       </orderedlist>
     </section>
@@ -82,24 +82,24 @@
       <para>
           These principles are recognized and encoded in the federal tax
           code under <emphasis role="strong">Subchapter T of the
-          Internal Revenue Code (IRC §§ 1381-1388)</emphasis>.40
+          Internal Revenue Code (IRC §§ 1381-1388)</emphasis>.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
           Subchapter T provides a significant tax advantage that is the
           key financial mechanism of the cooperative model. Unlike a
           standard C corporation, which is subject to double taxation
           (once at the corporate level on profits and again at the
           shareholder level on dividends), a cooperative can achieve a
-          single level of taxation.40
-        </para>
+          single level of taxation.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+      </para>
       <para>
           This is accomplished through the deduction of "patronage
           dividends." A cooperative can deduct from its corporate
           income any surplus that is distributed to its members based on
-          their patronage.42 This income is then taxed only once, at the
+          their patronage.<biblioref linkend="ncbarblog-tax-taxation-of-cooperatives-under-subchapter-t" /> This income is then taxed only once, at the
           individual member level upon receipt. This effectively allows
           the cooperative to pass its patronage-related earnings through
           to its members without first paying corporate income tax on
-          them.41
-        </para>
+          them.<biblioref linkend="wegnercpas-worker-co-ops-operating-under-subchapter-t-and-the-new-tax-law" />
+      </para>
     </section>
     <section xml:id="strategic-income-bifurcation">
       <title>
@@ -109,8 +109,8 @@
       <para>
           Critically, Subchapter T creates a distinction between two
           types of income, a mechanism that can be described as a
-          "tax firewall".13
-        </para>
+          "tax firewall".<biblioref linkend="continue-semantically-distilling-indexing-compr" />
+      </para>
       <itemizedlist spacing="compact">
         <listitem>
           <para>
@@ -118,8 +118,8 @@
               Income:</emphasis> This is income derived from business
               done <emphasis>with or for</emphasis> the cooperative's
               patrons. It is eligible for the patronage dividend
-              deduction and is the basis of the single-tax advantage.40
-            </para>
+              deduction and is the basis of the single-tax advantage.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+          </para>
         </listitem>
         <listitem>
           <para>
@@ -129,8 +129,8 @@
               non-members. This income is <emphasis>not</emphasis>
               eligible for the patronage dividend deduction and is taxed
               at standard corporate rates, just like in a C
-              corporation.13
-            </para>
+              corporation.<biblioref linkend="continue-semantically-distilling-indexing-compr" />
+          </para>
         </listitem>
       </itemizedlist>
       <para>
@@ -141,8 +141,8 @@
           another that can generate unrestricted, taxable profits. It is
           this second income stream that provides the theoretical basis
           for a hybrid model capable of attracting outside, non-patron
-          investment capital.13
-        </para>
+          investment capital.<biblioref linkend="continue-semantically-distilling-indexing-compr" />
+      </para>
     </section>
   </section>
   <section xml:id="s-32-the-cooperative-capital-conundrum">
@@ -154,10 +154,10 @@
         Despite the tax advantages and the strong community alignment of
         the model, cooperatives have historically faced a significant
         barrier to scaling: the "Cooperative Capital
-        Conundrum".40 This conundrum arises from the direct
+        Conundrum".<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" /> This conundrum arises from the direct
         conflict between the canonical cooperative principles and the
-        fundamental expectations of traditional capital markets.46
-      </para>
+        fundamental expectations of traditional capital markets.<biblioref linkend="ica-ica-the-capital-conundrum-for-co-operatives-en-1892359719-pdf" />
+    </para>
     <section xml:id="the-core-conflict">
       <title>
         <emphasis role="strong">The Core
@@ -193,7 +193,7 @@
           limits financial returns. The principle of democratic control
           explicitly severs the link between capital and governance. And
           traditional cooperative membership shares are typically not
-          designed to appreciate in value and are not freely tradable.40
+          designed to appreciate in value and are not freely tradable.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
           This fundamental misalignment has made it exceedingly
           difficult for cooperatives to raise the significant growth
           capital needed to compete at scale with investor-owned
@@ -211,8 +211,8 @@
           this gap—a tradable cooperative security—must be rigorously
           analyzed through three distinct but overlapping legal lenses.
           Failure to satisfy the requirements of any one of these
-          regimes renders the entire structure unviable.40
-        </para>
+          regimes renders the entire structure unviable.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+      </para>
       <orderedlist numeration="arabic" spacing="compact">
         <listitem>
           <para>
@@ -222,8 +222,8 @@
               for example, offers significant flexibility, permitting
               varied membership classes and, under the "Central
               Organization" exception, even allowing for unequal
-              voting rights, providing a crucial legal gateway.40
-            </para>
+              voting rights, providing a crucial legal gateway.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+          </para>
         </listitem>
         <listitem>
           <para>
@@ -232,8 +232,8 @@
               support it must be structured to preserve the entity's tax
               status as a cooperative under Subchapter T. A poorly
               designed security could jeopardize the patronage dividend
-              deduction, destroying the model's core tax advantage.40
-            </para>
+              deduction, destroying the model's core tax advantage.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+          </para>
         </listitem>
         <listitem>
           <para>
@@ -241,8 +241,8 @@
               Law:</emphasis> If the instrument is designed to be an
               investment, it will be classified as a security and must
               comply with all applicable securities regulations,
-              including registration and disclosure requirements.40
-            </para>
+              including registration and disclosure requirements.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+          </para>
         </listitem>
       </orderedlist>
     </section>
@@ -259,8 +259,8 @@
         it must navigate the "Securities Law Gauntlet," a
         series of legal tests established by the U.S. Supreme Court and
         state regulators to define what constitutes a
-        "security".40
-      </para>
+        "security".<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+    </para>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
@@ -276,8 +276,8 @@
             rather than with the expectation of profit. A cooperative
             instrument designed for outside investors must be structured
             as an investment to attract capital, and will therefore
-            likely be deemed a security under this test.40
-          </para>
+            likely be deemed a security under this test.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -289,13 +289,13 @@
             Investment Contract Test):</emphasis> This is the
             foundational test for an "investment contract." An
             instrument is a security under the
-            <emphasis>Howey</emphasis> test if it involves (1) an
-            investment of money, (2) in a common enterprise, (3) with a
-            reasonable expectation of profits, (4) to be derived from
+            <emphasis>Howey</emphasis> test if it involves (<biblioref linkend="we-are-working-on-developing-a-comprehensive-rese" />) an
+            investment of money, (<biblioref linkend="this-analysis-outlines-a-comprehensive-strategy-f" />) in a common enterprise, (<biblioref linkend="you-are-to-think-about-how-to-improve-your-contex" />) with a
+            reasonable expectation of profits, (<biblioref linkend="dir-faq-independentcontractor-htm" />) to be derived from
             the entrepreneurial or managerial efforts of others. A
             tradable cooperative share offered to the public would
-            almost certainly meet all four prongs of this test.40
-          </para>
+            almost certainly meet all four prongs of this test.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -312,8 +312,8 @@
             resemblance" to a category of instruments not commonly
             considered securities (e.g., a note delivered in a consumer
             financing transaction). This test would apply to any debt
-            instruments a cooperative might issue to raise capital.40
-          </para>
+            instruments a cooperative might issue to raise capital.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -326,8 +326,8 @@
             not a traditional profit. This broad definition makes it
             even more likely that innovative cooperative financing
             instruments would be regulated as securities in
-            California.40
-          </para>
+            California.<biblioref linkend="use-all-context-to-construct-a-comprehensive-outl" />
+        </para>
       </listitem>
     </itemizedlist>
     <para>
@@ -348,8 +348,7 @@
         as the act of creating a more efficient and scalable cooperative
         model within the existing legal-financial system risks making it
         a more effective participant in, and potential reinforcer of,
-        that system's underlying dynamics.13
-      </para>
+        that system's underlying dynamics.<biblioref linkend="continue-semantically-distilling-indexing-compr" />
+    </para>
   </section>
 </section>
-  
