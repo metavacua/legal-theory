@@ -6,15 +6,18 @@ on:
       - main
       - claude/llm-database-theory-codification
       - claude/llm-database-theory-codification-sdd-1785019559
+      - claude/xsltng-saxon-migration
     paths:
       - 'docs/**/*.xml'
       - 'docs/xsl/**'
   pull_request:
-    branches: [main, claude/llm-database-theory-codification]
+    branches:
+      - main
+      - claude/llm-database-theory-codification
+      - claude/llm-database-theory-codification-sdd-1785019559
     paths:
       - 'docs/**/*.xml'
       - 'docs/xsl/**'
-  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -26,7 +29,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install DocBook toolchain
-        run: sudo apt-get update && sudo apt-get install -y libxml2-utils jing python3-lxml default-jre-headless
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils jing python3-lxml python3-slugify default-jre-headless
+
+      - name: Enforce one version per external standard (DocBook, XSLT)
+        run: python3 scripts/check_standard_versions.py
 
       - name: Validate and rebuild corpus HTML
         run: |

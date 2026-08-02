@@ -5,7 +5,7 @@ on:
     branches:
       - claude/llm-database-theory-codification
       - claude/llm-database-theory-codification-sdd-1785019559
-  workflow_dispatch: {}
+      - claude/xsltng-saxon-migration
 
 permissions:
   contents: read
