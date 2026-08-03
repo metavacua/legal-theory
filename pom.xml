@@ -73,6 +73,15 @@
         <groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.6</version>
       </plugin>
       <plugin>
+        <!-- Task 10: full-corpus census run, bound to verify. Task 11 performs the
+             first real run of this binding; see task-10-report.md. -->
+        <groupId>org.codehaus.mojo</groupId><artifactId>exec-maven-plugin</artifactId><version>3.5.0</version>
+        <executions><execution>
+          <id>census</id><phase>verify</phase><goals><goal>java</goal></goals>
+          <configuration><mainClass>io.github.metavacua.pipeline.CensusEngine</mainClass></configuration>
+        </execution></executions>
+      </plugin>
+      <plugin>
         <groupId>com.googlecode.maven-download-plugin</groupId><artifactId>download-maven-plugin</artifactId><version>1.13.0</version>
         <executions><execution>
           <id>fetch-docbook-grammar</id><phase>generate-resources</phase><goals><goal>wget</goal></goals>
