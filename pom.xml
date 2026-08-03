@@ -84,6 +84,32 @@
           </configuration>
         </execution></executions>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId><artifactId>xml-maven-plugin</artifactId><version>1.2.1</version>
+        <dependencies>
+          <dependency><groupId>net.sf.saxon</groupId><artifactId>Saxon-HE</artifactId><version>${saxon.version}</version></dependency>
+          <dependency><groupId>name.dmaus.schxslt</groupId><artifactId>schxslt2</artifactId><version>${schxslt2.version}</version></dependency>
+        </dependencies>
+        <executions><execution>
+          <id>transpile-policy-schematron</id><phase>generate-resources</phase><goals><goal>transform</goal></goals>
+          <configuration>
+            <transformerFactory>net.sf.saxon.TransformerFactoryImpl</transformerFactory>
+            <transformationSets><transformationSet>
+              <dir>src/main/resources/schematron</dir>
+              <includes><include>policy.sch</include></includes>
+              <!-- schxslt2 1.1.1's jar layout (live-verified via jar listing, Task 6
+                   discovery step) places the transpiler entry at content/transpile.xsl,
+                   NOT the root-level path a naive reading of the artifact's
+                   expath-pkg.xml (<file>transpile.xsl</file>, expath convention: paths
+                   are relative to content/) would suggest. -->
+              <stylesheet>content/transpile.xsl</stylesheet>
+              <outputDir>${project.build.directory}/generated-resources</outputDir>
+              <fileMappers><fileMapper implementation="org.codehaus.plexus.components.io.filemappers.MergeFileMapper">
+                <targetName>policy.xsl</targetName></fileMapper></fileMappers>
+            </transformationSet></transformationSets>
+          </configuration>
+        </execution></executions>
+      </plugin>
     </plugins>
   </build>
 </project>
