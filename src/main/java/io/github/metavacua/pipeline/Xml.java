@@ -21,6 +21,22 @@ public final class Xml {
             return f.newDocumentBuilder();
         } catch (Exception e) { throw new IllegalStateException(e); }
     }
+    /** For parsing OUR OWN renderer's output, whose first line is legitimately
+     *  <!DOCTYPE html> (polyglot XHTML5): doctype tolerated, but every external
+     *  fetch/expansion vector is explicitly dead (OWASP XXE guidance). Input
+     *  documents keep the stricter hardenedBuilder (no doctype at all). */
+    public static DocumentBuilder outputBuilder() {
+        try {
+            var f = DocumentBuilderFactory.newInstance();
+            f.setNamespaceAware(true);
+            f.setFeature("http://xml.org/sax/features/external-general-entities", false);
+            f.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+            f.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+            f.setXIncludeAware(false);
+            f.setExpandEntityReferences(false);
+            return f.newDocumentBuilder();
+        } catch (Exception e) { throw new IllegalStateException(e); }
+    }
     /** Identity serialization only — never an XSLT transform. On this classpath JAXP resolves
      *  to Saxon's IdentityTransformer (one engine everywhere). */
     public static String serialize(Document d) {

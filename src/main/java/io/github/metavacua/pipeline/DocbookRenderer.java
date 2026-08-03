@@ -6,6 +6,7 @@ import java.util.stream.Stream;
 
 public final class DocbookRenderer {
     private static final Path XSLTNG = Path.of("target/xsltng/org/docbook/xsltng/xslt/docbook.xsl");
+    // Benign race: XsltExecutable is immutable; a concurrent first call at worst compiles twice.
     private static volatile XsltExecutable cached;
 
     public static void render(Path docbookXml, Path outXhtml) {
@@ -33,6 +34,10 @@ public final class DocbookRenderer {
      * equivalent for XML-serialized documents is the {@code charset} attribute
      * form; substituting it changes no declared encoding (both say utf-8) and is
      * a no-op if xslTNG's literal output ever changes.
+     * Exact-literal substitution: if a future xslTNG release changes attribute
+     * order/whitespace this no-ops and stage 7 (jing vs XHTML5 RNG) fails loudly
+     * on the un-substituted meta -- fail-loud by design, revisit against the
+     * pinned xslTNG version on upgrade.
      */
     private static void fixInvalidEncodingMeta(Path outXhtml) throws java.io.IOException {
         String invalid = "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>";
