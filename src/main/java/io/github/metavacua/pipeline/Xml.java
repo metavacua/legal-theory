@@ -21,7 +21,8 @@ public final class Xml {
             return f.newDocumentBuilder();
         } catch (Exception e) { throw new IllegalStateException(e); }
     }
-    /** Serialization only — identity copy, NOT a transform (Xalan does no XSLT here). */
+    /** Identity serialization only — never an XSLT transform. On this classpath JAXP resolves
+     *  to Saxon's IdentityTransformer (one engine everywhere). */
     public static String serialize(Document d) {
         try {
             var tf = TransformerFactory.newInstance();
