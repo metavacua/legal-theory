@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.metavacua</groupId>
+  <artifactId>legal-theory-pipeline</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>25</maven.compiler.release>
+    <commonmark.version>0.24.0</commonmark.version>
+    <saxon.version>12.7</saxon.version>
+    <jing.version>20241231</jing.version>
+    <vnu.version>20.7.2</vnu.version>
+    <jgit.version>7.3.0.202506031305-r</jgit.version>
+    <xsltng.version>2.5.0</xsltng.version>
+    <schxslt2.version>1.1.1</schxslt2.version>
+    <junit.version>5.13.0-M3</junit.version>
+    <docbook.rnc.url>https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc</docbook.rnc.url>
+    <docbook.rnc.sha256>REPLACED_IN_TASK_2</docbook.rnc.sha256>
+  </properties>
+
+  <dependencies>
+    <dependency><groupId>org.commonmark</groupId><artifactId>commonmark</artifactId><version>${commonmark.version}</version></dependency>
+    <dependency><groupId>org.commonmark</groupId><artifactId>commonmark-ext-yaml-front-matter</artifactId><version>${commonmark.version}</version></dependency>
+    <dependency><groupId>org.commonmark</groupId><artifactId>commonmark-ext-gfm-tables</artifactId><version>${commonmark.version}</version></dependency>
+    <dependency><groupId>net.sf.saxon</groupId><artifactId>Saxon-HE</artifactId><version>${saxon.version}</version></dependency>
+    <!-- nu.validator:validator supplies BOTH the whattf datatype library jing needs
+         for the XHTML5 schemas AND the vnu checker classes (Task 2, Task 7). -->
+    <dependency><groupId>nu.validator</groupId><artifactId>validator</artifactId><version>${vnu.version}</version></dependency>
+    <dependency><groupId>org.eclipse.jgit</groupId><artifactId>org.eclipse.jgit</artifactId><version>${jgit.version}</version></dependency>
+    <dependency><groupId>org.docbook</groupId><artifactId>docbook-xslTNG</artifactId><version>${xsltng.version}</version></dependency>
+    <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>${junit.version}</version><scope>test</scope></dependency>
+  </dependencies>
+
+  <profiles>
+    <profile>
+      <id>jing-current</id>
+      <activation><activeByDefault>true</activeByDefault></activation>
+      <dependencies>
+        <dependency><groupId>org.relaxng</groupId><artifactId>jing</artifactId><version>${jing.version}</version></dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>jing-2009</id>
+      <dependencies>
+        <dependency><groupId>com.thaiopensource</groupId><artifactId>jing</artifactId><version>20091111</version></dependency>
+      </dependencies>
+    </profile>
+  </profiles>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId><artifactId>maven-enforcer-plugin</artifactId><version>3.5.0</version>
+        <executions><execution><goals><goal>enforce</goal></goals><configuration><rules>
+          <requireJavaVersion><version>[25,26)</version></requireJavaVersion>
+          <requireMavenVersion><version>[3.9,4)</version></requireMavenVersion>
+        </rules></configuration></execution></executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.4</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
