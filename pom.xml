@@ -20,7 +20,7 @@
     <schxslt2.version>1.1.1</schxslt2.version>
     <junit.version>6.1.2</junit.version>
     <docbook.rnc.url>https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc</docbook.rnc.url>
-    <docbook.rnc.sha256>REPLACED_IN_TASK_2</docbook.rnc.sha256>
+    <docbook.rnc.sha256>72186584cb4f13dcfaa1f7e2d257c95e82501b74a408f2e86af2b204ff1a1804</docbook.rnc.sha256>
   </properties>
 
   <dependencies>
@@ -63,6 +63,18 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.6</version>
+      </plugin>
+      <plugin>
+        <groupId>com.googlecode.maven-download-plugin</groupId><artifactId>download-maven-plugin</artifactId><version>1.13.0</version>
+        <executions><execution>
+          <id>fetch-docbook-grammar</id><phase>generate-resources</phase><goals><goal>wget</goal></goals>
+          <configuration>
+            <url>${docbook.rnc.url}</url>
+            <outputDirectory>${project.build.directory}/schema</outputDirectory>
+            <outputFileName>docbookxi.rnc</outputFileName>
+            <sha256>${docbook.rnc.sha256}</sha256>
+          </configuration>
+        </execution></executions>
       </plugin>
     </plugins>
   </build>
