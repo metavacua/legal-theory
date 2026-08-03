@@ -24,8 +24,11 @@ public final class CensusEngine {
         List<Path> corpus;
         try (Stream<Path> s = Files.walk(root.resolve("docs"))) {
             corpus = s.filter(p -> p.toString().endsWith(".md"))
-                .filter(p -> Constants.CORPUS_EXCLUDES.stream()
-                    .noneMatch(x -> root.relativize(p).toString().replace('\\','/').startsWith(x)))
+                .filter(p -> {
+                    String rel = root.relativize(p).toString().replace('\\', '/');
+                    return Constants.CORPUS_EXCLUDES.stream()
+                        .noneMatch(x -> rel.equals(x) || rel.startsWith(x + "/"));
+                })
                 .sorted().toList();
         }
         for (Path p : corpus) { // manifest attribute-safety precondition
@@ -66,16 +69,23 @@ public final class CensusEngine {
                 if (pass) {
                     rendered = site.resolve(rel.replaceFirst("^docs/", "").replaceAll("\\.md$", ".xhtml"));
                     DocbookRenderer.render(db, rendered);                      // stage 5
+                    gates.add(new GateResult("render", "pass", null));
                     // Rendered output starts <!DOCTYPE html> (polyglot XHTML5): hardenedBuilder
                     // rejects any doctype by design, so this parse uses outputBuilder — the
                     // parser meant for OUR renderer's own output, not source XML (Xml.java).
                     try { Xml.outputBuilder().parse(rendered.toFile());       // stage 6
                           gates.add(new GateResult("wf-out", "pass", null)); }
-                    catch (Exception e) { gates.add(new GateResult("wf-out", "fail", e.getMessage())); pass = false; }
-                    if (pass) pass &= gate(gates, "xhtml5-rng",                // stage 7
-                        JingGate.validate(JingGate.XHTML5_RNC, rendered));
-                    if (pass) pass &= gate(gates, "vnu", VnuGate.check(rendered)); // stage 8 (sequenced)
-                    else skip(gates, "vnu");
+                    catch (Exception e) {
+                        gates.add(new GateResult("wf-out", "fail", e.getMessage()));
+                        pass = false;
+                        skip(gates, "xhtml5-rng", "vnu");
+                    }
+                    if (pass) {
+                        pass &= gate(gates, "xhtml5-rng",                     // stage 7
+                            JingGate.validate(JingGate.XHTML5_RNC, rendered));
+                        if (pass) pass &= gate(gates, "vnu", VnuGate.check(rendered)); // stage 8 (sequenced)
+                        else skip(gates, "vnu");
+                    }
                 } else { skip(gates, "render", "wf-out", "xhtml5-rng", "vnu"); }
             } catch (Exception e) {
                 gates.add(new GateResult("pipeline-error", "fail", String.valueOf(e.getMessage())));
@@ -140,7 +150,7 @@ public final class CensusEngine {
      *  an unescaped XML attribute-value special character would corrupt or misattribute
      *  output. Fail loud before touching the pipeline. */
     static void assertAttributeSafePath(String rel) {
-        if (rel.contains("\"") || rel.contains("&"))
+        if (rel.contains("\"") || rel.contains("&") || rel.contains("<"))
             throw new IllegalStateException("unsafe path for XML attributes: " + rel);
     }
 

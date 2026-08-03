@@ -5,6 +5,8 @@
              xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
   <xsl:mode on-no-match="shallow-copy"/>
   <xsl:template match="db:section[@xml:id='census']/db:para">
-    <xsl:copy-of select="doc($census-fragment-uri)/node()"/>
+    <!-- doc(...)/* is the no-namespace <census-fragment> carrier (census-to-docbook.xsl);
+         copy its children (para, informaltable), never the carrier itself. -->
+    <xsl:copy-of select="doc($census-fragment-uri)/*/node()"/>
   </xsl:template>
 </xsl:stylesheet>
