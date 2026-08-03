@@ -81,4 +81,18 @@ class XhtmlToDocbookTest {
         Files.writeString(tmp, Xml.serialize(d));
         assertEquals(List.of(), JingGate.validate(JingGate.DOCBOOK_RNC, tmp));
     }
+    @Test void imageOnlyTightListItemIsNotSilentlyDropped() throws Exception {
+        var x = MarkdownToXhtml.convert("- ![alt text](img/x.png)\n");
+        var d = XsltPipeline.apply(XSL, x.dom(), java.util.Map.of(
+            new QName("authored-title"), "T",
+            new QName("source-path"), "fx.md",
+            new QName("manifest-uri"), manifest.toUri().toString()));
+        String s = ser(d);
+        assertTrue(s.contains("<inlinemediaobject>"), "image content must survive");
+        assertTrue(s.contains("fileref=\"img/x.png\""));
+        assertFalse(s.replaceAll("\\s","").contains("<listitem/>"), "no empty listitem");
+        java.nio.file.Path tmp = java.nio.file.Files.createTempFile("li-img", ".xml");
+        java.nio.file.Files.writeString(tmp, s);
+        assertEquals(java.util.List.of(), JingGate.validate(JingGate.DOCBOOK_RNC, tmp));
+    }
 }

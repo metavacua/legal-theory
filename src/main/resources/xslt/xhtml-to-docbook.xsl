@@ -68,7 +68,8 @@
           or self::h:blockquote or self::h:table)">
         <xsl:choose>
           <xsl:when test="current-grouping-key()"><xsl:apply-templates select="current-group()"/></xsl:when>
-          <xsl:when test="not(normalize-space(string-join(current-group() ! string(.), '')))"/>
+          <xsl:when test="every $n in current-group()
+                          satisfies ($n instance of text() and not(normalize-space($n)))"/>
           <xsl:otherwise><para><xsl:apply-templates select="current-group()"/></para></xsl:otherwise>
         </xsl:choose>
       </xsl:for-each-group>
