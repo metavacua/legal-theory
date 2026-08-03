@@ -50,7 +50,16 @@ Components (each single-purpose, independently testable):
 4. `docbook-render` — xslTNG on Saxon. XML-syntax XHTML5 is xslTNG's verified default (`method="xhtml" html-version="5"`, self-closed voids); resources/css+js staged with output.
 5. `validators` — jing (both grammars), SchXslt2/Saxon (policy + the schema set's own `assertions.sch` if SchXslt2-compatible, verified at plan time), vnu (sequenced secondary).
 6. `audit-census` — the checks×documents matrix, `census.xml`, and the health-page rendering (Saxon/XSLT; sitemap likewise XSLT-first — custom Java only if demonstrated insufficient).
-7. `site-index` — **the correct-by-construction model document**: an authored DocBook 5.2 source (`index.xml`, real `<info><title>`/`pubdate`/`biblioid`) that enters the pipeline at stage 3 and must pass every gate — both grammars, policy Schematron, and vnu — on every build. It is the first member of the natively-authored population (giving the policy Schematron forward gates non-zero discriminating power from day one), the continuously-enforced template for corpus reconstruction, and the site's index page. The census/survey content merges into it at render time via `document(census.xml)` — authored shell, generated data, no hand-maintained duplication. Served as `index.html` (Pages recognizes only `index.html`/`.htm` as directory indexes — verify at plan time; the content is xslTNG's default output, which is already the XML serialization in polyglot form, and gates 6–8 enforce the XML discipline regardless of serving MIME type). An `index.md` source with YAML front matter is viable (see Metadata — front matter is the authored-title channel), but authored DocBook is deliberately chosen: the index's model-document duties — first natively-authored population member, reconstruction template, authored-input exercise of stages 3–9 — model the destination format, not the transitional one.
+7. `site-index` — **the correct-by-construction model document AND the triangulation base case.** The index exists as two *authored, synchronized* source representations plus generated outputs:
+   - `index.md` + YAML front matter (authored) — exercises P1, P3, and the front-matter title channel; **test input, never published**.
+   - `index.xml` (authored DocBook 5.2, real `<info><title>`/`pubdate`/`biblioid`) — the model document; enters the pipeline at stage 3, must pass every gate on every build; **its render is the published index page**, with census/survey content merged at render time via `document(census.xml)`.
+
+   Because every vertex is authored ground truth, the index pins the triangle's full edge set under the content-preservation oracle — the executable specification of the method, tested where all corners are known before it ever judges a legacy document (which has only the MD vertex):
+   - `P3(index.md)` vs `P2(P1(index.md))` — the standard triangle;
+   - `P1(index.md)` vs `index.xml` — generated-DocBook vs authored-DocBook: a **required-agreement edge between the two authored twins** (same philosophy as the jing matrix; authored drift between the twins is a test failure forcing re-synchronization);
+   - `P2(index.xml)` vs `P2(P1(index.md))` — rendering authored vs generated DocBook.
+
+   **Served filename: decided by experiment, not documentation.** Whether GitHub Pages resolves `index.xhtml` as a directory index is settled by actually deploying an artifact containing *only* `index.xhtml` and recording (a) whether the site root serves it, (b) what Content-Type Pages assigns the direct path. Result recorded here; the fallback if it does not resolve is `index.html` carrying xslTNG's default output (already the XML serialization in polyglot form; gates 6–8 enforce XML discipline regardless of serving MIME type).
 
 Java application code is confined to the two leaf utilities (1) and (2).
 
@@ -159,6 +168,7 @@ Three matrix tiers:
 - **Census tests:** with/without `Works cited` fixtures; title-class column per fixture class; corpus numbers (88/123; 0/98/3/21/1) as tracked descriptive baselines, never hardcoded invariants.
 - **Triangle test:** ≥1 real corpus document, both paths, content-preservation asserted.
 - **Model-document enforcement:** the site index (`src/main/docbook/index.xml`) is asserted through all gates every build — the exemplar failing its own gates fails the build.
+- **Triangulation base-case tests:** all three index edges asserted every build — `P3(index.md)` vs `P2(P1(index.md))`; `P1(index.md)` vs authored `index.xml` (required-agreement between the authored twins — drift fails the build); `P2(index.xml)` vs `P2(P1(index.md))`. The triangle is proven on full ground truth before it judges any legacy document.
 - **RED marker:** the `@Disabled` GREEN-shape test (above).
 - First full-corpus run is expected to fail documents genuinely (title policy universally; possibly more at vnu) — that is the instrument working; the criterion is honest cataloging, not a weakened gate.
 
@@ -172,6 +182,8 @@ src/main/resources/xslt/xhtml-to-docbook.xsl     (authored stylesheet)
 src/main/resources/xslt/health-page.xsl,…        (census/site rendering)
 src/main/docbook/index.xml                       (the authored correct-by-construction model document;
                                                   new-world DocBook source root, distinct from legacy docs/)
+src/main/docbook/index.md                        (the model's authored Markdown twin + YAML front matter;
+                                                  triangulation base-case input, never published)
 src/main/resources/schematron/policy.sch         (metadata + non-empty-title rules)
 src/main/resources/schema/xhtml5/…               (vendored pinned validator.nu RNC set + LICENSE)
 src/test/java/… , src/test/resources/fixtures/…

@@ -1,0 +1,35 @@
+name: Pages xhtml-index experiment
+
+# One-shot empirical test recorded in the design spec: does GitHub Pages
+# resolve index.xhtml as a directory index? Deploys an artifact containing
+# ONLY index.xhtml. Removed once the result is recorded; superseded by the
+# real build-and-deploy workflow at implementation.
+on:
+  push:
+    branches: [claude/java-maven-publishing-pipeline]
+    paths:
+      - 'experiment/pages-xhtml/**'
+      - '.github/workflows/pages-xhtml-experiment.yml'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: experiment/pages-xhtml
+      - id: deployment
+        uses: actions/deploy-pages@v4
