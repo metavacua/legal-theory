@@ -102,6 +102,7 @@
                    NOT the root-level path a naive reading of the artifact's
                    expath-pkg.xml (<file>transpile.xsl</file>, expath convention: paths
                    are relative to content/) would suggest. -->
+              <!-- Bare path resolves via plexus-resources loader iteration: classpath jar entry wins ONLY while no <repo-root>/content/transpile.xsl exists on disk. Do not create a repo-root content/ directory. -->
               <stylesheet>content/transpile.xsl</stylesheet>
               <outputDir>${project.build.directory}/generated-resources</outputDir>
               <fileMappers><fileMapper implementation="org.codehaus.plexus.components.io.filemappers.MergeFileMapper">
@@ -109,6 +110,39 @@
             </transformationSet></transformationSets>
           </configuration>
         </execution></executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId><artifactId>maven-dependency-plugin</artifactId><version>3.8.1</version>
+        <executions>
+          <execution><id>unpack-xsltng</id><phase>generate-resources</phase><goals><goal>unpack</goal></goals>
+            <configuration><artifactItems><artifactItem>
+              <groupId>org.docbook</groupId><artifactId>docbook-xslTNG</artifactId><version>${xsltng.version}</version>
+              <outputDirectory>${project.build.directory}/xsltng</outputDirectory>
+            </artifactItem></artifactItems></configuration></execution>
+          <execution><id>copy-vnu</id><phase>generate-resources</phase><goals><goal>copy</goal></goals>
+            <configuration><artifactItems><artifactItem>
+              <groupId>nu.validator</groupId><artifactId>validator</artifactId><version>${vnu.version}</version>
+              <destFileName>vnu.jar</destFileName>
+              <outputDirectory>${project.build.directory}/tools</outputDirectory>
+            </artifactItem></artifactItems></configuration></execution>
+          <!-- vnu.jar's own manifest carries no Main-Class and is NOT a fat jar (live-verified,
+               Task 7): nu.validator:validator's SimpleCommandLineValidator needs its full
+               runtime dependency closure on the classpath (e.g. com.thaiopensource.validate.Schema
+               from nu.validator:jing, a DIFFERENT groupId/version from this project's own
+               org.relaxng:jing pinned for JingGate, confirmed by NoClassDefFoundError without
+               this). Filtered to exactly vnu's own transitive groupIds so the isolated vnu
+               subprocess classpath never mixes with this project's own org.relaxng:jing or
+               net.sf.saxon:Saxon-HE:12.7 (vnu's declared Saxon-HE:9.6.0-4 is omitted by the
+               reactor's nearest-wins resolution and is not required for the xml single-file
+               checks this gate runs). -->
+          <execution><id>copy-vnu-deps</id><phase>generate-resources</phase><goals><goal>copy-dependencies</goal></goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/tools/vnu-lib</outputDirectory>
+              <includeScope>compile</includeScope>
+              <excludeArtifactIds>validator</excludeArtifactIds>
+              <includeGroupIds>nu.validator,com.ibm.icu,com.shapesecurity,commons-codec,commons-fileupload,commons-io,commons-logging,isorelax,javax.servlet,log4j,org.apache.httpcomponents,org.eclipse.jetty</includeGroupIds>
+            </configuration></execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
