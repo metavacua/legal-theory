@@ -49,7 +49,8 @@ Components (each single-purpose, independently testable):
 3. `xhtml-to-docbook` — the authored Saxon XSLT 3.0 stylesheet: a total function over commonmark's finite element vocabulary (one fixed rule per element; heading nesting via `xsl:for-each-group`; heading-level skips close the gap; `hr`/`br` dropped; GFM tables → DocBook HTML-table model). Reads `repo-metadata.xml` via `document()` — the transform is a pure function of (input, manifest).
 4. `docbook-render` — xslTNG on Saxon. XML-syntax XHTML5 is xslTNG's verified default (`method="xhtml" html-version="5"`, self-closed voids); resources/css+js staged with output.
 5. `validators` — jing (both grammars), SchXslt2/Saxon (policy + the schema set's own `assertions.sch` if SchXslt2-compatible, verified at plan time), vnu (sequenced secondary).
-6. `audit-census` — the checks×documents matrix, `census.xml`, and the health page (rendered via Saxon/XSLT; index/sitemap likewise XSLT-first — custom Java only if demonstrated insufficient).
+6. `audit-census` — the checks×documents matrix, `census.xml`, and the health-page rendering (Saxon/XSLT; sitemap likewise XSLT-first — custom Java only if demonstrated insufficient).
+7. `site-index` — **the correct-by-construction model document**: an authored DocBook 5.2 source (`index.xml`, real `<info><title>`/`pubdate`/`biblioid`) that enters the pipeline at stage 3 and must pass every gate — both grammars, policy Schematron, and vnu — on every build. It is the first member of the natively-authored population (giving the policy Schematron forward gates non-zero discriminating power from day one), the continuously-enforced template for corpus reconstruction, and the site's index page. The census/survey content merges into it at render time via `document(census.xml)` — authored shell, generated data, no hand-maintained duplication. Served as `index.html` (Pages recognizes only `index.html`/`.htm` as directory indexes — verify at plan time; the content is xslTNG's default output, which is already the XML serialization in polyglot form, and gates 6–8 enforce the XML discipline regardless of serving MIME type). An `index.md` source is structurally impossible under this design's own rules: Markdown cannot express a title, so it could never pass the policy gate.
 
 Java application code is confined to the two leaf utilities (1) and (2).
 
@@ -72,7 +73,7 @@ Java application code is confined to the two leaf utilities (1) and (2).
 9. census row assembled (all gate results + audit checks)
 ```
 
-**Partition:** the build is green when the *pipeline* is proven (fixtures pass all gates, census generated, no pipeline errors). Documents passing all gates are published; failing documents are excluded from the published site and loudly cataloged on the published health page. **Expected initial state: 0/123 documents publishable** (title absence is universal — see Metadata); the initial deployment is the health page itself, reporting the full salvage survey. The published set grows only as source correction/reconstruction produces conforming documents. Honest-empty over fabricated-full.
+**Partition:** the build is green when the *pipeline* is proven (fixtures pass all gates, census generated, the model index passes all gates, no pipeline errors). Documents passing all gates are published; failing documents are excluded from the published site and loudly cataloged on the published health page. **Expected initial state: 0/123 legacy documents publishable** (title absence is universal — see Metadata); the initial published set is exactly the correct-by-construction model index, carrying the full salvage survey. The published set grows only as source correction/reconstruction produces conforming documents — each modeled on the index. Honest-empty over fabricated-full.
 
 ## Metadata generation
 
@@ -152,6 +153,7 @@ Three matrix tiers:
 - **Stage-isolation fixtures:** one per gate, each failing at its stage only — RELAX NG violation → 3; hand-authored DocBook with biblioid/path mismatch → 4 (proves the forward gate is real for future authored documents, where it has non-zero discriminating power — over generated docs it is a regression check, stated as such); C1-mojibake → 8 only (C1 controls are legal XML 1.0 characters — they pass well-formedness and both grammars; this fixture is the concrete proof of why vnu's sequenced gate exists: a known defect class only it catches); clean minimal doc → passes everything including policy (it gets a real authored title, proving the full-pass path exists).
 - **Census tests:** with/without `Works cited` fixtures; title-class column per fixture class; corpus numbers (88/123; 0/98/3/21/1) as tracked descriptive baselines, never hardcoded invariants.
 - **Triangle test:** ≥1 real corpus document, both paths, content-preservation asserted.
+- **Model-document enforcement:** the site index (`src/main/docbook/index.xml`) is asserted through all gates every build — the exemplar failing its own gates fails the build.
 - **RED marker:** the `@Disabled` GREEN-shape test (above).
 - First full-corpus run is expected to fail documents genuinely (title policy universally; possibly more at vnu) — that is the instrument working; the criterion is honest cataloging, not a weakened gate.
 
@@ -163,6 +165,8 @@ docs/                                            (input corpus — unchanged)
 src/main/java/io/github/metavacua/.../           (two leaf utilities only)
 src/main/resources/xslt/xhtml-to-docbook.xsl     (authored stylesheet)
 src/main/resources/xslt/health-page.xsl,…        (census/site rendering)
+src/main/docbook/index.xml                       (the authored correct-by-construction model document;
+                                                  new-world DocBook source root, distinct from legacy docs/)
 src/main/resources/schematron/policy.sch         (metadata + non-empty-title rules)
 src/main/resources/schema/xhtml5/…               (vendored pinned validator.nu RNC set + LICENSE)
 src/test/java/… , src/test/resources/fixtures/…
