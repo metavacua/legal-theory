@@ -24,16 +24,19 @@ public final class VnuGate {
         if (!Files.isRegularFile(xhtml)) {
             throw new IllegalStateException("vnu input does not exist: " + xhtml);
         }
+        Path tmpOut = null;
         try {
+            tmpOut = Files.createTempFile("vnu-out", ".txt");
             var pb = new ProcessBuilder("java", "-cp", VNU_CP,
                 "nu.validator.client.SimpleCommandLineValidator", "--xml", xhtml.toString());
             pb.redirectErrorStream(true);
+            pb.redirectOutput(tmpOut.toFile());
             Process p = pb.start();
-            var out = new String(p.getInputStream().readAllBytes());
             if (!p.waitFor(120, TimeUnit.SECONDS)) {
                 p.destroyForcibly();
                 throw new IllegalStateException("vnu timed out after 120s on " + xhtml);
             }
+            var out = new String(Files.readAllBytes(tmpOut));
             int code = p.exitValue();
             var findings = new ArrayList<String>();
             // vnu's exit code reflects ERRORS only (live-verified, Task 7): a lone C1
@@ -59,6 +62,11 @@ public final class VnuGate {
         } catch (IllegalStateException e) {
             throw e;
         } catch (Exception e) { throw new IllegalStateException(e); }
+        finally {
+            if (tmpOut != null) {
+                try { Files.deleteIfExists(tmpOut); } catch (Exception ignored) { }
+            }
+        }
     }
     private VnuGate() {}
 }

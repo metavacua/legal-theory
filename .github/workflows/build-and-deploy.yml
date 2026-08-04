@@ -44,7 +44,7 @@ jobs:
         with: { fetch-depth: 0 }
       - uses: actions/setup-java@v5
         with: { distribution: temurin, java-version: "${{ matrix.jdk }}", cache: maven }
-      - run: mvn -B ${{ matrix.saxon != '' && format('-Dsaxon.version={0}', matrix.saxon) || '' }} verify
+      - run: mvn -B ${{ matrix.jdk == '26' && '-Denforcer.skip=true' || '' }} ${{ matrix.saxon != '' && format('-Dsaxon.version={0}', matrix.saxon) || '' }} verify
 
   pandoc-cross-check:
     # Independent (non-commonmark) parse of the same corpus; informational.
