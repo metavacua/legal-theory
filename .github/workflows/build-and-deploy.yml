@@ -1,0 +1,83 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [claude/java-maven-publishing-pipeline, main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  required:
+    # Required-agreement matrix: both jing implementations must agree.
+    strategy:
+      fail-fast: false
+      matrix:
+        jing-profile: [jing-current, jing-2009]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0        # MANDATORY: manifest generator hard-fails on shallow clones
+      - uses: actions/setup-java@v5
+        with: { distribution: temurin, java-version: '25', cache: maven }
+      - run: mvn -B -P${{ matrix.jing-profile }} verify
+
+  informational:
+    # Forward-compatibility signal only; never blocks.
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { jdk: '26', saxon: '' }
+          - { jdk: '25', saxon: '13.0' }
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-java@v5
+        with: { distribution: temurin, java-version: "${{ matrix.jdk }}", cache: maven }
+      - run: mvn -B ${{ matrix.jdk == '26' && '-Denforcer.skip=true' || '' }} ${{ matrix.saxon != '' && format('-Dsaxon.version={0}', matrix.saxon) || '' }} verify
+
+  pandoc-cross-check:
+    # Independent (non-commonmark) parse of the same corpus; informational.
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-java@v5
+        with: { distribution: temurin, java-version: '25', cache: maven }
+      - run: sudo apt-get update && sudo apt-get install -y pandoc
+      - run: mvn -B verify
+      - run: mvn -B exec:java -Dexec.mainClass=io.github.metavacua.pipeline.PandocCrossCheck
+
+  deploy:
+    needs: [required]
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-java@v5
+        with: { distribution: temurin, java-version: '25', cache: maven }
+      - run: mvn -B verify
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: target/site
+      - id: deployment
+        uses: actions/deploy-pages@v5

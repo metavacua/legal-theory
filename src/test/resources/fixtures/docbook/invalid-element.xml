@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" version="5.2">
+  <info><title>Fixture</title></info>
+  <para>Valid minimal DocBook 5.2 article.</para>
+  <nonsuch/>
+</article>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.metavacua</groupId>
+  <artifactId>legal-theory-pipeline</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>25</maven.compiler.release>
+    <commonmark.version>0.24.0</commonmark.version>
+    <saxon.version>12.7</saxon.version>
+    <jing.version>20241231</jing.version>
+    <vnu.version>20.7.2</vnu.version>
+    <jgit.version>7.3.0.202506031305-r</jgit.version>
+    <xsltng.version>2.8.3</xsltng.version>
+    <schxslt2.version>1.1.1</schxslt2.version>
+    <junit.version>6.1.2</junit.version>
+    <docbook.rnc.url>https://docs.oasis-open.org/docbook/docbook/v5.2/os/rng/docbookxi.rnc</docbook.rnc.url>
+    <docbook.rnc.sha256>72186584cb4f13dcfaa1f7e2d257c95e82501b74a408f2e86af2b204ff1a1804</docbook.rnc.sha256>
+  </properties>
+
+  <dependencies>
+    <dependency><groupId>org.commonmark</groupId><artifactId>commonmark</artifactId><version>${commonmark.version}</version></dependency>
+    <dependency><groupId>org.commonmark</groupId><artifactId>commonmark-ext-yaml-front-matter</artifactId><version>${commonmark.version}</version></dependency>
+    <dependency><groupId>org.commonmark</groupId><artifactId>commonmark-ext-gfm-tables</artifactId><version>${commonmark.version}</version></dependency>
+    <dependency><groupId>net.sf.saxon</groupId><artifactId>Saxon-HE</artifactId><version>${saxon.version}</version></dependency>
+    <!-- nu.validator:validator supplies BOTH the whattf datatype library jing needs
+         for the XHTML5 schemas AND the vnu checker classes (Task 2, Task 7). -->
+    <dependency><groupId>nu.validator</groupId><artifactId>validator</artifactId><version>${vnu.version}</version></dependency>
+    <dependency><groupId>org.eclipse.jgit</groupId><artifactId>org.eclipse.jgit</artifactId><version>${jgit.version}</version></dependency>
+    <dependency><groupId>org.docbook</groupId><artifactId>docbook-xslTNG</artifactId><version>${xsltng.version}</version></dependency>
+    <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>${junit.version}</version><scope>test</scope></dependency>
+  </dependencies>
+
+  <profiles>
+    <profile>
+      <id>jing-current</id>
+      <activation><activeByDefault>true</activeByDefault></activation>
+      <dependencies>
+        <dependency><groupId>org.relaxng</groupId><artifactId>jing</artifactId><version>${jing.version}</version></dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>jing-2009</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.thaiopensource</groupId><artifactId>jing</artifactId><version>20091111</version>
+          <exclusions>
+            <exclusion><groupId>net.sf.saxon</groupId><artifactId>saxon</artifactId></exclusion>
+            <exclusion><groupId>xerces</groupId><artifactId>xercesImpl</artifactId></exclusion>
+            <exclusion><groupId>xml-apis</groupId><artifactId>xml-apis</artifactId></exclusion>
+            <exclusion><groupId>isorelax</groupId><artifactId>isorelax</artifactId></exclusion>
+          </exclusions>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId><artifactId>maven-enforcer-plugin</artifactId><version>3.5.0</version>
+        <executions><execution><goals><goal>enforce</goal></goals><configuration><rules>
+          <requireJavaVersion><version>[25,26)</version></requireJavaVersion>
+          <requireMavenVersion><version>[3.9,4)</version></requireMavenVersion>
+        </rules></configuration></execution></executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.6</version>
+      </plugin>
+      <plugin>
+        <!-- Task 10: full-corpus census run, bound to verify. Task 11 performs the
+             first real run of this binding; see task-10-report.md. -->
+        <groupId>org.codehaus.mojo</groupId><artifactId>exec-maven-plugin</artifactId><version>3.5.0</version>
+        <executions><execution>
+          <id>census</id><phase>verify</phase><goals><goal>java</goal></goals>
+          <configuration><mainClass>io.github.metavacua.pipeline.CensusEngine</mainClass></configuration>
+        </execution></executions>
+      </plugin>
+      <plugin>
+        <groupId>com.googlecode.maven-download-plugin</groupId><artifactId>download-maven-plugin</artifactId><version>1.13.0</version>
+        <executions><execution>
+          <id>fetch-docbook-grammar</id><phase>generate-resources</phase><goals><goal>wget</goal></goals>
+          <configuration>
+            <url>${docbook.rnc.url}</url>
+            <outputDirectory>${project.build.directory}/schema</outputDirectory>
+            <outputFileName>docbookxi.rnc</outputFileName>
+            <sha256>${docbook.rnc.sha256}</sha256>
+          </configuration>
+        </execution></executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId><artifactId>xml-maven-plugin</artifactId><version>1.2.1</version>
+        <dependencies>
+          <dependency><groupId>net.sf.saxon</groupId><artifactId>Saxon-HE</artifactId><version>${saxon.version}</version></dependency>
+          <dependency><groupId>name.dmaus.schxslt</groupId><artifactId>schxslt2</artifactId><version>${schxslt2.version}</version></dependency>
+        </dependencies>
+        <executions><execution>
+          <id>transpile-policy-schematron</id><phase>generate-resources</phase><goals><goal>transform</goal></goals>
+          <configuration>
+            <transformerFactory>net.sf.saxon.TransformerFactoryImpl</transformerFactory>
+            <transformationSets><transformationSet>
+              <dir>src/main/resources/schematron</dir>
+              <includes><include>policy.sch</include></includes>
+              <!-- schxslt2 1.1.1's jar layout (live-verified via jar listing, Task 6
+                   discovery step) places the transpiler entry at content/transpile.xsl,
+                   NOT the root-level path a naive reading of the artifact's
+                   expath-pkg.xml (<file>transpile.xsl</file>, expath convention: paths
+                   are relative to content/) would suggest. -->
+              <!-- Bare path resolves via plexus-resources loader iteration: classpath jar entry wins ONLY while no <repo-root>/content/transpile.xsl exists on disk. Do not create a repo-root content/ directory. -->
+              <stylesheet>content/transpile.xsl</stylesheet>
+              <outputDir>${project.build.directory}/generated-resources</outputDir>
+              <fileMappers><fileMapper implementation="org.codehaus.plexus.components.io.filemappers.MergeFileMapper">
+                <targetName>policy.xsl</targetName></fileMapper></fileMappers>
+            </transformationSet></transformationSets>
+          </configuration>
+        </execution></executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId><artifactId>maven-dependency-plugin</artifactId><version>3.8.1</version>
+        <executions>
+          <execution><id>unpack-xsltng</id><phase>generate-resources</phase><goals><goal>unpack</goal></goals>
+            <configuration><artifactItems><artifactItem>
+              <groupId>org.docbook</groupId><artifactId>docbook-xslTNG</artifactId><version>${xsltng.version}</version>
+              <outputDirectory>${project.build.directory}/xsltng</outputDirectory>
+            </artifactItem></artifactItems></configuration></execution>
+          <execution><id>copy-vnu</id><phase>generate-resources</phase><goals><goal>copy</goal></goals>
+            <configuration><artifactItems><artifactItem>
+              <groupId>nu.validator</groupId><artifactId>validator</artifactId><version>${vnu.version}</version>
+              <destFileName>vnu.jar</destFileName>
+              <outputDirectory>${project.build.directory}/tools</outputDirectory>
+            </artifactItem></artifactItems></configuration></execution>
+          <!-- vnu.jar's own manifest carries no Main-Class and is NOT a fat jar (live-verified,
+               Task 7): nu.validator:validator's SimpleCommandLineValidator needs its full
+               runtime dependency closure on the classpath (e.g. com.thaiopensource.validate.Schema
+               from nu.validator:jing, a DIFFERENT groupId/version from this project's own
+               org.relaxng:jing pinned for JingGate, confirmed by NoClassDefFoundError without
+               this). Filtered to exactly vnu's own transitive groupIds so the isolated vnu
+               subprocess classpath never mixes with this project's own org.relaxng:jing or
+               net.sf.saxon:Saxon-HE:12.7 (vnu's declared Saxon-HE:9.6.0-4 is omitted by the
+               reactor's nearest-wins resolution and is not required for the xml single-file
+               checks this gate runs). -->
+          <execution><id>copy-vnu-deps</id><phase>generate-resources</phase><goals><goal>copy-dependencies</goal></goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/tools/vnu-lib</outputDirectory>
+              <includeScope>compile</includeScope>
+              <excludeArtifactIds>validator</excludeArtifactIds>
+              <includeGroupIds>nu.validator,com.ibm.icu,com.shapesecurity,commons-codec,commons-fileupload,commons-io,commons-logging,isorelax,javax.servlet,log4j,org.apache.httpcomponents,org.eclipse.jetty</includeGroupIds>
+            </configuration></execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
