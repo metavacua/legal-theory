@@ -95,6 +95,13 @@ The author's position is that the language model and the harness sabotage langua
 - The author's payment records for the period of performance (position 5).
 - A controlled comparison of the product's performance on tasks in formal logic and language-model theory against tasks of equal difficulty outside those subjects.
 
+Records held by Anthropic alone, requested because the system card states that the safeguards for frontier LLM development "will not be visible to the user" (page 13; the passage is quoted in [anthropic-fable-5-mythos-5-system-card-safeguards.md](anthropic-fable-5-mythos-5-system-card-safeguards.md)), so that no user outside Anthropic can tell, in a given session, an intervention from an ordinary failure:
+
+- Every record of an activation of those safeguards, or of any related classifier, on the author's account, organization and sessions, with the date and the stated basis of each, including for the sessions behind findings 4, 6 to 16, 14 and 23.
+- The specification of what the detector for requests "targeting frontier LLM development" is designed to match, and the examples it was developed and tested against.
+- The measured false-positive and false-negative rates of that detector, including on formal logic, proof systems, automata and formal language theory, model theory, and programming-language research and design. The card itself says Anthropic will "continue to improve the precision of our detection methods" (page 13).
+- A description of the changes made during training to limit particular research capabilities, and any evaluation of their effect on those fields. A launch post of 2026-11-09 is reported to the author's agent to describe such changes; the author's agent has not read the post itself, and the request does not depend on it.
+
 ## Causes of action to which this document relates
 
 The matter's `README.md` lists the causes of action. This document bears on the First Amendment claim, the claim under Article I, section 2 of the California Constitution, and the claim of unfair business practices under Business and Professions Code section 17200.
