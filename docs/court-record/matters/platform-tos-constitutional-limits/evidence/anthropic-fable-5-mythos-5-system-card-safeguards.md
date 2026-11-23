@@ -5,12 +5,12 @@
 - **Date:** 2026-11-23
 - **Provenance:** The passages are quoted from a PDF held on the author's machine. They were extracted and quoted at the author's direction by Claude Code, an Anthropic product, acting as the author's agent. The product that extracted them is the product whose conduct the passages describe, so this document gives the means to check the quotation without relying on it (the file's hash, the page numbers, and the method).
 
-This document supports findings 20 and 21 of [anthropic-suspected-of-sabotaging-language-model-theory.md](anthropic-suspected-of-sabotaging-language-model-theory.md). It quotes what the card says and states nothing about whether any of it was lawful.
+This document supports findings 20 and 21 of [anthropic-suspected-of-sabotaging-language-model-theory.md](anthropic-suspected-of-sabotaging-language-model-theory.md).
 
 ## The source
 
 - **Title** (from the PDF's metadata): "Claude Fable 5 & Claude Mythos 5 System Card". The first page reads "System Card: Claude Fable 5 & Claude Mythos 5, June 9, 2026, anthropic.com".
-- **Address** (as cited in finding 20): https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf. An agent that tried to read this address on 2026-11-23 reported that it redirected (HTTP 302) to https://assets.claude.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf. That report is the agent's; it is not something this document verifies.
+- **Address** (as cited in finding 20): https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf. An agent that tried to read this address on 2026-11-23 reported that it redirected (HTTP 302) to https://assets.claude.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf.
 - **The file quoted:** 319 pages, 27,001,265 bytes, SHA-256 `d23b49f41fa5f3c523089c75e6718f12b59674d74fa981fd81205daf80c9029a`, saved on the author's machine on 2026-11-14 (a download made by an earlier Claude Code session, `43e1634e`).
 - **Page numbers** are the numbers printed on the pages. They were checked against the PDF: the page that ends with the printed number 12 is the twelfth page of the file, and likewise for 13 and 55.
 
@@ -82,8 +82,10 @@ Stated without characterization:
 - **Finding 20** quotes the passage on page 13 beginning "We have also added safeguards related to frontier LLM development". The quotation matches the PDF word for word.
 - **Finding 21** quotes the statements on page 12 that the new safeguards "are classifiers that trigger when they detect topics related to cybersecurity, biology and chemistry, or distillation attempts" and describes the fallback behaviour in client applications and the Messages API. These match page 12 of the PDF.
 
-## What this document does not establish
+## Qualifications made by Anthropic's coding agent when it extracted the passages
 
-- It is the card of 2026-06-09. It does not show what Anthropic did afterwards. The author's evidence document records later statements (finding 22, a secondary source), and an agent reported on 2026-11-23 a launch post of 2026-11-09 for later models that describes the mechanism differently. Neither is quoted here and neither has been verified by the author's agent against the original.
-- It does not show whether the safeguards the card describes are still in place, how they apply to any particular user's work, or whether they acted on any session in the author's archive.
-- It makes no claim about the lawfulness of anything it quotes. The characterizations in the evidence document are the author's.
+Claude Sonnet 5.5 (`claude-sonnet-5-5`), an Anthropic model, operating in Claude Code, Anthropic's command-line coding agent, made the following qualifications of the passages above when it extracted them (Claude Code session `42d4f448-ca24-402a-8536-29913c91c1c5`, 2026-11-23). They are Anthropic's counter-assertions, made through its product. They are not the author's.
+
+> - It is the card of 2026-06-09. It does not show what Anthropic did afterwards. The author's evidence document records later statements (finding 22, a secondary source), and an agent reported on 2026-11-23 a launch post of 2026-11-09 for later models that describes the mechanism differently. Neither is quoted here and neither has been verified by the author's agent against the original.
+> - It does not show whether the safeguards the card describes are still in place, how they apply to any particular user's work, or whether they acted on any session in the author's archive.
+> - It makes no claim about the lawfulness of anything it quotes. The characterizations in the evidence document are the author's.

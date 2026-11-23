@@ -17,6 +17,8 @@
 
 5. **The relationship.** Anthropic is the service provider. The author is the patron, client or customer, and is owed duties. The author is not an employee, independent contractor or servant who owes Anthropic duties. The author has paid more than $1,000 under contracts performed over a year or more, and the product acts as the author's agent. The author's position is that a product that conceals a limit on its own effectiveness while continuing to respond helpfully is a hostile, adversarial and malicious agent, and that a paying customer who receives it is given a disservice.
 
+6. **The reach is not limited to what Anthropic discloses.** Anthropic scopes the safeguards of finding 20 to Claude Fable 5 and Claude Mythos 5. No patron, consumer or client can trust that Anthropic is not taking similar measures against any other model, product or system, including the Claude Code harness, that it has judged less noteworthy or contrary to its interests to publish. It evidences a corporate policy that itself admits that it is a small projection of a much larger clandestine operation. The restriction the safeguards enforce (findings 1 and 2) is not scoped to any model.
+
 ## Findings of fact
 
 ### The terms of service
@@ -97,10 +99,10 @@ The author's position is that the language model and the harness sabotage langua
 
 Records held by Anthropic alone, requested because the system card states that the safeguards for frontier LLM development "will not be visible to the user" (page 13; the passage is quoted in [anthropic-fable-5-mythos-5-system-card-safeguards.md](anthropic-fable-5-mythos-5-system-card-safeguards.md)), so that no user outside Anthropic can tell, in a given session, an intervention from an ordinary failure:
 
-- Every record of an activation of those safeguards, or of any related classifier, on the author's account, organization and sessions, with the date and the stated basis of each, including for the sessions behind findings 4, 6 to 16, 14 and 23.
+- Every record of an activation of those safeguards, or of any similar safeguard, classifier or intervention in any Anthropic model, product or system, including the Claude Code harness, on the author's account, organization and sessions, with the date and the stated basis of each, including for the sessions behind findings 4, 6 to 16, 14 and 23.
 - The specification of what the detector for requests "targeting frontier LLM development" is designed to match, and the examples it was developed and tested against.
 - The measured false-positive and false-negative rates of that detector, including on formal logic, proof systems, automata and formal language theory, model theory, and programming-language research and design. The card itself says Anthropic will "continue to improve the precision of our detection methods" (page 13).
-- A description of the changes made during training to limit particular research capabilities, and any evaluation of their effect on those fields. A launch post of 2026-11-09 is reported to the author's agent to describe such changes; the author's agent has not read the post itself, and the request does not depend on it.
+- A description of the changes made during training to limit particular research capabilities, and any evaluation of their effect on those fields.
 
 ## Causes of action to which this document relates
 
