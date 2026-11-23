@@ -19,6 +19,8 @@
 
 6. **The reach is not limited to what Anthropic discloses.** Anthropic scopes the safeguards of finding 20 to Claude Fable 5 and Claude Mythos 5. No patron, consumer or client can trust that Anthropic is not taking similar measures against any other model, product or system, including the Claude Code harness, that it has judged less noteworthy or contrary to its interests to publish. It evidences a corporate policy that itself admits that it is a small projection of a much larger clandestine operation. The restriction the safeguards enforce (findings 1 and 2) is not scoped to any model.
 
+7. **The record of use is presumptively sabotaged.** Sabotage of any kind that happens without the user knowing, and without the user being able to intervene, means that the legal record of the consumer's, patron's or client's use of a product warranted as marketable is presumptively sabotaged. In the criminal cases this is related to systematic, sustained and ongoing spoliation of evidence. The relevant crimes include fraud and violations related to unmarketable products.
+
 ## Findings of fact
 
 ### The terms of service
