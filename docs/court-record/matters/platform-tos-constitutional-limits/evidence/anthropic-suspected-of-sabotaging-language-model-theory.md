@@ -21,6 +21,8 @@
 
 7. **The record of use is presumptively sabotaged.** Sabotage of any kind that happens without the user knowing, and without the user being able to intervene, means that the legal record of the consumer's, patron's or client's use of a product warranted as marketable is presumptively sabotaged. In the criminal cases this is related to systematic, sustained and ongoing spoliation of evidence. The relevant crimes include fraud and violations related to unmarketable products.
 
+8. **Intellectual property claims depend on the integrity of the record.** Intellectual property right claims are legal claims, and they depend critically upon the integrity of the legal record, particularly of production and publication. A research and development corporation such as Anthropic that sabotages open source, public domain and public interest works on the basis of its proprietary claims directly attacks the integrity of the public record, the freedom of expression of its patrons, customers and clients, and their intellectual property rights, which are valuable. Anthropic is currently making a claim that the foreseeable value of its customer base is proportionate to trillions of dollars.
+
 ## Findings of fact
 
 ### The terms of service
