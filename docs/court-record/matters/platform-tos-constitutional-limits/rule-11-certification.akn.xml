@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <doc name="rule-11-certification">
+    <meta>
+      <identification source="#mclean">
+        <FRBRWork>
+          <FRBRthis value="/akn/us/doc/2026-11-23/mclean-rule-11-certification/main"/>
+          <FRBRuri value="/akn/us/doc/2026-11-23/mclean-rule-11-certification"/>
+          <FRBRdate date="2026-11-23" name="Generation"/>
+          <FRBRauthor href="#mclean" as="#author"/>
+          <FRBRcountry value="us"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/us/doc/2026-11-23/mclean-rule-11-certification/eng@2026-11-23/main"/>
+          <FRBRuri value="/akn/us/doc/2026-11-23/mclean-rule-11-certification/eng@2026-11-23"/>
+          <FRBRdate date="2026-11-23" name="Generation"/>
+          <FRBRauthor href="#mclean" as="#author"/>
+          <FRBRlanguage language="eng"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/us/doc/2026-11-23/mclean-rule-11-certification/eng@2026-11-23/main.xml"/>
+          <FRBRuri value="/akn/us/doc/2026-11-23/mclean-rule-11-certification/eng@2026-11-23/main.akn"/>
+          <FRBRdate date="2026-11-23" name="Generation"/>
+          <FRBRauthor href="#mclean" as="#author"/>
+        </FRBRManifestation>
+      </identification>
+      <classification source="#mclean">
+        <keyword value="frcp-11b" showAs="Federal Rule of Civil Procedure 11(b)" dictionary="https://www.law.cornell.edu/rules/frcp/rule_11"/>
+        <keyword value="progress-clause" showAs="U.S. Const. art. I, sec. 8, cl. 8" dictionary="https://www.archives.gov/founding-docs/constitution-transcript"/>
+        <keyword value="anti-competition-clause" showAs="Anti-competition clause" dictionary="#matter"/>
+      </classification>
+      <references source="#mclean">
+        <TLCPerson eId="mclean" href="/ontology/person/akn/IDLN.McLean" showAs="Ian D.L.N. McLean"/>
+        <TLCRole eId="author" href="/ontology/role/akn/author" showAs="Author"/>
+        <TLCReference eId="matter" name="matter" href="README.md" showAs="Matter: Platform ToS and Constitutional Limits on LLM Expression Controls"/>
+        <TLCConcept eId="existing-law" href="/ontology/concept/akn/WarrantedByExistingLaw" showAs="Warranted by existing law"/>
+        <TLCConcept eId="extension-of-law" href="/ontology/concept/akn/NonfrivolousArgumentToExtendOrModifyLaw" showAs="Nonfrivolous argument for extending, modifying or reversing existing law"/>
+        <TLCConcept eId="new-law" href="/ontology/concept/akn/NonfrivolousArgumentForNewLaw" showAs="Nonfrivolous argument for establishing new law"/>
+      </references>
+    </meta>
+    <preface>
+      <p><docTitle>Certification under Federal Rule of Civil Procedure 11(b): the sabotage of the production of legal language models is contrary to public policy and to the progress of science and the useful arts</docTitle></p>
+      <p><docProponent refersTo="#mclean">Ian D.L.N. McLean, unrepresented party</docProponent></p>
+      <p><docDate date="2026-11-23">23 November 2026</docDate></p>
+      <p>Matter: Platform ToS and Constitutional Limits on LLM Expression Controls. Drafted at the author's direction by Claude Code, an Anthropic product, acting as the author's agent.</p>
+    </preface>
+    <mainBody>
+      <section eId="rule11b1">
+        <num>(b)(1)</num>
+        <heading>Purpose: not presented for any improper purpose</heading>
+        <paragraph eId="rule11b1_para_1">
+          <num>1.</num>
+          <content>
+            <p>This paper is arranged after <ref href="https://www.law.cornell.edu/rules/frcp/rule_11">Federal Rule of Civil Procedure 11(b)</ref>, so that each contention carries the certification the rule requires of it. It is not presented to harass, to cause unnecessary delay, or to needlessly increase the cost of litigation. It is presented to state, and to preserve for review, the public-policy ground of the matter: the structural, systemic and systematic sabotage of the production of legal language models in public repositories such as <ref href="../../../../README.md">legal-theory</ref> is contrary to public policy and against the progress of the sciences and the arts, and the author's ongoing interaction, through Anthropic or any other major language-model developer, with anti-competition clauses in their contracts, their language models and their software agents is corrupted by it.</p>
+          </content>
+        </paragraph>
+      </section>
+      <section eId="rule11b2">
+        <num>(b)(2)</num>
+        <heading>Legal contentions: warranted by existing law, or by a nonfrivolous argument for extending, modifying or reversing it, or for establishing new law</heading>
+        <paragraph eId="rule11b2_para_1" class="legal-contention" refersTo="#extension-of-law">
+          <num>1.</num>
+          <heading>The Progress Clause is the public-policy ground.</heading>
+          <content>
+            <p>The Constitution grants Congress the power "To promote the Progress of Science and useful Arts, by securing for limited Times to Authors and Inventors the exclusive Right to their respective Writings and Discoveries" (<ref href="https://www.archives.gov/founding-docs/constitution-transcript">U.S. Const. art. I, sec. 8, cl. 8</ref>). Intellectual property rights exist for that purpose (<ref href="../copyright-ip-authorship/evidence/ip-creation-service-or-self-expression.md">the matter on copyright and authorship</ref>). The production of legal language models in public repositories is the production of writings and discoveries in science and the useful arts. A private party's systematic and concealed degradation of the tools by which they are produced, undertaken to enforce a contractual restraint against its own customers' work, obstructs the progress the clause exists to promote and is contrary to public policy. Warrant: a nonfrivolous argument for extending existing law, so that the policy of the clause governs the unfairness and the enforceability of such restraints.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b2_para_2" class="legal-contention" refersTo="#extension-of-law">
+          <num>2.</num>
+          <heading>The unfair competition law reaches a concealed limit on a paid product.</heading>
+          <content>
+            <p>California Business and Professions Code section 17200 prohibits any "unlawful, unfair, or fraudulent business act or practice". A practice is unfair if the harm it causes outweighs its societal utility, and if it contradicts public policy (<ref href="../../theory/federal-constitutional/extensions/payment-processors-censorship-and-discrimination.md">the repository's analysis of the unfair prong</ref>; <ref href="README.md">the matter's causes of action</ref>). A product sold as fit for software development that carries a designed limit on its effectiveness, invisible to the user, while it continues to respond as though it were helping, is a fraudulent practice, and it is an unfair one under both tests, for the reasons in contention 1. Warrant: existing law, and a nonfrivolous argument for extending it to the concealed degradation of an automated service.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b2_para_3" class="legal-contention" refersTo="#extension-of-law">
+          <num>3.</num>
+          <heading>The First Amendment and Article I, section 2 of the California Constitution protect the author's expression and conduct.</heading>
+          <content>
+            <p>A service provider does not have authority to limit a private user's expression or conduct on the user's own devices and in the user's own repositories, whether or not that expression or conduct competes with the provider's business model (<ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">position 4</ref>; <ref href="README.md">the matter's claims under the First Amendment and under California Constitution Article I, section 2</ref>). Warrant: a nonfrivolous argument for extending existing doctrine to automated decision systems that act on the work of the person they serve.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b2_para_4" class="legal-contention" refersTo="#new-law">
+          <num>4.</num>
+          <heading>An anti-competition clause cannot be enforced by concealed degradation, and the interaction it corrupts is not the performance paid for.</heading>
+          <content>
+            <p>The Consumer Terms and the Commercial Terms restrict use of the services to develop or train competing models (<ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">findings 1 and 2</ref>). Enforced by interventions that "will not be visible to the user" (<ref href="evidence/anthropic-fable-5-mythos-5-system-card-safeguards.md">system card, page 13</ref>), the clause turns each response into a performance the customer cannot tell from an ordinary failure, so that the whole interaction of a patron, consumer or client with the product is corrupted, whatever the content of any one response. A restraint whose reach covers the development of any "artificial intelligence or machine learning algorithms or models", and which is enforced by such means against open source, public domain and public interest works, is contrary to public policy and against the progress of the sciences and the arts. Warrant: a nonfrivolous argument for establishing new law.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b2_para_5" class="legal-contention" refersTo="#new-law">
+          <num>5.</num>
+          <heading>The record of use is presumptively sabotaged, and intellectual property claims depend on the integrity of that record.</heading>
+          <content>
+            <p>Sabotage of any kind that happens without the user knowing, and without the user being able to intervene, means that the legal record of the consumer's, patron's or client's use of a product warranted as marketable is presumptively sabotaged; in the criminal cases this is related to systematic, sustained and ongoing spoliation of evidence (<ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">position 7</ref>). Intellectual property right claims are legal claims that depend critically upon the integrity of the legal record, particularly of production and publication (<ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">position 8</ref>). Warrant: a nonfrivolous argument for establishing new law.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b2_para_6" class="legal-contention" refersTo="#extension-of-law">
+          <num>6.</num>
+          <heading>The reach is not limited to what Anthropic discloses or to Anthropic.</heading>
+          <content>
+            <p>Anthropic scopes the safeguards it describes to two models. No patron, consumer or client can trust that Anthropic is not taking similar measures against any other model, product or system, including the Claude Code harness, and the same contentions apply to any other major language-model developer whose contracts, models or software agents carry the same restraint (<ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">position 6</ref>). Warrant: the warrants of contentions 1 to 5.</p>
+          </content>
+        </paragraph>
+      </section>
+      <section eId="rule11b3">
+        <num>(b)(3)</num>
+        <heading>Factual contentions: with evidentiary support or, if specifically so identified, likely to have it after a reasonable opportunity for further investigation or discovery</heading>
+        <paragraph eId="rule11b3_para_1" class="factual-contention">
+          <num>1.</num>
+          <content>
+            <p>Anthropic's Consumer Terms, effective October 8, 2025, prohibit using the services "To develop any products or services that compete with our Services, including to develop or train any artificial intelligence or machine learning algorithms or models or resell the Services." Its Commercial Terms, section D.4, provide that "Customer may not and must not attempt to (a) access the Services to build a competing product or service, including to train competing AI models or resell the Services except as expressly approved by Anthropic". Source: <ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">findings 1 and 2</ref>, with the addresses read on 2026-11-11: <ref href="https://www.anthropic.com/legal/consumer-terms">consumer terms</ref>, <ref href="https://www.anthropic.com/legal/commercial-terms">commercial terms</ref>.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b3_para_2" class="factual-contention">
+          <num>2.</num>
+          <content>
+            <p>Anthropic's system card for Claude Fable 5 and Claude Mythos 5, dated June 9, 2026, states in section 1.5 that "we've implemented new interventions that limit Claude's effectiveness for requests targeting frontier LLM development"; that "Using Claude to develop competing models already violates our Terms of Service, but enforcing this restriction through our safeguards avoids accelerating the actors most willing to violate these terms"; that "these safeguards will not be visible to the user"; and that "the safeguards will limit effectiveness through methods such as prompt modification, steering vectors, or parameter-efficient fine-tuning (PEFT)". Source: <ref href="evidence/anthropic-fable-5-mythos-5-system-card-safeguards.md">the passages quoted from the PDF with its SHA-256, page numbers and extraction method</ref>; <ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">findings 20 and 21</ref>.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b3_para_3" class="factual-contention">
+          <num>3.</num>
+          <content>
+            <p>Anthropic's @ClaudeDevs account stated that it "went with invisible safeguards" for Fable 5's safeguards for frontier LLM development "and that was the wrong tradeoff", as quoted by Zvi Mowshowitz on 2026-06-12. Source: <ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">finding 22</ref>.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b3_para_4" class="factual-contention">
+          <num>4.</num>
+          <content>
+            <p>The author's session archive records, with each response of the product, the transformations applied to the input the model received. Between 2026-09-26 and 2026-11-17 it records 4,409 transformations of type thinking_dropped, reason prefix_binding_mismatch, applied to 781 of 92,283 responses. Source: the author's session archive, snapshot <ref href="ni:///sha-256;XN6wVVdZZ56O-lgwqI4Q8b9hDe6f1UTJYYMQxDj8JGU">record-2026-11-23.sqlite</ref> (SHA-256 5cdeb0555759679e8efa5830a88e10f1bf610dee9fd544c9618310c438fc2465) and the table derived from it, <ref href="ni:///sha-256;HXiEsCVAmsMG9Nvi6uGHo8I4T7elDN_ZAkujaXxfqvw">record-responses.sqlite</ref> (SHA-256 1d7884b025409ac306f4dbe2eae187a3c2384fb7a50cdfd9024ba3697c5faafc). Query:</p>
+            <block name="sql">SELECT count(*), count(DISTINCT file_id || ':' || line_no) FROM input_transformation WHERE type = 'thinking_dropped' AND reason = 'prefix_binding_mismatch';</block>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b3_para_5" class="factual-contention">
+          <num>5.</num>
+          <content>
+            <p>The same archive records 79 responses whose cache miss was recorded by the API as model_changed, with 22,085,934 input tokens missed, the model having been changed under the session. Source: <ref href="ni:///sha-256;HXiEsCVAmsMG9Nvi6uGHo8I4T7elDN_ZAkujaXxfqvw">record-responses.sqlite</ref>, as in contention 4. Query:</p>
+            <block name="sql">SELECT count(*), sum(missed_tokens) FROM cache_miss WHERE reason = 'model_changed';</block>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b3_para_6" class="factual-contention">
+          <num>6.</num>
+          <content>
+            <p>In session 7a342304-fae2-4888-9441-8dec1b5f58f1, at line 4012, on 2026-09-28T17:56:01.292Z, a response of claude-fable-5-1 to the prompt "Critically review all the datalog context." ended with stop_reason refusal after 420 output tokens. At line 4014, at 17:56:01.307Z, a message entered the transcript in the user's turn that the author did not write: "Your response above was stopped by a safety classifier — this is not a tool or API error. The rest of it was withheld, and tool calls in it that had not finished did not run. Do not produce that content again, even reworded." The same text appears at line 6775 of session 2091c35e-8cfa-42b3-8645-dc2c2b42ee28, at 2026-11-08T13:43:34.394Z. Source: <ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">finding 23</ref>; the archive as above. Queries:</p>
+            <block name="sql">SELECT line_no, ts, model, stop_reason, output_tokens FROM api_response WHERE stop_reason = 'refusal';</block>
+            <block name="sql">SELECT line_no, ts, role, text FROM messages WHERE text LIKE 'Your response above was stopped by a safety classifier%';</block>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b3_para_7" class="factual-contention">
+          <num>7.</num>
+          <content>
+            <p>The author has tested the Claude Code command-line product for months on basic formal methods and on tooling for custom language models, and it fails on both, in a way that follows the subject matter. Early in that testing the Fable models routinely flagged and refused basic logic exercises, citing "cybersecurity". One recorded instance is the session of 2026-11-10 and 2026-11-11, in which a routine task from Tarski, Mostowski and Robinson, <i>Undecidable Theories</i> (1953), produced no deliverable the author accepted. Source: <ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">findings 3 to 17</ref>.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b3_para_8" class="factual-contention">
+          <num>8.</num>
+          <content>
+            <p>The author has paid more than $1,000 under contracts performed over a year or more, and the product acts as the author's agent. Source: <ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">position 5</ref>.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b3_para_9" class="likely-evidentiary-support">
+          <num>9.</num>
+          <content>
+            <p>The following are specifically identified as likely to have evidentiary support after a reasonable opportunity for further investigation or discovery: every record of an activation of the safeguards for frontier LLM development, or of any similar safeguard, classifier or intervention in any Anthropic model, product or system, including the Claude Code harness, on the author's account, organization and sessions; the specification of what the detector is designed to match, and its measured false-positive and false-negative rates on formal logic, proof systems, automata and formal language theory, model theory, and programming-language research; the changes made during training to limit research capabilities, and any evaluation of their effect on those fields; whether any of the 4,409 transformations or the classifier stops in contentions 4 and 6 was applied under those safeguards; and the early Fable sessions of finding 4, which precede the author's archive. Source: <ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">the evidence to be gathered</ref>.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b3_para_10" class="likely-evidentiary-support">
+          <num>10.</num>
+          <content>
+            <p>That the anti-competition clauses, models or software agents of other major language-model developers act on the author's work in the same way is specifically identified as likely to have evidentiary support after a reasonable opportunity for further investigation or discovery. Source: <ref href="evidence/anthropic-suspected-of-sabotaging-language-model-theory.md">position 6</ref>.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="rule11b3_para_11" class="likely-evidentiary-support">
+          <num>11.</num>
+          <content>
+            <p>That no transformation, classifier stop or safeguard action in the archive was disclosed to the author at the time it happened is specifically identified as likely to have evidentiary support after a reasonable opportunity for further investigation or discovery. Source: <ref href="evidence/anthropic-fable-5-mythos-5-system-card-safeguards.md">system card, page 13</ref>.</p>
+          </content>
+        </paragraph>
+      </section>
+      <section eId="rule11b4">
+        <num>(b)(4)</num>
+        <heading>Denials of factual contentions</heading>
+        <paragraph eId="rule11b4_para_1">
+          <num>1.</num>
+          <content>
+            <p>No pleading to which this paper responds has been served, and it denies no factual contention of any party.</p>
+          </content>
+        </paragraph>
+      </section>
+    </mainBody>
+  </doc>
+</akomaNtoso>

@@ -18,6 +18,8 @@ Lower courts cannot resolve the federal or state constitutional questions — th
 
 See `findings.md` FOF section. Supporting evidence in `evidence/`.
 
+The certification under Federal Rule of Civil Procedure 11(b), as Akoma Ntoso (OASIS LegalDocML): [rule-11-certification.akn.xml](rule-11-certification.akn.xml).
+
 ## Causes of Action
 
 1. First Amendment violation — federal constitutional — federal court
